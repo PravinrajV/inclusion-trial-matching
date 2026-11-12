@@ -1,0 +1,836 @@
+{
+  "disclaimer": "sourceText is quoted or lightly trimmed from public ClinicalTrials.gov eligibility language, or from the structured minimumAge/maximumAge field in the same pull. Attribute those records to ClinicalTrials.gov. These labels were written before any parser call on this held-out set.",
+  "schemaVersion": "1",
+  "labelSet": "held-out-2026-11-11",
+  "labeledAt": "2026-11-11T21:17:25-05:00",
+  "labeledAtUtc": "2026-11-12T02:17:25Z",
+  "pulledDataTimestampFromApi": "2026-11-10T10:00:05",
+  "parserNotYetRun": true,
+  "excludedFromThisSet": {
+    "goldSpikeNctIds": [
+      "NCT01720836",
+      "NCT03093116",
+      "NCT03191149",
+      "NCT03851445",
+      "NCT04165070",
+      "NCT04181060",
+      "NCT04198766",
+      "NCT04613596",
+      "NCT06561386"
+    ],
+    "fewShotNctIds": [
+      "NCT07538804",
+      "NCT06043817",
+      "NCT07617337"
+    ],
+    "inspectedDuringFewShotSelection": [
+      "NCT07680790",
+      "NCT07458347",
+      "NCT07756645"
+    ]
+  },
+  "nctIds": [
+    "NCT07688577",
+    "NCT05098132",
+    "NCT06357533",
+    "NCT06868277",
+    "NCT06248606",
+    "NCT06627647",
+    "NCT06772623",
+    "NCT04614103",
+    "NCT07291037",
+    "NCT07154290"
+  ],
+  "typedTotal": 87,
+  "labelingNotes": [
+    "Ten recruiting regional stage III/IV NSCLC trials from data/ctgov/region-trials.json, none of which are in the original 9-trial gold set or the three prompt-v2/v3 few-shots.",
+    "Labels cover key typed criteria only. Subjective items (measurable disease/RECIST, life expectancy, investigator judgment, 'adequate organ function' without a number) were not labeled as typed gold.",
+    "Where the eligibility text had no age sentence, age_min 18 was taken from the structured minimumAge field that the parser also receives.",
+    "PD-L1 cutoffs were labeled only when the eligibility text stated a numeric threshold, not from a title alone (NCT06868277 title says PD-L1-high, but the pulled eligibility text has no cutoff, so no pdl1_min item).",
+    "Compound OR rules that are not a simple typed value (for example PD-L1 <1% OR STK11 mutation on NCT05098132) were not forced into a typed kind.",
+    "Part-dependent prior-line rules on NCT06772623 were not labeled as typed.",
+    "These labels will not be changed after the parser is run in this pass, and postprocess rules will not be tuned on this set in this pass."
+  ],
+  "criteria": [
+    {
+      "id": "H01",
+      "nctId": "NCT07688577",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "numberValue": 18
+    },
+    {
+      "id": "H02",
+      "nctId": "NCT07688577",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status of 0 or 1",
+      "numberValue": 1
+    },
+    {
+      "id": "H03",
+      "nctId": "NCT07688577",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Must have histologically confirmed metastatic NSCLC.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ]
+    },
+    {
+      "id": "H04",
+      "nctId": "NCT07688577",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Tumor must have been assessed for EGFR and ALK per local standard of practice; patients with these driver mutations are excluded.",
+      "presence": "present"
+    },
+    {
+      "id": "H05",
+      "nctId": "NCT07688577",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Tumor must have been assessed for EGFR and ALK per local standard of practice; patients with these driver mutations are excluded.",
+      "presence": "present"
+    },
+    {
+      "id": "H06",
+      "nctId": "NCT07688577",
+      "kind": "ros1_status",
+      "polarity": "exclusion",
+      "sourceText": "Patients with tumors known to have the following alterations are excluded: ROS1, RET, MET, HER-2, NTRK 1/2/3.",
+      "presence": "present"
+    },
+    {
+      "id": "H07",
+      "nctId": "NCT07688577",
+      "kind": "prior_therapy_required",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have previously derived clinical benefit from a PD-1/PD-L1 inhibitor or PD-1/PDL-1 bispecific without progression for at least 6 months.",
+      "stringValue": "PD-1/PD-L1 inhibitor"
+    },
+    {
+      "id": "H08",
+      "nctId": "NCT07688577",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with IL-2",
+      "stringValue": "IL-2"
+    },
+    {
+      "id": "H09",
+      "nctId": "NCT05098132",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "numberValue": 18
+    },
+    {
+      "id": "H10",
+      "nctId": "NCT05098132",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Stage IV or Stage IIIB/IIIC and not a candidate for definitive treatment.",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ]
+    },
+    {
+      "id": "H11",
+      "nctId": "NCT05098132",
+      "kind": "histology_in",
+      "polarity": "inclusion",
+      "sourceText": "Non-squamous (NSQ) cell histology.",
+      "histologies": [
+        "adenocarcinoma",
+        "large_cell",
+        "nsclc_nos"
+      ]
+    },
+    {
+      "id": "H12",
+      "nctId": "NCT05098132",
+      "kind": "prior_lines_max",
+      "polarity": "inclusion",
+      "sourceText": "No prior systemic therapy for advanced/metastatic NSQ NSCLC.",
+      "numberValue": 0
+    },
+    {
+      "id": "H13",
+      "nctId": "NCT05098132",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+      "presence": "present"
+    },
+    {
+      "id": "H14",
+      "nctId": "NCT05098132",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+      "presence": "present"
+    },
+    {
+      "id": "H15",
+      "nctId": "NCT05098132",
+      "kind": "ros1_status",
+      "polarity": "exclusion",
+      "sourceText": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+      "presence": "present"
+    },
+    {
+      "id": "H16",
+      "nctId": "NCT05098132",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Prior immune checkpoint inhibitor (anti-PD[L]1 and/or anti-CTLA-4) treatment",
+      "stringValue": "immune checkpoint inhibitor"
+    },
+    {
+      "id": "H17",
+      "nctId": "NCT05098132",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Known active central nervous system metastases",
+      "allowedBrainMets": [
+        "untreated"
+      ]
+    },
+    {
+      "id": "H18",
+      "nctId": "NCT06357533",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "numberValue": 18
+    },
+    {
+      "id": "H19",
+      "nctId": "NCT06357533",
+      "kind": "histology_in",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically documented non-squamous NSCLC.",
+      "histologies": [
+        "adenocarcinoma",
+        "large_cell",
+        "nsclc_nos"
+      ]
+    },
+    {
+      "id": "H20",
+      "nctId": "NCT06357533",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Stage IIIB or IIIC or Stage IV metastatic NSCLC (according to Edition 8 of the AJCC staging manual) not amenable to curative surgery or definitive chemoradiation.",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ]
+    },
+    {
+      "id": "H21",
+      "nctId": "NCT06357533",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+      "presence": "present"
+    },
+    {
+      "id": "H22",
+      "nctId": "NCT06357533",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+      "presence": "present"
+    },
+    {
+      "id": "H23",
+      "nctId": "NCT06357533",
+      "kind": "ros1_status",
+      "polarity": "exclusion",
+      "sourceText": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+      "presence": "present"
+    },
+    {
+      "id": "H24",
+      "nctId": "NCT06357533",
+      "kind": "pdl1_min",
+      "polarity": "inclusion",
+      "sourceText": "Known tumour PD-L1 expression status defined as TC \u2265 50%",
+      "numberValue": 50
+    },
+    {
+      "id": "H25",
+      "nctId": "NCT06357533",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status of 0 or 1",
+      "numberValue": 1
+    },
+    {
+      "id": "H26",
+      "nctId": "NCT06357533",
+      "kind": "prior_lines_max",
+      "polarity": "inclusion",
+      "sourceText": "Prior systemic therapy for advanced/metastatic NSCLC.",
+      "numberValue": 0
+    },
+    {
+      "id": "H27",
+      "nctId": "NCT06357533",
+      "kind": "brain_mets",
+      "polarity": "inclusion",
+      "sourceText": "Spinal cord compression, or brain metastases unless participant treated and no longer symptomatic, radiologically stable, and who require no treatment with corticosteroids or anticonvulsants.",
+      "allowedBrainMets": [
+        "none",
+        "treated_stable"
+      ]
+    },
+    {
+      "id": "H28",
+      "nctId": "NCT06868277",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "numberValue": 18
+    },
+    {
+      "id": "H29",
+      "nctId": "NCT06868277",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Stage IV mNSCLC (metastatic non-small cell lung cancer) (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ]
+    },
+    {
+      "id": "H30",
+      "nctId": "NCT06868277",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements.",
+      "presence": "present"
+    },
+    {
+      "id": "H31",
+      "nctId": "NCT06868277",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements.",
+      "presence": "present"
+    },
+    {
+      "id": "H32",
+      "nctId": "NCT06868277",
+      "kind": "ros1_status",
+      "polarity": "exclusion",
+      "sourceText": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements.",
+      "presence": "present"
+    },
+    {
+      "id": "H33",
+      "nctId": "NCT06868277",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "WHO (World Health Organization)/ECOG (Eastern Cooperative Oncology Group) performance status of 0 or 1",
+      "numberValue": 1
+    },
+    {
+      "id": "H34",
+      "nctId": "NCT06868277",
+      "kind": "prior_lines_max",
+      "polarity": "inclusion",
+      "sourceText": "Any prior systemic therapy received for advanced or mNSCLC (metastatic non-small cell lung cancer).",
+      "numberValue": 0
+    },
+    {
+      "id": "H35",
+      "nctId": "NCT06868277",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Any prior treatment with an anti-PD-1 (programmed cell death protein 1) or anti-PD-L1 (anti-programmed death-ligand 1) agent.",
+      "stringValue": "anti-PD-1"
+    },
+    {
+      "id": "H36",
+      "nctId": "NCT06868277",
+      "kind": "brain_mets",
+      "polarity": "inclusion",
+      "sourceText": "Brain metastases unless asymptomatic, stable, and not requiring steroids or anticonvulsants for at least 4 weeks prior to start of study intervention.",
+      "allowedBrainMets": [
+        "none",
+        "treated_stable"
+      ]
+    },
+    {
+      "id": "H37",
+      "nctId": "NCT06248606",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age \u2265 18 years at the time of consent.",
+      "numberValue": 18
+    },
+    {
+      "id": "H38",
+      "nctId": "NCT06248606",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG Performance Status of 0-1 within 28 days prior to registration.",
+      "numberValue": 1
+    },
+    {
+      "id": "H39",
+      "nctId": "NCT06248606",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Confirmation of stage IV non-small cell lung cancer (NSCLC) per AJCC, 8th edition, or metastatic recurrence after treatment for earlier stage disease.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ]
+    },
+    {
+      "id": "H40",
+      "nctId": "NCT06248606",
+      "kind": "kras_variant_in",
+      "polarity": "inclusion",
+      "sourceText": "Known to have a KRAS G12C mutation.",
+      "stringValue": "G12C"
+    },
+    {
+      "id": "H41",
+      "nctId": "NCT06248606",
+      "kind": "brain_mets",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have at least 1 untreated enhancing intracranial lesion, per local radiology interpretation, measuring at least 2mm.",
+      "allowedBrainMets": [
+        "untreated"
+      ]
+    },
+    {
+      "id": "H42",
+      "nctId": "NCT06248606",
+      "kind": "prior_lines_max",
+      "polarity": "inclusion",
+      "sourceText": "Patients may be treatment-na\u00efve OR have received up to 2 prior lines of systemic therapy.",
+      "numberValue": 2
+    },
+    {
+      "id": "H43",
+      "nctId": "NCT06248606",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with KRAS G12C tyrosine kinase inhibitor.",
+      "stringValue": "KRAS G12C tyrosine kinase inhibitor"
+    },
+    {
+      "id": "H44",
+      "nctId": "NCT06248606",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin (Hgb): \u2265 8.0 g/dL in the absence of transfusions within 7 days prior to testing.",
+      "numberValue": 8
+    },
+    {
+      "id": "H45",
+      "nctId": "NCT06248606",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Calculated creatinine clearance: \u2265 60 mL/min",
+      "numberValue": 60
+    },
+    {
+      "id": "H46",
+      "nctId": "NCT06248606",
+      "kind": "bilirubin_max",
+      "polarity": "inclusion",
+      "sourceText": "Bilirubin: \u2264 1.5 mg/dL",
+      "numberValue": 1.5
+    },
+    {
+      "id": "H47",
+      "nctId": "NCT06248606",
+      "kind": "ast_max",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST): \u2264 3.0 \u00d7 ULN",
+      "numberValue": 3
+    },
+    {
+      "id": "H48",
+      "nctId": "NCT06248606",
+      "kind": "alt_max",
+      "polarity": "inclusion",
+      "sourceText": "Alanine aminotransferase (ALT): \u2264 3.0 \u00d7 ULN",
+      "numberValue": 3
+    },
+    {
+      "id": "H49",
+      "nctId": "NCT06627647",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "numberValue": 18
+    },
+    {
+      "id": "H50",
+      "nctId": "NCT06627647",
+      "kind": "histology_in",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically documented non-squamous NSCLC.",
+      "histologies": [
+        "adenocarcinoma",
+        "large_cell",
+        "nsclc_nos"
+      ]
+    },
+    {
+      "id": "H51",
+      "nctId": "NCT06627647",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Stage III B/C or IV NSCLC (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment.",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ]
+    },
+    {
+      "id": "H52",
+      "nctId": "NCT06627647",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Absence of sensitizing EGFR mutations (including, but not limited to, exon 19 deletion and exon 21 L858R, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations) and ALK and ROS1 rearrangements.",
+      "presence": "present"
+    },
+    {
+      "id": "H53",
+      "nctId": "NCT06627647",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Absence of sensitizing EGFR mutations (including, but not limited to, exon 19 deletion and exon 21 L858R, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations) and ALK and ROS1 rearrangements.",
+      "presence": "present"
+    },
+    {
+      "id": "H54",
+      "nctId": "NCT06627647",
+      "kind": "ros1_status",
+      "polarity": "exclusion",
+      "sourceText": "Absence of sensitizing EGFR mutations (including, but not limited to, exon 19 deletion and exon 21 L858R, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations) and ALK and ROS1 rearrangements.",
+      "presence": "present"
+    },
+    {
+      "id": "H55",
+      "nctId": "NCT06627647",
+      "kind": "pdl1_min",
+      "polarity": "inclusion",
+      "sourceText": "Provision of acceptable tumor sample, to confirm tumor PD-L1 expression TC \u2265 1%.",
+      "numberValue": 1
+    },
+    {
+      "id": "H56",
+      "nctId": "NCT06627647",
+      "kind": "prior_lines_max",
+      "polarity": "inclusion",
+      "sourceText": "Any prior systemic therapy received for NSCLC except in the neoadjuvant or adjuvant setting or definitive chemoradiotherapy with the intent to cure, provided that progression has occurred > 12 months after the end of systemic therapy treatment.",
+      "numberValue": 0
+    },
+    {
+      "id": "H57",
+      "nctId": "NCT06627647",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Any prior treatment with an anti-PD-1 or anti-PD-L1 agent.",
+      "stringValue": "anti-PD-1"
+    },
+    {
+      "id": "H58",
+      "nctId": "NCT06627647",
+      "kind": "brain_mets",
+      "polarity": "inclusion",
+      "sourceText": "Brain metastases unless asymptomatic, stable, and not requiring steroids or anticonvulsants for at least 7 days prior to randomization.",
+      "allowedBrainMets": [
+        "none",
+        "treated_stable"
+      ]
+    },
+    {
+      "id": "H59",
+      "nctId": "NCT06627647",
+      "kind": "egfr_variant_in",
+      "polarity": "exclusion",
+      "sourceText": "Absence of sensitizing EGFR mutations (including, but not limited to, exon 19 deletion and exon 21 L858R, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations)",
+      "stringValue": "exon 19 deletion"
+    },
+    {
+      "id": "H60",
+      "nctId": "NCT06772623",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "numberValue": 18
+    },
+    {
+      "id": "H61",
+      "nctId": "NCT06772623",
+      "kind": "histology_in",
+      "polarity": "inclusion",
+      "sourceText": "Must have histologically documented non-squamous (NSq) non small cell lung carcinoma (NSCLC) that is locally advanced or metastatic will be enrolled into the study.",
+      "histologies": [
+        "adenocarcinoma",
+        "large_cell",
+        "nsclc_nos"
+      ]
+    },
+    {
+      "id": "H62",
+      "nctId": "NCT04614103",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "numberValue": 18
+    },
+    {
+      "id": "H63",
+      "nctId": "NCT04614103",
+      "kind": "age_max",
+      "polarity": "inclusion",
+      "sourceText": "maximumAge: 70 Years. Patients who are over 70 years of age may be allowed to enroll after discussion with the Medical Monitor.",
+      "numberValue": 70
+    },
+    {
+      "id": "H64",
+      "nctId": "NCT04614103",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ]
+    },
+    {
+      "id": "H65",
+      "nctId": "NCT04614103",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have EGFR, ALK or ROS1 driver mutations",
+      "presence": "present"
+    },
+    {
+      "id": "H66",
+      "nctId": "NCT04614103",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have EGFR, ALK or ROS1 driver mutations",
+      "presence": "present"
+    },
+    {
+      "id": "H67",
+      "nctId": "NCT04614103",
+      "kind": "ros1_status",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have EGFR, ALK or ROS1 driver mutations",
+      "presence": "present"
+    },
+    {
+      "id": "H68",
+      "nctId": "NCT04614103",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status of 0 or 1",
+      "numberValue": 1
+    },
+    {
+      "id": "H69",
+      "nctId": "NCT04614103",
+      "kind": "prior_lines_min",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have documented radiographic disease progression on or after the first-line therapy, including concurrent or sequential ICI and platinum-based chemotherapy \u00b1 bevacizumab.",
+      "numberValue": 1
+    },
+    {
+      "id": "H70",
+      "nctId": "NCT04614103",
+      "kind": "prior_lines_max",
+      "polarity": "inclusion",
+      "sourceText": "No more than 1 prior line is allowed if ICI and platinum-based chemotherapy were administered concurrently and no more than 2 prior lines are allowed for sequential administration of platinum-based chemotherapy and ICI as 2 separate lines.",
+      "numberValue": 2
+    },
+    {
+      "id": "H71",
+      "nctId": "NCT07291037",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "numberValue": 18
+    },
+    {
+      "id": "H72",
+      "nctId": "NCT07291037",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically documented Stage IIIB, IIIC, or Stage IV non-squamous non-small cell lung cancer (NSCLC) without actionable genomic alterations (AGA) at the time of randomisation",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ]
+    },
+    {
+      "id": "H73",
+      "nctId": "NCT07291037",
+      "kind": "histology_in",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically documented Stage IIIB, IIIC, or Stage IV non-squamous non-small cell lung cancer (NSCLC)",
+      "histologies": [
+        "adenocarcinoma",
+        "large_cell",
+        "nsclc_nos"
+      ]
+    },
+    {
+      "id": "H74",
+      "nctId": "NCT07291037",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Participants must have documented negative test results for EGFR (eg, exon 19 deletion or exon 21 L858R, exon 21 L861Q, exon 18 G719X, or exon 20 S768I mutation), ALK, and ROS1 genomic alterations.",
+      "presence": "present"
+    },
+    {
+      "id": "H75",
+      "nctId": "NCT07291037",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Participants must have documented negative test results for EGFR (eg, exon 19 deletion or exon 21 L858R, exon 21 L861Q, exon 18 G719X, or exon 20 S768I mutation), ALK, and ROS1 genomic alterations.",
+      "presence": "present"
+    },
+    {
+      "id": "H76",
+      "nctId": "NCT07291037",
+      "kind": "ros1_status",
+      "polarity": "exclusion",
+      "sourceText": "Participants must have documented negative test results for EGFR (eg, exon 19 deletion or exon 21 L858R, exon 21 L861Q, exon 18 G719X, or exon 20 S768I mutation), ALK, and ROS1 genomic alterations.",
+      "presence": "present"
+    },
+    {
+      "id": "H77",
+      "nctId": "NCT07291037",
+      "kind": "kras_variant_in",
+      "polarity": "exclusion",
+      "sourceText": "Has no known tumour genomic alterations in NTRK, BRAF V600, RET, MET exon 14 skipping, KRAS G12C, or HER2.",
+      "stringValue": "G12C"
+    },
+    {
+      "id": "H78",
+      "nctId": "NCT07291037",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status (PS) of 0 or 1.",
+      "numberValue": 1
+    },
+    {
+      "id": "H79",
+      "nctId": "NCT07291037",
+      "kind": "prior_lines_min",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have received platinum based chemotherapy (PBC) in combination with anti-programmed death-protein 1 (anti-PD-1)/anti-programmed death-ligand 1 (anti-PD-L1) monoclonal antibody (mAb) as the only prior line of therapy or received PBC and anti-PD-1/anti-PD-L1 monoclonal antibody (in either order) sequentially as the only 2 prior lines of therapy.",
+      "numberValue": 1
+    },
+    {
+      "id": "H80",
+      "nctId": "NCT07291037",
+      "kind": "prior_lines_max",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have received platinum based chemotherapy (PBC) in combination with anti-programmed death-protein 1 (anti-PD-1)/anti-programmed death-ligand 1 (anti-PD-L1) monoclonal antibody (mAb) as the only prior line of therapy or received PBC and anti-PD-1/anti-PD-L1 monoclonal antibody (in either order) sequentially as the only 2 prior lines of therapy.",
+      "numberValue": 2
+    },
+    {
+      "id": "H81",
+      "nctId": "NCT07291037",
+      "kind": "prior_therapy_required",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have received platinum based chemotherapy (PBC) in combination with anti-programmed death-protein 1 (anti-PD-1)/anti-programmed death-ligand 1 (anti-PD-L1) monoclonal antibody (mAb) as the only prior line of therapy or received PBC and anti-PD-1/anti-PD-L1 monoclonal antibody (in either order) sequentially as the only 2 prior lines of therapy.",
+      "stringValue": "platinum"
+    },
+    {
+      "id": "H82",
+      "nctId": "NCT07291037",
+      "kind": "brain_mets",
+      "polarity": "inclusion",
+      "sourceText": "Spinal cord compression or brain metastases, unless asymptomatic, stable, and not requiring treatment with corticosteroids or anticonvulsants for at least 7 days prior to randomisation.",
+      "allowedBrainMets": [
+        "none",
+        "treated_stable"
+      ]
+    },
+    {
+      "id": "H83",
+      "nctId": "NCT07154290",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "numberValue": 18
+    },
+    {
+      "id": "H84",
+      "nctId": "NCT07154290",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Has histologically or cytologically confirmed diagnosis of advanced (stage IIIB not amenable to definitive chemoradiotherapy or stage IIIC) or metastatic (stage IV) NSCLC",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ]
+    },
+    {
+      "id": "H85",
+      "nctId": "NCT07154290",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+      "numberValue": 1
+    },
+    {
+      "id": "H86",
+      "nctId": "NCT07154290",
+      "kind": "prior_lines_min",
+      "polarity": "inclusion",
+      "sourceText": "Has received appropriate first line standard of care treatment for advanced or metastatic NSCLC, as described in the protocol",
+      "numberValue": 1
+    },
+    {
+      "id": "H87",
+      "nctId": "NCT07154290",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Has untreated or active primary brain tumor, Central Nervous System (CNS) metastases, leptomeningeal disease, or spinal cord compression, as described in the protocol",
+      "allowedBrainMets": [
+        "untreated"
+      ]
+    }
+  ]
+}
