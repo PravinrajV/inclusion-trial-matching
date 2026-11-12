@@ -1,0 +1,918 @@
+{
+  "disclaimer": "sourceText is quoted or lightly trimmed from public ClinicalTrials.gov eligibility language, or is a short age phrase from that text. Attribute those records to ClinicalTrials.gov. These labels were written before any parser call on this held-out set.",
+  "schemaVersion": "1",
+  "labelSet": "held-out-3-2026-11-11",
+  "labeledAt": "2026-11-11T21:43:38-05:00",
+  "labeledAtUtc": "2026-11-12T02:43:38Z",
+  "pulledDataTimestampFromApi": "2026-11-10T10:00:05",
+  "parserNotYetRun": true,
+  "excludedFromThisSet": {
+    "goldSpikeNctIds": [
+      "NCT01720836",
+      "NCT03093116",
+      "NCT03191149",
+      "NCT03851445",
+      "NCT04165070",
+      "NCT04181060",
+      "NCT04198766",
+      "NCT04613596",
+      "NCT06561386"
+    ],
+    "fewShotNctIds": [
+      "NCT07538804",
+      "NCT06043817",
+      "NCT07617337"
+    ],
+    "inspectedDuringFewShotSelection": [
+      "NCT07680790",
+      "NCT07458347",
+      "NCT07756645"
+    ],
+    "heldOutSet1NctIds": [
+      "NCT07688577",
+      "NCT05098132",
+      "NCT06357533",
+      "NCT06868277",
+      "NCT06248606",
+      "NCT06627647",
+      "NCT06772623",
+      "NCT04614103",
+      "NCT07291037",
+      "NCT07154290"
+    ],
+    "heldOutSet2NctIds": [
+      "NCT04780568",
+      "NCT05099172",
+      "NCT05234307",
+      "NCT06096844",
+      "NCT06225427",
+      "NCT06616584",
+      "NCT06745908",
+      "NCT07012031",
+      "NCT07217301",
+      "NCT07746388",
+      "NCT04486833",
+      "NCT04928846",
+      "NCT05136846",
+      "NCT05168566",
+      "NCT05361174",
+      "NCT05467748",
+      "NCT05498428",
+      "NCT05742607",
+      "NCT05789082",
+      "NCT05920356"
+    ],
+    "consideredThenDropped": [
+      "NCT07293247",
+      "NCT05142189",
+      "NCT05967689",
+      "NCT06069570",
+      "NCT07357597"
+    ],
+    "consideredThenDroppedNotes": "NCT07293247 requires M0 (no metastatic disease). NCT05142189 has cohort-dependent ECOG and stage rules. NCT05967689 is a multi-cohort EGFR study with conflicting arm-specific ECOG and prior-therapy rules and a garbled ECOG line. NCT06069570 enrolls NSCLC or other solid tumors with bone metastases. NCT07357597 enrolls breast cancer and EGFRm NSCLC cohorts. None of these five were labeled or used to tune the parser."
+  },
+  "nctIds": [
+    "NCT06010329",
+    "NCT06116682",
+    "NCT06119581",
+    "NCT06170788",
+    "NCT06216301",
+    "NCT06449313",
+    "NCT06568939",
+    "NCT06731907",
+    "NCT06758401",
+    "NCT06855771",
+    "NCT06868485",
+    "NCT06890598",
+    "NCT07017829",
+    "NCT07027514",
+    "NCT07028489",
+    "NCT07207395",
+    "NCT07222566",
+    "NCT07361497",
+    "NCT07365319",
+    "NCT05624996",
+    "NCT06031688",
+    "NCT05642572",
+    "NCT06162221",
+    "NCT06350097",
+    "NCT06422143"
+  ],
+  "typedTotal": 94,
+  "labelingNotes": [
+    "Twenty-five recruiting regional NSCLC trials from data/ctgov/region-trials.json with advanced or stage III/IV language. None are in the original gold set, the three few-shots, the few-shot inspection list, held-out set 1, or held-out set 2.",
+    "Labels cover key typed criteria only, with emphasis on the six key types: driver mutation or variant, stage, prior therapy lines or classes, ECOG, brain mets, and key lab thresholds.",
+    "Compound, cohort-dependent, or unless/exception rules were not forced into a typed kind (for example part-dependent stage lists, geography-dependent age floors, histology-dependent driver rules, Gilbert's or liver-mets lab exceptions, and brain-mets bullets that allow treated or inactive lesions).",
+    "Stage lists use explicit stage tokens when they appear. 'Stage IV' or 'Stage 4' is labeled IV, IVA, and IVB. 'Stage IIIB-IIIC or Stage IV' and 'Stage IIIB or IIIC ... or Stage IV' are labeled IIIB, IIIC, IV, IVA, and IVB. Unresectable Stage III is labeled IIIA, IIIB, and IIIC. 'Stage IIB or III' is labeled IIB, IIIA, IIIB, and IIIC. 'Locally advanced or metastatic' without explicit tokens, and 'Stage IV or recurrent', were not forced into a stage list.",
+    "Zubrod performance status was not labeled as ECOG. WHO performance status was not labeled as ECOG. 'Hemoglobin < 9.0 g/dL' on NCT05642572 was not labeled, because the printed inequality is not a usable minimum.",
+    "These labels will not be changed after the parser is run, and postprocess or normalizer rules will not be tuned on this set."
+  ],
+  "criteria": [
+    {
+      "nctId": "NCT06010329",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age 18 years old and above, male or female",
+      "numberValue": 18,
+      "id": "U01"
+    },
+    {
+      "nctId": "NCT06010329",
+      "kind": "egfr_status",
+      "polarity": "inclusion",
+      "sourceText": "Confirmation that the tumor harbors an uncommon epidermal growth factor receptor (EGFR) mutation (tumor tissue biopsy)",
+      "presence": "present",
+      "id": "U02"
+    },
+    {
+      "nctId": "NCT06010329",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) score of 0, 1, or 2",
+      "numberValue": 2,
+      "id": "U03"
+    },
+    {
+      "nctId": "NCT06010329",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Active central nervous system metastases",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "id": "U04"
+    },
+    {
+      "nctId": "NCT06116682",
+      "kind": "prior_lines_min",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have received at least one line of systemic treatment for Stage IV or recurrent NSCLC",
+      "numberValue": 1,
+      "id": "U05"
+    },
+    {
+      "nctId": "NCT06116682",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count \u2265 1.5 x 10^3/uL (within 28 days prior to sub-study registration)",
+      "numberValue": 1500,
+      "id": "U06"
+    },
+    {
+      "nctId": "NCT06116682",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin >= 10.0 g/dL (within 28 days prior to sub-study registration)",
+      "numberValue": 10,
+      "id": "U07"
+    },
+    {
+      "nctId": "NCT06116682",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets \u2265 75 x 10^3/uL (within 28 days prior to sub-study registration)",
+      "numberValue": 75000,
+      "id": "U08"
+    },
+    {
+      "nctId": "NCT06116682",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "calculated creatinine clearance \u2265 45 mL/min using the following Cockcroft-Gault Formula",
+      "numberValue": 45,
+      "id": "U09"
+    },
+    {
+      "nctId": "NCT06119581",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed NSCLC with Stage IIIB-IIIC or Stage IV disease, not suitable for curative intent radical surgery or radiation therapy.",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "id": "U10"
+    },
+    {
+      "nctId": "NCT06119581",
+      "kind": "kras_variant_in",
+      "polarity": "inclusion",
+      "sourceText": "Must have disease with evidence of KRAS G12C mutation.",
+      "stringValue": "G12C",
+      "id": "U11"
+    },
+    {
+      "nctId": "NCT06119581",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Must have an ECOG performance status of 0 or 1.",
+      "numberValue": 1,
+      "id": "U12"
+    },
+    {
+      "nctId": "NCT06119581",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Prior systemic therapy (chemotherapy, immunotherapy, targeted therapy, or biological therapy) for advanced or metastatic NSCLC.",
+      "stringValue": "systemic therapy",
+      "id": "U13"
+    },
+    {
+      "nctId": "NCT06119581",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Have known active central nervous system metastases and/or carcinomatous meningitis.",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "id": "U14"
+    },
+    {
+      "nctId": "NCT06170788",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "An Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 assessed within 7 days before randomization.",
+      "numberValue": 1,
+      "id": "U15"
+    },
+    {
+      "nctId": "NCT06170788",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Received prior systemic anticancer therapy for their metastatic NSCLC.",
+      "stringValue": "systemic anticancer therapy",
+      "id": "U16"
+    },
+    {
+      "nctId": "NCT06170788",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Known active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "id": "U17"
+    },
+    {
+      "nctId": "NCT06216301",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG Performance Status (PS) of 0-1.",
+      "numberValue": 1,
+      "id": "U18"
+    },
+    {
+      "nctId": "NCT06216301",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Has received systemic therapy for metastatic disease.",
+      "stringValue": "systemic therapy",
+      "id": "U19"
+    },
+    {
+      "nctId": "NCT06449313",
+      "kind": "egfr_status",
+      "polarity": "inclusion",
+      "sourceText": "EGFR, ALK, wild-type assessed via any CLIA-certified tissue testing platform.",
+      "presence": "absent",
+      "id": "U20"
+    },
+    {
+      "nctId": "NCT06449313",
+      "kind": "alk_status",
+      "polarity": "inclusion",
+      "sourceText": "EGFR, ALK, wild-type assessed via any CLIA-certified tissue testing platform.",
+      "presence": "absent",
+      "id": "U21"
+    },
+    {
+      "nctId": "NCT06449313",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0-1.",
+      "numberValue": 1,
+      "id": "U22"
+    },
+    {
+      "nctId": "NCT06449313",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute Neutrophil count (ANC) \u2265 1.0 x 10^9/L (1000/uL) without granulocyte colony-stimulating factor support",
+      "numberValue": 1000,
+      "id": "U23"
+    },
+    {
+      "nctId": "NCT06449313",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count \u2265 100 x 10^9/L (100,000/uL) without transfusion",
+      "numberValue": 100000,
+      "id": "U24"
+    },
+    {
+      "nctId": "NCT06449313",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin \u2265 90 g/L (9.0 g/dL) (Patients may be transfused to meet this criterion.)",
+      "numberValue": 9,
+      "id": "U25"
+    },
+    {
+      "nctId": "NCT06449313",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine clearance \u2265 45 mL/min (calculated using the Cockcroft-Gault formula).",
+      "numberValue": 45,
+      "id": "U26"
+    },
+    {
+      "nctId": "NCT06449313",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Any prior systemic therapy for index lung cancer, including immunotherapy, chemotherapy.",
+      "stringValue": "systemic therapy",
+      "id": "U27"
+    },
+    {
+      "nctId": "NCT06568939",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Must have an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.",
+      "numberValue": 1,
+      "id": "U28"
+    },
+    {
+      "nctId": "NCT06568939",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "EGFR activating mutations (e.g., EGFR Exon 19 deletions, T790M, Exon 21 L858R, or Exon 20 insertion mutations).",
+      "presence": "present",
+      "id": "U29"
+    },
+    {
+      "nctId": "NCT06731907",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of Stage IV squamous or non-squamous non-small cell lung cancer (NSCLC) per American Joint Committee on Cancer (AJCC) Staging Manual Version 8.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "id": "U30"
+    },
+    {
+      "nctId": "NCT06731907",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status of either 0 or 1 as assessed within 7 days before randomization.",
+      "numberValue": 1,
+      "id": "U31"
+    },
+    {
+      "nctId": "NCT06731907",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior systemic anticancer therapy for their metastatic NSCLC.",
+      "stringValue": "systemic anticancer therapy",
+      "id": "U32"
+    },
+    {
+      "nctId": "NCT06731907",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "id": "U33"
+    },
+    {
+      "nctId": "NCT06758401",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Have pathologically confirmed Stage IIIB or IIIC NSCLC and not be a candidate for surgical resection or definitive chemoradiation, or Stage IV NSCLC per the AJCC Staging Manual (Version 8.0)",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "id": "U34"
+    },
+    {
+      "nctId": "NCT06758401",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Prior systemic therapy, including anti-PD-(L)1 therapy, for locally advanced, unresectable, or metastatic NSCLC.",
+      "stringValue": "systemic therapy",
+      "id": "U35"
+    },
+    {
+      "nctId": "NCT06855771",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+      "numberValue": 1,
+      "id": "U36"
+    },
+    {
+      "nctId": "NCT06855771",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Participant must be \u2265 18 years of age (or the legal age of consent in the jurisdiction in which the study is taking place) at the time of signing the ICF.",
+      "numberValue": 18,
+      "id": "U37"
+    },
+    {
+      "nctId": "NCT06855771",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Active brain metastases or carcinomatous meningitis.",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "id": "U38"
+    },
+    {
+      "nctId": "NCT06868485",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male or female aged \u226518 years old.",
+      "numberValue": 18,
+      "id": "U39"
+    },
+    {
+      "nctId": "NCT06868485",
+      "kind": "egfr_status",
+      "polarity": "inclusion",
+      "sourceText": "Documented EGFR mutation .",
+      "presence": "present",
+      "id": "U40"
+    },
+    {
+      "nctId": "NCT06868485",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) 0-1 and a minimum life expectancy of 12 weeks.",
+      "numberValue": 1,
+      "id": "U41"
+    },
+    {
+      "nctId": "NCT06890598",
+      "kind": "kras_variant_in",
+      "polarity": "inclusion",
+      "sourceText": "Must have disease with evidence of KRAS G12C mutation.",
+      "stringValue": "G12C",
+      "id": "U42"
+    },
+    {
+      "nctId": "NCT06890598",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Must have an ECOG performance status of 0 or 1.",
+      "numberValue": 1,
+      "id": "U43"
+    },
+    {
+      "nctId": "NCT06890598",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Have known, actionable changes in the EGFR or ALK genes.",
+      "presence": "present",
+      "id": "U44"
+    },
+    {
+      "nctId": "NCT06890598",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Have known, actionable changes in the EGFR or ALK genes.",
+      "presence": "present",
+      "id": "U45"
+    },
+    {
+      "nctId": "NCT07017829",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age \u2265 18 years.",
+      "numberValue": 18,
+      "id": "U46"
+    },
+    {
+      "nctId": "NCT07017829",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of \u2264 1 at the time of study treatment initiation.",
+      "numberValue": 1,
+      "id": "U47"
+    },
+    {
+      "nctId": "NCT07017829",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) \u2265 1.5 x 10^9/L.",
+      "numberValue": 1500,
+      "id": "U48"
+    },
+    {
+      "nctId": "NCT07017829",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets \u2265 100 x 10^9/L.",
+      "numberValue": 100000,
+      "id": "U49"
+    },
+    {
+      "nctId": "NCT07017829",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin \u2265 9 g/dL.",
+      "numberValue": 9,
+      "id": "U50"
+    },
+    {
+      "nctId": "NCT07017829",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Tumor with oncogenic mutation based on standard of care broad genomic profiling in EGFR, ALK, ROS1, RET, MET, or NTRK genes.",
+      "presence": "present",
+      "id": "U51"
+    },
+    {
+      "nctId": "NCT07017829",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Tumor with oncogenic mutation based on standard of care broad genomic profiling in EGFR, ALK, ROS1, RET, MET, or NTRK genes.",
+      "presence": "present",
+      "id": "U52"
+    },
+    {
+      "nctId": "NCT07017829",
+      "kind": "ros1_status",
+      "polarity": "exclusion",
+      "sourceText": "Tumor with oncogenic mutation based on standard of care broad genomic profiling in EGFR, ALK, ROS1, RET, MET, or NTRK genes.",
+      "presence": "present",
+      "id": "U53"
+    },
+    {
+      "nctId": "NCT07027514",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group performance status (ECOG PS) 0 to 1",
+      "numberValue": 1,
+      "id": "U54"
+    },
+    {
+      "nctId": "NCT07027514",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Have known EGFR or ALK mutations",
+      "presence": "present",
+      "id": "U55"
+    },
+    {
+      "nctId": "NCT07027514",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Have known EGFR or ALK mutations",
+      "presence": "present",
+      "id": "U56"
+    },
+    {
+      "nctId": "NCT07027514",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Have known active central nervous system metastases",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "id": "U57"
+    },
+    {
+      "nctId": "NCT07028489",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Be \u226518 years of age at the time of informed consent",
+      "numberValue": 18,
+      "id": "U58"
+    },
+    {
+      "nctId": "NCT07028489",
+      "kind": "egfr_variant_in",
+      "polarity": "inclusion",
+      "sourceText": "Evidence of a confirmed diagnosis of EGFR mutant (EGFR exon 19del or EGFR exon 21 L858R) locally advanced or metastatic NSCLC diagnosed on Jan 1st 2024 or later.",
+      "stringValue": "exon 19del, L858R",
+      "id": "U59"
+    },
+    {
+      "nctId": "NCT07028489",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Evidence of prior treatment with osimertinib, amivantamab or lazertinib.",
+      "stringValue": "osimertinib",
+      "id": "U60"
+    },
+    {
+      "nctId": "NCT07207395",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) \u22651500 cells/mm3.",
+      "numberValue": 1500,
+      "id": "U61"
+    },
+    {
+      "nctId": "NCT07207395",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Calculated creatinine clearance (CrCL) \u226540 mL/min calculated per Institutional standard.",
+      "numberValue": 40,
+      "id": "U62"
+    },
+    {
+      "nctId": "NCT07207395",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of \u22642.",
+      "numberValue": 2,
+      "id": "U63"
+    },
+    {
+      "nctId": "NCT07222566",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "18 years of age or older at screening.",
+      "numberValue": 18,
+      "id": "U64"
+    },
+    {
+      "nctId": "NCT07222566",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Have pathologically confirmed locally advanced (Stage IIIB/IIIC) or metastatic (Stage IV) squamous or non-squamous NSCLC and not be a candidate for complete surgical resection and curative concurrent/sequential chemoradiotherapy",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "id": "U65"
+    },
+    {
+      "nctId": "NCT07222566",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group performance status (ECOG) score of 0 or 1",
+      "numberValue": 1,
+      "id": "U66"
+    },
+    {
+      "nctId": "NCT07222566",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Prior systemic therapy, including anti-PD-(L)1 therapy, for locally advanced, unresectable, or metastatic NSCLC.",
+      "stringValue": "systemic therapy",
+      "id": "U67"
+    },
+    {
+      "nctId": "NCT07361497",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a histologically- or cytologically-confirmed diagnoses of non-small cell lung cancer (NSCLC) with unresectable Stage III disease.",
+      "stages": [
+        "IIIA",
+        "IIIB",
+        "IIIC"
+      ],
+      "id": "U68"
+    },
+    {
+      "nctId": "NCT07361497",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have an Eastern Cooperative Oncology Group (ECOG) performance status (PS) score of 0 or 1.",
+      "numberValue": 1,
+      "id": "U69"
+    },
+    {
+      "nctId": "NCT07365319",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Participant must be \u2265 18 years old at the time of signing the informed consent.",
+      "numberValue": 18,
+      "id": "U70"
+    },
+    {
+      "nctId": "NCT07365319",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Participant has histologically or cytologically confirmed Stage 4 NSCLC predominately squamous or non-squamous) and is considered a candidate for standard therapy with pembrolizumab and chemotherapy.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "id": "U71"
+    },
+    {
+      "nctId": "NCT07365319",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participant has an ECOG Performance Status of 0 to 1 assessed no more than 10 days before start of the treatment.",
+      "numberValue": 1,
+      "id": "U72"
+    },
+    {
+      "nctId": "NCT07365319",
+      "kind": "prior_therapy_excluded",
+      "polarity": "inclusion",
+      "sourceText": "Participant has not received prior systemic therapy for advanced/metastatic NSCLC.",
+      "stringValue": "systemic therapy",
+      "id": "U73"
+    },
+    {
+      "nctId": "NCT05624996",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age >= 18",
+      "numberValue": 18,
+      "id": "U74"
+    },
+    {
+      "nctId": "NCT05624996",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically (histologically or cytologically) proven diagnosis of non-operable stage IIB or III, node positive (American Joint Committee on Cancer [AJCC] eighth edition) non-small cell lung cancer (NSCLC)",
+      "stages": [
+        "IIB",
+        "IIIA",
+        "IIIB",
+        "IIIC"
+      ],
+      "id": "U75"
+    },
+    {
+      "nctId": "NCT05624996",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0-2",
+      "numberValue": 2,
+      "id": "U76"
+    },
+    {
+      "nctId": "NCT05624996",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine clearance >= 25 mL/min by the Cockcroft-Gault (C-G) equation",
+      "numberValue": 25,
+      "id": "U77"
+    },
+    {
+      "nctId": "NCT06031688",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count >= 1.5 x 10^3/uL (within 28 days prior to sub-study randomization)",
+      "numberValue": 1500,
+      "id": "U78"
+    },
+    {
+      "nctId": "NCT06031688",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin >= 9.0 g/dL (within 28 days prior to sub-study randomization)",
+      "numberValue": 9,
+      "id": "U79"
+    },
+    {
+      "nctId": "NCT06031688",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets >= 100 x 10^3/uL (within 28 days prior to sub-study randomization)",
+      "numberValue": 100000,
+      "id": "U80"
+    },
+    {
+      "nctId": "NCT06031688",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "calculated creatinine clearance >= 30 mL/min using the following Cockcroft-Gault Formula",
+      "numberValue": 30,
+      "id": "U81"
+    },
+    {
+      "nctId": "NCT05642572",
+      "kind": "egfr_status",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have documentation of NSCLC with a sensitizing EGFR mutation and have radiologically or clinically progressed (in the opinion of the treating physician) on osimertinib, alone or in combination with other agent(s), as their most recent line of therapy.",
+      "presence": "present",
+      "id": "U82"
+    },
+    {
+      "nctId": "NCT05642572",
+      "kind": "prior_therapy_required",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have documentation of NSCLC with a sensitizing EGFR mutation and have radiologically or clinically progressed (in the opinion of the treating physician) on osimertinib, alone or in combination with other agent(s), as their most recent line of therapy.",
+      "stringValue": "osimertinib",
+      "id": "U83"
+    },
+    {
+      "nctId": "NCT05642572",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count >= 1.5 x 10^3/uL (within 28 days prior to sub-study randomization)",
+      "numberValue": 1500,
+      "id": "U84"
+    },
+    {
+      "nctId": "NCT05642572",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets >= 100 x 10^3/uL (within 28 days prior to sub-study randomization)",
+      "numberValue": 100000,
+      "id": "U85"
+    },
+    {
+      "nctId": "NCT05642572",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "calculated creatinine clearance >= 50 mL/min using the following Cockcroft-Gault Formula",
+      "numberValue": 50,
+      "id": "U86"
+    },
+    {
+      "nctId": "NCT06162221",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "\u2265 18 years of age",
+      "numberValue": 18,
+      "id": "U87"
+    },
+    {
+      "nctId": "NCT06162221",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG PS is 0 to 1",
+      "numberValue": 1,
+      "id": "U88"
+    },
+    {
+      "nctId": "NCT06350097",
+      "kind": "egfr_variant_in",
+      "polarity": "inclusion",
+      "sourceText": "The tumour harbors at least 1 of the 2 common EGFR mutations known to be associated with EGFR-TKI sensitivity (Ex19del or L858R), either alone or in combination with other genomic alterations, which may include EGFR T790M",
+      "stringValue": "Ex19del, L858R",
+      "id": "U89"
+    },
+    {
+      "nctId": "NCT06350097",
+      "kind": "prior_therapy_excluded",
+      "polarity": "inclusion",
+      "sourceText": "Participants must not have received prior EGFR TKIs or other systemic therapy for Stage IIIB, IIIC or IV NSCLC.",
+      "stringValue": "EGFR TKIs",
+      "id": "U90"
+    },
+    {
+      "nctId": "NCT06422143",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC) [Stage IV: M1a, M1b, M1c, American Joint Committee on Cancer Staging Manual, version 8]",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "id": "U91"
+    },
+    {
+      "nctId": "NCT06422143",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Has Eastern Cooperative Oncology Group Performance Status (ECOG PS) score of 0 or 1 assessed within 7 days prior to allocation",
+      "numberValue": 1,
+      "id": "U92"
+    },
+    {
+      "nctId": "NCT06422143",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Received prior systemic chemotherapy or other targeted or biological antineoplastic therapy for their metastatic NSCLC.",
+      "stringValue": "systemic chemotherapy",
+      "id": "U93"
+    },
+    {
+      "nctId": "NCT06422143",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Has known central nervous system (CNS) metastases/carcinomatous meningitis",
+      "allowedBrainMets": [
+        "untreated",
+        "treated_stable"
+      ],
+      "id": "U94"
+    }
+  ]
+}
