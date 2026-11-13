@@ -1,0 +1,395 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06529822",
+  "briefTitle": "Personalized Cancer Vaccine (PCV) Strategy in Patients With Solid Tumors and Molecular Residual Disease",
+  "parsedAt": "2026-11-12T10:07:19.450Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06529822-age-c4",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years.",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06529822-ecog-c4",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status ≤ 1.",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status ≤ 1.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06529822-hemoglobin-c4",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin ≥ 8.0 g/dL",
+      "numberValue": 8,
+      "evidence_quote": "Hemoglobin ≥ 8.0 g/dL",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06529822-bilirubin-c4",
+      "kind": "bilirubin_max",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin ≤ 1.5 x IULN",
+      "numberValue": 1.5,
+      "evidence_quote": "Total bilirubin ≤ 1.5 x IULN",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06529822-egfr-min-c4",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine clearance > 30 mL/min by Cockcroft-Gault",
+      "numberValue": 30,
+      "evidence_quote": "Creatinine clearance > 30 mL/min by Cockcroft-Gault",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06529822-ctdna-c4",
+      "polarity": "inclusion",
+      "sourceText": "Availability of a SignateraTM ctDNA report within 28 days prior to enrollment demonstrating ctDNA-positivity (MRD+). Note: Patients may be pre-screened prior to obtaining ctDNA results to facilitate assay design.",
+      "reasonFuzzy": "ctDNA positivity and timing is not a typed biomarker kind."
+    },
+    {
+      "id": "NCT06529822-surgery-c4",
+      "polarity": "inclusion",
+      "sourceText": "Completed R0 resection within 9 months of surgery.",
+      "reasonFuzzy": "Surgical resection timing is not a typed criteria."
+    },
+    {
+      "id": "NCT06529822-adjuvant-c4",
+      "polarity": "inclusion",
+      "sourceText": "Planned to receive or have received adjuvant immunotherapy for 1 year.",
+      "reasonFuzzy": "Treatment plan is not a typed criteria."
+    },
+    {
+      "id": "NCT06529822-radiologic-c4",
+      "polarity": "inclusion",
+      "sourceText": "Radiologic confirmation (by conventional imaging) of absence of residual disease and absence of metastasis.",
+      "reasonFuzzy": "Imaging confirmation of absence of disease is a subjective assessment."
+    },
+    {
+      "id": "NCT06529822-mutations-excl-c4",
+      "polarity": "exclusion",
+      "sourceText": "Known EGFR activating mutations (exon 19 deletion or L858R) or ALK, RET, or ROS1 gene rearrangements in subjects for whom adjuvant targeted therapy is planned.",
+      "reasonFuzzy": "Multiple gene exclusions and conditional planning requirement cannot be captured in a single typed check."
+    },
+    {
+      "id": "NCT06529822-multicohort",
+      "polarity": "inclusion",
+      "sourceText": "Personalized Cancer Vaccine (PCV) Strategy in Patients With Solid Tumors and Molecular Residual Disease",
+      "reasonFuzzy": "The trial includes multiple cohorts for different tumor types (bladder, gastroesophageal, melanoma, and non-small cell lung cancer), with cohort-specific eligibility criteria."
+    },
+    {
+      "id": "NCT06529822-stage-c4",
+      "polarity": "inclusion",
+      "sourceText": "Histological diagnosis of non-small cell lung carcinoma, stages II, IIIA or IIIB with complete R0 resection.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06529822-anc-c4",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count ≥ 1.0 K/cumm",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06529822-platelets-c4",
+      "polarity": "inclusion",
+      "sourceText": "Platelets ≥ 50 K/cumm",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06529822-ast-c4",
+      "polarity": "inclusion",
+      "sourceText": "AST(SGOT)/ALT(SGPT) ≤ 3.0 x IULN",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06529822-alt-c4",
+      "polarity": "inclusion",
+      "sourceText": "AST(SGOT)/ALT(SGPT) ≤ 3.0 x IULN",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 10,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 10,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 10,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 5,
+      "rejected": 5,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIA,IIB,IIIA,IIIB"
+        },
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "value": "n:50"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        }
+      ],
+      "normalizerTypedCount": 8
+    }
+  },
+  "runA": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 5103
+  },
+  "runB": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 2914
+  },
+  "ms": 16063,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06529822",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06529822-age-c4",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06529822-ecog-c4",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status ≤ 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06529822-stage-c4",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histological diagnosis of non-small cell lung carcinoma, stages II, IIIA or IIIB with complete R0 resection.",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT06529822-anc-c4",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count ≥ 1.0 K/cumm",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06529822-platelets-c4",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 50 K/cumm",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT06529822-hemoglobin-c4",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 8.0 g/dL",
+        "numberValue": 8
+      },
+      {
+        "id": "NCT06529822-bilirubin-c4",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 x IULN",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT06529822-ast-c4",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AST(SGOT)/ALT(SGPT) ≤ 3.0 x IULN",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06529822-alt-c4",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AST(SGOT)/ALT(SGPT) ≤ 3.0 x IULN",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06529822-egfr-min-c4",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine clearance > 30 mL/min by Cockcroft-Gault",
+        "numberValue": 30
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06529822-ctdna-c4",
+        "polarity": "inclusion",
+        "sourceText": "Availability of a SignateraTM ctDNA report within 28 days prior to enrollment demonstrating ctDNA-positivity (MRD+). Note: Patients may be pre-screened prior to obtaining ctDNA results to facilitate assay design.",
+        "reasonFuzzy": "ctDNA positivity and timing is not a typed biomarker kind."
+      },
+      {
+        "id": "NCT06529822-surgery-c4",
+        "polarity": "inclusion",
+        "sourceText": "Completed R0 resection within 9 months of surgery.",
+        "reasonFuzzy": "Surgical resection timing is not a typed criteria."
+      },
+      {
+        "id": "NCT06529822-adjuvant-c4",
+        "polarity": "inclusion",
+        "sourceText": "Planned to receive or have received adjuvant immunotherapy for 1 year.",
+        "reasonFuzzy": "Treatment plan is not a typed criteria."
+      },
+      {
+        "id": "NCT06529822-radiologic-c4",
+        "polarity": "inclusion",
+        "sourceText": "Radiologic confirmation (by conventional imaging) of absence of residual disease and absence of metastasis.",
+        "reasonFuzzy": "Imaging confirmation of absence of disease is a subjective assessment."
+      },
+      {
+        "id": "NCT06529822-mutations-excl-c4",
+        "polarity": "exclusion",
+        "sourceText": "Known EGFR activating mutations (exon 19 deletion or L858R) or ALK, RET, or ROS1 gene rearrangements in subjects for whom adjuvant targeted therapy is planned.",
+        "reasonFuzzy": "Multiple gene exclusions and conditional planning requirement cannot be captured in a single typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06529822",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06529822-age-4",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06529822-ecog-4",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status ≤ 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06529822-stage-4",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histological diagnosis of non-small cell lung carcinoma, stages II, IIIA or IIIB with complete R0 resection.",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT06529822-anc-4",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count ≥ 1.0 K/cumm",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06529822-platelets-4",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 50 K/cumm",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT06529822-hemoglobin-4",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 8.0 g/dL",
+        "numberValue": 8
+      },
+      {
+        "id": "NCT06529822-bilirubin-4",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 x IULN",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT06529822-ast-4",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AST(SGOT)/ALT(SGPT) ≤ 3.0 x IULN",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06529822-alt-4",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AST(SGOT)/ALT(SGPT) ≤ 3.0 x IULN",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06529822-egfr-min-4",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine clearance > 30 mL/min by Cockcroft-Gault",
+        "numberValue": 30
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06529822-multicohort",
+        "polarity": "inclusion",
+        "sourceText": "Personalized Cancer Vaccine (PCV) Strategy in Patients With Solid Tumors and Molecular Residual Disease",
+        "reasonFuzzy": "The trial includes multiple cohorts for different tumor types (bladder, gastroesophageal, melanoma, and non-small cell lung cancer), with cohort-specific eligibility criteria."
+      }
+    ]
+  }
+}

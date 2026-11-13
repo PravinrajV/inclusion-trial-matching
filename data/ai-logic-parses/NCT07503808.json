@@ -1,0 +1,517 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07503808",
+  "briefTitle": "A Study of IDE034 in Adult Participants With Locally Advanced/Metastatic Solid Tumors Types",
+  "parsedAt": "2026-11-12T11:55:48.233Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07503808-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Participant must be at least 18 years of age or the age of maturity per local regulations",
+      "numberValue": 18,
+      "evidence_quote": "Participant must be at least 18 years of age or the age of maturity per local regulations",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07503808-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Have Eastern Cooperative Oncology Group performance status (ECOG PS) of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Have Eastern Cooperative Oncology Group performance status (ECOG PS) of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07503808-biomarker",
+      "polarity": "inclusion",
+      "sourceText": "Participants with advanced recurrent or metastatic solid tumors expressing B7-H3 and PTK7 in the following indications: NSCLC...",
+      "reasonFuzzy": "B7-H3 and PTK7 expression lacks a specific typed cutoff in the source text."
+    },
+    {
+      "id": "NCT07503808-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Archival tissue sample for testing",
+      "reasonFuzzy": "Tissue sample availability is not a typed biomarker or lab check."
+    },
+    {
+      "id": "NCT07503808-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease",
+      "reasonFuzzy": "Measurable disease is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07503808-organ",
+      "polarity": "inclusion",
+      "sourceText": "Have adequate bone marrow and organ function.",
+      "reasonFuzzy": "General organ function without explicit numeric laboratory cutoffs cannot be represented as typed checks."
+    },
+    {
+      "id": "NCT07503808-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known symptomatic brain metastases or leptomeningeal metastasis",
+      "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT07503808-indiv",
+      "polarity": "inclusion",
+      "sourceText": "Participants with advanced recurrent or metastatic solid tumors expressing B7-H3 and PTK7 in the following indications: NSCLC, ESCC, endometrial cancer, HGSOC, HNSCC, TNBC (estrogen receptor, progesterone receptor, and human epidermal growth factor receptor 2 [HER2] negative), CRC, and CRPC who have radiologically progressed or recurred on at least one line of therapy or is intolerant to additional effective standard therapies.",
+      "reasonFuzzy": "Biomarker expression requirements for B7-H3 and PTK7 across various tumor types are not standard typed checks."
+    },
+    {
+      "id": "NCT07503808-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Archival tissue sample for testing",
+      "reasonFuzzy": "Tissue sample availability is a procedural requirement, not a typed check."
+    },
+    {
+      "id": "NCT07503808-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease",
+      "reasonFuzzy": "Measurable disease is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07503808-organ",
+      "polarity": "inclusion",
+      "sourceText": "Have adequate bone marrow and organ function.",
+      "reasonFuzzy": "General organ function without specific lab cutoffs is a fuzzy clinical judgment."
+    },
+    {
+      "id": "NCT07503808-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known symptomatic brain metastases or leptomeningeal metastasis",
+      "reasonFuzzy": "Symptomatic brain metastases are not a clean typed brain_mets category of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT07503808-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Known primary CNS malignancy and any other malignancies within 2 years prior to the first dose.",
+      "reasonFuzzy": "Exclusion of other malignancies is not a typed check kind."
+    },
+    {
+      "id": "NCT07503808-pain",
+      "polarity": "exclusion",
+      "sourceText": "Have uncontrolled tumor-associated pain",
+      "reasonFuzzy": "Uncontrolled pain is a subjective clinical symptom."
+    },
+    {
+      "id": "NCT07503808-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Have clinically significant cardiac abnormalities and/or cerebrovascular disease (stroke) within 6 months before the first dose",
+      "reasonFuzzy": "Significant cardiac abnormalities and cerebrovascular disease are clinical judgments."
+    },
+    {
+      "id": "NCT07503808-infection",
+      "polarity": "exclusion",
+      "sourceText": "Active uncontrolled infection",
+      "reasonFuzzy": "Uncontrolled infection is a clinical judgment."
+    },
+    {
+      "id": "NCT07503808-lung",
+      "polarity": "exclusion",
+      "sourceText": "Have history of interstitial pneumonitis, current noninfectious pneumonitis requiring steroid therapy; known or suspected interstitial pneumonitis as seen on screening imaging; other moderate to severe lung diseases seriously affecting respiratory function within 3 months before the first dose.",
+      "reasonFuzzy": "Pneumonitis and lung disease criteria are complex clinical conditions not captured by typed checks."
+    },
+    {
+      "id": "NCT07503808-severe-inf",
+      "polarity": "exclusion",
+      "sourceText": "Have history of severe infections within 4 weeks prior to the start of study treatment, including but not limited to bacteremia, severe pneumonia, or other serious infectious complications requiring hospitalization.",
+      "reasonFuzzy": "Severe infection history with hospitalization is a complex clinical history rule."
+    },
+    {
+      "id": "NCT07503808-hiv",
+      "polarity": "exclusion",
+      "sourceText": "Have history of immunodeficiency, with a positive human immunodeficiency virus (HIV) test at screening.",
+      "reasonFuzzy": "HIV status is not a typed check kind."
+    },
+    {
+      "id": "NCT07503808-hep",
+      "polarity": "exclusion",
+      "sourceText": "Participants with known or suspected viral hepatitis",
+      "reasonFuzzy": "Viral hepatitis status is not a typed check kind."
+    },
+    {
+      "id": "NCT07503808-tb",
+      "polarity": "exclusion",
+      "sourceText": "Have history of active tuberculosis within 1 year before enrollment",
+      "reasonFuzzy": "Tuberculosis history is not a typed check kind."
+    },
+    {
+      "id": "NCT07503808-tox",
+      "polarity": "exclusion",
+      "sourceText": "If participants had adverse reactions to previous antitumor treatment that have not recovered to guidelines of CTCAE Grade ≤ 1 and Grade 2 peripheral neurological symptoms",
+      "reasonFuzzy": "Recovery from prior toxicity is a clinical grading assessment."
+    },
+    {
+      "id": "NCT07503808-washout",
+      "polarity": "exclusion",
+      "sourceText": "Have received chemotherapy within 3 weeks of first dose of IMP; immunotherapy or biologic targeted antitumor treatments within 3 weeks before the first dose of IMP or other investigational products within 4 weeks of first dose of IMP",
+      "reasonFuzzy": "Complex washout rules for multiple drug classes are not simple lab cutoffs."
+    },
+    {
+      "id": "NCT07503808-cyp",
+      "polarity": "exclusion",
+      "sourceText": "Current use or anticipated need for food or drugs that are known strong CYP3A4/5 inhibitors or inducers",
+      "reasonFuzzy": "Concomitant medications for CYP3A4/5 are not typed checks."
+    },
+    {
+      "id": "NCT07503808-top1i",
+      "polarity": "exclusion",
+      "sourceText": "Have prior treatment with a topoisomerase I inhibitor (TOP1i), including an ADC with a TOP1i payload, within 6 months of first dose of IMP",
+      "reasonFuzzy": "Prior therapy exclusion with specific timing and payload class cannot be expressed as a simple prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT07503808-rad",
+      "polarity": "exclusion",
+      "sourceText": "Have received radiotherapy within 2 weeks prior to study entry",
+      "reasonFuzzy": "Radiotherapy washout is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT07503808-surg",
+      "polarity": "exclusion",
+      "sourceText": "Have undergone major surgery or trauma within 4 weeks prior to study entry.",
+      "reasonFuzzy": "Surgery washout is not a typed check."
+    },
+    {
+      "id": "NCT07503808-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Have received live attenuated vaccine within 28 days prior to the first dose or are expected to receive live attenuated vaccine during the study treatment.",
+      "reasonFuzzy": "Live vaccine washout is not a typed check."
+    },
+    {
+      "id": "NCT07503808-preg",
+      "polarity": "exclusion",
+      "sourceText": "Female participants who are pregnant, lactating, or planning to become pregnant during the study period to 7 months after the last dose of IMP.",
+      "reasonFuzzy": "Pregnancy and lactation status are not typed checks."
+    },
+    {
+      "id": "NCT07503808-allergy",
+      "polarity": "exclusion",
+      "sourceText": "Are known to be allergic to any component or excipient of the IMP product or have a history of severe allergic reactions to other monoclonal antibody/fusion protein drugs.",
+      "reasonFuzzy": "Allergy history is not a typed check."
+    },
+    {
+      "id": "NCT07503808-eye",
+      "polarity": "exclusion",
+      "sourceText": "Participants with complications in the eye including ulcers in the eye, and severe dry eye",
+      "reasonFuzzy": "Eye complications are not typed checks."
+    },
+    {
+      "id": "NCT07503808-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "who have radiologically progressed or recurred on at least one line of therapy or is intolerant to additional effective standard therapies.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07503808-prior-adc",
+      "polarity": "exclusion",
+      "sourceText": "Have prior treatment with B7-H3 or PTK7 antibody-drug conjugate (ADC).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "prior_lines_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:b7-h3 or ptk7 antibody-drug conjugate"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 4457
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 24,
+    "attempts": 1,
+    "ms": 5942
+  },
+  "ms": 18385,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07503808",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07503808-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant must be at least 18 years of age or the age of maturity per local regulations",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07503808-prior-lines",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "who have radiologically progressed or recurred on at least one line of therapy or is intolerant to additional effective standard therapies.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07503808-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have Eastern Cooperative Oncology Group performance status (ECOG PS) of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07503808-prior-adc",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Have prior treatment with B7-H3 or PTK7 antibody-drug conjugate (ADC).",
+        "stringValue": "B7-H3 or PTK7 antibody-drug conjugate"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07503808-biomarker",
+        "polarity": "inclusion",
+        "sourceText": "Participants with advanced recurrent or metastatic solid tumors expressing B7-H3 and PTK7 in the following indications: NSCLC...",
+        "reasonFuzzy": "B7-H3 and PTK7 expression lacks a specific typed cutoff in the source text."
+      },
+      {
+        "id": "NCT07503808-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Archival tissue sample for testing",
+        "reasonFuzzy": "Tissue sample availability is not a typed biomarker or lab check."
+      },
+      {
+        "id": "NCT07503808-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease",
+        "reasonFuzzy": "Measurable disease is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07503808-organ",
+        "polarity": "inclusion",
+        "sourceText": "Have adequate bone marrow and organ function.",
+        "reasonFuzzy": "General organ function without explicit numeric laboratory cutoffs cannot be represented as typed checks."
+      },
+      {
+        "id": "NCT07503808-brain",
+        "polarity": "exclusion",
+        "sourceText": "Known symptomatic brain metastases or leptomeningeal metastasis",
+        "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07503808",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07503808-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant must be at least 18 years of age or the age of maturity per local regulations",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07503808-prior-lines",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "who have radiologically progressed or recurred on at least one line of therapy or is intolerant to additional effective standard therapies.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07503808-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have Eastern Cooperative Oncology Group performance status (ECOG PS) of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07503808-prior-adc",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Have prior treatment with B7-H3 or PTK7 antibody-drug conjugate (ADC).",
+        "stringValue": "B7-H3 or PTK7 antibody-drug conjugate"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07503808-indiv",
+        "polarity": "inclusion",
+        "sourceText": "Participants with advanced recurrent or metastatic solid tumors expressing B7-H3 and PTK7 in the following indications: NSCLC, ESCC, endometrial cancer, HGSOC, HNSCC, TNBC (estrogen receptor, progesterone receptor, and human epidermal growth factor receptor 2 [HER2] negative), CRC, and CRPC who have radiologically progressed or recurred on at least one line of therapy or is intolerant to additional effective standard therapies.",
+        "reasonFuzzy": "Biomarker expression requirements for B7-H3 and PTK7 across various tumor types are not standard typed checks."
+      },
+      {
+        "id": "NCT07503808-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Archival tissue sample for testing",
+        "reasonFuzzy": "Tissue sample availability is a procedural requirement, not a typed check."
+      },
+      {
+        "id": "NCT07503808-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease",
+        "reasonFuzzy": "Measurable disease is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07503808-organ",
+        "polarity": "inclusion",
+        "sourceText": "Have adequate bone marrow and organ function.",
+        "reasonFuzzy": "General organ function without specific lab cutoffs is a fuzzy clinical judgment."
+      },
+      {
+        "id": "NCT07503808-brain",
+        "polarity": "exclusion",
+        "sourceText": "Known symptomatic brain metastases or leptomeningeal metastasis",
+        "reasonFuzzy": "Symptomatic brain metastases are not a clean typed brain_mets category of none, treated_stable, or untreated."
+      },
+      {
+        "id": "NCT07503808-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Known primary CNS malignancy and any other malignancies within 2 years prior to the first dose.",
+        "reasonFuzzy": "Exclusion of other malignancies is not a typed check kind."
+      },
+      {
+        "id": "NCT07503808-pain",
+        "polarity": "exclusion",
+        "sourceText": "Have uncontrolled tumor-associated pain",
+        "reasonFuzzy": "Uncontrolled pain is a subjective clinical symptom."
+      },
+      {
+        "id": "NCT07503808-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Have clinically significant cardiac abnormalities and/or cerebrovascular disease (stroke) within 6 months before the first dose",
+        "reasonFuzzy": "Significant cardiac abnormalities and cerebrovascular disease are clinical judgments."
+      },
+      {
+        "id": "NCT07503808-infection",
+        "polarity": "exclusion",
+        "sourceText": "Active uncontrolled infection",
+        "reasonFuzzy": "Uncontrolled infection is a clinical judgment."
+      },
+      {
+        "id": "NCT07503808-lung",
+        "polarity": "exclusion",
+        "sourceText": "Have history of interstitial pneumonitis, current noninfectious pneumonitis requiring steroid therapy; known or suspected interstitial pneumonitis as seen on screening imaging; other moderate to severe lung diseases seriously affecting respiratory function within 3 months before the first dose.",
+        "reasonFuzzy": "Pneumonitis and lung disease criteria are complex clinical conditions not captured by typed checks."
+      },
+      {
+        "id": "NCT07503808-severe-inf",
+        "polarity": "exclusion",
+        "sourceText": "Have history of severe infections within 4 weeks prior to the start of study treatment, including but not limited to bacteremia, severe pneumonia, or other serious infectious complications requiring hospitalization.",
+        "reasonFuzzy": "Severe infection history with hospitalization is a complex clinical history rule."
+      },
+      {
+        "id": "NCT07503808-hiv",
+        "polarity": "exclusion",
+        "sourceText": "Have history of immunodeficiency, with a positive human immunodeficiency virus (HIV) test at screening.",
+        "reasonFuzzy": "HIV status is not a typed check kind."
+      },
+      {
+        "id": "NCT07503808-hep",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known or suspected viral hepatitis",
+        "reasonFuzzy": "Viral hepatitis status is not a typed check kind."
+      },
+      {
+        "id": "NCT07503808-tb",
+        "polarity": "exclusion",
+        "sourceText": "Have history of active tuberculosis within 1 year before enrollment",
+        "reasonFuzzy": "Tuberculosis history is not a typed check kind."
+      },
+      {
+        "id": "NCT07503808-tox",
+        "polarity": "exclusion",
+        "sourceText": "If participants had adverse reactions to previous antitumor treatment that have not recovered to guidelines of CTCAE Grade ≤ 1 and Grade 2 peripheral neurological symptoms",
+        "reasonFuzzy": "Recovery from prior toxicity is a clinical grading assessment."
+      },
+      {
+        "id": "NCT07503808-washout",
+        "polarity": "exclusion",
+        "sourceText": "Have received chemotherapy within 3 weeks of first dose of IMP; immunotherapy or biologic targeted antitumor treatments within 3 weeks before the first dose of IMP or other investigational products within 4 weeks of first dose of IMP",
+        "reasonFuzzy": "Complex washout rules for multiple drug classes are not simple lab cutoffs."
+      },
+      {
+        "id": "NCT07503808-cyp",
+        "polarity": "exclusion",
+        "sourceText": "Current use or anticipated need for food or drugs that are known strong CYP3A4/5 inhibitors or inducers",
+        "reasonFuzzy": "Concomitant medications for CYP3A4/5 are not typed checks."
+      },
+      {
+        "id": "NCT07503808-top1i",
+        "polarity": "exclusion",
+        "sourceText": "Have prior treatment with a topoisomerase I inhibitor (TOP1i), including an ADC with a TOP1i payload, within 6 months of first dose of IMP",
+        "reasonFuzzy": "Prior therapy exclusion with specific timing and payload class cannot be expressed as a simple prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT07503808-rad",
+        "polarity": "exclusion",
+        "sourceText": "Have received radiotherapy within 2 weeks prior to study entry",
+        "reasonFuzzy": "Radiotherapy washout is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT07503808-surg",
+        "polarity": "exclusion",
+        "sourceText": "Have undergone major surgery or trauma within 4 weeks prior to study entry.",
+        "reasonFuzzy": "Surgery washout is not a typed check."
+      },
+      {
+        "id": "NCT07503808-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Have received live attenuated vaccine within 28 days prior to the first dose or are expected to receive live attenuated vaccine during the study treatment.",
+        "reasonFuzzy": "Live vaccine washout is not a typed check."
+      },
+      {
+        "id": "NCT07503808-preg",
+        "polarity": "exclusion",
+        "sourceText": "Female participants who are pregnant, lactating, or planning to become pregnant during the study period to 7 months after the last dose of IMP.",
+        "reasonFuzzy": "Pregnancy and lactation status are not typed checks."
+      },
+      {
+        "id": "NCT07503808-allergy",
+        "polarity": "exclusion",
+        "sourceText": "Are known to be allergic to any component or excipient of the IMP product or have a history of severe allergic reactions to other monoclonal antibody/fusion protein drugs.",
+        "reasonFuzzy": "Allergy history is not a typed check."
+      },
+      {
+        "id": "NCT07503808-eye",
+        "polarity": "exclusion",
+        "sourceText": "Participants with complications in the eye including ulcers in the eye, and severe dry eye",
+        "reasonFuzzy": "Eye complications are not typed checks."
+      }
+    ]
+  }
+}

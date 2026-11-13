@@ -1,0 +1,348 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05267626",
+  "briefTitle": "Study of AU-007, A Monoclonal Antibody That Binds to IL-2 and Inhibits IL-2Rα Binding, in Patients With Unresectable Locally Advanced or Metastatic Cancer",
+  "parsedAt": "2026-11-12T06:11:57.775Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05267626-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have measurable disease as per RECIST v1.1 criteria and documented by CT and/or MRI",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05267626-melanoma-part2",
+      "polarity": "inclusion",
+      "sourceText": "Cutaneous melanoma that is either locally unresectable or metastatic: BRAF wild type: progressed after receiving PD-1 containing therapy with or without an anti-CTLA-4; BRAF mutation: patients who refused BRAF+MEK inhibitor; Must have objective progression after receiving at least two cycles of prior doublet therapy (anti-PD-1/anti-CTLA-4 or anti-PD-1/anti-LAG-3); Radiographic progression ≥ 4 weeks prior to the first dose of study drug to rule out late response to most recent therapy. The requirement for documented radiologic progression may be waived after review by Medical Monitor (e.g., in the case of progression beyond 12 weeks after starting a doublet); LDH ≤ 2.5 x ULN",
+      "reasonFuzzy": "This criteria set applies to cutaneous melanoma, not NSCLC, and includes complex conditional rules and investigator discretion waivers."
+    },
+    {
+      "id": "NCT05267626-melanoma-part4",
+      "polarity": "inclusion",
+      "sourceText": "Part 4: cutaneous melanoma; Unresectable locally advanced or metastatic cutaneous melanoma that has progressed during or following treatment with an anti-PDx (unless ineligible for anti-PDx therapy); Patients with BRAF mutations must either be ineligible for or have refused a BRAF+MEK inhibitor; Must have objective progression after receiving at least two cycles of prior doublet therapy (anti-PD-1/anti-CTLA-4 or anti-PD-1/anti-LAG-3).; Radiographic progression ≥ 4 weeks prior to the first dose of study drug to rule out late response to most recent therapy. The requirement for documented radiologic progression may be waived after review by Medical Monitor (e.g., in the case of progression beyond 12 weeks after starting a doublet); LDH ≤ 2.5 x ULN",
+      "reasonFuzzy": "This criteria set applies to cutaneous melanoma, not NSCLC."
+    },
+    {
+      "id": "NCT05267626-brain",
+      "polarity": "inclusion",
+      "sourceText": "Symptomatic central nervous system (CNS) metastases must have been treated, be asymptomatic for ≥ 14 days, and meet the following at the time of enrollment: No concurrent treatment for CNS disease (e.g., surgery, radiation, corticosteroids ≥ 10 mg prednisone/day or equivalent); No concurrent leptomeningeal disease or cord compression",
+      "reasonFuzzy": "This is a complex multi-part rule for previously symptomatic brain metastases involving symptom duration, treatment status, and concurrent therapy exclusions, which cannot be expressed cleanly as a standard brain_mets check."
+    },
+    {
+      "id": "NCT05267626-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rearrangement and has progressed during or following treatment with an anti-PDx with or without platinum-based chemotherapy",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05267626-egfr",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rearrangement and has progressed during or following treatment with an anti-PDx with or without platinum-based chemotherapy",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05267626-alk",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rearrangement and has progressed during or following treatment with an anti-PDx with or without platinum-based chemotherapy",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05267626-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have measurable disease as per RECIST v1.1 criteria and documented by CT and/or MRI",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05267626-melanomaprog",
+      "polarity": "inclusion",
+      "sourceText": "Must have objective progression after receiving at least two cycles of prior doublet therapy (anti-PD-1/anti-CTLA-4 or anti-PD-1/anti-LAG-3)",
+      "reasonFuzzy": "This criteria applies specifically to cutaneous melanoma subgroups and contains complex doublet progression rules."
+    },
+    {
+      "id": "NCT05267626-brain",
+      "polarity": "inclusion",
+      "sourceText": "Symptomatic central nervous system (CNS) metastases must have been treated, be asymptomatic for ≥ 14 days, and meet the following at the time of enrollment: No concurrent treatment for CNS disease (e.g., surgery, radiation, corticosteroids ≥ 10 mg prednisone/day or equivalent) No concurrent leptomeningeal disease or cord compression",
+      "reasonFuzzy": "The wording involves treated symptomatic CNS metastases with specific symptom-free duration and concurrent treatment conditions which cannot be mapped to a standard allowedBrainMets status cleanly."
+    },
+    {
+      "id": "NCT05267626-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rearrangement and has progressed during or following treatment with an anti-PDx with or without platinum-based chemotherapy",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05267626-egfr",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rearrangement and has progressed during or following treatment with an anti-PDx with or without platinum-based chemotherapy",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05267626-alk",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rearrangement and has progressed during or following treatment with an anti-PDx with or without platinum-based chemotherapy",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05267626-priorpdx",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rearrangement and has progressed during or following treatment with an anti-PDx with or without platinum-based chemotherapy",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05267626-pdl1-part3",
+      "polarity": "inclusion",
+      "sourceText": "Part 3: NSCLC as described above",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05267626-egfr-part3",
+      "polarity": "inclusion",
+      "sourceText": "Part 3: NSCLC as described above",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05267626-alk-part3",
+      "polarity": "inclusion",
+      "sourceText": "Part 3: NSCLC as described above",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rea"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rea"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rea"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 0,
+      "unquoted": 4,
+      "unquotedItems": [
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rea"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rea"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rea"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rea"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 0,
+      "disagreements": 3,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "side": "a-only",
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:absent"
+        },
+        {
+          "side": "a-only",
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "value": "p:absent"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 4027
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2950
+  },
+  "ms": 14988,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05267626",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05267626-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rearrangement and has progressed during or following treatment with an anti-PDx with or without platinum-based chemotherapy",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05267626-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rearrangement and has progressed during or following treatment with an anti-PDx with or without platinum-based chemotherapy",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT05267626-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rearrangement and has progressed during or following treatment with an anti-PDx with or without platinum-based chemotherapy",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT05267626-pdl1-part3",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Part 3: NSCLC as described above",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05267626-egfr-part3",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Part 3: NSCLC as described above",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT05267626-alk-part3",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Part 3: NSCLC as described above",
+        "presence": "absent"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05267626-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have measurable disease as per RECIST v1.1 criteria and documented by CT and/or MRI",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05267626-melanoma-part2",
+        "polarity": "inclusion",
+        "sourceText": "Cutaneous melanoma that is either locally unresectable or metastatic: BRAF wild type: progressed after receiving PD-1 containing therapy with or without an anti-CTLA-4; BRAF mutation: patients who refused BRAF+MEK inhibitor; Must have objective progression after receiving at least two cycles of prior doublet therapy (anti-PD-1/anti-CTLA-4 or anti-PD-1/anti-LAG-3); Radiographic progression ≥ 4 weeks prior to the first dose of study drug to rule out late response to most recent therapy. The requirement for documented radiologic progression may be waived after review by Medical Monitor (e.g., in the case of progression beyond 12 weeks after starting a doublet); LDH ≤ 2.5 x ULN",
+        "reasonFuzzy": "This criteria set applies to cutaneous melanoma, not NSCLC, and includes complex conditional rules and investigator discretion waivers."
+      },
+      {
+        "id": "NCT05267626-melanoma-part4",
+        "polarity": "inclusion",
+        "sourceText": "Part 4: cutaneous melanoma; Unresectable locally advanced or metastatic cutaneous melanoma that has progressed during or following treatment with an anti-PDx (unless ineligible for anti-PDx therapy); Patients with BRAF mutations must either be ineligible for or have refused a BRAF+MEK inhibitor; Must have objective progression after receiving at least two cycles of prior doublet therapy (anti-PD-1/anti-CTLA-4 or anti-PD-1/anti-LAG-3).; Radiographic progression ≥ 4 weeks prior to the first dose of study drug to rule out late response to most recent therapy. The requirement for documented radiologic progression may be waived after review by Medical Monitor (e.g., in the case of progression beyond 12 weeks after starting a doublet); LDH ≤ 2.5 x ULN",
+        "reasonFuzzy": "This criteria set applies to cutaneous melanoma, not NSCLC."
+      },
+      {
+        "id": "NCT05267626-brain",
+        "polarity": "inclusion",
+        "sourceText": "Symptomatic central nervous system (CNS) metastases must have been treated, be asymptomatic for ≥ 14 days, and meet the following at the time of enrollment: No concurrent treatment for CNS disease (e.g., surgery, radiation, corticosteroids ≥ 10 mg prednisone/day or equivalent); No concurrent leptomeningeal disease or cord compression",
+        "reasonFuzzy": "This is a complex multi-part rule for previously symptomatic brain metastases involving symptom duration, treatment status, and concurrent therapy exclusions, which cannot be expressed cleanly as a standard brain_mets check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05267626",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05267626-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rearrangement and has progressed during or following treatment with an anti-PDx with or without platinum-based chemotherapy",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05267626-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rearrangement and has progressed during or following treatment with an anti-PDx with or without platinum-based chemotherapy",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT05267626-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rearrangement and has progressed during or following treatment with an anti-PDx with or without platinum-based chemotherapy",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT05267626-priorpdx",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC: Unresectable locally advanced or metastatic PD-L1-positive (tumor proportion score [TPS] ≥ 1%) NSCLC not harboring an activating EGFR mutation or ALK rearrangement and has progressed during or following treatment with an anti-PDx with or without platinum-based chemotherapy",
+        "stringValue": "anti-PDx"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05267626-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have measurable disease as per RECIST v1.1 criteria and documented by CT and/or MRI",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05267626-melanomaprog",
+        "polarity": "inclusion",
+        "sourceText": "Must have objective progression after receiving at least two cycles of prior doublet therapy (anti-PD-1/anti-CTLA-4 or anti-PD-1/anti-LAG-3)",
+        "reasonFuzzy": "This criteria applies specifically to cutaneous melanoma subgroups and contains complex doublet progression rules."
+      },
+      {
+        "id": "NCT05267626-brain",
+        "polarity": "inclusion",
+        "sourceText": "Symptomatic central nervous system (CNS) metastases must have been treated, be asymptomatic for ≥ 14 days, and meet the following at the time of enrollment: No concurrent treatment for CNS disease (e.g., surgery, radiation, corticosteroids ≥ 10 mg prednisone/day or equivalent) No concurrent leptomeningeal disease or cord compression",
+        "reasonFuzzy": "The wording involves treated symptomatic CNS metastases with specific symptom-free duration and concurrent treatment conditions which cannot be mapped to a standard allowedBrainMets status cleanly."
+      }
+    ]
+  }
+}

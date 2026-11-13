@@ -1,0 +1,171 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07718672",
+  "briefTitle": "Hotspot Stereotactic Ablative Radiotherapy Versus Traditional Stereotactic Ablative Radiotherapy for the Treatment of Early-Stage Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T12:00:17.165Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07718672-scope",
+      "polarity": "inclusion",
+      "sourceText": "Hotspot Stereotactic Ablative Radiotherapy Versus Traditional Stereotactic Ablative Radiotherapy for the Treatment of Early-Stage Non-Small Cell Lung Cancer",
+      "reasonFuzzy": "This trial is limited to stage I or II (early-stage) NSCLC and is out of scope for stage III/IV trials."
+    },
+    {
+      "id": "NCT07718672-scope",
+      "polarity": "inclusion",
+      "sourceText": "Diagnosed with T1-3N0 biopsy-proven NSCLC of the lung. Multiple primary lung tumors are allowed; however, each lesion requires histologic confirmation",
+      "reasonFuzzy": "The trial is out of scope because it is limited to early-stage (T1-3N0, Stage I-II) NSCLC."
+    },
+    {
+      "id": "NCT07718672-age",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07718672-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of ≤ 2",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07718672-egfr",
+      "polarity": "exclusion",
+      "sourceText": "Known EGFR or ALK mutation",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07718672-alk",
+      "polarity": "exclusion",
+      "sourceText": "Known EGFR or ALK mutation",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 0,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 0,
+      "disagreements": 4,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:18"
+        },
+        {
+          "side": "a-only",
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:2"
+        },
+        {
+          "side": "a-only",
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "a-only",
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 6890
+  },
+  "runB": {
+    "typedEmitted": 0,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 7952
+  },
+  "ms": 22828,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07718672",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07718672-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07718672-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of ≤ 2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07718672-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Known EGFR or ALK mutation",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07718672-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Known EGFR or ALK mutation",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07718672-scope",
+        "polarity": "inclusion",
+        "sourceText": "Hotspot Stereotactic Ablative Radiotherapy Versus Traditional Stereotactic Ablative Radiotherapy for the Treatment of Early-Stage Non-Small Cell Lung Cancer",
+        "reasonFuzzy": "This trial is limited to stage I or II (early-stage) NSCLC and is out of scope for stage III/IV trials."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07718672",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07718672-scope",
+        "polarity": "inclusion",
+        "sourceText": "Diagnosed with T1-3N0 biopsy-proven NSCLC of the lung. Multiple primary lung tumors are allowed; however, each lesion requires histologic confirmation",
+        "reasonFuzzy": "The trial is out of scope because it is limited to early-stage (T1-3N0, Stage I-II) NSCLC."
+      }
+    ]
+  }
+}

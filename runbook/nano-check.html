@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inclusion: on-device model check</title>
+    <style>
+      :root { font-family: Georgia, "Palatino Linotype", Palatino, serif; color: #1c1917; background: #faf7f2; }
+      body { max-width: 40rem; margin: 2rem auto; padding: 0 1rem 4rem; line-height: 1.5; }
+      button { font: inherit; padding: 0.5rem 0.9rem; margin: 0.3rem 0.4rem 0.3rem 0; cursor: pointer; }
+      pre, #report { background: #fff; border: 1px solid #d6d3d1; padding: 0.8rem 1rem; white-space: pre-wrap; }
+      .ok { color: #0f4c3a; font-weight: 600; }
+      .fail { color: #7f1d1d; font-weight: 600; }
+      .hint { color: #57534e; }
+    </style>
+  </head>
+  <body>
+    <h1>Inclusion: on-device model check</h1>
+    <p>This page talks only to Chrome's built-in Prompt API on this computer. It does not use Firebase, and it does not send the prompt to a cloud model.</p>
+    <p class="hint">The prompt is a one-line synthetic sentence. Do not paste a real medical record here.</p>
+    <p>
+      <button type="button" id="availability">Check availability</button>
+      <button type="button" id="run">Download model and run the prompt</button>
+    </p>
+    <div id="report">No check yet.</div>
+    <script>
+      const PROMPT =
+        "Synthetic note, not a real patient: 62-year-old with stage IV lung adenocarcinoma, ECOG 1.\n\nReturn JSON with one number field, ecog, for the ECOG performance status in that sentence.";
+      const SCHEMA = {
+        type: "object",
+        properties: { ecog: { type: "number" } },
+        required: ["ecog"],
+        additionalProperties: false,
+      };
+      const OPTIONS = {
+        expectedInputs: [{ type: "text", languages: ["en"] }],
+        expectedOutputs: [{ type: "text", languages: ["en"] }],
+      };
+
+      const report = document.getElementById("report");
+
+      function show(html) {
+        report.innerHTML = html;
+      }
+
+      function hasPromptApi() {
+        return typeof LanguageModel !== "undefined";
+      }
+
+      document.getElementById("availability").addEventListener("click", async () => {
+        if (!hasPromptApi()) {
+          show('<span class="fail">FAIL.</span> LanguageModel is not in this browser. Use desktop Chrome 139 or higher, and check chrome://flags.');
+          return;
+        }
+        try {
+          const availability = await LanguageModel.availability(OPTIONS);
+          show("availability: <strong>" + availability + "</strong>\n\nIf this is downloadable or available, click the other button. That click is the user gesture Chrome requires to start a download.");
+        } catch (err) {
+          show('<span class="fail">FAIL.</span> availability() threw: ' + String(err));
+        }
+      });
+
+      document.getElementById("run").addEventListener("click", async () => {
+        if (!hasPromptApi()) {
+          show('<span class="fail">FAIL.</span> LanguageModel is not in this browser.');
+          return;
+        }
+        try {
+          const availability = await LanguageModel.availability(OPTIONS);
+          show("availability: " + availability + "\nStarting LanguageModel.create(). If a download is needed, wait here. This can take several minutes.\n");
+          const session = await LanguageModel.create({
+            ...OPTIONS,
+            monitor(m) {
+              m.addEventListener("downloadprogress", (e) => {
+                const pct = Math.round((e.loaded || 0) * 10000) / 100;
+                report.textContent += "Download progress: " + pct + "%\n";
+              });
+            },
+          });
+          const raw = await session.prompt(PROMPT, { responseConstraint: SCHEMA });
+          let parsed;
+          try {
+            parsed = JSON.parse(raw);
+          } catch (err) {
+            show(
+              '<span class="fail">FAIL.</span> The model ran, but the output was not JSON.\n\nRaw output:\n' +
+                String(raw) +
+                "\n\nParse error: " +
+                String(err),
+            );
+            session.destroy();
+            return;
+          }
+          const ecog = parsed && parsed.ecog;
+          const pass = ecog === 1 || ecog === "1";
+          show(
+            (pass
+              ? '<span class="ok">PASS.</span> The on-device model returned ECOG 1 from the synthetic sentence.'
+              : '<span class="fail">FAIL.</span> Expected ecog to be 1, got ' + String(ecog) + ".") +
+              "\n\navailability before create(): " +
+              availability +
+              "\n\nRaw output:\n" +
+              String(raw),
+          );
+          session.destroy();
+        } catch (err) {
+          show('<span class="fail">FAIL.</span> ' + (err && err.stack ? err.stack : String(err)));
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,383 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07144280",
+  "briefTitle": "A Study to Learn About the Study Medicine Called PF-08046054/SGN-PDL1V Versus Docetaxel in Adult Participants With Previously-Treated Programmed Cell Death Ligand 1 (PD-L1) Positive Non-Small-Cell Lung Cancer (NSCLC)",
+  "parsedAt": "2026-11-12T10:57:37.792Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07144280-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of NSCLC with locally advanced, unresectable Stage IIIB or IIIC not eligible for definitive chemoradiotherapy or metastatic (Stage IV: M1a, M1b, or M1c) disease per the American Joint Committee on Cancer (AJCC) Staging Manual, Version 8.0, and the Union for International Cancer Control (UICC) Staging System.",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Histologically or cytologically confirmed diagnosis of NSCLC with locally advanced, unresectable Stage IIIB or IIIC not eligible for definitive chemoradiotherapy or metastatic (Stage IV: M1a, M1b, or M1c) disease per the American Joint Committee on Cancer (AJCC) Staging Manual, Version 8.0, and the Union for International Cancer Control (UICC) Staging System.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07144280-neuroendocrine",
+      "polarity": "exclusion",
+      "sourceText": "Note: Participants with a neuroendocrine component or histology are not eligible.",
+      "reasonFuzzy": "Neuroendocrine component or histology exclusion is not part of the standard histology values (adenocarcinoma, squamous, large_cell, nsclc_nos)."
+    },
+    {
+      "id": "NCT07144280-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Able to provide any of the following tumor tissues for biomarker analysis: Archival specimen... or De novo biopsy from a tumor lesion, if medically feasible.",
+      "reasonFuzzy": "Willingness or ability to undergo a biopsy or provide tissue is a procedure-based criterion."
+    },
+    {
+      "id": "NCT07144280-prior-tx-complex",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have received the following therapies and progressed during or relapsed after receiving their most recent prior therapy, or have been intolerant to their most recent therapy: Participants with no known AGAs must fulfill 1 of the following conditions... Participants with known AGAs must fulfill the following conditions...",
+      "reasonFuzzy": "Prior therapy requirements depend on AGA status and conditional branching, which cannot be modeled as a single simple typed check."
+    },
+    {
+      "id": "NCT07144280-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "History of another malignancy within 3 years before the first dose of PF-08046054, or any evidence of residual disease from a previously diagnosed malignancy. Exceptions are malignancies with a negligible risk of metastasis or death (eg, 5-year overall survival [OS] ≥90%)",
+      "reasonFuzzy": "Prior malignancy with complex exceptions based on survival probability is subjective and conditional."
+    },
+    {
+      "id": "NCT07144280-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "Participants with a history of leptomeningeal metastasis are excluded.",
+      "reasonFuzzy": "Leptomeningeal metastasis is a specific subtype of CNS involvement not covered by standard brain_mets codes."
+    },
+    {
+      "id": "NCT07144280-mmae",
+      "polarity": "exclusion",
+      "sourceText": "Previous receipt of an MMAE-containing agent or prior docetaxel.",
+      "reasonFuzzy": "MMAE-containing agent is a class of antibody-drug conjugate payloads and cannot be expressed as a standard typed prior_therapy check."
+    },
+    {
+      "id": "NCT07144280-histology",
+      "polarity": "exclusion",
+      "sourceText": "Note: Participants with a neuroendocrine component or histology are not eligible.",
+      "reasonFuzzy": "Neuroendocrine histology exclusion is not one of the standard listed histology kinds."
+    },
+    {
+      "id": "NCT07144280-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Able to provide any of the following tumor tissues for biomarker analysis: Archival specimen (preferably collected within 12 months after the last anticancer therapy) (see laboratory manual for details); or De novo biopsy from a tumor lesion, if medically feasible.",
+      "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is subjective/judgment-based."
+    },
+    {
+      "id": "NCT07144280-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have received the following therapies and progressed during or relapsed after receiving their most recent prior therapy, or have been intolerant to their most recent therapy: Participants with no known AGAs must fulfill 1 of the following conditions: Received a platinum-based combination therapy for the treatment of metastatic or recurrent disease, and unless contraindicated, a PD-(L)1 monoclonal antibody (concurrently or sequentially with platinum-based chemotherapy). Experienced disease progression within 6 months of the last dose of platinum-based chemotherapy in the adjuvant, neoadjuvant, or chemoradiotherapy setting and received a PD-(L)1 monoclonal antibody at any time during the course of treatment. Participants with known AGAs (eg, EGFR mutations, ALK translocations, or other relevant actionable mutations) must fulfill the following conditions: Must have received at least 1 relevant AGA-targeted therapy if locally available and, in the opinion of the investigator, additional AGA-targeted therapy is not in the best interest of the participant Received a platinum-based combination therapy for the treatment of metastatic or recurrent disease, or experienced disease progression within 6 months of the last dose of platinum-based chemotherapy in the adjuvant, neoadjuvant, or chemoradiotherapy setting. May have received PD-(L)1 monoclonal antibody (concurrently or sequentially with platinum-based chemotherapy).",
+      "reasonFuzzy": "Prior therapy requirements differ based on AGA status and include multiple conditional branches that cannot be captured in a single typed check."
+    },
+    {
+      "id": "NCT07144280-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "History of another malignancy within 3 years before the first dose of PF-08046054, or any evidence of residual disease from a previously diagnosed malignancy. Exceptions are malignancies with a negligible risk of metastasis or death (eg, 5-year overall survival [OS] ≥90%), such as adequately treated carcinoma in situ of the cervix, non-melanoma skin carcinoma, localized prostate cancer, ductal carcinoma in situ, or Stage I uterine cancer.",
+      "reasonFuzzy": "Prior malignancy washout and exceptions are complex and not mapped to a typed kind."
+    },
+    {
+      "id": "NCT07144280-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "Participants with a history of leptomeningeal metastasis are excluded.",
+      "reasonFuzzy": "Leptomeningeal metastasis is separate from standard brain metastases and is excluded explicitly."
+    },
+    {
+      "id": "NCT07144280-pdl1-excl",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with an anti-PD-L1 agent (where indicated per protocol) within 5 half-lives.",
+      "reasonFuzzy": "Washout window based on half-lives for anti-PD-L1 is not a simple typed prior therapy exclusion rule."
+    },
+    {
+      "id": "NCT07144280-mmae",
+      "polarity": "exclusion",
+      "sourceText": "Previous receipt of an MMAE-containing agent or prior docetaxel.",
+      "reasonFuzzy": "MMAE-containing agent class is not a standard typed prior_therapy_excluded chemical name format."
+    },
+    {
+      "id": "NCT07144280-brain",
+      "polarity": "inclusion",
+      "sourceText": "Any central nervous system (CNS) lesions, unless definitively treated with CNS-directed local therapy (surgery and/or radiotherapy). Participants with definitively treated brain metastases are eligible if they meet the following criteria: The participant is on a stable dose of ≤10 mg/day of prednisone or equivalent for at least >14 days prior to randomization (if requiring steroid treatment). No clinical or radiographic progression in the CNS following CNS-directed definitive radiotherapy and/or surgery. Time since CNS-directed treatment is ≥28 days prior to randomization.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07144280-brain",
+      "polarity": "inclusion",
+      "sourceText": "Any central nervous system (CNS) lesions, unless definitively treated with CNS-directed local therapy (surgery and/or radiotherapy).",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07144280-prior-pdl1",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with an anti-PD-L1 agent (where indicated per protocol) within 5 half-lives.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07144280-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "PD-L1 expression on ≥1% of tumor cells based on local immunohistochemistry (IHC) testing with an assay utilizing the anti-PD-L1 monoclonal antibody clones 22C3 or SP263.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07144280-prior-docetaxel",
+      "polarity": "exclusion",
+      "sourceText": "Previous receipt of an MMAE-containing agent or prior docetaxel.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Any central nervous system (CNS) lesions, unless definitively treated with CNS-directed local therapy (surgery and/or radiotherapy). Participants with definitiv"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-pd-l1"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:docetaxel"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 5187
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 8943
+  },
+  "ms": 18157,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07144280",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07144280-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of NSCLC with locally advanced, unresectable Stage IIIB or IIIC not eligible for definitive chemoradiotherapy or metastatic (Stage IV: M1a, M1b, or M1c) disease per the American Joint Committee on Cancer (AJCC) Staging Manual, Version 8.0",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07144280-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "PD-L1 expression on ≥1% of tumor cells based on local immunohistochemistry (IHC) testing with an assay utilizing the anti-PD-L1 monoclonal antibody clones 22C3 or SP263.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07144280-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Any central nervous system (CNS) lesions, unless definitively treated with CNS-directed local therapy (surgery and/or radiotherapy).",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT07144280-prior-pdl1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with an anti-PD-L1 agent (where indicated per protocol) within 5 half-lives.",
+        "stringValue": "anti-PD-L1"
+      },
+      {
+        "id": "NCT07144280-prior-docetaxel",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Previous receipt of an MMAE-containing agent or prior docetaxel.",
+        "stringValue": "docetaxel"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07144280-neuroendocrine",
+        "polarity": "exclusion",
+        "sourceText": "Note: Participants with a neuroendocrine component or histology are not eligible.",
+        "reasonFuzzy": "Neuroendocrine component or histology exclusion is not part of the standard histology values (adenocarcinoma, squamous, large_cell, nsclc_nos)."
+      },
+      {
+        "id": "NCT07144280-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Able to provide any of the following tumor tissues for biomarker analysis: Archival specimen... or De novo biopsy from a tumor lesion, if medically feasible.",
+        "reasonFuzzy": "Willingness or ability to undergo a biopsy or provide tissue is a procedure-based criterion."
+      },
+      {
+        "id": "NCT07144280-prior-tx-complex",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have received the following therapies and progressed during or relapsed after receiving their most recent prior therapy, or have been intolerant to their most recent therapy: Participants with no known AGAs must fulfill 1 of the following conditions... Participants with known AGAs must fulfill the following conditions...",
+        "reasonFuzzy": "Prior therapy requirements depend on AGA status and conditional branching, which cannot be modeled as a single simple typed check."
+      },
+      {
+        "id": "NCT07144280-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "History of another malignancy within 3 years before the first dose of PF-08046054, or any evidence of residual disease from a previously diagnosed malignancy. Exceptions are malignancies with a negligible risk of metastasis or death (eg, 5-year overall survival [OS] ≥90%)",
+        "reasonFuzzy": "Prior malignancy with complex exceptions based on survival probability is subjective and conditional."
+      },
+      {
+        "id": "NCT07144280-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "Participants with a history of leptomeningeal metastasis are excluded.",
+        "reasonFuzzy": "Leptomeningeal metastasis is a specific subtype of CNS involvement not covered by standard brain_mets codes."
+      },
+      {
+        "id": "NCT07144280-mmae",
+        "polarity": "exclusion",
+        "sourceText": "Previous receipt of an MMAE-containing agent or prior docetaxel.",
+        "reasonFuzzy": "MMAE-containing agent is a class of antibody-drug conjugate payloads and cannot be expressed as a standard typed prior_therapy check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07144280",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07144280-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of NSCLC with locally advanced, unresectable Stage IIIB or IIIC not eligible for definitive chemoradiotherapy or metastatic (Stage IV: M1a, M1b, or M1c) disease per the American Joint Committee on Cancer (AJCC) Staging Manual, Version 8.0, and the Union for International Cancer Control (UICC) Staging System.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07144280-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "PD-L1 expression on ≥1% of tumor cells based on local immunohistochemistry (IHC) testing with an assay utilizing the anti-PD-L1 monoclonal antibody clones 22C3 or SP263.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07144280-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Any central nervous system (CNS) lesions, unless definitively treated with CNS-directed local therapy (surgery and/or radiotherapy). Participants with definitively treated brain metastases are eligible if they meet the following criteria: The participant is on a stable dose of ≤10 mg/day of prednisone or equivalent for at least >14 days prior to randomization (if requiring steroid treatment). No clinical or radiographic progression in the CNS following CNS-directed definitive radiotherapy and/or surgery. Time since CNS-directed treatment is ≥28 days prior to randomization.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT07144280-docetaxel-excl",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Previous receipt of an MMAE-containing agent or prior docetaxel.",
+        "stringValue": "docetaxel"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07144280-histology",
+        "polarity": "exclusion",
+        "sourceText": "Note: Participants with a neuroendocrine component or histology are not eligible.",
+        "reasonFuzzy": "Neuroendocrine histology exclusion is not one of the standard listed histology kinds."
+      },
+      {
+        "id": "NCT07144280-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Able to provide any of the following tumor tissues for biomarker analysis: Archival specimen (preferably collected within 12 months after the last anticancer therapy) (see laboratory manual for details); or De novo biopsy from a tumor lesion, if medically feasible.",
+        "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is subjective/judgment-based."
+      },
+      {
+        "id": "NCT07144280-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have received the following therapies and progressed during or relapsed after receiving their most recent prior therapy, or have been intolerant to their most recent therapy: Participants with no known AGAs must fulfill 1 of the following conditions: Received a platinum-based combination therapy for the treatment of metastatic or recurrent disease, and unless contraindicated, a PD-(L)1 monoclonal antibody (concurrently or sequentially with platinum-based chemotherapy). Experienced disease progression within 6 months of the last dose of platinum-based chemotherapy in the adjuvant, neoadjuvant, or chemoradiotherapy setting and received a PD-(L)1 monoclonal antibody at any time during the course of treatment. Participants with known AGAs (eg, EGFR mutations, ALK translocations, or other relevant actionable mutations) must fulfill the following conditions: Must have received at least 1 relevant AGA-targeted therapy if locally available and, in the opinion of the investigator, additional AGA-targeted therapy is not in the best interest of the participant Received a platinum-based combination therapy for the treatment of metastatic or recurrent disease, or experienced disease progression within 6 months of the last dose of platinum-based chemotherapy in the adjuvant, neoadjuvant, or chemoradiotherapy setting. May have received PD-(L)1 monoclonal antibody (concurrently or sequentially with platinum-based chemotherapy).",
+        "reasonFuzzy": "Prior therapy requirements differ based on AGA status and include multiple conditional branches that cannot be captured in a single typed check."
+      },
+      {
+        "id": "NCT07144280-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "History of another malignancy within 3 years before the first dose of PF-08046054, or any evidence of residual disease from a previously diagnosed malignancy. Exceptions are malignancies with a negligible risk of metastasis or death (eg, 5-year overall survival [OS] ≥90%), such as adequately treated carcinoma in situ of the cervix, non-melanoma skin carcinoma, localized prostate cancer, ductal carcinoma in situ, or Stage I uterine cancer.",
+        "reasonFuzzy": "Prior malignancy washout and exceptions are complex and not mapped to a typed kind."
+      },
+      {
+        "id": "NCT07144280-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "Participants with a history of leptomeningeal metastasis are excluded.",
+        "reasonFuzzy": "Leptomeningeal metastasis is separate from standard brain metastases and is excluded explicitly."
+      },
+      {
+        "id": "NCT07144280-pdl1-excl",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with an anti-PD-L1 agent (where indicated per protocol) within 5 half-lives.",
+        "reasonFuzzy": "Washout window based on half-lives for anti-PD-L1 is not a simple typed prior therapy exclusion rule."
+      },
+      {
+        "id": "NCT07144280-mmae",
+        "polarity": "exclusion",
+        "sourceText": "Previous receipt of an MMAE-containing agent or prior docetaxel.",
+        "reasonFuzzy": "MMAE-containing agent class is not a standard typed prior_therapy_excluded chemical name format."
+      }
+    ]
+  }
+}

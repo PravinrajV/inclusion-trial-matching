@@ -1,0 +1,31 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Public ClinicalTrials.gov eligibility cache. No patient chart text is stored.
+    // Authenticated clients (including anonymous) may read only.
+    // Writes are server-side only: the Admin SDK and Cloud Functions bypass these rules.
+    // list and get are split so a collection query is allowed. A single `read`
+    // rule that also constrains the document ID would reject list queries.
+    match /criteria/{schemaVersion}/trials/{nctId} {
+      allow list: if request.auth != null
+        && schemaVersion.size() < 16;
+      allow get: if request.auth != null
+        && schemaVersion.size() < 16
+        && nctId.matches('^NCT[0-9]{8}$');
+      allow create, update, delete: if false;
+    }
+
+    // Pull metadata only (dataTimestamp, counts). No patient data.
+    match /criteria/{schemaVersion}/meta/{docId} {
+      allow read: if request.auth != null
+        && schemaVersion.size() < 16
+        && docId.size() < 32;
+      allow create, update, delete: if false;
+    }
+
+    // Deny all other paths and any client writes.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

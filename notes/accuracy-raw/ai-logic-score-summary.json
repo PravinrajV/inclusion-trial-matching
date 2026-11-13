@@ -1,0 +1,46 @@
+[
+  {
+    "set": 1,
+    "coverage": 47.1,
+    "typedHits": 41,
+    "typedTotal": 87,
+    "unsafeMisses": 0,
+    "priorTherapyUnsafe": 0,
+    "otherUnsafe": 0,
+    "worseThanBaseline": false,
+    "unsafeReport": "0 unsafe out of 87 criteria",
+    "unsafeRows": []
+  },
+  {
+    "set": 2,
+    "coverage": 53.4,
+    "typedHits": 70,
+    "typedTotal": 131,
+    "unsafeMisses": 0,
+    "priorTherapyUnsafe": 0,
+    "otherUnsafe": 0,
+    "worseThanBaseline": false,
+    "unsafeReport": "0 unsafe out of 131 criteria",
+    "unsafeRows": []
+  },
+  {
+    "set": 3,
+    "coverage": 48.9,
+    "typedHits": 46,
+    "typedTotal": 94,
+    "unsafeMisses": 1,
+    "priorTherapyUnsafe": 1,
+    "otherUnsafe": 0,
+    "worseThanBaseline": false,
+    "unsafeReport": "1 unsafe out of 94 criteria",
+    "unsafeRows": [
+      {
+        "id": "U16",
+        "nctId": "NCT06170788",
+        "kind": "prior_therapy_excluded",
+        "detail": "kind and polarity matched, value did not (emitted {\"stringValue\":\"anti-PD-1\"})",
+        "reason": "same kind and polarity with a non-matching value (s:anti-pd-1)"
+      }
+    ]
+  }
+]

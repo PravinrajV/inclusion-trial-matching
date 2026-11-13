@@ -1,0 +1,514 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06793215",
+  "briefTitle": "A Study Evaluating the Efficacy and Safety of Divarasib and Pembrolizumab Versus Pembrolizumab and Pemetrexed and Carboplatin or Cisplatin in Participants With Previously Untreated, KRAS G12C-Mutated, Advanced or Metastatic Non-Squamous Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T10:36:50.685Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06793215-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06793215-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease, as defined by RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06793215-priorsystemic",
+      "polarity": "inclusion",
+      "sourceText": "No prior systemic treatment for advanced or metastatic NSCLC",
+      "reasonFuzzy": "Prior systemic treatment restriction lacks a numeric line limit or standard prior_lines format."
+    },
+    {
+      "id": "NCT06793215-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Documentation of known PD-L1 expression status in tumor tissue",
+      "reasonFuzzy": "PD-L1 status is required as known/documented, but no specific minimum or maximum threshold is specified."
+    },
+    {
+      "id": "NCT06793215-organfunction",
+      "polarity": "inclusion",
+      "sourceText": "Adequate end-organ function",
+      "reasonFuzzy": "General end-organ function without specific numeric laboratory cutoffs cannot be mapped to typed checks."
+    },
+    {
+      "id": "NCT06793215-platinum",
+      "polarity": "inclusion",
+      "sourceText": "Eligible to receive a platinum-based chemotherapy regimen",
+      "reasonFuzzy": "Investigator judgment of eligibility for platinum-based therapy is subjective."
+    },
+    {
+      "id": "NCT06793215-driver",
+      "polarity": "exclusion",
+      "sourceText": "Known concomitant second oncogenic driver with available targeted treatment",
+      "reasonFuzzy": "Exclusion of a second oncogenic driver is a general judgment call rather than a single specific biomarker check."
+    },
+    {
+      "id": "NCT06793215-spinal",
+      "polarity": "exclusion",
+      "sourceText": "Spinal cord compression not definitively treated with surgery and/or radiation or previously diagnosed and treated spinal cord compression without evidence that disease has been clinically stable for >=2 weeks prior to randomization",
+      "reasonFuzzy": "Spinal cord compression status and stability window are complex clinical conditions not covered by standard typed checks."
+    },
+    {
+      "id": "NCT06793215-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "History of leptomeningeal disease",
+      "reasonFuzzy": "Leptomeningeal disease is a specific metastatic site exclusion without a typed representation."
+    },
+    {
+      "id": "NCT06793215-effusions",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled pleural effusion, pericardial effusion, or ascites requiring recurrent drainage procedures (once a month or more frequently)",
+      "reasonFuzzy": "Uncontrolled effusions with frequency criteria are clinical judgments outside standard typed checks."
+    },
+    {
+      "id": "NCT06793215-washout",
+      "polarity": "exclusion",
+      "sourceText": "Any anti-cancer systemic therapy, including hormonal therapy, within 21 days prior to randomization, or is expected to require any other form of antineoplastic therapy while in the study",
+      "reasonFuzzy": "Systemic therapy washout window is complex and involves multiple therapy classes."
+    },
+    {
+      "id": "NCT06793215-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Radiation therapy including palliative RT to bone metastases within 2 weeks prior to randomization and RT to the lung >30Gy within 6 months prior to randomization",
+      "reasonFuzzy": "Radiation therapy washout and dose thresholds cannot be represented with typed checks."
+    },
+    {
+      "id": "NCT06793215-immunotherapy",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with systemic immunosuppressive or immunostimulatory medications, including CD137 agonists and immune checkpoint inhibitors",
+      "reasonFuzzy": "Exclusion of various categories of immunosuppressive or immunostimulatory agents."
+    },
+    {
+      "id": "NCT06793215-qt",
+      "polarity": "exclusion",
+      "sourceText": "Current treatment with medications that are well known to prolong the QT interval",
+      "reasonFuzzy": "Concomitant medications prolonging QT interval are not a simple typed exclusion."
+    },
+    {
+      "id": "NCT06793215-antibiotics",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with therapeutic oral or IV antibiotics within 2 weeks prior to randomization",
+      "reasonFuzzy": "Antibiotic use restriction is not covered by the allowed typed checks."
+    },
+    {
+      "id": "NCT06793215-transplant",
+      "polarity": "exclusion",
+      "sourceText": "Prior allogeneic stem cell or solid organ transplantation",
+      "reasonFuzzy": "Transplantation history is not a typed exclusion kind."
+    },
+    {
+      "id": "NCT06793215-priormalignancy",
+      "polarity": "exclusion",
+      "sourceText": "History of malignancy other than NSCLC within 5 years prior to screening, with the exception of malignancies with a negligible risk of metastasis or death (e.g., 5-year overall survival [OS] rate >90%), such as adequately treated carcinoma in situ of the cervix, non melanoma skin carcinoma, localized prostate cancer, ductal breast carcinoma in situ, or Stage I uterine cancer",
+      "reasonFuzzy": "Prior malignancy history with complex exceptions is a clinical judgment condition."
+    },
+    {
+      "id": "NCT06793215-gi",
+      "polarity": "exclusion",
+      "sourceText": "Individuals with chronic diarrhea, short bowel syndrome or significant upper gastrointestinal surgery including gastric resection, a history of inflammatory bowel disease (e.g., Crohn's disease or ulcerative colitis) or any active bowel inflammation (including diverticulitis), malabsorption syndrome, conditions that would interfere with enteral absorption",
+      "reasonFuzzy": "Gastrointestinal disorders affecting absorption are not mapped to typed checks."
+    },
+    {
+      "id": "NCT06793215-pneumonitis",
+      "polarity": "exclusion",
+      "sourceText": "History of idiopathic pulmonary fibrosis, organizing pneumonia (e.g., bronchiolitis obliterans), drug-induced pneumonitis, or idiopathic pneumonitis, or evidence of active pneumonitis on the screening chest computed tomography scan",
+      "reasonFuzzy": "Pulmonary conditions and pneumonitis history are clinical exclusions."
+    },
+    {
+      "id": "NCT06793215-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Significant cardiovascular disease within 3 months prior to screening",
+      "reasonFuzzy": "Cardiovascular disease history timeframe is a subjective clinical exclusion."
+    },
+    {
+      "id": "NCT06793215-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease, as defined by RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06793215-prior-systemic",
+      "polarity": "inclusion",
+      "sourceText": "No prior systemic treatment for advanced or metastatic NSCLC",
+      "reasonFuzzy": "Prior lines restriction phrased as no prior systemic treatment rather than a line count."
+    },
+    {
+      "id": "NCT06793215-pdl1-status",
+      "polarity": "inclusion",
+      "sourceText": "Documentation of known PD-L1 expression status in tumor tissue",
+      "reasonFuzzy": "Requires documentation of status without a specific numerical cutoff."
+    },
+    {
+      "id": "NCT06793215-brain-mets",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic, untreated, or actively progressing central nervous system (CNS) metastases",
+      "reasonFuzzy": "Wording includes symptomatic and actively progressing components which are not a clean typed brain_mets status."
+    },
+    {
+      "id": "NCT06793215-washout-systemic",
+      "polarity": "exclusion",
+      "sourceText": "Any anti-cancer systemic therapy, including hormonal therapy, within 21 days prior to randomization, or is expected to require any other form of antineoplastic therapy while in the study",
+      "reasonFuzzy": "Complex washout and ongoing therapy restriction."
+    },
+    {
+      "id": "NCT06793215-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic, untreated, or actively progressing central nervous system (CNS) metastases",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06793215-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of advanced or metastatic non squamous NSCLC that is not eligible for curative surgery and/or definitive chemoradiotherapy",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06793215-kras",
+      "polarity": "inclusion",
+      "sourceText": "Documentation of the presence of a KRAS G12C mutation",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06793215-krasvar",
+      "polarity": "inclusion",
+      "sourceText": "Documentation of the presence of a KRAS G12C mutation",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06793215-krasexcl",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with KRAS G12C inhibitors or pan-KRAS/RAS inhibitors",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        },
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12c"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:kras g12c inhibitors"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 19,
+    "attempts": 1,
+    "ms": 5499
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 5,
+    "attempts": 3,
+    "ms": 41063
+  },
+  "ms": 54513,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06793215",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06793215-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06793215-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of advanced or metastatic non squamous NSCLC that is not eligible for curative surgery and/or definitive chemoradiotherapy",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06793215-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Documentation of the presence of a KRAS G12C mutation",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06793215-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Documentation of the presence of a KRAS G12C mutation",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT06793215-krasexcl",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with KRAS G12C inhibitors or pan-KRAS/RAS inhibitors",
+        "stringValue": "KRAS G12C inhibitors"
+      },
+      {
+        "id": "NCT06793215-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic, untreated, or actively progressing central nervous system (CNS) metastases",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06793215-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease, as defined by RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06793215-priorsystemic",
+        "polarity": "inclusion",
+        "sourceText": "No prior systemic treatment for advanced or metastatic NSCLC",
+        "reasonFuzzy": "Prior systemic treatment restriction lacks a numeric line limit or standard prior_lines format."
+      },
+      {
+        "id": "NCT06793215-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "Documentation of known PD-L1 expression status in tumor tissue",
+        "reasonFuzzy": "PD-L1 status is required as known/documented, but no specific minimum or maximum threshold is specified."
+      },
+      {
+        "id": "NCT06793215-organfunction",
+        "polarity": "inclusion",
+        "sourceText": "Adequate end-organ function",
+        "reasonFuzzy": "General end-organ function without specific numeric laboratory cutoffs cannot be mapped to typed checks."
+      },
+      {
+        "id": "NCT06793215-platinum",
+        "polarity": "inclusion",
+        "sourceText": "Eligible to receive a platinum-based chemotherapy regimen",
+        "reasonFuzzy": "Investigator judgment of eligibility for platinum-based therapy is subjective."
+      },
+      {
+        "id": "NCT06793215-driver",
+        "polarity": "exclusion",
+        "sourceText": "Known concomitant second oncogenic driver with available targeted treatment",
+        "reasonFuzzy": "Exclusion of a second oncogenic driver is a general judgment call rather than a single specific biomarker check."
+      },
+      {
+        "id": "NCT06793215-spinal",
+        "polarity": "exclusion",
+        "sourceText": "Spinal cord compression not definitively treated with surgery and/or radiation or previously diagnosed and treated spinal cord compression without evidence that disease has been clinically stable for >=2 weeks prior to randomization",
+        "reasonFuzzy": "Spinal cord compression status and stability window are complex clinical conditions not covered by standard typed checks."
+      },
+      {
+        "id": "NCT06793215-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "History of leptomeningeal disease",
+        "reasonFuzzy": "Leptomeningeal disease is a specific metastatic site exclusion without a typed representation."
+      },
+      {
+        "id": "NCT06793215-effusions",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled pleural effusion, pericardial effusion, or ascites requiring recurrent drainage procedures (once a month or more frequently)",
+        "reasonFuzzy": "Uncontrolled effusions with frequency criteria are clinical judgments outside standard typed checks."
+      },
+      {
+        "id": "NCT06793215-washout",
+        "polarity": "exclusion",
+        "sourceText": "Any anti-cancer systemic therapy, including hormonal therapy, within 21 days prior to randomization, or is expected to require any other form of antineoplastic therapy while in the study",
+        "reasonFuzzy": "Systemic therapy washout window is complex and involves multiple therapy classes."
+      },
+      {
+        "id": "NCT06793215-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Radiation therapy including palliative RT to bone metastases within 2 weeks prior to randomization and RT to the lung >30Gy within 6 months prior to randomization",
+        "reasonFuzzy": "Radiation therapy washout and dose thresholds cannot be represented with typed checks."
+      },
+      {
+        "id": "NCT06793215-immunotherapy",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with systemic immunosuppressive or immunostimulatory medications, including CD137 agonists and immune checkpoint inhibitors",
+        "reasonFuzzy": "Exclusion of various categories of immunosuppressive or immunostimulatory agents."
+      },
+      {
+        "id": "NCT06793215-qt",
+        "polarity": "exclusion",
+        "sourceText": "Current treatment with medications that are well known to prolong the QT interval",
+        "reasonFuzzy": "Concomitant medications prolonging QT interval are not a simple typed exclusion."
+      },
+      {
+        "id": "NCT06793215-antibiotics",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with therapeutic oral or IV antibiotics within 2 weeks prior to randomization",
+        "reasonFuzzy": "Antibiotic use restriction is not covered by the allowed typed checks."
+      },
+      {
+        "id": "NCT06793215-transplant",
+        "polarity": "exclusion",
+        "sourceText": "Prior allogeneic stem cell or solid organ transplantation",
+        "reasonFuzzy": "Transplantation history is not a typed exclusion kind."
+      },
+      {
+        "id": "NCT06793215-priormalignancy",
+        "polarity": "exclusion",
+        "sourceText": "History of malignancy other than NSCLC within 5 years prior to screening, with the exception of malignancies with a negligible risk of metastasis or death (e.g., 5-year overall survival [OS] rate >90%), such as adequately treated carcinoma in situ of the cervix, non melanoma skin carcinoma, localized prostate cancer, ductal breast carcinoma in situ, or Stage I uterine cancer",
+        "reasonFuzzy": "Prior malignancy history with complex exceptions is a clinical judgment condition."
+      },
+      {
+        "id": "NCT06793215-gi",
+        "polarity": "exclusion",
+        "sourceText": "Individuals with chronic diarrhea, short bowel syndrome or significant upper gastrointestinal surgery including gastric resection, a history of inflammatory bowel disease (e.g., Crohn's disease or ulcerative colitis) or any active bowel inflammation (including diverticulitis), malabsorption syndrome, conditions that would interfere with enteral absorption",
+        "reasonFuzzy": "Gastrointestinal disorders affecting absorption are not mapped to typed checks."
+      },
+      {
+        "id": "NCT06793215-pneumonitis",
+        "polarity": "exclusion",
+        "sourceText": "History of idiopathic pulmonary fibrosis, organizing pneumonia (e.g., bronchiolitis obliterans), drug-induced pneumonitis, or idiopathic pneumonitis, or evidence of active pneumonitis on the screening chest computed tomography scan",
+        "reasonFuzzy": "Pulmonary conditions and pneumonitis history are clinical exclusions."
+      },
+      {
+        "id": "NCT06793215-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Significant cardiovascular disease within 3 months prior to screening",
+        "reasonFuzzy": "Cardiovascular disease history timeframe is a subjective clinical exclusion."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06793215",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06793215-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06793215-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of advanced or metastatic non squamous NSCLC that is not eligible for curative surgery and/or definitive chemoradiotherapy",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06793215-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Documentation of the presence of a KRAS G12C mutation",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06793215-kras-variant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Documentation of the presence of a KRAS G12C mutation",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT06793215-kras-inhibitor",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with KRAS G12C inhibitors or pan-KRAS/RAS inhibitors",
+        "stringValue": "KRAS G12C inhibitors"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06793215-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease, as defined by RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06793215-prior-systemic",
+        "polarity": "inclusion",
+        "sourceText": "No prior systemic treatment for advanced or metastatic NSCLC",
+        "reasonFuzzy": "Prior lines restriction phrased as no prior systemic treatment rather than a line count."
+      },
+      {
+        "id": "NCT06793215-pdl1-status",
+        "polarity": "inclusion",
+        "sourceText": "Documentation of known PD-L1 expression status in tumor tissue",
+        "reasonFuzzy": "Requires documentation of status without a specific numerical cutoff."
+      },
+      {
+        "id": "NCT06793215-brain-mets",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic, untreated, or actively progressing central nervous system (CNS) metastases",
+        "reasonFuzzy": "Wording includes symptomatic and actively progressing components which are not a clean typed brain_mets status."
+      },
+      {
+        "id": "NCT06793215-washout-systemic",
+        "polarity": "exclusion",
+        "sourceText": "Any anti-cancer systemic therapy, including hormonal therapy, within 21 days prior to randomization, or is expected to require any other form of antineoplastic therapy while in the study",
+        "reasonFuzzy": "Complex washout and ongoing therapy restriction."
+      }
+    ]
+  }
+}

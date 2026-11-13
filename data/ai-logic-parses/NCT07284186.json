@@ -1,0 +1,331 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07284186",
+  "briefTitle": "First-in-Human Study of PLX-61639 in Locally Advanced or Metastatic Solid Tumors",
+  "parsedAt": "2026-11-12T11:06:57.652Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07284186-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG PS of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG PS of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07284186-smarca4",
+      "polarity": "inclusion",
+      "sourceText": "Participants with locally advanced or metastatic, relapsed/refractory, solid tumors harboring a SMARCA4 loss-of-function mutation that have progressed on, are intolerant of, or not otherwise candidates for available approved therapies",
+      "reasonFuzzy": "SMARCA4 loss-of-function mutation is a solid tumor biomarker, but there is no typed check kind for SMARCA4."
+    },
+    {
+      "id": "NCT07284186-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate liver bone marrow, coagulation, renal, and cardiopulmonary function",
+      "reasonFuzzy": "General organ function without specific numeric cutoffs is subjective."
+    },
+    {
+      "id": "NCT07284186-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07284186-germline",
+      "polarity": "exclusion",
+      "sourceText": "Germline SMARCA4 mutations",
+      "reasonFuzzy": "Germline SMARCA4 status is not a standard typed biomarker check."
+    },
+    {
+      "id": "NCT07284186-smarca2",
+      "polarity": "exclusion",
+      "sourceText": "Known SMARCA2 mutation or loss of expression",
+      "reasonFuzzy": "SMARCA2 mutation or loss of expression is not a supported typed biomarker kind."
+    },
+    {
+      "id": "NCT07284186-cns",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic CNS disease",
+      "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT07284186-smarca2-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with another SMARCA2-directed therapy",
+      "reasonFuzzy": "Prior SMARCA2-directed therapy is not a standard typed prior_therapy_excluded drug or class."
+    },
+    {
+      "id": "NCT07284186-smarca4",
+      "polarity": "inclusion",
+      "sourceText": "Participants with locally advanced or metastatic, relapsed/refractory, solid tumors harboring a SMARCA4 loss-of-function mutation that have progressed on, are intolerant of, or not otherwise candidates for available approved therapies",
+      "reasonFuzzy": "SMARCA4 mutation is not a typed biomarker kind."
+    },
+    {
+      "id": "NCT07284186-organs",
+      "polarity": "inclusion",
+      "sourceText": "Adequate liver bone marrow, coagulation, renal, and cardiopulmonary function",
+      "reasonFuzzy": "General organ function without specific numeric cutoffs is a subjective judgment."
+    },
+    {
+      "id": "NCT07284186-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07284186-germline",
+      "polarity": "exclusion",
+      "sourceText": "Germline SMARCA4 mutations",
+      "reasonFuzzy": "Germline mutation status is not a typed check."
+    },
+    {
+      "id": "NCT07284186-smarca2",
+      "polarity": "exclusion",
+      "sourceText": "Known SMARCA2 mutation or loss of expression",
+      "reasonFuzzy": "SMARCA2 mutation is not a typed kind."
+    },
+    {
+      "id": "NCT07284186-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic CNS disease",
+      "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT07284186-prior-smarca2",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with another SMARCA2-directed therapy",
+      "reasonFuzzy": "SMARCA2-directed therapy is not a typed prior therapy check."
+    },
+    {
+      "id": "NCT07284186-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "History of other malignancies",
+      "reasonFuzzy": "History of other malignancies is a subjective clinical history rule."
+    },
+    {
+      "id": "NCT07284186-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Clinically significant heart disease",
+      "reasonFuzzy": "Clinically significant heart disease is a subjective assessment."
+    },
+    {
+      "id": "NCT07284186-hypertension",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled hypertension",
+      "reasonFuzzy": "Uncontrolled hypertension lacks a numeric cutoff and is investigator-dependent."
+    },
+    {
+      "id": "NCT07284186-qt",
+      "polarity": "exclusion",
+      "sourceText": "Prolongation of QT interval",
+      "reasonFuzzy": "QT interval prolongation lacks a specific numeric threshold in the source text."
+    },
+    {
+      "id": "NCT07284186-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 7,
+    "attempts": 3,
+    "ms": 36541
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 11,
+    "attempts": 1,
+    "ms": 8896
+  },
+  "ms": 53415,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07284186",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07284186-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG PS of 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07284186-smarca4",
+        "polarity": "inclusion",
+        "sourceText": "Participants with locally advanced or metastatic, relapsed/refractory, solid tumors harboring a SMARCA4 loss-of-function mutation that have progressed on, are intolerant of, or not otherwise candidates for available approved therapies",
+        "reasonFuzzy": "SMARCA4 loss-of-function mutation is a solid tumor biomarker, but there is no typed check kind for SMARCA4."
+      },
+      {
+        "id": "NCT07284186-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate liver bone marrow, coagulation, renal, and cardiopulmonary function",
+        "reasonFuzzy": "General organ function without specific numeric cutoffs is subjective."
+      },
+      {
+        "id": "NCT07284186-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07284186-germline",
+        "polarity": "exclusion",
+        "sourceText": "Germline SMARCA4 mutations",
+        "reasonFuzzy": "Germline SMARCA4 status is not a standard typed biomarker check."
+      },
+      {
+        "id": "NCT07284186-smarca2",
+        "polarity": "exclusion",
+        "sourceText": "Known SMARCA2 mutation or loss of expression",
+        "reasonFuzzy": "SMARCA2 mutation or loss of expression is not a supported typed biomarker kind."
+      },
+      {
+        "id": "NCT07284186-cns",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic CNS disease",
+        "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      },
+      {
+        "id": "NCT07284186-smarca2-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with another SMARCA2-directed therapy",
+        "reasonFuzzy": "Prior SMARCA2-directed therapy is not a standard typed prior_therapy_excluded drug or class."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07284186",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07284186-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07284186-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG PS of 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07284186-smarca4",
+        "polarity": "inclusion",
+        "sourceText": "Participants with locally advanced or metastatic, relapsed/refractory, solid tumors harboring a SMARCA4 loss-of-function mutation that have progressed on, are intolerant of, or not otherwise candidates for available approved therapies",
+        "reasonFuzzy": "SMARCA4 mutation is not a typed biomarker kind."
+      },
+      {
+        "id": "NCT07284186-organs",
+        "polarity": "inclusion",
+        "sourceText": "Adequate liver bone marrow, coagulation, renal, and cardiopulmonary function",
+        "reasonFuzzy": "General organ function without specific numeric cutoffs is a subjective judgment."
+      },
+      {
+        "id": "NCT07284186-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07284186-germline",
+        "polarity": "exclusion",
+        "sourceText": "Germline SMARCA4 mutations",
+        "reasonFuzzy": "Germline mutation status is not a typed check."
+      },
+      {
+        "id": "NCT07284186-smarca2",
+        "polarity": "exclusion",
+        "sourceText": "Known SMARCA2 mutation or loss of expression",
+        "reasonFuzzy": "SMARCA2 mutation is not a typed kind."
+      },
+      {
+        "id": "NCT07284186-brain",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic CNS disease",
+        "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      },
+      {
+        "id": "NCT07284186-prior-smarca2",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with another SMARCA2-directed therapy",
+        "reasonFuzzy": "SMARCA2-directed therapy is not a typed prior therapy check."
+      },
+      {
+        "id": "NCT07284186-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "History of other malignancies",
+        "reasonFuzzy": "History of other malignancies is a subjective clinical history rule."
+      },
+      {
+        "id": "NCT07284186-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Clinically significant heart disease",
+        "reasonFuzzy": "Clinically significant heart disease is a subjective assessment."
+      },
+      {
+        "id": "NCT07284186-hypertension",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled hypertension",
+        "reasonFuzzy": "Uncontrolled hypertension lacks a numeric cutoff and is investigator-dependent."
+      },
+      {
+        "id": "NCT07284186-qt",
+        "polarity": "exclusion",
+        "sourceText": "Prolongation of QT interval",
+        "reasonFuzzy": "QT interval prolongation lacks a specific numeric threshold in the source text."
+      }
+    ]
+  }
+}

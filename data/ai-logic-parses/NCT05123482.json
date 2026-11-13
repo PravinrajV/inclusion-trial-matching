@@ -1,0 +1,366 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05123482",
+  "briefTitle": "A Phase I/IIa Study of AZD8205 Given Alone or Combined, in Participants With Advanced/Metastatic Solid Malignancies",
+  "parsedAt": "2026-11-12T06:10:17.482Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05123482-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05123482-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05123482-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy ≥ 12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05123482-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate bone marrow, hepatic, and renal function as defined in the protocol",
+      "reasonFuzzy": "Broad organ function statement without specific numeric cutoffs in this section."
+    },
+    {
+      "id": "NCT05123482-prior-treatments",
+      "polarity": "inclusion",
+      "sourceText": "Relapsed/metastatic solid tumors treated with prior adequate standard of care therapy for tumor type and stage of disease or where in the opinion of the Investigator, a clinical trial is the best option for the next treatment based on response and/or tolerability to prior therapy.",
+      "reasonFuzzy": "Investigator opinion and general prior therapy without explicit typed prior lines or drug constraints."
+    },
+    {
+      "id": "NCT05123482-histology-nsclc",
+      "polarity": "inclusion",
+      "sourceText": "Squamous Non-Small Cell Lung Cancer",
+      "reasonFuzzy": "Trial enrolls multiple solid tumor types across different sub-studies with varying inclusion criteria, making a single histology_in check incomplete without sub-study context."
+    },
+    {
+      "id": "NCT05123482-washout-nitrosourea",
+      "polarity": "exclusion",
+      "sourceText": "Nitrosourea or mitomycin C within 6 weeks prior to the first dose of study treatment",
+      "reasonFuzzy": "Complex washout window for specific therapies."
+    },
+    {
+      "id": "NCT05123482-washout-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Any investigational agents or study drugs from a previous clinical study within 5 half-lives or 28 days (whichever is shorter) prior to the first dose of study treatment",
+      "reasonFuzzy": "Complex washout window involving half-lives."
+    },
+    {
+      "id": "NCT05123482-washout-anticancer",
+      "polarity": "exclusion",
+      "sourceText": "Any other anticancer treatment within the following time periods prior to the first dose of study intervention: Cytotoxic treatment: 21 days; Non-cytotoxic drugs: 21 days or 5 half-lives (whichever is shorter); Biological products including immuno-oncology agents: 28 days",
+      "reasonFuzzy": "Complex conditional washout windows."
+    },
+    {
+      "id": "NCT05123482-spinal-cord",
+      "polarity": "exclusion",
+      "sourceText": "Spinal cord compression or a history of leptomeningeal carcinomatosis.",
+      "reasonFuzzy": "Not a clean brain_mets status check."
+    },
+    {
+      "id": "NCT05123482-infection",
+      "polarity": "exclusion",
+      "sourceText": "Active infection including tuberculosis and HBV, HCV or HIV",
+      "reasonFuzzy": "Infection exclusion criteria are not part of the allowed typed checks."
+    },
+    {
+      "id": "NCT05123482-ild",
+      "polarity": "exclusion",
+      "sourceText": "History of (non-infectious) ILD/pneumonitis that required steroids, has current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at screening.",
+      "reasonFuzzy": "Pulmonary history and imaging judgment criteria."
+    },
+    {
+      "id": "NCT05123482-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Participants with any of the following cardiac criteria...",
+      "reasonFuzzy": "Complex multi-part cardiac exclusion criteria."
+    },
+    {
+      "id": "NCT05123482-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05123482-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy ≥ 12 weeks",
+      "reasonFuzzy": "Life expectancy is a clinical judgment, not a typed check."
+    },
+    {
+      "id": "NCT05123482-prior-tx",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with any of the following: 1. Nitrosourea or mitomycin C within 6 weeks prior to the first dose of study treatment 2. Any investigational agents or study drugs from a previous clinical study within 5 half-lives or 28 days (whichever is shorter) prior to the first dose of study treatment 3. Any other anticancer treatment within the following time periods prior to the first dose of study intervention...",
+      "reasonFuzzy": "Washout windows and multiple diverse prior drug exclusions cannot be expressed as a simple typed check."
+    },
+    {
+      "id": "NCT05123482-top1i",
+      "polarity": "exclusion",
+      "sourceText": "Previous treatment with any therapy that contains a TOP1i (eg. irinotecan, topotecan, trastuzumab deruxtecan, etc.)",
+      "reasonFuzzy": "TOP1i is a class of drugs, but the typed exclusion kind expects specific named drugs or general classes like platinum/anti-PD-1; specific examples are listed."
+    },
+    {
+      "id": "NCT05123482-histology",
+      "polarity": "inclusion",
+      "sourceText": "Cohort B5 (Squamous Non-Small Cell Lung Cancer)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT05123482-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status: 0-1",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05123482-brain",
+      "polarity": "exclusion",
+      "sourceText": "Brain metastases unless treated, asymptomatic, stable, and not requiring continuous corticosteroids at a dose of > 10 mg prednisone/day or equivalent for at least 4 weeks prior to start of study.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:squamous"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 12,
+    "attempts": 1,
+    "ms": 5737
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 3016
+  },
+  "ms": 16741,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05123482",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05123482-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05123482-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status: 0-1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05123482-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Brain metastases unless treated, asymptomatic, stable, and not requiring continuous corticosteroids at a dose of > 10 mg prednisone/day or equivalent for at least 4 weeks prior to start of study.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ],
+        "exceptions": "unless treated, asymptomatic, stable, and not requiring continuous corticosteroids at a dose of > 10 mg prednisone/day or equivalent for at least 4 weeks prior to start of study"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05123482-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05123482-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy ≥ 12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05123482-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate bone marrow, hepatic, and renal function as defined in the protocol",
+        "reasonFuzzy": "Broad organ function statement without specific numeric cutoffs in this section."
+      },
+      {
+        "id": "NCT05123482-prior-treatments",
+        "polarity": "inclusion",
+        "sourceText": "Relapsed/metastatic solid tumors treated with prior adequate standard of care therapy for tumor type and stage of disease or where in the opinion of the Investigator, a clinical trial is the best option for the next treatment based on response and/or tolerability to prior therapy.",
+        "reasonFuzzy": "Investigator opinion and general prior therapy without explicit typed prior lines or drug constraints."
+      },
+      {
+        "id": "NCT05123482-histology-nsclc",
+        "polarity": "inclusion",
+        "sourceText": "Squamous Non-Small Cell Lung Cancer",
+        "reasonFuzzy": "Trial enrolls multiple solid tumor types across different sub-studies with varying inclusion criteria, making a single histology_in check incomplete without sub-study context."
+      },
+      {
+        "id": "NCT05123482-washout-nitrosourea",
+        "polarity": "exclusion",
+        "sourceText": "Nitrosourea or mitomycin C within 6 weeks prior to the first dose of study treatment",
+        "reasonFuzzy": "Complex washout window for specific therapies."
+      },
+      {
+        "id": "NCT05123482-washout-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Any investigational agents or study drugs from a previous clinical study within 5 half-lives or 28 days (whichever is shorter) prior to the first dose of study treatment",
+        "reasonFuzzy": "Complex washout window involving half-lives."
+      },
+      {
+        "id": "NCT05123482-washout-anticancer",
+        "polarity": "exclusion",
+        "sourceText": "Any other anticancer treatment within the following time periods prior to the first dose of study intervention: Cytotoxic treatment: 21 days; Non-cytotoxic drugs: 21 days or 5 half-lives (whichever is shorter); Biological products including immuno-oncology agents: 28 days",
+        "reasonFuzzy": "Complex conditional washout windows."
+      },
+      {
+        "id": "NCT05123482-spinal-cord",
+        "polarity": "exclusion",
+        "sourceText": "Spinal cord compression or a history of leptomeningeal carcinomatosis.",
+        "reasonFuzzy": "Not a clean brain_mets status check."
+      },
+      {
+        "id": "NCT05123482-infection",
+        "polarity": "exclusion",
+        "sourceText": "Active infection including tuberculosis and HBV, HCV or HIV",
+        "reasonFuzzy": "Infection exclusion criteria are not part of the allowed typed checks."
+      },
+      {
+        "id": "NCT05123482-ild",
+        "polarity": "exclusion",
+        "sourceText": "History of (non-infectious) ILD/pneumonitis that required steroids, has current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at screening.",
+        "reasonFuzzy": "Pulmonary history and imaging judgment criteria."
+      },
+      {
+        "id": "NCT05123482-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Participants with any of the following cardiac criteria...",
+        "reasonFuzzy": "Complex multi-part cardiac exclusion criteria."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05123482",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05123482-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05123482-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status: 0-1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05123482-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Cohort B5 (Squamous Non-Small Cell Lung Cancer)",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT05123482-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Brain metastases unless treated, asymptomatic, stable, and not requiring continuous corticosteroids at a dose of > 10 mg prednisone/day or equivalent for at least 4 weeks prior to start of study.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ],
+        "exceptions": "unless treated, asymptomatic, stable, and not requiring continuous corticosteroids at a dose of > 10 mg prednisone/day or equivalent for at least 4 weeks prior to start of study"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05123482-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05123482-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy ≥ 12 weeks",
+        "reasonFuzzy": "Life expectancy is a clinical judgment, not a typed check."
+      },
+      {
+        "id": "NCT05123482-prior-tx",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with any of the following: 1. Nitrosourea or mitomycin C within 6 weeks prior to the first dose of study treatment 2. Any investigational agents or study drugs from a previous clinical study within 5 half-lives or 28 days (whichever is shorter) prior to the first dose of study treatment 3. Any other anticancer treatment within the following time periods prior to the first dose of study intervention...",
+        "reasonFuzzy": "Washout windows and multiple diverse prior drug exclusions cannot be expressed as a simple typed check."
+      },
+      {
+        "id": "NCT05123482-top1i",
+        "polarity": "exclusion",
+        "sourceText": "Previous treatment with any therapy that contains a TOP1i (eg. irinotecan, topotecan, trastuzumab deruxtecan, etc.)",
+        "reasonFuzzy": "TOP1i is a class of drugs, but the typed exclusion kind expects specific named drugs or general classes like platinum/anti-PD-1; specific examples are listed."
+      }
+    ]
+  }
+}

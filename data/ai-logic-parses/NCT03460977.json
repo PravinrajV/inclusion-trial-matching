@@ -1,0 +1,93 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT03460977",
+  "briefTitle": "A Study of Mevrometostat for Treatment of Relapsed/Refractory SCLC, Castration Resistant Prostate Cancer, and Follicular Lymphoma",
+  "parsedAt": "2026-11-12T06:02:04.433Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT03460977-out-of-scope",
+      "polarity": "inclusion",
+      "sourceText": "Histological or cytological diagnosis of castration resistant prostate cancer.",
+      "reasonFuzzy": "The trial is out of scope because it is limited to castration-resistant prostate cancer, small cell lung cancer, and follicular lymphoma, rather than non-small cell lung cancer (NSCLC)."
+    },
+    {
+      "id": "NCT03460977-out-of-scope",
+      "polarity": "inclusion",
+      "sourceText": "A Study of Mevrometostat for Treatment of Relapsed/Refractory SCLC, Castration Resistant Prostate Cancer, and Follicular Lymphoma",
+      "reasonFuzzy": "The trial is out of scope because it is limited to small cell lung cancer (SCLC), prostate cancer, and lymphoma, not non-small cell lung cancer (NSCLC)."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 0,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 0,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 0,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 0,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 1183
+  },
+  "runB": {
+    "typedEmitted": 0,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 1713
+  },
+  "ms": 10897,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT03460977",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT03460977-out-of-scope",
+        "polarity": "inclusion",
+        "sourceText": "Histological or cytological diagnosis of castration resistant prostate cancer.",
+        "reasonFuzzy": "The trial is out of scope because it is limited to castration-resistant prostate cancer, small cell lung cancer, and follicular lymphoma, rather than non-small cell lung cancer (NSCLC)."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT03460977",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT03460977-out-of-scope",
+        "polarity": "inclusion",
+        "sourceText": "A Study of Mevrometostat for Treatment of Relapsed/Refractory SCLC, Castration Resistant Prostate Cancer, and Follicular Lymphoma",
+        "reasonFuzzy": "The trial is out of scope because it is limited to small cell lung cancer (SCLC), prostate cancer, and lymphoma, not non-small cell lung cancer (NSCLC)."
+      }
+    ]
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05142189",
+  "briefTitle": "Clinical Trial Evaluating the Safety, Tolerability and Preliminary Efficacy of BNT116 Alone and in Combinations in Patients With Advanced Non-small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T06:10:32.863Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05142189-alk",
+      "kind": "alk_status",
+      "polarity": "inclusion",
+      "sourceText": "Participants' NSCLC must have ALK rearrangement or RET rearrangement.",
+      "presence": "present",
+      "evidence_quote": "Participants' NSCLC must have ALK rearrangement or RET rearrangement.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05142189-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have histologically confirmed NSCLC and measurable disease by RECIST v1.1. Note: Participants in Cohorts 1, 5 and 11 as well as in Cohorts EGFR and ALK/RET do not have to present with measurable disease.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment with cohort-specific exceptions."
+    },
+    {
+      "id": "NCT05142189-stage-exceptions",
+      "polarity": "inclusion",
+      "sourceText": "EXCEPT Participants in Cohorts 5 and 11 must present with unresectable Stage III NSCLC by AJCC Cancer Staging Manual, Eighth Edition before receiving pre-study chemoradiotherapy. Participants in Cohort 6 with the initial diagnosis of resectable Stage II and Stage III NSCLC",
+      "reasonFuzzy": "Stage rules vary substantially across different study cohorts, including early stages for certain cohorts, making a single typed stage check insufficient."
+    },
+    {
+      "id": "NCT05142189-pd1-tolerance",
+      "polarity": "inclusion",
+      "sourceText": "Participants in Cohorts 2, 4, 5, 6, 10 and 11 must be able to tolerate (additional) anti-PD-1 therapy",
+      "reasonFuzzy": "Tolerance of anti-PD-1 therapy is a clinical judgment-based item."
+    },
+    {
+      "id": "NCT05142189-cohort1-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Participants' prior therapy must have included at least a PD-1/PD-L1 inhibitor and a platinum-based chemotherapy regimen as well as one other line of systemic therapy",
+      "reasonFuzzy": "Prior therapy requirements differ across cohorts with multiple alternative conditions and exceptions."
+    },
+    {
+      "id": "NCT05142189-cohort2-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Participants must present with PD-L1 expression of TPS \\>= 50% in tumor cells",
+      "reasonFuzzy": "Cohort-specific biomarker rules with complex progression criteria are not represented as a general global pdl1_min check."
+    },
+    {
+      "id": "NCT05142189-brain-mets",
+      "polarity": "exclusion",
+      "sourceText": "Current evidence of new or growing brain or spinal metastases during screening. Participants with leptomeningeal disease are excluded. Participants with known brain or spinal metastases may be eligible for all Cohorts, except for Cohorts 5, 6 and 11, if they had radiotherapy or another appropriate therapy... stable brain or spinal disease... do not require steroid therapy...",
+      "reasonFuzzy": "The rules regarding brain metastases involve stability, timing of scans, absence of symptoms, steroid requirements, and cohort-specific exceptions that cannot be reduced to a standard typed check."
+    },
+    {
+      "id": "NCT05142189-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have histologically confirmed NSCLC and measurable disease by RECIST v1.1. Note: Participants in Cohorts 1, 5 and 11 as well as in Cohorts EGFR and ALK/RET do not have to present with measurable disease.",
+      "reasonFuzzy": "Measurable disease requirements vary extensively by cohort."
+    },
+    {
+      "id": "NCT05142189-cohort-rules",
+      "polarity": "inclusion",
+      "sourceText": "Cohort-specific inclusion criteria: ...",
+      "reasonFuzzy": "Study has numerous complex cohort-specific prior therapy and PD-L1 rules that cannot be reduced to a single global typed check."
+    },
+    {
+      "id": "NCT05142189-brain",
+      "polarity": "exclusion",
+      "sourceText": "Current evidence of new or growing brain or spinal metastases during screening. Participants with leptomeningeal disease are excluded. Participants with known brain or spinal metastases may be eligible for all Cohorts, except for Cohorts 5, 6 and 11, if they: had radiotherapy or another appropriate therapy for the brain or spinal metastases, AND have no neurological symptoms that can be attributed to the current brain lesions, AND have stable brain or spinal disease on the computed tomography (CT) or magnetic resonance imaging (MRI) scan within 4 weeks before signing the informed consent (confirmed by stable lesions on two scans at least 4 weeks apart), AND do not require steroid therapy for the treatment of brain or spinal metastases within 14 days before the first dose of study treatment.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05142189-stage",
+      "polarity": "inclusion",
+      "sourceText": "Participants must present with unresectable Stage III or metastatic Stage IV NSCLC by American Joint Commission on Cancer (AJCC) Cancer Staging Manual, Eighth Edition.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05142189-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Participants' NSCLC must have classical EGFR mutations, i.e., ex19Del or L858R.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05142189-stage",
+      "polarity": "inclusion",
+      "sourceText": "Participants must present with unresectable Stage III or metastatic Stage IV NSCLC by American Joint Commission on Cancer (AJCC) Cancer Staging Manual, Eighth Edition.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT05142189-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have an Eastern Cooperative Oncology Group performance status (ECOG-PS) less than or equal to (\\<=) 1, except for participants in Cohorts 1, 4, 5, 10 and 11 who are eligible with an ECOG-PS of 0-2.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05142189-egfr-variant",
+      "polarity": "inclusion",
+      "sourceText": "Participants' NSCLC must have classical EGFR mutations, i.e., ex19Del or L858R.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Current evidence of new or growing brain or spinal metastases during screening. Participants with leptomeningeal disease are excluded. Participants with known b"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 3,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "s:unresectable stage iii or metastatic stage iv"
+        },
+        {
+          "side": "a-only",
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "b-only",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "s:participants in cohort 6 with the initial diagnosis of resectable stage ii and stage iii nsclc"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:ex19del, l858r"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 4387
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2986
+  },
+  "ms": 15372,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05142189",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05142189-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must present with unresectable Stage III or metastatic Stage IV NSCLC by American Joint Commission on Cancer (AJCC) Cancer Staging Manual, Eighth Edition.",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ],
+        "stringValue": "unresectable Stage III or metastatic Stage IV"
+      },
+      {
+        "id": "NCT05142189-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group performance status (ECOG-PS) less than or equal to (\\<=) 1, except for participants in Cohorts 1, 4, 5, 10 and 11 who are eligible with an ECOG-PS of 0-2.",
+        "numberValue": 1,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT05142189-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Participants' NSCLC must have classical EGFR mutations, i.e., ex19Del or L858R.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05142189-egfr-variant",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants' NSCLC must have classical EGFR mutations, i.e., ex19Del or L858R.",
+        "stringValue": "ex19Del, L858R"
+      },
+      {
+        "id": "NCT05142189-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Participants' NSCLC must have ALK rearrangement or RET rearrangement.",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05142189-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically confirmed NSCLC and measurable disease by RECIST v1.1. Note: Participants in Cohorts 1, 5 and 11 as well as in Cohorts EGFR and ALK/RET do not have to present with measurable disease.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment with cohort-specific exceptions."
+      },
+      {
+        "id": "NCT05142189-stage-exceptions",
+        "polarity": "inclusion",
+        "sourceText": "EXCEPT Participants in Cohorts 5 and 11 must present with unresectable Stage III NSCLC by AJCC Cancer Staging Manual, Eighth Edition before receiving pre-study chemoradiotherapy. Participants in Cohort 6 with the initial diagnosis of resectable Stage II and Stage III NSCLC",
+        "reasonFuzzy": "Stage rules vary substantially across different study cohorts, including early stages for certain cohorts, making a single typed stage check insufficient."
+      },
+      {
+        "id": "NCT05142189-pd1-tolerance",
+        "polarity": "inclusion",
+        "sourceText": "Participants in Cohorts 2, 4, 5, 6, 10 and 11 must be able to tolerate (additional) anti-PD-1 therapy",
+        "reasonFuzzy": "Tolerance of anti-PD-1 therapy is a clinical judgment-based item."
+      },
+      {
+        "id": "NCT05142189-cohort1-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Participants' prior therapy must have included at least a PD-1/PD-L1 inhibitor and a platinum-based chemotherapy regimen as well as one other line of systemic therapy",
+        "reasonFuzzy": "Prior therapy requirements differ across cohorts with multiple alternative conditions and exceptions."
+      },
+      {
+        "id": "NCT05142189-cohort2-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "Participants must present with PD-L1 expression of TPS \\>= 50% in tumor cells",
+        "reasonFuzzy": "Cohort-specific biomarker rules with complex progression criteria are not represented as a general global pdl1_min check."
+      },
+      {
+        "id": "NCT05142189-brain-mets",
+        "polarity": "exclusion",
+        "sourceText": "Current evidence of new or growing brain or spinal metastases during screening. Participants with leptomeningeal disease are excluded. Participants with known brain or spinal metastases may be eligible for all Cohorts, except for Cohorts 5, 6 and 11, if they had radiotherapy or another appropriate therapy... stable brain or spinal disease... do not require steroid therapy...",
+        "reasonFuzzy": "The rules regarding brain metastases involve stability, timing of scans, absence of symptoms, steroid requirements, and cohort-specific exceptions that cannot be reduced to a standard typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05142189",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05142189-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must present with unresectable Stage III or metastatic Stage IV NSCLC by American Joint Commission on Cancer (AJCC) Cancer Staging Manual, Eighth Edition.",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ],
+        "stringValue": "Participants in Cohort 6 with the initial diagnosis of resectable Stage II and Stage III NSCLC"
+      },
+      {
+        "id": "NCT05142189-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group performance status (ECOG-PS) less than or equal to (<=) 1, except for participants in Cohorts 1, 4, 5, 10 and 11 who are eligible with an ECOG-PS of 0-2.",
+        "numberValue": 1,
+        "stringValue": "except for participants in Cohorts 1, 4, 5, 10 and 11 who are eligible with an ECOG-PS of 0-2."
+      },
+      {
+        "id": "NCT05142189-egfr-var",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants' NSCLC must have classical EGFR mutations, i.e., ex19Del or L858R.",
+        "stringValue": "ex19Del, L858R"
+      },
+      {
+        "id": "NCT05142189-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Participants' NSCLC must have ALK rearrangement or RET rearrangement.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05142189-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Current evidence of new or growing brain or spinal metastases during screening. Participants with leptomeningeal disease are excluded. Participants with known brain or spinal metastases may be eligible for all Cohorts, except for Cohorts 5, 6 and 11, if they: had radiotherapy or another appropriate therapy for the brain or spinal metastases, AND have no neurological symptoms that can be attributed to the current brain lesions, AND have stable brain or spinal disease on the computed tomography (CT) or magnetic resonance imaging (MRI) scan within 4 weeks before signing the informed consent (confirmed by stable lesions on two scans at least 4 weeks apart), AND do not require steroid therapy for the treatment of brain or spinal metastases within 14 days before the first dose of study treatment.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05142189-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically confirmed NSCLC and measurable disease by RECIST v1.1. Note: Participants in Cohorts 1, 5 and 11 as well as in Cohorts EGFR and ALK/RET do not have to present with measurable disease.",
+        "reasonFuzzy": "Measurable disease requirements vary extensively by cohort."
+      },
+      {
+        "id": "NCT05142189-cohort-rules",
+        "polarity": "inclusion",
+        "sourceText": "Cohort-specific inclusion criteria: ...",
+        "reasonFuzzy": "Study has numerous complex cohort-specific prior therapy and PD-L1 rules that cannot be reduced to a single global typed check."
+      }
+    ]
+  }
+}

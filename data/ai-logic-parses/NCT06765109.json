@@ -1,0 +1,319 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06765109",
+  "briefTitle": "Neladalkib (NVL-655) for TKI-naive Patients With Advanced ALK-Positive NSCLC",
+  "parsedAt": "2026-11-12T10:33:39.818Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06765109-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed locally advanced (not amenable for multimodality treatment) or metastatic Non-small Cell Lung Cancer (NSCLC)",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but lacks a specific numbered stage list for stage_in."
+    },
+    {
+      "id": "NCT06765109-systemic-tx",
+      "polarity": "inclusion",
+      "sourceText": "No prior systemic anticancer treatment for NSCLC (adjuvant/neoadjuvant chemotherapy allowed if 12 months prior to randomization; prior ALK tyrosine kinase inhibitor [TKI] such as alectinib is not allowed in any setting)",
+      "reasonFuzzy": "Complex prior line and prior therapy rules with exceptions for adjuvant or neoadjuvant chemotherapy are not a simple typed prior_lines or prior_therapy check."
+    },
+    {
+      "id": "NCT06765109-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease (1 or more target lesions per Response Evaluation Criteria in Solid Tumors [RECIST] 1.1)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06765109-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Pretreatment tumor tissue",
+      "reasonFuzzy": "Willingness or requirement to undergo a biopsy procedure is subjective and not a typed kind."
+    },
+    {
+      "id": "NCT06765109-driver",
+      "polarity": "exclusion",
+      "sourceText": "Patient's cancer has a known oncogenic driver alteration other than ALK.",
+      "reasonFuzzy": "Exclusion of any other oncogenic driver alteration is broad and not a single typed biomarker check."
+    },
+    {
+      "id": "NCT06765109-brain",
+      "polarity": "exclusion",
+      "sourceText": "Brain metastases associated with progressive neurological symptoms or requiring increasing doses of corticosteroids to control CNS disease",
+      "reasonFuzzy": "Symptomatic and progressive brain metastases requiring corticosteroids do not map to a clean typed brain_mets rule of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT06765109-prior-therapy-exc",
+      "polarity": "exclusion",
+      "sourceText": "prior ALK tyrosine kinase inhibitor [TKI] such as alectinib is not allowed in any setting",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06765109-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06765109-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed locally advanced (not amenable for multimodality treatment) or metastatic Non-small Cell Lung Cancer (NSCLC)",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but no specific stage list is provided."
+    },
+    {
+      "id": "NCT06765109-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "No prior systemic anticancer treatment for NSCLC (adjuvant/neoadjuvant chemotherapy allowed if 12 months prior to randomization; prior ALK tyrosine kinase inhibitor [TKI] such as alectinib is not allowed in any setting)",
+      "reasonFuzzy": "Prior treatment rules include conditional exceptions like adjuvant/neoadjuvant timing, which cannot be modeled as a single typed check."
+    },
+    {
+      "id": "NCT06765109-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease (1 or more target lesions per Response Evaluation Criteria in Solid Tumors [RECIST] 1.1)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06765109-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Pretreatment tumor tissue",
+      "reasonFuzzy": "Willingness or requirement to undergo a biopsy or procedure is a subjective or judgment-based item."
+    },
+    {
+      "id": "NCT06765109-other-driver",
+      "polarity": "exclusion",
+      "sourceText": "Patient's cancer has a known oncogenic driver alteration other than ALK.",
+      "reasonFuzzy": "Exclusion of any other oncogenic driver is broader than a single gene status check."
+    },
+    {
+      "id": "NCT06765109-brain",
+      "polarity": "exclusion",
+      "sourceText": "Brain metastases associated with progressive neurological symptoms or requiring increasing doses of corticosteroids to control CNS disease",
+      "reasonFuzzy": "Progressive neurological symptoms or corticosteroid dependency are not clean typed brain_mets categories."
+    },
+    {
+      "id": "NCT06765109-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "prior ALK tyrosine kinase inhibitor [TKI] such as alectinib is not allowed in any setting",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06765109-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06765109-alk",
+      "polarity": "inclusion",
+      "sourceText": "Documented Anaplastic Lymphoma Kinase (ALK) rearrangement via testing of tissue or blood",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "prior ALK tyrosine kinase inhibitor [TKI] such as alectinib is not allowed in any setting"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "prior ALK tyrosine kinase inhibitor [TKI] such as alectinib is not allowed in any setting"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 5247
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2990
+  },
+  "ms": 16210,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06765109",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06765109-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Documented Anaplastic Lymphoma Kinase (ALK) rearrangement via testing of tissue or blood",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06765109-prior-therapy-exc",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "prior ALK tyrosine kinase inhibitor [TKI] such as alectinib is not allowed in any setting",
+        "stringValue": "alectinib"
+      },
+      {
+        "id": "NCT06765109-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06765109-stage",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed locally advanced (not amenable for multimodality treatment) or metastatic Non-small Cell Lung Cancer (NSCLC)",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but lacks a specific numbered stage list for stage_in."
+      },
+      {
+        "id": "NCT06765109-systemic-tx",
+        "polarity": "inclusion",
+        "sourceText": "No prior systemic anticancer treatment for NSCLC (adjuvant/neoadjuvant chemotherapy allowed if 12 months prior to randomization; prior ALK tyrosine kinase inhibitor [TKI] such as alectinib is not allowed in any setting)",
+        "reasonFuzzy": "Complex prior line and prior therapy rules with exceptions for adjuvant or neoadjuvant chemotherapy are not a simple typed prior_lines or prior_therapy check."
+      },
+      {
+        "id": "NCT06765109-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease (1 or more target lesions per Response Evaluation Criteria in Solid Tumors [RECIST] 1.1)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06765109-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Pretreatment tumor tissue",
+        "reasonFuzzy": "Willingness or requirement to undergo a biopsy procedure is subjective and not a typed kind."
+      },
+      {
+        "id": "NCT06765109-driver",
+        "polarity": "exclusion",
+        "sourceText": "Patient's cancer has a known oncogenic driver alteration other than ALK.",
+        "reasonFuzzy": "Exclusion of any other oncogenic driver alteration is broad and not a single typed biomarker check."
+      },
+      {
+        "id": "NCT06765109-brain",
+        "polarity": "exclusion",
+        "sourceText": "Brain metastases associated with progressive neurological symptoms or requiring increasing doses of corticosteroids to control CNS disease",
+        "reasonFuzzy": "Symptomatic and progressive brain metastases requiring corticosteroids do not map to a clean typed brain_mets rule of none, treated_stable, or untreated."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06765109",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06765109-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Documented Anaplastic Lymphoma Kinase (ALK) rearrangement via testing of tissue or blood",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06765109-prior-therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "inclusion",
+        "sourceText": "prior ALK tyrosine kinase inhibitor [TKI] such as alectinib is not allowed in any setting",
+        "stringValue": "alectinib"
+      },
+      {
+        "id": "NCT06765109-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06765109-stage",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed locally advanced (not amenable for multimodality treatment) or metastatic Non-small Cell Lung Cancer (NSCLC)",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but no specific stage list is provided."
+      },
+      {
+        "id": "NCT06765109-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "No prior systemic anticancer treatment for NSCLC (adjuvant/neoadjuvant chemotherapy allowed if 12 months prior to randomization; prior ALK tyrosine kinase inhibitor [TKI] such as alectinib is not allowed in any setting)",
+        "reasonFuzzy": "Prior treatment rules include conditional exceptions like adjuvant/neoadjuvant timing, which cannot be modeled as a single typed check."
+      },
+      {
+        "id": "NCT06765109-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease (1 or more target lesions per Response Evaluation Criteria in Solid Tumors [RECIST] 1.1)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06765109-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Pretreatment tumor tissue",
+        "reasonFuzzy": "Willingness or requirement to undergo a biopsy or procedure is a subjective or judgment-based item."
+      },
+      {
+        "id": "NCT06765109-other-driver",
+        "polarity": "exclusion",
+        "sourceText": "Patient's cancer has a known oncogenic driver alteration other than ALK.",
+        "reasonFuzzy": "Exclusion of any other oncogenic driver is broader than a single gene status check."
+      },
+      {
+        "id": "NCT06765109-brain",
+        "polarity": "exclusion",
+        "sourceText": "Brain metastases associated with progressive neurological symptoms or requiring increasing doses of corticosteroids to control CNS disease",
+        "reasonFuzzy": "Progressive neurological symptoms or corticosteroid dependency are not clean typed brain_mets categories."
+      }
+    ]
+  }
+}

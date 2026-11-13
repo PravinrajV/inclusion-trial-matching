@@ -1,0 +1,351 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07361562",
+  "briefTitle": "A Study of a Selective ERBB2 Inhibitor (CGT4255), in Patients With Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T11:51:20.223Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07361562-diag",
+      "polarity": "inclusion",
+      "sourceText": "Have histologically confirmed diagnosis of: Part A: Locally advanced, metastatic, and/or unresectable solid tumor with documented ERBB2-activating alteration or NRG1 gene fusion in blood and/or tumor or HER2 overexpression in tumor; Part B: Locally advanced, metastatic, and/or unresectable NSCLC with documented ERBB2 mutation in blood and/or tumor; Part C: Locally advanced, metastatic and/or unresectable breast cancer with documented ERBB2 mutation in blood and/or tumor or HER overexpression in tumor",
+      "reasonFuzzy": "Diagnosis and biomarker criteria vary by study part and do not fit a single standard typed check."
+    },
+    {
+      "id": "NCT07361562-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease per RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07361562-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status 0 to 1 for Part A. For Parts B and C, ECOG Performance Status must be 0 to 2.",
+      "reasonFuzzy": "ECOG status thresholds differ by study part."
+    },
+    {
+      "id": "NCT07361562-labs",
+      "polarity": "inclusion",
+      "sourceText": "Have clinically acceptable local laboratory screening results (clinical chemistry and hematology) within certain limits.",
+      "reasonFuzzy": "Lab screening values are not specified with concrete cutoffs in the source text."
+    },
+    {
+      "id": "NCT07361562-washout",
+      "polarity": "exclusion",
+      "sourceText": "Received small molecule chemotherapy or anticancer therapies or radiotherapy within certain timeframes before first dose of study drug.",
+      "reasonFuzzy": "Washout intervals with unspecified or generalized timeframes are not typed criteria."
+    },
+    {
+      "id": "NCT07361562-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgeries (eg, craniotomy and thoracotomy) within 4 weeks of the first dose of study drug.",
+      "reasonFuzzy": "Surgical washout window is not a simple lab or typed check."
+    },
+    {
+      "id": "NCT07361562-rad",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with palliative focal radiotherapy (cranial or extracranial) (eg, stereotactic radiosurgery or intensity-modulated radiation therapy) ≤2 weeks before the first dose of study drug; treatment with whole-brain radiotherapy ≤4 weeks before the first dose of study drug.",
+      "reasonFuzzy": "Radiotherapy washout timeframes are not standard typed exclusions."
+    },
+    {
+      "id": "NCT07361562-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Clinically significant cardiac disease.",
+      "reasonFuzzy": "Cardiac disease exclusion is subjective and judgment-based."
+    },
+    {
+      "id": "NCT07361562-tox",
+      "polarity": "exclusion",
+      "sourceText": "Resolution of toxicities from prior therapy to ≤Grade 1 (or baseline), including resolution of clinically significant laboratory abnormalities, before the first dose of study drug.",
+      "reasonFuzzy": "Toxicity resolution rule depends on investigator assessment."
+    },
+    {
+      "id": "NCT07361562-cortex",
+      "polarity": "exclusion",
+      "sourceText": "Restrictions on use of corticosteroid use to manage neurologic symptoms in different parts of the study.",
+      "reasonFuzzy": "Corticosteroid restrictions vary by study part and require clinical context."
+    },
+    {
+      "id": "NCT07361562-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07361562-alteration",
+      "polarity": "inclusion",
+      "sourceText": "Part B: Locally advanced, metastatic, and/or unresectable NSCLC with documented ERBB2 mutation in blood and/or tumor",
+      "reasonFuzzy": "ERBB2/HER2 variant is not among the allowed typed biomarker checks (which are limited to EGFR, ALK, KRAS, ROS1, BRAF, and PD-L1)."
+    },
+    {
+      "id": "NCT07361562-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease per RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07361562-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status 0 to 1 for Part A. For Parts B and C, ECOG Performance Status must be 0 to 2.",
+      "reasonFuzzy": "ECOG maximum differs by study part, so it cannot be expressed as a single typed ecog_max check."
+    },
+    {
+      "id": "NCT07361562-labs",
+      "polarity": "inclusion",
+      "sourceText": "Have clinically acceptable local laboratory screening results (clinical chemistry and hematology) within certain limits.",
+      "reasonFuzzy": "Laboratory limits are not explicitly defined with specific cutoffs in the source text."
+    },
+    {
+      "id": "NCT07361562-washout",
+      "polarity": "exclusion",
+      "sourceText": "Received small molecule chemotherapy or anticancer therapies or radiotherapy within certain timeframes before first dose of study drug.",
+      "reasonFuzzy": "Washout window and anticancer therapy exclusions without specific cutoffs cannot be expressed as a simple typed prior therapy check."
+    },
+    {
+      "id": "NCT07361562-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgeries (eg, craniotomy and thoracotomy) within 4 weeks of the first dose of study drug.",
+      "reasonFuzzy": "Surgery washout window is not a typed check kind."
+    },
+    {
+      "id": "NCT07361562-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with palliative focal radiotherapy (cranial or extracranial) (eg, stereotactic radiosurgery or intensity-modulated radiation therapy) ≤2 weeks before the first dose of study drug; treatment with whole-brain radiotherapy ≤4 weeks before the first dose of study drug.",
+      "reasonFuzzy": "Radiotherapy washout window is not a typed check kind."
+    },
+    {
+      "id": "NCT07361562-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Clinically significant cardiac disease.",
+      "reasonFuzzy": "Clinically significant cardiac disease is an investigator judgment, not a typed check."
+    },
+    {
+      "id": "NCT07361562-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Resolution of toxicities from prior therapy to ≤Grade 1 (or baseline), including resolution of clinically significant laboratory abnormalities, before the first dose of study drug.",
+      "reasonFuzzy": "Prior toxicity resolution is a general clinical rule, not a typed lab cutoff."
+    },
+    {
+      "id": "NCT07361562-corticosteroid",
+      "polarity": "exclusion",
+      "sourceText": "Restrictions on use of corticosteroid use to manage neurologic symptoms in different parts of the study.",
+      "reasonFuzzy": "Corticosteroid restrictions vary by study part and are not a typed check kind."
+    },
+    {
+      "id": "NCT07361562-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 0,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 0,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 0,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 10,
+    "attempts": 1,
+    "ms": 16871
+  },
+  "runB": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 10,
+    "attempts": 1,
+    "ms": 8580
+  },
+  "ms": 33430,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07361562",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07361562-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07361562-diag",
+        "polarity": "inclusion",
+        "sourceText": "Have histologically confirmed diagnosis of: Part A: Locally advanced, metastatic, and/or unresectable solid tumor with documented ERBB2-activating alteration or NRG1 gene fusion in blood and/or tumor or HER2 overexpression in tumor; Part B: Locally advanced, metastatic, and/or unresectable NSCLC with documented ERBB2 mutation in blood and/or tumor; Part C: Locally advanced, metastatic and/or unresectable breast cancer with documented ERBB2 mutation in blood and/or tumor or HER overexpression in tumor",
+        "reasonFuzzy": "Diagnosis and biomarker criteria vary by study part and do not fit a single standard typed check."
+      },
+      {
+        "id": "NCT07361562-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease per RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07361562-ecog",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status 0 to 1 for Part A. For Parts B and C, ECOG Performance Status must be 0 to 2.",
+        "reasonFuzzy": "ECOG status thresholds differ by study part."
+      },
+      {
+        "id": "NCT07361562-labs",
+        "polarity": "inclusion",
+        "sourceText": "Have clinically acceptable local laboratory screening results (clinical chemistry and hematology) within certain limits.",
+        "reasonFuzzy": "Lab screening values are not specified with concrete cutoffs in the source text."
+      },
+      {
+        "id": "NCT07361562-washout",
+        "polarity": "exclusion",
+        "sourceText": "Received small molecule chemotherapy or anticancer therapies or radiotherapy within certain timeframes before first dose of study drug.",
+        "reasonFuzzy": "Washout intervals with unspecified or generalized timeframes are not typed criteria."
+      },
+      {
+        "id": "NCT07361562-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgeries (eg, craniotomy and thoracotomy) within 4 weeks of the first dose of study drug.",
+        "reasonFuzzy": "Surgical washout window is not a simple lab or typed check."
+      },
+      {
+        "id": "NCT07361562-rad",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with palliative focal radiotherapy (cranial or extracranial) (eg, stereotactic radiosurgery or intensity-modulated radiation therapy) ≤2 weeks before the first dose of study drug; treatment with whole-brain radiotherapy ≤4 weeks before the first dose of study drug.",
+        "reasonFuzzy": "Radiotherapy washout timeframes are not standard typed exclusions."
+      },
+      {
+        "id": "NCT07361562-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Clinically significant cardiac disease.",
+        "reasonFuzzy": "Cardiac disease exclusion is subjective and judgment-based."
+      },
+      {
+        "id": "NCT07361562-tox",
+        "polarity": "exclusion",
+        "sourceText": "Resolution of toxicities from prior therapy to ≤Grade 1 (or baseline), including resolution of clinically significant laboratory abnormalities, before the first dose of study drug.",
+        "reasonFuzzy": "Toxicity resolution rule depends on investigator assessment."
+      },
+      {
+        "id": "NCT07361562-cortex",
+        "polarity": "exclusion",
+        "sourceText": "Restrictions on use of corticosteroid use to manage neurologic symptoms in different parts of the study.",
+        "reasonFuzzy": "Corticosteroid restrictions vary by study part and require clinical context."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07361562",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07361562-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07361562-alteration",
+        "polarity": "inclusion",
+        "sourceText": "Part B: Locally advanced, metastatic, and/or unresectable NSCLC with documented ERBB2 mutation in blood and/or tumor",
+        "reasonFuzzy": "ERBB2/HER2 variant is not among the allowed typed biomarker checks (which are limited to EGFR, ALK, KRAS, ROS1, BRAF, and PD-L1)."
+      },
+      {
+        "id": "NCT07361562-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease per RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07361562-ecog",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status 0 to 1 for Part A. For Parts B and C, ECOG Performance Status must be 0 to 2.",
+        "reasonFuzzy": "ECOG maximum differs by study part, so it cannot be expressed as a single typed ecog_max check."
+      },
+      {
+        "id": "NCT07361562-labs",
+        "polarity": "inclusion",
+        "sourceText": "Have clinically acceptable local laboratory screening results (clinical chemistry and hematology) within certain limits.",
+        "reasonFuzzy": "Laboratory limits are not explicitly defined with specific cutoffs in the source text."
+      },
+      {
+        "id": "NCT07361562-washout",
+        "polarity": "exclusion",
+        "sourceText": "Received small molecule chemotherapy or anticancer therapies or radiotherapy within certain timeframes before first dose of study drug.",
+        "reasonFuzzy": "Washout window and anticancer therapy exclusions without specific cutoffs cannot be expressed as a simple typed prior therapy check."
+      },
+      {
+        "id": "NCT07361562-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgeries (eg, craniotomy and thoracotomy) within 4 weeks of the first dose of study drug.",
+        "reasonFuzzy": "Surgery washout window is not a typed check kind."
+      },
+      {
+        "id": "NCT07361562-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with palliative focal radiotherapy (cranial or extracranial) (eg, stereotactic radiosurgery or intensity-modulated radiation therapy) ≤2 weeks before the first dose of study drug; treatment with whole-brain radiotherapy ≤4 weeks before the first dose of study drug.",
+        "reasonFuzzy": "Radiotherapy washout window is not a typed check kind."
+      },
+      {
+        "id": "NCT07361562-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Clinically significant cardiac disease.",
+        "reasonFuzzy": "Clinically significant cardiac disease is an investigator judgment, not a typed check."
+      },
+      {
+        "id": "NCT07361562-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Resolution of toxicities from prior therapy to ≤Grade 1 (or baseline), including resolution of clinically significant laboratory abnormalities, before the first dose of study drug.",
+        "reasonFuzzy": "Prior toxicity resolution is a general clinical rule, not a typed lab cutoff."
+      },
+      {
+        "id": "NCT07361562-corticosteroid",
+        "polarity": "exclusion",
+        "sourceText": "Restrictions on use of corticosteroid use to manage neurologic symptoms in different parts of the study.",
+        "reasonFuzzy": "Corticosteroid restrictions vary by study part and are not a typed check kind."
+      }
+    ]
+  }
+}

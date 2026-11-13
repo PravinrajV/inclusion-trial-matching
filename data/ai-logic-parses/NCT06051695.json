@@ -1,0 +1,567 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06051695",
+  "briefTitle": "A Study to Evaluate the Safety and Efficacy of Mesothelin-Targeting Logic-gated CAR T, in Participants With Solid Tumors That Express MSLN and Have Lost HLA-A*02 Expression",
+  "parsedAt": "2026-11-12T06:23:18.217Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06051695-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status of 0 to 1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status of 0 to 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06051695-basecamp",
+      "polarity": "inclusion",
+      "sourceText": "Appropriately enrolled in the BASECAMP-1 A2 Biotherapeutics, Inc. study, with tissue demonstrating LOH of HLA-A*02 by NGS (whenever possible from the primary site), successful apheresis and PBMC processing, and with sufficient stored cells available for Tmod CAR T-cell therapy",
+      "reasonFuzzy": "Study-specific enrollment and specialized T-cell processing are not typed criteria."
+    },
+    {
+      "id": "NCT06051695-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed recurrent unresectable, locally advanced, or metastatic CRC, NSCLC, PANC, OVCA, MESO, or other solid tumors with MSLN expression. Measurable disease is required with lesions of ≥1.0 cm by CT.",
+      "reasonFuzzy": "Encompasses multiple solid tumor types and requires specific molecular biomarker (MSLN expression) and measurable disease by imaging, which cannot be expressed in a single typed histology or stage rule."
+    },
+    {
+      "id": "NCT06051695-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Received previous required therapy for the appropriate solid tumor disease as described in the protocol",
+      "reasonFuzzy": "Refers broadly to protocol-defined prior therapy without naming a specific agent or class."
+    },
+    {
+      "id": "NCT06051695-organ",
+      "polarity": "inclusion",
+      "sourceText": "Has adequate organ function as described in the protocol",
+      "reasonFuzzy": "Protocol-defined organ function without specific numeric cutoffs cannot be typed."
+    },
+    {
+      "id": "NCT06051695-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of ≥3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06051695-willingness",
+      "polarity": "inclusion",
+      "sourceText": "Willing to comply with study schedule of assessments including long term safety follow up",
+      "reasonFuzzy": "Subjective willingness and protocol compliance are not typed checks."
+    },
+    {
+      "id": "NCT06051695-local-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Has disease that is suitable for local therapy or able to receive standard of care therapy that is therapeutic and not palliative",
+      "reasonFuzzy": "Clinical judgment of suitability for local or standard therapy."
+    },
+    {
+      "id": "NCT06051695-stem-cell",
+      "polarity": "exclusion",
+      "sourceText": "Prior allogeneic stem cell transplant",
+      "reasonFuzzy": "Prior stem cell transplant is not a standard typed prior therapy exclusion kind."
+    },
+    {
+      "id": "NCT06051695-solid-organ",
+      "polarity": "exclusion",
+      "sourceText": "Prior solid organ transplant",
+      "reasonFuzzy": "Prior solid organ transplant is not a typed exclusion kind."
+    },
+    {
+      "id": "NCT06051695-meso-pleural",
+      "polarity": "exclusion",
+      "sourceText": "MESO with pleural involvement extending into the peritoneum",
+      "reasonFuzzy": "Disease extension detail specific to mesothelioma is not a typed check."
+    },
+    {
+      "id": "NCT06051695-washout-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Cancer therapy within 3 weeks or 3 half lives of infusion",
+      "reasonFuzzy": "Complex washout window dependent on half-lives and therapy type."
+    },
+    {
+      "id": "NCT06051695-radiotherapy",
+      "polarity": "exclusion",
+      "sourceText": "Radiotherapy within 28 days of infusion",
+      "reasonFuzzy": "Washout window for radiotherapy is not a typed check."
+    },
+    {
+      "id": "NCT06051695-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Unstable angina, arrhythmia, myocardial infarction, or any other significant cardiac disease within the last 6 months",
+      "reasonFuzzy": "Complex medical history and cardiac disease criteria."
+    },
+    {
+      "id": "NCT06051695-thrombo",
+      "polarity": "exclusion",
+      "sourceText": "Any new symptomatic pulmonary embolism (PE) or a deep vein thrombosis (DVT) within 3 months of enrollment. Therapeutic dosing of anticoagulants is allowed for history of PE or DVT if greater than 3 months from time of enrollment, and adequately treated",
+      "reasonFuzzy": "Detailed thrombosis history and anticoagulant exceptions are not typed checks."
+    },
+    {
+      "id": "NCT06051695-ild",
+      "polarity": "exclusion",
+      "sourceText": "History of interstitial lung disease including drug-induced interstitial lung disease and radiation pneumonitis that requires treatment with prolonged steroids or other immune suppressive agents within 1 year",
+      "reasonFuzzy": "Medical history of interstitial lung disease with specific treatment qualifiers."
+    },
+    {
+      "id": "NCT06051695-oxygen",
+      "polarity": "exclusion",
+      "sourceText": "Requires supplemental home oxygen",
+      "reasonFuzzy": "Clinical requirement for supplemental oxygen is not a typed check."
+    },
+    {
+      "id": "NCT06051695-pregnant",
+      "polarity": "exclusion",
+      "sourceText": "Females of childbearing potential who are pregnant or breastfeeding",
+      "reasonFuzzy": "Pregnancy/breastfeeding exclusion is standard clinical trial text."
+    },
+    {
+      "id": "NCT06051695-contraception",
+      "polarity": "exclusion",
+      "sourceText": "Subjects, both male and female, of childbearing potential who are not willing to practice birth control from the time of consent through 6 months post infusion",
+      "reasonFuzzy": "Contraception compliance is a subjective requirement."
+    },
+    {
+      "id": "NCT06051695-age",
+      "polarity": "inclusion",
+      "sourceText": "18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06051695-basecamp",
+      "polarity": "inclusion",
+      "sourceText": "Appropriately enrolled in the BASECAMP-1 A2 Biotherapeutics, Inc. study, with tissue demonstrating LOH of HLA-A*02 by NGS (whenever possible from the primary site), successful apheresis and PBMC processing, and with sufficient stored cells available for Tmod CAR T-cell therapy",
+      "reasonFuzzy": "Enrollment in a companion study and HLA loss by NGS are complex protocol-specific procedures, not a standard typed check."
+    },
+    {
+      "id": "NCT06051695-disease",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed recurrent unresectable, locally advanced, or metastatic CRC, NSCLC, PANC, OVCA, MESO, or other solid tumors with MSLN expression. Measurable disease is required with lesions of ≥1.0 cm by CT.",
+      "reasonFuzzy": "Broad solid tumor inclusion with MSLN expression and measurable disease by RECIST/CT, not a standard numbered NSCLC stage list."
+    },
+    {
+      "id": "NCT06051695-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Received previous required therapy for the appropriate solid tumor disease as described in the protocol",
+      "reasonFuzzy": "Refers generally to protocol-defined prior therapy without specifying simple named drugs or classes."
+    },
+    {
+      "id": "NCT06051695-organ",
+      "polarity": "inclusion",
+      "sourceText": "Has adequate organ function as described in the protocol",
+      "reasonFuzzy": "General organ function reference without specific lab cutoff values."
+    },
+    {
+      "id": "NCT06051695-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of ≥3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06051695-compliance",
+      "polarity": "inclusion",
+      "sourceText": "Willing to comply with study schedule of assessments including long term safety follow up",
+      "reasonFuzzy": "Subjective willingness and compliance requirement."
+    },
+    {
+      "id": "NCT06051695-local-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Has disease that is suitable for local therapy or able to receive standard of care therapy that is therapeutic and not palliative",
+      "reasonFuzzy": "Investigator judgment regarding suitability for standard local therapy."
+    },
+    {
+      "id": "NCT06051695-transplant-allo",
+      "polarity": "exclusion",
+      "sourceText": "Prior allogeneic stem cell transplant",
+      "reasonFuzzy": "Prior transplant is not covered by allowed typed kinds."
+    },
+    {
+      "id": "NCT06051695-transplant-solid",
+      "polarity": "exclusion",
+      "sourceText": "Prior solid organ transplant",
+      "reasonFuzzy": "Prior transplant is not covered by allowed typed kinds."
+    },
+    {
+      "id": "NCT06051695-meso-pleural",
+      "polarity": "exclusion",
+      "sourceText": "MESO with pleural involvement extending into the peritoneum",
+      "reasonFuzzy": "Specific anatomical involvement for mesothelioma, not a standard typed check."
+    },
+    {
+      "id": "NCT06051695-washout-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Cancer therapy within 3 weeks or 3 half lives of infusion",
+      "reasonFuzzy": "Washout window based on half-lives is not a simple static lab cutoff."
+    },
+    {
+      "id": "NCT06051695-washout-radio",
+      "polarity": "exclusion",
+      "sourceText": "Radiotherapy within 28 days of infusion",
+      "reasonFuzzy": "Radiotherapy washout is not a typed check kind."
+    },
+    {
+      "id": "NCT06051695-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Unstable angina, arrhythmia, myocardial infarction, or any other significant cardiac disease within the last 6 months",
+      "reasonFuzzy": "Subjective clinical evaluation of cardiac disease history."
+    },
+    {
+      "id": "NCT06051695-thrombo",
+      "polarity": "exclusion",
+      "sourceText": "Any new symptomatic pulmonary embolism (PE) or a deep vein thrombosis (DVT) within 3 months of enrollment. Therapeutic dosing of anticoagulants is allowed for history of PE or DVT if greater than 3 months from time of enrollment, and adequately treated",
+      "reasonFuzzy": "Complex condition involving recent thromboembolism with exceptions for anticoagulation timing."
+    },
+    {
+      "id": "NCT06051695-ild",
+      "polarity": "exclusion",
+      "sourceText": "History of interstitial lung disease including drug-induced interstitial lung disease and radiation pneumonitis that requires treatment with prolonged steroids or other immune suppressive agents within 1 year",
+      "reasonFuzzy": "History of ILD with steroid use criteria, not a typed check."
+    },
+    {
+      "id": "NCT06051695-oxygen",
+      "polarity": "exclusion",
+      "sourceText": "Requires supplemental home oxygen",
+      "reasonFuzzy": "Clinical requirement for supplemental oxygen is not a typed check."
+    },
+    {
+      "id": "NCT06051695-pregnant",
+      "polarity": "exclusion",
+      "sourceText": "Females of childbearing potential who are pregnant or breastfeeding",
+      "reasonFuzzy": "Pregnancy or breastfeeding status is not a typed check."
+    },
+    {
+      "id": "NCT06051695-contraception",
+      "polarity": "exclusion",
+      "sourceText": "Subjects, both male and female, of childbearing potential who are not willing to practice birth control from the time of consent through 6 months post infusion",
+      "reasonFuzzy": "Contraception compliance requirement."
+    },
+    {
+      "id": "NCT06051695-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 18,
+    "attempts": 1,
+    "ms": 5831
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 18,
+    "attempts": 3,
+    "ms": 38340
+  },
+  "ms": 52167,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06051695",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06051695-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06051695-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0 to 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06051695-basecamp",
+        "polarity": "inclusion",
+        "sourceText": "Appropriately enrolled in the BASECAMP-1 A2 Biotherapeutics, Inc. study, with tissue demonstrating LOH of HLA-A*02 by NGS (whenever possible from the primary site), successful apheresis and PBMC processing, and with sufficient stored cells available for Tmod CAR T-cell therapy",
+        "reasonFuzzy": "Study-specific enrollment and specialized T-cell processing are not typed criteria."
+      },
+      {
+        "id": "NCT06051695-histology",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed recurrent unresectable, locally advanced, or metastatic CRC, NSCLC, PANC, OVCA, MESO, or other solid tumors with MSLN expression. Measurable disease is required with lesions of ≥1.0 cm by CT.",
+        "reasonFuzzy": "Encompasses multiple solid tumor types and requires specific molecular biomarker (MSLN expression) and measurable disease by imaging, which cannot be expressed in a single typed histology or stage rule."
+      },
+      {
+        "id": "NCT06051695-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Received previous required therapy for the appropriate solid tumor disease as described in the protocol",
+        "reasonFuzzy": "Refers broadly to protocol-defined prior therapy without naming a specific agent or class."
+      },
+      {
+        "id": "NCT06051695-organ",
+        "polarity": "inclusion",
+        "sourceText": "Has adequate organ function as described in the protocol",
+        "reasonFuzzy": "Protocol-defined organ function without specific numeric cutoffs cannot be typed."
+      },
+      {
+        "id": "NCT06051695-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of ≥3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06051695-willingness",
+        "polarity": "inclusion",
+        "sourceText": "Willing to comply with study schedule of assessments including long term safety follow up",
+        "reasonFuzzy": "Subjective willingness and protocol compliance are not typed checks."
+      },
+      {
+        "id": "NCT06051695-local-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Has disease that is suitable for local therapy or able to receive standard of care therapy that is therapeutic and not palliative",
+        "reasonFuzzy": "Clinical judgment of suitability for local or standard therapy."
+      },
+      {
+        "id": "NCT06051695-stem-cell",
+        "polarity": "exclusion",
+        "sourceText": "Prior allogeneic stem cell transplant",
+        "reasonFuzzy": "Prior stem cell transplant is not a standard typed prior therapy exclusion kind."
+      },
+      {
+        "id": "NCT06051695-solid-organ",
+        "polarity": "exclusion",
+        "sourceText": "Prior solid organ transplant",
+        "reasonFuzzy": "Prior solid organ transplant is not a typed exclusion kind."
+      },
+      {
+        "id": "NCT06051695-meso-pleural",
+        "polarity": "exclusion",
+        "sourceText": "MESO with pleural involvement extending into the peritoneum",
+        "reasonFuzzy": "Disease extension detail specific to mesothelioma is not a typed check."
+      },
+      {
+        "id": "NCT06051695-washout-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Cancer therapy within 3 weeks or 3 half lives of infusion",
+        "reasonFuzzy": "Complex washout window dependent on half-lives and therapy type."
+      },
+      {
+        "id": "NCT06051695-radiotherapy",
+        "polarity": "exclusion",
+        "sourceText": "Radiotherapy within 28 days of infusion",
+        "reasonFuzzy": "Washout window for radiotherapy is not a typed check."
+      },
+      {
+        "id": "NCT06051695-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Unstable angina, arrhythmia, myocardial infarction, or any other significant cardiac disease within the last 6 months",
+        "reasonFuzzy": "Complex medical history and cardiac disease criteria."
+      },
+      {
+        "id": "NCT06051695-thrombo",
+        "polarity": "exclusion",
+        "sourceText": "Any new symptomatic pulmonary embolism (PE) or a deep vein thrombosis (DVT) within 3 months of enrollment. Therapeutic dosing of anticoagulants is allowed for history of PE or DVT if greater than 3 months from time of enrollment, and adequately treated",
+        "reasonFuzzy": "Detailed thrombosis history and anticoagulant exceptions are not typed checks."
+      },
+      {
+        "id": "NCT06051695-ild",
+        "polarity": "exclusion",
+        "sourceText": "History of interstitial lung disease including drug-induced interstitial lung disease and radiation pneumonitis that requires treatment with prolonged steroids or other immune suppressive agents within 1 year",
+        "reasonFuzzy": "Medical history of interstitial lung disease with specific treatment qualifiers."
+      },
+      {
+        "id": "NCT06051695-oxygen",
+        "polarity": "exclusion",
+        "sourceText": "Requires supplemental home oxygen",
+        "reasonFuzzy": "Clinical requirement for supplemental oxygen is not a typed check."
+      },
+      {
+        "id": "NCT06051695-pregnant",
+        "polarity": "exclusion",
+        "sourceText": "Females of childbearing potential who are pregnant or breastfeeding",
+        "reasonFuzzy": "Pregnancy/breastfeeding exclusion is standard clinical trial text."
+      },
+      {
+        "id": "NCT06051695-contraception",
+        "polarity": "exclusion",
+        "sourceText": "Subjects, both male and female, of childbearing potential who are not willing to practice birth control from the time of consent through 6 months post infusion",
+        "reasonFuzzy": "Contraception compliance is a subjective requirement."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06051695",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06051695-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06051695-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0 to 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06051695-basecamp",
+        "polarity": "inclusion",
+        "sourceText": "Appropriately enrolled in the BASECAMP-1 A2 Biotherapeutics, Inc. study, with tissue demonstrating LOH of HLA-A*02 by NGS (whenever possible from the primary site), successful apheresis and PBMC processing, and with sufficient stored cells available for Tmod CAR T-cell therapy",
+        "reasonFuzzy": "Enrollment in a companion study and HLA loss by NGS are complex protocol-specific procedures, not a standard typed check."
+      },
+      {
+        "id": "NCT06051695-disease",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed recurrent unresectable, locally advanced, or metastatic CRC, NSCLC, PANC, OVCA, MESO, or other solid tumors with MSLN expression. Measurable disease is required with lesions of ≥1.0 cm by CT.",
+        "reasonFuzzy": "Broad solid tumor inclusion with MSLN expression and measurable disease by RECIST/CT, not a standard numbered NSCLC stage list."
+      },
+      {
+        "id": "NCT06051695-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Received previous required therapy for the appropriate solid tumor disease as described in the protocol",
+        "reasonFuzzy": "Refers generally to protocol-defined prior therapy without specifying simple named drugs or classes."
+      },
+      {
+        "id": "NCT06051695-organ",
+        "polarity": "inclusion",
+        "sourceText": "Has adequate organ function as described in the protocol",
+        "reasonFuzzy": "General organ function reference without specific lab cutoff values."
+      },
+      {
+        "id": "NCT06051695-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of ≥3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06051695-compliance",
+        "polarity": "inclusion",
+        "sourceText": "Willing to comply with study schedule of assessments including long term safety follow up",
+        "reasonFuzzy": "Subjective willingness and compliance requirement."
+      },
+      {
+        "id": "NCT06051695-local-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Has disease that is suitable for local therapy or able to receive standard of care therapy that is therapeutic and not palliative",
+        "reasonFuzzy": "Investigator judgment regarding suitability for standard local therapy."
+      },
+      {
+        "id": "NCT06051695-transplant-allo",
+        "polarity": "exclusion",
+        "sourceText": "Prior allogeneic stem cell transplant",
+        "reasonFuzzy": "Prior transplant is not covered by allowed typed kinds."
+      },
+      {
+        "id": "NCT06051695-transplant-solid",
+        "polarity": "exclusion",
+        "sourceText": "Prior solid organ transplant",
+        "reasonFuzzy": "Prior transplant is not covered by allowed typed kinds."
+      },
+      {
+        "id": "NCT06051695-meso-pleural",
+        "polarity": "exclusion",
+        "sourceText": "MESO with pleural involvement extending into the peritoneum",
+        "reasonFuzzy": "Specific anatomical involvement for mesothelioma, not a standard typed check."
+      },
+      {
+        "id": "NCT06051695-washout-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Cancer therapy within 3 weeks or 3 half lives of infusion",
+        "reasonFuzzy": "Washout window based on half-lives is not a simple static lab cutoff."
+      },
+      {
+        "id": "NCT06051695-washout-radio",
+        "polarity": "exclusion",
+        "sourceText": "Radiotherapy within 28 days of infusion",
+        "reasonFuzzy": "Radiotherapy washout is not a typed check kind."
+      },
+      {
+        "id": "NCT06051695-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Unstable angina, arrhythmia, myocardial infarction, or any other significant cardiac disease within the last 6 months",
+        "reasonFuzzy": "Subjective clinical evaluation of cardiac disease history."
+      },
+      {
+        "id": "NCT06051695-thrombo",
+        "polarity": "exclusion",
+        "sourceText": "Any new symptomatic pulmonary embolism (PE) or a deep vein thrombosis (DVT) within 3 months of enrollment. Therapeutic dosing of anticoagulants is allowed for history of PE or DVT if greater than 3 months from time of enrollment, and adequately treated",
+        "reasonFuzzy": "Complex condition involving recent thromboembolism with exceptions for anticoagulation timing."
+      },
+      {
+        "id": "NCT06051695-ild",
+        "polarity": "exclusion",
+        "sourceText": "History of interstitial lung disease including drug-induced interstitial lung disease and radiation pneumonitis that requires treatment with prolonged steroids or other immune suppressive agents within 1 year",
+        "reasonFuzzy": "History of ILD with steroid use criteria, not a typed check."
+      },
+      {
+        "id": "NCT06051695-oxygen",
+        "polarity": "exclusion",
+        "sourceText": "Requires supplemental home oxygen",
+        "reasonFuzzy": "Clinical requirement for supplemental oxygen is not a typed check."
+      },
+      {
+        "id": "NCT06051695-pregnant",
+        "polarity": "exclusion",
+        "sourceText": "Females of childbearing potential who are pregnant or breastfeeding",
+        "reasonFuzzy": "Pregnancy or breastfeeding status is not a typed check."
+      },
+      {
+        "id": "NCT06051695-contraception",
+        "polarity": "exclusion",
+        "sourceText": "Subjects, both male and female, of childbearing potential who are not willing to practice birth control from the time of consent through 6 months post infusion",
+        "reasonFuzzy": "Contraception compliance requirement."
+      }
+    ]
+  }
+}

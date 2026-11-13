@@ -1,0 +1,522 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06686771",
+  "briefTitle": "Radiotherapy to Block Oligoprogression In Metastatic Non-Small-Cell Lung Cancer",
+  "parsedAt": "2026-11-12T10:31:21.983Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06686771-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Metastatic disease (stage IV) detected on imaging and histologically and/or cytologically confirmed NSCLC as per the WHO Classification of Tumors and AJCC 8th Edition TNM Classification, without a driver mutation with an actionable first-line targeted therapy, for whom either ICI alone or combination ICI + chemotherapy is indicated",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Metastatic disease (stage IV) detected on imaging and histologically and/or cytologically confirmed NSCLC as per the WHO Classification of Tumors and AJCC 8th Edition TNM Classification, without a driver mutation with an actionable first-line targeted therapy, for whom either ICI alone or combination ICI + chemotherapy is indicated",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06686771-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Participants must be ≥ 18 years of age.",
+      "numberValue": 18,
+      "evidence_quote": "Participants must be ≥ 18 years of age.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06686771-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status of 0, 1 or 2.",
+      "numberValue": 2,
+      "evidence_quote": "ECOG performance status of 0, 1 or 2.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06686771-driver",
+      "polarity": "inclusion",
+      "sourceText": "without a driver mutation with an actionable first-line targeted therapy",
+      "reasonFuzzy": "Absence of actionably targeted driver mutations requires complex clinical interpretation."
+    },
+    {
+      "id": "NCT06686771-oligoprogression",
+      "polarity": "inclusion",
+      "sourceText": "Oligoprogression on first-line ICI +/- chemotherapy systemic therapy after at least 3 cycles.",
+      "reasonFuzzy": "Oligoprogression and prior systemic therapy details are complex clinical definitions."
+    },
+    {
+      "id": "NCT06686771-radiotherapy",
+      "polarity": "inclusion",
+      "sourceText": "All sites of oligoprogression can be safely treated with SBRT or ablative radiotherapy as determined by radiation treatment preplan, including availability and tolerability of necessary technologies (e.g., active breathing control, MRLinac, fiducial insertion, etc.) and accounting for previous radiotherapy overlap. Safety must be assessed and determined by a radiation oncologist.",
+      "reasonFuzzy": "Radiotherapy safety and preplan assessment is entirely investigator and specialist dependent."
+    },
+    {
+      "id": "NCT06686771-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Participants that received prior adjuvant/neoadjuvant/consolidation systemic therapy (including chemotherapy and ICI ) are eligible if at least 6 months have elapsed between the completion of prior therapy and start of first-line treatment for metastatic disease.",
+      "reasonFuzzy": "Washout windows and prior curative setting therapy definitions are complex."
+    },
+    {
+      "id": "NCT06686771-qol",
+      "polarity": "inclusion",
+      "sourceText": "Participant is able (i.e. sufficiently fluent) and willing to complete the quality of life and/or health utility questionnaires in either English, French, or Spanish.",
+      "reasonFuzzy": "Willingness and linguistic ability to complete questionnaires are subjective trial criteria."
+    },
+    {
+      "id": "NCT06686771-driver",
+      "polarity": "inclusion",
+      "sourceText": "without a driver mutation with an actionable first-line targeted therapy",
+      "reasonFuzzy": "Refers generally to actionable driver mutations without specifying single gene rules or cutoffs."
+    },
+    {
+      "id": "NCT06686771-oligoprogression",
+      "polarity": "inclusion",
+      "sourceText": "Oligoprogression on first-line ICI +/- chemotherapy systemic therapy after at least 3 cycles.",
+      "reasonFuzzy": "Complex prior treatment response and progression pattern is not a simple typed prior therapy check."
+    },
+    {
+      "id": "NCT06686771-sbrt",
+      "polarity": "inclusion",
+      "sourceText": "All sites of oligoprogression can be safely treated with SBRT or ablative radiotherapy as determined by radiation treatment preplan",
+      "reasonFuzzy": "Radiation safety and treatment planning are investigator judgments, not typed criteria."
+    },
+    {
+      "id": "NCT06686771-soc",
+      "polarity": "inclusion",
+      "sourceText": "Candidate for regulatory approved SOC first-line orsecond-line systemic therapy options.",
+      "reasonFuzzy": "Subjective clinical candidacy for standard of care systemic therapy."
+    },
+    {
+      "id": "NCT06686771-prior-systemic",
+      "polarity": "inclusion",
+      "sourceText": "Participants that received prior adjuvant/neoadjuvant/consolidation systemic therapy (including chemotherapy and ICI ) are eligible if at least 6 months have elapsed between the completion of prior therapy and start of first-line treatment for metastatic disease.",
+      "reasonFuzzy": "Compound timeframe and prior treatment history relative to metastatic treatment start cannot be captured in a simple typed prior therapy kind."
+    },
+    {
+      "id": "NCT06686771-toxicity",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have recovered to ≤ grade 1 from all reversible toxicity related to prior systemic therapy.",
+      "reasonFuzzy": "Subjective recovery from prior toxicities involving investigator consultation."
+    },
+    {
+      "id": "NCT06686771-surgery",
+      "polarity": "inclusion",
+      "sourceText": "Previous surgery related to NSCLC in the curative or metastatic disease setting is permitted. Previous major surgery is permitted provided that surgery occurred at least 28 days prior to participant enrollment and that wound healing has occurred.",
+      "reasonFuzzy": "Surgical washout windows and healing status are complex procedural criteria."
+    },
+    {
+      "id": "NCT06686771-radiation",
+      "polarity": "inclusion",
+      "sourceText": "Prior external beam radiation related to NSCLC in the metastatic disease setting is permitted provided a minimum of 14 days (2 weeks) have elapsed between the last dose of radiation and date of enrollment.",
+      "reasonFuzzy": "Prior radiation washout window and site-specific history require investigator assessment."
+    },
+    {
+      "id": "NCT06686771-qol",
+      "polarity": "inclusion",
+      "sourceText": "Participant is able (i.e. sufficiently fluent) and willing to complete the quality of life and/or health utility questionnaires in either English, French, or Spanish.",
+      "reasonFuzzy": "Language fluency and willingness to complete questionnaires are subjective behavioral criteria."
+    },
+    {
+      "id": "NCT06686771-drug-access",
+      "polarity": "inclusion",
+      "sourceText": "Reimbursement of continued SOC ICI and chemotherapy systemic therapies may not be uniform across all sites. In the event that site/investigator is unable to provide access to the drug, participant will not be eligible for this trial.",
+      "reasonFuzzy": "Logistical drug access and site-specific reimbursement are not clinical eligibility rules."
+    },
+    {
+      "id": "NCT06686771-followup",
+      "polarity": "inclusion",
+      "sourceText": "Participants must be accessible for treatment and follow-up. Investigators must assure themselves the participants enrolled on this trial will be available for complete documentation of the treatment, adverse events, and follow-up.",
+      "reasonFuzzy": "Investigator assessment of patient compliance and availability."
+    },
+    {
+      "id": "NCT06686771-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Participants of childbearing potential must have agreed to use a highly effective contraceptive method.",
+      "reasonFuzzy": "Contraception compliance is a behavioral requirement, not a typed clinical check."
+    },
+    {
+      "id": "NCT06686771-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "Presence of leptomeningeal disease.",
+      "reasonFuzzy": "Leptomeningeal disease is a specific CNS exclusion not covered by standard brain_mets categories."
+    },
+    {
+      "id": "NCT06686771-medical-conditions",
+      "polarity": "exclusion",
+      "sourceText": "Serious medical conditions in which radiotherapy of target lesions is contraindicated (e.g., scleroderma, Ataxia Telangiectasia (ATM), interstitial lung disease (ILD), Child-Pugh C liver function).",
+      "reasonFuzzy": "Radiotherapy contraindications and specific medical conditions are clinical judgment items."
+    },
+    {
+      "id": "NCT06686771-investigator-judgement",
+      "polarity": "exclusion",
+      "sourceText": "Any other condition in which in the judgement of the investigator would make the patient inappropriate for study entry.",
+      "reasonFuzzy": "Investigator discretion is inherently subjective."
+    },
+    {
+      "id": "NCT06686771-prior-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Participants with a prior or concurrent malignancy whose natural history or treatment does not have the potential to interfere with the safety or efficacy assessment of the investigational regimen are eligible for this trial.",
+      "reasonFuzzy": "Complex oncology history requiring investigator assessment of interference with study goals."
+    },
+    {
+      "id": "NCT06686771-concomitant-meds",
+      "polarity": "exclusion",
+      "sourceText": "Concomitant medications should only exclude participants from trial participation when clinically relevant known or predicted drug-drug interactions or potential overlapping toxicities will impact safety or efficacy; please consult the relevant product monographies.",
+      "reasonFuzzy": "Drug-drug interaction assessment is clinical and drug-specific."
+    },
+    {
+      "id": "NCT06686771-concurrent-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Concurrent treatment with other anti-cancer therapy, including investigational agents.",
+      "reasonFuzzy": "Prohibition of concurrent anti-cancer therapy is a treatment management rule."
+    },
+    {
+      "id": "NCT06686771-vaccination",
+      "polarity": "exclusion",
+      "sourceText": "Live attenuated vaccination administered within 30 days prior to enrollment/randomization.",
+      "reasonFuzzy": "Prior vaccination washout window is not a typed lab or prior therapy check."
+    },
+    {
+      "id": "NCT06686771-histology",
+      "polarity": "exclusion",
+      "sourceText": "Large-cell neuroendocrine carcinoma (LCNEC), pulmonary carcinoid tumour or mixed small cell and non-small cell lung cancer are not eligible.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06686771-histology",
+      "polarity": "exclusion",
+      "sourceText": "Large-cell neuroendocrine carcinoma (LCNEC), pulmonary carcinoid tumour or mixed small cell and non-small cell lung cancer are not eligible.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06686771-brain",
+      "polarity": "inclusion",
+      "sourceText": "Patients with treated CNS disease who have radiologic and clinical evidence of stable brain metastases, with no evidence of cavitation or hemorrhage in the brain lesion, are eligible providing that they are asymptomatic and do not require corticosteroids (must have discontinued steroids at least 1 week prior to randomization).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "histology_in",
+          "polarity": "exclusion",
+          "value": "s:large-cell neuroendocrine carcinoma (lcnec), pulmonary carcinoid tumour or mixed small cell and non-small cell lung cancer are not eligible."
+        },
+        {
+          "side": "b-only",
+          "kind": "histology_in",
+          "polarity": "exclusion",
+          "value": "n:0"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3513
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 19,
+    "attempts": 1,
+    "ms": 5716
+  },
+  "ms": 17219,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06686771",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06686771-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Metastatic disease (stage IV) detected on imaging and histologically and/or cytologically confirmed NSCLC as per the WHO Classification of Tumors and AJCC 8th Edition TNM Classification, without a driver mutation with an actionable first-line targeted therapy, for whom either ICI alone or combination ICI + chemotherapy is indicated",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06686771-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Patients with treated CNS disease who have radiologic and clinical evidence of stable brain metastases, with no evidence of cavitation or hemorrhage in the brain lesion, are eligible providing that they are asymptomatic and do not require corticosteroids (must have discontinued steroids at least 1 week prior to randomization).",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06686771-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must be ≥ 18 years of age.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06686771-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0, 1 or 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06686771-histology",
+        "kind": "histology_in",
+        "polarity": "exclusion",
+        "sourceText": "Large-cell neuroendocrine carcinoma (LCNEC), pulmonary carcinoid tumour or mixed small cell and non-small cell lung cancer are not eligible.",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ],
+        "stringValue": "Large-cell neuroendocrine carcinoma (LCNEC), pulmonary carcinoid tumour or mixed small cell and non-small cell lung cancer are not eligible."
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06686771-driver",
+        "polarity": "inclusion",
+        "sourceText": "without a driver mutation with an actionable first-line targeted therapy",
+        "reasonFuzzy": "Absence of actionably targeted driver mutations requires complex clinical interpretation."
+      },
+      {
+        "id": "NCT06686771-oligoprogression",
+        "polarity": "inclusion",
+        "sourceText": "Oligoprogression on first-line ICI +/- chemotherapy systemic therapy after at least 3 cycles.",
+        "reasonFuzzy": "Oligoprogression and prior systemic therapy details are complex clinical definitions."
+      },
+      {
+        "id": "NCT06686771-radiotherapy",
+        "polarity": "inclusion",
+        "sourceText": "All sites of oligoprogression can be safely treated with SBRT or ablative radiotherapy as determined by radiation treatment preplan, including availability and tolerability of necessary technologies (e.g., active breathing control, MRLinac, fiducial insertion, etc.) and accounting for previous radiotherapy overlap. Safety must be assessed and determined by a radiation oncologist.",
+        "reasonFuzzy": "Radiotherapy safety and preplan assessment is entirely investigator and specialist dependent."
+      },
+      {
+        "id": "NCT06686771-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Participants that received prior adjuvant/neoadjuvant/consolidation systemic therapy (including chemotherapy and ICI ) are eligible if at least 6 months have elapsed between the completion of prior therapy and start of first-line treatment for metastatic disease.",
+        "reasonFuzzy": "Washout windows and prior curative setting therapy definitions are complex."
+      },
+      {
+        "id": "NCT06686771-qol",
+        "polarity": "inclusion",
+        "sourceText": "Participant is able (i.e. sufficiently fluent) and willing to complete the quality of life and/or health utility questionnaires in either English, French, or Spanish.",
+        "reasonFuzzy": "Willingness and linguistic ability to complete questionnaires are subjective trial criteria."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06686771",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06686771-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Metastatic disease (stage IV) detected on imaging and histologically and/or cytologically confirmed NSCLC as per the WHO Classification of Tumors and AJCC 8th Edition TNM Classification",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06686771-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Patients with treated CNS disease who have radiologic and clinical evidence of stable brain metastases, with no evidence of cavitation or hemorrhage in the brain lesion, are eligible providing that they are asymptomatic and do not require corticosteroids (must have discontinued steroids at least 1 week prior to randomization).",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06686771-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must be ≥ 18 years of age.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06686771-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0, 1 or 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06686771-histology",
+        "kind": "histology_in",
+        "polarity": "exclusion",
+        "sourceText": "Large-cell neuroendocrine carcinoma (LCNEC), pulmonary carcinoid tumour or mixed small cell and non-small cell lung cancer are not eligible.",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "nsclc_nos"
+        ],
+        "numberValue": 0,
+        "presence": "absent"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06686771-driver",
+        "polarity": "inclusion",
+        "sourceText": "without a driver mutation with an actionable first-line targeted therapy",
+        "reasonFuzzy": "Refers generally to actionable driver mutations without specifying single gene rules or cutoffs."
+      },
+      {
+        "id": "NCT06686771-oligoprogression",
+        "polarity": "inclusion",
+        "sourceText": "Oligoprogression on first-line ICI +/- chemotherapy systemic therapy after at least 3 cycles.",
+        "reasonFuzzy": "Complex prior treatment response and progression pattern is not a simple typed prior therapy check."
+      },
+      {
+        "id": "NCT06686771-sbrt",
+        "polarity": "inclusion",
+        "sourceText": "All sites of oligoprogression can be safely treated with SBRT or ablative radiotherapy as determined by radiation treatment preplan",
+        "reasonFuzzy": "Radiation safety and treatment planning are investigator judgments, not typed criteria."
+      },
+      {
+        "id": "NCT06686771-soc",
+        "polarity": "inclusion",
+        "sourceText": "Candidate for regulatory approved SOC first-line orsecond-line systemic therapy options.",
+        "reasonFuzzy": "Subjective clinical candidacy for standard of care systemic therapy."
+      },
+      {
+        "id": "NCT06686771-prior-systemic",
+        "polarity": "inclusion",
+        "sourceText": "Participants that received prior adjuvant/neoadjuvant/consolidation systemic therapy (including chemotherapy and ICI ) are eligible if at least 6 months have elapsed between the completion of prior therapy and start of first-line treatment for metastatic disease.",
+        "reasonFuzzy": "Compound timeframe and prior treatment history relative to metastatic treatment start cannot be captured in a simple typed prior therapy kind."
+      },
+      {
+        "id": "NCT06686771-toxicity",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have recovered to ≤ grade 1 from all reversible toxicity related to prior systemic therapy.",
+        "reasonFuzzy": "Subjective recovery from prior toxicities involving investigator consultation."
+      },
+      {
+        "id": "NCT06686771-surgery",
+        "polarity": "inclusion",
+        "sourceText": "Previous surgery related to NSCLC in the curative or metastatic disease setting is permitted. Previous major surgery is permitted provided that surgery occurred at least 28 days prior to participant enrollment and that wound healing has occurred.",
+        "reasonFuzzy": "Surgical washout windows and healing status are complex procedural criteria."
+      },
+      {
+        "id": "NCT06686771-radiation",
+        "polarity": "inclusion",
+        "sourceText": "Prior external beam radiation related to NSCLC in the metastatic disease setting is permitted provided a minimum of 14 days (2 weeks) have elapsed between the last dose of radiation and date of enrollment.",
+        "reasonFuzzy": "Prior radiation washout window and site-specific history require investigator assessment."
+      },
+      {
+        "id": "NCT06686771-qol",
+        "polarity": "inclusion",
+        "sourceText": "Participant is able (i.e. sufficiently fluent) and willing to complete the quality of life and/or health utility questionnaires in either English, French, or Spanish.",
+        "reasonFuzzy": "Language fluency and willingness to complete questionnaires are subjective behavioral criteria."
+      },
+      {
+        "id": "NCT06686771-drug-access",
+        "polarity": "inclusion",
+        "sourceText": "Reimbursement of continued SOC ICI and chemotherapy systemic therapies may not be uniform across all sites. In the event that site/investigator is unable to provide access to the drug, participant will not be eligible for this trial.",
+        "reasonFuzzy": "Logistical drug access and site-specific reimbursement are not clinical eligibility rules."
+      },
+      {
+        "id": "NCT06686771-followup",
+        "polarity": "inclusion",
+        "sourceText": "Participants must be accessible for treatment and follow-up. Investigators must assure themselves the participants enrolled on this trial will be available for complete documentation of the treatment, adverse events, and follow-up.",
+        "reasonFuzzy": "Investigator assessment of patient compliance and availability."
+      },
+      {
+        "id": "NCT06686771-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Participants of childbearing potential must have agreed to use a highly effective contraceptive method.",
+        "reasonFuzzy": "Contraception compliance is a behavioral requirement, not a typed clinical check."
+      },
+      {
+        "id": "NCT06686771-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "Presence of leptomeningeal disease.",
+        "reasonFuzzy": "Leptomeningeal disease is a specific CNS exclusion not covered by standard brain_mets categories."
+      },
+      {
+        "id": "NCT06686771-medical-conditions",
+        "polarity": "exclusion",
+        "sourceText": "Serious medical conditions in which radiotherapy of target lesions is contraindicated (e.g., scleroderma, Ataxia Telangiectasia (ATM), interstitial lung disease (ILD), Child-Pugh C liver function).",
+        "reasonFuzzy": "Radiotherapy contraindications and specific medical conditions are clinical judgment items."
+      },
+      {
+        "id": "NCT06686771-investigator-judgement",
+        "polarity": "exclusion",
+        "sourceText": "Any other condition in which in the judgement of the investigator would make the patient inappropriate for study entry.",
+        "reasonFuzzy": "Investigator discretion is inherently subjective."
+      },
+      {
+        "id": "NCT06686771-prior-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Participants with a prior or concurrent malignancy whose natural history or treatment does not have the potential to interfere with the safety or efficacy assessment of the investigational regimen are eligible for this trial.",
+        "reasonFuzzy": "Complex oncology history requiring investigator assessment of interference with study goals."
+      },
+      {
+        "id": "NCT06686771-concomitant-meds",
+        "polarity": "exclusion",
+        "sourceText": "Concomitant medications should only exclude participants from trial participation when clinically relevant known or predicted drug-drug interactions or potential overlapping toxicities will impact safety or efficacy; please consult the relevant product monographies.",
+        "reasonFuzzy": "Drug-drug interaction assessment is clinical and drug-specific."
+      },
+      {
+        "id": "NCT06686771-concurrent-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Concurrent treatment with other anti-cancer therapy, including investigational agents.",
+        "reasonFuzzy": "Prohibition of concurrent anti-cancer therapy is a treatment management rule."
+      },
+      {
+        "id": "NCT06686771-vaccination",
+        "polarity": "exclusion",
+        "sourceText": "Live attenuated vaccination administered within 30 days prior to enrollment/randomization.",
+        "reasonFuzzy": "Prior vaccination washout window is not a typed lab or prior therapy check."
+      }
+    ]
+  }
+}

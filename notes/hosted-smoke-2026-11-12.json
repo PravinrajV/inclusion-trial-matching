@@ -1,0 +1,40 @@
+{
+  "when": "2026-11-12 22:14:49 EST",
+  "url": "https://inclusion-hybridai.web.app/",
+  "indexStatus": 200,
+  "title": "Inclusion: private clinical-trial matching",
+  "bundle": "index-Bmv8Wr2H.js",
+  "notes": [
+    "loaded status=200 title='Inclusion: private clinical-trial matching' bundle=index-Bmv8Wr2H.js",
+    "personas=['AR\\nLoad Alex Rivera\\nColumbus, OH', 'SO\\nLoad Sam Okonkwo\\nCincinnati, OH']",
+    "after load, #review visible=True body[:200]='Skip to main content\\nInclusion\\nPrivate clinical-trial matching\\n\\nSynthetic demo data\\n\\nProof \u00b7 0 chart bytes sent\\nDark\\n\\nA briefing for you and your oncologist\\n\\nInclusion\\n\\nPrivate clinical-trial matching'",
+    "stats='9\\nStrong matches\\n277\\nTrials reviewed' data_counts=[{'text': '9', 'count': '9'}, {'text': '277', 'count': '277'}] nct=2 keymet=5",
+    "print-briefing html length=99351"
+  ],
+  "afterLoadAlexCompare": {
+    "heroStatsText": "9\nStrong matches\n277\nTrials reviewed",
+    "dataCounts": [
+      {
+        "text": "9",
+        "count": "9"
+      },
+      {
+        "text": "277",
+        "count": "277"
+      }
+    ],
+    "sawNineStrong": true,
+    "sawNCT04486833": true,
+    "sawFourOfSix": true,
+    "screenshot": "/tmp/inclusion-print/after-compare.png"
+  },
+  "printPdf": {
+    "path": "/tmp/inclusion-print/alex-print-sheet.pdf",
+    "ok": true,
+    "error": null,
+    "pages": 11,
+    "bytes": 144076,
+    "pdfinfo": "Title:           Inclusion: private clinical-trial matching\nCreator:         Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\nProducer:        Skia/PDF m156\nCreationDate:    Thu Nov 12 22:14:49 2026 EST\nModDate:         Thu Nov 12 22:14:49 2026 EST\nCustom Metadata: no\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           11\nEncrypted:       no\nPage size:       612 x 792 pts (letter)\nPage rot:        0\nFile size:       144076 bytes\nOptimized:       no\nPDF version:     1.4\n"
+  },
+  "pass": true
+}

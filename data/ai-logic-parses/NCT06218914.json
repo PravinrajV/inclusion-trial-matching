@@ -1,0 +1,385 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06218914",
+  "briefTitle": "Phase 1 Study to Investigate TCRTs KRAS Mutation in Unresectable, Advanced, and/or Metastatic Solid Tumors",
+  "parsedAt": "2026-11-12T06:28:23.708Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06218914-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥18 years",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥18 years",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06218914-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Subject has advanced solid cancer, defined as unresectable, advanced, and/or metastatic disease (Stage III or IV) after at least 1 line of approved systemic standard of care (SOC) treatment regimen and for which there are no available curative treatment options.",
+      "stages": [
+        "IIIA",
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Subject has advanced solid cancer, defined as unresectable, advanced, and/or metastatic disease (Stage III or IV) after at least 1 line of approved systemic standard of care (SOC) treatment regimen and for which there are no available curative treatment options.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06218914-lines",
+      "kind": "prior_lines_min",
+      "polarity": "inclusion",
+      "sourceText": "Subject has advanced solid cancer, defined as unresectable, advanced, and/or metastatic disease (Stage III or IV) after at least 1 line of approved systemic standard of care (SOC) treatment regimen and for which there are no available curative treatment options.",
+      "numberValue": 1,
+      "evidence_quote": "Subject has advanced solid cancer, defined as unresectable, advanced, and/or metastatic disease (Stage III or IV) after at least 1 line of approved systemic standard of care (SOC) treatment regimen and for which there are no available curative treatment options.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06218914-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 at the time of enrollment",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 at the time of enrollment",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06218914-hla",
+      "polarity": "inclusion",
+      "sourceText": "HLA-C*08:02 positive, HLA-A*11:01 or HLA-A*11:02 positive in at least one allele",
+      "reasonFuzzy": "HLA typing checks are not part of the standard typed kinds."
+    },
+    {
+      "id": "NCT06218914-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Presence of at least 1 measurable lesion per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06218914-pankras",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with pan-KRAS or KRAS G12D targeting agents unless presence of KRAS G12D mutation is confirmed after the completion of treatment with pan-KRAS or KRAS G12D targeting agents.",
+      "reasonFuzzy": "This rule includes a conditional exception clause regarding re-confirmation of mutations that cannot be expressed as a simple typed exclusion check."
+    },
+    {
+      "id": "NCT06218914-kras",
+      "polarity": "inclusion",
+      "sourceText": "Tumors must harbor a KRAS G12D variant mutation and subject must be HLA-C*08:02 positive, HLA-A*11:01 or HLA-A*11:02 positive in at least one allele",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06218914-krasvar",
+      "polarity": "inclusion",
+      "sourceText": "Tumors must harbor a KRAS G12D variant mutation and subject must be HLA-C*08:02 positive, HLA-A*11:01 or HLA-A*11:02 positive in at least one allele",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06218914-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Presence of at least 1 measurable lesion per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06218914-washout",
+      "polarity": "exclusion",
+      "sourceText": "Systemic therapy within at least 2 weeks or 3 half-lives, whichever is shorter, prior to enrollment.",
+      "reasonFuzzy": "Washout window with half-life dependency cannot be expressed as a single numeric cutoff."
+    },
+    {
+      "id": "NCT06218914-krasexcl",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with pan-KRAS or KRAS G12D targeting agents unless presence of KRAS G12D mutation is confirmed after the completion of treatment with pan-KRAS or KRAS G12D targeting agents.",
+      "reasonFuzzy": "Conditional prior therapy exclusion with mutation confirmation is not a simple prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT06218914-kras",
+      "polarity": "inclusion",
+      "sourceText": "Tumors must harbor a KRAS G12D variant mutation and subject must be HLA-C*08:02 positive, HLA-A*11:01 or HLA-A*11:02 positive in at least one allele",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06218914-krasvar",
+      "polarity": "inclusion",
+      "sourceText": "Tumors must harbor a KRAS G12D variant mutation and subject must be HLA-C*08:02 positive, HLA-A*11:01 or HLA-A*11:02 positive in at least one allele",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06218914-priorcell",
+      "polarity": "exclusion",
+      "sourceText": "History of prior adoptive cell and gene therapy, allogeneic stem cell transplant or solid organ transplantation.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06218914-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known, active primary central nervous system (CNS) malignancy",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Tumors must harbor a KRAS G12D variant mutation and subject must be HLA-C*08:02 positive, HLA-A*11:01 or HLA-A*11:02 positive in at least one allele"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Tumors must harbor a KRAS G12D variant mutation and subject must be HLA-C*08:02 positive, HLA-A*11:01 or HLA-A*11:02 positive in at least one allele"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Tumors must harbor a KRAS G12D variant mutation and subject must be HLA-C*08:02 positive, HLA-A*11:01 or HLA-A*11:02 positive in at least one allele"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Tumors must harbor a KRAS G12D variant mutation and subject must be HLA-C*08:02 positive, HLA-A*11:01 or HLA-A*11:02 positive in at least one allele"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:adoptive cell and gene therapy"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:untreated"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 8,
+    "fuzzyEmitted": 3,
+    "attempts": 2,
+    "ms": 13739
+  },
+  "runB": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 7731
+  },
+  "ms": 29407,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06218914",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06218914-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06218914-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Tumors must harbor a KRAS G12D variant mutation and subject must be HLA-C*08:02 positive, HLA-A*11:01 or HLA-A*11:02 positive in at least one allele",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06218914-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Tumors must harbor a KRAS G12D variant mutation and subject must be HLA-C*08:02 positive, HLA-A*11:01 or HLA-A*11:02 positive in at least one allele",
+        "stringValue": "G12D"
+      },
+      {
+        "id": "NCT06218914-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Subject has advanced solid cancer, defined as unresectable, advanced, and/or metastatic disease (Stage III or IV) after at least 1 line of approved systemic standard of care (SOC) treatment regimen and for which there are no available curative treatment options.",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06218914-lines",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Subject has advanced solid cancer, defined as unresectable, advanced, and/or metastatic disease (Stage III or IV) after at least 1 line of approved systemic standard of care (SOC) treatment regimen and for which there are no available curative treatment options.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06218914-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 at the time of enrollment",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06218914-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known, active primary central nervous system (CNS) malignancy",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      },
+      {
+        "id": "NCT06218914-priorcell",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "History of prior adoptive cell and gene therapy, allogeneic stem cell transplant or solid organ transplantation.",
+        "stringValue": "adoptive cell and gene therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06218914-hla",
+        "polarity": "inclusion",
+        "sourceText": "HLA-C*08:02 positive, HLA-A*11:01 or HLA-A*11:02 positive in at least one allele",
+        "reasonFuzzy": "HLA typing checks are not part of the standard typed kinds."
+      },
+      {
+        "id": "NCT06218914-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Presence of at least 1 measurable lesion per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06218914-pankras",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with pan-KRAS or KRAS G12D targeting agents unless presence of KRAS G12D mutation is confirmed after the completion of treatment with pan-KRAS or KRAS G12D targeting agents.",
+        "reasonFuzzy": "This rule includes a conditional exception clause regarding re-confirmation of mutations that cannot be expressed as a simple typed exclusion check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06218914",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06218914-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06218914-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Tumors must harbor a KRAS G12D variant mutation and subject must be HLA-C*08:02 positive, HLA-A*11:01 or HLA-A*11:02 positive in at least one allele",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06218914-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Tumors must harbor a KRAS G12D variant mutation and subject must be HLA-C*08:02 positive, HLA-A*11:01 or HLA-A*11:02 positive in at least one allele",
+        "stringValue": "G12D"
+      },
+      {
+        "id": "NCT06218914-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Subject has advanced solid cancer, defined as unresectable, advanced, and/or metastatic disease (Stage III or IV) after at least 1 line of approved systemic standard of care (SOC) treatment regimen and for which there are no available curative treatment options.",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06218914-priorlines",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Subject has advanced solid cancer, defined as unresectable, advanced, and/or metastatic disease (Stage III or IV) after at least 1 line of approved systemic standard of care (SOC) treatment regimen and for which there are no available curative treatment options.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06218914-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 at the time of enrollment",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06218914-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known, active primary central nervous system (CNS) malignancy",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06218914-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Presence of at least 1 measurable lesion per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06218914-washout",
+        "polarity": "exclusion",
+        "sourceText": "Systemic therapy within at least 2 weeks or 3 half-lives, whichever is shorter, prior to enrollment.",
+        "reasonFuzzy": "Washout window with half-life dependency cannot be expressed as a single numeric cutoff."
+      },
+      {
+        "id": "NCT06218914-krasexcl",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with pan-KRAS or KRAS G12D targeting agents unless presence of KRAS G12D mutation is confirmed after the completion of treatment with pan-KRAS or KRAS G12D targeting agents.",
+        "reasonFuzzy": "Conditional prior therapy exclusion with mutation confirmation is not a simple prior_therapy_excluded check."
+      }
+    ]
+  }
+}

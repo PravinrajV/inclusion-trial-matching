@@ -1,0 +1,480 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07006727",
+  "briefTitle": "Phase I Study of [225Ac]Ac-ETN029 in Patients With Advanced DLL3-expressing Solid Tumors",
+  "parsedAt": "2026-11-12T10:42:06.955Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07006727-age-min",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years old",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years old",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07006727-sclc-prior",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced, unresectable, or metastatic SCLC with disease progression following, or intolerance to, at least 1 line of systemic therapy, including platinum-containing chemotherapy (prior DLL3-targeted therapy allowed).",
+      "reasonFuzzy": "Prior therapy and lines vary significantly across multiple cancer cohorts and escalation/expansion phases."
+    },
+    {
+      "id": "NCT07006727-lcnec-prior",
+      "polarity": "inclusion",
+      "sourceText": "LCNEC of the lung with disease progression following, or intolerance to, at least 1 line of systemic therapy, including platinum-containing chemotherapy.",
+      "reasonFuzzy": "Cohort-specific indication and prior lines rule."
+    },
+    {
+      "id": "NCT07006727-nepc-prior",
+      "polarity": "inclusion",
+      "sourceText": "Metastatic de novo or treatment-emergent neuroendocrine prostate cancer (NEPC) confirmed by local histopathology, for whom no standard therapy is available, tolerated, or appropriate, in the investigator's judgment.",
+      "reasonFuzzy": "Depends on investigator's judgment regarding standard therapy availability and appropriateness."
+    },
+    {
+      "id": "NCT07006727-gep-nec-prior",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced, unresectable, or metastatic GEP-NEC, cervical NEC, genitourinary NEC, thymic NEC, Merkel cell carcinoma, or unknown primary NEC with disease progression following, or intolerance to, at least one line of systemic therapy... and for whom no standard therapy is available, tolerated, or appropriate, in the investigator's judgment.",
+      "reasonFuzzy": "Involves investigator judgment and multiple tumor indications with varying therapy requirements."
+    },
+    {
+      "id": "NCT07006727-thyroid-prior",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced, unresectable, or metastatic medullary thyroid cancer with disease progression following, or intolerance to, at least 1 line of systemic therapy... and for whom no standard therapy is available, tolerated, or appropriate, in the investigator's judgment.",
+      "reasonFuzzy": "Involves investigator judgment on standard therapy and prior lines."
+    },
+    {
+      "id": "NCT07006727-sclc-expansion",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced, unresectable, or metastatic SCLC with disease progression following, or intolerance to, at least 1 line of systemic therapy, including platinum-containing chemotherapy (prior DLL3-targeted therapy allowed). Patients should have received no more than 2 prior lines of systemic therapy.",
+      "reasonFuzzy": "Prior line maximum limit applies specifically to expansion cohort SCLC and cannot be cleanly modeled as a single trial-wide prior_lines rule."
+    },
+    {
+      "id": "NCT07006727-gep-nec-expansion",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced, unresectable, or metastatic GEP-NEC, with disease progression following, or intolerance to, at least 1 line of systemic therapy, including platinum containing chemotherapy. Patients must have at least one measurable lesion (per RECIST 1.1) that shows 111In-ETN029 uptake higher than surrounding tissues on SPECT/CT as assessed by the Investigator.",
+      "reasonFuzzy": "Involves RECIST measurable disease and specialist nuclear medicine uptake assessment."
+    },
+    {
+      "id": "NCT07006727-nepc-expansion",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced, unresectable, or metastatic de novo or castration-resistant, treatment emergent NEPC with neuroendocrine differentiation confirmed by local histology and NEPC marker expression (e.g., chromogranin, synaptophysin) confirmed by local IHC. Prior PSMA-targeted, Lu-177-based RLT is allowed. Patients must have at least one measurable lesion (per RECIST 1.1) that shows 111In-ETN029 uptake higher than surrounding tissues on SPECT/CT as assessed by the Investigator.",
+      "reasonFuzzy": "Involves RECIST measurable disease, specialized imaging uptake, and specific IHC marker expression."
+    },
+    {
+      "id": "NCT07006727-qtcf",
+      "polarity": "exclusion",
+      "sourceText": "QT interval corrected by Fridericia's formula (QTcF) ≥ 470 msec",
+      "reasonFuzzy": "QTcF cutoffs are not standardly mapped to any of the allowed typed kinds."
+    },
+    {
+      "id": "NCT07006727-obstruction",
+      "polarity": "exclusion",
+      "sourceText": "Unmanageable urinary tract obstruction or urinary incontinence",
+      "reasonFuzzy": "Judgment-based unmanageability criterion."
+    },
+    {
+      "id": "NCT07006727-ild",
+      "polarity": "exclusion",
+      "sourceText": "History of or current interstitial lung disease or pneumonitis ≥ Grade 2",
+      "reasonFuzzy": "Grade-based ILD/pneumonitis exclusion is not a simple typed category."
+    },
+    {
+      "id": "NCT07006727-dll3",
+      "polarity": "exclusion",
+      "sourceText": "Any prior DLL3-targeted therapy (except for SCLC)",
+      "reasonFuzzy": "Complex exception-based prior therapy rule."
+    },
+    {
+      "id": "NCT07006727-rlt",
+      "polarity": "exclusion",
+      "sourceText": "Any prior RLT (except for NEPC patients in expansion)",
+      "reasonFuzzy": "Complex exception-based prior therapy rule."
+    },
+    {
+      "id": "NCT07006727-age-max",
+      "polarity": "inclusion",
+      "sourceText": "Maximum Age: 100 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07006727-anc",
+      "polarity": "exclusion",
+      "sourceText": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07006727-hemoglobin",
+      "polarity": "exclusion",
+      "sourceText": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07006727-platelets",
+      "polarity": "exclusion",
+      "sourceText": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07006727-prior-lines-escalation",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced, unresectable, or metastatic SCLC with disease progression following, or intolerance to, at least 1 line of systemic therapy, including platinum-containing chemotherapy (prior DLL3-targeted therapy allowed).",
+      "reasonFuzzy": "Prior line rules and specific disease indications vary across multiple cohorts and dose escalation/expansion parts."
+    },
+    {
+      "id": "NCT07006727-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have at least one measurable lesion (per RECIST 1.1) that shows 111In-ETN029 uptake higher than surrounding tissues on SPECT/CT as assessed by the Investigator.",
+      "reasonFuzzy": "Measurable disease by RECIST and investigator assessment of SPECT/CT uptake are subjective and complex imaging criteria."
+    },
+    {
+      "id": "NCT07006727-anc",
+      "polarity": "exclusion",
+      "sourceText": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07006727-hemoglobin",
+      "polarity": "exclusion",
+      "sourceText": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07006727-platelets",
+      "polarity": "exclusion",
+      "sourceText": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07006727-brain",
+      "polarity": "exclusion",
+      "sourceText": "Presence of leptomeningeal disease, of symptomatic CNS metastases or of CNS metastases that require local CNS-directed therapy",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07006727-brain",
+      "polarity": "exclusion",
+      "sourceText": "Presence of leptomeningeal disease, of symptomatic CNS metastases or of CNS metastases that require local CNS-directed therapy",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07006727-egfr",
+      "polarity": "exclusion",
+      "sourceText": "eGFR < 60 mL/min/1.73m2 calculated using the CKD-EPI 2021 formula or measured",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 4,
+      "unquotedItems": [
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Maximum Age: 100 Years"
+        },
+        {
+          "kind": "anc_min",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L"
+        },
+        {
+          "kind": "hemoglobin_min",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L"
+        },
+        {
+          "kind": "hemoglobin_min",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "egfr_min",
+          "polarity": "exclusion",
+          "value": "n:60"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 13,
+    "attempts": 1,
+    "ms": 5458
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2655
+  },
+  "ms": 16094,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07006727",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07006727-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years old",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07006727-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "Maximum Age: 100 Years",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT07006727-anc",
+        "kind": "anc_min",
+        "polarity": "exclusion",
+        "sourceText": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07006727-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "exclusion",
+        "sourceText": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT07006727-platelets",
+        "kind": "platelets_min",
+        "polarity": "exclusion",
+        "sourceText": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L",
+        "numberValue": 75
+      },
+      {
+        "id": "NCT07006727-egfr",
+        "kind": "egfr_min",
+        "polarity": "exclusion",
+        "sourceText": "eGFR < 60 mL/min/1.73m2 calculated using the CKD-EPI 2021 formula or measured",
+        "numberValue": 60
+      },
+      {
+        "id": "NCT07006727-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Presence of leptomeningeal disease, of symptomatic CNS metastases or of CNS metastases that require local CNS-directed therapy",
+        "allowedBrainMets": [
+          "treated_stable",
+          "none"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07006727-sclc-prior",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced, unresectable, or metastatic SCLC with disease progression following, or intolerance to, at least 1 line of systemic therapy, including platinum-containing chemotherapy (prior DLL3-targeted therapy allowed).",
+        "reasonFuzzy": "Prior therapy and lines vary significantly across multiple cancer cohorts and escalation/expansion phases."
+      },
+      {
+        "id": "NCT07006727-lcnec-prior",
+        "polarity": "inclusion",
+        "sourceText": "LCNEC of the lung with disease progression following, or intolerance to, at least 1 line of systemic therapy, including platinum-containing chemotherapy.",
+        "reasonFuzzy": "Cohort-specific indication and prior lines rule."
+      },
+      {
+        "id": "NCT07006727-nepc-prior",
+        "polarity": "inclusion",
+        "sourceText": "Metastatic de novo or treatment-emergent neuroendocrine prostate cancer (NEPC) confirmed by local histopathology, for whom no standard therapy is available, tolerated, or appropriate, in the investigator's judgment.",
+        "reasonFuzzy": "Depends on investigator's judgment regarding standard therapy availability and appropriateness."
+      },
+      {
+        "id": "NCT07006727-gep-nec-prior",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced, unresectable, or metastatic GEP-NEC, cervical NEC, genitourinary NEC, thymic NEC, Merkel cell carcinoma, or unknown primary NEC with disease progression following, or intolerance to, at least one line of systemic therapy... and for whom no standard therapy is available, tolerated, or appropriate, in the investigator's judgment.",
+        "reasonFuzzy": "Involves investigator judgment and multiple tumor indications with varying therapy requirements."
+      },
+      {
+        "id": "NCT07006727-thyroid-prior",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced, unresectable, or metastatic medullary thyroid cancer with disease progression following, or intolerance to, at least 1 line of systemic therapy... and for whom no standard therapy is available, tolerated, or appropriate, in the investigator's judgment.",
+        "reasonFuzzy": "Involves investigator judgment on standard therapy and prior lines."
+      },
+      {
+        "id": "NCT07006727-sclc-expansion",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced, unresectable, or metastatic SCLC with disease progression following, or intolerance to, at least 1 line of systemic therapy, including platinum-containing chemotherapy (prior DLL3-targeted therapy allowed). Patients should have received no more than 2 prior lines of systemic therapy.",
+        "reasonFuzzy": "Prior line maximum limit applies specifically to expansion cohort SCLC and cannot be cleanly modeled as a single trial-wide prior_lines rule."
+      },
+      {
+        "id": "NCT07006727-gep-nec-expansion",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced, unresectable, or metastatic GEP-NEC, with disease progression following, or intolerance to, at least 1 line of systemic therapy, including platinum containing chemotherapy. Patients must have at least one measurable lesion (per RECIST 1.1) that shows 111In-ETN029 uptake higher than surrounding tissues on SPECT/CT as assessed by the Investigator.",
+        "reasonFuzzy": "Involves RECIST measurable disease and specialist nuclear medicine uptake assessment."
+      },
+      {
+        "id": "NCT07006727-nepc-expansion",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced, unresectable, or metastatic de novo or castration-resistant, treatment emergent NEPC with neuroendocrine differentiation confirmed by local histology and NEPC marker expression (e.g., chromogranin, synaptophysin) confirmed by local IHC. Prior PSMA-targeted, Lu-177-based RLT is allowed. Patients must have at least one measurable lesion (per RECIST 1.1) that shows 111In-ETN029 uptake higher than surrounding tissues on SPECT/CT as assessed by the Investigator.",
+        "reasonFuzzy": "Involves RECIST measurable disease, specialized imaging uptake, and specific IHC marker expression."
+      },
+      {
+        "id": "NCT07006727-qtcf",
+        "polarity": "exclusion",
+        "sourceText": "QT interval corrected by Fridericia's formula (QTcF) ≥ 470 msec",
+        "reasonFuzzy": "QTcF cutoffs are not standardly mapped to any of the allowed typed kinds."
+      },
+      {
+        "id": "NCT07006727-obstruction",
+        "polarity": "exclusion",
+        "sourceText": "Unmanageable urinary tract obstruction or urinary incontinence",
+        "reasonFuzzy": "Judgment-based unmanageability criterion."
+      },
+      {
+        "id": "NCT07006727-ild",
+        "polarity": "exclusion",
+        "sourceText": "History of or current interstitial lung disease or pneumonitis ≥ Grade 2",
+        "reasonFuzzy": "Grade-based ILD/pneumonitis exclusion is not a simple typed category."
+      },
+      {
+        "id": "NCT07006727-dll3",
+        "polarity": "exclusion",
+        "sourceText": "Any prior DLL3-targeted therapy (except for SCLC)",
+        "reasonFuzzy": "Complex exception-based prior therapy rule."
+      },
+      {
+        "id": "NCT07006727-rlt",
+        "polarity": "exclusion",
+        "sourceText": "Any prior RLT (except for NEPC patients in expansion)",
+        "reasonFuzzy": "Complex exception-based prior therapy rule."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07006727",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07006727-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years old",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07006727-anc",
+        "kind": "anc_min",
+        "polarity": "exclusion",
+        "sourceText": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07006727-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "exclusion",
+        "sourceText": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT07006727-platelets",
+        "kind": "platelets_min",
+        "polarity": "exclusion",
+        "sourceText": "Absolute neutrophil count (ANC) < 1.0 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 75 x 10^9/L",
+        "numberValue": 75
+      },
+      {
+        "id": "NCT07006727-egfr",
+        "kind": "egfr_min",
+        "polarity": "exclusion",
+        "sourceText": "eGFR < 60 mL/min/1.73m2 calculated using the CKD-EPI 2021 formula or measured",
+        "numberValue": 60
+      },
+      {
+        "id": "NCT07006727-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Presence of leptomeningeal disease, of symptomatic CNS metastases or of CNS metastases that require local CNS-directed therapy",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07006727-prior-lines-escalation",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced, unresectable, or metastatic SCLC with disease progression following, or intolerance to, at least 1 line of systemic therapy, including platinum-containing chemotherapy (prior DLL3-targeted therapy allowed).",
+        "reasonFuzzy": "Prior line rules and specific disease indications vary across multiple cohorts and dose escalation/expansion parts."
+      },
+      {
+        "id": "NCT07006727-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have at least one measurable lesion (per RECIST 1.1) that shows 111In-ETN029 uptake higher than surrounding tissues on SPECT/CT as assessed by the Investigator.",
+        "reasonFuzzy": "Measurable disease by RECIST and investigator assessment of SPECT/CT uptake are subjective and complex imaging criteria."
+      }
+    ]
+  }
+}

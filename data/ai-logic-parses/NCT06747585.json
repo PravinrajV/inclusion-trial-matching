@@ -1,0 +1,340 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06747585",
+  "briefTitle": "A Study to Investigate ALE.P02 as a Monotherapy or in Combination With Pembrolizumab in Adult Patients With Selected CLDN1+ Solid Tumors",
+  "parsedAt": "2026-11-12T10:33:08.137Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06747585-brain",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06747585-stage",
+      "polarity": "inclusion",
+      "sourceText": "histologically or cytologically confirmed advanced locally recurrent and inoperable or metastatic SqNSCLC",
+      "reasonFuzzy": "The stage is described as advanced, locally recurrent and inoperable or metastatic rather than a specific stage list, but is in scope."
+    },
+    {
+      "id": "NCT06747585-lines",
+      "polarity": "inclusion",
+      "sourceText": "Phase I Dose Escalation: Have received at least one systemic standard of care regimen and being refractory or intolerant to the treatment. Phase I Monotherapy RDE and Phase II: Have received no more than 2 lines of systemic standard of care regimen and being refractory or intolerant to the treatment. Phase I Combination Therapy RDE: Have received no previous systemic therapy in incurable recurrent or metastatic setting",
+      "reasonFuzzy": "Prior line requirements differ depending on the study phase and cohort, preventing a single typed prior lines check."
+    },
+    {
+      "id": "NCT06747585-cldn1",
+      "polarity": "inclusion",
+      "sourceText": "Have provided tissue for CLDN1 analysis in a central laboratory.",
+      "reasonFuzzy": "CLDN1 is not a standard typed biomarker kind."
+    },
+    {
+      "id": "NCT06747585-recovery",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have recovered from all toxicities led by prior treatment.",
+      "reasonFuzzy": "Subjective judgment regarding toxicity recovery."
+    },
+    {
+      "id": "NCT06747585-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease based on RECIST 1.1 as determined by the site.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06747585-washout",
+      "polarity": "exclusion",
+      "sourceText": "Has received antineoplastic therapies prior to study intervention within specified time frame.",
+      "reasonFuzzy": "Washout time frame specifics are not detailed as a single simple cutoff."
+    },
+    {
+      "id": "NCT06747585-progression",
+      "polarity": "exclusion",
+      "sourceText": "Has rapidly progressing disease (eg, tumor bleeding, uncontrolled tumor pain).",
+      "reasonFuzzy": "Clinical judgment regarding rapid progression, tumor bleeding, and pain."
+    },
+    {
+      "id": "NCT06747585-other",
+      "polarity": "exclusion",
+      "sourceText": "Patients with uncontrolled diabetes. Has clinically significant gastrointestinal bleeding and has an active infection requiring systemic treatment and has a history or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the clinical study, interfere with the patient's participation for the full duration of the clinical study, or is not in the best interest of the patient to participate. Concomitant use of drugs that are known to prolong or shorten QT and/or have known risk of Torsades de Pointes.",
+      "reasonFuzzy": "Broad investigator discretion and multiple general comorbidities and medications."
+    },
+    {
+      "id": "NCT06747585-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06747585-stage",
+      "polarity": "inclusion",
+      "sourceText": "histologically or cytologically confirmed advanced locally recurrent and inoperable or metastatic SqNSCLC, HNSCC (nasopharyngeal cancer included), ESCC or CSCC.",
+      "reasonFuzzy": "The record does not provide explicit numerical stages, so advanced or metastatic NSCLC is in scope but cannot be mapped to a specific stage_in check."
+    },
+    {
+      "id": "NCT06747585-lines",
+      "polarity": "inclusion",
+      "sourceText": "Phase I Dose Escalation: Have received at least one systemic standard of care regimen... Phase I Monotherapy RDE and Phase II: Have received no more than 2 lines... Phase I Combination Therapy RDE: Have received no previous systemic therapy",
+      "reasonFuzzy": "Prior treatment lines vary entirely by study phase and cohort, making it impossible to represent as a single typed prior_lines check."
+    },
+    {
+      "id": "NCT06747585-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease based on RECIST 1.1 as determined by the site.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06747585-washout",
+      "polarity": "exclusion",
+      "sourceText": "Has received antineoplastic therapies prior to study intervention within specified time frame.",
+      "reasonFuzzy": "Washout windows and specific time frames are not simple typed lab cutoffs."
+    },
+    {
+      "id": "NCT06747585-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06747585-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Have a performance status of 0 or 1 on the Eastern Cooperative Oncology Group Performance Scale.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06747585-histology",
+      "polarity": "exclusion",
+      "sourceText": "Diagnosed with cancers of predominantly non-squamous histology (eg, adenosquamous carcinoma) or adenocarcinoma.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "histology_in",
+          "polarity": "exclusion",
+          "value": "h:adenocarcinoma"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 3194
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 5174
+  },
+  "ms": 16359,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06747585",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06747585-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06747585-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have a performance status of 0 or 1 on the Eastern Cooperative Oncology Group Performance Scale.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06747585-histology",
+        "kind": "histology_in",
+        "polarity": "exclusion",
+        "sourceText": "Diagnosed with cancers of predominantly non-squamous histology (eg, adenosquamous carcinoma) or adenocarcinoma.",
+        "histologies": [
+          "adenocarcinoma"
+        ]
+      },
+      {
+        "id": "NCT06747585-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06747585-stage",
+        "polarity": "inclusion",
+        "sourceText": "histologically or cytologically confirmed advanced locally recurrent and inoperable or metastatic SqNSCLC",
+        "reasonFuzzy": "The stage is described as advanced, locally recurrent and inoperable or metastatic rather than a specific stage list, but is in scope."
+      },
+      {
+        "id": "NCT06747585-lines",
+        "polarity": "inclusion",
+        "sourceText": "Phase I Dose Escalation: Have received at least one systemic standard of care regimen and being refractory or intolerant to the treatment. Phase I Monotherapy RDE and Phase II: Have received no more than 2 lines of systemic standard of care regimen and being refractory or intolerant to the treatment. Phase I Combination Therapy RDE: Have received no previous systemic therapy in incurable recurrent or metastatic setting",
+        "reasonFuzzy": "Prior line requirements differ depending on the study phase and cohort, preventing a single typed prior lines check."
+      },
+      {
+        "id": "NCT06747585-cldn1",
+        "polarity": "inclusion",
+        "sourceText": "Have provided tissue for CLDN1 analysis in a central laboratory.",
+        "reasonFuzzy": "CLDN1 is not a standard typed biomarker kind."
+      },
+      {
+        "id": "NCT06747585-recovery",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have recovered from all toxicities led by prior treatment.",
+        "reasonFuzzy": "Subjective judgment regarding toxicity recovery."
+      },
+      {
+        "id": "NCT06747585-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease based on RECIST 1.1 as determined by the site.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06747585-washout",
+        "polarity": "exclusion",
+        "sourceText": "Has received antineoplastic therapies prior to study intervention within specified time frame.",
+        "reasonFuzzy": "Washout time frame specifics are not detailed as a single simple cutoff."
+      },
+      {
+        "id": "NCT06747585-progression",
+        "polarity": "exclusion",
+        "sourceText": "Has rapidly progressing disease (eg, tumor bleeding, uncontrolled tumor pain).",
+        "reasonFuzzy": "Clinical judgment regarding rapid progression, tumor bleeding, and pain."
+      },
+      {
+        "id": "NCT06747585-other",
+        "polarity": "exclusion",
+        "sourceText": "Patients with uncontrolled diabetes. Has clinically significant gastrointestinal bleeding and has an active infection requiring systemic treatment and has a history or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the clinical study, interfere with the patient's participation for the full duration of the clinical study, or is not in the best interest of the patient to participate. Concomitant use of drugs that are known to prolong or shorten QT and/or have known risk of Torsades de Pointes.",
+        "reasonFuzzy": "Broad investigator discretion and multiple general comorbidities and medications."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06747585",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06747585-histology",
+        "kind": "histology_in",
+        "polarity": "exclusion",
+        "sourceText": "Diagnosed with cancers of predominantly non-squamous histology (eg, adenosquamous carcinoma) or adenocarcinoma.",
+        "histologies": [
+          "adenocarcinoma"
+        ]
+      },
+      {
+        "id": "NCT06747585-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06747585-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have a performance status of 0 or 1 on the Eastern Cooperative Oncology Group Performance Scale.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06747585-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06747585-stage",
+        "polarity": "inclusion",
+        "sourceText": "histologically or cytologically confirmed advanced locally recurrent and inoperable or metastatic SqNSCLC, HNSCC (nasopharyngeal cancer included), ESCC or CSCC.",
+        "reasonFuzzy": "The record does not provide explicit numerical stages, so advanced or metastatic NSCLC is in scope but cannot be mapped to a specific stage_in check."
+      },
+      {
+        "id": "NCT06747585-lines",
+        "polarity": "inclusion",
+        "sourceText": "Phase I Dose Escalation: Have received at least one systemic standard of care regimen... Phase I Monotherapy RDE and Phase II: Have received no more than 2 lines... Phase I Combination Therapy RDE: Have received no previous systemic therapy",
+        "reasonFuzzy": "Prior treatment lines vary entirely by study phase and cohort, making it impossible to represent as a single typed prior_lines check."
+      },
+      {
+        "id": "NCT06747585-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease based on RECIST 1.1 as determined by the site.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06747585-washout",
+        "polarity": "exclusion",
+        "sourceText": "Has received antineoplastic therapies prior to study intervention within specified time frame.",
+        "reasonFuzzy": "Washout windows and specific time frames are not simple typed lab cutoffs."
+      }
+    ]
+  }
+}

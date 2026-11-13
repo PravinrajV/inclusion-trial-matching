@@ -1,0 +1,303 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06345729",
+  "briefTitle": "A Study of Calderasib (MK-1084) Plus Pembrolizumab (MK-3475) in Participants With KRAS G12C Mutant Non-small Cell Lung Cancer (NSCLC) With Programmed Cell Death Ligand 1 (PD-L1) Tumor Proportion Score (TPS) ≥50% (MK-1084-004/KANDLELIT-004)",
+  "parsedAt": "2026-11-12T09:21:27.546Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06345729-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Has newly diagnosed Stage IIIB/IIIC NSCLC, not eligible for curative resection or curative chemotherapy/radiation as determined by a multidisciplinary tumor board and/or by radiation oncologist, surgeon, and medical oncologist or Stage IV (M1a, M1b, or M1c) by American Joint Committee on Cancer (AJCC) Staging Manual, Version 8",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Has newly diagnosed Stage IIIB/IIIC NSCLC, not eligible for curative resection or curative chemotherapy/radiation as determined by a multidisciplinary tumor board and/or by radiation oncologist, surgeon, and medical oncologist or Stage IV (M1a, M1b, or M1c) by American Joint Committee on Cancer (AJCC) Staging Manual, Version 8",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06345729-kras",
+      "polarity": "inclusion",
+      "sourceText": "central laboratory testing of kirsten rat sarcoma (KRAS) G12C mutation status",
+      "reasonFuzzy": "Testing requirement for KRAS G12C mutation status, but specific mutation variant entry value formatting is better suited for fuzzy processing given the narrative context."
+    },
+    {
+      "id": "NCT06345729-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "programmed cell death ligand 1 (PD-L1) status",
+      "reasonFuzzy": "Study title notes TPS >= 50%, but criteria text states central laboratory testing for PD-L1 status without a direct numeric cutoff in the eligibility text snippet."
+    },
+    {
+      "id": "NCT06345729-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior systemic anticancer therapy for their locally advanced or metastatic NSCLC",
+      "reasonFuzzy": "Exclusion of prior systemic therapy for advanced or metastatic disease."
+    },
+    {
+      "id": "NCT06345729-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06345729-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Programmed Cell Death Ligand 1 (PD-L1) Tumor Proportion Score (TPS) ≥50%",
+      "reasonFuzzy": "Although a 50% cutoff is mentioned in the brief title, the eligibility text says PD-L1 status is tested centrally without specifying the inclusion threshold explicitly in the criteria body, requiring fuzzy handling."
+    },
+    {
+      "id": "NCT06345729-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Provides an archival tumor sample (≤5 years) or newly obtained core, incisional, or excisional biopsy or fine needle aspirate (FNA) of a tumor lesion",
+      "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is a subjective, judgment-based item."
+    },
+    {
+      "id": "NCT06345729-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06345729-kras",
+      "polarity": "inclusion",
+      "sourceText": "central laboratory testing of kirsten rat sarcoma (KRAS) G12C mutation status",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06345729-krasvar",
+      "polarity": "inclusion",
+      "sourceText": "kirsten rat sarcoma (KRAS) G12C mutation status",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06345729-prior",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior systemic anticancer therapy for their locally advanced or metastatic NSCLC",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06345729-brain",
+      "polarity": "exclusion",
+      "sourceText": "Has known active CNS metastases and/or carcinomatous meningitis",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 3,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "b-only",
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12c"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_required",
+          "polarity": "exclusion",
+          "value": "s:prior systemic anticancer therapy"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3225
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2772
+  },
+  "ms": 10018,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06345729",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06345729-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Has newly diagnosed Stage IIIB/IIIC NSCLC, not eligible for curative resection or curative chemotherapy/radiation as determined by a multidisciplinary tumor board and/or by radiation oncologist, surgeon, and medical oncologist or Stage IV (M1a, M1b, or M1c) by American Joint Committee on Cancer (AJCC) Staging Manual, Version 8",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06345729-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06345729-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active CNS metastases and/or carcinomatous meningitis",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06345729-kras",
+        "polarity": "inclusion",
+        "sourceText": "central laboratory testing of kirsten rat sarcoma (KRAS) G12C mutation status",
+        "reasonFuzzy": "Testing requirement for KRAS G12C mutation status, but specific mutation variant entry value formatting is better suited for fuzzy processing given the narrative context."
+      },
+      {
+        "id": "NCT06345729-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "programmed cell death ligand 1 (PD-L1) status",
+        "reasonFuzzy": "Study title notes TPS >= 50%, but criteria text states central laboratory testing for PD-L1 status without a direct numeric cutoff in the eligibility text snippet."
+      },
+      {
+        "id": "NCT06345729-prior-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior systemic anticancer therapy for their locally advanced or metastatic NSCLC",
+        "reasonFuzzy": "Exclusion of prior systemic therapy for advanced or metastatic disease."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06345729",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06345729-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Has newly diagnosed Stage IIIB/IIIC NSCLC, not eligible for curative resection or curative chemotherapy/radiation as determined by a multidisciplinary tumor board and/or by radiation oncologist, surgeon, and medical oncologist or Stage IV (M1a, M1b, or M1c) by American Joint Committee on Cancer (AJCC) Staging Manual, Version 8",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06345729-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06345729-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "central laboratory testing of kirsten rat sarcoma (KRAS) G12C mutation status",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06345729-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "kirsten rat sarcoma (KRAS) G12C mutation status",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT06345729-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active CNS metastases and/or carcinomatous meningitis",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06345729-prior",
+        "kind": "prior_therapy_required",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior systemic anticancer therapy for their locally advanced or metastatic NSCLC",
+        "stringValue": "prior systemic anticancer therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06345729-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "Programmed Cell Death Ligand 1 (PD-L1) Tumor Proportion Score (TPS) ≥50%",
+        "reasonFuzzy": "Although a 50% cutoff is mentioned in the brief title, the eligibility text says PD-L1 status is tested centrally without specifying the inclusion threshold explicitly in the criteria body, requiring fuzzy handling."
+      },
+      {
+        "id": "NCT06345729-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Provides an archival tumor sample (≤5 years) or newly obtained core, incisional, or excisional biopsy or fine needle aspirate (FNA) of a tumor lesion",
+        "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is a subjective, judgment-based item."
+      }
+    ]
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06605404",
+  "briefTitle": "Pan-tumor MRD Study",
+  "parsedAt": "2026-11-12T10:08:37.627Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06605404-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age 18 years or older.",
+      "numberValue": 18,
+      "evidence_quote": "Age 18 years or older.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06605404-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0, 1, or 2.",
+      "numberValue": 2,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0, 1, or 2.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06605404-histology",
+      "polarity": "inclusion",
+      "sourceText": "Confirmed histological or cytological diagnosis of a malignant solid tumor that is either specified in one of the pre-defined tumor cohorts or meets the enrollment criteria for the Mix of Solid Tumors (MOST) cohort (Table 1).",
+      "reasonFuzzy": "The trial is a pan-tumor study covering multiple cancer types, and NSCLC is included alongside non-NSCLC tumors under broad cohort criteria."
+    },
+    {
+      "id": "NCT06605404-stage",
+      "polarity": "inclusion",
+      "sourceText": "Esophageal, Gastric/GEJ, and NSCLC Cohorts: Stage I, II, or operable III cancer.",
+      "reasonFuzzy": "Stage criteria apply conditionally by tumor cohort and include stages I and II alongside stage III, which does not fit a single stage_in list for advanced NSCLC."
+    },
+    {
+      "id": "NCT06605404-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Eligible for curative intent therapy, with surgical resection of cancer planned.",
+      "reasonFuzzy": "Curative intent therapy and planned surgical resection are clinical judgment and procedure requirements rather than a typed check."
+    },
+    {
+      "id": "NCT06605404-compliance",
+      "polarity": "inclusion",
+      "sourceText": "Willing and able to comply with required study procedures, including blood sample collection and primary tumor tissue submission from diagnostic biopsy or surgical excision.",
+      "reasonFuzzy": "Willingness to undergo study procedures and tissue submission is subjective and not a typed check."
+    },
+    {
+      "id": "NCT06605404-diagnosis",
+      "polarity": "inclusion",
+      "sourceText": "Confirmed histological or cytological diagnosis of a malignant solid tumor that is either specified in one of the pre-defined tumor cohorts or meets the enrollment criteria for the Mix of Solid Tumors (MOST) cohort (Table 1).",
+      "reasonFuzzy": "Broad tumor diagnosis rules across multiple tumor cohorts rather than a single NSCLC biomarker or histology check."
+    },
+    {
+      "id": "NCT06605404-surgery",
+      "polarity": "inclusion",
+      "sourceText": "Eligible for curative intent therapy, with surgical resection of cancer planned. a. If surgical resection has occurred, enrollment should occur within 3 months of surgical resection and before initiation of adjuvant therapy.",
+      "reasonFuzzy": "Surgical timing and planning are procedure and clinical judgment-based rather than standard typed checks."
+    },
+    {
+      "id": "NCT06605404-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "No systemic therapy for current cancer diagnosis administered before enrollment.",
+      "reasonFuzzy": "General restriction against any prior systemic therapy for the current diagnosis."
+    },
+    {
+      "id": "NCT06605404-procedures",
+      "polarity": "inclusion",
+      "sourceText": "Willing and able to comply with required study procedures, including blood sample collection and primary tumor tissue submission from diagnostic biopsy or surgical excision.",
+      "reasonFuzzy": "Willingness to undergo study procedures and biopsies is subjective/judgment-based."
+    },
+    {
+      "id": "NCT06605404-malignancy-history",
+      "polarity": "inclusion",
+      "sourceText": "Has completed all therapy (including endocrine therapy) 3 or more years ago for any previous invasive solid organ malignancy (with exception of nonmelanoma skin cancers) or hematologic malignancy. Individuals with a prior history of noninvasive (in situ) carcinomas may participate if they have received definitive treatment (no washout period required).",
+      "reasonFuzzy": "Complex washout and history rules for prior malignancies."
+    },
+    {
+      "id": "NCT06605404-concurrent-cancer",
+      "polarity": "exclusion",
+      "sourceText": "No concurrent diagnosis of another invasive cancer, except for nonmelanoma skin cancers.",
+      "reasonFuzzy": "Concurrent cancer exclusion rule."
+    },
+    {
+      "id": "NCT06605404-stem-cell",
+      "polarity": "exclusion",
+      "sourceText": "No prior allogeneic hematopoietic stem cell transplant.",
+      "reasonFuzzy": "Prior transplant restriction."
+    },
+    {
+      "id": "NCT06605404-consent",
+      "polarity": "inclusion",
+      "sourceText": "Able and willing to provide informed consent and Health Insurance Portability and Accountability Act (HIPAA) authorization for the release of personal health information.",
+      "reasonFuzzy": "Informed consent requirement is standard administrative protocol."
+    },
+    {
+      "id": "NCT06605404-excluded-tumors",
+      "polarity": "exclusion",
+      "sourceText": "The following tumor types are excluded: 1. Central nervous system (CNS) malignancies 2. Colorectal cancer 3. Breast cancer 4. Squamous cell skin cancer 5. Basal cell carcinoma 6. Gastrointestinal stromal tumors (GIST) 7. Thyroid cancer 8. Uveal melanoma 9. Low or intermediate grade neuroendocrine tumors 10. Hematologic cancers including multiple myeloma or other plasma cell dyscrasias, Hodgkin's lymphoma, non-Hodgkin's lymphoma, acute or chronic leukemias including chronic lymphocytic leukemia / small lymphocytic leukemia",
+      "reasonFuzzy": "Exclusion list of multiple other tumor types."
+    },
+    {
+      "id": "NCT06605404-stage",
+      "polarity": "inclusion",
+      "sourceText": "Esophageal, Gastric/GEJ, and NSCLC Cohorts: Stage I, II, or operable III cancer.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IA,IB,IIA,IIB,IIIA,IIIB,IIIC"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 2566
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 4046
+  },
+  "ms": 14601,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06605404",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06605404-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 years or older.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06605404-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0, 1, or 2.",
+        "numberValue": 2
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06605404-histology",
+        "polarity": "inclusion",
+        "sourceText": "Confirmed histological or cytological diagnosis of a malignant solid tumor that is either specified in one of the pre-defined tumor cohorts or meets the enrollment criteria for the Mix of Solid Tumors (MOST) cohort (Table 1).",
+        "reasonFuzzy": "The trial is a pan-tumor study covering multiple cancer types, and NSCLC is included alongside non-NSCLC tumors under broad cohort criteria."
+      },
+      {
+        "id": "NCT06605404-stage",
+        "polarity": "inclusion",
+        "sourceText": "Esophageal, Gastric/GEJ, and NSCLC Cohorts: Stage I, II, or operable III cancer.",
+        "reasonFuzzy": "Stage criteria apply conditionally by tumor cohort and include stages I and II alongside stage III, which does not fit a single stage_in list for advanced NSCLC."
+      },
+      {
+        "id": "NCT06605404-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Eligible for curative intent therapy, with surgical resection of cancer planned.",
+        "reasonFuzzy": "Curative intent therapy and planned surgical resection are clinical judgment and procedure requirements rather than a typed check."
+      },
+      {
+        "id": "NCT06605404-compliance",
+        "polarity": "inclusion",
+        "sourceText": "Willing and able to comply with required study procedures, including blood sample collection and primary tumor tissue submission from diagnostic biopsy or surgical excision.",
+        "reasonFuzzy": "Willingness to undergo study procedures and tissue submission is subjective and not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06605404",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06605404-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 years or older.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06605404-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0, 1, or 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06605404-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Esophageal, Gastric/GEJ, and NSCLC Cohorts: Stage I, II, or operable III cancer.",
+        "stages": [
+          "IA",
+          "IB",
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06605404-diagnosis",
+        "polarity": "inclusion",
+        "sourceText": "Confirmed histological or cytological diagnosis of a malignant solid tumor that is either specified in one of the pre-defined tumor cohorts or meets the enrollment criteria for the Mix of Solid Tumors (MOST) cohort (Table 1).",
+        "reasonFuzzy": "Broad tumor diagnosis rules across multiple tumor cohorts rather than a single NSCLC biomarker or histology check."
+      },
+      {
+        "id": "NCT06605404-surgery",
+        "polarity": "inclusion",
+        "sourceText": "Eligible for curative intent therapy, with surgical resection of cancer planned. a. If surgical resection has occurred, enrollment should occur within 3 months of surgical resection and before initiation of adjuvant therapy.",
+        "reasonFuzzy": "Surgical timing and planning are procedure and clinical judgment-based rather than standard typed checks."
+      },
+      {
+        "id": "NCT06605404-prior-therapy",
+        "polarity": "exclusion",
+        "sourceText": "No systemic therapy for current cancer diagnosis administered before enrollment.",
+        "reasonFuzzy": "General restriction against any prior systemic therapy for the current diagnosis."
+      },
+      {
+        "id": "NCT06605404-procedures",
+        "polarity": "inclusion",
+        "sourceText": "Willing and able to comply with required study procedures, including blood sample collection and primary tumor tissue submission from diagnostic biopsy or surgical excision.",
+        "reasonFuzzy": "Willingness to undergo study procedures and biopsies is subjective/judgment-based."
+      },
+      {
+        "id": "NCT06605404-malignancy-history",
+        "polarity": "inclusion",
+        "sourceText": "Has completed all therapy (including endocrine therapy) 3 or more years ago for any previous invasive solid organ malignancy (with exception of nonmelanoma skin cancers) or hematologic malignancy. Individuals with a prior history of noninvasive (in situ) carcinomas may participate if they have received definitive treatment (no washout period required).",
+        "reasonFuzzy": "Complex washout and history rules for prior malignancies."
+      },
+      {
+        "id": "NCT06605404-concurrent-cancer",
+        "polarity": "exclusion",
+        "sourceText": "No concurrent diagnosis of another invasive cancer, except for nonmelanoma skin cancers.",
+        "reasonFuzzy": "Concurrent cancer exclusion rule."
+      },
+      {
+        "id": "NCT06605404-stem-cell",
+        "polarity": "exclusion",
+        "sourceText": "No prior allogeneic hematopoietic stem cell transplant.",
+        "reasonFuzzy": "Prior transplant restriction."
+      },
+      {
+        "id": "NCT06605404-consent",
+        "polarity": "inclusion",
+        "sourceText": "Able and willing to provide informed consent and Health Insurance Portability and Accountability Act (HIPAA) authorization for the release of personal health information.",
+        "reasonFuzzy": "Informed consent requirement is standard administrative protocol."
+      },
+      {
+        "id": "NCT06605404-excluded-tumors",
+        "polarity": "exclusion",
+        "sourceText": "The following tumor types are excluded: 1. Central nervous system (CNS) malignancies 2. Colorectal cancer 3. Breast cancer 4. Squamous cell skin cancer 5. Basal cell carcinoma 6. Gastrointestinal stromal tumors (GIST) 7. Thyroid cancer 8. Uveal melanoma 9. Low or intermediate grade neuroendocrine tumors 10. Hematologic cancers including multiple myeloma or other plasma cell dyscrasias, Hodgkin's lymphoma, non-Hodgkin's lymphoma, acute or chronic leukemias including chronic lymphocytic leukemia / small lymphocytic leukemia",
+        "reasonFuzzy": "Exclusion list of multiple other tumor types."
+      }
+    ]
+  }
+}

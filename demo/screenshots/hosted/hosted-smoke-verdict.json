@@ -1,0 +1,49 @@
+{
+  "when": "2026-11-12 08:24:23 EST",
+  "mode": {
+    "channel": "chrome",
+    "headless": false,
+    "via": "xvfb"
+  },
+  "url": "https://inclusion-hybridai.web.app/",
+  "title": "Inclusion: private clinical-trial matching",
+  "brand_descriptor": "Private clinical-trial matching",
+  "hero_descriptor": "Private clinical-trial matching",
+  "name_ok": true,
+  "tokens_issued": false,
+  "exchange_status": [
+    403
+  ],
+  "exchange_ok_has_token": false,
+  "exchange_errors": [
+    "403 PERMISSION_DENIED App attestation failed."
+  ],
+  "ttl": null,
+  "real_appcheck_jwt_attached": false,
+  "appcheck_header_lens": [
+    36,
+    36
+  ],
+  "anonymous_signin": true,
+  "signup_status": [
+    200
+  ],
+  "firestore_http_ok": true,
+  "firestore_statuses": [
+    200,
+    200
+  ],
+  "firestore_from_ui": false,
+  "banner": {
+    "text": "Using the bundled public trial snapshot (277 trials).",
+    "hidden": false,
+    "level": "fallback"
+  },
+  "status": "Using the bundled public trial snapshot (277 trials).",
+  "mentions_could_not_sign_in": false,
+  "nano_gate_visible": true,
+  "synthetic_loaded": true,
+  "synthetic_banner": "Synthetic demo data",
+  "debug_token_exchange_attempted": false,
+  "pass": false
+}

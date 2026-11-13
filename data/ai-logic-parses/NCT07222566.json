@@ -1,0 +1,346 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07222566",
+  "briefTitle": "Symbiotic-Lung-01 : A Study to Learn About the Study Medicine Called PF-08634404 in Combination With Chemotherapy in Adult Participants With Locally Advanced or Metastatic Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:58:11.728Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07222566-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "18 years of age or older at screening.",
+      "numberValue": 18,
+      "evidence_quote": "18 years of age or older at screening.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07222566-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Have pathologically confirmed locally advanced (Stage IIIB/IIIC) or metastatic (Stage IV)squamous or non-squamous NSCLC and not be a candidate for complete surgical resection and curative concurrent/sequential chemoradiotherapy (according to the 9th edition of the Union for International Cancer Control and American Joint Committee on Cancer lung cancer Tumor, lymph nodes, metastasis (TNM) staging system).",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Have pathologically confirmed locally advanced (Stage IIIB/IIIC) or metastatic (Stage IV)squamous or non-squamous NSCLC and not be a candidate for complete surgical resection and curative concurrent/sequential chemoradiotherapy (according to the 9th edition of the Union for International Cancer Control and American Joint Committee on Cancer lung cancer Tumor, lymph nodes, metastasis (TNM) staging system).",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07222566-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group performance status (ECOG) score of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group performance status (ECOG) score of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07222566-pd-l1",
+      "polarity": "inclusion",
+      "sourceText": "PD-L1 status available based on local testing results",
+      "reasonFuzzy": "Availability of PD-L1 status is required, but there is no specific quantitative cutoff requirement specified."
+    },
+    {
+      "id": "NCT07222566-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease based on RECIST v1.1 per investigator.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07222566-survival",
+      "polarity": "inclusion",
+      "sourceText": "Expected survival ≥12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07222566-aga",
+      "polarity": "exclusion",
+      "sourceText": "Participants with known actionable genomic alteration (AGAs), including estimated glomerular filtration rate (EGFR), anaplastic lymphoma kinase (ALK), Repressor of Silencing 1 (ROS1), neurotrophic tyrosine receptor kinase (NTRK), v-raf murine sarcoma viral oncogene homolog B1 (BRAF), rearranged during transfection (RET), and mesenchymal-epithelial transition (MET), for which there are available first-line therapies per local standard-of-care (SOC) are ineligible. Documented negative results for EGFR, ALK, and ROS1 AGAs are required for participants with non-squamous histology.",
+      "reasonFuzzy": "This exclusion rule involves multiple biomarkers with conditional first-line therapy availability and histology-dependent negative requirements, which cannot be expressed as simple single biomarker status checks."
+    },
+    {
+      "id": "NCT07222566-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "PD-L1 status available based on local testing results",
+      "reasonFuzzy": "Only availability of PD-L1 status is required, not a minimum or maximum cutoff value."
+    },
+    {
+      "id": "NCT07222566-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease based on RECIST v1.1 per investigator.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07222566-survival",
+      "polarity": "inclusion",
+      "sourceText": "Expected survival ≥12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07222566-aga",
+      "polarity": "exclusion",
+      "sourceText": "Participants with known actionable genomic alteration (AGAs), including estimated glomerular filtration rate (EGFR), anaplastic lymphoma kinase (ALK), Repressor of Silencing 1 (ROS1), neurotrophic tyrosine receptor kinase (NTRK), v-raf murine sarcoma viral oncogene homolog B1 (BRAF), rearranged during transfection (RET), and mesenchymal-epithelial transition (MET), for which there are available first-line therapies per local standard-of-care (SOC) are ineligible. Documented negative results for EGFR, ALK, and ROS1 AGAs are required for participants with non-squamous histology.",
+      "reasonFuzzy": "This rule involves conditional genetic alterations and histology-specific requirements that cannot be expressed with simple single-gene presence checks."
+    },
+    {
+      "id": "NCT07222566-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Prior systemic therapy, including anti-PD-(L)1 therapy, for locally advanced, unresectable, or metastatic NSCLC.",
+      "reasonFuzzy": "The prior systemic therapy exclusion is complex and linked to setting (locally advanced/metastatic NSCLC) rather than a simple named class exclusion."
+    },
+    {
+      "id": "NCT07222566-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known active CNS lesions are excluded. Participants with definitively treated brain metastases (surgery and/or radiotherapy) may be eligible. Clinically inactive brain metastases of longest diameter < 1 cm are permitted.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07222566-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known active CNS lesions are excluded. Participants with definitively treated brain metastases (surgery and/or radiotherapy) may be eligible. Clinically inactive brain metastases of longest diameter < 1 cm are permitted.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07222566-histology",
+      "polarity": "inclusion",
+      "sourceText": "Have pathologically confirmed locally advanced (Stage IIIB/IIIC) or metastatic (Stage IV)squamous or non-squamous NSCLC and not be a candidate for complete surgical resection and curative concurrent/sequential chemoradiotherapy",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:untreated"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos,squamous"
+        }
+      ],
+      "normalizerTypedCount": 7
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 3055
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3196
+  },
+  "ms": 14132,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07222566",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07222566-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 years of age or older at screening.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07222566-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Have pathologically confirmed locally advanced (Stage IIIB/IIIC) or metastatic (Stage IV)squamous or non-squamous NSCLC and not be a candidate for complete surgical resection and curative concurrent/sequential chemoradiotherapy (according to the 9th edition of the Union for International Cancer Control and American Joint Committee on Cancer lung cancer Tumor, lymph nodes, metastasis (TNM) staging system).",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07222566-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Have pathologically confirmed locally advanced (Stage IIIB/IIIC) or metastatic (Stage IV)squamous or non-squamous NSCLC and not be a candidate for complete surgical resection and curative concurrent/sequential chemoradiotherapy",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07222566-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group performance status (ECOG) score of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07222566-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known active CNS lesions are excluded. Participants with definitively treated brain metastases (surgery and/or radiotherapy) may be eligible. Clinically inactive brain metastases of longest diameter < 1 cm are permitted.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07222566-pd-l1",
+        "polarity": "inclusion",
+        "sourceText": "PD-L1 status available based on local testing results",
+        "reasonFuzzy": "Availability of PD-L1 status is required, but there is no specific quantitative cutoff requirement specified."
+      },
+      {
+        "id": "NCT07222566-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease based on RECIST v1.1 per investigator.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07222566-survival",
+        "polarity": "inclusion",
+        "sourceText": "Expected survival ≥12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT07222566-aga",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known actionable genomic alteration (AGAs), including estimated glomerular filtration rate (EGFR), anaplastic lymphoma kinase (ALK), Repressor of Silencing 1 (ROS1), neurotrophic tyrosine receptor kinase (NTRK), v-raf murine sarcoma viral oncogene homolog B1 (BRAF), rearranged during transfection (RET), and mesenchymal-epithelial transition (MET), for which there are available first-line therapies per local standard-of-care (SOC) are ineligible. Documented negative results for EGFR, ALK, and ROS1 AGAs are required for participants with non-squamous histology.",
+        "reasonFuzzy": "This exclusion rule involves multiple biomarkers with conditional first-line therapy availability and histology-dependent negative requirements, which cannot be expressed as simple single biomarker status checks."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07222566",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07222566-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 years of age or older at screening.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07222566-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Have pathologically confirmed locally advanced (Stage IIIB/IIIC) or metastatic (Stage IV)squamous or non-squamous NSCLC",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07222566-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "squamous or non-squamous NSCLC",
+        "histologies": [
+          "squamous",
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07222566-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group performance status (ECOG) score of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07222566-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known active CNS lesions are excluded. Participants with definitively treated brain metastases (surgery and/or radiotherapy) may be eligible. Clinically inactive brain metastases of longest diameter < 1 cm are permitted.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07222566-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "PD-L1 status available based on local testing results",
+        "reasonFuzzy": "Only availability of PD-L1 status is required, not a minimum or maximum cutoff value."
+      },
+      {
+        "id": "NCT07222566-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease based on RECIST v1.1 per investigator.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07222566-survival",
+        "polarity": "inclusion",
+        "sourceText": "Expected survival ≥12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT07222566-aga",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known actionable genomic alteration (AGAs), including estimated glomerular filtration rate (EGFR), anaplastic lymphoma kinase (ALK), Repressor of Silencing 1 (ROS1), neurotrophic tyrosine receptor kinase (NTRK), v-raf murine sarcoma viral oncogene homolog B1 (BRAF), rearranged during transfection (RET), and mesenchymal-epithelial transition (MET), for which there are available first-line therapies per local standard-of-care (SOC) are ineligible. Documented negative results for EGFR, ALK, and ROS1 AGAs are required for participants with non-squamous histology.",
+        "reasonFuzzy": "This rule involves conditional genetic alterations and histology-specific requirements that cannot be expressed with simple single-gene presence checks."
+      },
+      {
+        "id": "NCT07222566-prior-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Prior systemic therapy, including anti-PD-(L)1 therapy, for locally advanced, unresectable, or metastatic NSCLC.",
+        "reasonFuzzy": "The prior systemic therapy exclusion is complex and linked to setting (locally advanced/metastatic NSCLC) rather than a simple named class exclusion."
+      }
+    ]
+  }
+}

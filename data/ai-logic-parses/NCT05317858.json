@@ -1,0 +1,742 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05317858",
+  "briefTitle": "Blood-brain Barrier (BBB) Opening Using Exablate Focused Ultrasound With Standard of Care Treatment of NSCLC Brain Mets",
+  "parsedAt": "2026-11-12T06:13:07.351Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05317858-age-min",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Participant is ≥ 18 years of age",
+      "numberValue": 18,
+      "evidence_quote": "Participant is ≥ 18 years of age",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05317858-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participant has a Karnofsky Performance Status ≥ 70% and/or ECOG 0-2",
+      "numberValue": 2,
+      "evidence_quote": "Participant has a Karnofsky Performance Status ≥ 70% and/or ECOG 0-2",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05317858-consent",
+      "polarity": "inclusion",
+      "sourceText": "The participant provides written informed consent for the trial",
+      "reasonFuzzy": "Informed consent is a standard administrative requirement, not a typed clinical check."
+    },
+    {
+      "id": "NCT05317858-compliance",
+      "polarity": "inclusion",
+      "sourceText": "Participant is willing to comply with all study procedures for the duration of the study",
+      "reasonFuzzy": "Willingness to comply is a subjective judgment."
+    },
+    {
+      "id": "NCT05317858-nsclc-details",
+      "polarity": "inclusion",
+      "sourceText": "Participant is a NSCLC subject prescribed immune checkpoint inhibitor systemic therapy according to on-label use with the target brain lesion(s) measuring ≥ 0.5 cm in longest diameter. Target mets may include: De novo mets for which surgery and radiation can be deferred, Mets with or without history of prior radiation, Mets with history of radiation after at least 8 weeks since last radiation treatment, and In the event a previously treated met has progressed according to institutional practice within 4 weeks post radiation treatment, the met may be study eligible, and/or if in the opinion of the Investigator, the subject may benefit from the study procedure.",
+      "reasonFuzzy": "This criterion contains multiple complex imaging and treatment conditions, including lesion measurement and investigator opinion, which cannot be expressed in a single typed check."
+    },
+    {
+      "id": "NCT05317858-pregnancy",
+      "polarity": "inclusion",
+      "sourceText": "Female subject is not planning pregnancy during the study duration and confirmed NOT PREGNANT each procedure day.",
+      "reasonFuzzy": "Pregnancy planning and procedure-day status checks are not standard typed lab or demographic checks."
+    },
+    {
+      "id": "NCT05317858-labs",
+      "polarity": "inclusion",
+      "sourceText": "Screening/Baseline laboratory values Screening/Baseline should adhere to local standard of care lab values for ICI therapy",
+      "reasonFuzzy": "Local standard of care lab values do not provide explicit fixed numerical cutoffs in the source text."
+    },
+    {
+      "id": "NCT05317858-hemorrhage",
+      "polarity": "exclusion",
+      "sourceText": "Participant has evidence of acute intracranial hemorrhage",
+      "reasonFuzzy": "Intracranial hemorrhage presence is an imaging/clinical evaluation, not a typed brain_mets or lab check."
+    },
+    {
+      "id": "NCT05317858-hemorrhage-risk",
+      "polarity": "exclusion",
+      "sourceText": "Participant at risk for spontaneous intracranial hemorrhage (e.g., history of metastatic melanoma or other tissue histology).",
+      "reasonFuzzy": "Risk assessment for hemorrhage is a clinical judgment."
+    },
+    {
+      "id": "NCT05317858-icp",
+      "polarity": "exclusion",
+      "sourceText": "Participant has signs and symptoms of increased intracranial pressure or symptomatic mass effect, midline shift or evidence of subfalcine, uncal or tonsillar herniation.",
+      "reasonFuzzy": "Signs and symptoms of increased intracranial pressure and mass effect are clinical/imaging judgments."
+    },
+    {
+      "id": "NCT05317858-bevacizumab",
+      "polarity": "exclusion",
+      "sourceText": "Participant receiving Bevacizumab (Avastin) therapy, or other drugs with a proclivity for causing bleeding.",
+      "reasonFuzzy": "Exclusion of drugs with a proclivity for causing bleeding is broader than a simple single-drug prior therapy exclusion."
+    },
+    {
+      "id": "NCT05317858-bleeding-disorders",
+      "polarity": "exclusion",
+      "sourceText": "History of bleeding disorders or tissue pathologies which increase the subject's risk of hemorrhage for anticoagulation medications, implement pre-surgical standard procedure to avoid increased risk of a bleeding event.",
+      "reasonFuzzy": "History of bleeding disorders and risk assessment involve clinical judgment."
+    },
+    {
+      "id": "NCT05317858-infection",
+      "polarity": "exclusion",
+      "sourceText": "Participant has an infectious viral infection such as active Hepatitis B, Hepatitis C or detectable HIV viral load or participants with active bacterial infection such as TB (Bacillus tuberculosis) that may, in the opinion of the investigator, interfere with the subject receiving the study therapy or procedures or otherwise impact their participation in the trial.",
+      "reasonFuzzy": "Involves investigator opinion regarding interference with the trial."
+    },
+    {
+      "id": "NCT05317858-cranial-infection",
+      "polarity": "exclusion",
+      "sourceText": "Subjects with evidence of cranial or systemic infection.",
+      "reasonFuzzy": "Evidence of cranial or systemic infection is a clinical assessment."
+    },
+    {
+      "id": "NCT05317858-transplant",
+      "polarity": "exclusion",
+      "sourceText": "Participant has received a solid organ or hematopoietic stem cell transplant.",
+      "reasonFuzzy": "Prior transplant is not covered by the allowed prior therapy exclusion kinds."
+    },
+    {
+      "id": "NCT05317858-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Participant has received a live vaccine within 28 days prior to the first on-study ICI infusion with or without Exablate.",
+      "reasonFuzzy": "Live vaccine washout is not covered by standard typed checks."
+    },
+    {
+      "id": "NCT05317858-contrast-sensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Known sensitivity to DEFINITY® ultrasound contrast agent or hypersensitivity to perflutren microsphere or its components, e.g., polyethylene glycol, as found in MiraLAX and bowel prep products.",
+      "reasonFuzzy": "Allergy or sensitivity to contrast agents is a clinical exclusion not captured by standard typed checks."
+    },
+    {
+      "id": "NCT05317858-mri-contra",
+      "polarity": "exclusion",
+      "sourceText": "Contraindications to MRI and gadolinium-DTPA including non-MRI-compatible implanted devices, severe claustrophobia, unable to lie supine in MRI.",
+      "reasonFuzzy": "MRI contraindications are procedural limitations."
+    },
+    {
+      "id": "NCT05317858-liver-dysfunction",
+      "polarity": "exclusion",
+      "sourceText": "Subjects with significant liver dysfunction, (cirrhosis, hemochromatosis, severe alcohol abuse, or active hepatitis (autoimmune or infectious))",
+      "reasonFuzzy": "Significant liver dysfunction is a clinical diagnosis rather than a strict numerical lab cutoff."
+    },
+    {
+      "id": "NCT05317858-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy (in dosing exceeding 10 mg daily of prednisone equivalent) or any other form of immunosuppressive therapy within 7 days prior to the first on-study ICI infusion with or without Exablate. Note: prophylactic steroid use for ICI and chemotherapy infusion per institutional practice is allowed per protocol.",
+      "reasonFuzzy": "Steroid dosing exceptions and institutional practices make this rule complex and part-dependent."
+    },
+    {
+      "id": "NCT05317858-additional-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Has a known additional malignancy that requires active treatment that would interfere with study procedures.",
+      "reasonFuzzy": "Additional malignancy involving interference with study procedures requires investigator judgment."
+    },
+    {
+      "id": "NCT05317858-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "Known presence of leptomeningeal disease.",
+      "reasonFuzzy": "Leptomeningeal disease is a specific CNS involvement not mapped to standard typed brain_mets checks."
+    },
+    {
+      "id": "NCT05317858-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Has a diagnosis of active autoimmune disease (e.g., autoimmune Hepatitis, Guillain-Barre Syndrome, etc.) requiring systemic treatment in the past 2 years (i.e., with use of disease modifying agents, corticosteroids, or immunosuppressive drugs). Replacement therapy (e.g., thyroxine, insulin, or physiologic corticosteroid replacement therapy for adrenal or pituitary insufficiency, etc.) is not considered a form of systemic treatment. History of (non-infectious) pneumonitis that requires steroids or has current pneumonitis",
+      "reasonFuzzy": "Active autoimmune disease and pneumonitis history involve complex clinical nuances."
+    },
+    {
+      "id": "NCT05317858-confounding",
+      "polarity": "exclusion",
+      "sourceText": "Has a history or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the subject's participation for the full duration of the study, or is not in the best interest of the subject to participate, in the opinion of the treating investigator.",
+      "reasonFuzzy": "Investigator discretion and potential confounding conditions are subjective."
+    },
+    {
+      "id": "NCT05317858-trial-enrollment",
+      "polarity": "exclusion",
+      "sourceText": "Subject is currently enrolled in another intervention based clinical trial",
+      "reasonFuzzy": "Concurrent trial enrollment is an administrative rule."
+    },
+    {
+      "id": "NCT05317858-age-max",
+      "polarity": "inclusion",
+      "sourceText": "maximumAge\": \"100 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05317858-consent",
+      "polarity": "inclusion",
+      "sourceText": "The participant provides written informed consent for the trial",
+      "reasonFuzzy": "Informed consent is an administrative requirement, not a clinical eligibility criterion."
+    },
+    {
+      "id": "NCT05317858-compliance",
+      "polarity": "inclusion",
+      "sourceText": "Participant is willing to comply with all study procedures for the duration of the study",
+      "reasonFuzzy": "Willingness to comply is a subjective behavioral judgment."
+    },
+    {
+      "id": "NCT05317858-karnofsky",
+      "polarity": "inclusion",
+      "sourceText": "Participant has a Karnofsky Performance Status ≥ 70% and/or ECOG 0-2",
+      "reasonFuzzy": "Karnofsky Performance Status is not supported as a typed check kind."
+    },
+    {
+      "id": "NCT05317858-lesion",
+      "polarity": "inclusion",
+      "sourceText": "target brain lesion(s) measuring ≥ 0.5 cm in longest diameter. Target mets may include: De novo mets for which surgery and radiation can be deferred, Mets with or without history of prior radiation, Mets with history of radiation after at least 8 weeks since last radiation treatment, and In the event a previously treated met has progressed according to institutional practice within 4 weeks post radiation treatment, the met may be study eligible, and/or if in the opinion of the Investigator, the subject may benefit from the study procedure.",
+      "reasonFuzzy": "Lesion size and specific brain met descriptions are complex imaging and clinical scenarios not covered by simple typed rules."
+    },
+    {
+      "id": "NCT05317858-pregnancy",
+      "polarity": "inclusion",
+      "sourceText": "Female subject is not planning pregnancy during the study duration and confirmed NOT PREGNANT each procedure day.",
+      "reasonFuzzy": "Pregnancy planning and checks are not mapped to a typed kind."
+    },
+    {
+      "id": "NCT05317858-labs",
+      "polarity": "inclusion",
+      "sourceText": "Screening/Baseline laboratory values Screening/Baseline should adhere to local standard of care lab values for ICI therapy",
+      "reasonFuzzy": "Local standard of care lab values lack explicit fixed numeric thresholds in the text."
+    },
+    {
+      "id": "NCT05317858-hemorrhage",
+      "polarity": "exclusion",
+      "sourceText": "Participant has evidence of acute intracranial hemorrhage",
+      "reasonFuzzy": "Acute intracranial hemorrhage is a specific neurosurgical exclusion not covered by typed checks."
+    },
+    {
+      "id": "NCT05317858-hemorrhage-risk",
+      "polarity": "exclusion",
+      "sourceText": "Participant at risk for spontaneous intracranial hemorrhage (e.g., history of metastatic melanoma or other tissue histology).",
+      "reasonFuzzy": "Risk for spontaneous intracranial hemorrhage is investigator-assessed."
+    },
+    {
+      "id": "NCT05317858-icp",
+      "polarity": "exclusion",
+      "sourceText": "Participant has signs and symptoms of increased intracranial pressure or symptomatic mass effect, midline shift or evidence of subfalcine, uncal or tonsillar herniation.",
+      "reasonFuzzy": "Symptoms of increased intracranial pressure and mass effect are subjective clinical findings."
+    },
+    {
+      "id": "NCT05317858-bevacizumab",
+      "polarity": "exclusion",
+      "sourceText": "Participant receiving Bevacizumab (Avastin) therapy, or other drugs with a proclivity for causing bleeding.",
+      "reasonFuzzy": "Exclusion of Bevacizumab and bleeding-risk drugs does not map directly to simple prior therapy exclusion rules."
+    },
+    {
+      "id": "NCT05317858-bleeding-history",
+      "polarity": "exclusion",
+      "sourceText": "History of bleeding disorders or tissue pathologies which increase the subject's risk of hemorrhage for anticoagulation medications, implement pre-surgical standard procedure to avoid increased risk of a bleeding event.",
+      "reasonFuzzy": "Bleeding disorders and tissue pathologies are clinical risk conditions."
+    },
+    {
+      "id": "NCT05317858-infection",
+      "polarity": "exclusion",
+      "sourceText": "Participant has an infectious viral infection such as active Hepatitis B, Hepatitis C or detectable HIV viral load or participants with active bacterial infection such as TB (Bacillus tuberculosis) that may, in the opinion of the investigator, interfere with the subject receiving the study therapy or procedures or otherwise impact their participation in the trial.",
+      "reasonFuzzy": "Infectious disease exclusions involving investigator opinion are subjective."
+    },
+    {
+      "id": "NCT05317858-cranial-infection",
+      "polarity": "exclusion",
+      "sourceText": "Subjects with evidence of cranial or systemic infection.",
+      "reasonFuzzy": "Cranial or systemic infection is a clinical exclusion not covered by a typed check."
+    },
+    {
+      "id": "NCT05317858-transplant",
+      "polarity": "exclusion",
+      "sourceText": "Participant has received a solid organ or hematopoietic stem cell transplant.",
+      "reasonFuzzy": "Transplant history is not a typed check kind."
+    },
+    {
+      "id": "NCT05317858-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Participant has received a live vaccine within 28 days prior to the first on-study ICI infusion with or without Exablate.",
+      "reasonFuzzy": "Live vaccine washout is a complex timeframe rule not matching supported typed kinds."
+    },
+    {
+      "id": "NCT05317858-contrast",
+      "polarity": "exclusion",
+      "sourceText": "Known sensitivity to DEFINITY® ultrasound contrast agent or hypersensitivity to perflutren microsphere or its components, e.g., polyethylene glycol, as found in MiraLAX and bowel prep products.",
+      "reasonFuzzy": "Agent sensitivity is an allergy exclusion, not a typed check."
+    },
+    {
+      "id": "NCT05317858-mri-contra",
+      "polarity": "exclusion",
+      "sourceText": "Contraindications to MRI and gadolinium-DTPA including non-MRI-compatible implanted devices, severe claustrophobia, unable to lie supine in MRI.",
+      "reasonFuzzy": "MRI contraindications are procedural limitations."
+    },
+    {
+      "id": "NCT05317858-liver",
+      "polarity": "exclusion",
+      "sourceText": "Subjects with significant liver dysfunction, (cirrhosis, hemochromatosis, severe alcohol abuse, or active hepatitis (autoimmune or infectious))",
+      "reasonFuzzy": "Significant liver dysfunction descriptions are not standard numeric lab cutoffs."
+    },
+    {
+      "id": "NCT05317858-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy (in dosing exceeding 10 mg daily of prednisone equivalent) or any other form of immunosuppressive therapy within 7 days prior to the first on-study ICI infusion with or without Exablate. Note: prophylactic steroid use for ICI and chemotherapy infusion per institutional practice is allowed per protocol.",
+      "reasonFuzzy": "Systemic steroid dose and immunosuppressive therapy exclusions are complex clinical criteria."
+    },
+    {
+      "id": "NCT05317858-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Has a known additional malignancy that requires active treatment that would interfere with study procedures.",
+      "reasonFuzzy": "Additional malignancy requiring active treatment is an investigator-assessed condition."
+    },
+    {
+      "id": "NCT05317858-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "Known presence of leptomeningeal disease.",
+      "reasonFuzzy": "Leptomeningeal disease is a specific CNS involvement exclusion."
+    },
+    {
+      "id": "NCT05317858-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Has a diagnosis of active autoimmune disease (e.g., autoimmune Hepatitis, Guillain-Barre Syndrome, etc.) requiring systemic treatment in the past 2 years (i.e., with use of disease modifying agents, corticosteroids, or immunosuppressive drugs). Replacement therapy (e.g., thyroxine, insulin, or physiologic corticosteroid replacement therapy for adrenal or pituitary insufficiency, etc.) is not considered a form of systemic treatment. History of (non-infectious) pneumonitis that requires steroids or has current pneumonitis",
+      "reasonFuzzy": "Active autoimmune disease and pneumonitis history exclusions are complex clinical conditions."
+    },
+    {
+      "id": "NCT05317858-confound",
+      "polarity": "exclusion",
+      "sourceText": "Has a history or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the subject's participation for the full duration of the study, or is not in the best interest of the subject to participate, in the opinion of the treating investigator.",
+      "reasonFuzzy": "Investigator discretion regarding confounding conditions or best interest is subjective."
+    },
+    {
+      "id": "NCT05317858-trial-enrolled",
+      "polarity": "exclusion",
+      "sourceText": "Subject is currently enrolled in another intervention based clinical trial",
+      "reasonFuzzy": "Concurrent trial enrollment is an administrative restriction."
+    },
+    {
+      "id": "NCT05317858-age-max",
+      "polarity": "inclusion",
+      "sourceText": "maximumAge: 100 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05317858-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Participant is a NSCLC subject prescribed immune checkpoint inhibitor systemic therapy according to on-label use",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "maximumAge\": \"100 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "maximumAge: 100 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:immune checkpoint inhibitor"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 23,
+    "attempts": 2,
+    "ms": 26984
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 24,
+    "attempts": 1,
+    "ms": 6416
+  },
+  "ms": 41404,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05317858",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05317858-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant is ≥ 18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05317858-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "maximumAge\": \"100 Years",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT05317858-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant has a Karnofsky Performance Status ≥ 70% and/or ECOG 0-2",
+        "numberValue": 2
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05317858-consent",
+        "polarity": "inclusion",
+        "sourceText": "The participant provides written informed consent for the trial",
+        "reasonFuzzy": "Informed consent is a standard administrative requirement, not a typed clinical check."
+      },
+      {
+        "id": "NCT05317858-compliance",
+        "polarity": "inclusion",
+        "sourceText": "Participant is willing to comply with all study procedures for the duration of the study",
+        "reasonFuzzy": "Willingness to comply is a subjective judgment."
+      },
+      {
+        "id": "NCT05317858-nsclc-details",
+        "polarity": "inclusion",
+        "sourceText": "Participant is a NSCLC subject prescribed immune checkpoint inhibitor systemic therapy according to on-label use with the target brain lesion(s) measuring ≥ 0.5 cm in longest diameter. Target mets may include: De novo mets for which surgery and radiation can be deferred, Mets with or without history of prior radiation, Mets with history of radiation after at least 8 weeks since last radiation treatment, and In the event a previously treated met has progressed according to institutional practice within 4 weeks post radiation treatment, the met may be study eligible, and/or if in the opinion of the Investigator, the subject may benefit from the study procedure.",
+        "reasonFuzzy": "This criterion contains multiple complex imaging and treatment conditions, including lesion measurement and investigator opinion, which cannot be expressed in a single typed check."
+      },
+      {
+        "id": "NCT05317858-pregnancy",
+        "polarity": "inclusion",
+        "sourceText": "Female subject is not planning pregnancy during the study duration and confirmed NOT PREGNANT each procedure day.",
+        "reasonFuzzy": "Pregnancy planning and procedure-day status checks are not standard typed lab or demographic checks."
+      },
+      {
+        "id": "NCT05317858-labs",
+        "polarity": "inclusion",
+        "sourceText": "Screening/Baseline laboratory values Screening/Baseline should adhere to local standard of care lab values for ICI therapy",
+        "reasonFuzzy": "Local standard of care lab values do not provide explicit fixed numerical cutoffs in the source text."
+      },
+      {
+        "id": "NCT05317858-hemorrhage",
+        "polarity": "exclusion",
+        "sourceText": "Participant has evidence of acute intracranial hemorrhage",
+        "reasonFuzzy": "Intracranial hemorrhage presence is an imaging/clinical evaluation, not a typed brain_mets or lab check."
+      },
+      {
+        "id": "NCT05317858-hemorrhage-risk",
+        "polarity": "exclusion",
+        "sourceText": "Participant at risk for spontaneous intracranial hemorrhage (e.g., history of metastatic melanoma or other tissue histology).",
+        "reasonFuzzy": "Risk assessment for hemorrhage is a clinical judgment."
+      },
+      {
+        "id": "NCT05317858-icp",
+        "polarity": "exclusion",
+        "sourceText": "Participant has signs and symptoms of increased intracranial pressure or symptomatic mass effect, midline shift or evidence of subfalcine, uncal or tonsillar herniation.",
+        "reasonFuzzy": "Signs and symptoms of increased intracranial pressure and mass effect are clinical/imaging judgments."
+      },
+      {
+        "id": "NCT05317858-bevacizumab",
+        "polarity": "exclusion",
+        "sourceText": "Participant receiving Bevacizumab (Avastin) therapy, or other drugs with a proclivity for causing bleeding.",
+        "reasonFuzzy": "Exclusion of drugs with a proclivity for causing bleeding is broader than a simple single-drug prior therapy exclusion."
+      },
+      {
+        "id": "NCT05317858-bleeding-disorders",
+        "polarity": "exclusion",
+        "sourceText": "History of bleeding disorders or tissue pathologies which increase the subject's risk of hemorrhage for anticoagulation medications, implement pre-surgical standard procedure to avoid increased risk of a bleeding event.",
+        "reasonFuzzy": "History of bleeding disorders and risk assessment involve clinical judgment."
+      },
+      {
+        "id": "NCT05317858-infection",
+        "polarity": "exclusion",
+        "sourceText": "Participant has an infectious viral infection such as active Hepatitis B, Hepatitis C or detectable HIV viral load or participants with active bacterial infection such as TB (Bacillus tuberculosis) that may, in the opinion of the investigator, interfere with the subject receiving the study therapy or procedures or otherwise impact their participation in the trial.",
+        "reasonFuzzy": "Involves investigator opinion regarding interference with the trial."
+      },
+      {
+        "id": "NCT05317858-cranial-infection",
+        "polarity": "exclusion",
+        "sourceText": "Subjects with evidence of cranial or systemic infection.",
+        "reasonFuzzy": "Evidence of cranial or systemic infection is a clinical assessment."
+      },
+      {
+        "id": "NCT05317858-transplant",
+        "polarity": "exclusion",
+        "sourceText": "Participant has received a solid organ or hematopoietic stem cell transplant.",
+        "reasonFuzzy": "Prior transplant is not covered by the allowed prior therapy exclusion kinds."
+      },
+      {
+        "id": "NCT05317858-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Participant has received a live vaccine within 28 days prior to the first on-study ICI infusion with or without Exablate.",
+        "reasonFuzzy": "Live vaccine washout is not covered by standard typed checks."
+      },
+      {
+        "id": "NCT05317858-contrast-sensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Known sensitivity to DEFINITY® ultrasound contrast agent or hypersensitivity to perflutren microsphere or its components, e.g., polyethylene glycol, as found in MiraLAX and bowel prep products.",
+        "reasonFuzzy": "Allergy or sensitivity to contrast agents is a clinical exclusion not captured by standard typed checks."
+      },
+      {
+        "id": "NCT05317858-mri-contra",
+        "polarity": "exclusion",
+        "sourceText": "Contraindications to MRI and gadolinium-DTPA including non-MRI-compatible implanted devices, severe claustrophobia, unable to lie supine in MRI.",
+        "reasonFuzzy": "MRI contraindications are procedural limitations."
+      },
+      {
+        "id": "NCT05317858-liver-dysfunction",
+        "polarity": "exclusion",
+        "sourceText": "Subjects with significant liver dysfunction, (cirrhosis, hemochromatosis, severe alcohol abuse, or active hepatitis (autoimmune or infectious))",
+        "reasonFuzzy": "Significant liver dysfunction is a clinical diagnosis rather than a strict numerical lab cutoff."
+      },
+      {
+        "id": "NCT05317858-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy (in dosing exceeding 10 mg daily of prednisone equivalent) or any other form of immunosuppressive therapy within 7 days prior to the first on-study ICI infusion with or without Exablate. Note: prophylactic steroid use for ICI and chemotherapy infusion per institutional practice is allowed per protocol.",
+        "reasonFuzzy": "Steroid dosing exceptions and institutional practices make this rule complex and part-dependent."
+      },
+      {
+        "id": "NCT05317858-additional-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Has a known additional malignancy that requires active treatment that would interfere with study procedures.",
+        "reasonFuzzy": "Additional malignancy involving interference with study procedures requires investigator judgment."
+      },
+      {
+        "id": "NCT05317858-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "Known presence of leptomeningeal disease.",
+        "reasonFuzzy": "Leptomeningeal disease is a specific CNS involvement not mapped to standard typed brain_mets checks."
+      },
+      {
+        "id": "NCT05317858-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Has a diagnosis of active autoimmune disease (e.g., autoimmune Hepatitis, Guillain-Barre Syndrome, etc.) requiring systemic treatment in the past 2 years (i.e., with use of disease modifying agents, corticosteroids, or immunosuppressive drugs). Replacement therapy (e.g., thyroxine, insulin, or physiologic corticosteroid replacement therapy for adrenal or pituitary insufficiency, etc.) is not considered a form of systemic treatment. History of (non-infectious) pneumonitis that requires steroids or has current pneumonitis",
+        "reasonFuzzy": "Active autoimmune disease and pneumonitis history involve complex clinical nuances."
+      },
+      {
+        "id": "NCT05317858-confounding",
+        "polarity": "exclusion",
+        "sourceText": "Has a history or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the subject's participation for the full duration of the study, or is not in the best interest of the subject to participate, in the opinion of the treating investigator.",
+        "reasonFuzzy": "Investigator discretion and potential confounding conditions are subjective."
+      },
+      {
+        "id": "NCT05317858-trial-enrollment",
+        "polarity": "exclusion",
+        "sourceText": "Subject is currently enrolled in another intervention based clinical trial",
+        "reasonFuzzy": "Concurrent trial enrollment is an administrative rule."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05317858",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05317858-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant is ≥ 18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05317858-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "maximumAge: 100 Years",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT05317858-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant has a Karnofsky Performance Status ≥ 70% and/or ECOG 0-2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT05317858-prior-therapy",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Participant is a NSCLC subject prescribed immune checkpoint inhibitor systemic therapy according to on-label use",
+        "stringValue": "immune checkpoint inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05317858-consent",
+        "polarity": "inclusion",
+        "sourceText": "The participant provides written informed consent for the trial",
+        "reasonFuzzy": "Informed consent is an administrative requirement, not a clinical eligibility criterion."
+      },
+      {
+        "id": "NCT05317858-compliance",
+        "polarity": "inclusion",
+        "sourceText": "Participant is willing to comply with all study procedures for the duration of the study",
+        "reasonFuzzy": "Willingness to comply is a subjective behavioral judgment."
+      },
+      {
+        "id": "NCT05317858-karnofsky",
+        "polarity": "inclusion",
+        "sourceText": "Participant has a Karnofsky Performance Status ≥ 70% and/or ECOG 0-2",
+        "reasonFuzzy": "Karnofsky Performance Status is not supported as a typed check kind."
+      },
+      {
+        "id": "NCT05317858-lesion",
+        "polarity": "inclusion",
+        "sourceText": "target brain lesion(s) measuring ≥ 0.5 cm in longest diameter. Target mets may include: De novo mets for which surgery and radiation can be deferred, Mets with or without history of prior radiation, Mets with history of radiation after at least 8 weeks since last radiation treatment, and In the event a previously treated met has progressed according to institutional practice within 4 weeks post radiation treatment, the met may be study eligible, and/or if in the opinion of the Investigator, the subject may benefit from the study procedure.",
+        "reasonFuzzy": "Lesion size and specific brain met descriptions are complex imaging and clinical scenarios not covered by simple typed rules."
+      },
+      {
+        "id": "NCT05317858-pregnancy",
+        "polarity": "inclusion",
+        "sourceText": "Female subject is not planning pregnancy during the study duration and confirmed NOT PREGNANT each procedure day.",
+        "reasonFuzzy": "Pregnancy planning and checks are not mapped to a typed kind."
+      },
+      {
+        "id": "NCT05317858-labs",
+        "polarity": "inclusion",
+        "sourceText": "Screening/Baseline laboratory values Screening/Baseline should adhere to local standard of care lab values for ICI therapy",
+        "reasonFuzzy": "Local standard of care lab values lack explicit fixed numeric thresholds in the text."
+      },
+      {
+        "id": "NCT05317858-hemorrhage",
+        "polarity": "exclusion",
+        "sourceText": "Participant has evidence of acute intracranial hemorrhage",
+        "reasonFuzzy": "Acute intracranial hemorrhage is a specific neurosurgical exclusion not covered by typed checks."
+      },
+      {
+        "id": "NCT05317858-hemorrhage-risk",
+        "polarity": "exclusion",
+        "sourceText": "Participant at risk for spontaneous intracranial hemorrhage (e.g., history of metastatic melanoma or other tissue histology).",
+        "reasonFuzzy": "Risk for spontaneous intracranial hemorrhage is investigator-assessed."
+      },
+      {
+        "id": "NCT05317858-icp",
+        "polarity": "exclusion",
+        "sourceText": "Participant has signs and symptoms of increased intracranial pressure or symptomatic mass effect, midline shift or evidence of subfalcine, uncal or tonsillar herniation.",
+        "reasonFuzzy": "Symptoms of increased intracranial pressure and mass effect are subjective clinical findings."
+      },
+      {
+        "id": "NCT05317858-bevacizumab",
+        "polarity": "exclusion",
+        "sourceText": "Participant receiving Bevacizumab (Avastin) therapy, or other drugs with a proclivity for causing bleeding.",
+        "reasonFuzzy": "Exclusion of Bevacizumab and bleeding-risk drugs does not map directly to simple prior therapy exclusion rules."
+      },
+      {
+        "id": "NCT05317858-bleeding-history",
+        "polarity": "exclusion",
+        "sourceText": "History of bleeding disorders or tissue pathologies which increase the subject's risk of hemorrhage for anticoagulation medications, implement pre-surgical standard procedure to avoid increased risk of a bleeding event.",
+        "reasonFuzzy": "Bleeding disorders and tissue pathologies are clinical risk conditions."
+      },
+      {
+        "id": "NCT05317858-infection",
+        "polarity": "exclusion",
+        "sourceText": "Participant has an infectious viral infection such as active Hepatitis B, Hepatitis C or detectable HIV viral load or participants with active bacterial infection such as TB (Bacillus tuberculosis) that may, in the opinion of the investigator, interfere with the subject receiving the study therapy or procedures or otherwise impact their participation in the trial.",
+        "reasonFuzzy": "Infectious disease exclusions involving investigator opinion are subjective."
+      },
+      {
+        "id": "NCT05317858-cranial-infection",
+        "polarity": "exclusion",
+        "sourceText": "Subjects with evidence of cranial or systemic infection.",
+        "reasonFuzzy": "Cranial or systemic infection is a clinical exclusion not covered by a typed check."
+      },
+      {
+        "id": "NCT05317858-transplant",
+        "polarity": "exclusion",
+        "sourceText": "Participant has received a solid organ or hematopoietic stem cell transplant.",
+        "reasonFuzzy": "Transplant history is not a typed check kind."
+      },
+      {
+        "id": "NCT05317858-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Participant has received a live vaccine within 28 days prior to the first on-study ICI infusion with or without Exablate.",
+        "reasonFuzzy": "Live vaccine washout is a complex timeframe rule not matching supported typed kinds."
+      },
+      {
+        "id": "NCT05317858-contrast",
+        "polarity": "exclusion",
+        "sourceText": "Known sensitivity to DEFINITY® ultrasound contrast agent or hypersensitivity to perflutren microsphere or its components, e.g., polyethylene glycol, as found in MiraLAX and bowel prep products.",
+        "reasonFuzzy": "Agent sensitivity is an allergy exclusion, not a typed check."
+      },
+      {
+        "id": "NCT05317858-mri-contra",
+        "polarity": "exclusion",
+        "sourceText": "Contraindications to MRI and gadolinium-DTPA including non-MRI-compatible implanted devices, severe claustrophobia, unable to lie supine in MRI.",
+        "reasonFuzzy": "MRI contraindications are procedural limitations."
+      },
+      {
+        "id": "NCT05317858-liver",
+        "polarity": "exclusion",
+        "sourceText": "Subjects with significant liver dysfunction, (cirrhosis, hemochromatosis, severe alcohol abuse, or active hepatitis (autoimmune or infectious))",
+        "reasonFuzzy": "Significant liver dysfunction descriptions are not standard numeric lab cutoffs."
+      },
+      {
+        "id": "NCT05317858-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy (in dosing exceeding 10 mg daily of prednisone equivalent) or any other form of immunosuppressive therapy within 7 days prior to the first on-study ICI infusion with or without Exablate. Note: prophylactic steroid use for ICI and chemotherapy infusion per institutional practice is allowed per protocol.",
+        "reasonFuzzy": "Systemic steroid dose and immunosuppressive therapy exclusions are complex clinical criteria."
+      },
+      {
+        "id": "NCT05317858-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Has a known additional malignancy that requires active treatment that would interfere with study procedures.",
+        "reasonFuzzy": "Additional malignancy requiring active treatment is an investigator-assessed condition."
+      },
+      {
+        "id": "NCT05317858-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "Known presence of leptomeningeal disease.",
+        "reasonFuzzy": "Leptomeningeal disease is a specific CNS involvement exclusion."
+      },
+      {
+        "id": "NCT05317858-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Has a diagnosis of active autoimmune disease (e.g., autoimmune Hepatitis, Guillain-Barre Syndrome, etc.) requiring systemic treatment in the past 2 years (i.e., with use of disease modifying agents, corticosteroids, or immunosuppressive drugs). Replacement therapy (e.g., thyroxine, insulin, or physiologic corticosteroid replacement therapy for adrenal or pituitary insufficiency, etc.) is not considered a form of systemic treatment. History of (non-infectious) pneumonitis that requires steroids or has current pneumonitis",
+        "reasonFuzzy": "Active autoimmune disease and pneumonitis history exclusions are complex clinical conditions."
+      },
+      {
+        "id": "NCT05317858-confound",
+        "polarity": "exclusion",
+        "sourceText": "Has a history or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the subject's participation for the full duration of the study, or is not in the best interest of the subject to participate, in the opinion of the treating investigator.",
+        "reasonFuzzy": "Investigator discretion regarding confounding conditions or best interest is subjective."
+      },
+      {
+        "id": "NCT05317858-trial-enrolled",
+        "polarity": "exclusion",
+        "sourceText": "Subject is currently enrolled in another intervention based clinical trial",
+        "reasonFuzzy": "Concurrent trial enrollment is an administrative restriction."
+      }
+    ]
+  }
+}

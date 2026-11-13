@@ -1,0 +1,135 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07513376",
+  "briefTitle": "A Clinical Trial of Adjuvant Intismeran (V940) With or Without Pembrolizumab Coformulated With Berahyaluronidase Alfa (MK-3475A) in High-Risk Stage I Non-Small Cell Lung Cancer (V940-014)",
+  "parsedAt": "2026-11-12T11:56:12.912Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07513376-outofscope",
+      "polarity": "inclusion",
+      "sourceText": "Has a histological diagnosis of pathological Stage I (tumor ≤4 cm) non-small cell lung cancer (NSCLC) per American Joint Committee on Cancer (AJCC) 9th Edition",
+      "reasonFuzzy": "The trial is out of scope because it is clearly limited to Stage I NSCLC."
+    },
+    {
+      "id": "NCT07513376-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07513376-outofscope",
+      "polarity": "inclusion",
+      "sourceText": "Has a histological diagnosis of pathological Stage I (tumor ≤4 cm) non-small cell lung cancer",
+      "reasonFuzzy": "The trial is limited to Stage I non-small cell lung cancer, which is out of scope for this cache focused on stage III or IV."
+    },
+    {
+      "id": "NCT07513376-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 0,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 0,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 0,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 0
+    }
+  },
+  "runA": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 8900
+  },
+  "runB": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 7776
+  },
+  "ms": 24660,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07513376",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07513376-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07513376-outofscope",
+        "polarity": "inclusion",
+        "sourceText": "Has a histological diagnosis of pathological Stage I (tumor ≤4 cm) non-small cell lung cancer (NSCLC) per American Joint Committee on Cancer (AJCC) 9th Edition",
+        "reasonFuzzy": "The trial is out of scope because it is clearly limited to Stage I NSCLC."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07513376",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07513376-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07513376-outofscope",
+        "polarity": "inclusion",
+        "sourceText": "Has a histological diagnosis of pathological Stage I (tumor ≤4 cm) non-small cell lung cancer",
+        "reasonFuzzy": "The trial is limited to Stage I non-small cell lung cancer, which is out of scope for this cache focused on stage III or IV."
+      }
+    ]
+  }
+}

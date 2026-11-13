@@ -1,0 +1,702 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04181060",
+  "briefTitle": "Osimertinib With or Without Bevacizumab as Initial Treatment for Patients With EGFR-Mutant Lung Cancer",
+  "parsedAt": "2026-11-12T06:03:27.442Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04181060-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Patient must be ≥ 18 years of age",
+      "numberValue": 18,
+      "evidence_quote": "Patient must be ≥ 18 years of age",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04181060-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2",
+      "numberValue": 2,
+      "evidence_quote": "Patient must have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04181060-anc",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count >= 1,500/mcL (obtained =< 14 days prior to randomization)",
+      "numberValue": 1500,
+      "evidence_quote": "Absolute neutrophil count >= 1,500/mcL (obtained =< 14 days prior to randomization)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04181060-platelets",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets >= 100,000/mcL (obtained =< 14 days prior to randomization)",
+      "numberValue": 100000,
+      "evidence_quote": "Platelets >= 100,000/mcL (obtained =< 14 days prior to randomization)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04181060-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin >= 9 g/dL (obtained =< 14 days prior to randomization)",
+      "numberValue": 9,
+      "evidence_quote": "Hemoglobin >= 9 g/dL (obtained =< 14 days prior to randomization)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04181060-bilirubin",
+      "kind": "bilirubin_max",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin and creatinine =< 1.5 x institutional upper limit of normal (ULN) (obtained =< 14 days prior to randomization)",
+      "numberValue": 1.5,
+      "evidence_quote": "Total bilirubin and creatinine =< 1.5 x institutional upper limit of normal (ULN) (obtained =< 14 days prior to randomization)",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04181060-prior-osimertinib-exception",
+      "polarity": "inclusion",
+      "sourceText": "Prior treatment with an EGFR TKI is not allowed, however if a candidate for this study has already started osimertinib within 21 days prior to randomization, the exact osimertinib start date is known, and the patient had the required study baseline imaging completed prior to the osimertinib start date, the patient will be eligible",
+      "reasonFuzzy": "Complex exception regarding prior osimertinib start within a 21-day window cannot be expressed with a standard typed rule."
+    },
+    {
+      "id": "NCT04181060-radiation-washout",
+      "polarity": "inclusion",
+      "sourceText": "Radiation (limited field stereotactic radiation or conventional radiation) must have been completed at least one week prior to study drug initiation and more extensive field radiation (i.e., whole-brain radiotherapy [WBRT]) must have been completed at least two weeks prior to drug initiation",
+      "reasonFuzzy": "Washout windows depending on the type and field of radiation are too complex for a single typed check."
+    },
+    {
+      "id": "NCT04181060-vegf-risk",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not have any risk factors for anti-VEGF administration, specifically, hemoptysis, active cardiovascular disease, uncontrolled hypertension, significant proteinuria (screening urinalysis > 300 mg/dl) and tumor invading major blood vessels",
+      "reasonFuzzy": "Combines multiple risk factors and qualitative criteria like tumor invasion into a single exclusion rule."
+    },
+    {
+      "id": "NCT04181060-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have measurable disease. Baseline measurements of sites of disease must be obtained within 4 weeks prior to study randomization.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT04181060-prior-metastatic-systemic",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not have had any prior systemic treatment for metastatic disease",
+      "reasonFuzzy": "Exclusion of prior systemic treatment specifically for metastatic disease interacts with the complex prior osimertinib start rules."
+    },
+    {
+      "id": "NCT04181060-investigator-discretion",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not have any evidence of severe or uncontrolled systemic diseases, including uncontrolled hypertension and active bleeding diatheses, which in the investigator's opinion makes it challenging for the patient to participate in the study.",
+      "reasonFuzzy": "Relies entirely on investigator opinion and clinical judgment."
+    },
+    {
+      "id": "NCT04181060-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN (obtained =< 14 days prior to randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04181060-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN (obtained =< 14 days prior to randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04181060-brain-mets",
+      "polarity": "inclusion",
+      "sourceText": "Patients with treated brain metastases are eligible if neurologically stable without glucocorticoid therapy after the stated washout period from radiation therapy (RT) or surgery provided the metastatic lesions are non-hemorrhagic AND Patients with untreated brain metastases or leptomeningeal disease are eligible if the treating physician determines that immediate CNS specific treatment is not required provided the metastatic lesions are non-hemorrhagic and are neurologically stable without glucocorticoid therapy",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04181060-egfr-exclusion",
+      "polarity": "exclusion",
+      "sourceText": "Patients with non-sensitizing mutations in EGFR (EGFR exon 20 insertions) are not eligible.",
+      "reasonFuzzy": "Specific non-sensitizing variant exclusions cannot be captured by standard presence flags."
+    },
+    {
+      "id": "NCT04181060-prior-tki-exception",
+      "polarity": "inclusion",
+      "sourceText": "Prior treatment with an EGFR TKI is not allowed, however if a candidate for this study has already started osimertinib within 21 days prior to randomization, the exact osimertinib start date is known, and the patient had the required study baseline imaging completed prior to the osimertinib start date, the patient will be eligible",
+      "reasonFuzzy": "Conditional exception window for osimertinib prior treatment is complex and study part-dependent."
+    },
+    {
+      "id": "NCT04181060-radiation",
+      "polarity": "inclusion",
+      "sourceText": "Radiation (limited field stereotactic radiation or conventional radiation) must have been completed at least one week prior to study drug initiation and more extensive field radiation (i.e., whole-brain radiotherapy [WBRT]) must have been completed at least two weeks prior to drug initiation",
+      "reasonFuzzy": "Complex washout periods for prior radiation depending on field extent."
+    },
+    {
+      "id": "NCT04181060-vegf-risk",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not have any risk factors for anti-VEGF administration, specifically, hemoptysis, active cardiovascular disease, uncontrolled hypertension, significant proteinuria (screening urinalysis > 300 mg/dl) and tumor invading major blood vessels",
+      "reasonFuzzy": "Compound exclusion for anti-VEGF risk factors involving multiple clinical conditions and a specific urinalysis threshold."
+    },
+    {
+      "id": "NCT04181060-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have measurable disease. Baseline measurements of sites of disease must be obtained within 4 weeks prior to study randomization.",
+      "reasonFuzzy": "Measurable disease by RECIST/imaging is subjective."
+    },
+    {
+      "id": "NCT04181060-prior-metastatic",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not have had any prior systemic treatment for metastatic disease",
+      "reasonFuzzy": "Prior systemic treatment specifically for metastatic disease requires complex context parsing."
+    },
+    {
+      "id": "NCT04181060-leukocytes",
+      "polarity": "inclusion",
+      "sourceText": "Leukocytes >= 3,000/mcL (obtained =< 14 days prior to randomization)",
+      "reasonFuzzy": "Leukocyte count is not among the allowed typed kinds."
+    },
+    {
+      "id": "NCT04181060-investigator-opinion",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not have any evidence of severe or uncontrolled systemic diseases, including uncontrolled hypertension and active bleeding diatheses, which in the investigator's opinion makes it challenging for the patient to participate in the study.",
+      "reasonFuzzy": "Relies on investigator judgment."
+    },
+    {
+      "id": "NCT04181060-qtc",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not have mean resting corrected QT interval (QTc) > 470 msec obtained from 3 electrocardiograms (ECGs)",
+      "reasonFuzzy": "QTc threshold rules are not among the allowed typed kinds."
+    },
+    {
+      "id": "NCT04181060-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN (obtained =< 14 days prior to randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04181060-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN (obtained =< 14 days prior to randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04181060-brain-mets",
+      "polarity": "inclusion",
+      "sourceText": "Patients with treated brain metastases are eligible if neurologically stable without glucocorticoid therapy after the stated washout period from radiation therapy (RT) or surgery provided the metastatic lesions are non-hemorrhagic And Patients with untreated brain metastases or leptomeningeal disease are eligible if the treating physician determines that immediate CNS specific treatment is not required provided the metastatic lesions are non-hemorrhagic and are neurologically stable without glucocorticoid therapy",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04181060-egfr-excl",
+      "polarity": "exclusion",
+      "sourceText": "Patients with non-sensitizing mutations in EGFR (EGFR exon 20 insertions) are not eligible.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT04181060-stage",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have advanced disease, defined as - either stage IV disease, stage IIIB disease not amenable to definitive multi-modality therapy, or recurrent disease after a prior diagnosis of stage I-III disease. All staging is via the American Joint Committee on Cancer (AJCC)/International Association for the Study of Lung Cancer (IASLC) 8th edition staging criteria",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04181060-histology",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have a pathologically-confirmed diagnosis of non-squamous, non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04181060-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have somatic activating sensitizing mutation in EGFR (e.g. but not limited to Exon 19 deletion, L858R, E709X, G719X, exon 19 insertions, L861Q, S768I).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04181060-egfr-var",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have somatic activating sensitizing mutation in EGFR (e.g. but not limited to Exon 19 deletion, L858R, E709X, G719X, exon 19 insertions, L861Q, S768I).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04181060-prior-vegf",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not have received any prior treatment with an anti-VEGF agent",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04181060-creatinine",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin and creatinine =< 1.5 x institutional upper limit of normal (ULN) (obtained =< 14 days prior to randomization)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 13,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) "
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) "
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Patients with treated brain metastases are eligible if neurologically stable without glucocorticoid therapy after the stated washout period from radiation thera"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 12,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) "
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) "
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Patients with treated brain metastases are eligible if neurologically stable without glucocorticoid therapy after the stated washout period from radiation thera"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 12,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "egfr_variant_in",
+          "polarity": "exclusion",
+          "value": "s:egfr exon 20 insertions"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 6,
+      "rejected": 6,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIIB,IV,IVA,IVB"
+        },
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:exon 19 deletion, l858r, e709x, g719x, exon 19 insertions, l861q, s768i"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-vegf agent"
+        },
+        {
+          "kind": "creatinine_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        }
+      ],
+      "normalizerTypedCount": 8
+    }
+  },
+  "runA": {
+    "typedEmitted": 16,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 5695
+  },
+  "runB": {
+    "typedEmitted": 15,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 17713
+  },
+  "ms": 31443,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04181060",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04181060-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have advanced disease, defined as - either stage IV disease, stage IIIB disease not amenable to definitive multi-modality therapy, or recurrent disease after a prior diagnosis of stage I-III disease. All staging is via the American Joint Committee on Cancer (AJCC)/International Association for the Study of Lung Cancer (IASLC) 8th edition staging criteria",
+        "stages": [
+          "IIIB",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT04181060-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have a pathologically-confirmed diagnosis of non-squamous, non-small cell lung cancer (NSCLC)",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT04181060-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have somatic activating sensitizing mutation in EGFR (e.g. but not limited to Exon 19 deletion, L858R, E709X, G719X, exon 19 insertions, L861Q, S768I).",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04181060-egfr-var",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Exon 19 deletion, L858R, E709X, G719X, exon 19 insertions, L861Q, S768I",
+        "stringValue": "Exon 19 deletion, L858R, E709X, G719X, exon 19 insertions, L861Q, S768I"
+      },
+      {
+        "id": "NCT04181060-egfr-excl",
+        "kind": "egfr_variant_in",
+        "polarity": "exclusion",
+        "sourceText": "Patients with non-sensitizing mutations in EGFR (EGFR exon 20 insertions) are not eligible.",
+        "stringValue": "EGFR exon 20 insertions"
+      },
+      {
+        "id": "NCT04181060-prior-vegf",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have received any prior treatment with an anti-VEGF agent",
+        "stringValue": "anti-VEGF agent"
+      },
+      {
+        "id": "NCT04181060-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patient must be ≥ 18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04181060-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT04181060-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count >= 1,500/mcL (obtained =< 14 days prior to randomization)",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT04181060-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets >= 100,000/mcL (obtained =< 14 days prior to randomization)",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT04181060-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin >= 9 g/dL (obtained =< 14 days prior to randomization)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT04181060-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin and creatinine =< 1.5 x institutional upper limit of normal (ULN) (obtained =< 14 days prior to randomization)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT04181060-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin and creatinine =< 1.5 x institutional upper limit of normal (ULN) (obtained =< 14 days prior to randomization)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT04181060-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN (obtained =< 14 days prior to randomization)",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT04181060-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN (obtained =< 14 days prior to randomization)",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT04181060-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Patients with treated brain metastases are eligible if neurologically stable without glucocorticoid therapy after the stated washout period from radiation therapy (RT) or surgery provided the metastatic lesions are non-hemorrhagic AND Patients with untreated brain metastases or leptomeningeal disease are eligible if the treating physician determines that immediate CNS specific treatment is not required provided the metastatic lesions are non-hemorrhagic and are neurologically stable without glucocorticoid therapy",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable",
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04181060-prior-osimertinib-exception",
+        "polarity": "inclusion",
+        "sourceText": "Prior treatment with an EGFR TKI is not allowed, however if a candidate for this study has already started osimertinib within 21 days prior to randomization, the exact osimertinib start date is known, and the patient had the required study baseline imaging completed prior to the osimertinib start date, the patient will be eligible",
+        "reasonFuzzy": "Complex exception regarding prior osimertinib start within a 21-day window cannot be expressed with a standard typed rule."
+      },
+      {
+        "id": "NCT04181060-radiation-washout",
+        "polarity": "inclusion",
+        "sourceText": "Radiation (limited field stereotactic radiation or conventional radiation) must have been completed at least one week prior to study drug initiation and more extensive field radiation (i.e., whole-brain radiotherapy [WBRT]) must have been completed at least two weeks prior to drug initiation",
+        "reasonFuzzy": "Washout windows depending on the type and field of radiation are too complex for a single typed check."
+      },
+      {
+        "id": "NCT04181060-vegf-risk",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have any risk factors for anti-VEGF administration, specifically, hemoptysis, active cardiovascular disease, uncontrolled hypertension, significant proteinuria (screening urinalysis > 300 mg/dl) and tumor invading major blood vessels",
+        "reasonFuzzy": "Combines multiple risk factors and qualitative criteria like tumor invasion into a single exclusion rule."
+      },
+      {
+        "id": "NCT04181060-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have measurable disease. Baseline measurements of sites of disease must be obtained within 4 weeks prior to study randomization.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT04181060-prior-metastatic-systemic",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have had any prior systemic treatment for metastatic disease",
+        "reasonFuzzy": "Exclusion of prior systemic treatment specifically for metastatic disease interacts with the complex prior osimertinib start rules."
+      },
+      {
+        "id": "NCT04181060-investigator-discretion",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have any evidence of severe or uncontrolled systemic diseases, including uncontrolled hypertension and active bleeding diatheses, which in the investigator's opinion makes it challenging for the patient to participate in the study.",
+        "reasonFuzzy": "Relies entirely on investigator opinion and clinical judgment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04181060",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04181060-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have a pathologically-confirmed diagnosis of non-squamous, non-small cell lung cancer (NSCLC)",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT04181060-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have advanced disease, defined as - either stage IV disease, stage IIIB disease not amenable to definitive multi-modality therapy, or recurrent disease after a prior diagnosis of stage I-III disease.",
+        "stages": [
+          "IIIB",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT04181060-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have somatic activating sensitizing mutation in EGFR (e.g. but not limited to Exon 19 deletion, L858R, E709X, G719X, exon 19 insertions, L861Q, S768I).",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04181060-egfr-variant",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have somatic activating sensitizing mutation in EGFR (e.g. but not limited to Exon 19 deletion, L858R, E709X, G719X, exon 19 insertions, L861Q, S768I).",
+        "stringValue": "Exon 19 deletion, L858R, E709X, G719X, exon 19 insertions, L861Q, S768I"
+      },
+      {
+        "id": "NCT04181060-prior-vegf",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have received any prior treatment with an anti-VEGF agent",
+        "stringValue": "anti-VEGF agent"
+      },
+      {
+        "id": "NCT04181060-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patient must be ≥ 18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04181060-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT04181060-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count >= 1,500/mcL (obtained =< 14 days prior to randomization)",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT04181060-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets >= 100,000/mcL (obtained =< 14 days prior to randomization)",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT04181060-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin >= 9 g/dL (obtained =< 14 days prior to randomization)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT04181060-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin and creatinine =< 1.5 x institutional upper limit of normal (ULN) (obtained =< 14 days prior to randomization)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT04181060-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin and creatinine =< 1.5 x institutional upper limit of normal (ULN) (obtained =< 14 days prior to randomization)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT04181060-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN (obtained =< 14 days prior to randomization)",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT04181060-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN (obtained =< 14 days prior to randomization)",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT04181060-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Patients with treated brain metastases are eligible if neurologically stable without glucocorticoid therapy after the stated washout period from radiation therapy (RT) or surgery provided the metastatic lesions are non-hemorrhagic And Patients with untreated brain metastases or leptomeningeal disease are eligible if the treating physician determines that immediate CNS specific treatment is not required provided the metastatic lesions are non-hemorrhagic and are neurologically stable without glucocorticoid therapy",
+        "allowedBrainMets": [
+          "treated_stable",
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04181060-egfr-exclusion",
+        "polarity": "exclusion",
+        "sourceText": "Patients with non-sensitizing mutations in EGFR (EGFR exon 20 insertions) are not eligible.",
+        "reasonFuzzy": "Specific non-sensitizing variant exclusions cannot be captured by standard presence flags."
+      },
+      {
+        "id": "NCT04181060-prior-tki-exception",
+        "polarity": "inclusion",
+        "sourceText": "Prior treatment with an EGFR TKI is not allowed, however if a candidate for this study has already started osimertinib within 21 days prior to randomization, the exact osimertinib start date is known, and the patient had the required study baseline imaging completed prior to the osimertinib start date, the patient will be eligible",
+        "reasonFuzzy": "Conditional exception window for osimertinib prior treatment is complex and study part-dependent."
+      },
+      {
+        "id": "NCT04181060-radiation",
+        "polarity": "inclusion",
+        "sourceText": "Radiation (limited field stereotactic radiation or conventional radiation) must have been completed at least one week prior to study drug initiation and more extensive field radiation (i.e., whole-brain radiotherapy [WBRT]) must have been completed at least two weeks prior to drug initiation",
+        "reasonFuzzy": "Complex washout periods for prior radiation depending on field extent."
+      },
+      {
+        "id": "NCT04181060-vegf-risk",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have any risk factors for anti-VEGF administration, specifically, hemoptysis, active cardiovascular disease, uncontrolled hypertension, significant proteinuria (screening urinalysis > 300 mg/dl) and tumor invading major blood vessels",
+        "reasonFuzzy": "Compound exclusion for anti-VEGF risk factors involving multiple clinical conditions and a specific urinalysis threshold."
+      },
+      {
+        "id": "NCT04181060-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have measurable disease. Baseline measurements of sites of disease must be obtained within 4 weeks prior to study randomization.",
+        "reasonFuzzy": "Measurable disease by RECIST/imaging is subjective."
+      },
+      {
+        "id": "NCT04181060-prior-metastatic",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have had any prior systemic treatment for metastatic disease",
+        "reasonFuzzy": "Prior systemic treatment specifically for metastatic disease requires complex context parsing."
+      },
+      {
+        "id": "NCT04181060-leukocytes",
+        "polarity": "inclusion",
+        "sourceText": "Leukocytes >= 3,000/mcL (obtained =< 14 days prior to randomization)",
+        "reasonFuzzy": "Leukocyte count is not among the allowed typed kinds."
+      },
+      {
+        "id": "NCT04181060-investigator-opinion",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have any evidence of severe or uncontrolled systemic diseases, including uncontrolled hypertension and active bleeding diatheses, which in the investigator's opinion makes it challenging for the patient to participate in the study.",
+        "reasonFuzzy": "Relies on investigator judgment."
+      },
+      {
+        "id": "NCT04181060-qtc",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have mean resting corrected QT interval (QTc) > 470 msec obtained from 3 electrocardiograms (ECGs)",
+        "reasonFuzzy": "QTc threshold rules are not among the allowed typed kinds."
+      }
+    ]
+  }
+}

@@ -1,0 +1,359 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07688577",
+  "briefTitle": "XTX501 in Patients With Metastatic Non-Small Cell Lung Cancer and Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T05:59:16.029Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07688577-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07688577-egfr-excl",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Tumor must have been assessed for EGFR and ALK per local standard of practice; patients with these driver mutations are excluded.",
+      "presence": "present",
+      "evidence_quote": "Tumor must have been assessed for EGFR and ALK per local standard of practice; patients with these driver mutations are excluded.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07688577-alk-excl",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Tumor must have been assessed for EGFR and ALK per local standard of practice; patients with these driver mutations are excluded.",
+      "presence": "present",
+      "evidence_quote": "Tumor must have been assessed for EGFR and ALK per local standard of practice; patients with these driver mutations are excluded.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07688577-ros1-excl",
+      "kind": "ros1_status",
+      "polarity": "exclusion",
+      "sourceText": "Patients with tumors known to have the following alterations are excluded: ROS1, RET, MET, HER-2, NTRK 1/2/3.",
+      "presence": "present",
+      "evidence_quote": "Patients with tumors known to have the following alterations are excluded: ROS1, RET, MET, HER-2, NTRK 1/2/3.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07688577-pdl1-req",
+      "kind": "prior_therapy_required",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have previously derived clinical benefit from a PD-1/PD-L1 inhibitor or PD-1/PDL-1 bispecific without progression for at least 6 months.",
+      "stringValue": "PD-1/PD-L1 inhibitor",
+      "evidence_quote": "Patients must have previously derived clinical benefit from a PD-1/PD-L1 inhibitor or PD-1/PDL-1 bispecific without progression for at least 6 months.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07688577-il2-excl",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with IL-2",
+      "stringValue": "IL-2",
+      "evidence_quote": "Prior treatment with IL-2",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07688577-brain",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Active CNS metastases",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Active CNS metastases",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07688577-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease at baseline per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07688577-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function",
+      "reasonFuzzy": "General adequate organ function without specific lab thresholds cannot be mapped to individual typed lab checks."
+    },
+    {
+      "id": "NCT07688577-stage",
+      "polarity": "inclusion",
+      "sourceText": "Must have histologically confirmed metastatic NSCLC.",
+      "reasonFuzzy": "Metastatic NSCLC indicates advanced stage but lacks an explicit stage list for stage_in."
+    },
+    {
+      "id": "NCT07688577-other-mutations",
+      "polarity": "exclusion",
+      "sourceText": "Patients with tumors known to have the following alterations are excluded: ROS1, RET, MET, HER-2, NTRK 1/2/3.",
+      "reasonFuzzy": "There are no typed checks available for RET, MET, HER-2, or NTRK mutations."
+    },
+    {
+      "id": "NCT07688577-pulmonary",
+      "polarity": "exclusion",
+      "sourceText": "History of significant pulmonary disease",
+      "reasonFuzzy": "Significant pulmonary disease is an investigator-assessed judgment and not a typed check."
+    },
+    {
+      "id": "NCT07688577-cardiovascular",
+      "polarity": "exclusion",
+      "sourceText": "History of clinically significant cardiovascular disease",
+      "reasonFuzzy": "Clinically significant cardiovascular disease is a judgment-based exclusion, not a typed check."
+    },
+    {
+      "id": "NCT07688577-pregnant",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant or breastfeeding",
+      "reasonFuzzy": "Pregnancy status is not among the allowed typed kinds."
+    },
+    {
+      "id": "NCT07688577-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease at baseline per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07688577-stage",
+      "polarity": "inclusion",
+      "sourceText": "Must have histologically confirmed metastatic NSCLC.",
+      "reasonFuzzy": "Metastatic NSCLC indicates stage IV but does not provide an explicit stage list for stage_in."
+    },
+    {
+      "id": "NCT07688577-exclusions-other",
+      "polarity": "exclusion",
+      "sourceText": "Patients with tumors known to have the following alterations are excluded: ROS1, RET, MET, HER-2, NTRK 1/2/3.",
+      "reasonFuzzy": "Typed kinds are not available for RET, MET, HER-2, or NTRK alterations."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 7,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 7,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 7,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 7,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 8
+    }
+  },
+  "runA": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 5876
+  },
+  "runB": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3102
+  },
+  "ms": 16971,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07688577",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07688577-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07688577-egfr-excl",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Tumor must have been assessed for EGFR and ALK per local standard of practice; patients with these driver mutations are excluded.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07688577-alk-excl",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Tumor must have been assessed for EGFR and ALK per local standard of practice; patients with these driver mutations are excluded.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07688577-ros1-excl",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with tumors known to have the following alterations are excluded: ROS1, RET, MET, HER-2, NTRK 1/2/3.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07688577-pdl1-req",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have previously derived clinical benefit from a PD-1/PD-L1 inhibitor or PD-1/PDL-1 bispecific without progression for at least 6 months.",
+        "stringValue": "PD-1/PD-L1 inhibitor"
+      },
+      {
+        "id": "NCT07688577-il2-excl",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with IL-2",
+        "stringValue": "IL-2"
+      },
+      {
+        "id": "NCT07688577-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active CNS metastases",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07688577-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease at baseline per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07688577-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function",
+        "reasonFuzzy": "General adequate organ function without specific lab thresholds cannot be mapped to individual typed lab checks."
+      },
+      {
+        "id": "NCT07688577-stage",
+        "polarity": "inclusion",
+        "sourceText": "Must have histologically confirmed metastatic NSCLC.",
+        "reasonFuzzy": "Metastatic NSCLC indicates advanced stage but lacks an explicit stage list for stage_in."
+      },
+      {
+        "id": "NCT07688577-other-mutations",
+        "polarity": "exclusion",
+        "sourceText": "Patients with tumors known to have the following alterations are excluded: ROS1, RET, MET, HER-2, NTRK 1/2/3.",
+        "reasonFuzzy": "There are no typed checks available for RET, MET, HER-2, or NTRK mutations."
+      },
+      {
+        "id": "NCT07688577-pulmonary",
+        "polarity": "exclusion",
+        "sourceText": "History of significant pulmonary disease",
+        "reasonFuzzy": "Significant pulmonary disease is an investigator-assessed judgment and not a typed check."
+      },
+      {
+        "id": "NCT07688577-cardiovascular",
+        "polarity": "exclusion",
+        "sourceText": "History of clinically significant cardiovascular disease",
+        "reasonFuzzy": "Clinically significant cardiovascular disease is a judgment-based exclusion, not a typed check."
+      },
+      {
+        "id": "NCT07688577-pregnant",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant or breastfeeding",
+        "reasonFuzzy": "Pregnancy status is not among the allowed typed kinds."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07688577",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07688577-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07688577-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Tumor must have been assessed for EGFR and ALK per local standard of practice; patients with these driver mutations are excluded.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07688577-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Tumor must have been assessed for EGFR and ALK per local standard of practice; patients with these driver mutations are excluded.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07688577-ros1",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with tumors known to have the following alterations are excluded: ROS1, RET, MET, HER-2, NTRK 1/2/3.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07688577-pdl1",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have previously derived clinical benefit from a PD-1/PD-L1 inhibitor or PD-1/PDL-1 bispecific without progression for at least 6 months.",
+        "stringValue": "PD-1/PD-L1 inhibitor or PD-1/PDL-1 bispecific"
+      },
+      {
+        "id": "NCT07688577-prior-il2",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with IL-2",
+        "stringValue": "IL-2"
+      },
+      {
+        "id": "NCT07688577-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active CNS metastases",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07688577-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease at baseline per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07688577-stage",
+        "polarity": "inclusion",
+        "sourceText": "Must have histologically confirmed metastatic NSCLC.",
+        "reasonFuzzy": "Metastatic NSCLC indicates stage IV but does not provide an explicit stage list for stage_in."
+      },
+      {
+        "id": "NCT07688577-exclusions-other",
+        "polarity": "exclusion",
+        "sourceText": "Patients with tumors known to have the following alterations are excluded: ROS1, RET, MET, HER-2, NTRK 1/2/3.",
+        "reasonFuzzy": "Typed kinds are not available for RET, MET, HER-2, or NTRK alterations."
+      }
+    ]
+  }
+}

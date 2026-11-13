@@ -1,0 +1,529 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07286149",
+  "briefTitle": "A Clinical Study of MK-1084 With Other Treatments for Non-small Cell Lung Cancer (MK-3475-01F)",
+  "parsedAt": "2026-11-12T11:07:26.847Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07286149-brain",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07286149-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Has provided tumor tissue for biomarker analysis from an archival sample or a newly obtained core or excisional biopsy of a tumor lesion not previously irradiated",
+      "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is a judgment-based criterion."
+    },
+    {
+      "id": "NCT07286149-hiv",
+      "polarity": "inclusion",
+      "sourceText": "Participants with human immunodeficiency virus (HIV) infection must have well-controlled HIV on antiretroviral therapy (ART) per protocol",
+      "reasonFuzzy": "Well-controlled HIV status is a clinical judgment, not a typed check."
+    },
+    {
+      "id": "NCT07286149-sclc",
+      "polarity": "exclusion",
+      "sourceText": "Has a diagnosis of small cell lung cancer or, for mixed tumors, presence of small cell elements",
+      "reasonFuzzy": "Exclusion of small cell histology in mixed tumors is not a standard histology_in check."
+    },
+    {
+      "id": "NCT07286149-pulmonary",
+      "polarity": "exclusion",
+      "sourceText": "Has clinically severe pulmonary compromise resulting from intercurrent pulmonary illnesses",
+      "reasonFuzzy": "Clinically severe pulmonary compromise is subjective and investigator-assessed."
+    },
+    {
+      "id": "NCT07286149-ibd",
+      "polarity": "exclusion",
+      "sourceText": "Has active inflammatory bowel disease requiring immunosuppressive medication or previous history of inflammatory bowel disease",
+      "reasonFuzzy": "Active IBD or history of IBD is not a typed clinical check."
+    },
+    {
+      "id": "NCT07286149-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "Has evidence of any leptomeningeal disease",
+      "reasonFuzzy": "Leptomeningeal disease evaluation is imaging-dependent and subjective."
+    },
+    {
+      "id": "NCT07286149-cardio",
+      "polarity": "exclusion",
+      "sourceText": "Has uncontrolled or significant cardiovascular disorder or cerebrovascular disease prior to allocation/randomization",
+      "reasonFuzzy": "Uncontrolled or significant cardiovascular disorder is investigator-assessed."
+    },
+    {
+      "id": "NCT07286149-eye",
+      "polarity": "exclusion",
+      "sourceText": "Has one or more of the following ophthalmological conditions: a) Clinically significant corneal disease b) history of documented severe dry eye syndrome, severe Meibomian gland disease and/or blepharitis",
+      "reasonFuzzy": "Ophthalmological conditions are evaluated via clinical judgment."
+    },
+    {
+      "id": "NCT07286149-hivkaposi",
+      "polarity": "exclusion",
+      "sourceText": "HIV-infected participants with a history of Kaposi's sarcoma and/or Multicentric Castleman's Disease",
+      "reasonFuzzy": "Specific HIV complications are not standard typed checks."
+    },
+    {
+      "id": "NCT07286149-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Has received a live or live-attenuated vaccine within 30 days before the first dose of study intervention",
+      "reasonFuzzy": "Washout window for a live vaccine is not a standard lab or simple typed exclusion."
+    },
+    {
+      "id": "NCT07286149-immuno",
+      "polarity": "exclusion",
+      "sourceText": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy or any other form of immunosuppressive therapy within 7 days prior to the first dose of study intervention",
+      "reasonFuzzy": "Immunosuppressive therapy washout and chronic steroid use are judgment-based."
+    },
+    {
+      "id": "NCT07286149-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Has known additional malignancy that is progressing or has required active treatment within the past 3 years",
+      "reasonFuzzy": "Additional prior malignancy history is complex and investigator-assessed."
+    },
+    {
+      "id": "NCT07286149-ild",
+      "polarity": "exclusion",
+      "sourceText": "Has any history of interstitial lung disease (ILD)/pneumonitis irrespective of steroid use or current ILD, or suspected ILD",
+      "reasonFuzzy": "History of ILD/pneumonitis is a complex clinical safety exclusion."
+    },
+    {
+      "id": "NCT07286149-infection",
+      "polarity": "exclusion",
+      "sourceText": "Has an active infection requiring systemic therapy",
+      "reasonFuzzy": "Active infection requiring systemic therapy is clinically judged."
+    },
+    {
+      "id": "NCT07286149-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Has not adequately recovered from major surgery or has ongoing surgical complications",
+      "reasonFuzzy": "Surgical recovery is a subjective clinical evaluation."
+    },
+    {
+      "id": "NCT07286149-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07286149-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Has provided tumor tissue for biomarker analysis from an archival sample or a newly obtained core or excisional biopsy of a tumor lesion not previously irradiated",
+      "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is a judgment-based item."
+    },
+    {
+      "id": "NCT07286149-hiv",
+      "polarity": "inclusion",
+      "sourceText": "Participants with human immunodeficiency virus (HIV) infection must have well-controlled HIV on antiretroviral therapy (ART) per protocol",
+      "reasonFuzzy": "Controlled HIV criteria involve clinical protocol assessments rather than a single typed cutoff."
+    },
+    {
+      "id": "NCT07286149-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07286149-histology",
+      "polarity": "inclusion",
+      "sourceText": "Has histologically or cytologically confirmed diagnosis of advanced or metastatic non-squamous non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07286149-kras",
+      "polarity": "inclusion",
+      "sourceText": "Has tumor tissue or circulating tumor deoxyribonucleic acid (ctDNA) that demonstrates the presence of Kirsten rat sarcoma viral oncogene (KRAS) mutation of glycine to cysteine at codon 12 (G12C) mutations",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07286149-krasvar",
+      "polarity": "inclusion",
+      "sourceText": "Has tumor tissue or circulating tumor deoxyribonucleic acid (ctDNA) that demonstrates the presence of Kirsten rat sarcoma viral oncogene (KRAS) mutation of glycine to cysteine at codon 12 (G12C) mutations",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07286149-lines",
+      "polarity": "inclusion",
+      "sourceText": "Has documented disease progression after receiving 1-2 prior lines of programmed cell death protein 1 (PD-1)/programmed death-ligand 1 (PD-L1) therapy and platinum-based chemotherapy",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07286149-linesmax",
+      "polarity": "inclusion",
+      "sourceText": "Has documented disease progression after receiving 1-2 prior lines of programmed cell death protein 1 (PD-1)/programmed death-ligand 1 (PD-L1) therapy and platinum-based chemotherapy",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07286149-priora",
+      "polarity": "inclusion",
+      "sourceText": "Has documented disease progression after receiving 1-2 prior lines of programmed cell death protein 1 (PD-1)/programmed death-ligand 1 (PD-L1) therapy and platinum-based chemotherapy",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07286149-priorb",
+      "polarity": "inclusion",
+      "sourceText": "Has documented disease progression after receiving 1-2 prior lines of programmed cell death protein 1 (PD-1)/programmed death-ligand 1 (PD-L1) therapy and platinum-based chemotherapy",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 8,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 8,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 8,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 7,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        },
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12c"
+        },
+        {
+          "kind": "prior_lines_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "value": "n:2"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:pd-1"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:platinum-based chemotherapy"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 9,
+    "fuzzyEmitted": 15,
+    "attempts": 1,
+    "ms": 13251
+  },
+  "runB": {
+    "typedEmitted": 9,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 7944
+  },
+  "ms": 29165,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07286149",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07286149-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Has histologically or cytologically confirmed diagnosis of advanced or metastatic non-squamous non-small cell lung cancer (NSCLC)",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07286149-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Has tumor tissue or circulating tumor deoxyribonucleic acid (ctDNA) that demonstrates the presence of Kirsten rat sarcoma viral oncogene (KRAS) mutation of glycine to cysteine at codon 12 (G12C) mutations",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07286149-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Has tumor tissue or circulating tumor deoxyribonucleic acid (ctDNA) that demonstrates the presence of Kirsten rat sarcoma viral oncogene (KRAS) mutation of glycine to cysteine at codon 12 (G12C) mutations",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT07286149-lines",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Has documented disease progression after receiving 1-2 prior lines of programmed cell death protein 1 (PD-1)/programmed death-ligand 1 (PD-L1) therapy and platinum-based chemotherapy",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07286149-linesmax",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Has documented disease progression after receiving 1-2 prior lines of programmed cell death protein 1 (PD-1)/programmed death-ligand 1 (PD-L1) therapy and platinum-based chemotherapy",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07286149-priora",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Has documented disease progression after receiving 1-2 prior lines of programmed cell death protein 1 (PD-1)/programmed death-ligand 1 (PD-L1) therapy and platinum-based chemotherapy",
+        "stringValue": "PD-1"
+      },
+      {
+        "id": "NCT07286149-priorb",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Has documented disease progression after receiving 1-2 prior lines of programmed cell death protein 1 (PD-1)/programmed death-ligand 1 (PD-L1) therapy and platinum-based chemotherapy",
+        "stringValue": "platinum-based chemotherapy"
+      },
+      {
+        "id": "NCT07286149-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07286149-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07286149-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Has provided tumor tissue for biomarker analysis from an archival sample or a newly obtained core or excisional biopsy of a tumor lesion not previously irradiated",
+        "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is a judgment-based criterion."
+      },
+      {
+        "id": "NCT07286149-hiv",
+        "polarity": "inclusion",
+        "sourceText": "Participants with human immunodeficiency virus (HIV) infection must have well-controlled HIV on antiretroviral therapy (ART) per protocol",
+        "reasonFuzzy": "Well-controlled HIV status is a clinical judgment, not a typed check."
+      },
+      {
+        "id": "NCT07286149-sclc",
+        "polarity": "exclusion",
+        "sourceText": "Has a diagnosis of small cell lung cancer or, for mixed tumors, presence of small cell elements",
+        "reasonFuzzy": "Exclusion of small cell histology in mixed tumors is not a standard histology_in check."
+      },
+      {
+        "id": "NCT07286149-pulmonary",
+        "polarity": "exclusion",
+        "sourceText": "Has clinically severe pulmonary compromise resulting from intercurrent pulmonary illnesses",
+        "reasonFuzzy": "Clinically severe pulmonary compromise is subjective and investigator-assessed."
+      },
+      {
+        "id": "NCT07286149-ibd",
+        "polarity": "exclusion",
+        "sourceText": "Has active inflammatory bowel disease requiring immunosuppressive medication or previous history of inflammatory bowel disease",
+        "reasonFuzzy": "Active IBD or history of IBD is not a typed clinical check."
+      },
+      {
+        "id": "NCT07286149-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "Has evidence of any leptomeningeal disease",
+        "reasonFuzzy": "Leptomeningeal disease evaluation is imaging-dependent and subjective."
+      },
+      {
+        "id": "NCT07286149-cardio",
+        "polarity": "exclusion",
+        "sourceText": "Has uncontrolled or significant cardiovascular disorder or cerebrovascular disease prior to allocation/randomization",
+        "reasonFuzzy": "Uncontrolled or significant cardiovascular disorder is investigator-assessed."
+      },
+      {
+        "id": "NCT07286149-eye",
+        "polarity": "exclusion",
+        "sourceText": "Has one or more of the following ophthalmological conditions: a) Clinically significant corneal disease b) history of documented severe dry eye syndrome, severe Meibomian gland disease and/or blepharitis",
+        "reasonFuzzy": "Ophthalmological conditions are evaluated via clinical judgment."
+      },
+      {
+        "id": "NCT07286149-hivkaposi",
+        "polarity": "exclusion",
+        "sourceText": "HIV-infected participants with a history of Kaposi's sarcoma and/or Multicentric Castleman's Disease",
+        "reasonFuzzy": "Specific HIV complications are not standard typed checks."
+      },
+      {
+        "id": "NCT07286149-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Has received a live or live-attenuated vaccine within 30 days before the first dose of study intervention",
+        "reasonFuzzy": "Washout window for a live vaccine is not a standard lab or simple typed exclusion."
+      },
+      {
+        "id": "NCT07286149-immuno",
+        "polarity": "exclusion",
+        "sourceText": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy or any other form of immunosuppressive therapy within 7 days prior to the first dose of study intervention",
+        "reasonFuzzy": "Immunosuppressive therapy washout and chronic steroid use are judgment-based."
+      },
+      {
+        "id": "NCT07286149-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Has known additional malignancy that is progressing or has required active treatment within the past 3 years",
+        "reasonFuzzy": "Additional prior malignancy history is complex and investigator-assessed."
+      },
+      {
+        "id": "NCT07286149-ild",
+        "polarity": "exclusion",
+        "sourceText": "Has any history of interstitial lung disease (ILD)/pneumonitis irrespective of steroid use or current ILD, or suspected ILD",
+        "reasonFuzzy": "History of ILD/pneumonitis is a complex clinical safety exclusion."
+      },
+      {
+        "id": "NCT07286149-infection",
+        "polarity": "exclusion",
+        "sourceText": "Has an active infection requiring systemic therapy",
+        "reasonFuzzy": "Active infection requiring systemic therapy is clinically judged."
+      },
+      {
+        "id": "NCT07286149-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Has not adequately recovered from major surgery or has ongoing surgical complications",
+        "reasonFuzzy": "Surgical recovery is a subjective clinical evaluation."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07286149",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07286149-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Has histologically or cytologically confirmed diagnosis of advanced or metastatic non-squamous non-small cell lung cancer (NSCLC)",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07286149-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Has tumor tissue or circulating tumor deoxyribonucleic acid (ctDNA) that demonstrates the presence of Kirsten rat sarcoma viral oncogene (KRAS) mutation of glycine to cysteine at codon 12 (G12C) mutations",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07286149-kras-variant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Has tumor tissue or circulating tumor deoxyribonucleic acid (ctDNA) that demonstrates the presence of Kirsten rat sarcoma viral oncogene (KRAS) mutation of glycine to cysteine at codon 12 (G12C) mutations",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT07286149-prior-lines",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Has documented disease progression after receiving 1-2 prior lines of programmed cell death protein 1 (PD-1)/programmed death-ligand 1 (PD-L1) therapy and platinum-based chemotherapy",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07286149-prior-lines-max",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Has documented disease progression after receiving 1-2 prior lines of programmed cell death protein 1 (PD-1)/programmed death-ligand 1 (PD-L1) therapy and platinum-based chemotherapy",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07286149-prior-therapy-pdl1",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Has documented disease progression after receiving 1-2 prior lines of programmed cell death protein 1 (PD-1)/programmed death-ligand 1 (PD-L1) therapy and platinum-based chemotherapy",
+        "stringValue": "programmed cell death protein 1 (PD-1)/programmed death-ligand 1 (PD-L1) therapy"
+      },
+      {
+        "id": "NCT07286149-prior-therapy-platinum",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Has documented disease progression after receiving 1-2 prior lines of programmed cell death protein 1 (PD-1)/programmed death-ligand 1 (PD-L1) therapy and platinum-based chemotherapy",
+        "stringValue": "platinum-based chemotherapy"
+      },
+      {
+        "id": "NCT07286149-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07286149-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07286149-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Has provided tumor tissue for biomarker analysis from an archival sample or a newly obtained core or excisional biopsy of a tumor lesion not previously irradiated",
+        "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is a judgment-based item."
+      },
+      {
+        "id": "NCT07286149-hiv",
+        "polarity": "inclusion",
+        "sourceText": "Participants with human immunodeficiency virus (HIV) infection must have well-controlled HIV on antiretroviral therapy (ART) per protocol",
+        "reasonFuzzy": "Controlled HIV criteria involve clinical protocol assessments rather than a single typed cutoff."
+      }
+    ]
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07357597",
+  "briefTitle": "An Open-label, Single-arm Study of Prophylaxis for Datopotamab Deruxtecan (Dato-DXd) -Related Stomatitis in Eligible Patients With Metastatic or Inoperable Locally Recurrent Breast Cancer or Locally Advanced or Metastatic Epidermal Growth Factor Receptor-Mutated Non-small Cell Lung Cancer.",
+  "parsedAt": "2026-11-12T13:19:42.617Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07357597-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Patient must be ≥ 18 years, at the time of signing the informed consent.",
+      "numberValue": 18,
+      "evidence_quote": "Patient must be ≥ 18 years, at the time of signing the informed consent.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07357597-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07357597-hgb",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Has adequate bone marrow function (hemoglobin ≥ 9 g/dL; red blood cell/plasma transfusion is not allowed within 1 week prior to screening assessment).",
+      "numberValue": 9,
+      "stages": [],
+      "stringValue": "",
+      "evidence_quote": "Has adequate bone marrow function (hemoglobin ≥ 9 g/dL; red blood cell/plasma transfusion is not allowed within 1 week prior to screening assessment).",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07357597-disease",
+      "polarity": "inclusion",
+      "sourceText": "Patients with locally advanced or metastatic EGFRm NSCLC who have received prior EGFR-directed therapy and platinum-based chemotherapy.",
+      "reasonFuzzy": "The trial enrols multiple populations including breast cancer and NSCLC, and includes complex prior therapy and biomarker combinations."
+    },
+    {
+      "id": "NCT07357597-compliance",
+      "polarity": "inclusion",
+      "sourceText": "Is willing to comply with use of prophylactic dexamethasone mouthwash at the start of first infusion and throughout Dato-DXd administration.",
+      "reasonFuzzy": "Willingness to comply with mouthwash is a behavioral requirement, not a typed clinical check."
+    },
+    {
+      "id": "NCT07357597-investigator",
+      "polarity": "exclusion",
+      "sourceText": "As judged by the investigator, any evidence of cardiac, pulmonary, vascular, and other renal conditions which in the investigator's opinion makes it undesirable for the patient to participate in the study.",
+      "reasonFuzzy": "Investigator judgment is subjective."
+    },
+    {
+      "id": "NCT07357597-stomatitis",
+      "polarity": "exclusion",
+      "sourceText": "Has any-grade active and uncontrolled stomatitis or mouth ulcers at baseline (participants with prior medical history of stomatitis or mouth ulcers are eligible).",
+      "reasonFuzzy": "Active and uncontrolled stomatitis is a clinical condition and not a typed check."
+    },
+    {
+      "id": "NCT07357597-breast-cancer",
+      "polarity": "inclusion",
+      "sourceText": "Patients with unresectable or metastatic HR+/HER2- (IHC 0, IHC 1+, or IHC 2+/ISH-) breast cancer who have received prior ET and chemotherapy for unresectable or metastatic disease.",
+      "reasonFuzzy": "This criterion relates to breast cancer populations, which are separate from NSCLC and include complex hormone receptor and HER2 criteria."
+    },
+    {
+      "id": "NCT07357597-tnbc",
+      "polarity": "inclusion",
+      "sourceText": "Adult patients with unresectable or metastatic TNBC who are not candidates for PD-1/PD-L1 inhibitor therapy. Participants will be enrolled upon FDA approval on use of Dato-DXd for this indication.",
+      "reasonFuzzy": "This criterion applies to triple-negative breast cancer (TNBC) with conditional FDA approval requirements."
+    },
+    {
+      "id": "NCT07357597-compliance",
+      "polarity": "inclusion",
+      "sourceText": "Is willing to comply with use of prophylactic dexamethasone mouthwash at the start of first infusion and throughout Dato-DXd administration.",
+      "reasonFuzzy": "Willingness to comply with treatment/prophylaxis is a subjective protocol adherence requirement."
+    },
+    {
+      "id": "NCT07357597-cardiac-cond",
+      "polarity": "exclusion",
+      "sourceText": "As judged by the investigator, any evidence of cardiac, pulmonary, vascular, and other renal conditions which in the investigator's opinion makes it undesirable for the patient to participate in the study.",
+      "reasonFuzzy": "Investigator judgment and subjective evaluation of comorbidities."
+    },
+    {
+      "id": "NCT07357597-stomatitis",
+      "polarity": "exclusion",
+      "sourceText": "Has any-grade active and uncontrolled stomatitis or mouth ulcers at baseline (participants with prior medical history of stomatitis or mouth ulcers are eligible).",
+      "reasonFuzzy": "Active stomatitis/mouth ulcer assessment is not mapped to a standard typed condition."
+    },
+    {
+      "id": "NCT07357597-infection",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled infection requiring IV antibiotics, antivirals, or antifungals; suspected infections (eg, prodromal symptoms); or inability to rule out infections (participants with localized fungal infections of skin or nails are eligible).",
+      "reasonFuzzy": "Uncontrolled infection requiring specific therapies and investigator discretion over suspected infections."
+    },
+    {
+      "id": "NCT07357597-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Patients with locally advanced or metastatic EGFRm NSCLC who have received prior EGFR-directed therapy and platinum-based chemotherapy.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07357597-prior-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Patients with locally advanced or metastatic EGFRm NSCLC who have received prior EGFR-directed therapy and platinum-based chemotherapy.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07357597-prior-plat",
+      "polarity": "inclusion",
+      "sourceText": "Patients with locally advanced or metastatic EGFRm NSCLC who have received prior EGFR-directed therapy and platinum-based chemotherapy.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 3,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:egfr-directed therapy"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:platinum-based chemotherapy"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 6050
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 3584
+  },
+  "ms": 17616,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07357597",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07357597-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patient must be ≥ 18 years, at the time of signing the informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07357597-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07357597-hgb",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Has adequate bone marrow function (hemoglobin ≥ 9 g/dL; red blood cell/plasma transfusion is not allowed within 1 week prior to screening assessment).",
+        "numberValue": 9,
+        "stages": [],
+        "stringValue": ""
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07357597-disease",
+        "polarity": "inclusion",
+        "sourceText": "Patients with locally advanced or metastatic EGFRm NSCLC who have received prior EGFR-directed therapy and platinum-based chemotherapy.",
+        "reasonFuzzy": "The trial enrols multiple populations including breast cancer and NSCLC, and includes complex prior therapy and biomarker combinations."
+      },
+      {
+        "id": "NCT07357597-compliance",
+        "polarity": "inclusion",
+        "sourceText": "Is willing to comply with use of prophylactic dexamethasone mouthwash at the start of first infusion and throughout Dato-DXd administration.",
+        "reasonFuzzy": "Willingness to comply with mouthwash is a behavioral requirement, not a typed clinical check."
+      },
+      {
+        "id": "NCT07357597-investigator",
+        "polarity": "exclusion",
+        "sourceText": "As judged by the investigator, any evidence of cardiac, pulmonary, vascular, and other renal conditions which in the investigator's opinion makes it undesirable for the patient to participate in the study.",
+        "reasonFuzzy": "Investigator judgment is subjective."
+      },
+      {
+        "id": "NCT07357597-stomatitis",
+        "polarity": "exclusion",
+        "sourceText": "Has any-grade active and uncontrolled stomatitis or mouth ulcers at baseline (participants with prior medical history of stomatitis or mouth ulcers are eligible).",
+        "reasonFuzzy": "Active and uncontrolled stomatitis is a clinical condition and not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07357597",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07357597-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Patients with locally advanced or metastatic EGFRm NSCLC who have received prior EGFR-directed therapy and platinum-based chemotherapy.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07357597-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patient must be ≥ 18 years, at the time of signing the informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07357597-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07357597-hgb",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Has adequate bone marrow function (hemoglobin ≥ 9 g/dL; red blood cell/plasma transfusion is not allowed within 1 week prior to screening assessment).",
+        "numberValue": 9,
+        "presence": "present",
+        "stringValue": "g/dL"
+      },
+      {
+        "id": "NCT07357597-prior-egfr",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Patients with locally advanced or metastatic EGFRm NSCLC who have received prior EGFR-directed therapy and platinum-based chemotherapy.",
+        "stringValue": "EGFR-directed therapy"
+      },
+      {
+        "id": "NCT07357597-prior-plat",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Patients with locally advanced or metastatic EGFRm NSCLC who have received prior EGFR-directed therapy and platinum-based chemotherapy.",
+        "stringValue": "platinum-based chemotherapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07357597-breast-cancer",
+        "polarity": "inclusion",
+        "sourceText": "Patients with unresectable or metastatic HR+/HER2- (IHC 0, IHC 1+, or IHC 2+/ISH-) breast cancer who have received prior ET and chemotherapy for unresectable or metastatic disease.",
+        "reasonFuzzy": "This criterion relates to breast cancer populations, which are separate from NSCLC and include complex hormone receptor and HER2 criteria."
+      },
+      {
+        "id": "NCT07357597-tnbc",
+        "polarity": "inclusion",
+        "sourceText": "Adult patients with unresectable or metastatic TNBC who are not candidates for PD-1/PD-L1 inhibitor therapy. Participants will be enrolled upon FDA approval on use of Dato-DXd for this indication.",
+        "reasonFuzzy": "This criterion applies to triple-negative breast cancer (TNBC) with conditional FDA approval requirements."
+      },
+      {
+        "id": "NCT07357597-compliance",
+        "polarity": "inclusion",
+        "sourceText": "Is willing to comply with use of prophylactic dexamethasone mouthwash at the start of first infusion and throughout Dato-DXd administration.",
+        "reasonFuzzy": "Willingness to comply with treatment/prophylaxis is a subjective protocol adherence requirement."
+      },
+      {
+        "id": "NCT07357597-cardiac-cond",
+        "polarity": "exclusion",
+        "sourceText": "As judged by the investigator, any evidence of cardiac, pulmonary, vascular, and other renal conditions which in the investigator's opinion makes it undesirable for the patient to participate in the study.",
+        "reasonFuzzy": "Investigator judgment and subjective evaluation of comorbidities."
+      },
+      {
+        "id": "NCT07357597-stomatitis",
+        "polarity": "exclusion",
+        "sourceText": "Has any-grade active and uncontrolled stomatitis or mouth ulcers at baseline (participants with prior medical history of stomatitis or mouth ulcers are eligible).",
+        "reasonFuzzy": "Active stomatitis/mouth ulcer assessment is not mapped to a standard typed condition."
+      },
+      {
+        "id": "NCT07357597-infection",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled infection requiring IV antibiotics, antivirals, or antifungals; suspected infections (eg, prodromal symptoms); or inability to rule out infections (participants with localized fungal infections of skin or nails are eligible).",
+        "reasonFuzzy": "Uncontrolled infection requiring specific therapies and investigator discretion over suspected infections."
+      }
+    ]
+  }
+}

@@ -1,0 +1,441 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06357533",
+  "briefTitle": "Phase III, Open-label, Study of First-line Dato-DXd in Combination With Rilvegostomig for Advanced Non-squamous NSCLC With High PD-L1 Expression (TC ≥ 50%) and Without Actionable Genomic Alterations",
+  "parsedAt": "2026-11-12T05:52:20.005Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06357533-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Stage IIIB or IIIC or Stage IV metastatic NSCLC (according to Edition 8 of the AJCC staging manual) not amenable to curative surgery or definitive chemoradiation.",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Stage IIIB or IIIC or Stage IV metastatic NSCLC (according to Edition 8 of the AJCC staging manual) not amenable to curative surgery or definitive chemoradiation.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06357533-egfr",
+      "kind": "egfr_status",
+      "polarity": "inclusion",
+      "sourceText": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+      "presence": "absent",
+      "evidence_quote": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06357533-ros1",
+      "kind": "ros1_status",
+      "polarity": "inclusion",
+      "sourceText": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+      "presence": "absent",
+      "evidence_quote": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06357533-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06357533-target-lesion",
+      "polarity": "inclusion",
+      "sourceText": "At least one lesion, not previously irradiated that qualifies as a RECIST 1.1 target lesion at baseline",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06357533-mixed-histology",
+      "polarity": "exclusion",
+      "sourceText": "mixed small cell lung cancer; NSCLC histology, sarcomatoid variant.",
+      "reasonFuzzy": "Mixed small cell lung cancer and sarcomatoid variants are distinct histologies not mapped to standard allowed types."
+    },
+    {
+      "id": "NCT06357533-othergenomic",
+      "polarity": "inclusion",
+      "sourceText": "and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+      "reasonFuzzy": "Refers to unspecified local targeted therapies, which cannot be modeled as a single standard biomarker status."
+    },
+    {
+      "id": "NCT06357533-biomarker",
+      "polarity": "inclusion",
+      "sourceText": "Must provide tumor sample to determine PD-L1 status, TROP2 status and other biomarkers.",
+      "reasonFuzzy": "Willingness or requirement to provide a tumor sample for future/other biomarkers is a procedural requirement."
+    },
+    {
+      "id": "NCT06357533-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one lesion, not previously irradiated that qualifies as a RECIST 1.1 target lesion at baseline",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06357533-squamous",
+      "polarity": "exclusion",
+      "sourceText": "Squamous cell histology, or predominantly squamous cell histology NSCLC; mixed small cell lung cancer; NSCLC histology, sarcomatoid variant.",
+      "reasonFuzzy": "Excludes specific sub-histologies (mixed small cell lung cancer, sarcomatoid variant) that are not covered by a standard histology exclusion check."
+    },
+    {
+      "id": "NCT06357533-alk",
+      "polarity": "inclusion",
+      "sourceText": "and ALK",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06357533-alk",
+      "polarity": "inclusion",
+      "sourceText": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06357533-squamous-excl",
+      "polarity": "exclusion",
+      "sourceText": "Squamous cell histology, or predominantly squamous cell histology NSCLC; mixed small cell lung cancer; NSCLC histology, sarcomatoid variant.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06357533-brain",
+      "polarity": "exclusion",
+      "sourceText": "Spinal cord compression, or brain metastases unless participant treated and no longer symptomatic, radiologically stable, and who require no treatment with corticosteroids or anticonvulsants.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06357533-brain",
+      "polarity": "inclusion",
+      "sourceText": "Spinal cord compression, or brain metastases unless participant treated and no longer symptomatic, radiologically stable, and who require no treatment with corticosteroids or anticonvulsants.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06357533-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically documented non-squamous NSCLC.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06357533-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Known tumour PD-L1 expression status defined as TC ≥ 50%",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06357533-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Prior systemic therapy for advanced/metastatic NSCLC.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 10,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 8,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "and ALK"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 7,
+      "disagreements": 4,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "value": "p:absent"
+        },
+        {
+          "side": "a-only",
+          "kind": "histology_in",
+          "polarity": "exclusion",
+          "value": "h:squamous"
+        },
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        },
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:50"
+        },
+        {
+          "kind": "prior_lines_max",
+          "polarity": "exclusion",
+          "value": "n:0"
+        }
+      ],
+      "normalizerTypedCount": 6
+    }
+  },
+  "runA": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 3162
+  },
+  "runB": {
+    "typedEmitted": 9,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 3579
+  },
+  "ms": 14741,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06357533",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06357533-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically documented non-squamous NSCLC.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06357533-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage IIIB or IIIC or Stage IV metastatic NSCLC (according to Edition 8 of the AJCC staging manual) not amenable to curative surgery or definitive chemoradiation.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06357533-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06357533-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06357533-ros1",
+        "kind": "ros1_status",
+        "polarity": "inclusion",
+        "sourceText": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06357533-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Known tumour PD-L1 expression status defined as TC ≥ 50%",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT06357533-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06357533-prior-therapy",
+        "kind": "prior_lines_max",
+        "polarity": "exclusion",
+        "sourceText": "Prior systemic therapy for advanced/metastatic NSCLC.",
+        "numberValue": 0
+      },
+      {
+        "id": "NCT06357533-squamous-excl",
+        "kind": "histology_in",
+        "polarity": "exclusion",
+        "sourceText": "Squamous cell histology, or predominantly squamous cell histology NSCLC; mixed small cell lung cancer; NSCLC histology, sarcomatoid variant.",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT06357533-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Spinal cord compression, or brain metastases unless participant treated and no longer symptomatic, radiologically stable, and who require no treatment with corticosteroids or anticonvulsants.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06357533-target-lesion",
+        "polarity": "inclusion",
+        "sourceText": "At least one lesion, not previously irradiated that qualifies as a RECIST 1.1 target lesion at baseline",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06357533-mixed-histology",
+        "polarity": "exclusion",
+        "sourceText": "mixed small cell lung cancer; NSCLC histology, sarcomatoid variant.",
+        "reasonFuzzy": "Mixed small cell lung cancer and sarcomatoid variants are distinct histologies not mapped to standard allowed types."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06357533",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06357533-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically documented non-squamous NSCLC.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06357533-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage IIIB or IIIC or Stage IV metastatic NSCLC (according to Edition 8 of the AJCC staging manual) not amenable to curative surgery or definitive chemoradiation.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06357533-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Absence of sensitising EGFR mutations",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06357533-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "and ALK",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06357533-ros1",
+        "kind": "ros1_status",
+        "polarity": "inclusion",
+        "sourceText": "and ROS1 rearrangements",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06357533-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Known tumour PD-L1 expression status defined as TC ≥ 50%",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT06357533-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06357533-priorsys",
+        "kind": "prior_lines_max",
+        "polarity": "exclusion",
+        "sourceText": "Prior systemic therapy for advanced/metastatic NSCLC.",
+        "numberValue": 0
+      },
+      {
+        "id": "NCT06357533-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Spinal cord compression, or brain metastases unless participant treated and no longer symptomatic, radiologically stable, and who require no treatment with corticosteroids or anticonvulsants.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06357533-othergenomic",
+        "polarity": "inclusion",
+        "sourceText": "and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+        "reasonFuzzy": "Refers to unspecified local targeted therapies, which cannot be modeled as a single standard biomarker status."
+      },
+      {
+        "id": "NCT06357533-biomarker",
+        "polarity": "inclusion",
+        "sourceText": "Must provide tumor sample to determine PD-L1 status, TROP2 status and other biomarkers.",
+        "reasonFuzzy": "Willingness or requirement to provide a tumor sample for future/other biomarkers is a procedural requirement."
+      },
+      {
+        "id": "NCT06357533-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one lesion, not previously irradiated that qualifies as a RECIST 1.1 target lesion at baseline",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06357533-squamous",
+        "polarity": "exclusion",
+        "sourceText": "Squamous cell histology, or predominantly squamous cell histology NSCLC; mixed small cell lung cancer; NSCLC histology, sarcomatoid variant.",
+        "reasonFuzzy": "Excludes specific sub-histologies (mixed small cell lung cancer, sarcomatoid variant) that are not covered by a standard histology exclusion check."
+      }
+    ]
+  }
+}

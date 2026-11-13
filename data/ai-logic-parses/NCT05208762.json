@@ -1,0 +1,299 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05208762",
+  "briefTitle": "A Study of PF-08046054/SGN-PDL1V in Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T06:11:13.276Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05208762-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status score of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status score of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05208762-prior-pdl1",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with an anti-PD-L1 agent within less than 5 half-lives. This duration of time will vary according to the half-life of the specific agent.",
+      "stringValue": "anti-PD-L1 agent",
+      "evidence_quote": "Prior treatment with an anti-PD-L1 agent within less than 5 half-lives. This duration of time will vary according to the half-life of the specific agent.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05208762-histology",
+      "polarity": "inclusion",
+      "sourceText": "Participants with SCC and non--SCC histology are eligible. Note: Participants with a neuroendocrine component or histology are not eligible.",
+      "reasonFuzzy": "Includes mixed histological allowances and exclusions for NSCLC across parts that cannot be represented in a simple single histology_in list."
+    },
+    {
+      "id": "NCT05208762-pdl1-parts",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have PD-L1 expression based on historical testing... Participants must have been previously tested for PD-L1 expression and should have PD-L1 expression ≥1 or <1 by CPS or TPS based on historical testing",
+      "reasonFuzzy": "PD-L1 requirements vary by study part and include both >=1 and <1 options, preventing a single simple pdl1_min cutoff for all cohorts."
+    },
+    {
+      "id": "NCT05208762-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1 at baseline",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05208762-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known active central nervous system metastases. Participants with previously-treated brain metastases may participate provided they: Are clinically stable for at least 4 weeks prior to study entry after brain metastasis treatment Have no new or enlarging brain metastases And are off of corticosteroids prescribed for symptoms associate with brain metastases for at least 7 days prior to first dose of study treatment",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05208762-histology",
+      "polarity": "inclusion",
+      "sourceText": "Participants with SCC and non--SCC histology are eligible. Note: Participants with a neuroendocrine component or histology are not eligible.",
+      "reasonFuzzy": "Includes mixed histologies across study parts with specific neuroendocrine exclusions that do not fit neatly into a single histology_in check."
+    },
+    {
+      "id": "NCT05208762-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have been previously tested for PD-L1 expression and should have PD-L1 expression ≥1 or <1 by CPS or TPS based on historical testing / Participants with NSCLC; PD-L1 expression ≥ 1% by TPS",
+      "reasonFuzzy": "PD-L1 requirements vary conditionally across multiple study parts (Parts A, B, C, D, and E) with different definitions (CPS vs TPS) and cutoffs."
+    },
+    {
+      "id": "NCT05208762-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1 at baseline",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05208762-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05208762-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known active central nervous system metastases. Participants with previously-treated brain metastases may participate provided they: Are clinically stable for at least 4 weeks prior to study entry after brain metastasis treatment Have no new or enlarging brain metastases And are off of corticosteroids prescribed for symptoms associate with brain metastases for at least 7 days prior to first dose of study treatment",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05208762-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Participants with NSCLC; PD-L1 expression ≥ 1% by TPS",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05208762-prior-mmae",
+      "polarity": "exclusion",
+      "sourceText": "Previous receipt of an monomethylauristatin E (MMAE)-containing agent.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Known active central nervous system metastases. Participants with previously-treated brain metastases may participate provided they: Are clinically stable for a"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Known active central nervous system metastases. Participants with previously-treated brain metastases may participate provided they: Are clinically stable for a"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:monomethylauristatin e (mmae)-containing agent"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2845
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3119
+  },
+  "ms": 13907,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05208762",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05208762-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status score of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05208762-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known active central nervous system metastases. Participants with previously-treated brain metastases may participate provided they: Are clinically stable for at least 4 weeks prior to study entry after brain metastasis treatment Have no new or enlarging brain metastases And are off of corticosteroids prescribed for symptoms associate with brain metastases for at least 7 days prior to first dose of study treatment",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT05208762-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants with NSCLC; PD-L1 expression ≥ 1% by TPS",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05208762-prior-pdl1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with an anti-PD-L1 agent within less than 5 half-lives. This duration of time will vary according to the half-life of the specific agent.",
+        "stringValue": "anti-PD-L1 agent"
+      },
+      {
+        "id": "NCT05208762-prior-mmae",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Previous receipt of an monomethylauristatin E (MMAE)-containing agent.",
+        "stringValue": "monomethylauristatin E (MMAE)-containing agent"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05208762-histology",
+        "polarity": "inclusion",
+        "sourceText": "Participants with SCC and non--SCC histology are eligible. Note: Participants with a neuroendocrine component or histology are not eligible.",
+        "reasonFuzzy": "Includes mixed histological allowances and exclusions for NSCLC across parts that cannot be represented in a simple single histology_in list."
+      },
+      {
+        "id": "NCT05208762-pdl1-parts",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have PD-L1 expression based on historical testing... Participants must have been previously tested for PD-L1 expression and should have PD-L1 expression ≥1 or <1 by CPS or TPS based on historical testing",
+        "reasonFuzzy": "PD-L1 requirements vary by study part and include both >=1 and <1 options, preventing a single simple pdl1_min cutoff for all cohorts."
+      },
+      {
+        "id": "NCT05208762-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1 at baseline",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05208762",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05208762-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05208762-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status score of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05208762-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known active central nervous system metastases. Participants with previously-treated brain metastases may participate provided they: Are clinically stable for at least 4 weeks prior to study entry after brain metastasis treatment Have no new or enlarging brain metastases And are off of corticosteroids prescribed for symptoms associate with brain metastases for at least 7 days prior to first dose of study treatment",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT05208762-prior-pdl1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with an anti-PD-L1 agent within less than 5 half-lives.",
+        "stringValue": "anti-PD-L1"
+      },
+      {
+        "id": "NCT05208762-prior-mmae",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Previous receipt of an monomethylauristatin E (MMAE)-containing agent.",
+        "stringValue": "monomethylauristatin E (MMAE)-containing agent"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05208762-histology",
+        "polarity": "inclusion",
+        "sourceText": "Participants with SCC and non--SCC histology are eligible. Note: Participants with a neuroendocrine component or histology are not eligible.",
+        "reasonFuzzy": "Includes mixed histologies across study parts with specific neuroendocrine exclusions that do not fit neatly into a single histology_in check."
+      },
+      {
+        "id": "NCT05208762-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have been previously tested for PD-L1 expression and should have PD-L1 expression ≥1 or <1 by CPS or TPS based on historical testing / Participants with NSCLC; PD-L1 expression ≥ 1% by TPS",
+        "reasonFuzzy": "PD-L1 requirements vary conditionally across multiple study parts (Parts A, B, C, D, and E) with different definitions (CPS vs TPS) and cutoffs."
+      },
+      {
+        "id": "NCT05208762-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1 at baseline",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      }
+    ]
+  }
+}

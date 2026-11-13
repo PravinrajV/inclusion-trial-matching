@@ -1,0 +1,203 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06784193",
+  "briefTitle": "Phase 1 Study of OP-3136 in Advanced or Metastatic Solid Tumors",
+  "parsedAt": "2026-11-12T10:35:32.024Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06784193-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "Age minimum is listed in the study metadata but not explicitly written in the eligibility criteria text provided."
+    },
+    {
+      "id": "NCT06784193-disease",
+      "polarity": "inclusion",
+      "sourceText": "Participants with advanced or metastatic ER+HER2- breast cancer, mCRPC, or NSCLC (Part 1)",
+      "reasonFuzzy": "The study includes multiple tumor types and cohort-specific rules that cannot be reduced to a single typed NSCLC stage or biomarker check."
+    },
+    {
+      "id": "NCT06784193-visceral",
+      "polarity": "exclusion",
+      "sourceText": "Participants with advanced/metastatic, symptomatic, visceral spread, that are at risk of life-threatening complications in the short term.",
+      "reasonFuzzy": "Symptomatic visceral spread with risk of complications is a clinical judgment, not a typed check."
+    },
+    {
+      "id": "NCT06784193-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known active or symptomatic central nervous system (CNS) metastases, carcinomatous meningitis, leptomeningeal disease, or a spinal cord compression that require CNS-specific treatment, or participants who did not demonstrate clinical and radiologic stability during the last 2 months prior to the first dose of study treatment or require or are currently on steroid therapy for CNS metastases.",
+      "reasonFuzzy": "The complex criteria combining symptoms, stability duration, and steroid use cannot be cleanly mapped to a single allowedBrainMets category."
+    },
+    {
+      "id": "NCT06784193-populations",
+      "polarity": "inclusion",
+      "sourceText": "Participants with advanced or metastatic ER+HER2- breast cancer, mCRPC, or NSCLC (Part 1) or advanced or metastatic ER+HER2- BC or mCRPC (Part 2).",
+      "reasonFuzzy": "Eligibility criteria differ across multiple study parts (Part 1 vs Part 2) and target multiple distinct tumor types, making a single typed rule inapplicable."
+    },
+    {
+      "id": "NCT06784193-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Part 1B (Dose escalation for OP-3136 in combination with fulvestrant): Participants with advanced or metastatic ER+ HER2- breast cancer that have progressed on or after at least 1 prior line of treatment that included endocrine therapy and CDK 4/6 inhibitor in advanced or metastatic setting and must have received no more than 2 prior lines of endocrine therapy...",
+      "reasonFuzzy": "Prior lines of therapy and specific combinations required vary extensively across different study cohorts and parts."
+    },
+    {
+      "id": "NCT06784193-visceral",
+      "polarity": "exclusion",
+      "sourceText": "Participants with advanced/metastatic, symptomatic, visceral spread, that are at risk of life-threatening complications in the short term.",
+      "reasonFuzzy": "Symptomatic visceral spread risk is a subjective clinical assessment rather than a structured lab or biomarker check."
+    },
+    {
+      "id": "NCT06784193-brain-mets",
+      "polarity": "exclusion",
+      "sourceText": "Known active or symptomatic central nervous system (CNS) metastases, carcinomatous meningitis, leptomeningeal disease, or a spinal cord compression that require CNS-specific treatment, or participants who did not demonstrate clinical and radiologic stability during the last 2 months prior to the first dose of study treatment or require or are currently on steroid therapy for CNS metastases.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06784193-prior-kat6",
+      "polarity": "exclusion",
+      "sourceText": "Prior therapy with KAT6A/B inhibitor in any treatment setting.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:kat6a/b inhibitor"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 4,
+    "attempts": 3,
+    "ms": 30202
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 6986
+  },
+  "ms": 45175,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06784193",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06784193-prior-kat6",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy with KAT6A/B inhibitor in any treatment setting.",
+        "stringValue": "KAT6A/B inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06784193-age",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "reasonFuzzy": "Age minimum is listed in the study metadata but not explicitly written in the eligibility criteria text provided."
+      },
+      {
+        "id": "NCT06784193-disease",
+        "polarity": "inclusion",
+        "sourceText": "Participants with advanced or metastatic ER+HER2- breast cancer, mCRPC, or NSCLC (Part 1)",
+        "reasonFuzzy": "The study includes multiple tumor types and cohort-specific rules that cannot be reduced to a single typed NSCLC stage or biomarker check."
+      },
+      {
+        "id": "NCT06784193-visceral",
+        "polarity": "exclusion",
+        "sourceText": "Participants with advanced/metastatic, symptomatic, visceral spread, that are at risk of life-threatening complications in the short term.",
+        "reasonFuzzy": "Symptomatic visceral spread with risk of complications is a clinical judgment, not a typed check."
+      },
+      {
+        "id": "NCT06784193-brain",
+        "polarity": "exclusion",
+        "sourceText": "Known active or symptomatic central nervous system (CNS) metastases, carcinomatous meningitis, leptomeningeal disease, or a spinal cord compression that require CNS-specific treatment, or participants who did not demonstrate clinical and radiologic stability during the last 2 months prior to the first dose of study treatment or require or are currently on steroid therapy for CNS metastases.",
+        "reasonFuzzy": "The complex criteria combining symptoms, stability duration, and steroid use cannot be cleanly mapped to a single allowedBrainMets category."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06784193",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06784193-prior-kat6ab",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy with KAT6A/B inhibitor in any treatment setting.",
+        "stringValue": "KAT6A/B inhibitor"
+      },
+      {
+        "id": "NCT06784193-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known active or symptomatic central nervous system (CNS) metastases, carcinomatous meningitis, leptomeningeal disease, or a spinal cord compression that require CNS-specific treatment, or participants who did not demonstrate clinical and radiologic stability during the last 2 months prior to the first dose of study treatment or require or are currently on steroid therapy for CNS metastases.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06784193-populations",
+        "polarity": "inclusion",
+        "sourceText": "Participants with advanced or metastatic ER+HER2- breast cancer, mCRPC, or NSCLC (Part 1) or advanced or metastatic ER+HER2- BC or mCRPC (Part 2).",
+        "reasonFuzzy": "Eligibility criteria differ across multiple study parts (Part 1 vs Part 2) and target multiple distinct tumor types, making a single typed rule inapplicable."
+      },
+      {
+        "id": "NCT06784193-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "Part 1B (Dose escalation for OP-3136 in combination with fulvestrant): Participants with advanced or metastatic ER+ HER2- breast cancer that have progressed on or after at least 1 prior line of treatment that included endocrine therapy and CDK 4/6 inhibitor in advanced or metastatic setting and must have received no more than 2 prior lines of endocrine therapy...",
+        "reasonFuzzy": "Prior lines of therapy and specific combinations required vary extensively across different study cohorts and parts."
+      },
+      {
+        "id": "NCT06784193-visceral",
+        "polarity": "exclusion",
+        "sourceText": "Participants with advanced/metastatic, symptomatic, visceral spread, that are at risk of life-threatening complications in the short term.",
+        "reasonFuzzy": "Symptomatic visceral spread risk is a subjective clinical assessment rather than a structured lab or biomarker check."
+      }
+    ]
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05176483",
+  "briefTitle": "Study of Zanzalintinib in Combination With Immuno-Oncology or Other Agents in Participants With Solid Tumors",
+  "parsedAt": "2026-11-12T06:10:59.360Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05176483-measurable",
+      "polarity": "inclusion",
+      "sourceText": "For all Expansion Cohorts except Cohort 3: Measurable disease per RECIST 1.1 as determined by the Investigator.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05176483-prior-therapy-nsclc",
+      "polarity": "inclusion",
+      "sourceText": "Expansion Cohort 9 (NSCLC): Participants with Stage IV non-squamous NSCLC who have radiologically progressed following treatment with one prior immune checkpoint inhibitor (anti-PD-1 or anti-PD-L1) for metastatic disease.",
+      "reasonFuzzy": "Prior therapy requirement applies differently across multiple cohorts and cannot be mapped as a single universal prior_therapy_required check for NSCLC."
+    },
+    {
+      "id": "NCT05176483-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05176483-pdl1-8",
+      "polarity": "inclusion",
+      "sourceText": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior systemic anticancer therapy for metastatic disease.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05176483-pdl1-8-max",
+      "polarity": "inclusion",
+      "sourceText": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior systemic anticancer therapy for metastatic disease.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05176483-stage-8",
+      "polarity": "inclusion",
+      "sourceText": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior systemic anticancer therapy for metastatic disease.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05176483-histology-8",
+      "polarity": "inclusion",
+      "sourceText": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior systemic anticancer therapy for metastatic disease.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05176483-cohort-specific",
+      "polarity": "inclusion",
+      "sourceText": "Expansion Cohort 9 (NSCLC): Participants with Stage IV non-squamous NSCLC who have radiologically progressed following treatment with one prior immune checkpoint inhibitor (anti-PD-1 or anti-PD-L1) for metastatic disease.",
+      "reasonFuzzy": "Cohort-specific prior line and stage requirements differ across multiple parallel expansion groups and cannot be expressed as a single uniform typed check."
+    },
+    {
+      "id": "NCT05176483-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05176483-stage",
+      "polarity": "inclusion",
+      "sourceText": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior systemic anticancer therapy for metastatic disease.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05176483-histology",
+      "polarity": "inclusion",
+      "sourceText": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior systemic anticancer therapy for metastatic disease.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05176483-pdl1-min",
+      "polarity": "inclusion",
+      "sourceText": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior systemic anticancer therapy for metastatic disease.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05176483-pdl1-max",
+      "polarity": "inclusion",
+      "sourceText": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior systemic anticancer therapy for metastatic disease.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05176483-stage-9",
+      "polarity": "inclusion",
+      "sourceText": "Expansion Cohort 9 (NSCLC): Participants with Stage IV non-squamous NSCLC who have radiologically progressed following treatment with one prior immune checkpoint inhibitor (anti-PD-1 or anti-PD-L1) for metastatic disease.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05176483-histology-9",
+      "polarity": "inclusion",
+      "sourceText": "Expansion Cohort 9 (NSCLC): Participants with Stage IV non-squamous NSCLC who have radiologically progressed following treatment with one prior immune checkpoint inhibitor (anti-PD-1 or anti-PD-L1) for metastatic disease.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05176483-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known brain metastases or cranial epidural disease unless adequately treated with radiotherapy and/or surgery (including radiosurgery) and stable for at least 4 weeks before first dose of study treatment.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 5,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        },
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior "
+        },
+        {
+          "kind": "pdl1_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior "
+        },
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior "
+        },
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior "
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 5,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        },
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior "
+        },
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior "
+        },
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior "
+        },
+        {
+          "kind": "pdl1_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior "
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IV,IVA,IVB"
+        },
+        {
+          "side": "a-only",
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 6
+    }
+  },
+  "runA": {
+    "typedEmitted": 8,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 3307
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 2641
+  },
+  "ms": 14000,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05176483",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05176483-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05176483-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known brain metastases or cranial epidural disease unless adequately treated with radiotherapy and/or surgery (including radiosurgery) and stable for at least 4 weeks before first dose of study treatment.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT05176483-pdl1-8",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior systemic anticancer therapy for metastatic disease.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05176483-pdl1-8-max",
+        "kind": "pdl1_max",
+        "polarity": "inclusion",
+        "sourceText": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior systemic anticancer therapy for metastatic disease.",
+        "numberValue": 49
+      },
+      {
+        "id": "NCT05176483-stage-8",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior systemic anticancer therapy for metastatic disease.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05176483-stage-9",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Expansion Cohort 9 (NSCLC): Participants with Stage IV non-squamous NSCLC who have radiologically progressed following treatment with one prior immune checkpoint inhibitor (anti-PD-1 or anti-PD-L1) for metastatic disease.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05176483-histology-8",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior systemic anticancer therapy for metastatic disease.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT05176483-histology-9",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Expansion Cohort 9 (NSCLC): Participants with Stage IV non-squamous NSCLC who have radiologically progressed following treatment with one prior immune checkpoint inhibitor (anti-PD-1 or anti-PD-L1) for metastatic disease.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05176483-measurable",
+        "polarity": "inclusion",
+        "sourceText": "For all Expansion Cohorts except Cohort 3: Measurable disease per RECIST 1.1 as determined by the Investigator.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05176483-prior-therapy-nsclc",
+        "polarity": "inclusion",
+        "sourceText": "Expansion Cohort 9 (NSCLC): Participants with Stage IV non-squamous NSCLC who have radiologically progressed following treatment with one prior immune checkpoint inhibitor (anti-PD-1 or anti-PD-L1) for metastatic disease.",
+        "reasonFuzzy": "Prior therapy requirement applies differently across multiple cohorts and cannot be mapped as a single universal prior_therapy_required check for NSCLC."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05176483",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05176483-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05176483-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior systemic anticancer therapy for metastatic disease.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05176483-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior systemic anticancer therapy for metastatic disease.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT05176483-pdl1-min",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior systemic anticancer therapy for metastatic disease.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05176483-pdl1-max",
+        "kind": "pdl1_max",
+        "polarity": "inclusion",
+        "sourceText": "Expansion Cohort 8 (NSCLC): Participants with Stage IV non-squamous NSCLC with positive PD-L1 expression (tumor proportion score [TPS] 1-49%) and without prior systemic anticancer therapy for metastatic disease.",
+        "numberValue": 49
+      },
+      {
+        "id": "NCT05176483-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known brain metastases or cranial epidural disease unless adequately treated with radiotherapy and/or surgery (including radiosurgery) and stable for at least 4 weeks before first dose of study treatment.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05176483-cohort-specific",
+        "polarity": "inclusion",
+        "sourceText": "Expansion Cohort 9 (NSCLC): Participants with Stage IV non-squamous NSCLC who have radiologically progressed following treatment with one prior immune checkpoint inhibitor (anti-PD-1 or anti-PD-L1) for metastatic disease.",
+        "reasonFuzzy": "Cohort-specific prior line and stage requirements differ across multiple parallel expansion groups and cannot be expressed as a single uniform typed check."
+      }
+    ]
+  }
+}

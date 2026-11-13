@@ -1,0 +1,407 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06418204",
+  "briefTitle": "Assessing Benefits and Harms of Cannabis/Cannabinoid Use Among Cancer Patients Treated in Community Oncology Clinics",
+  "parsedAt": "2026-11-12T09:21:55.372Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06418204-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Adults aged 18 years or older with one of the following newly diagnosed cancers: breast cancer, colorectal cancer, melanoma, non-Hodgkin lymphoma, or non-small cell lung cancer (e.g. adenocarcinoma, squamous cell carcinoma, large cell carcinoma, adenosquamous cell carcinoma, and not otherwise specified).",
+      "numberValue": 18,
+      "evidence_quote": "Adults aged 18 years or older with one of the following newly diagnosed cancers: breast cancer, colorectal cancer, melanoma, non-Hodgkin lymphoma, or non-small cell lung cancer (e.g. adenocarcinoma, squamous cell carcinoma, large cell carcinoma, adenosquamous cell carcinoma, and not otherwise specified).",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06418204-cancer-types",
+      "polarity": "inclusion",
+      "sourceText": "Adults aged 18 years or older with one of the following newly diagnosed cancers: breast cancer, colorectal cancer, melanoma, non-Hodgkin lymphoma, or non-small cell lung cancer",
+      "reasonFuzzy": "The trial enrolls multiple different cancer types including breast cancer, colorectal cancer, melanoma, and non-Hodgkin lymphoma, not exclusively NSCLC."
+    },
+    {
+      "id": "NCT06418204-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Planned treatment with systemic chemotherapy (single or multi-agent, includes targeted therapy) and/or immune checkpoint inhibitor therapy (targeting PD-1, PD-L1 or CTLA-4). If unable to engage participant before treatment starts, enrollment is allowed up to the start of Cycle 2 treatment.",
+      "reasonFuzzy": "Planned systemic therapy is not a typed prior therapy check."
+    },
+    {
+      "id": "NCT06418204-comprehend",
+      "polarity": "inclusion",
+      "sourceText": "Participants must be able to comprehend English or Spanish (for survey completion).",
+      "reasonFuzzy": "Language comprehension is a subjective requirement, not a typed check."
+    },
+    {
+      "id": "NCT06418204-email",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a working email address and be must be willing to complete surveys online. This can be completed at home, in the clinic or other location.",
+      "reasonFuzzy": "Administrative and survey completion requirements are not typed checks."
+    },
+    {
+      "id": "NCT06418204-survey",
+      "polarity": "inclusion",
+      "sourceText": "Completion of the confidential Self-Reported Screening Survey and receipt of a screening result - eligible for enrollment.",
+      "reasonFuzzy": "Screening survey completion is not a typed check."
+    },
+    {
+      "id": "NCT06418204-residence",
+      "polarity": "inclusion",
+      "sourceText": "Participant must reside in the United States, officially determined per patient report on Self-reported Screening Survey",
+      "reasonFuzzy": "Geographic location requirement is not a typed check."
+    },
+    {
+      "id": "NCT06418204-life-expectancy",
+      "polarity": "inclusion",
+      "sourceText": "In the treating provider's opinion, the participant should have a life expectancy of >=6 months. Participants in hospice are not eligible.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06418204-interventional",
+      "polarity": "exclusion",
+      "sourceText": "Currently enrolled in an interventional supportive treatment trial to manage cancer symptoms.",
+      "reasonFuzzy": "Trial concurrency exclusion is not a typed check."
+    },
+    {
+      "id": "NCT06418204-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Participants with known pregnancy.",
+      "reasonFuzzy": "Pregnancy status is not a typed check."
+    },
+    {
+      "id": "NCT06418204-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Participant received systemic therapy treatment for prior cancer(s) including chemotherapy, immunotherapy, targeted therapy, and hormonal therapy.",
+      "reasonFuzzy": "Exclusion for prior cancer treatments is not a standard typed prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT06418204-hospice",
+      "polarity": "exclusion",
+      "sourceText": "Participants enrolled in hospice.",
+      "reasonFuzzy": "Hospice enrollment is not a typed check."
+    },
+    {
+      "id": "NCT06418204-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Participants with chronic or ongoing steroid or immunomodulatory agents (i.e., prednisone, dexamethasone, etanercept, infliximab, etc.). The use of glucocorticoids as pre-medications for chemotherapy treatment is allowed.",
+      "reasonFuzzy": "Substudy steroid use exclusion is not a typed check."
+    },
+    {
+      "id": "NCT06418204-hiv-hepatitis",
+      "polarity": "exclusion",
+      "sourceText": "Participants with a history of HIV, hepatitis B or hepatitis C.",
+      "reasonFuzzy": "History of viral infections is not a typed check."
+    },
+    {
+      "id": "NCT06418204-cancer",
+      "polarity": "inclusion",
+      "sourceText": "Adults aged 18 years or older with one of the following newly diagnosed cancers: breast cancer, colorectal cancer, melanoma, non-Hodgkin lymphoma, or non-small cell lung cancer",
+      "reasonFuzzy": "The study enrolls multiple cancer types including breast, colorectal, melanoma, and lymphoma alongside non-small cell lung cancer."
+    },
+    {
+      "id": "NCT06418204-treatment",
+      "polarity": "inclusion",
+      "sourceText": "Planned treatment with systemic chemotherapy (single or multi-agent, includes targeted therapy) and/or immune checkpoint inhibitor therapy (targeting PD-1, PD-L1 or CTLA-4). If unable to engage participant before treatment starts, enrollment is allowed up to the start of Cycle 2 treatment.",
+      "reasonFuzzy": "Planned specific systemic therapy or timing constraints are not typed treatment kinds."
+    },
+    {
+      "id": "NCT06418204-language",
+      "polarity": "inclusion",
+      "sourceText": "Participants must be able to comprehend English or Spanish (for survey completion).",
+      "reasonFuzzy": "Language comprehension is not a typed check."
+    },
+    {
+      "id": "NCT06418204-survey",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a working email address and be must be willing to complete surveys online.",
+      "reasonFuzzy": "Survey and email requirements are study-logistical criteria."
+    },
+    {
+      "id": "NCT06418204-residence",
+      "polarity": "inclusion",
+      "sourceText": "Participant must reside in the United States, officially determined per patient report on Self-reported Screening Survey",
+      "reasonFuzzy": "Geographic residence is not a typed clinical check."
+    },
+    {
+      "id": "NCT06418204-life",
+      "polarity": "inclusion",
+      "sourceText": "In the treating provider's opinion, the participant should have a life expectancy of >=6 months. Participants in hospice are not eligible.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06418204-supportive",
+      "polarity": "exclusion",
+      "sourceText": "Currently enrolled in an interventional supportive treatment trial to manage cancer symptoms.",
+      "reasonFuzzy": "Concurrent trial participation is not a standard typed exclusion."
+    },
+    {
+      "id": "NCT06418204-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Participants with known pregnancy.",
+      "reasonFuzzy": "Pregnancy is not a typed lab or condition check."
+    },
+    {
+      "id": "NCT06418204-priorsystemic",
+      "polarity": "exclusion",
+      "sourceText": "Participant received systemic therapy treatment for prior cancer(s) including chemotherapy, immunotherapy, targeted therapy, and hormonal therapy.",
+      "reasonFuzzy": "Prior systemic therapy for prior cancers is not a standard prior_therapy_excluded typed kind."
+    },
+    {
+      "id": "NCT06418204-hospice",
+      "polarity": "exclusion",
+      "sourceText": "Participants enrolled in hospice.",
+      "reasonFuzzy": "Hospice enrollment status is a clinical state, not a typed check."
+    },
+    {
+      "id": "NCT06418204-histology",
+      "polarity": "inclusion",
+      "sourceText": "Adults aged 18 years or older with one of the following newly diagnosed cancers: breast cancer, colorectal cancer, melanoma, non-Hodgkin lymphoma, or non-small cell lung cancer (e.g. adenocarcinoma, squamous cell carcinoma, large cell carcinoma, adenosquamous cell carcinoma, and not otherwise specified).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos,squamous"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 13,
+    "attempts": 1,
+    "ms": 3574
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 10,
+    "attempts": 1,
+    "ms": 3180
+  },
+  "ms": 14744,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06418204",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06418204-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adults aged 18 years or older with one of the following newly diagnosed cancers: breast cancer, colorectal cancer, melanoma, non-Hodgkin lymphoma, or non-small cell lung cancer (e.g. adenocarcinoma, squamous cell carcinoma, large cell carcinoma, adenosquamous cell carcinoma, and not otherwise specified).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06418204-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Adults aged 18 years or older with one of the following newly diagnosed cancers: breast cancer, colorectal cancer, melanoma, non-Hodgkin lymphoma, or non-small cell lung cancer (e.g. adenocarcinoma, squamous cell carcinoma, large cell carcinoma, adenosquamous cell carcinoma, and not otherwise specified).",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06418204-cancer-types",
+        "polarity": "inclusion",
+        "sourceText": "Adults aged 18 years or older with one of the following newly diagnosed cancers: breast cancer, colorectal cancer, melanoma, non-Hodgkin lymphoma, or non-small cell lung cancer",
+        "reasonFuzzy": "The trial enrolls multiple different cancer types including breast cancer, colorectal cancer, melanoma, and non-Hodgkin lymphoma, not exclusively NSCLC."
+      },
+      {
+        "id": "NCT06418204-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Planned treatment with systemic chemotherapy (single or multi-agent, includes targeted therapy) and/or immune checkpoint inhibitor therapy (targeting PD-1, PD-L1 or CTLA-4). If unable to engage participant before treatment starts, enrollment is allowed up to the start of Cycle 2 treatment.",
+        "reasonFuzzy": "Planned systemic therapy is not a typed prior therapy check."
+      },
+      {
+        "id": "NCT06418204-comprehend",
+        "polarity": "inclusion",
+        "sourceText": "Participants must be able to comprehend English or Spanish (for survey completion).",
+        "reasonFuzzy": "Language comprehension is a subjective requirement, not a typed check."
+      },
+      {
+        "id": "NCT06418204-email",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a working email address and be must be willing to complete surveys online. This can be completed at home, in the clinic or other location.",
+        "reasonFuzzy": "Administrative and survey completion requirements are not typed checks."
+      },
+      {
+        "id": "NCT06418204-survey",
+        "polarity": "inclusion",
+        "sourceText": "Completion of the confidential Self-Reported Screening Survey and receipt of a screening result - eligible for enrollment.",
+        "reasonFuzzy": "Screening survey completion is not a typed check."
+      },
+      {
+        "id": "NCT06418204-residence",
+        "polarity": "inclusion",
+        "sourceText": "Participant must reside in the United States, officially determined per patient report on Self-reported Screening Survey",
+        "reasonFuzzy": "Geographic location requirement is not a typed check."
+      },
+      {
+        "id": "NCT06418204-life-expectancy",
+        "polarity": "inclusion",
+        "sourceText": "In the treating provider's opinion, the participant should have a life expectancy of >=6 months. Participants in hospice are not eligible.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06418204-interventional",
+        "polarity": "exclusion",
+        "sourceText": "Currently enrolled in an interventional supportive treatment trial to manage cancer symptoms.",
+        "reasonFuzzy": "Trial concurrency exclusion is not a typed check."
+      },
+      {
+        "id": "NCT06418204-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known pregnancy.",
+        "reasonFuzzy": "Pregnancy status is not a typed check."
+      },
+      {
+        "id": "NCT06418204-prior-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Participant received systemic therapy treatment for prior cancer(s) including chemotherapy, immunotherapy, targeted therapy, and hormonal therapy.",
+        "reasonFuzzy": "Exclusion for prior cancer treatments is not a standard typed prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT06418204-hospice",
+        "polarity": "exclusion",
+        "sourceText": "Participants enrolled in hospice.",
+        "reasonFuzzy": "Hospice enrollment is not a typed check."
+      },
+      {
+        "id": "NCT06418204-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Participants with chronic or ongoing steroid or immunomodulatory agents (i.e., prednisone, dexamethasone, etanercept, infliximab, etc.). The use of glucocorticoids as pre-medications for chemotherapy treatment is allowed.",
+        "reasonFuzzy": "Substudy steroid use exclusion is not a typed check."
+      },
+      {
+        "id": "NCT06418204-hiv-hepatitis",
+        "polarity": "exclusion",
+        "sourceText": "Participants with a history of HIV, hepatitis B or hepatitis C.",
+        "reasonFuzzy": "History of viral infections is not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06418204",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06418204-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adults aged 18 years or older with one of the following newly diagnosed cancers: breast cancer, colorectal cancer, melanoma, non-Hodgkin lymphoma, or non-small cell lung cancer (e.g. adenocarcinoma, squamous cell carcinoma, large cell carcinoma, adenosquamous cell carcinoma, and not otherwise specified).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06418204-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Adults aged 18 years or older with one of the following newly diagnosed cancers: breast cancer, colorectal cancer, melanoma, non-Hodgkin lymphoma, or non-small cell lung cancer (e.g. adenocarcinoma, squamous cell carcinoma, large cell carcinoma, adenosquamous cell carcinoma, and not otherwise specified).",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06418204-cancer",
+        "polarity": "inclusion",
+        "sourceText": "Adults aged 18 years or older with one of the following newly diagnosed cancers: breast cancer, colorectal cancer, melanoma, non-Hodgkin lymphoma, or non-small cell lung cancer",
+        "reasonFuzzy": "The study enrolls multiple cancer types including breast, colorectal, melanoma, and lymphoma alongside non-small cell lung cancer."
+      },
+      {
+        "id": "NCT06418204-treatment",
+        "polarity": "inclusion",
+        "sourceText": "Planned treatment with systemic chemotherapy (single or multi-agent, includes targeted therapy) and/or immune checkpoint inhibitor therapy (targeting PD-1, PD-L1 or CTLA-4). If unable to engage participant before treatment starts, enrollment is allowed up to the start of Cycle 2 treatment.",
+        "reasonFuzzy": "Planned specific systemic therapy or timing constraints are not typed treatment kinds."
+      },
+      {
+        "id": "NCT06418204-language",
+        "polarity": "inclusion",
+        "sourceText": "Participants must be able to comprehend English or Spanish (for survey completion).",
+        "reasonFuzzy": "Language comprehension is not a typed check."
+      },
+      {
+        "id": "NCT06418204-survey",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a working email address and be must be willing to complete surveys online.",
+        "reasonFuzzy": "Survey and email requirements are study-logistical criteria."
+      },
+      {
+        "id": "NCT06418204-residence",
+        "polarity": "inclusion",
+        "sourceText": "Participant must reside in the United States, officially determined per patient report on Self-reported Screening Survey",
+        "reasonFuzzy": "Geographic residence is not a typed clinical check."
+      },
+      {
+        "id": "NCT06418204-life",
+        "polarity": "inclusion",
+        "sourceText": "In the treating provider's opinion, the participant should have a life expectancy of >=6 months. Participants in hospice are not eligible.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06418204-supportive",
+        "polarity": "exclusion",
+        "sourceText": "Currently enrolled in an interventional supportive treatment trial to manage cancer symptoms.",
+        "reasonFuzzy": "Concurrent trial participation is not a standard typed exclusion."
+      },
+      {
+        "id": "NCT06418204-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known pregnancy.",
+        "reasonFuzzy": "Pregnancy is not a typed lab or condition check."
+      },
+      {
+        "id": "NCT06418204-priorsystemic",
+        "polarity": "exclusion",
+        "sourceText": "Participant received systemic therapy treatment for prior cancer(s) including chemotherapy, immunotherapy, targeted therapy, and hormonal therapy.",
+        "reasonFuzzy": "Prior systemic therapy for prior cancers is not a standard prior_therapy_excluded typed kind."
+      },
+      {
+        "id": "NCT06418204-hospice",
+        "polarity": "exclusion",
+        "sourceText": "Participants enrolled in hospice.",
+        "reasonFuzzy": "Hospice enrollment status is a clinical state, not a typed check."
+      }
+    ]
+  }
+}

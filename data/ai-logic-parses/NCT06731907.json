@@ -1,0 +1,551 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06731907",
+  "briefTitle": "A Study of Pembrolizumab With or Without Chemotherapy in Combination With Additional Treatments for Advanced Non-Small Cell Lung Cancer (NSCLC) (MK-3475-01G/KEYMAKER U01)",
+  "parsedAt": "2026-11-12T05:54:07.000Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06731907-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of Stage IV squamous or non-squamous non-small cell lung cancer (NSCLC) per American Joint Committee on Cancer (AJCC) Staging Manual Version 8.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Histologically or cytologically confirmed diagnosis of Stage IV squamous or non-squamous non-small cell lung cancer (NSCLC) per American Joint Committee on Cancer (AJCC) Staging Manual Version 8.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06731907-brain-mets",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06731907-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Has archival tumor tissue sample or newly obtained core, incisional, or excisional biopsy of a tumor lesion not previously irradiated has been provided.",
+      "reasonFuzzy": "Willingness or ability to provide a biopsy or archival tissue is a procedural requirement, not a typed check."
+    },
+    {
+      "id": "NCT06731907-squamous-mutations",
+      "polarity": "exclusion",
+      "sourceText": "Participants with squamous histology are excluded if there is a known tumor-activating epidermal growth factor receptor (EGFR) mutation or anaplastic lymphoma kinase (ALK) or c ros oncogene 1 (ROS1) gene rearrangement.",
+      "reasonFuzzy": "This rule applies conditionally based on squamous histology and multiple biomarker criteria, which cannot be expressed as a single standard typed check."
+    },
+    {
+      "id": "NCT06731907-washout",
+      "polarity": "exclusion",
+      "sourceText": "Has inadequate washout period from prior concomitant therapy as specified in protocol before randomization.",
+      "reasonFuzzy": "Washout period depends on protocol specifications and is not a fixed lab cutoff."
+    },
+    {
+      "id": "NCT06731907-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06731907-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Has archival tumor tissue sample or newly obtained core, incisional, or excisional biopsy of a tumor lesion not previously irradiated has been provided.",
+      "reasonFuzzy": "Willingness or availability to provide a biopsy is a procedure-based requirement, not a typed check."
+    },
+    {
+      "id": "NCT06731907-washout",
+      "polarity": "exclusion",
+      "sourceText": "Has inadequate washout period from prior concomitant therapy as specified in protocol before randomization.",
+      "reasonFuzzy": "Washout windows referencing protocol specifics cannot be represented by a single lab or typed value."
+    },
+    {
+      "id": "NCT06731907-prior-systemic",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior systemic anticancer therapy for their metastatic NSCLC.",
+      "reasonFuzzy": "Broad prior systemic therapy exclusion without a specific drug or line count."
+    },
+    {
+      "id": "NCT06731907-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of Stage IV squamous or non-squamous non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06731907-prior-ther-1",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior systemic anticancer therapy for their metastatic NSCLC.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06731907-prior-ther-2",
+      "polarity": "inclusion",
+      "sourceText": "Has received prior treatment with a topoisomerase I inhibitor or an anti-HER3 antibody and/or ADC that consists of an exatecan derivative that is a topoisomerase I inhibitor.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06731907-prior-ther-3",
+      "polarity": "inclusion",
+      "sourceText": "Has received prior treatment with a topoisomerase I inhibitor or an anti-HER3 antibody and/or ADC that consists of an exatecan derivative that is a topoisomerase I inhibitor.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06731907-prior-ther-4",
+      "polarity": "inclusion",
+      "sourceText": "Has received prior therapy with an anti- programmed cell death 1 protein (anti-PD-1), anti- programmed cell death ligand 1 protein (anti-PD-L1), or anti- programmed cell death ligand 2 protein (anti-PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06731907-prior-ther-5",
+      "polarity": "inclusion",
+      "sourceText": "Has received prior therapy with an anti- programmed cell death 1 protein (anti-PD-1), anti- programmed cell death ligand 1 protein (anti-PD-L1), or anti- programmed cell death ligand 2 protein (anti-PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06731907-prior-ther-6",
+      "polarity": "inclusion",
+      "sourceText": "Has received prior therapy with an anti- programmed cell death 1 protein (anti-PD-1), anti- programmed cell death ligand 1 protein (anti-PD-L1), or anti- programmed cell death ligand 2 protein (anti-PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06731907-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of Stage IV squamous or non-squamous non-small cell lung cancer (NSCLC) per American Joint Committee on Cancer (AJCC) Staging Manual Version 8.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06731907-egfr-squamous",
+      "polarity": "exclusion",
+      "sourceText": "Participants with squamous histology are excluded if there is a known tumor-activating epidermal growth factor receptor (EGFR) mutation or anaplastic lymphoma kinase (ALK) or c ros oncogene 1 (ROS1) gene rearrangement.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06731907-alk-squamous",
+      "polarity": "exclusion",
+      "sourceText": "Participants with squamous histology are excluded if there is a known tumor-activating epidermal growth factor receptor (EGFR) mutation or anaplastic lymphoma kinase (ALK) or c ros oncogene 1 (ROS1) gene rearrangement.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06731907-ros1-squamous",
+      "polarity": "exclusion",
+      "sourceText": "Participants with squamous histology are excluded if there is a known tumor-activating epidermal growth factor receptor (EGFR) mutation or anaplastic lymphoma kinase (ALK) or c ros oncogene 1 (ROS1) gene rearrangement.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06731907-prior-therapy-topo",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior treatment with a topoisomerase I inhibitor or an anti-HER3 antibody and/or ADC that consists of an exatecan derivative that is a topoisomerase I inhibitor.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06731907-prior-therapy-antiher3",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior treatment with a topoisomerase I inhibitor or an anti-HER3 antibody and/or ADC that consists of an exatecan derivative that is a topoisomerase I inhibitor.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06731907-prior-therapy-pd1",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior therapy with an anti- programmed cell death 1 protein (anti-PD-1), anti- programmed cell death ligand 1 protein (anti-PD-L1), or anti- programmed cell death ligand 2 protein (anti-PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06731907-prior-therapy-pdl1",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior therapy with an anti- programmed cell death 1 protein (anti-PD-1), anti- programmed cell death ligand 1 protein (anti-PD-L1), or anti- programmed cell death ligand 2 protein (anti-PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06731907-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status of either 0 or 1 as assessed within 7 days before randomization.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 10,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 11,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 15,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos,squamous"
+        },
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_required",
+          "polarity": "exclusion",
+          "value": "s:prior systemic anticancer therapy"
+        },
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "inclusion",
+          "value": "s:topoisomerase i inhibitor"
+        },
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "inclusion",
+          "value": "s:anti-her3 antibody"
+        },
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "inclusion",
+          "value": "s:anti-pd-1"
+        },
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "inclusion",
+          "value": "s:anti-pd-l1"
+        },
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "inclusion",
+          "value": "s:anti-pd-l2"
+        },
+        {
+          "side": "b-only",
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,squamous"
+        },
+        {
+          "side": "b-only",
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "s:squamous"
+        },
+        {
+          "side": "b-only",
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "s:squamous"
+        },
+        {
+          "side": "b-only",
+          "kind": "ros1_status",
+          "polarity": "exclusion",
+          "value": "s:squamous"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:topoisomerase i inhibitor"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-her3 antibody"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-pd-1"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-pd-l1"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        }
+      ],
+      "normalizerTypedCount": 6
+    }
+  },
+  "runA": {
+    "typedEmitted": 11,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 4320
+  },
+  "runB": {
+    "typedEmitted": 11,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3903
+  },
+  "ms": 16229,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06731907",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06731907-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of Stage IV squamous or non-squamous non-small cell lung cancer (NSCLC) per American Joint Committee on Cancer (AJCC) Staging Manual Version 8.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06731907-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of Stage IV squamous or non-squamous non-small cell lung cancer (NSCLC)",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06731907-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status of either 0 or 1 as assessed within 7 days before randomization.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06731907-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06731907-prior-ther-1",
+        "kind": "prior_therapy_required",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior systemic anticancer therapy for their metastatic NSCLC.",
+        "stringValue": "prior systemic anticancer therapy"
+      },
+      {
+        "id": "NCT06731907-prior-ther-2",
+        "kind": "prior_therapy_excluded",
+        "polarity": "inclusion",
+        "sourceText": "Has received prior treatment with a topoisomerase I inhibitor or an anti-HER3 antibody and/or ADC that consists of an exatecan derivative that is a topoisomerase I inhibitor.",
+        "stringValue": "topoisomerase I inhibitor"
+      },
+      {
+        "id": "NCT06731907-prior-ther-3",
+        "kind": "prior_therapy_excluded",
+        "polarity": "inclusion",
+        "sourceText": "Has received prior treatment with a topoisomerase I inhibitor or an anti-HER3 antibody and/or ADC that consists of an exatecan derivative that is a topoisomerase I inhibitor.",
+        "stringValue": "anti-HER3 antibody"
+      },
+      {
+        "id": "NCT06731907-prior-ther-4",
+        "kind": "prior_therapy_excluded",
+        "polarity": "inclusion",
+        "sourceText": "Has received prior therapy with an anti- programmed cell death 1 protein (anti-PD-1), anti- programmed cell death ligand 1 protein (anti-PD-L1), or anti- programmed cell death ligand 2 protein (anti-PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor.",
+        "stringValue": "anti-PD-1"
+      },
+      {
+        "id": "NCT06731907-prior-ther-5",
+        "kind": "prior_therapy_excluded",
+        "polarity": "inclusion",
+        "sourceText": "Has received prior therapy with an anti- programmed cell death 1 protein (anti-PD-1), anti- programmed cell death ligand 1 protein (anti-PD-L1), or anti- programmed cell death ligand 2 protein (anti-PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor.",
+        "stringValue": "anti-PD-L1"
+      },
+      {
+        "id": "NCT06731907-prior-ther-6",
+        "kind": "prior_therapy_excluded",
+        "polarity": "inclusion",
+        "sourceText": "Has received prior therapy with an anti- programmed cell death 1 protein (anti-PD-1), anti- programmed cell death ligand 1 protein (anti-PD-L1), or anti- programmed cell death ligand 2 protein (anti-PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor.",
+        "stringValue": "anti-PD-L2"
+      },
+      {
+        "id": "NCT06731907-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06731907-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Has archival tumor tissue sample or newly obtained core, incisional, or excisional biopsy of a tumor lesion not previously irradiated has been provided.",
+        "reasonFuzzy": "Willingness or ability to provide a biopsy or archival tissue is a procedural requirement, not a typed check."
+      },
+      {
+        "id": "NCT06731907-squamous-mutations",
+        "polarity": "exclusion",
+        "sourceText": "Participants with squamous histology are excluded if there is a known tumor-activating epidermal growth factor receptor (EGFR) mutation or anaplastic lymphoma kinase (ALK) or c ros oncogene 1 (ROS1) gene rearrangement.",
+        "reasonFuzzy": "This rule applies conditionally based on squamous histology and multiple biomarker criteria, which cannot be expressed as a single standard typed check."
+      },
+      {
+        "id": "NCT06731907-washout",
+        "polarity": "exclusion",
+        "sourceText": "Has inadequate washout period from prior concomitant therapy as specified in protocol before randomization.",
+        "reasonFuzzy": "Washout period depends on protocol specifications and is not a fixed lab cutoff."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06731907",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06731907-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of Stage IV squamous or non-squamous non-small cell lung cancer (NSCLC) per American Joint Committee on Cancer (AJCC) Staging Manual Version 8.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06731907-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of Stage IV squamous or non-squamous non-small cell lung cancer (NSCLC) per American Joint Committee on Cancer (AJCC) Staging Manual Version 8.",
+        "histologies": [
+          "squamous",
+          "adenocarcinoma"
+        ]
+      },
+      {
+        "id": "NCT06731907-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status of either 0 or 1 as assessed within 7 days before randomization.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06731907-egfr-squamous",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with squamous histology are excluded if there is a known tumor-activating epidermal growth factor receptor (EGFR) mutation or anaplastic lymphoma kinase (ALK) or c ros oncogene 1 (ROS1) gene rearrangement.",
+        "presence": "present",
+        "stringValue": "squamous"
+      },
+      {
+        "id": "NCT06731907-alk-squamous",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with squamous histology are excluded if there is a known tumor-activating epidermal growth factor receptor (EGFR) mutation or anaplastic lymphoma kinase (ALK) or c ros oncogene 1 (ROS1) gene rearrangement.",
+        "presence": "present",
+        "stringValue": "squamous"
+      },
+      {
+        "id": "NCT06731907-ros1-squamous",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with squamous histology are excluded if there is a known tumor-activating epidermal growth factor receptor (EGFR) mutation or anaplastic lymphoma kinase (ALK) or c ros oncogene 1 (ROS1) gene rearrangement.",
+        "presence": "present",
+        "stringValue": "squamous"
+      },
+      {
+        "id": "NCT06731907-prior-therapy-topo",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior treatment with a topoisomerase I inhibitor or an anti-HER3 antibody and/or ADC that consists of an exatecan derivative that is a topoisomerase I inhibitor.",
+        "stringValue": "topoisomerase I inhibitor"
+      },
+      {
+        "id": "NCT06731907-prior-therapy-antiher3",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior treatment with a topoisomerase I inhibitor or an anti-HER3 antibody and/or ADC that consists of an exatecan derivative that is a topoisomerase I inhibitor.",
+        "stringValue": "anti-HER3 antibody"
+      },
+      {
+        "id": "NCT06731907-prior-therapy-pd1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior therapy with an anti- programmed cell death 1 protein (anti-PD-1), anti- programmed cell death ligand 1 protein (anti-PD-L1), or anti- programmed cell death ligand 2 protein (anti-PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor.",
+        "stringValue": "anti-PD-1"
+      },
+      {
+        "id": "NCT06731907-prior-therapy-pdl1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior therapy with an anti- programmed cell death 1 protein (anti-PD-1), anti- programmed cell death ligand 1 protein (anti-PD-L1), or anti- programmed cell death ligand 2 protein (anti-PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor.",
+        "stringValue": "anti-PD-L1"
+      },
+      {
+        "id": "NCT06731907-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06731907-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Has archival tumor tissue sample or newly obtained core, incisional, or excisional biopsy of a tumor lesion not previously irradiated has been provided.",
+        "reasonFuzzy": "Willingness or availability to provide a biopsy is a procedure-based requirement, not a typed check."
+      },
+      {
+        "id": "NCT06731907-washout",
+        "polarity": "exclusion",
+        "sourceText": "Has inadequate washout period from prior concomitant therapy as specified in protocol before randomization.",
+        "reasonFuzzy": "Washout windows referencing protocol specifics cannot be represented by a single lab or typed value."
+      },
+      {
+        "id": "NCT06731907-prior-systemic",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior systemic anticancer therapy for their metastatic NSCLC.",
+        "reasonFuzzy": "Broad prior systemic therapy exclusion without a specific drug or line count."
+      }
+    ]
+  }
+}

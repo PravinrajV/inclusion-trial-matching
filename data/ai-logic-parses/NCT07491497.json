@@ -1,0 +1,229 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07491497",
+  "briefTitle": "A Phase 1/2 Study of TRI-611 in ALK-Positive NSCLC",
+  "parsedAt": "2026-11-12T11:55:29.823Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07491497-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07491497-part1-lines",
+      "polarity": "inclusion",
+      "sourceText": "Part 1: prior treatment with 2 to 3 ALK TKIs [in US only: '2 or more ALK TKIs'], prior treatment with lorlatinib is required but must not have been in the first line",
+      "reasonFuzzy": "Prior therapy and lines requirements vary across different study parts and regions, so they cannot be captured in a single typed check."
+    },
+    {
+      "id": "NCT07491497-part2-m1",
+      "polarity": "inclusion",
+      "sourceText": "Part 2 Cohort M1: prior treatment with 2 to 3 ALK TKIs, prior treatment with lorlatinib is required but must not have been in the first line, prior treatment with neladalkib is excluded",
+      "reasonFuzzy": "Cohort-specific prior therapy rules are complex and cannot be represented by a single typed check."
+    },
+    {
+      "id": "NCT07491497-part2-m2",
+      "polarity": "inclusion",
+      "sourceText": "Part 2 Cohort M2: prior treatment with more than 3 ALK TKIs, prior treatment with lorlatinib and neladalkib is required but neither may have been in the first line",
+      "reasonFuzzy": "Cohort-specific prior therapy rules are complex and cannot be represented by a single typed check."
+    },
+    {
+      "id": "NCT07491497-part2-m3",
+      "polarity": "inclusion",
+      "sourceText": "Part 2 Cohort M3: participants without prior ALK TKI treatment",
+      "reasonFuzzy": "Cohort-specific prior therapy rules are complex and cannot be represented by a single typed check."
+    },
+    {
+      "id": "NCT07491497-resistance",
+      "polarity": "exclusion",
+      "sourceText": "Participant's cancer has any additional driver alterations known to be a mechanism of resistance to ALK TKIs",
+      "reasonFuzzy": "General exclusion of unknown driver alterations is not a specific typed variant check."
+    },
+    {
+      "id": "NCT07491497-brain",
+      "polarity": "exclusion",
+      "sourceText": "For participants with central nervous system (CNS) metastases or spinal cord compression, they must not be associated with progressive neurological symptoms or require increasing doses of corticosteroids to control the CNS disease",
+      "reasonFuzzy": "The condition involves progressive neurological symptoms and corticosteroid adjustments, which is not a clean typed brain_mets status."
+    },
+    {
+      "id": "NCT07491497-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07491497-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Part 1: prior treatment with 2 to 3 ALK TKIs [in US only: '2 or more ALK TKIs'], prior treatment with lorlatinib is required but must not have been in the first line",
+      "reasonFuzzy": "Prior therapy and line requirements differ across study parts, so they cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT07491497-cns",
+      "polarity": "exclusion",
+      "sourceText": "For participants with central nervous system (CNS) metastases or spinal cord compression, they must not be associated with progressive neurological symptoms or require increasing doses of corticosteroids to control the CNS disease",
+      "reasonFuzzy": "The wording depends on progressive neurological symptoms and corticosteroid adjustments, which is not a clean typed brain_mets rule."
+    },
+    {
+      "id": "NCT07491497-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery within 4 weeks of receiving the first dose of TRI-611",
+      "reasonFuzzy": "Washout window based on major surgery is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT07491497-alk",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically confirmed diagnosis of ALK-positive non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 8324
+  },
+  "runB": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 7455
+  },
+  "ms": 23756,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07491497",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07491497-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed diagnosis of ALK-positive non-small cell lung cancer (NSCLC)",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07491497-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07491497-part1-lines",
+        "polarity": "inclusion",
+        "sourceText": "Part 1: prior treatment with 2 to 3 ALK TKIs [in US only: '2 or more ALK TKIs'], prior treatment with lorlatinib is required but must not have been in the first line",
+        "reasonFuzzy": "Prior therapy and lines requirements vary across different study parts and regions, so they cannot be captured in a single typed check."
+      },
+      {
+        "id": "NCT07491497-part2-m1",
+        "polarity": "inclusion",
+        "sourceText": "Part 2 Cohort M1: prior treatment with 2 to 3 ALK TKIs, prior treatment with lorlatinib is required but must not have been in the first line, prior treatment with neladalkib is excluded",
+        "reasonFuzzy": "Cohort-specific prior therapy rules are complex and cannot be represented by a single typed check."
+      },
+      {
+        "id": "NCT07491497-part2-m2",
+        "polarity": "inclusion",
+        "sourceText": "Part 2 Cohort M2: prior treatment with more than 3 ALK TKIs, prior treatment with lorlatinib and neladalkib is required but neither may have been in the first line",
+        "reasonFuzzy": "Cohort-specific prior therapy rules are complex and cannot be represented by a single typed check."
+      },
+      {
+        "id": "NCT07491497-part2-m3",
+        "polarity": "inclusion",
+        "sourceText": "Part 2 Cohort M3: participants without prior ALK TKI treatment",
+        "reasonFuzzy": "Cohort-specific prior therapy rules are complex and cannot be represented by a single typed check."
+      },
+      {
+        "id": "NCT07491497-resistance",
+        "polarity": "exclusion",
+        "sourceText": "Participant's cancer has any additional driver alterations known to be a mechanism of resistance to ALK TKIs",
+        "reasonFuzzy": "General exclusion of unknown driver alterations is not a specific typed variant check."
+      },
+      {
+        "id": "NCT07491497-brain",
+        "polarity": "exclusion",
+        "sourceText": "For participants with central nervous system (CNS) metastases or spinal cord compression, they must not be associated with progressive neurological symptoms or require increasing doses of corticosteroids to control the CNS disease",
+        "reasonFuzzy": "The condition involves progressive neurological symptoms and corticosteroid adjustments, which is not a clean typed brain_mets status."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07491497",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07491497-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed diagnosis of ALK-positive non-small cell lung cancer (NSCLC)",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07491497-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07491497-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "Part 1: prior treatment with 2 to 3 ALK TKIs [in US only: '2 or more ALK TKIs'], prior treatment with lorlatinib is required but must not have been in the first line",
+        "reasonFuzzy": "Prior therapy and line requirements differ across study parts, so they cannot be expressed as a single typed check."
+      },
+      {
+        "id": "NCT07491497-cns",
+        "polarity": "exclusion",
+        "sourceText": "For participants with central nervous system (CNS) metastases or spinal cord compression, they must not be associated with progressive neurological symptoms or require increasing doses of corticosteroids to control the CNS disease",
+        "reasonFuzzy": "The wording depends on progressive neurological symptoms and corticosteroid adjustments, which is not a clean typed brain_mets rule."
+      },
+      {
+        "id": "NCT07491497-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery within 4 weeks of receiving the first dose of TRI-611",
+        "reasonFuzzy": "Washout window based on major surgery is not a simple lab cutoff."
+      }
+    ]
+  }
+}

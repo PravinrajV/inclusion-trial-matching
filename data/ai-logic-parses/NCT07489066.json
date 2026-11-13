@@ -1,0 +1,269 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07489066",
+  "briefTitle": "Symbiotic-Lung-10: A Study to Learn About PF-08634404 Alone or in Combination in Early-stage or Locally Advanced NSCLC",
+  "parsedAt": "2026-11-12T11:55:06.049Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07489066-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "18 years of age or older at screening.",
+      "numberValue": 18,
+      "evidence_quote": "18 years of age or older at screening.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07489066-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group performance status (ECOG) score of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group performance status (ECOG) score of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07489066-egfr",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Participants with known EGFR and ALK AGAs; documented negative results for EGFR and ALK AGAs are required for participants with non-squamous histology.",
+      "presence": "present",
+      "evidence_quote": "Participants with known EGFR and ALK AGAs; documented negative results for EGFR and ALK AGAs are required for participants with non-squamous histology.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07489066-alk",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Participants with known EGFR and ALK AGAs; documented negative results for EGFR and ALK AGAs are required for participants with non-squamous histology.",
+      "presence": "present",
+      "evidence_quote": "Participants with known EGFR and ALK AGAs; documented negative results for EGFR and ALK AGAs are required for participants with non-squamous histology.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07489066-stage",
+      "polarity": "inclusion",
+      "sourceText": "Part A only: Participants must have newly diagnosed, previously untreated, pathologically confirmed early-stage or LA (Stage II or IIIA/B), squamous or non-squamous NSCLC... Part B only: Participants must have pathologically confirmed early-stage or LA (Stage II or IIIA/B), squamous or non-squamous NSCLC... Part C only: Participants must have pathologically confirmed LA, unresectable (Stage III) squamous or non-squamous NSCLC",
+      "reasonFuzzy": "The staging criteria vary by study part and include early-stage and stage II as well as stage III, making a single typed stage_in check insufficient."
+    },
+    {
+      "id": "NCT07489066-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "PD-L1 status available based on local testing results",
+      "reasonFuzzy": "Requires PD-L1 status to be available, but does not state a minimum or maximum percentage cutoff."
+    },
+    {
+      "id": "NCT07489066-part-conditions",
+      "polarity": "inclusion",
+      "sourceText": "Part A only: Participants must have newly diagnosed, previously untreated, pathologically confirmed early-stage or LA (Stage II or IIIA/B)... candidate for neoadjuvant therapy... Part B only: ... must not have achieved pCR with SOC neoadjuvant chemo-immunotherapy. Part C only: ... have received ≥ 60 Gy of radiation and ≥ 2 cycles of definitive, platinum-based concurrent chemotherapy and achieved SD or better per RECIST 1.1.",
+      "reasonFuzzy": "Eligibility criteria differ significantly by study parts (A, B, and C) regarding prior therapies and treatment intent, which cannot be modeled as a single inclusion set."
+    },
+    {
+      "id": "NCT07489066-stage",
+      "polarity": "inclusion",
+      "sourceText": "Part A only: Participants must have newly diagnosed, previously untreated, pathologically confirmed early-stage or LA (Stage II or IIIA/B), squamous or non-squamous NSCLC... Part B only: Participants must have pathologically confirmed early-stage or LA (Stage II or IIIA/B), squamous or non-squamous NSCLC... Part C only: Participants must have pathologically confirmed LA, unresectable (Stage III) squamous or non-squamous NSCLC",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07489066-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants with CNS lesions, including leptomeningeal metastasis, brainstem, meningeal, or spinal cord metastases or compression.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07489066-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants with CNS lesions, including leptomeningeal metastasis, brainstem, meningeal, or spinal cord metastases or compression.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Part A only: Participants must have newly diagnosed, previously untreated, pathologically confirmed early-stage or LA (Stage II or IIIA/B), squamous or non-squa"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 8024
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 7459
+  },
+  "ms": 23438,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07489066",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07489066-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 years of age or older at screening.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07489066-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group performance status (ECOG) score of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07489066-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known EGFR and ALK AGAs; documented negative results for EGFR and ALK AGAs are required for participants with non-squamous histology.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07489066-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known EGFR and ALK AGAs; documented negative results for EGFR and ALK AGAs are required for participants with non-squamous histology.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07489066-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participants with CNS lesions, including leptomeningeal metastasis, brainstem, meningeal, or spinal cord metastases or compression.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07489066-stage",
+        "polarity": "inclusion",
+        "sourceText": "Part A only: Participants must have newly diagnosed, previously untreated, pathologically confirmed early-stage or LA (Stage II or IIIA/B), squamous or non-squamous NSCLC... Part B only: Participants must have pathologically confirmed early-stage or LA (Stage II or IIIA/B), squamous or non-squamous NSCLC... Part C only: Participants must have pathologically confirmed LA, unresectable (Stage III) squamous or non-squamous NSCLC",
+        "reasonFuzzy": "The staging criteria vary by study part and include early-stage and stage II as well as stage III, making a single typed stage_in check insufficient."
+      },
+      {
+        "id": "NCT07489066-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "PD-L1 status available based on local testing results",
+        "reasonFuzzy": "Requires PD-L1 status to be available, but does not state a minimum or maximum percentage cutoff."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07489066",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07489066-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 years of age or older at screening.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07489066-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group performance status (ECOG) score of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07489066-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Part A only: Participants must have newly diagnosed, previously untreated, pathologically confirmed early-stage or LA (Stage II or IIIA/B), squamous or non-squamous NSCLC... Part B only: Participants must have pathologically confirmed early-stage or LA (Stage II or IIIA/B), squamous or non-squamous NSCLC... Part C only: Participants must have pathologically confirmed LA, unresectable (Stage III) squamous or non-squamous NSCLC",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT07489066-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known EGFR and ALK AGAs; documented negative results for EGFR and ALK AGAs are required for participants with non-squamous histology.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07489066-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known EGFR and ALK AGAs; documented negative results for EGFR and ALK AGAs are required for participants with non-squamous histology.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07489066-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participants with CNS lesions, including leptomeningeal metastasis, brainstem, meningeal, or spinal cord metastases or compression.",
+        "allowedBrainMets": [
+          "none"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07489066-part-conditions",
+        "polarity": "inclusion",
+        "sourceText": "Part A only: Participants must have newly diagnosed, previously untreated, pathologically confirmed early-stage or LA (Stage II or IIIA/B)... candidate for neoadjuvant therapy... Part B only: ... must not have achieved pCR with SOC neoadjuvant chemo-immunotherapy. Part C only: ... have received ≥ 60 Gy of radiation and ≥ 2 cycles of definitive, platinum-based concurrent chemotherapy and achieved SD or better per RECIST 1.1.",
+        "reasonFuzzy": "Eligibility criteria differ significantly by study parts (A, B, and C) regarding prior therapies and treatment intent, which cannot be modeled as a single inclusion set."
+      }
+    ]
+  }
+}

@@ -1,0 +1,542 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07115043",
+  "briefTitle": "A Study to Investigate Safety of AZD6750 in Adult Participants With Select Advanced or Metastatic Solid Tumors",
+  "parsedAt": "2026-11-12T10:46:07.985Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07115043-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG PS of 0 to 1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG PS of 0 to 1",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07115043-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Participants with Stage IV NSCLC Dose Escalation/Backfills",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Participants with Stage IV NSCLC Dose Escalation/Backfills",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07115043-archival",
+      "polarity": "inclusion",
+      "sourceText": "Provision of 'archival' tumor specimen",
+      "reasonFuzzy": "Willingness or ability to provide a tissue sample is a procedural requirement."
+    },
+    {
+      "id": "NCT07115043-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one measurable lesion according to RECIST v1.1,",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07115043-life",
+      "polarity": "inclusion",
+      "sourceText": "Minimum life expectancy of 12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07115043-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate and stable cardiac function",
+      "reasonFuzzy": "General adequate and stable cardiac function without specific numeric thresholds is subjective."
+    },
+    {
+      "id": "NCT07115043-marrow",
+      "polarity": "inclusion",
+      "sourceText": "Adequate bone marrow, liver and kidney function",
+      "reasonFuzzy": "General adequate organ function without specific lab cutoffs is not a typed check."
+    },
+    {
+      "id": "NCT07115043-weight",
+      "polarity": "inclusion",
+      "sourceText": "Body weight ≥ 35 kg",
+      "reasonFuzzy": "Weight threshold is not among the allowed typed kinds."
+    },
+    {
+      "id": "NCT07115043-consent",
+      "polarity": "inclusion",
+      "sourceText": "Capable of giving signed informed consent",
+      "reasonFuzzy": "Informed consent capability is a standard administrative requirement."
+    },
+    {
+      "id": "NCT07115043-soc",
+      "polarity": "inclusion",
+      "sourceText": "Participants with locally advanced or metastatic select solid tumors ... who have received adequate SoC",
+      "reasonFuzzy": "Adequate standard of care is a general trial context rule."
+    },
+    {
+      "id": "NCT07115043-lines",
+      "polarity": "inclusion",
+      "sourceText": "Have received at least one prior regimen in metastatic setting (2L+ NSCLC). Participants with actionable tumor alterations should have received targeted therapy if locally available OR",
+      "reasonFuzzy": "Complex conditional prior therapy rules and conditional targeted therapy recommendations cannot be expressed with a simple prior_lines_min check."
+    },
+    {
+      "id": "NCT07115043-severe-disease",
+      "polarity": "exclusion",
+      "sourceText": "Any evidence of: Severe or uncontrolled systemic diseases including respiratory, cardiac or tumor-related conditions",
+      "reasonFuzzy": "General severe or uncontrolled systemic diseases are investigator-judged exclusions."
+    },
+    {
+      "id": "NCT07115043-transplant",
+      "polarity": "exclusion",
+      "sourceText": "History or planned organ or allogeneic stem cell transplantation.",
+      "reasonFuzzy": "Transplantation history is not among the allowed typed exclusions."
+    },
+    {
+      "id": "NCT07115043-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Active or prior documented autoimmune or inflammatory disorders, within the past 3 years",
+      "reasonFuzzy": "Autoimmune disorder history is not a typed check."
+    },
+    {
+      "id": "NCT07115043-immunotherapy-tox",
+      "polarity": "exclusion",
+      "sourceText": "Any prior toxicities that led to permanent discontinuation of prior immunotherapy",
+      "reasonFuzzy": "Prior immunotherapy toxicity leading to discontinuation is not a typed check."
+    },
+    {
+      "id": "NCT07115043-persistent-tox",
+      "polarity": "exclusion",
+      "sourceText": "Persistent toxicities (CTCAE Grade ≥ 2) caused by previous anti-cancer therapy",
+      "reasonFuzzy": "Persistent general toxicities are not a typed check."
+    },
+    {
+      "id": "NCT07115043-spinal",
+      "polarity": "exclusion",
+      "sourceText": "Acute untreated or symptomatic malignant spinal cord compression, or a history of leptomeningeal carcinomatosis.",
+      "reasonFuzzy": "Spinal cord compression and leptomeningeal disease are not part of the standard typed brain_mets checks."
+    },
+    {
+      "id": "NCT07115043-infection",
+      "polarity": "exclusion",
+      "sourceText": "Active uncontrolled or chronic infection of hepatitis B, hepatitis C",
+      "reasonFuzzy": "Infection status is not a typed check."
+    },
+    {
+      "id": "NCT07115043-pneumonitis",
+      "polarity": "exclusion",
+      "sourceText": "Prior history of Grade ≥ 3 non-infectious pneumonitis.",
+      "reasonFuzzy": "Pneumonitis history is not a typed check."
+    },
+    {
+      "id": "NCT07115043-immunosuppressive",
+      "polarity": "exclusion",
+      "sourceText": "Participant requires chronic immunosuppressive therapy (including steroids > 10 mg prednisone/day or equivalent).",
+      "reasonFuzzy": "Chronic immunosuppressive therapy requirement is not a typed check."
+    },
+    {
+      "id": "NCT07115043-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Receipt of live attenuated vaccine within 30 days.",
+      "reasonFuzzy": "Washout for live vaccines is not a simple lab cutoff or allowed typed exclusion."
+    },
+    {
+      "id": "NCT07115043-egfr-target",
+      "polarity": "exclusion",
+      "sourceText": "1L NSCLC participants with genetic alteration such as EGFR that has a targeted therapy in 1L as per local SoC",
+      "reasonFuzzy": "This exclusion relates to available local SoC targeted therapy for genetic alterations and is not a clean standalone typed status check."
+    },
+    {
+      "id": "NCT07115043-archival",
+      "polarity": "inclusion",
+      "sourceText": "Provision of 'archival' tumor specimen",
+      "reasonFuzzy": "Willingness or ability to provide a tissue sample is a procedural requirement, not a typed check."
+    },
+    {
+      "id": "NCT07115043-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one measurable lesion according to RECIST v1.1,",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07115043-life",
+      "polarity": "inclusion",
+      "sourceText": "Minimum life expectancy of 12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07115043-lines",
+      "polarity": "inclusion",
+      "sourceText": "Have received at least one prior regimen in metastatic setting (2L+ NSCLC). Participants with actionable tumor alterations should have received targeted therapy if locally available OR Have not received systemic therapy (1L NSCLC) and have PD-L1 expression ≥ 1%.",
+      "reasonFuzzy": "Conditional prior lines and actionable alteration requirements vary by cohort and cannot be expressed as a single typed prior lines rule."
+    },
+    {
+      "id": "NCT07115043-spinal",
+      "polarity": "exclusion",
+      "sourceText": "Acute untreated or symptomatic malignant spinal cord compression, or a history of leptomeningeal carcinomatosis.",
+      "reasonFuzzy": "Spinal cord compression and leptomeningeal disease are specific exclusions not covered by standard typed brain mets rules."
+    },
+    {
+      "id": "NCT07115043-tigit",
+      "polarity": "exclusion",
+      "sourceText": "Previous treatment with anti-TIGIT therapy",
+      "reasonFuzzy": "anti-TIGIT therapy is not among the allowed prior therapy exclusion kinds."
+    },
+    {
+      "id": "NCT07115043-prior-tigit",
+      "polarity": "exclusion",
+      "sourceText": "Previous treatment with anti-TIGIT therapy",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07115043-age",
+      "polarity": "inclusion",
+      "sourceText": "Participant ≥ 18 year",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07115043-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Have not received systemic therapy (1L NSCLC) and have PD-L1 expression ≥ 1%.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07115043-brain",
+      "polarity": "exclusion",
+      "sourceText": "Brain metastases unless treated, asymptomatic, stable, and not requiring continuous corticosteroids",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-tigit therapy"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:18"
+        },
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 20,
+    "attempts": 1,
+    "ms": 6447
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2637
+  },
+  "ms": 17019,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07115043",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07115043-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant ≥ 18 year",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07115043-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG PS of 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07115043-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants with Stage IV NSCLC Dose Escalation/Backfills",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07115043-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Have not received systemic therapy (1L NSCLC) and have PD-L1 expression ≥ 1%.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07115043-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Brain metastases unless treated, asymptomatic, stable, and not requiring continuous corticosteroids",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT07115043-prior-tigit",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Previous treatment with anti-TIGIT therapy",
+        "stringValue": "anti-TIGIT therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07115043-archival",
+        "polarity": "inclusion",
+        "sourceText": "Provision of 'archival' tumor specimen",
+        "reasonFuzzy": "Willingness or ability to provide a tissue sample is a procedural requirement."
+      },
+      {
+        "id": "NCT07115043-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one measurable lesion according to RECIST v1.1,",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07115043-life",
+        "polarity": "inclusion",
+        "sourceText": "Minimum life expectancy of 12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT07115043-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate and stable cardiac function",
+        "reasonFuzzy": "General adequate and stable cardiac function without specific numeric thresholds is subjective."
+      },
+      {
+        "id": "NCT07115043-marrow",
+        "polarity": "inclusion",
+        "sourceText": "Adequate bone marrow, liver and kidney function",
+        "reasonFuzzy": "General adequate organ function without specific lab cutoffs is not a typed check."
+      },
+      {
+        "id": "NCT07115043-weight",
+        "polarity": "inclusion",
+        "sourceText": "Body weight ≥ 35 kg",
+        "reasonFuzzy": "Weight threshold is not among the allowed typed kinds."
+      },
+      {
+        "id": "NCT07115043-consent",
+        "polarity": "inclusion",
+        "sourceText": "Capable of giving signed informed consent",
+        "reasonFuzzy": "Informed consent capability is a standard administrative requirement."
+      },
+      {
+        "id": "NCT07115043-soc",
+        "polarity": "inclusion",
+        "sourceText": "Participants with locally advanced or metastatic select solid tumors ... who have received adequate SoC",
+        "reasonFuzzy": "Adequate standard of care is a general trial context rule."
+      },
+      {
+        "id": "NCT07115043-lines",
+        "polarity": "inclusion",
+        "sourceText": "Have received at least one prior regimen in metastatic setting (2L+ NSCLC). Participants with actionable tumor alterations should have received targeted therapy if locally available OR",
+        "reasonFuzzy": "Complex conditional prior therapy rules and conditional targeted therapy recommendations cannot be expressed with a simple prior_lines_min check."
+      },
+      {
+        "id": "NCT07115043-severe-disease",
+        "polarity": "exclusion",
+        "sourceText": "Any evidence of: Severe or uncontrolled systemic diseases including respiratory, cardiac or tumor-related conditions",
+        "reasonFuzzy": "General severe or uncontrolled systemic diseases are investigator-judged exclusions."
+      },
+      {
+        "id": "NCT07115043-transplant",
+        "polarity": "exclusion",
+        "sourceText": "History or planned organ or allogeneic stem cell transplantation.",
+        "reasonFuzzy": "Transplantation history is not among the allowed typed exclusions."
+      },
+      {
+        "id": "NCT07115043-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Active or prior documented autoimmune or inflammatory disorders, within the past 3 years",
+        "reasonFuzzy": "Autoimmune disorder history is not a typed check."
+      },
+      {
+        "id": "NCT07115043-immunotherapy-tox",
+        "polarity": "exclusion",
+        "sourceText": "Any prior toxicities that led to permanent discontinuation of prior immunotherapy",
+        "reasonFuzzy": "Prior immunotherapy toxicity leading to discontinuation is not a typed check."
+      },
+      {
+        "id": "NCT07115043-persistent-tox",
+        "polarity": "exclusion",
+        "sourceText": "Persistent toxicities (CTCAE Grade ≥ 2) caused by previous anti-cancer therapy",
+        "reasonFuzzy": "Persistent general toxicities are not a typed check."
+      },
+      {
+        "id": "NCT07115043-spinal",
+        "polarity": "exclusion",
+        "sourceText": "Acute untreated or symptomatic malignant spinal cord compression, or a history of leptomeningeal carcinomatosis.",
+        "reasonFuzzy": "Spinal cord compression and leptomeningeal disease are not part of the standard typed brain_mets checks."
+      },
+      {
+        "id": "NCT07115043-infection",
+        "polarity": "exclusion",
+        "sourceText": "Active uncontrolled or chronic infection of hepatitis B, hepatitis C",
+        "reasonFuzzy": "Infection status is not a typed check."
+      },
+      {
+        "id": "NCT07115043-pneumonitis",
+        "polarity": "exclusion",
+        "sourceText": "Prior history of Grade ≥ 3 non-infectious pneumonitis.",
+        "reasonFuzzy": "Pneumonitis history is not a typed check."
+      },
+      {
+        "id": "NCT07115043-immunosuppressive",
+        "polarity": "exclusion",
+        "sourceText": "Participant requires chronic immunosuppressive therapy (including steroids > 10 mg prednisone/day or equivalent).",
+        "reasonFuzzy": "Chronic immunosuppressive therapy requirement is not a typed check."
+      },
+      {
+        "id": "NCT07115043-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Receipt of live attenuated vaccine within 30 days.",
+        "reasonFuzzy": "Washout for live vaccines is not a simple lab cutoff or allowed typed exclusion."
+      },
+      {
+        "id": "NCT07115043-egfr-target",
+        "polarity": "exclusion",
+        "sourceText": "1L NSCLC participants with genetic alteration such as EGFR that has a targeted therapy in 1L as per local SoC",
+        "reasonFuzzy": "This exclusion relates to available local SoC targeted therapy for genetic alterations and is not a clean standalone typed status check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07115043",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07115043-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant ≥ 18 year",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07115043-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG PS of 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07115043-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants with Stage IV NSCLC Dose Escalation/Backfills",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07115043-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Have not received systemic therapy (1L NSCLC) and have PD-L1 expression ≥ 1%.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07115043-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Brain metastases unless treated, asymptomatic, stable, and not requiring continuous corticosteroids",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07115043-archival",
+        "polarity": "inclusion",
+        "sourceText": "Provision of 'archival' tumor specimen",
+        "reasonFuzzy": "Willingness or ability to provide a tissue sample is a procedural requirement, not a typed check."
+      },
+      {
+        "id": "NCT07115043-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one measurable lesion according to RECIST v1.1,",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07115043-life",
+        "polarity": "inclusion",
+        "sourceText": "Minimum life expectancy of 12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT07115043-lines",
+        "polarity": "inclusion",
+        "sourceText": "Have received at least one prior regimen in metastatic setting (2L+ NSCLC). Participants with actionable tumor alterations should have received targeted therapy if locally available OR Have not received systemic therapy (1L NSCLC) and have PD-L1 expression ≥ 1%.",
+        "reasonFuzzy": "Conditional prior lines and actionable alteration requirements vary by cohort and cannot be expressed as a single typed prior lines rule."
+      },
+      {
+        "id": "NCT07115043-spinal",
+        "polarity": "exclusion",
+        "sourceText": "Acute untreated or symptomatic malignant spinal cord compression, or a history of leptomeningeal carcinomatosis.",
+        "reasonFuzzy": "Spinal cord compression and leptomeningeal disease are specific exclusions not covered by standard typed brain mets rules."
+      },
+      {
+        "id": "NCT07115043-tigit",
+        "polarity": "exclusion",
+        "sourceText": "Previous treatment with anti-TIGIT therapy",
+        "reasonFuzzy": "anti-TIGIT therapy is not among the allowed prior therapy exclusion kinds."
+      }
+    ]
+  }
+}

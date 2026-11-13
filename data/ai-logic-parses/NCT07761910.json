@@ -1,0 +1,421 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07761910",
+  "briefTitle": "Prospective Study on Radiation Induced Cardiotoxicity Assessed By PET-CT for Locally Advanced Non-Small Cell Lung Cancer (NSCLC)",
+  "parsedAt": "2026-11-12T12:01:10.616Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07761910-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 at time of consent",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 at time of consent",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07761910-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Stage III NSCLC per AJCC 8th edition guideline, confirmed by pathological diagnosis and PET/CT.",
+      "stages": [
+        "IIIA",
+        "IIIB",
+        "IIIC"
+      ],
+      "evidence_quote": "Stage III NSCLC per AJCC 8th edition guideline, confirmed by pathological diagnosis and PET/CT.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07761910-consent",
+      "polarity": "inclusion",
+      "sourceText": "Ability to provide written informed consent and HIPAA authorization",
+      "reasonFuzzy": "Ability to provide consent is a subjective participant capability, not a typed check."
+    },
+    {
+      "id": "NCT07761910-chemoradiation",
+      "polarity": "inclusion",
+      "sourceText": "To receive standard definitive concurrent chemoradiation therapy per NCCN guidelines.",
+      "reasonFuzzy": "Treatment plan requirement is not a standard eligibility criterion kind."
+    },
+    {
+      "id": "NCT07761910-tumor-proximity",
+      "polarity": "inclusion",
+      "sourceText": "Tumor estimated to be within 2cm of heart contour or anticipated MHD>10Gy per treating physician.",
+      "reasonFuzzy": "Physician estimation of tumor distance and dose is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07761910-sbrt",
+      "polarity": "exclusion",
+      "sourceText": "Patients treated with stereotactic body radiotherapy (SBRT).",
+      "reasonFuzzy": "Prior SBRT exclusion is context-specific to prior treatment history that is best left as fuzzy."
+    },
+    {
+      "id": "NCT07761910-contrast-allergy",
+      "polarity": "exclusion",
+      "sourceText": "History of a severe anaphylactic reaction to iodinated contrast.",
+      "reasonFuzzy": "Allergy severity is a clinical judgment, not a typed check."
+    },
+    {
+      "id": "NCT07761910-breath-hold",
+      "polarity": "exclusion",
+      "sourceText": "Inability to hold breath for more than 5 seconds.",
+      "reasonFuzzy": "Physical capability to hold breath is a subjective test requirement."
+    },
+    {
+      "id": "NCT07761910-radioactive-iodine",
+      "polarity": "exclusion",
+      "sourceText": "Patients on radioactive iodine therapy.",
+      "reasonFuzzy": "Concurrent therapy exclusion is not covered by allowed typed kinds."
+    },
+    {
+      "id": "NCT07761910-cardiac-conduction",
+      "polarity": "exclusion",
+      "sourceText": "Second-degree AV block, third-degree AV block, and sinus node disease (such as sick sinus syndrome or symptomatic bradycardia) without a functioning pacemaker.",
+      "reasonFuzzy": "Complex cardiac conduction disorders are not simple typed checks."
+    },
+    {
+      "id": "NCT07761910-pulmonary-exacerbation",
+      "polarity": "exclusion",
+      "sourceText": "Patients with bronchospastic diseases including asthma and chronic obstructive pulmonary disease (COPD) who have an acute exacerbation or active wheezing (a high-pitched, musical, adventitious lung sound produced by airflow through the narrowed airways) on the day of PET CT exam.",
+      "reasonFuzzy": "Active wheezing and acute exacerbation are subjective physical exam findings on the day of the test."
+    },
+    {
+      "id": "NCT07761910-hypotension",
+      "polarity": "exclusion",
+      "sourceText": "Patients who are hypotensive (systolic blood pressure less than 90 mm Hg) on the day of the PET/CT scan.",
+      "reasonFuzzy": "Blood pressure on the day of the scan is a procedural condition rather than a baseline screening lab."
+    },
+    {
+      "id": "NCT07761910-consent",
+      "polarity": "inclusion",
+      "sourceText": "Ability to provide written informed consent and HIPAA authorization",
+      "reasonFuzzy": "Ability to provide informed consent is a subjective or administrative assessment."
+    },
+    {
+      "id": "NCT07761910-chemoradiation",
+      "polarity": "inclusion",
+      "sourceText": "To receive standard definitive concurrent chemoradiation therapy per NCCN guidelines.",
+      "reasonFuzzy": "Treatment plan requirement is not a typed patient eligibility rule."
+    },
+    {
+      "id": "NCT07761910-tumor-location",
+      "polarity": "inclusion",
+      "sourceText": "Tumor estimated to be within 2cm of heart contour or anticipated MHD>10Gy per treating physician.",
+      "reasonFuzzy": "Tumor estimation and physician discretion regarding radiation dose are subjective medical judgments."
+    },
+    {
+      "id": "NCT07761910-sbrt",
+      "polarity": "exclusion",
+      "sourceText": "Patients treated with stereotactic body radiotherapy (SBRT).",
+      "reasonFuzzy": "Refers to treatment modality or procedural history context."
+    },
+    {
+      "id": "NCT07761910-contrast",
+      "polarity": "exclusion",
+      "sourceText": "History of a severe anaphylactic reaction to iodinated contrast.",
+      "reasonFuzzy": "Allergic history to contrast is procedure-specific rather than a standard organ function typed check."
+    },
+    {
+      "id": "NCT07761910-breath-hold",
+      "polarity": "exclusion",
+      "sourceText": "Inability to hold breath for more than 5 seconds.",
+      "reasonFuzzy": "Physical capability/compliance is a functional judgment, not a typed check."
+    },
+    {
+      "id": "NCT07761910-radioactive-iodine",
+      "polarity": "exclusion",
+      "sourceText": "Patients on radioactive iodine therapy.",
+      "reasonFuzzy": "Specific concurrent therapy exclusion not covered by standard typed checks."
+    },
+    {
+      "id": "NCT07761910-av-block",
+      "polarity": "exclusion",
+      "sourceText": "Second-degree AV block, third-degree AV block, and sinus node disease (such as sick sinus syndrome or symptomatic bradycardia) without a functioning pacemaker.",
+      "reasonFuzzy": "Complex cardiac conduction abnormalities are specific clinical exclusions."
+    },
+    {
+      "id": "NCT07761910-copd",
+      "polarity": "exclusion",
+      "sourceText": "Patients with bronchospastic diseases including asthma and chronic obstructive pulmonary disease (COPD) who have an acute exacerbation or active wheezing (a high-pitched, musical, adventitious lung sound produced by airflow through the narrowed airways) on the day of PET CT exam.",
+      "reasonFuzzy": "Clinical exacerbation and physical exam findings are subjective and date-dependent."
+    },
+    {
+      "id": "NCT07761910-hypotension",
+      "polarity": "exclusion",
+      "sourceText": "Patients who are hypotensive (systolic blood pressure less than 90 mm Hg) on the day of the PET/CT scan.",
+      "reasonFuzzy": "Blood pressure reading on the day of scan is a dynamic clinical measurement."
+    },
+    {
+      "id": "NCT07761910-radiotherapy",
+      "polarity": "exclusion",
+      "sourceText": "Prior thoracic radiotherapy.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07761910-crcl",
+      "polarity": "exclusion",
+      "sourceText": "Renal insufficiency (defined as estimated CrCl less than 30 mL/min).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:thoracic radiotherapy"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "exclusion",
+          "value": "n:30"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 10,
+    "attempts": 1,
+    "ms": 5987
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 10,
+    "attempts": 1,
+    "ms": 4362
+  },
+  "ms": 18333,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07761910",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07761910-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 at time of consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07761910-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage III NSCLC per AJCC 8th edition guideline, confirmed by pathological diagnosis and PET/CT.",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT07761910-radiotherapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior thoracic radiotherapy.",
+        "stringValue": "thoracic radiotherapy"
+      },
+      {
+        "id": "NCT07761910-crcl",
+        "kind": "egfr_min",
+        "polarity": "exclusion",
+        "sourceText": "Renal insufficiency (defined as estimated CrCl less than 30 mL/min).",
+        "numberValue": 30
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07761910-consent",
+        "polarity": "inclusion",
+        "sourceText": "Ability to provide written informed consent and HIPAA authorization",
+        "reasonFuzzy": "Ability to provide consent is a subjective participant capability, not a typed check."
+      },
+      {
+        "id": "NCT07761910-chemoradiation",
+        "polarity": "inclusion",
+        "sourceText": "To receive standard definitive concurrent chemoradiation therapy per NCCN guidelines.",
+        "reasonFuzzy": "Treatment plan requirement is not a standard eligibility criterion kind."
+      },
+      {
+        "id": "NCT07761910-tumor-proximity",
+        "polarity": "inclusion",
+        "sourceText": "Tumor estimated to be within 2cm of heart contour or anticipated MHD>10Gy per treating physician.",
+        "reasonFuzzy": "Physician estimation of tumor distance and dose is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT07761910-sbrt",
+        "polarity": "exclusion",
+        "sourceText": "Patients treated with stereotactic body radiotherapy (SBRT).",
+        "reasonFuzzy": "Prior SBRT exclusion is context-specific to prior treatment history that is best left as fuzzy."
+      },
+      {
+        "id": "NCT07761910-contrast-allergy",
+        "polarity": "exclusion",
+        "sourceText": "History of a severe anaphylactic reaction to iodinated contrast.",
+        "reasonFuzzy": "Allergy severity is a clinical judgment, not a typed check."
+      },
+      {
+        "id": "NCT07761910-breath-hold",
+        "polarity": "exclusion",
+        "sourceText": "Inability to hold breath for more than 5 seconds.",
+        "reasonFuzzy": "Physical capability to hold breath is a subjective test requirement."
+      },
+      {
+        "id": "NCT07761910-radioactive-iodine",
+        "polarity": "exclusion",
+        "sourceText": "Patients on radioactive iodine therapy.",
+        "reasonFuzzy": "Concurrent therapy exclusion is not covered by allowed typed kinds."
+      },
+      {
+        "id": "NCT07761910-cardiac-conduction",
+        "polarity": "exclusion",
+        "sourceText": "Second-degree AV block, third-degree AV block, and sinus node disease (such as sick sinus syndrome or symptomatic bradycardia) without a functioning pacemaker.",
+        "reasonFuzzy": "Complex cardiac conduction disorders are not simple typed checks."
+      },
+      {
+        "id": "NCT07761910-pulmonary-exacerbation",
+        "polarity": "exclusion",
+        "sourceText": "Patients with bronchospastic diseases including asthma and chronic obstructive pulmonary disease (COPD) who have an acute exacerbation or active wheezing (a high-pitched, musical, adventitious lung sound produced by airflow through the narrowed airways) on the day of PET CT exam.",
+        "reasonFuzzy": "Active wheezing and acute exacerbation are subjective physical exam findings on the day of the test."
+      },
+      {
+        "id": "NCT07761910-hypotension",
+        "polarity": "exclusion",
+        "sourceText": "Patients who are hypotensive (systolic blood pressure less than 90 mm Hg) on the day of the PET/CT scan.",
+        "reasonFuzzy": "Blood pressure on the day of the scan is a procedural condition rather than a baseline screening lab."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07761910",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07761910-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 at time of consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07761910-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage III NSCLC per AJCC 8th edition guideline, confirmed by pathological diagnosis and PET/CT.",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT07761910-radiotherapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior thoracic radiotherapy.",
+        "stringValue": "thoracic radiotherapy"
+      },
+      {
+        "id": "NCT07761910-crcl",
+        "kind": "egfr_min",
+        "polarity": "exclusion",
+        "sourceText": "Renal insufficiency (defined as estimated CrCl less than 30 mL/min).",
+        "numberValue": 30
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07761910-consent",
+        "polarity": "inclusion",
+        "sourceText": "Ability to provide written informed consent and HIPAA authorization",
+        "reasonFuzzy": "Ability to provide informed consent is a subjective or administrative assessment."
+      },
+      {
+        "id": "NCT07761910-chemoradiation",
+        "polarity": "inclusion",
+        "sourceText": "To receive standard definitive concurrent chemoradiation therapy per NCCN guidelines.",
+        "reasonFuzzy": "Treatment plan requirement is not a typed patient eligibility rule."
+      },
+      {
+        "id": "NCT07761910-tumor-location",
+        "polarity": "inclusion",
+        "sourceText": "Tumor estimated to be within 2cm of heart contour or anticipated MHD>10Gy per treating physician.",
+        "reasonFuzzy": "Tumor estimation and physician discretion regarding radiation dose are subjective medical judgments."
+      },
+      {
+        "id": "NCT07761910-sbrt",
+        "polarity": "exclusion",
+        "sourceText": "Patients treated with stereotactic body radiotherapy (SBRT).",
+        "reasonFuzzy": "Refers to treatment modality or procedural history context."
+      },
+      {
+        "id": "NCT07761910-contrast",
+        "polarity": "exclusion",
+        "sourceText": "History of a severe anaphylactic reaction to iodinated contrast.",
+        "reasonFuzzy": "Allergic history to contrast is procedure-specific rather than a standard organ function typed check."
+      },
+      {
+        "id": "NCT07761910-breath-hold",
+        "polarity": "exclusion",
+        "sourceText": "Inability to hold breath for more than 5 seconds.",
+        "reasonFuzzy": "Physical capability/compliance is a functional judgment, not a typed check."
+      },
+      {
+        "id": "NCT07761910-radioactive-iodine",
+        "polarity": "exclusion",
+        "sourceText": "Patients on radioactive iodine therapy.",
+        "reasonFuzzy": "Specific concurrent therapy exclusion not covered by standard typed checks."
+      },
+      {
+        "id": "NCT07761910-av-block",
+        "polarity": "exclusion",
+        "sourceText": "Second-degree AV block, third-degree AV block, and sinus node disease (such as sick sinus syndrome or symptomatic bradycardia) without a functioning pacemaker.",
+        "reasonFuzzy": "Complex cardiac conduction abnormalities are specific clinical exclusions."
+      },
+      {
+        "id": "NCT07761910-copd",
+        "polarity": "exclusion",
+        "sourceText": "Patients with bronchospastic diseases including asthma and chronic obstructive pulmonary disease (COPD) who have an acute exacerbation or active wheezing (a high-pitched, musical, adventitious lung sound produced by airflow through the narrowed airways) on the day of PET CT exam.",
+        "reasonFuzzy": "Clinical exacerbation and physical exam findings are subjective and date-dependent."
+      },
+      {
+        "id": "NCT07761910-hypotension",
+        "polarity": "exclusion",
+        "sourceText": "Patients who are hypotensive (systolic blood pressure less than 90 mm Hg) on the day of the PET/CT scan.",
+        "reasonFuzzy": "Blood pressure reading on the day of scan is a dynamic clinical measurement."
+      }
+    ]
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06162221",
+  "briefTitle": "Study of RAS(ON) Inhibitors in Patients With Advanced RAS-mutated NSCLC",
+  "parsedAt": "2026-11-12T05:50:45.428Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06162221-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "≥ 18 years of age",
+      "numberValue": 18,
+      "evidence_quote": "≥ 18 years of age",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06162221-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Received prior standard therapy appropriate for tumor type and stage",
+      "reasonFuzzy": "Prior therapy requirement is phrased generally as standard therapy appropriate for tumor type and stage without a specific drug or line count."
+    },
+    {
+      "id": "NCT06162221-ras-nsclc",
+      "polarity": "inclusion",
+      "sourceText": "Must have pathologically documented, locally advanced or metastatic RAS-mutated NSCLC (Subprotocol B)",
+      "reasonFuzzy": "General RAS-mutation does not map to a single specific typed KRAS, NRAS, or HRAS status check."
+    },
+    {
+      "id": "NCT06162221-ras-g12d",
+      "polarity": "inclusion",
+      "sourceText": "Must have pathologically documented, locally advanced or metastatic RAS G12D-mutated NSCLC (Subprotocol C and Subprotocol D)",
+      "reasonFuzzy": "G12D mutation is specified for RAS broadly, and there is no typed kind for non-KRAS RAS variants like NRAS/HRAS G12D."
+    },
+    {
+      "id": "NCT06162221-cns-tumors",
+      "polarity": "exclusion",
+      "sourceText": "Primary central nervous system (CNS) tumors",
+      "reasonFuzzy": "Exclusion of primary CNS tumors is distinct from brain metastases criteria."
+    },
+    {
+      "id": "NCT06162221-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Received prior standard therapy appropriate for tumor type and stage",
+      "reasonFuzzy": "Prior therapy requirement refers generally to standard therapy appropriate for tumor type and stage without naming a specific class or drug name."
+    },
+    {
+      "id": "NCT06162221-subprotocol-b",
+      "polarity": "inclusion",
+      "sourceText": "Must have pathologically documented, locally advanced or metastatic RAS-mutated NSCLC (Subprotocol B)",
+      "reasonFuzzy": "RAS-mutated general category spans multiple variants and subprotocols, making it unsuitable for a single simple typed check."
+    },
+    {
+      "id": "NCT06162221-subprotocol-cd",
+      "polarity": "inclusion",
+      "sourceText": "Must have pathologically documented, locally advanced or metastatic RAS G12D-mutated NSCLC (Subprotocol C and Subprotocol D)",
+      "reasonFuzzy": "RAS G12D mutation rule spans multiple subprotocols and is not mapped to a single typed check."
+    },
+    {
+      "id": "NCT06162221-cns-tumors",
+      "polarity": "exclusion",
+      "sourceText": "Primary central nervous system (CNS) tumors",
+      "reasonFuzzy": "Exclusion of primary CNS tumors is not a standard brain metastases status check."
+    },
+    {
+      "id": "NCT06162221-gi-function",
+      "polarity": "exclusion",
+      "sourceText": "Impaired gastrointestinal (GI) function that may significantly alter the absorption of RMC drugs",
+      "reasonFuzzy": "GI function impairment is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06162221-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery < 28 days of first dose",
+      "reasonFuzzy": "Washout window based on major surgery is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT06162221-ild",
+      "polarity": "exclusion",
+      "sourceText": "Active or history of interstitial lung disease (ILD) or pneumonitis requiring steroids",
+      "reasonFuzzy": "ILD and pneumonitis history with steroid qualification is a clinical judgment condition."
+    },
+    {
+      "id": "NCT06162221-ecog",
+      "polarity": "inclusion",
+      "sourceText": "ECOG PS is 0 to 1",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06162221-kras-variant",
+      "polarity": "inclusion",
+      "sourceText": "Must have pathologically documented, locally advanced or metastatic KRAS G12C-mutated solid tumor malignancy (not amenable to curative surgery) (Subprotocol A)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12c"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 2385
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 2693
+  },
+  "ms": 13076,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06162221",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06162221-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "≥ 18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06162221-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG PS is 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06162221-kras-variant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Must have pathologically documented, locally advanced or metastatic KRAS G12C-mutated solid tumor malignancy (not amenable to curative surgery) (Subprotocol A)",
+        "stringValue": "G12C"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06162221-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Received prior standard therapy appropriate for tumor type and stage",
+        "reasonFuzzy": "Prior therapy requirement is phrased generally as standard therapy appropriate for tumor type and stage without a specific drug or line count."
+      },
+      {
+        "id": "NCT06162221-ras-nsclc",
+        "polarity": "inclusion",
+        "sourceText": "Must have pathologically documented, locally advanced or metastatic RAS-mutated NSCLC (Subprotocol B)",
+        "reasonFuzzy": "General RAS-mutation does not map to a single specific typed KRAS, NRAS, or HRAS status check."
+      },
+      {
+        "id": "NCT06162221-ras-g12d",
+        "polarity": "inclusion",
+        "sourceText": "Must have pathologically documented, locally advanced or metastatic RAS G12D-mutated NSCLC (Subprotocol C and Subprotocol D)",
+        "reasonFuzzy": "G12D mutation is specified for RAS broadly, and there is no typed kind for non-KRAS RAS variants like NRAS/HRAS G12D."
+      },
+      {
+        "id": "NCT06162221-cns-tumors",
+        "polarity": "exclusion",
+        "sourceText": "Primary central nervous system (CNS) tumors",
+        "reasonFuzzy": "Exclusion of primary CNS tumors is distinct from brain metastases criteria."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06162221",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06162221-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "≥ 18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06162221-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG PS is 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06162221-kras-g12c",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Must have pathologically documented, locally advanced or metastatic KRAS G12C-mutated solid tumor malignancy (not amenable to curative surgery) (Subprotocol A)",
+        "stringValue": "G12C"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06162221-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Received prior standard therapy appropriate for tumor type and stage",
+        "reasonFuzzy": "Prior therapy requirement refers generally to standard therapy appropriate for tumor type and stage without naming a specific class or drug name."
+      },
+      {
+        "id": "NCT06162221-subprotocol-b",
+        "polarity": "inclusion",
+        "sourceText": "Must have pathologically documented, locally advanced or metastatic RAS-mutated NSCLC (Subprotocol B)",
+        "reasonFuzzy": "RAS-mutated general category spans multiple variants and subprotocols, making it unsuitable for a single simple typed check."
+      },
+      {
+        "id": "NCT06162221-subprotocol-cd",
+        "polarity": "inclusion",
+        "sourceText": "Must have pathologically documented, locally advanced or metastatic RAS G12D-mutated NSCLC (Subprotocol C and Subprotocol D)",
+        "reasonFuzzy": "RAS G12D mutation rule spans multiple subprotocols and is not mapped to a single typed check."
+      },
+      {
+        "id": "NCT06162221-cns-tumors",
+        "polarity": "exclusion",
+        "sourceText": "Primary central nervous system (CNS) tumors",
+        "reasonFuzzy": "Exclusion of primary CNS tumors is not a standard brain metastases status check."
+      },
+      {
+        "id": "NCT06162221-gi-function",
+        "polarity": "exclusion",
+        "sourceText": "Impaired gastrointestinal (GI) function that may significantly alter the absorption of RMC drugs",
+        "reasonFuzzy": "GI function impairment is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06162221-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery < 28 days of first dose",
+        "reasonFuzzy": "Washout window based on major surgery is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT06162221-ild",
+        "polarity": "exclusion",
+        "sourceText": "Active or history of interstitial lung disease (ILD) or pneumonitis requiring steroids",
+        "reasonFuzzy": "ILD and pneumonitis history with steroid qualification is a clinical judgment condition."
+      }
+    ]
+  }
+}

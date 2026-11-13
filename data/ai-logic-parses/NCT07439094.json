@@ -1,0 +1,326 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07439094",
+  "briefTitle": "A First-in-Human Study of CKD-703 in Advanced Solid Tumors and Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T11:53:57.048Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07439094-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG Performance Status 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG Performance Status 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07439094-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Part 2 : Histologically or cytologically documented c-Met overexpressing nonsquamous NSCLC having failed at least 1 line of SoC therapy (platinum-based chemotherapy and/or immune checkpoint inhibitor).",
+      "reasonFuzzy": "Prior line requirements vary across study parts, and specific SoC therapy types depend on the part."
+    },
+    {
+      "id": "NCT07439094-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy ≥ 12 weeks as judged by the Investigator",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07439094-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Documented progressive and measurable disease as defined by RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07439094-washout-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Subject has received radiation therapy to the lung < 6 months prior to the first dose of study drug",
+      "reasonFuzzy": "Washout window for radiation is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT07439094-washout-systemic",
+      "polarity": "exclusion",
+      "sourceText": "Anticancer systemic therapy such as immunotherapy, biologic, cytotoxic chemotherapy, or any investigational therapy (including cell therapy or gene therapy) within a period of 28 days prior to the first dose of study drug. Any anticancer therapy small molecule (eg. kinase inhibitor) or herbal therapy within 14 days prior to the first dose of study drug",
+      "reasonFuzzy": "Complex washout windows for multiple drug classes are not simple lab cutoffs."
+    },
+    {
+      "id": "NCT07439094-washout-pgp",
+      "polarity": "exclusion",
+      "sourceText": "Use of strong P-gp and/or CYP3A4/5 inducers within 21 days prior or strong P-gp and/or CYP3A4/5 inhibitors within 14 days prior to the first dose of study drug.",
+      "reasonFuzzy": "Washout windows for enzyme inducers/inhibitors are complex and not a simple lab cutoff."
+    },
+    {
+      "id": "NCT07439094-washout-cyp3a4",
+      "polarity": "exclusion",
+      "sourceText": "Use of sensitive CYP3A4/5 substrate within 3 days or 5 times half-life prior to the first dose of study drug.",
+      "reasonFuzzy": "Half-life dependent washout windows cannot be expressed as a simple typed check."
+    },
+    {
+      "id": "NCT07439094-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically documented c-Met overexpressing nonsquamous NSCLC having failed at least 1 line of SoC therapy (platinum-based chemotherapy and/or immune checkpoint inhibitor).",
+      "reasonFuzzy": "Part 2 specifies nonsquamous NSCLC with c-Met overexpression and prior lines, but requirements vary across study parts."
+    },
+    {
+      "id": "NCT07439094-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy ≥ 12 weeks as judged by the Investigator",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07439094-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Documented progressive and measurable disease as defined by RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07439094-rad-lung",
+      "polarity": "exclusion",
+      "sourceText": "Subject has received radiation therapy to the lung < 6 months prior to the first dose of study drug",
+      "reasonFuzzy": "Washout window for lung radiation therapy is not a standard typed lab cutoff check."
+    },
+    {
+      "id": "NCT07439094-sys-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Anticancer systemic therapy such as immunotherapy, biologic, cytotoxic chemotherapy, or any investigational therapy (including cell therapy or gene therapy) within a period of 28 days prior to the first dose of study drug. Any anticancer therapy small molecule (eg. kinase inhibitor) or herbal therapy within 14 days prior to the first dose of study drug",
+      "reasonFuzzy": "Multiple systemic therapy washout windows are complex and cannot be expressed as a simple typed check."
+    },
+    {
+      "id": "NCT07439094-mmae",
+      "polarity": "exclusion",
+      "sourceText": "Prior c-Met-targeted antibody therapy or any MMAE-containing ADC (prior c-Met targeting small molecules are allowed)",
+      "reasonFuzzy": "This exclusion combines multiple specific prior drug classes into one rule."
+    },
+    {
+      "id": "NCT07439094-histology",
+      "polarity": "inclusion",
+      "sourceText": "Part 2 : Histologically or cytologically documented c-Met overexpressing nonsquamous NSCLC having failed at least 1 line of SoC therapy (platinum-based chemotherapy and/or immune checkpoint inhibitor).",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07439094-age",
+      "polarity": "inclusion",
+      "sourceText": "Males and females ≥ 19-year-old",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07439094-prior-cmet",
+      "polarity": "exclusion",
+      "sourceText": "Prior c-Met-targeted antibody therapy or any MMAE-containing ADC (prior c-Met targeting small molecules are allowed)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:19"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:c-met-targeted antibody therapy"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 9247
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 6107
+  },
+  "ms": 23330,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07439094",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07439094-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Males and females ≥ 19-year-old",
+        "numberValue": 19
+      },
+      {
+        "id": "NCT07439094-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Part 2 : Histologically or cytologically documented c-Met overexpressing nonsquamous NSCLC having failed at least 1 line of SoC therapy (platinum-based chemotherapy and/or immune checkpoint inhibitor).",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07439094-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance Status 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07439094-prior-cmet",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior c-Met-targeted antibody therapy or any MMAE-containing ADC (prior c-Met targeting small molecules are allowed)",
+        "stringValue": "c-Met-targeted antibody therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07439094-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "Part 2 : Histologically or cytologically documented c-Met overexpressing nonsquamous NSCLC having failed at least 1 line of SoC therapy (platinum-based chemotherapy and/or immune checkpoint inhibitor).",
+        "reasonFuzzy": "Prior line requirements vary across study parts, and specific SoC therapy types depend on the part."
+      },
+      {
+        "id": "NCT07439094-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy ≥ 12 weeks as judged by the Investigator",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT07439094-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Documented progressive and measurable disease as defined by RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07439094-washout-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Subject has received radiation therapy to the lung < 6 months prior to the first dose of study drug",
+        "reasonFuzzy": "Washout window for radiation is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT07439094-washout-systemic",
+        "polarity": "exclusion",
+        "sourceText": "Anticancer systemic therapy such as immunotherapy, biologic, cytotoxic chemotherapy, or any investigational therapy (including cell therapy or gene therapy) within a period of 28 days prior to the first dose of study drug. Any anticancer therapy small molecule (eg. kinase inhibitor) or herbal therapy within 14 days prior to the first dose of study drug",
+        "reasonFuzzy": "Complex washout windows for multiple drug classes are not simple lab cutoffs."
+      },
+      {
+        "id": "NCT07439094-washout-pgp",
+        "polarity": "exclusion",
+        "sourceText": "Use of strong P-gp and/or CYP3A4/5 inducers within 21 days prior or strong P-gp and/or CYP3A4/5 inhibitors within 14 days prior to the first dose of study drug.",
+        "reasonFuzzy": "Washout windows for enzyme inducers/inhibitors are complex and not a simple lab cutoff."
+      },
+      {
+        "id": "NCT07439094-washout-cyp3a4",
+        "polarity": "exclusion",
+        "sourceText": "Use of sensitive CYP3A4/5 substrate within 3 days or 5 times half-life prior to the first dose of study drug.",
+        "reasonFuzzy": "Half-life dependent washout windows cannot be expressed as a simple typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07439094",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07439094-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Males and females ≥ 19-year-old",
+        "numberValue": 19
+      },
+      {
+        "id": "NCT07439094-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance Status 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07439094-prior-cmet",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior c-Met-targeted antibody therapy or any MMAE-containing ADC (prior c-Met targeting small molecules are allowed)",
+        "stringValue": "c-Met-targeted antibody therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07439094-histology",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically documented c-Met overexpressing nonsquamous NSCLC having failed at least 1 line of SoC therapy (platinum-based chemotherapy and/or immune checkpoint inhibitor).",
+        "reasonFuzzy": "Part 2 specifies nonsquamous NSCLC with c-Met overexpression and prior lines, but requirements vary across study parts."
+      },
+      {
+        "id": "NCT07439094-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy ≥ 12 weeks as judged by the Investigator",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT07439094-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Documented progressive and measurable disease as defined by RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07439094-rad-lung",
+        "polarity": "exclusion",
+        "sourceText": "Subject has received radiation therapy to the lung < 6 months prior to the first dose of study drug",
+        "reasonFuzzy": "Washout window for lung radiation therapy is not a standard typed lab cutoff check."
+      },
+      {
+        "id": "NCT07439094-sys-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Anticancer systemic therapy such as immunotherapy, biologic, cytotoxic chemotherapy, or any investigational therapy (including cell therapy or gene therapy) within a period of 28 days prior to the first dose of study drug. Any anticancer therapy small molecule (eg. kinase inhibitor) or herbal therapy within 14 days prior to the first dose of study drug",
+        "reasonFuzzy": "Multiple systemic therapy washout windows are complex and cannot be expressed as a simple typed check."
+      },
+      {
+        "id": "NCT07439094-mmae",
+        "polarity": "exclusion",
+        "sourceText": "Prior c-Met-targeted antibody therapy or any MMAE-containing ADC (prior c-Met targeting small molecules are allowed)",
+        "reasonFuzzy": "This exclusion combines multiple specific prior drug classes into one rule."
+      }
+    ]
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07164313",
+  "briefTitle": "A Study of ZW251 in Participants With Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T10:59:06.999Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07164313-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status score of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) Performance Status score of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07164313-hcc",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically or cytologically confirmed diagnosis of HCC with evidence of locally advanced (unresectable, and ineligible for transplant) and/or metastatic disease. Noninvasive methods may be used to confirm diagnosis",
+      "reasonFuzzy": "This inclusion criterion is for Hepatocellular Carcinoma (HCC), which is not non-small cell lung cancer, though the study also accepts squamous cell NSCLC."
+    },
+    {
+      "id": "NCT07164313-gct",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically or cytologically confirmed diagnosis of GCT with evidence of yolk sac and/or choriocarcinoma predominant component and locally advanced (unresectable) and/or metastatic disease",
+      "reasonFuzzy": "This inclusion criterion is for Germ Cell Tumor (GCT), which is not non-small cell lung cancer."
+    },
+    {
+      "id": "NCT07164313-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07164313-hcc",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically or cytologically confirmed diagnosis of HCC with evidence of locally advanced (unresectable, and ineligible for transplant) and/or metastatic disease. Noninvasive methods may be used to confirm diagnosis",
+      "reasonFuzzy": "This inclusion criterion is for Hepatocellular Carcinoma (HCC), not non-small cell lung cancer."
+    },
+    {
+      "id": "NCT07164313-gct",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically or cytologically confirmed diagnosis of GCT with evidence of yolk sac and/or choriocarcinoma predominant component and locally advanced (unresectable) and/or metastatic disease",
+      "reasonFuzzy": "This inclusion criterion is for Germ Cell Tumor (GCT), not non-small cell lung cancer."
+    },
+    {
+      "id": "NCT07164313-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07164313-childpugh",
+      "polarity": "inclusion",
+      "sourceText": "Liver function status of Child-Pugh Class A (for HCC only)",
+      "reasonFuzzy": "Child-Pugh score is specific to HCC cohorts and is not a standard typed lab cutoff."
+    },
+    {
+      "id": "NCT07164313-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07164313-histology",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically or cytologically confirmed diagnosis of squamous cell NSCLC with evidence of locally advanced (unresectable) and/or metastatic disease",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:squamous"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2204
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 2783
+  },
+  "ms": 12973,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07164313",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07164313-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically or cytologically confirmed diagnosis of squamous cell NSCLC with evidence of locally advanced (unresectable) and/or metastatic disease",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT07164313-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status score of 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07164313-hcc",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically or cytologically confirmed diagnosis of HCC with evidence of locally advanced (unresectable, and ineligible for transplant) and/or metastatic disease. Noninvasive methods may be used to confirm diagnosis",
+        "reasonFuzzy": "This inclusion criterion is for Hepatocellular Carcinoma (HCC), which is not non-small cell lung cancer, though the study also accepts squamous cell NSCLC."
+      },
+      {
+        "id": "NCT07164313-gct",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically or cytologically confirmed diagnosis of GCT with evidence of yolk sac and/or choriocarcinoma predominant component and locally advanced (unresectable) and/or metastatic disease",
+        "reasonFuzzy": "This inclusion criterion is for Germ Cell Tumor (GCT), which is not non-small cell lung cancer."
+      },
+      {
+        "id": "NCT07164313-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07164313",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07164313-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically or cytologically confirmed diagnosis of squamous cell NSCLC with evidence of locally advanced (unresectable) and/or metastatic disease",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT07164313-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status score of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07164313-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07164313-hcc",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically or cytologically confirmed diagnosis of HCC with evidence of locally advanced (unresectable, and ineligible for transplant) and/or metastatic disease. Noninvasive methods may be used to confirm diagnosis",
+        "reasonFuzzy": "This inclusion criterion is for Hepatocellular Carcinoma (HCC), not non-small cell lung cancer."
+      },
+      {
+        "id": "NCT07164313-gct",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically or cytologically confirmed diagnosis of GCT with evidence of yolk sac and/or choriocarcinoma predominant component and locally advanced (unresectable) and/or metastatic disease",
+        "reasonFuzzy": "This inclusion criterion is for Germ Cell Tumor (GCT), not non-small cell lung cancer."
+      },
+      {
+        "id": "NCT07164313-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07164313-childpugh",
+        "polarity": "inclusion",
+        "sourceText": "Liver function status of Child-Pugh Class A (for HCC only)",
+        "reasonFuzzy": "Child-Pugh score is specific to HCC cohorts and is not a standard typed lab cutoff."
+      }
+    ]
+  }
+}

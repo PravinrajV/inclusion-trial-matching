@@ -1,0 +1,403 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06943521",
+  "briefTitle": "A Study of MT-4561 in Patients With Various Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T10:41:03.852Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06943521-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male or female patient aged 18 years or older at the time of signing the informed consent form",
+      "numberValue": 18,
+      "evidence_quote": "Male or female patient aged 18 years or older at the time of signing the informed consent form",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06943521-egfr_min",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Adequate renal function estimated creatinine clearance ≥ 60 mL/min calculated using the Cockcroft and Gault equation or by institutional method",
+      "numberValue": 60,
+      "evidence_quote": "Adequate renal function estimated creatinine clearance ≥ 60 mL/min calculated using the Cockcroft and Gault equation or by institutional method",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06943521-prior_therapy",
+      "polarity": "inclusion",
+      "sourceText": "Patients who have failed at least 1 prior therapy and, who have no standard treatment options demonstrated to provide clinical benefit or who are intolerable to or refuse further standard therapies will be enrolled.",
+      "reasonFuzzy": "Prior therapy requirement is combined with clinical judgment about standard treatment options and intolerance/refusal."
+    },
+    {
+      "id": "NCT06943521-measurable",
+      "polarity": "inclusion",
+      "sourceText": "≥ 1 measurable lesion by the RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06943521-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of at least 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06943521-marrow",
+      "polarity": "inclusion",
+      "sourceText": "Adequate bone marrow function",
+      "reasonFuzzy": "Adequate bone marrow function is a general statement without specific lab cutoffs."
+    },
+    {
+      "id": "NCT06943521-hepatic",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hepatic function",
+      "reasonFuzzy": "Adequate hepatic function is a general statement without specific lab cutoffs."
+    },
+    {
+      "id": "NCT06943521-histology",
+      "polarity": "inclusion",
+      "sourceText": "Part 1: Patients must have a confirmed histologic or cytologic diagnosis of one of the following solid tumors for participation in the study: head and neck squamous cell carcinoma (HNSCC), non-small cell lung cancer (NSCLC), esophageal cancer, gastric cancer, biliary tract cancer, pancreatic ductal adenocarcinoma (PDAC), breast cancer, ovarian cancer, cervical cancer, endometrial cancer, prostate cancer, urothelial carcinoma, neuroendocrine tumor (NET) or neuroendocrine carcinoma (NEC), soft tissue sarcoma, and NUT carcinoma.",
+      "reasonFuzzy": "The trial is a multi-tumor basket study including NSCLC without a specific numbered stage list."
+    },
+    {
+      "id": "NCT06943521-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Any unresolved toxicity ≥ Grade 2 from previous anticancer therapy except for alopecia",
+      "reasonFuzzy": "General toxicity grade exclusion is not a typed prior therapy check."
+    },
+    {
+      "id": "NCT06943521-washout",
+      "polarity": "exclusion",
+      "sourceText": "Prior systemic anticancer therapy within 4 weeks before first dose of investigational medicinal product (IMP) or 5 half-lives, whichever is shorter, and prior radiotherapy within 2 weeks before first dose of IMP",
+      "reasonFuzzy": "Washout windows depending on half-lives and multiple therapy types are not a simple typed lab cutoff."
+    },
+    {
+      "id": "NCT06943521-qtc_drugs",
+      "polarity": "exclusion",
+      "sourceText": "Patients who received drugs with a known risk of QT interval prolongation or Torsades de pointes within 14 days or 5 half-lives, whichever is shorter, before the start of IMP administration",
+      "reasonFuzzy": "Prohibited medications based on QT risk and variable half-lives are not a typed prior therapy exclusion."
+    },
+    {
+      "id": "NCT06943521-qtc",
+      "polarity": "exclusion",
+      "sourceText": "QT interval corrected for heart rate using Fridericia's correction (QTcF) > 470 msec at screening",
+      "reasonFuzzy": "QTcF interval cutoff is not among the allowed typed kinds."
+    },
+    {
+      "id": "NCT06943521-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Patients who have failed at least 1 prior therapy and, who have no standard treatment options demonstrated to provide clinical benefit or who are intolerable to or refuse further standard therapies will be enrolled.",
+      "reasonFuzzy": "Prior lines or therapy requirements are complex and include subjective treatment options and refusal clauses."
+    },
+    {
+      "id": "NCT06943521-measurable",
+      "polarity": "inclusion",
+      "sourceText": "≥ 1 measurable lesion by the RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06943521-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of at least 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06943521-marrow",
+      "polarity": "inclusion",
+      "sourceText": "Adequate bone marrow function",
+      "reasonFuzzy": "Adequate bone marrow function without specific numeric thresholds cannot be represented as a typed lab check."
+    },
+    {
+      "id": "NCT06943521-hepatic",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hepatic function",
+      "reasonFuzzy": "Adequate hepatic function without specific numeric thresholds cannot be represented as a typed lab check."
+    },
+    {
+      "id": "NCT06943521-histology",
+      "polarity": "inclusion",
+      "sourceText": "Part 1: Patients must have a confirmed histologic or cytologic diagnosis of one of the following solid tumors for participation in the study: head and neck squamous cell carcinoma (HNSCC), non-small cell lung cancer (NSCLC), esophageal cancer, gastric cancer, biliary tract cancer, pancreatic ductal adenocarcinoma (PDAC), breast cancer, ovarian cancer, cervical cancer, endometrial cancer, prostate cancer, urothelial carcinoma, neuroendocrine tumor (NET) or neuroendocrine carcinoma (NEC), soft tissue sarcoma, and NUT carcinoma.",
+      "reasonFuzzy": "Multi-tumor basket trial including NSCLC alongside other solid tumors; specific NSCLC stage is not detailed."
+    },
+    {
+      "id": "NCT06943521-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Any unresolved toxicity ≥ Grade 2 from previous anticancer therapy except for alopecia",
+      "reasonFuzzy": "General toxicity resolution is not a typed prior therapy or lab check."
+    },
+    {
+      "id": "NCT06943521-washout",
+      "polarity": "exclusion",
+      "sourceText": "Prior systemic anticancer therapy within 4 weeks before first dose of investigational medicinal product (IMP) or 5 half-lives, whichever is shorter, and prior radiotherapy within 2 weeks before first dose of IMP",
+      "reasonFuzzy": "Washout window conditions with half-life alternatives are not standard typed cutoffs."
+    },
+    {
+      "id": "NCT06943521-qt",
+      "polarity": "exclusion",
+      "sourceText": "QT interval corrected for heart rate using Fridericia's correction (QTcF) > 470 msec at screening",
+      "reasonFuzzy": "QTcF interval is not among the allowed typed kinds."
+    },
+    {
+      "id": "NCT06943521-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status: 0 to 1",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06943521-brain",
+      "polarity": "exclusion",
+      "sourceText": "Patients with active brain or leptomeningeal metastases",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 10,
+    "attempts": 1,
+    "ms": 6266
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 3704
+  },
+  "ms": 17951,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06943521",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06943521-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female patient aged 18 years or older at the time of signing the informed consent form",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06943521-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status: 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06943521-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Adequate renal function estimated creatinine clearance ≥ 60 mL/min calculated using the Cockcroft and Gault equation or by institutional method",
+        "numberValue": 60
+      },
+      {
+        "id": "NCT06943521-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Patients with active brain or leptomeningeal metastases",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06943521-prior_therapy",
+        "polarity": "inclusion",
+        "sourceText": "Patients who have failed at least 1 prior therapy and, who have no standard treatment options demonstrated to provide clinical benefit or who are intolerable to or refuse further standard therapies will be enrolled.",
+        "reasonFuzzy": "Prior therapy requirement is combined with clinical judgment about standard treatment options and intolerance/refusal."
+      },
+      {
+        "id": "NCT06943521-measurable",
+        "polarity": "inclusion",
+        "sourceText": "≥ 1 measurable lesion by the RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06943521-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of at least 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06943521-marrow",
+        "polarity": "inclusion",
+        "sourceText": "Adequate bone marrow function",
+        "reasonFuzzy": "Adequate bone marrow function is a general statement without specific lab cutoffs."
+      },
+      {
+        "id": "NCT06943521-hepatic",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hepatic function",
+        "reasonFuzzy": "Adequate hepatic function is a general statement without specific lab cutoffs."
+      },
+      {
+        "id": "NCT06943521-histology",
+        "polarity": "inclusion",
+        "sourceText": "Part 1: Patients must have a confirmed histologic or cytologic diagnosis of one of the following solid tumors for participation in the study: head and neck squamous cell carcinoma (HNSCC), non-small cell lung cancer (NSCLC), esophageal cancer, gastric cancer, biliary tract cancer, pancreatic ductal adenocarcinoma (PDAC), breast cancer, ovarian cancer, cervical cancer, endometrial cancer, prostate cancer, urothelial carcinoma, neuroendocrine tumor (NET) or neuroendocrine carcinoma (NEC), soft tissue sarcoma, and NUT carcinoma.",
+        "reasonFuzzy": "The trial is a multi-tumor basket study including NSCLC without a specific numbered stage list."
+      },
+      {
+        "id": "NCT06943521-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Any unresolved toxicity ≥ Grade 2 from previous anticancer therapy except for alopecia",
+        "reasonFuzzy": "General toxicity grade exclusion is not a typed prior therapy check."
+      },
+      {
+        "id": "NCT06943521-washout",
+        "polarity": "exclusion",
+        "sourceText": "Prior systemic anticancer therapy within 4 weeks before first dose of investigational medicinal product (IMP) or 5 half-lives, whichever is shorter, and prior radiotherapy within 2 weeks before first dose of IMP",
+        "reasonFuzzy": "Washout windows depending on half-lives and multiple therapy types are not a simple typed lab cutoff."
+      },
+      {
+        "id": "NCT06943521-qtc_drugs",
+        "polarity": "exclusion",
+        "sourceText": "Patients who received drugs with a known risk of QT interval prolongation or Torsades de pointes within 14 days or 5 half-lives, whichever is shorter, before the start of IMP administration",
+        "reasonFuzzy": "Prohibited medications based on QT risk and variable half-lives are not a typed prior therapy exclusion."
+      },
+      {
+        "id": "NCT06943521-qtc",
+        "polarity": "exclusion",
+        "sourceText": "QT interval corrected for heart rate using Fridericia's correction (QTcF) > 470 msec at screening",
+        "reasonFuzzy": "QTcF interval cutoff is not among the allowed typed kinds."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06943521",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06943521-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female patient aged 18 years or older at the time of signing the informed consent form",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06943521-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status: 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06943521-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Adequate renal function estimated creatinine clearance ≥ 60 mL/min calculated using the Cockcroft and Gault equation or by institutional method",
+        "numberValue": 60
+      },
+      {
+        "id": "NCT06943521-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Patients with active brain or leptomeningeal metastases",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06943521-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Patients who have failed at least 1 prior therapy and, who have no standard treatment options demonstrated to provide clinical benefit or who are intolerable to or refuse further standard therapies will be enrolled.",
+        "reasonFuzzy": "Prior lines or therapy requirements are complex and include subjective treatment options and refusal clauses."
+      },
+      {
+        "id": "NCT06943521-measurable",
+        "polarity": "inclusion",
+        "sourceText": "≥ 1 measurable lesion by the RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06943521-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of at least 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06943521-marrow",
+        "polarity": "inclusion",
+        "sourceText": "Adequate bone marrow function",
+        "reasonFuzzy": "Adequate bone marrow function without specific numeric thresholds cannot be represented as a typed lab check."
+      },
+      {
+        "id": "NCT06943521-hepatic",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hepatic function",
+        "reasonFuzzy": "Adequate hepatic function without specific numeric thresholds cannot be represented as a typed lab check."
+      },
+      {
+        "id": "NCT06943521-histology",
+        "polarity": "inclusion",
+        "sourceText": "Part 1: Patients must have a confirmed histologic or cytologic diagnosis of one of the following solid tumors for participation in the study: head and neck squamous cell carcinoma (HNSCC), non-small cell lung cancer (NSCLC), esophageal cancer, gastric cancer, biliary tract cancer, pancreatic ductal adenocarcinoma (PDAC), breast cancer, ovarian cancer, cervical cancer, endometrial cancer, prostate cancer, urothelial carcinoma, neuroendocrine tumor (NET) or neuroendocrine carcinoma (NEC), soft tissue sarcoma, and NUT carcinoma.",
+        "reasonFuzzy": "Multi-tumor basket trial including NSCLC alongside other solid tumors; specific NSCLC stage is not detailed."
+      },
+      {
+        "id": "NCT06943521-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Any unresolved toxicity ≥ Grade 2 from previous anticancer therapy except for alopecia",
+        "reasonFuzzy": "General toxicity resolution is not a typed prior therapy or lab check."
+      },
+      {
+        "id": "NCT06943521-washout",
+        "polarity": "exclusion",
+        "sourceText": "Prior systemic anticancer therapy within 4 weeks before first dose of investigational medicinal product (IMP) or 5 half-lives, whichever is shorter, and prior radiotherapy within 2 weeks before first dose of IMP",
+        "reasonFuzzy": "Washout window conditions with half-life alternatives are not standard typed cutoffs."
+      },
+      {
+        "id": "NCT06943521-qt",
+        "polarity": "exclusion",
+        "sourceText": "QT interval corrected for heart rate using Fridericia's correction (QTcF) > 470 msec at screening",
+        "reasonFuzzy": "QTcF interval is not among the allowed typed kinds."
+      }
+    ]
+  }
+}

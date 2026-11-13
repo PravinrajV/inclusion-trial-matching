@@ -1,0 +1,911 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07207395",
+  "briefTitle": "A Study of Orally Administered JBI-802 Alone or in Combination With Pembrolizumab for Patients With Non-small Cell Lung Cancer With an STK11 Mutation.",
+  "parsedAt": "2026-11-12T05:57:40.345Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07207395-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Males or females aged ≥18 years at Screening.",
+      "numberValue": 18,
+      "evidence_quote": "Males or females aged ≥18 years at Screening.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07207395-anc",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥1500 cells/mm3.",
+      "numberValue": 1500,
+      "evidence_quote": "Absolute neutrophil count (ANC) ≥1500 cells/mm3.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07207395-platelets",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count ≥100,000 cells/mm3.",
+      "numberValue": 100000,
+      "evidence_quote": "Platelet count ≥100,000 cells/mm3.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07207395-bilirubin",
+      "kind": "bilirubin_max",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin ≤1.5×ULN. Patients with Gilbert's syndrome may be enrolled with up to 3.0xULN.",
+      "numberValue": 1.5,
+      "stages": [],
+      "stringValue": "1.5xULN (up to 3.0xULN for Gilbert's syndrome)",
+      "evidence_quote": "Total bilirubin ≤1.5×ULN. Patients with Gilbert's syndrome may be enrolled with up to 3.0xULN.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07207395-egfr-min",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Calculated creatinine clearance (CrCL) ≥40 mL/min calculated per Institutional standard.",
+      "numberValue": 40,
+      "evidence_quote": "Calculated creatinine clearance (CrCL) ≥40 mL/min calculated per Institutional standard.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07207395-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of ≤2.",
+      "numberValue": 2,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of ≤2.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07207395-stk11",
+      "polarity": "inclusion",
+      "sourceText": "Participants with a histologically confirmed diagnosis of locally advanced or metastatic NSCLC harboring an STK11 mutation.",
+      "reasonFuzzy": "STK11 mutation is not among the allowed biomarker kinds (egfr_status, alk_status, kras_status, ros1_status, braf_status)."
+    },
+    {
+      "id": "NCT07207395-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Must have at least one measurable lesion on CT scan or MRI per RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07207395-toxicities",
+      "polarity": "inclusion",
+      "sourceText": "Resolution of any clinically significant toxic effects of prior therapy to Grade 0 or 1 according to the NCI CTCAE, Version 5.0 (exception of alopecia and Grade 2 peripheral neuropathy, chronic Grade 2 endocrinopathies as a result of prior immunotherapy).",
+      "reasonFuzzy": "Resolution of all clinically significant toxic effects is a general clinical judgment rather than a single typed lab or condition check."
+    },
+    {
+      "id": "NCT07207395-swallow",
+      "polarity": "inclusion",
+      "sourceText": "Able to swallow oral medication.",
+      "reasonFuzzy": "Ability to swallow oral medication is a subjective functional assessment."
+    },
+    {
+      "id": "NCT07207395-consent",
+      "polarity": "inclusion",
+      "sourceText": "Willing and able to give informed consent and comply with protocol requirements for the duration of the study.",
+      "reasonFuzzy": "Willingness to comply and give informed consent is a subjective criterion."
+    },
+    {
+      "id": "NCT07207395-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Willingness to use contraception by a method that is deemed effective by the Investigator by both males and female participants of childbearing potential (post-menopausal women must have been amenorrheal for at least 12 months to be considered of non-childbearing potential) and their partners throughout the treatment period and for at least 3 months following the last dose of study drug.",
+      "reasonFuzzy": "Contraception and investigator judgment on effectiveness are not typed checks."
+    },
+    {
+      "id": "NCT07207395-washout-systemic",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with systemic anticancer therapy or an investigational agent within 2 weeks or 5 half-lives, whichever is shorter, prior to start of study drug treatment.",
+      "reasonFuzzy": "Washout windows involving half-lives or alternative timeframes are not simple typed lab cutoffs."
+    },
+    {
+      "id": "NCT07207395-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery ≤21 days prior to starting study drug or has not recovered from adverse effects of such procedure.",
+      "reasonFuzzy": "Major surgery recovery and washout is a subjective procedural judgment."
+    },
+    {
+      "id": "NCT07207395-absorption",
+      "polarity": "exclusion",
+      "sourceText": "Surgery (eg, stomach bypass) or medical condition that might significantly affect absorption of medicines (as judged by the Investigator).",
+      "reasonFuzzy": "Investigator judgment regarding drug absorption is a subjective assessment."
+    },
+    {
+      "id": "NCT07207395-radiotherapy",
+      "polarity": "exclusion",
+      "sourceText": "Radiotherapy within 2 weeks prior to start of study drug treatment (palliative radiation or stereotactic radiosurgery within 7 days prior to start of study treatment). Participants must have recovered from all radiotherapy-related toxicities.",
+      "reasonFuzzy": "Radiotherapy washout with conditional exceptions is not a typed check."
+    },
+    {
+      "id": "NCT07207395-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Severe or unstable medical condition, such as congestive heart failure (New York Heart Association [NYHA] Class III or IV), ischemic heart disease, uncontrolled hypertension, uncontrolled diabetes mellitus, psychiatric condition, as well as an uncontrolled cardiac arrhythmia requiring medication (≥Grade 2, according to NCI CTCAE Version 5), myocardial infarction within 6 months prior to starting study treatment, or any other significant or unstable concurrent cardiac illness. Note: Stable chronic atrial fibrillation is allowed.",
+      "reasonFuzzy": "Complex cardiovascular and medical exclusionary conditions are not typed checks."
+    },
+    {
+      "id": "NCT07207395-qt",
+      "polarity": "exclusion",
+      "sourceText": "Congenital long QT syndrome or corrected QT interval by Fridericia (QTcF) interval >480 msec for males and females, respectively, at Screening.",
+      "reasonFuzzy": "QT interval cutoffs are not among the allowed typed checks."
+    },
+    {
+      "id": "NCT07207395-prior-cancer",
+      "polarity": "exclusion",
+      "sourceText": "History of other previous or concurrent cancer that would interfere with the determination of safety or efficacy assessment with respect to the qualifying solid tumor malignancy.",
+      "reasonFuzzy": "Assessment of prior or concurrent cancer interference is a clinical judgment."
+    },
+    {
+      "id": "NCT07207395-vaccines",
+      "polarity": "exclusion",
+      "sourceText": "Live vaccines within 30 days prior to the first dose of JBI-802.",
+      "reasonFuzzy": "Live vaccine washout is not a typed check."
+    },
+    {
+      "id": "NCT07207395-glucocorticoids",
+      "polarity": "exclusion",
+      "sourceText": "Glucocorticoids for any purpose other than to modulate symptoms from an event of clinical interest) or for use as a premedication in participants with a known history of an IV contrast allergy administered as part of CT radiography. Inhaled, intranasal, intraocular, topical, and intraarticular joint injections of steroids are permitted.",
+      "reasonFuzzy": "Corticosteroid use restrictions with various exceptions are not typed checks."
+    },
+    {
+      "id": "NCT07207395-cyp",
+      "polarity": "exclusion",
+      "sourceText": "Use of strong inhibitors of cytochrome P450 3A (CYP3A) within 14 days or 5 half-lives (whichever is longer) or grapefruit juice or grapefruit containing products within 7 days prior to Cycle 1 Day 1.",
+      "reasonFuzzy": "Medication washout for CYP inhibitors and food restrictions are not typed checks."
+    },
+    {
+      "id": "NCT07207395-cyp3a-inducers",
+      "polarity": "exclusion",
+      "sourceText": "Use of strong inducers of CYP3A within 14 days or 5 half-lives (whichever is longer) prior to Cycle 1 Day 1.",
+      "reasonFuzzy": "Medication washout for CYP inducers is not a typed check."
+    },
+    {
+      "id": "NCT07207395-cyp2d6-inhibitors",
+      "polarity": "exclusion",
+      "sourceText": "Use of strong inhibitors of cytochrome CYP2D6 within 14 days or 5 half-lives (whichever is longer) prior to Cycle 1 Day 1.",
+      "reasonFuzzy": "Medication washout for CYP2D6 inhibitors is not a typed check."
+    },
+    {
+      "id": "NCT07207395-cyp2d6-inducers",
+      "polarity": "exclusion",
+      "sourceText": "Use of strong inducers of CYP2D6 within 14 days or 5 half-lives (whichever is longer) prior to Cycle 1 Day 1.",
+      "reasonFuzzy": "Medication washout for CYP2D6 inducers is not a typed check."
+    },
+    {
+      "id": "NCT07207395-infection",
+      "polarity": "exclusion",
+      "sourceText": "Major active infection requiring parenteral antibiotics.",
+      "reasonFuzzy": "Active infection criteria requiring specific intervention are not typed checks."
+    },
+    {
+      "id": "NCT07207395-hiv-hbv-hcv",
+      "polarity": "exclusion",
+      "sourceText": "Known active human immunodeficiency viruses infection or active infection with hepatitis B or C.",
+      "reasonFuzzy": "Viral hepatitis and HIV status are not among the allowed typed kinds."
+    },
+    {
+      "id": "NCT07207395-gi",
+      "polarity": "exclusion",
+      "sourceText": "Active gastrointestinal disease (eg, Crohn's disease, ulcerative colitis, or short gut syndrome) or other malabsorption syndromes that would reasonably impact drug absorption.",
+      "reasonFuzzy": "Gastrointestinal disease and absorption impacts are clinical judgments."
+    },
+    {
+      "id": "NCT07207395-acute-illness",
+      "polarity": "exclusion",
+      "sourceText": "Acute illness within 14 days prior to IP dosing unless mild in severity and approved by the Principal Investigator.",
+      "reasonFuzzy": "Acute illness and investigator discretion are not typed checks."
+    },
+    {
+      "id": "NCT07207395-pregnant",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant or breastfeeding or expecting to conceive or father children within the projected duration of the trial, starting with the Screening Visit through 90 days after the last dose of trial treatment.",
+      "reasonFuzzy": "Pregnancy and breastfeeding status are not typed checks."
+    },
+    {
+      "id": "NCT07207395-trial-participation",
+      "polarity": "exclusion",
+      "sourceText": "Current participation in another clinical study of an investigational agents. Simultaneous participation in observational studies is acceptable after Principal Investigator approval.",
+      "reasonFuzzy": "Concurrent clinical trial participation restriction is not a typed check."
+    },
+    {
+      "id": "NCT07207395-stk11",
+      "polarity": "inclusion",
+      "sourceText": "Participants with a histologically confirmed diagnosis of locally advanced or metastatic NSCLC harboring an STK11 mutation.",
+      "reasonFuzzy": "STK11 is not a typed biomarker in the allowed schema."
+    },
+    {
+      "id": "NCT07207395-pt",
+      "polarity": "inclusion",
+      "sourceText": "Prothrombin time (PT) or activated partial thromboplastin time (aPTT) * 1.5×ULN if participant is not anticoagulated (Note: If participant is on anticoagulants, the participant must be on a stable dose for at least 2 weeks prior to study entry.",
+      "reasonFuzzy": "Coagulation parameters PT/aPTT do not map to the allowed typed kinds."
+    },
+    {
+      "id": "NCT07207395-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Must have at least one measurable lesion on CT scan or MRI per RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07207395-toxicity",
+      "polarity": "inclusion",
+      "sourceText": "Resolution of any clinically significant toxic effects of prior therapy to Grade 0 or 1 according to the NCI CTCAE, Version 5.0 (exception of alopecia and Grade 2 peripheral neuropathy, chronic Grade 2 endocrinopathies as a result of prior immunotherapy).",
+      "reasonFuzzy": "Prior toxicity resolution is not a typed check."
+    },
+    {
+      "id": "NCT07207395-swallow",
+      "polarity": "inclusion",
+      "sourceText": "Able to swallow oral medication.",
+      "reasonFuzzy": "Subjective ability to swallow is not a typed check."
+    },
+    {
+      "id": "NCT07207395-consent",
+      "polarity": "inclusion",
+      "sourceText": "Willing and able to give informed consent and comply with protocol requirements for the duration of the study.",
+      "reasonFuzzy": "Informed consent and compliance willingness are subjective criteria."
+    },
+    {
+      "id": "NCT07207395-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Willingness to use contraception by a method that is deemed effective by the Investigator by both males and female participants of childbearing potential...",
+      "reasonFuzzy": "Contraception compliance is not a typed check."
+    },
+    {
+      "id": "NCT07207395-washout-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with systemic anticancer therapy or an investigational agent within 2 weeks or 5 half-lives, whichever is shorter, prior to start of study drug treatment.",
+      "reasonFuzzy": "Prior therapy washout window is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT07207395-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery ≤21 days prior to starting study drug or has not recovered from adverse effects of such procedure.",
+      "reasonFuzzy": "Surgery washout and recovery is not a typed check."
+    },
+    {
+      "id": "NCT07207395-absorption",
+      "polarity": "exclusion",
+      "sourceText": "Surgery (eg, stomach bypass) or medical condition that might significantly affect absorption of medicines (as judged by the Investigator).",
+      "reasonFuzzy": "Investigator judgment regarding drug absorption is a subjective criterion."
+    },
+    {
+      "id": "NCT07207395-radiotherapy",
+      "polarity": "exclusion",
+      "sourceText": "Radiotherapy within 2 weeks prior to start of study drug treatment (palliative radiation or stereotactic radiosurgery within 7 days prior to start of study treatment). Participants must have recovered from all radiotherapy-related toxicities.",
+      "reasonFuzzy": "Radiotherapy washout window is not a typed check."
+    },
+    {
+      "id": "NCT07207395-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Severe or unstable medical condition, such as congestive heart failure (New York Heart Association [NYHA] Class III or IV), ischemic heart disease, uncontrolled hypertension, uncontrolled diabetes mellitus, psychiatric condition, as well as an uncontrolled cardiac arrhythmia requiring medication (≥Grade 2, according to NCI CTCAE Version 5), myocardial infarction within 6 months prior to starting study treatment, or any other significant or unstable concurrent cardiac illness. Note: Stable chronic atrial fibrillation is allowed.",
+      "reasonFuzzy": "Severe or unstable medical conditions are subjective clinical judgments."
+    },
+    {
+      "id": "NCT07207395-qtc",
+      "polarity": "exclusion",
+      "sourceText": "Congenital long QT syndrome or corrected QT interval by Fridericia (QTcF) interval >480 msec for males and females, respectively, at Screening.",
+      "reasonFuzzy": "QTc interval is not a supported typed check kind."
+    },
+    {
+      "id": "NCT07207395-cancer",
+      "polarity": "exclusion",
+      "sourceText": "History of other previous or concurrent cancer that would interfere with the determination of safety or efficacy assessment with respect to the qualifying solid tumor malignancy.",
+      "reasonFuzzy": "Concurrent cancer evaluation is a subjective assessment."
+    },
+    {
+      "id": "NCT07207395-vaccines",
+      "polarity": "exclusion",
+      "sourceText": "Live vaccines within 30 days prior to the first dose of JBI-802.",
+      "reasonFuzzy": "Vaccine washout is not a typed check."
+    },
+    {
+      "id": "NCT07207395-glucocorticoids",
+      "polarity": "exclusion",
+      "sourceText": "Glucocorticoids for any purpose other than to modulate symptoms from an event of clinical interest) or for use as a premedication in participants with a known history of an IV contrast allergy administered as part of CT radiography. Inhaled, intranasal, intraocular, topical, and intraarticular joint injections of steroids are permitted.",
+      "reasonFuzzy": "Glucocorticoid use restrictions are not a typed check."
+    },
+    {
+      "id": "NCT07207395-cyp3a-inhibitors",
+      "polarity": "exclusion",
+      "sourceText": "Use of strong inhibitors of cytochrome P450 3A (CYP3A) within 14 days or 5 half-lives (whichever is longer) or grapefruit juice or grapefruit containing products within 7 days prior to Cycle 1 Day 1.",
+      "reasonFuzzy": "Concomitant medication restrictions are not typed checks."
+    },
+    {
+      "id": "NCT07207395-cyp3a-inducers",
+      "polarity": "exclusion",
+      "sourceText": "Use of strong inducers of CYP3A within 14 days or 5 half-lives (whichever is longer) prior to Cycle 1 Day 1.",
+      "reasonFuzzy": "Concomitant medication restrictions are not typed checks."
+    },
+    {
+      "id": "NCT07207395-cyp2d6-inhibitors",
+      "polarity": "exclusion",
+      "sourceText": "Use of strong inhibitors of cytochrome CYP2D6 within 14 days or 5 half-lives (whichever is longer) prior to Cycle 1 Day 1.",
+      "reasonFuzzy": "Concomitant medication restrictions are not typed checks."
+    },
+    {
+      "id": "NCT07207395-cyp2d6-inducers",
+      "polarity": "exclusion",
+      "sourceText": "Use of strong inducers of CYP2D6 within 14 days or 5 half-lives (whichever is longer) prior to Cycle 1 Day 1.",
+      "reasonFuzzy": "Concomitant medication restrictions are not typed checks."
+    },
+    {
+      "id": "NCT07207395-antibiotics",
+      "polarity": "exclusion",
+      "sourceText": "Major active infection requiring parenteral antibiotics.",
+      "reasonFuzzy": "Active infection requiring antibiotics is not a typed check."
+    },
+    {
+      "id": "NCT07207395-hiv-hep",
+      "polarity": "exclusion",
+      "sourceText": "Known active human immunodeficiency viruses infection or active infection with hepatitis B or C.",
+      "reasonFuzzy": "Viral infections are not typed checks."
+    },
+    {
+      "id": "NCT07207395-gi-disease",
+      "polarity": "exclusion",
+      "sourceText": "Active gastrointestinal disease (eg, Crohn's disease, ulcerative colitis, or short gut syndrome) or other malabsorption syndromes that would reasonably impact drug absorption.",
+      "reasonFuzzy": "Gastrointestinal disease restrictions are not typed checks."
+    },
+    {
+      "id": "NCT07207395-acute-illness",
+      "polarity": "exclusion",
+      "sourceText": "Acute illness within 14 days prior to IP dosing unless mild in severity and approved by the Principal Investigator.",
+      "reasonFuzzy": "Acute illness and investigator approval are subjective criteria."
+    },
+    {
+      "id": "NCT07207395-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant or breastfeeding or expecting to conceive or father children within the projected duration of the trial, starting with the Screening Visit through 90 days after the last dose of trial treatment.",
+      "reasonFuzzy": "Pregnancy and breastfeeding status are not typed checks."
+    },
+    {
+      "id": "NCT07207395-trial-participation",
+      "polarity": "exclusion",
+      "sourceText": "Current participation in another clinical study of an investigational agents. Simultaneous participation in observational studies is acceptable after Principal Investigator approval.",
+      "reasonFuzzy": "Concurrent trial participation is not a typed check."
+    },
+    {
+      "id": "NCT07207395-ast",
+      "polarity": "inclusion",
+      "sourceText": "AST and ALT ≤2.5×ULN (unless liver metastases are present then up to 5×ULN is allowed).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07207395-alt",
+      "polarity": "inclusion",
+      "sourceText": "AST and ALT ≤2.5×ULN (unless liver metastases are present then up to 5×ULN is allowed).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07207395-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known malignant central nervous system disease other than neurologically stable, treated brain metastases- defined as metastasis having no evidence of progression or hemorrhage for at least 4 weeks after treatment (including brain radiotherapy). Must be off any systemic corticosteroids for the treatment of symptomatic brain metastases for at least 14 days prior to enrollment.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 9,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 9,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 9,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 6,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 7
+    }
+  },
+  "runA": {
+    "typedEmitted": 9,
+    "fuzzyEmitted": 25,
+    "attempts": 1,
+    "ms": 7568
+  },
+  "runB": {
+    "typedEmitted": 9,
+    "fuzzyEmitted": 26,
+    "attempts": 1,
+    "ms": 7084
+  },
+  "ms": 22667,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07207395",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07207395-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Males or females aged ≥18 years at Screening.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07207395-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥1500 cells/mm3.",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT07207395-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count ≥100,000 cells/mm3.",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT07207395-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤1.5×ULN. Patients with Gilbert's syndrome may be enrolled with up to 3.0xULN.",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "1.5xULN (up to 3.0xULN for Gilbert's syndrome)"
+      },
+      {
+        "id": "NCT07207395-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT ≤2.5×ULN (unless liver metastases are present then up to 5×ULN is allowed).",
+        "numberValue": 2.5,
+        "stringValue": "2.5xULN (up to 5xULN if liver metastases are present)"
+      },
+      {
+        "id": "NCT07207395-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT ≤2.5×ULN (unless liver metastases are present then up to 5×ULN is allowed).",
+        "numberValue": 2.5,
+        "stringValue": "2.5xULN (up to 5xULN if liver metastases are present)"
+      },
+      {
+        "id": "NCT07207395-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Calculated creatinine clearance (CrCL) ≥40 mL/min calculated per Institutional standard.",
+        "numberValue": 40
+      },
+      {
+        "id": "NCT07207395-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of ≤2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07207395-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known malignant central nervous system disease other than neurologically stable, treated brain metastases- defined as metastasis having no evidence of progression or hemorrhage for at least 4 weeks after treatment (including brain radiotherapy). Must be off any systemic corticosteroids for the treatment of symptomatic brain metastases for at least 14 days prior to enrollment.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07207395-stk11",
+        "polarity": "inclusion",
+        "sourceText": "Participants with a histologically confirmed diagnosis of locally advanced or metastatic NSCLC harboring an STK11 mutation.",
+        "reasonFuzzy": "STK11 mutation is not among the allowed biomarker kinds (egfr_status, alk_status, kras_status, ros1_status, braf_status)."
+      },
+      {
+        "id": "NCT07207395-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Must have at least one measurable lesion on CT scan or MRI per RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07207395-toxicities",
+        "polarity": "inclusion",
+        "sourceText": "Resolution of any clinically significant toxic effects of prior therapy to Grade 0 or 1 according to the NCI CTCAE, Version 5.0 (exception of alopecia and Grade 2 peripheral neuropathy, chronic Grade 2 endocrinopathies as a result of prior immunotherapy).",
+        "reasonFuzzy": "Resolution of all clinically significant toxic effects is a general clinical judgment rather than a single typed lab or condition check."
+      },
+      {
+        "id": "NCT07207395-swallow",
+        "polarity": "inclusion",
+        "sourceText": "Able to swallow oral medication.",
+        "reasonFuzzy": "Ability to swallow oral medication is a subjective functional assessment."
+      },
+      {
+        "id": "NCT07207395-consent",
+        "polarity": "inclusion",
+        "sourceText": "Willing and able to give informed consent and comply with protocol requirements for the duration of the study.",
+        "reasonFuzzy": "Willingness to comply and give informed consent is a subjective criterion."
+      },
+      {
+        "id": "NCT07207395-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Willingness to use contraception by a method that is deemed effective by the Investigator by both males and female participants of childbearing potential (post-menopausal women must have been amenorrheal for at least 12 months to be considered of non-childbearing potential) and their partners throughout the treatment period and for at least 3 months following the last dose of study drug.",
+        "reasonFuzzy": "Contraception and investigator judgment on effectiveness are not typed checks."
+      },
+      {
+        "id": "NCT07207395-washout-systemic",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with systemic anticancer therapy or an investigational agent within 2 weeks or 5 half-lives, whichever is shorter, prior to start of study drug treatment.",
+        "reasonFuzzy": "Washout windows involving half-lives or alternative timeframes are not simple typed lab cutoffs."
+      },
+      {
+        "id": "NCT07207395-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery ≤21 days prior to starting study drug or has not recovered from adverse effects of such procedure.",
+        "reasonFuzzy": "Major surgery recovery and washout is a subjective procedural judgment."
+      },
+      {
+        "id": "NCT07207395-absorption",
+        "polarity": "exclusion",
+        "sourceText": "Surgery (eg, stomach bypass) or medical condition that might significantly affect absorption of medicines (as judged by the Investigator).",
+        "reasonFuzzy": "Investigator judgment regarding drug absorption is a subjective assessment."
+      },
+      {
+        "id": "NCT07207395-radiotherapy",
+        "polarity": "exclusion",
+        "sourceText": "Radiotherapy within 2 weeks prior to start of study drug treatment (palliative radiation or stereotactic radiosurgery within 7 days prior to start of study treatment). Participants must have recovered from all radiotherapy-related toxicities.",
+        "reasonFuzzy": "Radiotherapy washout with conditional exceptions is not a typed check."
+      },
+      {
+        "id": "NCT07207395-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Severe or unstable medical condition, such as congestive heart failure (New York Heart Association [NYHA] Class III or IV), ischemic heart disease, uncontrolled hypertension, uncontrolled diabetes mellitus, psychiatric condition, as well as an uncontrolled cardiac arrhythmia requiring medication (≥Grade 2, according to NCI CTCAE Version 5), myocardial infarction within 6 months prior to starting study treatment, or any other significant or unstable concurrent cardiac illness. Note: Stable chronic atrial fibrillation is allowed.",
+        "reasonFuzzy": "Complex cardiovascular and medical exclusionary conditions are not typed checks."
+      },
+      {
+        "id": "NCT07207395-qt",
+        "polarity": "exclusion",
+        "sourceText": "Congenital long QT syndrome or corrected QT interval by Fridericia (QTcF) interval >480 msec for males and females, respectively, at Screening.",
+        "reasonFuzzy": "QT interval cutoffs are not among the allowed typed checks."
+      },
+      {
+        "id": "NCT07207395-prior-cancer",
+        "polarity": "exclusion",
+        "sourceText": "History of other previous or concurrent cancer that would interfere with the determination of safety or efficacy assessment with respect to the qualifying solid tumor malignancy.",
+        "reasonFuzzy": "Assessment of prior or concurrent cancer interference is a clinical judgment."
+      },
+      {
+        "id": "NCT07207395-vaccines",
+        "polarity": "exclusion",
+        "sourceText": "Live vaccines within 30 days prior to the first dose of JBI-802.",
+        "reasonFuzzy": "Live vaccine washout is not a typed check."
+      },
+      {
+        "id": "NCT07207395-glucocorticoids",
+        "polarity": "exclusion",
+        "sourceText": "Glucocorticoids for any purpose other than to modulate symptoms from an event of clinical interest) or for use as a premedication in participants with a known history of an IV contrast allergy administered as part of CT radiography. Inhaled, intranasal, intraocular, topical, and intraarticular joint injections of steroids are permitted.",
+        "reasonFuzzy": "Corticosteroid use restrictions with various exceptions are not typed checks."
+      },
+      {
+        "id": "NCT07207395-cyp",
+        "polarity": "exclusion",
+        "sourceText": "Use of strong inhibitors of cytochrome P450 3A (CYP3A) within 14 days or 5 half-lives (whichever is longer) or grapefruit juice or grapefruit containing products within 7 days prior to Cycle 1 Day 1.",
+        "reasonFuzzy": "Medication washout for CYP inhibitors and food restrictions are not typed checks."
+      },
+      {
+        "id": "NCT07207395-cyp3a-inducers",
+        "polarity": "exclusion",
+        "sourceText": "Use of strong inducers of CYP3A within 14 days or 5 half-lives (whichever is longer) prior to Cycle 1 Day 1.",
+        "reasonFuzzy": "Medication washout for CYP inducers is not a typed check."
+      },
+      {
+        "id": "NCT07207395-cyp2d6-inhibitors",
+        "polarity": "exclusion",
+        "sourceText": "Use of strong inhibitors of cytochrome CYP2D6 within 14 days or 5 half-lives (whichever is longer) prior to Cycle 1 Day 1.",
+        "reasonFuzzy": "Medication washout for CYP2D6 inhibitors is not a typed check."
+      },
+      {
+        "id": "NCT07207395-cyp2d6-inducers",
+        "polarity": "exclusion",
+        "sourceText": "Use of strong inducers of CYP2D6 within 14 days or 5 half-lives (whichever is longer) prior to Cycle 1 Day 1.",
+        "reasonFuzzy": "Medication washout for CYP2D6 inducers is not a typed check."
+      },
+      {
+        "id": "NCT07207395-infection",
+        "polarity": "exclusion",
+        "sourceText": "Major active infection requiring parenteral antibiotics.",
+        "reasonFuzzy": "Active infection criteria requiring specific intervention are not typed checks."
+      },
+      {
+        "id": "NCT07207395-hiv-hbv-hcv",
+        "polarity": "exclusion",
+        "sourceText": "Known active human immunodeficiency viruses infection or active infection with hepatitis B or C.",
+        "reasonFuzzy": "Viral hepatitis and HIV status are not among the allowed typed kinds."
+      },
+      {
+        "id": "NCT07207395-gi",
+        "polarity": "exclusion",
+        "sourceText": "Active gastrointestinal disease (eg, Crohn's disease, ulcerative colitis, or short gut syndrome) or other malabsorption syndromes that would reasonably impact drug absorption.",
+        "reasonFuzzy": "Gastrointestinal disease and absorption impacts are clinical judgments."
+      },
+      {
+        "id": "NCT07207395-acute-illness",
+        "polarity": "exclusion",
+        "sourceText": "Acute illness within 14 days prior to IP dosing unless mild in severity and approved by the Principal Investigator.",
+        "reasonFuzzy": "Acute illness and investigator discretion are not typed checks."
+      },
+      {
+        "id": "NCT07207395-pregnant",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant or breastfeeding or expecting to conceive or father children within the projected duration of the trial, starting with the Screening Visit through 90 days after the last dose of trial treatment.",
+        "reasonFuzzy": "Pregnancy and breastfeeding status are not typed checks."
+      },
+      {
+        "id": "NCT07207395-trial-participation",
+        "polarity": "exclusion",
+        "sourceText": "Current participation in another clinical study of an investigational agents. Simultaneous participation in observational studies is acceptable after Principal Investigator approval.",
+        "reasonFuzzy": "Concurrent clinical trial participation restriction is not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07207395",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07207395-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Males or females aged ≥18 years at Screening.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07207395-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥1500 cells/mm3.",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT07207395-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count ≥100,000 cells/mm3.",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT07207395-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤1.5×ULN. Patients with Gilbert's syndrome may be enrolled with up to 3.0xULN.",
+        "numberValue": 1.5,
+        "stringValue": "1.5xULN"
+      },
+      {
+        "id": "NCT07207395-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT ≤2.5×ULN (unless liver metastases are present then up to 5×ULN is allowed).",
+        "numberValue": 2.5,
+        "stringValue": "2.5xULN"
+      },
+      {
+        "id": "NCT07207395-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT ≤2.5×ULN (unless liver metastases are present then up to 5×ULN is allowed).",
+        "numberValue": 2.5,
+        "stringValue": "2.5xULN"
+      },
+      {
+        "id": "NCT07207395-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Calculated creatinine clearance (CrCL) ≥40 mL/min calculated per Institutional standard.",
+        "numberValue": 40
+      },
+      {
+        "id": "NCT07207395-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of ≤2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07207395-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known malignant central nervous system disease other than neurologically stable, treated brain metastases- defined as metastasis having no evidence of progression or hemorrhage for at least 4 weeks after treatment (including brain radiotherapy). Must be off any systemic corticosteroids for the treatment of symptomatic brain metastases for at least 14 days prior to enrollment.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07207395-stk11",
+        "polarity": "inclusion",
+        "sourceText": "Participants with a histologically confirmed diagnosis of locally advanced or metastatic NSCLC harboring an STK11 mutation.",
+        "reasonFuzzy": "STK11 is not a typed biomarker in the allowed schema."
+      },
+      {
+        "id": "NCT07207395-pt",
+        "polarity": "inclusion",
+        "sourceText": "Prothrombin time (PT) or activated partial thromboplastin time (aPTT) * 1.5×ULN if participant is not anticoagulated (Note: If participant is on anticoagulants, the participant must be on a stable dose for at least 2 weeks prior to study entry.",
+        "reasonFuzzy": "Coagulation parameters PT/aPTT do not map to the allowed typed kinds."
+      },
+      {
+        "id": "NCT07207395-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Must have at least one measurable lesion on CT scan or MRI per RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07207395-toxicity",
+        "polarity": "inclusion",
+        "sourceText": "Resolution of any clinically significant toxic effects of prior therapy to Grade 0 or 1 according to the NCI CTCAE, Version 5.0 (exception of alopecia and Grade 2 peripheral neuropathy, chronic Grade 2 endocrinopathies as a result of prior immunotherapy).",
+        "reasonFuzzy": "Prior toxicity resolution is not a typed check."
+      },
+      {
+        "id": "NCT07207395-swallow",
+        "polarity": "inclusion",
+        "sourceText": "Able to swallow oral medication.",
+        "reasonFuzzy": "Subjective ability to swallow is not a typed check."
+      },
+      {
+        "id": "NCT07207395-consent",
+        "polarity": "inclusion",
+        "sourceText": "Willing and able to give informed consent and comply with protocol requirements for the duration of the study.",
+        "reasonFuzzy": "Informed consent and compliance willingness are subjective criteria."
+      },
+      {
+        "id": "NCT07207395-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Willingness to use contraception by a method that is deemed effective by the Investigator by both males and female participants of childbearing potential...",
+        "reasonFuzzy": "Contraception compliance is not a typed check."
+      },
+      {
+        "id": "NCT07207395-washout-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with systemic anticancer therapy or an investigational agent within 2 weeks or 5 half-lives, whichever is shorter, prior to start of study drug treatment.",
+        "reasonFuzzy": "Prior therapy washout window is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT07207395-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery ≤21 days prior to starting study drug or has not recovered from adverse effects of such procedure.",
+        "reasonFuzzy": "Surgery washout and recovery is not a typed check."
+      },
+      {
+        "id": "NCT07207395-absorption",
+        "polarity": "exclusion",
+        "sourceText": "Surgery (eg, stomach bypass) or medical condition that might significantly affect absorption of medicines (as judged by the Investigator).",
+        "reasonFuzzy": "Investigator judgment regarding drug absorption is a subjective criterion."
+      },
+      {
+        "id": "NCT07207395-radiotherapy",
+        "polarity": "exclusion",
+        "sourceText": "Radiotherapy within 2 weeks prior to start of study drug treatment (palliative radiation or stereotactic radiosurgery within 7 days prior to start of study treatment). Participants must have recovered from all radiotherapy-related toxicities.",
+        "reasonFuzzy": "Radiotherapy washout window is not a typed check."
+      },
+      {
+        "id": "NCT07207395-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Severe or unstable medical condition, such as congestive heart failure (New York Heart Association [NYHA] Class III or IV), ischemic heart disease, uncontrolled hypertension, uncontrolled diabetes mellitus, psychiatric condition, as well as an uncontrolled cardiac arrhythmia requiring medication (≥Grade 2, according to NCI CTCAE Version 5), myocardial infarction within 6 months prior to starting study treatment, or any other significant or unstable concurrent cardiac illness. Note: Stable chronic atrial fibrillation is allowed.",
+        "reasonFuzzy": "Severe or unstable medical conditions are subjective clinical judgments."
+      },
+      {
+        "id": "NCT07207395-qtc",
+        "polarity": "exclusion",
+        "sourceText": "Congenital long QT syndrome or corrected QT interval by Fridericia (QTcF) interval >480 msec for males and females, respectively, at Screening.",
+        "reasonFuzzy": "QTc interval is not a supported typed check kind."
+      },
+      {
+        "id": "NCT07207395-cancer",
+        "polarity": "exclusion",
+        "sourceText": "History of other previous or concurrent cancer that would interfere with the determination of safety or efficacy assessment with respect to the qualifying solid tumor malignancy.",
+        "reasonFuzzy": "Concurrent cancer evaluation is a subjective assessment."
+      },
+      {
+        "id": "NCT07207395-vaccines",
+        "polarity": "exclusion",
+        "sourceText": "Live vaccines within 30 days prior to the first dose of JBI-802.",
+        "reasonFuzzy": "Vaccine washout is not a typed check."
+      },
+      {
+        "id": "NCT07207395-glucocorticoids",
+        "polarity": "exclusion",
+        "sourceText": "Glucocorticoids for any purpose other than to modulate symptoms from an event of clinical interest) or for use as a premedication in participants with a known history of an IV contrast allergy administered as part of CT radiography. Inhaled, intranasal, intraocular, topical, and intraarticular joint injections of steroids are permitted.",
+        "reasonFuzzy": "Glucocorticoid use restrictions are not a typed check."
+      },
+      {
+        "id": "NCT07207395-cyp3a-inhibitors",
+        "polarity": "exclusion",
+        "sourceText": "Use of strong inhibitors of cytochrome P450 3A (CYP3A) within 14 days or 5 half-lives (whichever is longer) or grapefruit juice or grapefruit containing products within 7 days prior to Cycle 1 Day 1.",
+        "reasonFuzzy": "Concomitant medication restrictions are not typed checks."
+      },
+      {
+        "id": "NCT07207395-cyp3a-inducers",
+        "polarity": "exclusion",
+        "sourceText": "Use of strong inducers of CYP3A within 14 days or 5 half-lives (whichever is longer) prior to Cycle 1 Day 1.",
+        "reasonFuzzy": "Concomitant medication restrictions are not typed checks."
+      },
+      {
+        "id": "NCT07207395-cyp2d6-inhibitors",
+        "polarity": "exclusion",
+        "sourceText": "Use of strong inhibitors of cytochrome CYP2D6 within 14 days or 5 half-lives (whichever is longer) prior to Cycle 1 Day 1.",
+        "reasonFuzzy": "Concomitant medication restrictions are not typed checks."
+      },
+      {
+        "id": "NCT07207395-cyp2d6-inducers",
+        "polarity": "exclusion",
+        "sourceText": "Use of strong inducers of CYP2D6 within 14 days or 5 half-lives (whichever is longer) prior to Cycle 1 Day 1.",
+        "reasonFuzzy": "Concomitant medication restrictions are not typed checks."
+      },
+      {
+        "id": "NCT07207395-antibiotics",
+        "polarity": "exclusion",
+        "sourceText": "Major active infection requiring parenteral antibiotics.",
+        "reasonFuzzy": "Active infection requiring antibiotics is not a typed check."
+      },
+      {
+        "id": "NCT07207395-hiv-hep",
+        "polarity": "exclusion",
+        "sourceText": "Known active human immunodeficiency viruses infection or active infection with hepatitis B or C.",
+        "reasonFuzzy": "Viral infections are not typed checks."
+      },
+      {
+        "id": "NCT07207395-gi-disease",
+        "polarity": "exclusion",
+        "sourceText": "Active gastrointestinal disease (eg, Crohn's disease, ulcerative colitis, or short gut syndrome) or other malabsorption syndromes that would reasonably impact drug absorption.",
+        "reasonFuzzy": "Gastrointestinal disease restrictions are not typed checks."
+      },
+      {
+        "id": "NCT07207395-acute-illness",
+        "polarity": "exclusion",
+        "sourceText": "Acute illness within 14 days prior to IP dosing unless mild in severity and approved by the Principal Investigator.",
+        "reasonFuzzy": "Acute illness and investigator approval are subjective criteria."
+      },
+      {
+        "id": "NCT07207395-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant or breastfeeding or expecting to conceive or father children within the projected duration of the trial, starting with the Screening Visit through 90 days after the last dose of trial treatment.",
+        "reasonFuzzy": "Pregnancy and breastfeeding status are not typed checks."
+      },
+      {
+        "id": "NCT07207395-trial-participation",
+        "polarity": "exclusion",
+        "sourceText": "Current participation in another clinical study of an investigational agents. Simultaneous participation in observational studies is acceptable after Principal Investigator approval.",
+        "reasonFuzzy": "Concurrent trial participation is not a typed check."
+      }
+    ]
+  }
+}

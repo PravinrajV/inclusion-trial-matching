@@ -1,0 +1,93 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05292521",
+  "briefTitle": "Quality of Life Intervention to Inform Patient Decision-Making in Early-Stage Lung Cancer",
+  "parsedAt": "2026-11-12T06:12:25.937Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05292521-out-of-scope",
+      "polarity": "inclusion",
+      "sourceText": "Radiographic stage I-II non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "This trial is clearly limited to stage I or II non-small cell lung cancer and is out of scope for stage III or IV NSCLC."
+    },
+    {
+      "id": "NCT05292521-outofscope",
+      "polarity": "inclusion",
+      "sourceText": "Radiographic stage I-II non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "The trial is limited to stage I or II NSCLC and is out of scope for stage III or IV disease."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 0,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 0,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 0,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 0,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 2446
+  },
+  "runB": {
+    "typedEmitted": 0,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 1238
+  },
+  "ms": 11658,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05292521",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05292521-out-of-scope",
+        "polarity": "inclusion",
+        "sourceText": "Radiographic stage I-II non-small cell lung cancer (NSCLC)",
+        "reasonFuzzy": "This trial is clearly limited to stage I or II non-small cell lung cancer and is out of scope for stage III or IV NSCLC."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05292521",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05292521-outofscope",
+        "polarity": "inclusion",
+        "sourceText": "Radiographic stage I-II non-small cell lung cancer (NSCLC)",
+        "reasonFuzzy": "The trial is limited to stage I or II NSCLC and is out of scope for stage III or IV disease."
+      }
+    ]
+  }
+}

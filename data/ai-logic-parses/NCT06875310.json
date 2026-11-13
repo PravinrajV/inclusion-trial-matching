@@ -1,0 +1,336 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06875310",
+  "briefTitle": "A Study of Adagrasib Plus Pembrolizumab Plus Chemotherapy vs. Placebo Plus Pembrolizumab Plus Chemotherapy in Participants With Previously Untreated Non-squamous Non-small Cell Lung Cancer With KRAS G12C Mutation (KRYSTAL-4)",
+  "parsedAt": "2026-11-12T10:38:55.324Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06875310-stage",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced or metastatic disease.",
+      "reasonFuzzy": "Locally advanced or metastatic disease without explicit stage numbers is in scope but not mapped to a numbered stage list."
+    },
+    {
+      "id": "NCT06875310-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease via computed tomography (CT) or magnetic resonance imaging (MRI) per RECIST v1.1 criteria of at least 1 lesion.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06875310-organ",
+      "polarity": "exclusion",
+      "sourceText": "Inadequate bone marrow or liver function or electrocardiogram (ECG) abnormalities.",
+      "reasonFuzzy": "General laboratory thresholds are not specified as distinct cutoffs in this text."
+    },
+    {
+      "id": "NCT06875310-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease via computed tomography (CT) or magnetic resonance imaging (MRI) per RECIST v1.1 criteria of at least 1 lesion.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06875310-prior",
+      "polarity": "inclusion",
+      "sourceText": "No prior systemic anti-cancer therapy given for advanced or metastatic disease.",
+      "reasonFuzzy": "Exclusion of prior systemic therapy for advanced/metastatic disease is a general line/setting requirement and not a simple typed prior therapy class."
+    },
+    {
+      "id": "NCT06875310-stage",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced or metastatic disease.",
+      "reasonFuzzy": "The record does not provide a numbered stage list, so stage_in is omitted; locally advanced or metastatic remains in scope."
+    },
+    {
+      "id": "NCT06875310-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06875310-lines",
+      "polarity": "inclusion",
+      "sourceText": "No prior systemic anti-cancer therapy given for advanced or metastatic disease.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06875310-prior-kras",
+      "polarity": "exclusion",
+      "sourceText": "Treatment targeting KRAS G12C mutation (eg, sotorasib, adagrasib) in any setting.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06875310-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Treatment targeting KRAS G12C mutation (eg, sotorasib, adagrasib) in any setting.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06875310-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of non-squamous NSCLC with evidence of KRAS G12C mutation via tumor sample and/or circulating tumor deoxyribonucleic acid (ctDNA).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06875310-kras",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of non-squamous NSCLC with evidence of KRAS G12C mutation via tumor sample and/or circulating tumor deoxyribonucleic acid (ctDNA).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06875310-kras-variant",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of non-squamous NSCLC with evidence of KRAS G12C mutation via tumor sample and/or circulating tumor deoxyribonucleic acid (ctDNA).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06875310-brain",
+      "polarity": "inclusion",
+      "sourceText": "Participants with brain metastases are eligible for enrollment, including those with untreated brain metastases. Brain metastases must be asymptomatic and not in need of immediate local therapy. Any untreated brain metastases must be ≤ 20 mm in diameter.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 3,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "value": "n:0"
+        },
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:sotorasib"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:treatment targeting kras g12c mutation"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        },
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12c"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable,untreated"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 5909
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 6909
+  },
+  "ms": 20797,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06875310",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06875310-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of non-squamous NSCLC with evidence of KRAS G12C mutation via tumor sample and/or circulating tumor deoxyribonucleic acid (ctDNA).",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06875310-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of non-squamous NSCLC with evidence of KRAS G12C mutation via tumor sample and/or circulating tumor deoxyribonucleic acid (ctDNA).",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06875310-kras-variant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of non-squamous NSCLC with evidence of KRAS G12C mutation via tumor sample and/or circulating tumor deoxyribonucleic acid (ctDNA).",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT06875310-lines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "No prior systemic anti-cancer therapy given for advanced or metastatic disease.",
+        "numberValue": 0
+      },
+      {
+        "id": "NCT06875310-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Participants with brain metastases are eligible for enrollment, including those with untreated brain metastases. Brain metastases must be asymptomatic and not in need of immediate local therapy. Any untreated brain metastases must be ≤ 20 mm in diameter.",
+        "allowedBrainMets": [
+          "untreated",
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06875310-prior-kras",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Treatment targeting KRAS G12C mutation (eg, sotorasib, adagrasib) in any setting.",
+        "stringValue": "sotorasib"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06875310-stage",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced or metastatic disease.",
+        "reasonFuzzy": "Locally advanced or metastatic disease without explicit stage numbers is in scope but not mapped to a numbered stage list."
+      },
+      {
+        "id": "NCT06875310-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease via computed tomography (CT) or magnetic resonance imaging (MRI) per RECIST v1.1 criteria of at least 1 lesion.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06875310-organ",
+        "polarity": "exclusion",
+        "sourceText": "Inadequate bone marrow or liver function or electrocardiogram (ECG) abnormalities.",
+        "reasonFuzzy": "General laboratory thresholds are not specified as distinct cutoffs in this text."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06875310",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06875310-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of non-squamous NSCLC with evidence of KRAS G12C mutation via tumor sample and/or circulating tumor deoxyribonucleic acid (ctDNA).",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06875310-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of non-squamous NSCLC with evidence of KRAS G12C mutation via tumor sample and/or circulating tumor deoxyribonucleic acid (ctDNA).",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06875310-krasvariant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of non-squamous NSCLC with evidence of KRAS G12C mutation via tumor sample and/or circulating tumor deoxyribonucleic acid (ctDNA).",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT06875310-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Participants with brain metastases are eligible for enrollment, including those with untreated brain metastases. Brain metastases must be asymptomatic and not in need of immediate local therapy. Any untreated brain metastases must be ≤ 20 mm in diameter.",
+        "allowedBrainMets": [
+          "untreated",
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06875310-therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Treatment targeting KRAS G12C mutation (eg, sotorasib, adagrasib) in any setting.",
+        "stringValue": "treatment targeting KRAS G12C mutation"
+      },
+      {
+        "id": "NCT06875310-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06875310-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease via computed tomography (CT) or magnetic resonance imaging (MRI) per RECIST v1.1 criteria of at least 1 lesion.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06875310-prior",
+        "polarity": "inclusion",
+        "sourceText": "No prior systemic anti-cancer therapy given for advanced or metastatic disease.",
+        "reasonFuzzy": "Exclusion of prior systemic therapy for advanced/metastatic disease is a general line/setting requirement and not a simple typed prior therapy class."
+      },
+      {
+        "id": "NCT06875310-stage",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced or metastatic disease.",
+        "reasonFuzzy": "The record does not provide a numbered stage list, so stage_in is omitted; locally advanced or metastatic remains in scope."
+      }
+    ]
+  }
+}

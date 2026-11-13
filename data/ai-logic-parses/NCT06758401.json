@@ -1,0 +1,692 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06758401",
+  "briefTitle": "This is a Study to Learn About How the Combination of the Study Medicines Sigvotatug Vedotin Plus Pembrolizumab Works in People With Non-small Cell Lung Cancer With High Levels of PD-L1.",
+  "parsedAt": "2026-11-12T05:54:41.453Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06758401-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Have pathologically confirmed Stage IIIB or IIIC NSCLC and not be a candidate for surgical resection or definitive chemoradiation, or Stage IV NSCLC per the AJCC Staging Manual (Version 8.0) and the UICC Staging System (Eighth edition).",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Have pathologically confirmed Stage IIIB or IIIC NSCLC and not be a candidate for surgical resection or definitive chemoradiation, or Stage IV NSCLC per the AJCC Staging Manual (Version 8.0) and the UICC Staging System (Eighth edition).",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06758401-aga",
+      "polarity": "inclusion",
+      "sourceText": "Participants with known AGAs including EGFR, ALK, ROS1, NTRK, BRAF, RET, and MET, for which there are approved and available first-line therapies per local SOC are ineligible. Documented negative results for EGFR, ALK, and ROS1 AGAs are required for participants with non-squamous histology.",
+      "reasonFuzzy": "This rule includes multiple actionable genomic alterations dependent on local standard of care approvals and histology subtyping, which cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT06758401-histology",
+      "polarity": "exclusion",
+      "sourceText": "Participants with large cell neuroendocrine carcinoma are excluded.",
+      "reasonFuzzy": "Large cell neuroendocrine carcinoma exclusion is a specific subtype exclusion not mapped to standard typed histologies."
+    },
+    {
+      "id": "NCT06758401-pembrolizumab-candidate",
+      "polarity": "inclusion",
+      "sourceText": "Must be an appropriate candidate for treatment with pembrolizumab monotherapy per local guidelines.",
+      "reasonFuzzy": "Investigator or clinical judgment of appropriateness for pembrolizumab monotherapy is subjective."
+    },
+    {
+      "id": "NCT06758401-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease based on RECIST v1.1 per investigator.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06758401-resolution",
+      "polarity": "inclusion",
+      "sourceText": "Resolution of acute effects of any prior therapy to either baseline severity or NCI CTCAE Grade 1 or less (except for AEs not constituting a safety risk in the investigator's judgment), unless otherwise excluded.",
+      "reasonFuzzy": "Includes investigator judgment regarding safety risk and adverse event resolution."
+    },
+    {
+      "id": "NCT06758401-life",
+      "polarity": "exclusion",
+      "sourceText": "Life expectancy of <3 months in the opinion of the investigator.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06758401-labs",
+      "polarity": "exclusion",
+      "sourceText": "Any medical or psychiatric condition including recent (within the past year) or active suicidal ideation/behavior or laboratory abnormality that may increase the risk of study participation or make the participant inappropriate for the study.",
+      "reasonFuzzy": "Broad investigator discretion regarding medical/psychiatric conditions and laboratory abnormalities."
+    },
+    {
+      "id": "NCT06758401-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Participants with any history of another malignancy within 3 years before the first dose of study intervention, or any evidence of residual disease from a previously diagnosed malignancy.",
+      "reasonFuzzy": "Complex prior malignancy history with multiple duration criteria."
+    },
+    {
+      "id": "NCT06758401-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Known or suspected hypersensitivity, intolerance, or contraindication to any excipient contained in the drug formulation of sigvotatug vedotin or pembrolizumab.",
+      "reasonFuzzy": "Hypersensitivity and contraindications are subjective clinical determinations."
+    },
+    {
+      "id": "NCT06758401-respiratory",
+      "polarity": "exclusion",
+      "sourceText": "Participants with any of the following respiratory conditions: Evidence of noninfectious or drug-induced ILD or pneumonitis; Known DLCO (adjusted for hemoglobin) <50% predicted; Grade ≥3 pulmonary disease unrelated to underlying malignancy",
+      "reasonFuzzy": "Combines multiple complex pulmonary assessments including DLCO cutoffs and unspecified Grade 3 pulmonary diseases."
+    },
+    {
+      "id": "NCT06758401-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery (defined as a surgery requiring inpatient hospitalization of at least 48 hours) within 21 days or minor surgery (excluding peripherally inserted central catheter placement and implantable central venous port placement) within 3 days prior to first dose of study intervention.",
+      "reasonFuzzy": "Complex surgical washout periods dependent on surgery classification."
+    },
+    {
+      "id": "NCT06758401-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Receipt of a live vaccine within 30 days prior to first dose of study intervention.",
+      "reasonFuzzy": "Live vaccine washout window is not a standard lab cutoff or prior therapy category."
+    },
+    {
+      "id": "NCT06758401-neuropathy",
+      "polarity": "exclusion",
+      "sourceText": "Pre-existing peripheral neuropathy Grade ≥2 per NCI CTCAE v5.0.",
+      "reasonFuzzy": "Peripheral neuropathy grade is not a typed check kind."
+    },
+    {
+      "id": "NCT06758401-diabetes",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled diabetes mellitus, defined as HbA1c ≥8.0% or HbA1c between 7.0% and 8.0% with associated diabetes symptoms (polyuria or polydipsia) that are not otherwise explained.",
+      "reasonFuzzy": "Diabetes control rule combines HbA1c ranges with symptom criteria."
+    },
+    {
+      "id": "NCT06758401-irae",
+      "polarity": "exclusion",
+      "sourceText": "Prior immune-related AE that led to anti-PD-(L)1 treatment discontinuation, required a high-dose steroid taper (≥0.5 mg/kg prednisone or equivalent per day) for >2 weeks, or required treatment with systemic immunosuppressive therapy.",
+      "reasonFuzzy": "Complex immune-related adverse event history and steroid tapering requirements."
+    },
+    {
+      "id": "NCT06758401-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "History of autoimmune disease that has required systemic treatment in the past 2 years",
+      "reasonFuzzy": "Autoimmune disease history with systemic treatment timeframe."
+    },
+    {
+      "id": "NCT06758401-transplant",
+      "polarity": "exclusion",
+      "sourceText": "Participants with prior solid organ or bone marrow transplantation.",
+      "reasonFuzzy": "Solid organ or bone marrow transplant history."
+    },
+    {
+      "id": "NCT06758401-steroid",
+      "polarity": "exclusion",
+      "sourceText": "Currently receiving a high-dose steroid (>10 mg prednisone or equivalent per day) or other immune suppressant or has a condition requiring a chronic high-dose steroid or immune suppressant.",
+      "reasonFuzzy": "Current steroid dose threshold and chronic immunosuppressant requirements."
+    },
+    {
+      "id": "NCT06758401-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Prior and concomitant therapy: Any prior treatment with MMAE-derived drugs or IB6 targeting agents. Prior systemic therapy, including anti-PD-(L)1 therapy, for locally advanced, unresectable, or metastatic NSCLC... Prior radiotherapy to the lung within 6 months... Chemotherapy, biologics, and/or other antitumor treatment... Any prior therapy with an immune-oncology agent directed to a stimulatory or co-inhibitory T-cell receptor",
+      "reasonFuzzy": "Complex combination of prior therapies, target agents, radiation intervals, and exceptions based on recurrence timing."
+    },
+    {
+      "id": "NCT06758401-infection",
+      "polarity": "exclusion",
+      "sourceText": "History of or current ongoing infection, including participants positive for active HIV, HBV, or HCV.",
+      "reasonFuzzy": "Active infection status including viral hepatitis and HIV."
+    },
+    {
+      "id": "NCT06758401-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Severe uncontrolled cardiac or cerebrovascular condition within the previous 6 months",
+      "reasonFuzzy": "Cardiovascular and cerebrovascular conditions within a specific timeframe."
+    },
+    {
+      "id": "NCT06758401-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06758401-agawith",
+      "polarity": "exclusion",
+      "sourceText": "Participants with known AGAs including EGFR, ALK, ROS1, NTRK, BRAF, RET, and MET, for which there are approved and available first-line therapies per local SOC are ineligible. Documented negative results for EGFR, ALK, and ROS1 AGAs are required for participants with non-squamous histology.",
+      "reasonFuzzy": "Includes multiple gene alterations and conditions dependent on approved local first-line therapies, which cannot be modeled as a single typed biomarker check."
+    },
+    {
+      "id": "NCT06758401-histology",
+      "polarity": "exclusion",
+      "sourceText": "Participants with large cell neuroendocrine carcinoma are excluded.",
+      "reasonFuzzy": "Excludes a specific subtype of large cell carcinoma that does not map directly to the standardized trial histology enums."
+    },
+    {
+      "id": "NCT06758401-pembromono",
+      "polarity": "inclusion",
+      "sourceText": "Must be an appropriate candidate for treatment with pembrolizumab monotherapy per local guidelines.",
+      "reasonFuzzy": "Subjective clinical judgment regarding suitability for pembrolizumab monotherapy."
+    },
+    {
+      "id": "NCT06758401-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease based on RECIST v1.1 per investigator.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06758401-resolution",
+      "polarity": "inclusion",
+      "sourceText": "Resolution of acute effects of any prior therapy to either baseline severity or NCI CTCAE Grade 1 or less (except for AEs not constituting a safety risk in the investigator's judgment), unless otherwise excluded.",
+      "reasonFuzzy": "Involves investigator judgment regarding safety risk and adverse event resolution."
+    },
+    {
+      "id": "NCT06758401-lifeexp",
+      "polarity": "exclusion",
+      "sourceText": "Life expectancy of <3 months in the opinion of the investigator.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06758401-medpsych",
+      "polarity": "exclusion",
+      "sourceText": "Any medical or psychiatric condition including recent (within the past year) or active suicidal ideation/behavior or laboratory abnormality that may increase the risk of study participation or make the participant inappropriate for the study.",
+      "reasonFuzzy": "Open-ended medical/psychiatric exclusion relying on investigator assessment."
+    },
+    {
+      "id": "NCT06758401-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Participants with any history of another malignancy within 3 years before the first dose of study intervention, or any evidence of residual disease from a previously diagnosed malignancy.",
+      "reasonFuzzy": "Complex history of prior malignancies and residual disease evaluation."
+    },
+    {
+      "id": "NCT06758401-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Known or suspected hypersensitivity, intolerance, or contraindication to any excipient contained in the drug formulation of sigvotatug vedotin or pembrolizumab.",
+      "reasonFuzzy": "Hypersensitivity and contraindication evaluations are clinical judgments."
+    },
+    {
+      "id": "NCT06758401-respiratory",
+      "polarity": "exclusion",
+      "sourceText": "Participants with any of the following respiratory conditions: Evidence of noninfectious or drug-induced ILD or pneumonitis Known DLCO (adjusted for hemoglobin) <50% predicted. Grade ≥3 pulmonary disease unrelated to underlying malignancy",
+      "reasonFuzzy": "Combines DLCO threshold with qualitative assessments of ILD and pneumonitis."
+    },
+    {
+      "id": "NCT06758401-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery (defined as a surgery requiring inpatient hospitalization of at least 48 hours) within 21 days or minor surgery (excluding peripherally inserted central catheter placement and implantable central venous port placement) within 3 days prior to first dose of study intervention.",
+      "reasonFuzzy": "Washout window tied to major or minor surgeries with specific exceptions."
+    },
+    {
+      "id": "NCT06758401-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Receipt of a live vaccine within 30 days prior to first dose of study intervention.",
+      "reasonFuzzy": "Simple washout windows for vaccines are not covered by typed checks."
+    },
+    {
+      "id": "NCT06758401-neuropathy",
+      "polarity": "exclusion",
+      "sourceText": "Pre-existing peripheral neuropathy Grade ≥2 per NCI CTCAE v5.0.",
+      "reasonFuzzy": "Neuropathy grading is not part of the allowed typed checks."
+    },
+    {
+      "id": "NCT06758401-diabetes",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled diabetes mellitus, defined as HbA1c ≥8.0% or HbA1c between 7.0% and 8.0% with associated diabetes symptoms (polyuria or polydipsia) that are not otherwise explained.",
+      "reasonFuzzy": "Combines HbA1c cutoffs with clinical symptoms."
+    },
+    {
+      "id": "NCT06758401-irae",
+      "polarity": "exclusion",
+      "sourceText": "Prior immune-related AE that led to anti-PD-(L)1 treatment discontinuation, required a high-dose steroid taper (≥0.5 mg/kg prednisone or equivalent per day) for >2 weeks, or required treatment with systemic immunosuppressive therapy.",
+      "reasonFuzzy": "Complex prior adverse event and steroid taper criteria."
+    },
+    {
+      "id": "NCT06758401-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "History of autoimmune disease that has required systemic treatment in the past 2 years",
+      "reasonFuzzy": "Autoimmune disease history with systemic treatment timeframe."
+    },
+    {
+      "id": "NCT06758401-transplant",
+      "polarity": "exclusion",
+      "sourceText": "Participants with prior solid organ or bone marrow transplantation.",
+      "reasonFuzzy": "Transplantation history is not a typed check."
+    },
+    {
+      "id": "NCT06758401-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Currently receiving a high-dose steroid (>10 mg prednisone or equivalent per day) or other immune suppressant or has a condition requiring a chronic high-dose steroid or immune suppressant.",
+      "reasonFuzzy": "Ongoing steroid dose threshold and chronic requirement evaluation."
+    },
+    {
+      "id": "NCT06758401-priortherapy",
+      "polarity": "exclusion",
+      "sourceText": "Prior and concomitant therapy: Any prior treatment with MMAE-derived drugs or IB6 targeting agents. Prior systemic therapy, including anti-PD-(L)1 therapy, for locally advanced, unresectable, or metastatic NSCLC. (Neo)adjuvant anti-PD-(L)1 is allowed if recurrence or progression occurred ≥9 months after the last dose. Other (neo)adjuvant or definitive therapy is allowed if recurrence or progression occurred ≥6 months after the last dose. Prior radiotherapy to the lung within 6 months of first dose of study intervention, referencing the last date radiotherapy was received. This includes both curative and palliative radiotherapy. Chemotherapy, biologics, and/or other antitumor treatment with immunotherapy not specifically prohibited that is completed less than 4 weeks prior to first dose of study intervention, or 2 weeks for palliative radiotherapy. Any prior therapy with an immune-oncology agent directed to a stimulatory or co-inhibitory T-cell receptor",
+      "reasonFuzzy": "Multi-layered prior therapy rules, classes, and complex recurrence time windows."
+    },
+    {
+      "id": "NCT06758401-infection",
+      "polarity": "exclusion",
+      "sourceText": "History of or current ongoing infection, including participants positive for active HIV, HBV, or HCV.",
+      "reasonFuzzy": "General infection history and viral status criteria."
+    },
+    {
+      "id": "NCT06758401-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Severe uncontrolled cardiac or cerebrovascular condition within the previous 6 months",
+      "reasonFuzzy": "Subjective cardiac or cerebrovascular condition assessment."
+    },
+    {
+      "id": "NCT06758401-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Tumor has PD-L1 expression in ≥50% of tumor cells (TPS ≥50%) as determined by local testing.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06758401-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known active CNS lesions are excluded. Participants with definitively treated brain metastases (surgery and/or radiotherapy) may be eligible. Up to 5 clinically asymptomatic brain metastases of longest diameter <1.0 cm are permitted without definitive surgery and/or radiotherapy.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:50"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 21,
+    "attempts": 1,
+    "ms": 5795
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 21,
+    "attempts": 1,
+    "ms": 5923
+  },
+  "ms": 19593,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06758401",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06758401-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Have pathologically confirmed Stage IIIB or IIIC NSCLC and not be a candidate for surgical resection or definitive chemoradiation, or Stage IV NSCLC per the AJCC Staging Manual (Version 8.0) and the UICC Staging System (Eighth edition).",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06758401-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Tumor has PD-L1 expression in ≥50% of tumor cells (TPS ≥50%) as determined by local testing.",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT06758401-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06758401-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known active CNS lesions are excluded. Participants with definitively treated brain metastases (surgery and/or radiotherapy) may be eligible. Up to 5 clinically asymptomatic brain metastases of longest diameter <1.0 cm are permitted without definitive surgery and/or radiotherapy.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06758401-aga",
+        "polarity": "inclusion",
+        "sourceText": "Participants with known AGAs including EGFR, ALK, ROS1, NTRK, BRAF, RET, and MET, for which there are approved and available first-line therapies per local SOC are ineligible. Documented negative results for EGFR, ALK, and ROS1 AGAs are required for participants with non-squamous histology.",
+        "reasonFuzzy": "This rule includes multiple actionable genomic alterations dependent on local standard of care approvals and histology subtyping, which cannot be expressed as a single typed check."
+      },
+      {
+        "id": "NCT06758401-histology",
+        "polarity": "exclusion",
+        "sourceText": "Participants with large cell neuroendocrine carcinoma are excluded.",
+        "reasonFuzzy": "Large cell neuroendocrine carcinoma exclusion is a specific subtype exclusion not mapped to standard typed histologies."
+      },
+      {
+        "id": "NCT06758401-pembrolizumab-candidate",
+        "polarity": "inclusion",
+        "sourceText": "Must be an appropriate candidate for treatment with pembrolizumab monotherapy per local guidelines.",
+        "reasonFuzzy": "Investigator or clinical judgment of appropriateness for pembrolizumab monotherapy is subjective."
+      },
+      {
+        "id": "NCT06758401-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease based on RECIST v1.1 per investigator.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06758401-resolution",
+        "polarity": "inclusion",
+        "sourceText": "Resolution of acute effects of any prior therapy to either baseline severity or NCI CTCAE Grade 1 or less (except for AEs not constituting a safety risk in the investigator's judgment), unless otherwise excluded.",
+        "reasonFuzzy": "Includes investigator judgment regarding safety risk and adverse event resolution."
+      },
+      {
+        "id": "NCT06758401-life",
+        "polarity": "exclusion",
+        "sourceText": "Life expectancy of <3 months in the opinion of the investigator.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06758401-labs",
+        "polarity": "exclusion",
+        "sourceText": "Any medical or psychiatric condition including recent (within the past year) or active suicidal ideation/behavior or laboratory abnormality that may increase the risk of study participation or make the participant inappropriate for the study.",
+        "reasonFuzzy": "Broad investigator discretion regarding medical/psychiatric conditions and laboratory abnormalities."
+      },
+      {
+        "id": "NCT06758401-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Participants with any history of another malignancy within 3 years before the first dose of study intervention, or any evidence of residual disease from a previously diagnosed malignancy.",
+        "reasonFuzzy": "Complex prior malignancy history with multiple duration criteria."
+      },
+      {
+        "id": "NCT06758401-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Known or suspected hypersensitivity, intolerance, or contraindication to any excipient contained in the drug formulation of sigvotatug vedotin or pembrolizumab.",
+        "reasonFuzzy": "Hypersensitivity and contraindications are subjective clinical determinations."
+      },
+      {
+        "id": "NCT06758401-respiratory",
+        "polarity": "exclusion",
+        "sourceText": "Participants with any of the following respiratory conditions: Evidence of noninfectious or drug-induced ILD or pneumonitis; Known DLCO (adjusted for hemoglobin) <50% predicted; Grade ≥3 pulmonary disease unrelated to underlying malignancy",
+        "reasonFuzzy": "Combines multiple complex pulmonary assessments including DLCO cutoffs and unspecified Grade 3 pulmonary diseases."
+      },
+      {
+        "id": "NCT06758401-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery (defined as a surgery requiring inpatient hospitalization of at least 48 hours) within 21 days or minor surgery (excluding peripherally inserted central catheter placement and implantable central venous port placement) within 3 days prior to first dose of study intervention.",
+        "reasonFuzzy": "Complex surgical washout periods dependent on surgery classification."
+      },
+      {
+        "id": "NCT06758401-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Receipt of a live vaccine within 30 days prior to first dose of study intervention.",
+        "reasonFuzzy": "Live vaccine washout window is not a standard lab cutoff or prior therapy category."
+      },
+      {
+        "id": "NCT06758401-neuropathy",
+        "polarity": "exclusion",
+        "sourceText": "Pre-existing peripheral neuropathy Grade ≥2 per NCI CTCAE v5.0.",
+        "reasonFuzzy": "Peripheral neuropathy grade is not a typed check kind."
+      },
+      {
+        "id": "NCT06758401-diabetes",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled diabetes mellitus, defined as HbA1c ≥8.0% or HbA1c between 7.0% and 8.0% with associated diabetes symptoms (polyuria or polydipsia) that are not otherwise explained.",
+        "reasonFuzzy": "Diabetes control rule combines HbA1c ranges with symptom criteria."
+      },
+      {
+        "id": "NCT06758401-irae",
+        "polarity": "exclusion",
+        "sourceText": "Prior immune-related AE that led to anti-PD-(L)1 treatment discontinuation, required a high-dose steroid taper (≥0.5 mg/kg prednisone or equivalent per day) for >2 weeks, or required treatment with systemic immunosuppressive therapy.",
+        "reasonFuzzy": "Complex immune-related adverse event history and steroid tapering requirements."
+      },
+      {
+        "id": "NCT06758401-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "History of autoimmune disease that has required systemic treatment in the past 2 years",
+        "reasonFuzzy": "Autoimmune disease history with systemic treatment timeframe."
+      },
+      {
+        "id": "NCT06758401-transplant",
+        "polarity": "exclusion",
+        "sourceText": "Participants with prior solid organ or bone marrow transplantation.",
+        "reasonFuzzy": "Solid organ or bone marrow transplant history."
+      },
+      {
+        "id": "NCT06758401-steroid",
+        "polarity": "exclusion",
+        "sourceText": "Currently receiving a high-dose steroid (>10 mg prednisone or equivalent per day) or other immune suppressant or has a condition requiring a chronic high-dose steroid or immune suppressant.",
+        "reasonFuzzy": "Current steroid dose threshold and chronic immunosuppressant requirements."
+      },
+      {
+        "id": "NCT06758401-prior-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Prior and concomitant therapy: Any prior treatment with MMAE-derived drugs or IB6 targeting agents. Prior systemic therapy, including anti-PD-(L)1 therapy, for locally advanced, unresectable, or metastatic NSCLC... Prior radiotherapy to the lung within 6 months... Chemotherapy, biologics, and/or other antitumor treatment... Any prior therapy with an immune-oncology agent directed to a stimulatory or co-inhibitory T-cell receptor",
+        "reasonFuzzy": "Complex combination of prior therapies, target agents, radiation intervals, and exceptions based on recurrence timing."
+      },
+      {
+        "id": "NCT06758401-infection",
+        "polarity": "exclusion",
+        "sourceText": "History of or current ongoing infection, including participants positive for active HIV, HBV, or HCV.",
+        "reasonFuzzy": "Active infection status including viral hepatitis and HIV."
+      },
+      {
+        "id": "NCT06758401-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Severe uncontrolled cardiac or cerebrovascular condition within the previous 6 months",
+        "reasonFuzzy": "Cardiovascular and cerebrovascular conditions within a specific timeframe."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06758401",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06758401-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Have pathologically confirmed Stage IIIB or IIIC NSCLC and not be a candidate for surgical resection or definitive chemoradiation, or Stage IV NSCLC per the AJCC Staging Manual (Version 8.0) and the UICC Staging System (Eighth edition).",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06758401-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Tumor has PD-L1 expression in ≥50% of tumor cells (TPS ≥50%) as determined by local testing.",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT06758401-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known active CNS lesions are excluded. Participants with definitively treated brain metastases (surgery and/or radiotherapy) may be eligible. Up to 5 clinically asymptomatic brain metastases of longest diameter <1.0 cm are permitted without definitive surgery and/or radiotherapy.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06758401-agawith",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known AGAs including EGFR, ALK, ROS1, NTRK, BRAF, RET, and MET, for which there are approved and available first-line therapies per local SOC are ineligible. Documented negative results for EGFR, ALK, and ROS1 AGAs are required for participants with non-squamous histology.",
+        "reasonFuzzy": "Includes multiple gene alterations and conditions dependent on approved local first-line therapies, which cannot be modeled as a single typed biomarker check."
+      },
+      {
+        "id": "NCT06758401-histology",
+        "polarity": "exclusion",
+        "sourceText": "Participants with large cell neuroendocrine carcinoma are excluded.",
+        "reasonFuzzy": "Excludes a specific subtype of large cell carcinoma that does not map directly to the standardized trial histology enums."
+      },
+      {
+        "id": "NCT06758401-pembromono",
+        "polarity": "inclusion",
+        "sourceText": "Must be an appropriate candidate for treatment with pembrolizumab monotherapy per local guidelines.",
+        "reasonFuzzy": "Subjective clinical judgment regarding suitability for pembrolizumab monotherapy."
+      },
+      {
+        "id": "NCT06758401-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease based on RECIST v1.1 per investigator.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06758401-resolution",
+        "polarity": "inclusion",
+        "sourceText": "Resolution of acute effects of any prior therapy to either baseline severity or NCI CTCAE Grade 1 or less (except for AEs not constituting a safety risk in the investigator's judgment), unless otherwise excluded.",
+        "reasonFuzzy": "Involves investigator judgment regarding safety risk and adverse event resolution."
+      },
+      {
+        "id": "NCT06758401-lifeexp",
+        "polarity": "exclusion",
+        "sourceText": "Life expectancy of <3 months in the opinion of the investigator.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06758401-medpsych",
+        "polarity": "exclusion",
+        "sourceText": "Any medical or psychiatric condition including recent (within the past year) or active suicidal ideation/behavior or laboratory abnormality that may increase the risk of study participation or make the participant inappropriate for the study.",
+        "reasonFuzzy": "Open-ended medical/psychiatric exclusion relying on investigator assessment."
+      },
+      {
+        "id": "NCT06758401-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Participants with any history of another malignancy within 3 years before the first dose of study intervention, or any evidence of residual disease from a previously diagnosed malignancy.",
+        "reasonFuzzy": "Complex history of prior malignancies and residual disease evaluation."
+      },
+      {
+        "id": "NCT06758401-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Known or suspected hypersensitivity, intolerance, or contraindication to any excipient contained in the drug formulation of sigvotatug vedotin or pembrolizumab.",
+        "reasonFuzzy": "Hypersensitivity and contraindication evaluations are clinical judgments."
+      },
+      {
+        "id": "NCT06758401-respiratory",
+        "polarity": "exclusion",
+        "sourceText": "Participants with any of the following respiratory conditions: Evidence of noninfectious or drug-induced ILD or pneumonitis Known DLCO (adjusted for hemoglobin) <50% predicted. Grade ≥3 pulmonary disease unrelated to underlying malignancy",
+        "reasonFuzzy": "Combines DLCO threshold with qualitative assessments of ILD and pneumonitis."
+      },
+      {
+        "id": "NCT06758401-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery (defined as a surgery requiring inpatient hospitalization of at least 48 hours) within 21 days or minor surgery (excluding peripherally inserted central catheter placement and implantable central venous port placement) within 3 days prior to first dose of study intervention.",
+        "reasonFuzzy": "Washout window tied to major or minor surgeries with specific exceptions."
+      },
+      {
+        "id": "NCT06758401-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Receipt of a live vaccine within 30 days prior to first dose of study intervention.",
+        "reasonFuzzy": "Simple washout windows for vaccines are not covered by typed checks."
+      },
+      {
+        "id": "NCT06758401-neuropathy",
+        "polarity": "exclusion",
+        "sourceText": "Pre-existing peripheral neuropathy Grade ≥2 per NCI CTCAE v5.0.",
+        "reasonFuzzy": "Neuropathy grading is not part of the allowed typed checks."
+      },
+      {
+        "id": "NCT06758401-diabetes",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled diabetes mellitus, defined as HbA1c ≥8.0% or HbA1c between 7.0% and 8.0% with associated diabetes symptoms (polyuria or polydipsia) that are not otherwise explained.",
+        "reasonFuzzy": "Combines HbA1c cutoffs with clinical symptoms."
+      },
+      {
+        "id": "NCT06758401-irae",
+        "polarity": "exclusion",
+        "sourceText": "Prior immune-related AE that led to anti-PD-(L)1 treatment discontinuation, required a high-dose steroid taper (≥0.5 mg/kg prednisone or equivalent per day) for >2 weeks, or required treatment with systemic immunosuppressive therapy.",
+        "reasonFuzzy": "Complex prior adverse event and steroid taper criteria."
+      },
+      {
+        "id": "NCT06758401-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "History of autoimmune disease that has required systemic treatment in the past 2 years",
+        "reasonFuzzy": "Autoimmune disease history with systemic treatment timeframe."
+      },
+      {
+        "id": "NCT06758401-transplant",
+        "polarity": "exclusion",
+        "sourceText": "Participants with prior solid organ or bone marrow transplantation.",
+        "reasonFuzzy": "Transplantation history is not a typed check."
+      },
+      {
+        "id": "NCT06758401-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Currently receiving a high-dose steroid (>10 mg prednisone or equivalent per day) or other immune suppressant or has a condition requiring a chronic high-dose steroid or immune suppressant.",
+        "reasonFuzzy": "Ongoing steroid dose threshold and chronic requirement evaluation."
+      },
+      {
+        "id": "NCT06758401-priortherapy",
+        "polarity": "exclusion",
+        "sourceText": "Prior and concomitant therapy: Any prior treatment with MMAE-derived drugs or IB6 targeting agents. Prior systemic therapy, including anti-PD-(L)1 therapy, for locally advanced, unresectable, or metastatic NSCLC. (Neo)adjuvant anti-PD-(L)1 is allowed if recurrence or progression occurred ≥9 months after the last dose. Other (neo)adjuvant or definitive therapy is allowed if recurrence or progression occurred ≥6 months after the last dose. Prior radiotherapy to the lung within 6 months of first dose of study intervention, referencing the last date radiotherapy was received. This includes both curative and palliative radiotherapy. Chemotherapy, biologics, and/or other antitumor treatment with immunotherapy not specifically prohibited that is completed less than 4 weeks prior to first dose of study intervention, or 2 weeks for palliative radiotherapy. Any prior therapy with an immune-oncology agent directed to a stimulatory or co-inhibitory T-cell receptor",
+        "reasonFuzzy": "Multi-layered prior therapy rules, classes, and complex recurrence time windows."
+      },
+      {
+        "id": "NCT06758401-infection",
+        "polarity": "exclusion",
+        "sourceText": "History of or current ongoing infection, including participants positive for active HIV, HBV, or HCV.",
+        "reasonFuzzy": "General infection history and viral status criteria."
+      },
+      {
+        "id": "NCT06758401-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Severe uncontrolled cardiac or cerebrovascular condition within the previous 6 months",
+        "reasonFuzzy": "Subjective cardiac or cerebrovascular condition assessment."
+      }
+    ]
+  }
+}

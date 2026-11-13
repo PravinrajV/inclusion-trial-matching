@@ -1,0 +1,468 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05789082",
+  "briefTitle": "A Study Evaluating the Safety, Activity, and Pharmacokinetics of Divarasib as a Single Agent or in Combination With Other Anti-Cancer Therapies in Participants With Previously Untreated Advanced or Metastatic Non-Small Cell Lung Cancer With a KRAS G12C Mutation",
+  "parsedAt": "2026-11-12T05:48:55.881Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05789082-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05789082-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Pre-treatment tumor tissue along with an associated pathology report is required for all participants enrolled on study.",
+      "reasonFuzzy": "Willingness or requirement to provide a tissue biopsy is a procedure-based criterion, not a typed check."
+    },
+    {
+      "id": "NCT05789082-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically documented locally advanced unresectable or metastatic NSCLC that is not eligible for curative surgery and/or definitive chemoradiotherapy",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no numbered stage list provided."
+    },
+    {
+      "id": "NCT05789082-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease, as defined by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1. Additionally, for participants in cohort D, measurable brain metastases defined as at least 5 millimeters and twice the slice thickness, but less than 20 mm, that is asymptomatic and does not require local therapy at the time of enrollment.",
+      "reasonFuzzy": "Measurable disease by RECIST and specific brain lesion sizing are subjective imaging judgments, not typed kinds."
+    },
+    {
+      "id": "NCT05789082-oncogenic",
+      "polarity": "exclusion",
+      "sourceText": "Known concomitant second oncogenic driver with available targeted treatment",
+      "reasonFuzzy": "Concomitant second oncogenic driver is a conditional rule not tied to a single typed biomarker check."
+    },
+    {
+      "id": "NCT05789082-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic, untreated, or actively progressing CNS metastases (Cohorts A, B, and C)",
+      "reasonFuzzy": "Symptomatic, untreated, or actively progressing CNS disease is not a clean typed brain_mets exclusion."
+    },
+    {
+      "id": "NCT05789082-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Known hypersensitivity to any of the components of divarasib or pembrolizumab; or known hypersensitivity to pemetrexed, carboplatin, or cisplatin (Cohort B only)",
+      "reasonFuzzy": "Hypersensitivity to specific drugs is not a standard prior therapy exclusion or typed check."
+    },
+    {
+      "id": "NCT05789082-pulmonary",
+      "polarity": "exclusion",
+      "sourceText": "History of idiopathic pulmonary fibrosis, organizing pneumonia (e.g., bronchiolitis obliterans), drug-induced pneumonitis, or idiopathic pneumonitis, or evidence of active pneumonitis, active tuberculosis, significant cardiovascular disease within 3 months prior to initiation of study treatment",
+      "reasonFuzzy": "Specific medical and pulmonary histories are not typed criteria."
+    },
+    {
+      "id": "NCT05789082-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "History of malignancy other than NSCLC within 5 years prior to initiation of study treatment, with the exception of malignancies with a negligible risk of metastasis or death (e.g., 5-year OS rate more >90%), such as adequately treated carcinoma in situ of the cervix, non-melanoma skin carcinoma, localized prostate cancer, ductal breast carcinoma in situ, or Stage I uterine cancer",
+      "reasonFuzzy": "History of other malignancies with conditional exceptions is not a typed check."
+    },
+    {
+      "id": "NCT05789082-symptom",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled tumor related pain, pleural effusion, pericardial effusion, or ascites requiring recurrent drainage procedures, uncontrolled or symptomatic hypercalcemia",
+      "reasonFuzzy": "Uncontrolled symptoms and effusions are clinical judgment items."
+    },
+    {
+      "id": "NCT05789082-corticosteroid",
+      "polarity": "exclusion",
+      "sourceText": "Co-morbid condition that is an absolute contraindication to treatment with corticosteroids",
+      "reasonFuzzy": "Investigator-evaluated contraindication to corticosteroids is a clinical judgment."
+    },
+    {
+      "id": "NCT05789082-prophylactic",
+      "polarity": "exclusion",
+      "sourceText": "Inability or unwillingness to take prophylactic treatments such as corticosteroids, anti-emetics, folic acid, or vitamin B12 supplementation.",
+      "reasonFuzzy": "Willingness to take prophylactic treatments is a behavioral/judgment-based criterion."
+    },
+    {
+      "id": "NCT05789082-brainresection",
+      "polarity": "exclusion",
+      "sourceText": "Participants with brain metastases for whom complete surgical resections is clinically appropriate",
+      "reasonFuzzy": "Surgical appropriateness for brain metastases is a clinical judgment."
+    },
+    {
+      "id": "NCT05789082-kras",
+      "polarity": "inclusion",
+      "sourceText": "Participants With Previously Untreated Advanced or Metastatic Non-Small Cell Lung Cancer With a KRAS G12C Mutation",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05789082-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05789082-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Pre-treatment tumor tissue along with an associated pathology report is required for all participants enrolled on study.",
+      "reasonFuzzy": "Willingness or ability to undergo a biopsy or provide tissue is a procedural requirement."
+    },
+    {
+      "id": "NCT05789082-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically documented locally advanced unresectable or metastatic NSCLC that is not eligible for curative surgery and/or definitive chemoradiotherapy",
+      "reasonFuzzy": "Locally advanced or metastatic description does not provide a specific numbered stage list."
+    },
+    {
+      "id": "NCT05789082-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease, as defined by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1. Additionally, for participants in cohort D, measurable brain metastases defined as at least 5 millimeters and twice the slice thickness, but less than 20 mm, that is asymptomatic and does not require local therapy at the time of enrollment.",
+      "reasonFuzzy": "Measurable disease per RECIST and cohort-specific brain metastasis measurement criteria are subjective imaging judgments."
+    },
+    {
+      "id": "NCT05789082-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic, untreated, or actively progressing CNS metastases (Cohorts A, B, and C)",
+      "reasonFuzzy": "Symptomatic and actively progressing terms are clinical judgments not fitting a clean brain_mets category."
+    },
+    {
+      "id": "NCT05789082-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05789082-kras",
+      "polarity": "inclusion",
+      "sourceText": "Non-Small Cell Lung Cancer With a KRAS G12C Mutation",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05789082-krasvar",
+      "polarity": "inclusion",
+      "sourceText": "Non-Small Cell Lung Cancer With a KRAS G12C Mutation",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05789082-priorsystemic",
+      "polarity": "inclusion",
+      "sourceText": "No prior systemic treatment for advanced unresectable or metastatic NSCLC",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05789082-squamous",
+      "polarity": "exclusion",
+      "sourceText": "Squamous cell histology NSCLC",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05789082-krasinh",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with a KRAS G12C inhibitor",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Participants With Previously Untreated Advanced or Metastatic Non-Small Cell Lung Cancer With a KRAS G12C Mutation"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        },
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Non-Small Cell Lung Cancer With a KRAS G12C Mutation"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Non-Small Cell Lung Cancer With a KRAS G12C Mutation"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "value": "n:0"
+        },
+        {
+          "kind": "histology_in",
+          "polarity": "exclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:kras g12c inhibitor"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 12,
+    "attempts": 1,
+    "ms": 4515
+  },
+  "runB": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 3013
+  },
+  "ms": 15397,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05789082",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05789082-kras",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants With Previously Untreated Advanced or Metastatic Non-Small Cell Lung Cancer With a KRAS G12C Mutation",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT05789082-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05789082-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05789082-priorsystemic",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "No prior systemic treatment for advanced unresectable or metastatic NSCLC",
+        "numberValue": 0
+      },
+      {
+        "id": "NCT05789082-squamous",
+        "kind": "histology_in",
+        "polarity": "exclusion",
+        "sourceText": "Squamous cell histology NSCLC",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT05789082-krasinh",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a KRAS G12C inhibitor",
+        "stringValue": "KRAS G12C inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05789082-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Pre-treatment tumor tissue along with an associated pathology report is required for all participants enrolled on study.",
+        "reasonFuzzy": "Willingness or requirement to provide a tissue biopsy is a procedure-based criterion, not a typed check."
+      },
+      {
+        "id": "NCT05789082-stage",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically documented locally advanced unresectable or metastatic NSCLC that is not eligible for curative surgery and/or definitive chemoradiotherapy",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no numbered stage list provided."
+      },
+      {
+        "id": "NCT05789082-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease, as defined by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1. Additionally, for participants in cohort D, measurable brain metastases defined as at least 5 millimeters and twice the slice thickness, but less than 20 mm, that is asymptomatic and does not require local therapy at the time of enrollment.",
+        "reasonFuzzy": "Measurable disease by RECIST and specific brain lesion sizing are subjective imaging judgments, not typed kinds."
+      },
+      {
+        "id": "NCT05789082-oncogenic",
+        "polarity": "exclusion",
+        "sourceText": "Known concomitant second oncogenic driver with available targeted treatment",
+        "reasonFuzzy": "Concomitant second oncogenic driver is a conditional rule not tied to a single typed biomarker check."
+      },
+      {
+        "id": "NCT05789082-brain",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic, untreated, or actively progressing CNS metastases (Cohorts A, B, and C)",
+        "reasonFuzzy": "Symptomatic, untreated, or actively progressing CNS disease is not a clean typed brain_mets exclusion."
+      },
+      {
+        "id": "NCT05789082-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Known hypersensitivity to any of the components of divarasib or pembrolizumab; or known hypersensitivity to pemetrexed, carboplatin, or cisplatin (Cohort B only)",
+        "reasonFuzzy": "Hypersensitivity to specific drugs is not a standard prior therapy exclusion or typed check."
+      },
+      {
+        "id": "NCT05789082-pulmonary",
+        "polarity": "exclusion",
+        "sourceText": "History of idiopathic pulmonary fibrosis, organizing pneumonia (e.g., bronchiolitis obliterans), drug-induced pneumonitis, or idiopathic pneumonitis, or evidence of active pneumonitis, active tuberculosis, significant cardiovascular disease within 3 months prior to initiation of study treatment",
+        "reasonFuzzy": "Specific medical and pulmonary histories are not typed criteria."
+      },
+      {
+        "id": "NCT05789082-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "History of malignancy other than NSCLC within 5 years prior to initiation of study treatment, with the exception of malignancies with a negligible risk of metastasis or death (e.g., 5-year OS rate more >90%), such as adequately treated carcinoma in situ of the cervix, non-melanoma skin carcinoma, localized prostate cancer, ductal breast carcinoma in situ, or Stage I uterine cancer",
+        "reasonFuzzy": "History of other malignancies with conditional exceptions is not a typed check."
+      },
+      {
+        "id": "NCT05789082-symptom",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled tumor related pain, pleural effusion, pericardial effusion, or ascites requiring recurrent drainage procedures, uncontrolled or symptomatic hypercalcemia",
+        "reasonFuzzy": "Uncontrolled symptoms and effusions are clinical judgment items."
+      },
+      {
+        "id": "NCT05789082-corticosteroid",
+        "polarity": "exclusion",
+        "sourceText": "Co-morbid condition that is an absolute contraindication to treatment with corticosteroids",
+        "reasonFuzzy": "Investigator-evaluated contraindication to corticosteroids is a clinical judgment."
+      },
+      {
+        "id": "NCT05789082-prophylactic",
+        "polarity": "exclusion",
+        "sourceText": "Inability or unwillingness to take prophylactic treatments such as corticosteroids, anti-emetics, folic acid, or vitamin B12 supplementation.",
+        "reasonFuzzy": "Willingness to take prophylactic treatments is a behavioral/judgment-based criterion."
+      },
+      {
+        "id": "NCT05789082-brainresection",
+        "polarity": "exclusion",
+        "sourceText": "Participants with brain metastases for whom complete surgical resections is clinically appropriate",
+        "reasonFuzzy": "Surgical appropriateness for brain metastases is a clinical judgment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05789082",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05789082-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05789082-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05789082-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Non-Small Cell Lung Cancer With a KRAS G12C Mutation",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05789082-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Non-Small Cell Lung Cancer With a KRAS G12C Mutation",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT05789082-priorlines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "No prior systemic treatment for advanced unresectable or metastatic NSCLC",
+        "numberValue": 0
+      },
+      {
+        "id": "NCT05789082-squamous",
+        "kind": "histology_in",
+        "polarity": "exclusion",
+        "sourceText": "Squamous cell histology NSCLC",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT05789082-priorkras",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a KRAS G12C inhibitor",
+        "stringValue": "KRAS G12C inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05789082-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Pre-treatment tumor tissue along with an associated pathology report is required for all participants enrolled on study.",
+        "reasonFuzzy": "Willingness or ability to undergo a biopsy or provide tissue is a procedural requirement."
+      },
+      {
+        "id": "NCT05789082-stage",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically documented locally advanced unresectable or metastatic NSCLC that is not eligible for curative surgery and/or definitive chemoradiotherapy",
+        "reasonFuzzy": "Locally advanced or metastatic description does not provide a specific numbered stage list."
+      },
+      {
+        "id": "NCT05789082-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease, as defined by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1. Additionally, for participants in cohort D, measurable brain metastases defined as at least 5 millimeters and twice the slice thickness, but less than 20 mm, that is asymptomatic and does not require local therapy at the time of enrollment.",
+        "reasonFuzzy": "Measurable disease per RECIST and cohort-specific brain metastasis measurement criteria are subjective imaging judgments."
+      },
+      {
+        "id": "NCT05789082-brain",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic, untreated, or actively progressing CNS metastases (Cohorts A, B, and C)",
+        "reasonFuzzy": "Symptomatic and actively progressing terms are clinical judgments not fitting a clean brain_mets category."
+      }
+    ]
+  }
+}

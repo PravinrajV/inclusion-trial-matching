@@ -1,0 +1,350 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07104630",
+  "briefTitle": "Pulmonary Rehabilitation in Advanced Lung Cancer Survivors",
+  "parsedAt": "2026-11-12T10:45:36.495Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07104630-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Adults ≥ 18 years of age",
+      "numberValue": 18,
+      "evidence_quote": "Adults ≥ 18 years of age",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07104630-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status ≤ 3",
+      "numberValue": 3,
+      "evidence_quote": "ECOG performance status ≤ 3",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07104630-stability",
+      "polarity": "inclusion",
+      "sourceText": "Clinical stability: defined as no clinical/radiographic progression within the last three months",
+      "reasonFuzzy": "Clinical stability and radiographic progression are complex clinical assessments, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07104630-dyspnea",
+      "polarity": "inclusion",
+      "sourceText": "Self-reported dyspnea, defined as score ≥ 2 on the modified Medical Research Council (mMRC) Dyspnea Scale",
+      "reasonFuzzy": "mMRC Dyspnea Scale score is a symptom scale, not a typed clinical check."
+    },
+    {
+      "id": "NCT07104630-fluency",
+      "polarity": "inclusion",
+      "sourceText": "Participants must be fluent in written and spoken English",
+      "reasonFuzzy": "Language fluency is a communication requirement, not a typed clinical check."
+    },
+    {
+      "id": "NCT07104630-curative",
+      "polarity": "exclusion",
+      "sourceText": "Participants being treated with curative intent for locally advanced NSCLC or oligometastatic NSCLC with concurrent chemotherapy and radiation will be excluded",
+      "reasonFuzzy": "Treatment intent and concurrent modality restrictions are subjective study design criteria."
+    },
+    {
+      "id": "NCT07104630-progression",
+      "polarity": "exclusion",
+      "sourceText": "Participants have evidence of clinical and/or radiographic progression",
+      "reasonFuzzy": "Evidence of clinical or radiographic progression is an ongoing assessment, not a typed check."
+    },
+    {
+      "id": "NCT07104630-mental",
+      "polarity": "exclusion",
+      "sourceText": "Mental impairment leading to inability to complete study requirements",
+      "reasonFuzzy": "Mental impairment and ability to complete requirements are clinical judgments."
+    },
+    {
+      "id": "NCT07104630-fracture",
+      "polarity": "exclusion",
+      "sourceText": "High risk of fracture or spine instability (Mirels score ≥7 or SINS ≥7)",
+      "reasonFuzzy": "Specialized orthopedic scoring systems are outside the allowed typed criteria."
+    },
+    {
+      "id": "NCT07104630-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Any of the following cardiac exclusion criteria: Class II, III or IV heart failure as defined by the New York Heart Association (NYHA) functional classification system History of acute coronary syndromes (including myocardial infarction and unstable angina), coronary angioplasty or stenting within the past 6 months prior to the start of radiation therapy Uncontrolled arrhythmias; individuals with rate-controlled atrial fibrillation for > 1 month prior to start of radiation therapy may be eligible Syncope Acute myocarditis, pericarditis, or endocarditis Acute pulmonary embolus or pulmonary infarction within the last 3 months Acute thrombosis of lower extremities within the last 3 months Suspected dissecting aneurysm Pulmonary edema Respiratory failure Acute non-cardiopulmonary disorder that may affect exercise performance or be aggravated by exercise",
+      "reasonFuzzy": "Comprehensive cardiac and medical exclusion conditions are complex clinical judgments and do not map to simple typed checks."
+    },
+    {
+      "id": "NCT07104630-stability",
+      "polarity": "inclusion",
+      "sourceText": "Clinical stability: defined as no clinical/radiographic progression within the last three months",
+      "reasonFuzzy": "Clinical and radiographic progression stability over a time window is a clinical judgment, not a typed check."
+    },
+    {
+      "id": "NCT07104630-dyspnea",
+      "polarity": "inclusion",
+      "sourceText": "Self-reported dyspnea, defined as score ≥ 2 on the modified Medical Research Council (mMRC) Dyspnea Scale",
+      "reasonFuzzy": "mMRC dyspnea score is a symptom scale, not a typed kind."
+    },
+    {
+      "id": "NCT07104630-language",
+      "polarity": "inclusion",
+      "sourceText": "Participants must be fluent in written and spoken English",
+      "reasonFuzzy": "Language fluency is not a standard typed check kind."
+    },
+    {
+      "id": "NCT07104630-curative",
+      "polarity": "exclusion",
+      "sourceText": "Participants being treated with curative intent for locally advanced NSCLC or oligometastatic NSCLC with concurrent chemotherapy and radiation will be excluded",
+      "reasonFuzzy": "Curative intent treatment status with concurrent therapies is not a typed check."
+    },
+    {
+      "id": "NCT07104630-progression",
+      "polarity": "exclusion",
+      "sourceText": "Participants have evidence of clinical and/or radiographic progression",
+      "reasonFuzzy": "Clinical/radiographic progression is a subjective imaging and clinical assessment."
+    },
+    {
+      "id": "NCT07104630-mental",
+      "polarity": "exclusion",
+      "sourceText": "Mental impairment leading to inability to complete study requirements",
+      "reasonFuzzy": "Mental impairment and study requirement ability are investigator judgments."
+    },
+    {
+      "id": "NCT07104630-fracture",
+      "polarity": "exclusion",
+      "sourceText": "High risk of fracture or spine instability (Mirels score ≥7 or SINS ≥7)",
+      "reasonFuzzy": "Mirels score and SINS score are specialized orthopedic scoring tools, not standard typed kinds."
+    },
+    {
+      "id": "NCT07104630-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Any of the following cardiac exclusion criteria: Class II, III or IV heart failure as defined by the New York Heart Association (NYHA) functional classification system",
+      "reasonFuzzy": "NYHA functional classification for heart failure is not a standard typed check kind."
+    },
+    {
+      "id": "NCT07104630-stage",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have histologically confirmed NSCLC, Stages III or IV treated with palliative intent",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIIA,IIIB,IIIC,IV,IVA,IVB"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 5913
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 3256
+  },
+  "ms": 17157,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07104630",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07104630-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically confirmed NSCLC, Stages III or IV treated with palliative intent",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07104630-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adults ≥ 18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07104630-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status ≤ 3",
+        "numberValue": 3
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07104630-stability",
+        "polarity": "inclusion",
+        "sourceText": "Clinical stability: defined as no clinical/radiographic progression within the last three months",
+        "reasonFuzzy": "Clinical stability and radiographic progression are complex clinical assessments, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT07104630-dyspnea",
+        "polarity": "inclusion",
+        "sourceText": "Self-reported dyspnea, defined as score ≥ 2 on the modified Medical Research Council (mMRC) Dyspnea Scale",
+        "reasonFuzzy": "mMRC Dyspnea Scale score is a symptom scale, not a typed clinical check."
+      },
+      {
+        "id": "NCT07104630-fluency",
+        "polarity": "inclusion",
+        "sourceText": "Participants must be fluent in written and spoken English",
+        "reasonFuzzy": "Language fluency is a communication requirement, not a typed clinical check."
+      },
+      {
+        "id": "NCT07104630-curative",
+        "polarity": "exclusion",
+        "sourceText": "Participants being treated with curative intent for locally advanced NSCLC or oligometastatic NSCLC with concurrent chemotherapy and radiation will be excluded",
+        "reasonFuzzy": "Treatment intent and concurrent modality restrictions are subjective study design criteria."
+      },
+      {
+        "id": "NCT07104630-progression",
+        "polarity": "exclusion",
+        "sourceText": "Participants have evidence of clinical and/or radiographic progression",
+        "reasonFuzzy": "Evidence of clinical or radiographic progression is an ongoing assessment, not a typed check."
+      },
+      {
+        "id": "NCT07104630-mental",
+        "polarity": "exclusion",
+        "sourceText": "Mental impairment leading to inability to complete study requirements",
+        "reasonFuzzy": "Mental impairment and ability to complete requirements are clinical judgments."
+      },
+      {
+        "id": "NCT07104630-fracture",
+        "polarity": "exclusion",
+        "sourceText": "High risk of fracture or spine instability (Mirels score ≥7 or SINS ≥7)",
+        "reasonFuzzy": "Specialized orthopedic scoring systems are outside the allowed typed criteria."
+      },
+      {
+        "id": "NCT07104630-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Any of the following cardiac exclusion criteria: Class II, III or IV heart failure as defined by the New York Heart Association (NYHA) functional classification system History of acute coronary syndromes (including myocardial infarction and unstable angina), coronary angioplasty or stenting within the past 6 months prior to the start of radiation therapy Uncontrolled arrhythmias; individuals with rate-controlled atrial fibrillation for > 1 month prior to start of radiation therapy may be eligible Syncope Acute myocarditis, pericarditis, or endocarditis Acute pulmonary embolus or pulmonary infarction within the last 3 months Acute thrombosis of lower extremities within the last 3 months Suspected dissecting aneurysm Pulmonary edema Respiratory failure Acute non-cardiopulmonary disorder that may affect exercise performance or be aggravated by exercise",
+        "reasonFuzzy": "Comprehensive cardiac and medical exclusion conditions are complex clinical judgments and do not map to simple typed checks."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07104630",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07104630-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically confirmed NSCLC, Stages III or IV treated with palliative intent",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07104630-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adults ≥ 18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07104630-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status ≤ 3",
+        "numberValue": 3
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07104630-stability",
+        "polarity": "inclusion",
+        "sourceText": "Clinical stability: defined as no clinical/radiographic progression within the last three months",
+        "reasonFuzzy": "Clinical and radiographic progression stability over a time window is a clinical judgment, not a typed check."
+      },
+      {
+        "id": "NCT07104630-dyspnea",
+        "polarity": "inclusion",
+        "sourceText": "Self-reported dyspnea, defined as score ≥ 2 on the modified Medical Research Council (mMRC) Dyspnea Scale",
+        "reasonFuzzy": "mMRC dyspnea score is a symptom scale, not a typed kind."
+      },
+      {
+        "id": "NCT07104630-language",
+        "polarity": "inclusion",
+        "sourceText": "Participants must be fluent in written and spoken English",
+        "reasonFuzzy": "Language fluency is not a standard typed check kind."
+      },
+      {
+        "id": "NCT07104630-curative",
+        "polarity": "exclusion",
+        "sourceText": "Participants being treated with curative intent for locally advanced NSCLC or oligometastatic NSCLC with concurrent chemotherapy and radiation will be excluded",
+        "reasonFuzzy": "Curative intent treatment status with concurrent therapies is not a typed check."
+      },
+      {
+        "id": "NCT07104630-progression",
+        "polarity": "exclusion",
+        "sourceText": "Participants have evidence of clinical and/or radiographic progression",
+        "reasonFuzzy": "Clinical/radiographic progression is a subjective imaging and clinical assessment."
+      },
+      {
+        "id": "NCT07104630-mental",
+        "polarity": "exclusion",
+        "sourceText": "Mental impairment leading to inability to complete study requirements",
+        "reasonFuzzy": "Mental impairment and study requirement ability are investigator judgments."
+      },
+      {
+        "id": "NCT07104630-fracture",
+        "polarity": "exclusion",
+        "sourceText": "High risk of fracture or spine instability (Mirels score ≥7 or SINS ≥7)",
+        "reasonFuzzy": "Mirels score and SINS score are specialized orthopedic scoring tools, not standard typed kinds."
+      },
+      {
+        "id": "NCT07104630-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Any of the following cardiac exclusion criteria: Class II, III or IV heart failure as defined by the New York Heart Association (NYHA) functional classification system",
+        "reasonFuzzy": "NYHA functional classification for heart failure is not a standard typed check kind."
+      }
+    ]
+  }
+}

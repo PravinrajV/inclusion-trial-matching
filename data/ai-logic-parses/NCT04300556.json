@@ -1,0 +1,488 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04300556",
+  "briefTitle": "A Study to Evaluate the Safety, Tolerability, and Efficacy of MORAb-202 (Herein Referred to as Farletuzumab Ecteribulin), a Folate Receptor Alpha (FRα)-Targeting Antibody-drug Conjugate (ADC) in Participants With Selected Tumor Types",
+  "parsedAt": "2026-11-12T06:04:49.449Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04300556-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Aged >=18 years",
+      "numberValue": 18,
+      "evidence_quote": "Aged >=18 years",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04300556-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG PS of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "ECOG PS of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04300556-egfr_min",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Adequate renal function as evidenced by serum creatinine less than or equal to (<=) 1.5 milligram per deciliter (mg/dL) or calculated creatinine clearance >=50 milliliter per (mL) /minute according to a 12 or 24 hour urine collection.",
+      "numberValue": 50,
+      "stages": [],
+      "stringValue": "mL/min",
+      "evidence_quote": "Adequate renal function as evidenced by serum creatinine less than or equal to (<=) 1.5 milligram per deciliter (mg/dL) or calculated creatinine clearance >=50 milliliter per (mL) /minute according to a 12 or 24 hour urine collection.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04300556-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin (Hgb) >=9.0 gram per deciliter (g/dL)",
+      "numberValue": 9,
+      "evidence_quote": "Hemoglobin (Hgb) >=9.0 gram per deciliter (g/dL)",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04300556-life",
+      "polarity": "inclusion",
+      "sourceText": "Participants who are expected to survive a minimum of 3 months after the first administration of the study drug.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT04300556-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease meeting the following criteria (confirmed by central radiographic review, in the Dose-Confirmation Part only)",
+      "reasonFuzzy": "Measurable disease by RECIST 1.1 is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT04300556-anc",
+      "polarity": "inclusion",
+      "sourceText": "ANC >=1.0*10^9 per liter (/L) (MORAb-202 monotherapy cohorts only)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04300556-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count >=75*10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04300556-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin <=1.5*upper limit of normal (ULN) except for unconjugated hyperbilirubinemia (example, Gilbert's syndrome)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04300556-ast",
+      "polarity": "inclusion",
+      "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) <=3*ULN (in the case of liver metastases <=5*ULN).",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04300556-alt",
+      "polarity": "inclusion",
+      "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) <=3*ULN (in the case of liver metastases <=5*ULN).",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04300556-nsclc-prior",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC adenocarcinoma: Histologically or cytologically confirmed metastatic NSCLC adenocarcinoma: participants who have failed previous treatment for metastatic disease, are not indicated or failed epidermal growth factor receptor (EGFR)-, Anaplastic lymphoma kinase (ALK) -, B-Raf proto-oncogene (BRAF) - or c-ros oncogene 1 (ROS1) - targeted therapy, and for whom no alternative standard therapy exists.",
+      "reasonFuzzy": "Prior targeted therapy failure rules and disease indications are complex and span multiple molecular targets, making them difficult to represent with simple typed checks."
+    },
+    {
+      "id": "NCT04300556-survival",
+      "polarity": "inclusion",
+      "sourceText": "Participants who are expected to survive a minimum of 3 months after the first administration of the study drug.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT04300556-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease meeting the following criteria (confirmed by central radiographic review, in the Dose-Confirmation Part only)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04300556-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) >=1.0*10^9 per liter (/L) (MORAb-202 monotherapy cohorts only)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04300556-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count >=75*10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04300556-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin <=1.5*upper limit of normal (ULN) except for unconjugated hyperbilirubinemia (example, Gilbert's syndrome)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04300556-ast",
+      "polarity": "inclusion",
+      "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) <=3*ULN (in the case of liver metastases <=5*ULN).",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04300556-alt",
+      "polarity": "inclusion",
+      "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) <=3*ULN (in the case of liver metastases <=5*ULN).",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04300556-creatinine",
+      "polarity": "inclusion",
+      "sourceText": "Adequate renal function as evidenced by serum creatinine less than or equal to (<=) 1.5 milligram per deciliter (mg/dL) or calculated creatinine clearance >=50 milliliter per (mL) /minute according to a 12 or 24 hour urine collection.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04300556-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants with brain or subdural metastases are not eligible, unless they have completed local therapy and have discontinued the use of corticosteroids for this indication for at least 2 weeks before starting treatment in this study. Brain metastases must be stable for at least 4 weeks on 2 consecutive scans of the brain before starting study treatment.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 5,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "ANC >=1.0*10^9 per liter (/L) (MORAb-202 monotherapy cohorts only)"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelet count >=75*10^9/L"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Total bilirubin <=1.5*upper limit of normal (ULN) except for unconjugated hyperbilirubinemia (example, Gilbert's syndrome)"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) <=3*ULN (in the case of liver metastases <=5*ULN)."
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) <=3*ULN (in the case of liver metastases <=5*ULN)."
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 5,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) >=1.0*10^9 per liter (/L) (MORAb-202 monotherapy cohorts only)"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelet count >=75*10^9/L"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Total bilirubin <=1.5*upper limit of normal (ULN) except for unconjugated hyperbilirubinemia (example, Gilbert's syndrome)"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) <=3*ULN (in the case of liver metastases <=5*ULN)."
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) <=3*ULN (in the case of liver metastases <=5*ULN)."
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 6,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "creatinine_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 6
+    }
+  },
+  "runA": {
+    "typedEmitted": 11,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 3447
+  },
+  "runB": {
+    "typedEmitted": 11,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 4205
+  },
+  "ms": 15770,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04300556",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04300556-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Aged >=18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04300556-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG PS of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04300556-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Adequate renal function as evidenced by serum creatinine less than or equal to (<=) 1.5 milligram per deciliter (mg/dL) or calculated creatinine clearance >=50 milliliter per (mL) /minute according to a 12 or 24 hour urine collection.",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "mg/dL"
+      },
+      {
+        "id": "NCT04300556-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Adequate renal function as evidenced by serum creatinine less than or equal to (<=) 1.5 milligram per deciliter (mg/dL) or calculated creatinine clearance >=50 milliliter per (mL) /minute according to a 12 or 24 hour urine collection.",
+        "numberValue": 50,
+        "stages": [],
+        "stringValue": "mL/min"
+      },
+      {
+        "id": "NCT04300556-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "ANC >=1.0*10^9 per liter (/L) (MORAb-202 monotherapy cohorts only)",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04300556-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin (Hgb) >=9.0 gram per deciliter (g/dL)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT04300556-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count >=75*10^9/L",
+        "numberValue": 75
+      },
+      {
+        "id": "NCT04300556-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin <=1.5*upper limit of normal (ULN) except for unconjugated hyperbilirubinemia (example, Gilbert's syndrome)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT04300556-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) <=3*ULN (in the case of liver metastases <=5*ULN).",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT04300556-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) <=3*ULN (in the case of liver metastases <=5*ULN).",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT04300556-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participants with brain or subdural metastases are not eligible, unless they have completed local therapy and have discontinued the use of corticosteroids for this indication for at least 2 weeks before starting treatment in this study. Brain metastases must be stable for at least 4 weeks on 2 consecutive scans of the brain before starting study treatment.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04300556-life",
+        "polarity": "inclusion",
+        "sourceText": "Participants who are expected to survive a minimum of 3 months after the first administration of the study drug.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT04300556-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease meeting the following criteria (confirmed by central radiographic review, in the Dose-Confirmation Part only)",
+        "reasonFuzzy": "Measurable disease by RECIST 1.1 is a subjective imaging judgment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04300556",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04300556-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Aged >=18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04300556-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG PS of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04300556-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Adequate renal function as evidenced by serum creatinine less than or equal to (<=) 1.5 milligram per deciliter (mg/dL) or calculated creatinine clearance >=50 milliliter per (mL) /minute according to a 12 or 24 hour urine collection.",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "1.5 mg/dL"
+      },
+      {
+        "id": "NCT04300556-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Adequate renal function as evidenced by serum creatinine less than or equal to (<=) 1.5 milligram per deciliter (mg/dL) or calculated creatinine clearance >=50 milliliter per (mL) /minute according to a 12 or 24 hour urine collection.",
+        "numberValue": 50,
+        "stages": []
+      },
+      {
+        "id": "NCT04300556-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) >=1.0*10^9 per liter (/L) (MORAb-202 monotherapy cohorts only)",
+        "numberValue": 1,
+        "stages": [],
+        "stringValue": "1.0*10^9 /L"
+      },
+      {
+        "id": "NCT04300556-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin (Hgb) >=9.0 gram per deciliter (g/dL)",
+        "numberValue": 9,
+        "stages": []
+      },
+      {
+        "id": "NCT04300556-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count >=75*10^9/L",
+        "numberValue": 75,
+        "stages": [],
+        "stringValue": "75*10^9/L"
+      },
+      {
+        "id": "NCT04300556-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin <=1.5*upper limit of normal (ULN) except for unconjugated hyperbilirubinemia (example, Gilbert's syndrome)",
+        "numberValue": 1.5,
+        "stages": []
+      },
+      {
+        "id": "NCT04300556-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) <=3*ULN (in the case of liver metastases <=5*ULN).",
+        "numberValue": 3,
+        "stages": []
+      },
+      {
+        "id": "NCT04300556-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) <=3*ULN (in the case of liver metastases <=5*ULN).",
+        "numberValue": 3,
+        "stages": []
+      },
+      {
+        "id": "NCT04300556-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participants with brain or subdural metastases are not eligible, unless they have completed local therapy and have discontinued the use of corticosteroids for this indication for at least 2 weeks before starting treatment in this study. Brain metastases must be stable for at least 4 weeks on 2 consecutive scans of the brain before starting study treatment.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04300556-nsclc-prior",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC adenocarcinoma: Histologically or cytologically confirmed metastatic NSCLC adenocarcinoma: participants who have failed previous treatment for metastatic disease, are not indicated or failed epidermal growth factor receptor (EGFR)-, Anaplastic lymphoma kinase (ALK) -, B-Raf proto-oncogene (BRAF) - or c-ros oncogene 1 (ROS1) - targeted therapy, and for whom no alternative standard therapy exists.",
+        "reasonFuzzy": "Prior targeted therapy failure rules and disease indications are complex and span multiple molecular targets, making them difficult to represent with simple typed checks."
+      },
+      {
+        "id": "NCT04300556-survival",
+        "polarity": "inclusion",
+        "sourceText": "Participants who are expected to survive a minimum of 3 months after the first administration of the study drug.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT04300556-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease meeting the following criteria (confirmed by central radiographic review, in the Dose-Confirmation Part only)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      }
+    ]
+  }
+}

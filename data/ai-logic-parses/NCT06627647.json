@@ -1,0 +1,464 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06627647",
+  "briefTitle": "A Global Phase III Study of Rilvegostomig or Pembrolizumab Plus Chemotherapy for First-Line Treatment of Locally Advanced or Metastatic Non-Squamous NSCLC",
+  "parsedAt": "2026-11-12T05:53:50.765Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06627647-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Stage III B/C or IV NSCLC (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment.",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Stage III B/C or IV NSCLC (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06627647-excl-pd1",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Any prior treatment with an anti-PD-1 or anti-PD-L1 agent.",
+      "stringValue": "anti-PD-1",
+      "evidence_quote": "Any prior treatment with an anti-PD-1 or anti-PD-L1 agent.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06627647-driver",
+      "polarity": "exclusion",
+      "sourceText": "Absence of documented tumor genomic mutation results from tests conducted as part of standard local practice in any other actionable driver oncogenes for which there are locally approved and available targeted 1L therapies.",
+      "reasonFuzzy": "Refers to a generalized category of actionable driver oncogenes rather than a specific typed biomarker."
+    },
+    {
+      "id": "NCT06627647-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 TL at baseline and can be accurately measured at baseline as ≥ 10 mm in the longest diameter (except lymph nodes, which must have short axis ≥ 15 mm) with CT or MRI and is suitable for accurate repeated measurements.",
+      "reasonFuzzy": "Measurable disease and RECIST evaluation are subjective imaging assessments."
+    },
+    {
+      "id": "NCT06627647-organs",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ and bone marrow function",
+      "reasonFuzzy": "General statement for organ function without specific numeric cutoffs in the source text."
+    },
+    {
+      "id": "NCT06627647-histology-smallcell",
+      "polarity": "exclusion",
+      "sourceText": "Presence of small cell and neuroendocrine histology components.",
+      "reasonFuzzy": "Excludes specific minor histologic components which is not handled by simple histology exclusion checks."
+    },
+    {
+      "id": "NCT06627647-priorsystemic",
+      "polarity": "exclusion",
+      "sourceText": "Any prior systemic therapy received for NSCLC except in the neoadjuvant or adjuvant setting or definitive chemoradiotherapy with the intent to cure, provided that progression has occurred > 12 months after the end of systemic therapy treatment.",
+      "reasonFuzzy": "Involves conditional prior systemic therapy rules with time intervals and settings that cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT06627647-driver",
+      "polarity": "exclusion",
+      "sourceText": "Absence of documented tumor genomic mutation results from tests conducted as part of standard local practice in any other actionable driver oncogenes for which there are locally approved and available targeted 1L therapies.",
+      "reasonFuzzy": "Refers to general actionable driver oncogenes without specific named genes."
+    },
+    {
+      "id": "NCT06627647-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 TL at baseline and can be accurately measured at baseline as ≥ 10 mm in the longest diameter (except lymph nodes, which must have short axis ≥ 15 mm) with CT or MRI and is suitable for accurate repeated measurements.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06627647-organs",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ and bone marrow function",
+      "reasonFuzzy": "General statement of adequate function without explicit lab cutoffs."
+    },
+    {
+      "id": "NCT06627647-smallcell",
+      "polarity": "exclusion",
+      "sourceText": "Presence of small cell and neuroendocrine histology components.",
+      "reasonFuzzy": "Excludes specific histologic components rather than a standard categorical histology check."
+    },
+    {
+      "id": "NCT06627647-priorsystemic",
+      "polarity": "exclusion",
+      "sourceText": "Any prior systemic therapy received for NSCLC except in the neoadjuvant or adjuvant setting or definitive chemoradiotherapy with the intent to cure, provided that progression has occurred > 12 months after the end of systemic therapy treatment.",
+      "reasonFuzzy": "Complex rule regarding prior lines and washout/progression timing relative to curative treatment settings."
+    },
+    {
+      "id": "NCT06627647-anti-pdl1",
+      "polarity": "exclusion",
+      "sourceText": "Any prior treatment with an anti-PD-1 or anti-PD-L1 agent.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06627647-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically documented non-squamous NSCLC.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06627647-egfr",
+      "polarity": "exclusion",
+      "sourceText": "Absence of sensitizing EGFR mutations (including, but not limited to, exon 19 deletion and exon 21 L858R, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations) and ALK and ROS1 rearrangements.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06627647-alk",
+      "polarity": "exclusion",
+      "sourceText": "Absence of sensitizing EGFR mutations (including, but not limited to, exon 19 deletion and exon 21 L858R, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations) and ALK and ROS1 rearrangements.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06627647-ros1",
+      "polarity": "exclusion",
+      "sourceText": "Absence of sensitizing EGFR mutations (including, but not limited to, exon 19 deletion and exon 21 L858R, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations) and ALK and ROS1 rearrangements.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06627647-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Provision of acceptable tumor sample, to confirm tumor PD-L1 expression TC ≥ 1%.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06627647-brain",
+      "polarity": "inclusion",
+      "sourceText": "Brain metastases unless asymptomatic, stable, and not requiring steroids or anticonvulsants for at least 7 days prior to randomization.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06627647-excl-tigit",
+      "polarity": "exclusion",
+      "sourceText": "Any prior exposure to an anti-TIGIT therapy or any other anticancer therapy targeting immune-regulatory receptors or mechanisms.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 9,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 10,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 9,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-pd-l1"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 7,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        },
+        {
+          "kind": "ros1_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        },
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-tigit"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 9,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3834
+  },
+  "runB": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3756
+  },
+  "ms": 15524,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06627647",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06627647-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically documented non-squamous NSCLC.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06627647-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage III B/C or IV NSCLC (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06627647-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Absence of sensitizing EGFR mutations (including, but not limited to, exon 19 deletion and exon 21 L858R, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations) and ALK and ROS1 rearrangements.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06627647-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Absence of sensitizing EGFR mutations (including, but not limited to, exon 19 deletion and exon 21 L858R, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations) and ALK and ROS1 rearrangements.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06627647-ros1",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Absence of sensitizing EGFR mutations (including, but not limited to, exon 19 deletion and exon 21 L858R, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations) and ALK and ROS1 rearrangements.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06627647-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Provision of acceptable tumor sample, to confirm tumor PD-L1 expression TC ≥ 1%.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06627647-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Brain metastases unless asymptomatic, stable, and not requiring steroids or anticonvulsants for at least 7 days prior to randomization.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06627647-excl-tigit",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior exposure to an anti-TIGIT therapy or any other anticancer therapy targeting immune-regulatory receptors or mechanisms.",
+        "stringValue": "anti-TIGIT"
+      },
+      {
+        "id": "NCT06627647-excl-pd1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior treatment with an anti-PD-1 or anti-PD-L1 agent.",
+        "stringValue": "anti-PD-1"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06627647-driver",
+        "polarity": "exclusion",
+        "sourceText": "Absence of documented tumor genomic mutation results from tests conducted as part of standard local practice in any other actionable driver oncogenes for which there are locally approved and available targeted 1L therapies.",
+        "reasonFuzzy": "Refers to a generalized category of actionable driver oncogenes rather than a specific typed biomarker."
+      },
+      {
+        "id": "NCT06627647-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 TL at baseline and can be accurately measured at baseline as ≥ 10 mm in the longest diameter (except lymph nodes, which must have short axis ≥ 15 mm) with CT or MRI and is suitable for accurate repeated measurements.",
+        "reasonFuzzy": "Measurable disease and RECIST evaluation are subjective imaging assessments."
+      },
+      {
+        "id": "NCT06627647-organs",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ and bone marrow function",
+        "reasonFuzzy": "General statement for organ function without specific numeric cutoffs in the source text."
+      },
+      {
+        "id": "NCT06627647-histology-smallcell",
+        "polarity": "exclusion",
+        "sourceText": "Presence of small cell and neuroendocrine histology components.",
+        "reasonFuzzy": "Excludes specific minor histologic components which is not handled by simple histology exclusion checks."
+      },
+      {
+        "id": "NCT06627647-priorsystemic",
+        "polarity": "exclusion",
+        "sourceText": "Any prior systemic therapy received for NSCLC except in the neoadjuvant or adjuvant setting or definitive chemoradiotherapy with the intent to cure, provided that progression has occurred > 12 months after the end of systemic therapy treatment.",
+        "reasonFuzzy": "Involves conditional prior systemic therapy rules with time intervals and settings that cannot be expressed as a single typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06627647",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06627647-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically documented non-squamous NSCLC.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06627647-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage III B/C or IV NSCLC (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06627647-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Absence of sensitizing EGFR mutations (including, but not limited to, exon 19 deletion and exon 21 L858R, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations) and ALK and ROS1 rearrangements.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06627647-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Absence of sensitizing EGFR mutations (including, but not limited to, exon 19 deletion and exon 21 L858R, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations) and ALK and ROS1 rearrangements.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06627647-ros1",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Absence of sensitizing EGFR mutations (including, but not limited to, exon 19 deletion and exon 21 L858R, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations) and ALK and ROS1 rearrangements.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06627647-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Provision of acceptable tumor sample, to confirm tumor PD-L1 expression TC ≥ 1%.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06627647-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Brain metastases unless asymptomatic, stable, and not requiring steroids or anticonvulsants for at least 7 days prior to randomization.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06627647-anti-tigit",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior exposure to an anti-TIGIT therapy or any other anticancer therapy targeting immune-regulatory receptors or mechanisms.",
+        "stringValue": "anti-TIGIT"
+      },
+      {
+        "id": "NCT06627647-anti-pd1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior treatment with an anti-PD-1 or anti-PD-L1 agent.",
+        "stringValue": "anti-PD-1"
+      },
+      {
+        "id": "NCT06627647-anti-pdl1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior treatment with an anti-PD-1 or anti-PD-L1 agent.",
+        "stringValue": "anti-PD-L1"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06627647-driver",
+        "polarity": "exclusion",
+        "sourceText": "Absence of documented tumor genomic mutation results from tests conducted as part of standard local practice in any other actionable driver oncogenes for which there are locally approved and available targeted 1L therapies.",
+        "reasonFuzzy": "Refers to general actionable driver oncogenes without specific named genes."
+      },
+      {
+        "id": "NCT06627647-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 TL at baseline and can be accurately measured at baseline as ≥ 10 mm in the longest diameter (except lymph nodes, which must have short axis ≥ 15 mm) with CT or MRI and is suitable for accurate repeated measurements.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06627647-organs",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ and bone marrow function",
+        "reasonFuzzy": "General statement of adequate function without explicit lab cutoffs."
+      },
+      {
+        "id": "NCT06627647-smallcell",
+        "polarity": "exclusion",
+        "sourceText": "Presence of small cell and neuroendocrine histology components.",
+        "reasonFuzzy": "Excludes specific histologic components rather than a standard categorical histology check."
+      },
+      {
+        "id": "NCT06627647-priorsystemic",
+        "polarity": "exclusion",
+        "sourceText": "Any prior systemic therapy received for NSCLC except in the neoadjuvant or adjuvant setting or definitive chemoradiotherapy with the intent to cure, provided that progression has occurred > 12 months after the end of systemic therapy treatment.",
+        "reasonFuzzy": "Complex rule regarding prior lines and washout/progression timing relative to curative treatment settings."
+      }
+    ]
+  }
+}

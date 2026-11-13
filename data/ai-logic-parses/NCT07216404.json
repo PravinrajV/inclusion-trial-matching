@@ -1,0 +1,624 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07216404",
+  "briefTitle": "Psilocybin-Assisted Therapy for the Treatment of Major Depressive Disorder in Patients With Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T11:04:21.083Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07216404-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Over the age of 18",
+      "numberValue": 18,
+      "evidence_quote": "Over the age of 18",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07216404-karnofsky",
+      "polarity": "inclusion",
+      "sourceText": "Have a Karnofsky performance status >= 60",
+      "reasonFuzzy": "Karnofsky performance status is not one of the allowed typed performance scales (which is restricted to ECOG)."
+    },
+    {
+      "id": "NCT07216404-depression",
+      "polarity": "inclusion",
+      "sourceText": "Moderate to severe symptoms of depression (GRID Hamilton Rating Scale for Depression [GRID-HAMD] > 16)",
+      "reasonFuzzy": "Depression rating scale is specific to this psychiatric trial and not a standard oncology typed check."
+    },
+    {
+      "id": "NCT07216404-suicidality",
+      "polarity": "inclusion",
+      "sourceText": "Be judged by study team clinicians to be at low risk for suicidality, as defined by a score of =< 2 on the Columbia- Suicide Severity rating scale (C-SSRS) ideation subscale, 0 on the behavior subscale, and by overall clinical judgment",
+      "reasonFuzzy": "Suicidality assessment involves clinical judgment and specific psychiatric rating scales."
+    },
+    {
+      "id": "NCT07216404-hallucinogens",
+      "polarity": "inclusion",
+      "sourceText": "Have limited lifetime use of hallucinogens (the following criteria are preferred: no use in the past 5 years; total hallucinogen use less than 10 times)",
+      "reasonFuzzy": "Hallucinogen use history is a trial-specific psychiatric criterion."
+    },
+    {
+      "id": "NCT07216404-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Participants who are pregnant (as indicated by a positive urine pregnancy test assessed at intake and before each drug session) or nursing; participants who are of child-bearing potential and sexually active who are not practicing a highly effective means of birth control",
+      "reasonFuzzy": "Pregnancy and contraception requirements are standard exclusions not mapped to typed checks."
+    },
+    {
+      "id": "NCT07216404-cardiovascular",
+      "polarity": "exclusion",
+      "sourceText": "Cardiovascular conditions: Recent history of coronary artery disease or stroke, current uncontrolled angina, uncontrolled hypertension, a clinically significant electrocardiogram (ECG) abnormality as determined by a cardiologist and/or medical monitor (e.g., atrial fibrillation), prolonged corrected QT (QTc) interval (i.e., QTc > 450 msec), artificial heart valve, or transient ischemic attack (TIA) in the past year",
+      "reasonFuzzy": "Cardiovascular exclusions encompass multiple complex clinical conditions and judgment-based ECG assessments."
+    },
+    {
+      "id": "NCT07216404-bp-hr",
+      "polarity": "exclusion",
+      "sourceText": "Systolic blood pressure (SBP) > 139 mm HG; diastolic blood pressure (DBP) > 89 mm HG; heart rate (HR) > 90 bpm (mean values of the four or more assessments will not exceed 139 mm Hg systolic, 89 mm Hg diastolic, and/or 90 beats per minute)",
+      "reasonFuzzy": "Blood pressure and heart rate limits based on multi-assessment means are not covered by the allowed typed lab or clinical checks."
+    },
+    {
+      "id": "NCT07216404-diabetes",
+      "polarity": "exclusion",
+      "sourceText": "Insulin-dependent diabetes; Non-insulin dependent diabetes if recent history of symptomatic hypoglycemia",
+      "reasonFuzzy": "Diabetes conditions and history of symptomatic hypoglycemia are not typed criteria."
+    },
+    {
+      "id": "NCT07216404-cns",
+      "polarity": "exclusion",
+      "sourceText": "Significant central nervous system (CNS) pathology. Some examples include: Unstable primary or secondary (e.g., metastatic) cerebral neoplasm. Stable is defined as treatment within prior 4 weeks or no immediate plans for treatment., Unstable history of seizures, Cerebral aneurysm - unstable with plans for intervention or close monitoring, Clinical diagnosis of dementia, Clinical diagnosis of delirium",
+      "reasonFuzzy": "CNS pathology and stability definitions involve complex clinical determinations."
+    },
+    {
+      "id": "NCT07216404-investigator-labs",
+      "polarity": "exclusion",
+      "sourceText": "In the investigator's opinion, abnormal and clinically significant results on the physical examination, vital signs, ECG, or laboratory tests at screening may constitute a risk for an individual exposed to psilocybin. This includes platelets below 100,000 platelets per cubic millimeter of blood, liver function tests three times the upper limit of normal, and creatine two times above the normal range. This also includes clinically significant abnormal electrolytes or low hemoglobin (below 10 g/L)",
+      "reasonFuzzy": "Liver function tests and creatinine limits are tied to investigator opinion and multiple combined parameters, though specific plate/hemoglobin thresholds were extracted."
+    },
+    {
+      "id": "NCT07216404-acute-condition",
+      "polarity": "exclusion",
+      "sourceText": "Any acute condition that would, in the Investigator's judgment, place the subject at significant risk due to safety concerns or compliance with clinical study procedures",
+      "reasonFuzzy": "Investigator judgment for acute conditions is inherently subjective."
+    },
+    {
+      "id": "NCT07216404-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Under active treatment of an investigational agent in a clinical trial",
+      "reasonFuzzy": "Concurrent investigational agent use is not a typed prior therapy check."
+    },
+    {
+      "id": "NCT07216404-psychoactive",
+      "polarity": "exclusion",
+      "sourceText": "In the judgement of the clinician, patients currently taking psychoactive medication on a regular (e.g., daily) basis (e.g., cannabis, opiates, Ritalin), other than a daily selective serotonin reuptake inhibitors (SSRI), serotonin-norepinephrine reuptake inhibitors (SNRI), or bupropion (< 300 mg daily)",
+      "reasonFuzzy": "Psychoactive medication exclusions involve clinician judgment and complex class exceptions."
+    },
+    {
+      "id": "NCT07216404-substance",
+      "polarity": "exclusion",
+      "sourceText": "In the judgement of the clinician, patients who self-report or urine test positive for psychoactive medications (e.g., illicit opiates, amphetamines, cocaine) may be excluded",
+      "reasonFuzzy": "Urine drug screening and self-reporting exclusions are clinician-dependent."
+    },
+    {
+      "id": "NCT07216404-psychiatric",
+      "polarity": "exclusion",
+      "sourceText": "Current or past history of meeting Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5) criteria for schizophrenia spectrum or other psychotic disorders, or bipolar I or II disorder",
+      "reasonFuzzy": "Psychiatric history based on DSM-5 criteria is specialized and not a standard typed check."
+    },
+    {
+      "id": "NCT07216404-substance-use",
+      "polarity": "exclusion",
+      "sourceText": "Current or history within one year of meeting DSM-5 criteria for a moderate or severe alcohol or other drug use disorder (excluding caffeine and tobacco)",
+      "reasonFuzzy": "Substance use disorder history is a psychiatric exclusion."
+    },
+    {
+      "id": "NCT07216404-family-history",
+      "polarity": "exclusion",
+      "sourceText": "Have a first or second-degree relative with schizophrenia spectrum or other psychotic disorders or bipolar I or II disorder",
+      "reasonFuzzy": "Family psychiatric history is not a typed eligibility criterion."
+    },
+    {
+      "id": "NCT07216404-rapport",
+      "polarity": "exclusion",
+      "sourceText": "Has a psychiatric condition that precludes the establishment of therapeutic rapport, as evidenced by long-term patterns of unstable relationships, a history of significant stress-related paranoia, and identity disturbances",
+      "reasonFuzzy": "Subjective psychiatric assessment of therapeutic rapport."
+    },
+    {
+      "id": "NCT07216404-suicide-attempt",
+      "polarity": "exclusion",
+      "sourceText": "History of a medically significant suicide attempt as determined by the study team and principal investigator (PI)",
+      "reasonFuzzy": "Suicide attempt history is evaluated via investigator judgment."
+    },
+    {
+      "id": "NCT07216404-nsclc",
+      "polarity": "inclusion",
+      "sourceText": "Individuals diagnosed with NSCLC, confirmed by pathology report",
+      "reasonFuzzy": "Pathology confirmation of NSCLC without an explicit stage list; remains in scope for stage III/IV NSCLC."
+    },
+    {
+      "id": "NCT07216404-karnofsky",
+      "polarity": "inclusion",
+      "sourceText": "Have a Karnofsky performance status >= 60",
+      "reasonFuzzy": "Karnofsky performance status is not a typed ecog_max check."
+    },
+    {
+      "id": "NCT07216404-depress",
+      "polarity": "inclusion",
+      "sourceText": "Moderate to severe symptoms of depression (GRID Hamilton Rating Scale for Depression [GRID-HAMD] > 16)",
+      "reasonFuzzy": "Depression rating scale is a psychiatric condition criterion, not a typed NSCLC biomarker or lab."
+    },
+    {
+      "id": "NCT07216404-suicide",
+      "polarity": "inclusion",
+      "sourceText": "Be judged by study team clinicians to be at low risk for suicidality, as defined by a score of =< 2 on the Columbia- Suicide Severity rating scale (C-SSRS) ideation subscale, 0 on the behavior subscale, and by overall clinical judgment",
+      "reasonFuzzy": "Clinical judgment and C-SSRS thresholds are subjective psychiatric checks."
+    },
+    {
+      "id": "NCT07216404-hallucinogen",
+      "polarity": "inclusion",
+      "sourceText": "Have limited lifetime use of hallucinogens (the following criteria are preferred: no use in the past 5 years; total hallucinogen use less than 10 times)",
+      "reasonFuzzy": "Hallucinogen history is not a typed prior therapy or medical exclusion kind."
+    },
+    {
+      "id": "NCT07216404-pregnant",
+      "polarity": "exclusion",
+      "sourceText": "Participants who are pregnant (as indicated by a positive urine pregnancy test assessed at intake and before each drug session) or nursing; participants who are of child-bearing potential and sexually active who are not practicing a highly effective means of birth control",
+      "reasonFuzzy": "Pregnancy and contraception rules are standard administrative/safety exclusions."
+    },
+    {
+      "id": "NCT07216404-cardio",
+      "polarity": "exclusion",
+      "sourceText": "Cardiovascular conditions: Recent history of coronary artery disease or stroke, current uncontrolled angina, uncontrolled hypertension, a clinically significant electrocardiogram (ECG) abnormality as determined by a cardiologist and/or medical monitor (e.g., atrial fibrillation), prolonged corrected QT (QTc) interval (i.e., QTc > 450 msec), artificial heart valve, or transient ischemic attack (TIA) in the past year",
+      "reasonFuzzy": "Cardiovascular and QTc interval exclusions involve clinical judgment or complex history criteria."
+    },
+    {
+      "id": "NCT07216404-bp",
+      "polarity": "exclusion",
+      "sourceText": "Systolic blood pressure (SBP) > 139 mm HG; diastolic blood pressure (DBP) > 89 mm HG; heart rate (HR) > 90 bpm (mean values of the four or more assessments will not exceed 139 mm Hg systolic, 89 mm Hg diastolic, and/or 90 beats per minute)",
+      "reasonFuzzy": "Blood pressure and heart rate averages across multiple assessments are not single typed lab checks."
+    },
+    {
+      "id": "NCT07216404-diabetes",
+      "polarity": "exclusion",
+      "sourceText": "Insulin-dependent diabetes",
+      "reasonFuzzy": "Diabetes status is not a supported typed check kind."
+    },
+    {
+      "id": "NCT07216404-cns",
+      "polarity": "exclusion",
+      "sourceText": "Significant central nervous system (CNS) pathology. Some examples include: Unstable primary or secondary (e.g., metastatic) cerebral neoplasm. Stable is defined as treatment within prior 4 weeks or no immediate plans for treatment.",
+      "reasonFuzzy": "Complex CNS pathology and stability definitions do not match a clean typed brain_mets rule."
+    },
+    {
+      "id": "NCT07216404-investigator",
+      "polarity": "exclusion",
+      "sourceText": "In the investigator's opinion, abnormal and clinically significant results on the physical examination, vital signs, ECG, or laboratory tests at screening may constitute a risk for an individual exposed to psilocybin.",
+      "reasonFuzzy": "Investigator opinion-based exclusions are subjective."
+    },
+    {
+      "id": "NCT07216404-acute",
+      "polarity": "exclusion",
+      "sourceText": "Any acute condition that would, in the Investigator's judgment, place the subject at significant risk due to safety concerns or compliance with clinical study procedures",
+      "reasonFuzzy": "Investigator judgment of acute risk is a subjective exclusion."
+    },
+    {
+      "id": "NCT07216404-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Under active treatment of an investigational agent in a clinical trial",
+      "reasonFuzzy": "Concurrent investigational agent exclusion is not a typed prior_therapy rule."
+    },
+    {
+      "id": "NCT07216404-psychoactive",
+      "polarity": "exclusion",
+      "sourceText": "In the judgement of the clinician, patients currently taking psychoactive medication on a regular (e.g., daily) basis (e.g., cannabis, opiates, Ritalin), other than a daily selective serotonin reuptake inhibitors (SSRI), serotonin-norepinephrine reuptake inhibitors (SNRI), or bupropion (< 300 mg daily)",
+      "reasonFuzzy": "Clinician judgment on psychoactive medication use is subjective."
+    },
+    {
+      "id": "NCT07216404-substance",
+      "polarity": "exclusion",
+      "sourceText": "In the judgement of the clinician, patients who self-report or urine test positive for psychoactive medications (e.g., illicit opiates, amphetamines, cocaine) may be excluded",
+      "reasonFuzzy": "Clinician judgment on substance screening is subjective."
+    },
+    {
+      "id": "NCT07216404-psychiatric",
+      "polarity": "exclusion",
+      "sourceText": "Current or past history of meeting Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5) criteria for schizophrenia spectrum or other psychotic disorders, or bipolar I or II disorder",
+      "reasonFuzzy": "DSM-5 psychiatric history exclusions are outside the scope of typed NSCLC checks."
+    },
+    {
+      "id": "NCT07216404-ast",
+      "polarity": "exclusion",
+      "sourceText": "liver function tests three times the upper limit of normal",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07216404-alt",
+      "polarity": "exclusion",
+      "sourceText": "liver function tests three times the upper limit of normal",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07216404-creatinine",
+      "polarity": "exclusion",
+      "sourceText": "creatine two times above the normal range",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07216404-platelets",
+      "polarity": "exclusion",
+      "sourceText": "This includes platelets below 100,000 platelets per cubic millimeter of blood",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07216404-hemoglobin",
+      "polarity": "exclusion",
+      "sourceText": "low hemoglobin (below 10 g/L)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 3,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "ast_max",
+          "polarity": "exclusion",
+          "value": "n:3"
+        },
+        {
+          "side": "b-only",
+          "kind": "alt_max",
+          "polarity": "exclusion",
+          "value": "n:3"
+        },
+        {
+          "side": "b-only",
+          "kind": "creatinine_max",
+          "polarity": "exclusion",
+          "value": "n:2"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "platelets_min",
+          "polarity": "exclusion",
+          "value": "n:100000"
+        },
+        {
+          "kind": "hemoglobin_min",
+          "polarity": "exclusion",
+          "value": "n:10"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 19,
+    "attempts": 1,
+    "ms": 6154
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 16,
+    "attempts": 1,
+    "ms": 5440
+  },
+  "ms": 19572,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07216404",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07216404-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Over the age of 18",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07216404-platelets",
+        "kind": "platelets_min",
+        "polarity": "exclusion",
+        "sourceText": "This includes platelets below 100,000 platelets per cubic millimeter of blood",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT07216404-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "exclusion",
+        "sourceText": "low hemoglobin (below 10 g/L)",
+        "numberValue": 10
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07216404-karnofsky",
+        "polarity": "inclusion",
+        "sourceText": "Have a Karnofsky performance status >= 60",
+        "reasonFuzzy": "Karnofsky performance status is not one of the allowed typed performance scales (which is restricted to ECOG)."
+      },
+      {
+        "id": "NCT07216404-depression",
+        "polarity": "inclusion",
+        "sourceText": "Moderate to severe symptoms of depression (GRID Hamilton Rating Scale for Depression [GRID-HAMD] > 16)",
+        "reasonFuzzy": "Depression rating scale is specific to this psychiatric trial and not a standard oncology typed check."
+      },
+      {
+        "id": "NCT07216404-suicidality",
+        "polarity": "inclusion",
+        "sourceText": "Be judged by study team clinicians to be at low risk for suicidality, as defined by a score of =< 2 on the Columbia- Suicide Severity rating scale (C-SSRS) ideation subscale, 0 on the behavior subscale, and by overall clinical judgment",
+        "reasonFuzzy": "Suicidality assessment involves clinical judgment and specific psychiatric rating scales."
+      },
+      {
+        "id": "NCT07216404-hallucinogens",
+        "polarity": "inclusion",
+        "sourceText": "Have limited lifetime use of hallucinogens (the following criteria are preferred: no use in the past 5 years; total hallucinogen use less than 10 times)",
+        "reasonFuzzy": "Hallucinogen use history is a trial-specific psychiatric criterion."
+      },
+      {
+        "id": "NCT07216404-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Participants who are pregnant (as indicated by a positive urine pregnancy test assessed at intake and before each drug session) or nursing; participants who are of child-bearing potential and sexually active who are not practicing a highly effective means of birth control",
+        "reasonFuzzy": "Pregnancy and contraception requirements are standard exclusions not mapped to typed checks."
+      },
+      {
+        "id": "NCT07216404-cardiovascular",
+        "polarity": "exclusion",
+        "sourceText": "Cardiovascular conditions: Recent history of coronary artery disease or stroke, current uncontrolled angina, uncontrolled hypertension, a clinically significant electrocardiogram (ECG) abnormality as determined by a cardiologist and/or medical monitor (e.g., atrial fibrillation), prolonged corrected QT (QTc) interval (i.e., QTc > 450 msec), artificial heart valve, or transient ischemic attack (TIA) in the past year",
+        "reasonFuzzy": "Cardiovascular exclusions encompass multiple complex clinical conditions and judgment-based ECG assessments."
+      },
+      {
+        "id": "NCT07216404-bp-hr",
+        "polarity": "exclusion",
+        "sourceText": "Systolic blood pressure (SBP) > 139 mm HG; diastolic blood pressure (DBP) > 89 mm HG; heart rate (HR) > 90 bpm (mean values of the four or more assessments will not exceed 139 mm Hg systolic, 89 mm Hg diastolic, and/or 90 beats per minute)",
+        "reasonFuzzy": "Blood pressure and heart rate limits based on multi-assessment means are not covered by the allowed typed lab or clinical checks."
+      },
+      {
+        "id": "NCT07216404-diabetes",
+        "polarity": "exclusion",
+        "sourceText": "Insulin-dependent diabetes; Non-insulin dependent diabetes if recent history of symptomatic hypoglycemia",
+        "reasonFuzzy": "Diabetes conditions and history of symptomatic hypoglycemia are not typed criteria."
+      },
+      {
+        "id": "NCT07216404-cns",
+        "polarity": "exclusion",
+        "sourceText": "Significant central nervous system (CNS) pathology. Some examples include: Unstable primary or secondary (e.g., metastatic) cerebral neoplasm. Stable is defined as treatment within prior 4 weeks or no immediate plans for treatment., Unstable history of seizures, Cerebral aneurysm - unstable with plans for intervention or close monitoring, Clinical diagnosis of dementia, Clinical diagnosis of delirium",
+        "reasonFuzzy": "CNS pathology and stability definitions involve complex clinical determinations."
+      },
+      {
+        "id": "NCT07216404-investigator-labs",
+        "polarity": "exclusion",
+        "sourceText": "In the investigator's opinion, abnormal and clinically significant results on the physical examination, vital signs, ECG, or laboratory tests at screening may constitute a risk for an individual exposed to psilocybin. This includes platelets below 100,000 platelets per cubic millimeter of blood, liver function tests three times the upper limit of normal, and creatine two times above the normal range. This also includes clinically significant abnormal electrolytes or low hemoglobin (below 10 g/L)",
+        "reasonFuzzy": "Liver function tests and creatinine limits are tied to investigator opinion and multiple combined parameters, though specific plate/hemoglobin thresholds were extracted."
+      },
+      {
+        "id": "NCT07216404-acute-condition",
+        "polarity": "exclusion",
+        "sourceText": "Any acute condition that would, in the Investigator's judgment, place the subject at significant risk due to safety concerns or compliance with clinical study procedures",
+        "reasonFuzzy": "Investigator judgment for acute conditions is inherently subjective."
+      },
+      {
+        "id": "NCT07216404-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Under active treatment of an investigational agent in a clinical trial",
+        "reasonFuzzy": "Concurrent investigational agent use is not a typed prior therapy check."
+      },
+      {
+        "id": "NCT07216404-psychoactive",
+        "polarity": "exclusion",
+        "sourceText": "In the judgement of the clinician, patients currently taking psychoactive medication on a regular (e.g., daily) basis (e.g., cannabis, opiates, Ritalin), other than a daily selective serotonin reuptake inhibitors (SSRI), serotonin-norepinephrine reuptake inhibitors (SNRI), or bupropion (< 300 mg daily)",
+        "reasonFuzzy": "Psychoactive medication exclusions involve clinician judgment and complex class exceptions."
+      },
+      {
+        "id": "NCT07216404-substance",
+        "polarity": "exclusion",
+        "sourceText": "In the judgement of the clinician, patients who self-report or urine test positive for psychoactive medications (e.g., illicit opiates, amphetamines, cocaine) may be excluded",
+        "reasonFuzzy": "Urine drug screening and self-reporting exclusions are clinician-dependent."
+      },
+      {
+        "id": "NCT07216404-psychiatric",
+        "polarity": "exclusion",
+        "sourceText": "Current or past history of meeting Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5) criteria for schizophrenia spectrum or other psychotic disorders, or bipolar I or II disorder",
+        "reasonFuzzy": "Psychiatric history based on DSM-5 criteria is specialized and not a standard typed check."
+      },
+      {
+        "id": "NCT07216404-substance-use",
+        "polarity": "exclusion",
+        "sourceText": "Current or history within one year of meeting DSM-5 criteria for a moderate or severe alcohol or other drug use disorder (excluding caffeine and tobacco)",
+        "reasonFuzzy": "Substance use disorder history is a psychiatric exclusion."
+      },
+      {
+        "id": "NCT07216404-family-history",
+        "polarity": "exclusion",
+        "sourceText": "Have a first or second-degree relative with schizophrenia spectrum or other psychotic disorders or bipolar I or II disorder",
+        "reasonFuzzy": "Family psychiatric history is not a typed eligibility criterion."
+      },
+      {
+        "id": "NCT07216404-rapport",
+        "polarity": "exclusion",
+        "sourceText": "Has a psychiatric condition that precludes the establishment of therapeutic rapport, as evidenced by long-term patterns of unstable relationships, a history of significant stress-related paranoia, and identity disturbances",
+        "reasonFuzzy": "Subjective psychiatric assessment of therapeutic rapport."
+      },
+      {
+        "id": "NCT07216404-suicide-attempt",
+        "polarity": "exclusion",
+        "sourceText": "History of a medically significant suicide attempt as determined by the study team and principal investigator (PI)",
+        "reasonFuzzy": "Suicide attempt history is evaluated via investigator judgment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07216404",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07216404-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Over the age of 18",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07216404-platelets",
+        "kind": "platelets_min",
+        "polarity": "exclusion",
+        "sourceText": "This includes platelets below 100,000 platelets per cubic millimeter of blood",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT07216404-ast",
+        "kind": "ast_max",
+        "polarity": "exclusion",
+        "sourceText": "liver function tests three times the upper limit of normal",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT07216404-alt",
+        "kind": "alt_max",
+        "polarity": "exclusion",
+        "sourceText": "liver function tests three times the upper limit of normal",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT07216404-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "exclusion",
+        "sourceText": "creatine two times above the normal range",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07216404-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "exclusion",
+        "sourceText": "low hemoglobin (below 10 g/L)",
+        "numberValue": 10
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07216404-nsclc",
+        "polarity": "inclusion",
+        "sourceText": "Individuals diagnosed with NSCLC, confirmed by pathology report",
+        "reasonFuzzy": "Pathology confirmation of NSCLC without an explicit stage list; remains in scope for stage III/IV NSCLC."
+      },
+      {
+        "id": "NCT07216404-karnofsky",
+        "polarity": "inclusion",
+        "sourceText": "Have a Karnofsky performance status >= 60",
+        "reasonFuzzy": "Karnofsky performance status is not a typed ecog_max check."
+      },
+      {
+        "id": "NCT07216404-depress",
+        "polarity": "inclusion",
+        "sourceText": "Moderate to severe symptoms of depression (GRID Hamilton Rating Scale for Depression [GRID-HAMD] > 16)",
+        "reasonFuzzy": "Depression rating scale is a psychiatric condition criterion, not a typed NSCLC biomarker or lab."
+      },
+      {
+        "id": "NCT07216404-suicide",
+        "polarity": "inclusion",
+        "sourceText": "Be judged by study team clinicians to be at low risk for suicidality, as defined by a score of =< 2 on the Columbia- Suicide Severity rating scale (C-SSRS) ideation subscale, 0 on the behavior subscale, and by overall clinical judgment",
+        "reasonFuzzy": "Clinical judgment and C-SSRS thresholds are subjective psychiatric checks."
+      },
+      {
+        "id": "NCT07216404-hallucinogen",
+        "polarity": "inclusion",
+        "sourceText": "Have limited lifetime use of hallucinogens (the following criteria are preferred: no use in the past 5 years; total hallucinogen use less than 10 times)",
+        "reasonFuzzy": "Hallucinogen history is not a typed prior therapy or medical exclusion kind."
+      },
+      {
+        "id": "NCT07216404-pregnant",
+        "polarity": "exclusion",
+        "sourceText": "Participants who are pregnant (as indicated by a positive urine pregnancy test assessed at intake and before each drug session) or nursing; participants who are of child-bearing potential and sexually active who are not practicing a highly effective means of birth control",
+        "reasonFuzzy": "Pregnancy and contraception rules are standard administrative/safety exclusions."
+      },
+      {
+        "id": "NCT07216404-cardio",
+        "polarity": "exclusion",
+        "sourceText": "Cardiovascular conditions: Recent history of coronary artery disease or stroke, current uncontrolled angina, uncontrolled hypertension, a clinically significant electrocardiogram (ECG) abnormality as determined by a cardiologist and/or medical monitor (e.g., atrial fibrillation), prolonged corrected QT (QTc) interval (i.e., QTc > 450 msec), artificial heart valve, or transient ischemic attack (TIA) in the past year",
+        "reasonFuzzy": "Cardiovascular and QTc interval exclusions involve clinical judgment or complex history criteria."
+      },
+      {
+        "id": "NCT07216404-bp",
+        "polarity": "exclusion",
+        "sourceText": "Systolic blood pressure (SBP) > 139 mm HG; diastolic blood pressure (DBP) > 89 mm HG; heart rate (HR) > 90 bpm (mean values of the four or more assessments will not exceed 139 mm Hg systolic, 89 mm Hg diastolic, and/or 90 beats per minute)",
+        "reasonFuzzy": "Blood pressure and heart rate averages across multiple assessments are not single typed lab checks."
+      },
+      {
+        "id": "NCT07216404-diabetes",
+        "polarity": "exclusion",
+        "sourceText": "Insulin-dependent diabetes",
+        "reasonFuzzy": "Diabetes status is not a supported typed check kind."
+      },
+      {
+        "id": "NCT07216404-cns",
+        "polarity": "exclusion",
+        "sourceText": "Significant central nervous system (CNS) pathology. Some examples include: Unstable primary or secondary (e.g., metastatic) cerebral neoplasm. Stable is defined as treatment within prior 4 weeks or no immediate plans for treatment.",
+        "reasonFuzzy": "Complex CNS pathology and stability definitions do not match a clean typed brain_mets rule."
+      },
+      {
+        "id": "NCT07216404-investigator",
+        "polarity": "exclusion",
+        "sourceText": "In the investigator's opinion, abnormal and clinically significant results on the physical examination, vital signs, ECG, or laboratory tests at screening may constitute a risk for an individual exposed to psilocybin.",
+        "reasonFuzzy": "Investigator opinion-based exclusions are subjective."
+      },
+      {
+        "id": "NCT07216404-acute",
+        "polarity": "exclusion",
+        "sourceText": "Any acute condition that would, in the Investigator's judgment, place the subject at significant risk due to safety concerns or compliance with clinical study procedures",
+        "reasonFuzzy": "Investigator judgment of acute risk is a subjective exclusion."
+      },
+      {
+        "id": "NCT07216404-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Under active treatment of an investigational agent in a clinical trial",
+        "reasonFuzzy": "Concurrent investigational agent exclusion is not a typed prior_therapy rule."
+      },
+      {
+        "id": "NCT07216404-psychoactive",
+        "polarity": "exclusion",
+        "sourceText": "In the judgement of the clinician, patients currently taking psychoactive medication on a regular (e.g., daily) basis (e.g., cannabis, opiates, Ritalin), other than a daily selective serotonin reuptake inhibitors (SSRI), serotonin-norepinephrine reuptake inhibitors (SNRI), or bupropion (< 300 mg daily)",
+        "reasonFuzzy": "Clinician judgment on psychoactive medication use is subjective."
+      },
+      {
+        "id": "NCT07216404-substance",
+        "polarity": "exclusion",
+        "sourceText": "In the judgement of the clinician, patients who self-report or urine test positive for psychoactive medications (e.g., illicit opiates, amphetamines, cocaine) may be excluded",
+        "reasonFuzzy": "Clinician judgment on substance screening is subjective."
+      },
+      {
+        "id": "NCT07216404-psychiatric",
+        "polarity": "exclusion",
+        "sourceText": "Current or past history of meeting Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5) criteria for schizophrenia spectrum or other psychotic disorders, or bipolar I or II disorder",
+        "reasonFuzzy": "DSM-5 psychiatric history exclusions are outside the scope of typed NSCLC checks."
+      }
+    ]
+  }
+}

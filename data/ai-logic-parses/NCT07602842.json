@@ -1,0 +1,203 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07602842",
+  "briefTitle": "A Study of IDP-001 in Advanced or Metastatic Solid Tumors",
+  "parsedAt": "2026-11-12T11:58:06.354Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07602842-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07602842-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically-confirmed advanced, metastatic, or recurrent solid tumors that is not amenable to surgical resection or other approved therapeutic options",
+      "reasonFuzzy": "The trial is a basket study for solid tumors (including non-squamous non-small cell lung cancer) without explicit stage numbers or specific NSCLC histologic subtypes listed in the criteria."
+    },
+    {
+      "id": "NCT07602842-prior-treatments",
+      "polarity": "inclusion",
+      "sourceText": "Satisfy requirements for prior treatments per tumor type as outlined in the protocol",
+      "reasonFuzzy": "Prior treatment rules vary by tumor type and are not expressed as a single typed prior therapy check."
+    },
+    {
+      "id": "NCT07602842-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07602842-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Participant willing to provide tumor biopsies",
+      "reasonFuzzy": "Willingness to undergo a biopsy procedure is a subjective requirement, not a typed kind."
+    },
+    {
+      "id": "NCT07602842-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy greater than 12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07602842-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically-confirmed advanced, metastatic, or recurrent solid tumors that is not amenable to surgical resection or other approved therapeutic options",
+      "reasonFuzzy": "The trial is a basket study for solid tumors, including non-squamous non-small cell lung cancer, but does not state explicit stage codes or specific NSCLC histological inclusions cleanly."
+    },
+    {
+      "id": "NCT07602842-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07602842-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Participant willing to provide tumor biopsies",
+      "reasonFuzzy": "Willingness to undergo a procedure/biopsy is a subjective requirement, not a typed check."
+    },
+    {
+      "id": "NCT07602842-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy greater than 12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 7801
+  },
+  "runB": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 7598
+  },
+  "ms": 23379,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07602842",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07602842-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07602842-histology",
+        "polarity": "inclusion",
+        "sourceText": "Histologically-confirmed advanced, metastatic, or recurrent solid tumors that is not amenable to surgical resection or other approved therapeutic options",
+        "reasonFuzzy": "The trial is a basket study for solid tumors (including non-squamous non-small cell lung cancer) without explicit stage numbers or specific NSCLC histologic subtypes listed in the criteria."
+      },
+      {
+        "id": "NCT07602842-prior-treatments",
+        "polarity": "inclusion",
+        "sourceText": "Satisfy requirements for prior treatments per tumor type as outlined in the protocol",
+        "reasonFuzzy": "Prior treatment rules vary by tumor type and are not expressed as a single typed prior therapy check."
+      },
+      {
+        "id": "NCT07602842-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07602842-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Participant willing to provide tumor biopsies",
+        "reasonFuzzy": "Willingness to undergo a biopsy procedure is a subjective requirement, not a typed kind."
+      },
+      {
+        "id": "NCT07602842-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy greater than 12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07602842",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07602842-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07602842-histology",
+        "polarity": "inclusion",
+        "sourceText": "Histologically-confirmed advanced, metastatic, or recurrent solid tumors that is not amenable to surgical resection or other approved therapeutic options",
+        "reasonFuzzy": "The trial is a basket study for solid tumors, including non-squamous non-small cell lung cancer, but does not state explicit stage codes or specific NSCLC histological inclusions cleanly."
+      },
+      {
+        "id": "NCT07602842-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07602842-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Participant willing to provide tumor biopsies",
+        "reasonFuzzy": "Willingness to undergo a procedure/biopsy is a subjective requirement, not a typed check."
+      },
+      {
+        "id": "NCT07602842-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy greater than 12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      }
+    ]
+  }
+}

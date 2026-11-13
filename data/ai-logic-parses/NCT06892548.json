@@ -1,0 +1,288 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06892548",
+  "briefTitle": "A Clinical Study to Investigate the Efficacy and Safety of an Investigational Combination Therapy With BNT324 and BNT327 in Patients With Advanced Lung Cancer",
+  "parsedAt": "2026-11-12T10:39:26.250Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06892548-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Aged ≥18 years at the time of giving informed consent.",
+      "numberValue": 18,
+      "evidence_quote": "Aged ≥18 years at the time of giving informed consent.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06892548-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Have an Eastern Cooperative Oncology Group performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Have an Eastern Cooperative Oncology Group performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06892548-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histological or cytological confirmed unresectable advanced/metastatic lung cancer.",
+      "reasonFuzzy": "Advanced or metastatic lung cancer is in scope, but the record does not provide a numbered stage list, so stage_in is omitted."
+    },
+    {
+      "id": "NCT06892548-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease defined by RECIST version 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06892548-life",
+      "polarity": "inclusion",
+      "sourceText": "Have a life expectancy of ≥12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06892548-prior-adc",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with ADC with topoisomerase inhibitor (e.g., datopotamab deruxtecan, trastuzumab deruxtecan). Note: This exclusion applies to participants in the first-line/treatment-naïve cohorts in the advanced/metastatic setting. Prior treatment with ADC with topoisomerase inhibitor payload is only allowed for participants in the second-line plus cohorts in the advanced/metastatic setting.",
+      "reasonFuzzy": "Prior therapy exclusion applies conditionally by cohort (first-line versus later lines), making it too complex for a standard typed check."
+    },
+    {
+      "id": "NCT06892548-locoregional",
+      "polarity": "exclusion",
+      "sourceText": "Is a candidate to locoregional treatment (including surgical resection, stereotactic radiotherapy or tumor ablation) with potential to induce complete or near complete response and prolonged tumor control (sometimes described as \"radical\" intent), per investigator's assessment.",
+      "reasonFuzzy": "Investigator assessment of candidacy for locoregional treatment is a subjective judgment."
+    },
+    {
+      "id": "NCT06892548-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Has a history of significant hematologic toxicity to prior lines of therapy, as assessed by investigator, e.g., Grade 4 febrile neutropenia or recurrent/persistent Grade 3 to 4 neutropenia.",
+      "reasonFuzzy": "Prior toxicity history is investigator-assessed and subjectively defined."
+    },
+    {
+      "id": "NCT06892548-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histological or cytological confirmed unresectable advanced/metastatic lung cancer.",
+      "reasonFuzzy": "The trial enrolls advanced or metastatic lung cancer and lists cohorts for NSCLC and SCLC without specific stage lists, remaining in scope as advanced/metastatic disease."
+    },
+    {
+      "id": "NCT06892548-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease defined by RECIST version 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06892548-life",
+      "polarity": "inclusion",
+      "sourceText": "Have a life expectancy of ≥12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06892548-prior-adc",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with ADC with topoisomerase inhibitor (e.g., datopotamab deruxtecan, trastuzumab deruxtecan). Note: This exclusion applies to participants in the first-line/treatment-naïve cohorts in the advanced/metastatic setting. Prior treatment with ADC with topoisomerase inhibitor payload is only allowed for participants in the second-line plus cohorts in the advanced/metastatic setting.",
+      "reasonFuzzy": "Prior therapy exclusion depends conditionally on cohort lines of therapy and is not a simple unconditional prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT06892548-locoregional",
+      "polarity": "exclusion",
+      "sourceText": "Is a candidate to locoregional treatment (including surgical resection, stereotactic radiotherapy or tumor ablation) with potential to induce complete or near complete response and prolonged tumor control (sometimes described as \"radical\" intent), per investigator's assessment.",
+      "reasonFuzzy": "Investigator assessment of candidacy for locoregional treatment is subjective."
+    },
+    {
+      "id": "NCT06892548-hematologic",
+      "polarity": "exclusion",
+      "sourceText": "Has a history of significant hematologic toxicity to prior lines of therapy, as assessed by investigator, e.g., Grade 4 febrile neutropenia or recurrent/persistent Grade 3 to 4 neutropenia.",
+      "reasonFuzzy": "Assessment of significant prior hematologic toxicity by the investigator is subjective and cohort/history-dependent."
+    },
+    {
+      "id": "NCT06892548-prior-b7h3",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with B7-H3 targeted therapy.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:b7-h3 targeted therapy"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 3377
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 4470
+  },
+  "ms": 15841,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06892548",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06892548-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Aged ≥18 years at the time of giving informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06892548-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an Eastern Cooperative Oncology Group performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06892548-prior-b7h3",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with B7-H3 targeted therapy.",
+        "stringValue": "B7-H3 targeted therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06892548-stage",
+        "polarity": "inclusion",
+        "sourceText": "Histological or cytological confirmed unresectable advanced/metastatic lung cancer.",
+        "reasonFuzzy": "Advanced or metastatic lung cancer is in scope, but the record does not provide a numbered stage list, so stage_in is omitted."
+      },
+      {
+        "id": "NCT06892548-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease defined by RECIST version 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06892548-life",
+        "polarity": "inclusion",
+        "sourceText": "Have a life expectancy of ≥12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06892548-prior-adc",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with ADC with topoisomerase inhibitor (e.g., datopotamab deruxtecan, trastuzumab deruxtecan). Note: This exclusion applies to participants in the first-line/treatment-naïve cohorts in the advanced/metastatic setting. Prior treatment with ADC with topoisomerase inhibitor payload is only allowed for participants in the second-line plus cohorts in the advanced/metastatic setting.",
+        "reasonFuzzy": "Prior therapy exclusion applies conditionally by cohort (first-line versus later lines), making it too complex for a standard typed check."
+      },
+      {
+        "id": "NCT06892548-locoregional",
+        "polarity": "exclusion",
+        "sourceText": "Is a candidate to locoregional treatment (including surgical resection, stereotactic radiotherapy or tumor ablation) with potential to induce complete or near complete response and prolonged tumor control (sometimes described as \"radical\" intent), per investigator's assessment.",
+        "reasonFuzzy": "Investigator assessment of candidacy for locoregional treatment is a subjective judgment."
+      },
+      {
+        "id": "NCT06892548-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Has a history of significant hematologic toxicity to prior lines of therapy, as assessed by investigator, e.g., Grade 4 febrile neutropenia or recurrent/persistent Grade 3 to 4 neutropenia.",
+        "reasonFuzzy": "Prior toxicity history is investigator-assessed and subjectively defined."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06892548",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06892548-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Aged ≥18 years at the time of giving informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06892548-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an Eastern Cooperative Oncology Group performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06892548-prior-b7h3",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with B7-H3 targeted therapy.",
+        "stringValue": "B7-H3 targeted therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06892548-stage",
+        "polarity": "inclusion",
+        "sourceText": "Histological or cytological confirmed unresectable advanced/metastatic lung cancer.",
+        "reasonFuzzy": "The trial enrolls advanced or metastatic lung cancer and lists cohorts for NSCLC and SCLC without specific stage lists, remaining in scope as advanced/metastatic disease."
+      },
+      {
+        "id": "NCT06892548-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease defined by RECIST version 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06892548-life",
+        "polarity": "inclusion",
+        "sourceText": "Have a life expectancy of ≥12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06892548-prior-adc",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with ADC with topoisomerase inhibitor (e.g., datopotamab deruxtecan, trastuzumab deruxtecan). Note: This exclusion applies to participants in the first-line/treatment-naïve cohorts in the advanced/metastatic setting. Prior treatment with ADC with topoisomerase inhibitor payload is only allowed for participants in the second-line plus cohorts in the advanced/metastatic setting.",
+        "reasonFuzzy": "Prior therapy exclusion depends conditionally on cohort lines of therapy and is not a simple unconditional prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT06892548-locoregional",
+        "polarity": "exclusion",
+        "sourceText": "Is a candidate to locoregional treatment (including surgical resection, stereotactic radiotherapy or tumor ablation) with potential to induce complete or near complete response and prolonged tumor control (sometimes described as \"radical\" intent), per investigator's assessment.",
+        "reasonFuzzy": "Investigator assessment of candidacy for locoregional treatment is subjective."
+      },
+      {
+        "id": "NCT06892548-hematologic",
+        "polarity": "exclusion",
+        "sourceText": "Has a history of significant hematologic toxicity to prior lines of therapy, as assessed by investigator, e.g., Grade 4 febrile neutropenia or recurrent/persistent Grade 3 to 4 neutropenia.",
+        "reasonFuzzy": "Assessment of significant prior hematologic toxicity by the investigator is subjective and cohort/history-dependent."
+      }
+    ]
+  }
+}

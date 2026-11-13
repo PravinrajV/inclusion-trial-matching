@@ -1,0 +1,386 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06899126",
+  "briefTitle": "Study of Trastuzumab Deruxtecan, Pembrolizumab, and Platinum-based Chemotherapy in First-line HER2 Overexpressing Non-small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T10:39:45.930Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06899126-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Adults ≥18 years of age on the day of signing the ICF.",
+      "numberValue": 18,
+      "evidence_quote": "Adults ≥18 years of age on the day of signing the ICF.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06899126-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Has Stage IV NSCLC disease or Stage IIIB or IIIC disease but is not a candidate for surgical resection or definitive chemoradiation at the time of randomization (based on the American Joint Committee on Cancer, Eighth Edition).",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Has Stage IV NSCLC disease or Stage IIIB or IIIC disease but is not a candidate for surgical resection or definitive chemoradiation at the time of randomization (based on the American Joint Committee on Cancer, Eighth Edition).",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06899126-agas",
+      "polarity": "inclusion",
+      "sourceText": "Has no known AGAs (based on the local test results obtained using validated or approved tests as required per local regulation) that have locally available therapies targeting their AGAs in the first-line advanced/metastatic setting.",
+      "reasonFuzzy": "Lack of targetable AGAs is not a single standard biomarker status check."
+    },
+    {
+      "id": "NCT06899126-her2",
+      "polarity": "inclusion",
+      "sourceText": "Has no known HER2 mutation based on existing test results (if approved or validated local test is available).",
+      "reasonFuzzy": "There is no typed kind for HER2 variants."
+    },
+    {
+      "id": "NCT06899126-priorsystemic",
+      "polarity": "inclusion",
+      "sourceText": "Has not been treated with systemic anticancer therapy for advanced or metastatic non-squamous NSCLC. Participants who received adjuvant or neoadjuvant therapy other than those listed below... are eligible if the last dose of adjuvant/neoadjuvant therapy was given at least 6 months before...",
+      "reasonFuzzy": "Prior systemic therapy rules with specific exceptions for adjuvant/neoadjuvant therapies and washout intervals are too complex for a simple typed prior therapy check."
+    },
+    {
+      "id": "NCT06899126-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "A new biopsy is required if the participant's most recent archival tumor tissue sample cannot be supplied.",
+      "reasonFuzzy": "Willingness or requirement to undergo a biopsy is a procedure-based criterion, not a typed check."
+    },
+    {
+      "id": "NCT06899126-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Has a medical history of MI within 6 months before randomization/enrollment or symptomatic CHF (NYHA Class II to Class IV). Participants with troponin levels above the ULN at Screening... must be ruled out for MI.",
+      "reasonFuzzy": "Cardiac history and troponin screening rules involve clinical judgment and multiple conditions."
+    },
+    {
+      "id": "NCT06899126-qtc",
+      "polarity": "exclusion",
+      "sourceText": "Has a QTc prolongation to >480 ms based on the average of the Screening triplicate 12- lead ECG.",
+      "reasonFuzzy": "QTc prolongation is not one of the allowed typed checks."
+    },
+    {
+      "id": "NCT06899126-ild",
+      "polarity": "exclusion",
+      "sourceText": "Has a history of (non-infectious) ILD/pneumonitis that required steroids, has current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at Screening.",
+      "reasonFuzzy": "ILD and pneumonitis history with steroid requirements is not a standard typed check."
+    },
+    {
+      "id": "NCT06899126-pulmonary",
+      "polarity": "exclusion",
+      "sourceText": "Has clinically severe pulmonary compromise resulting from intercurrent, pulmonary illnesses including, but not limited to: Any underlying pulmonary disorder... Any auto immune, connective tissue, or inflammatory disorders...",
+      "reasonFuzzy": "Severe pulmonary compromise is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06899126-pneumonectomy",
+      "polarity": "exclusion",
+      "sourceText": "Had a prior complete pneumonectomy.",
+      "reasonFuzzy": "Prior pneumonectomy is a surgical history item, not an allowed typed check."
+    },
+    {
+      "id": "NCT06899126-aga",
+      "polarity": "inclusion",
+      "sourceText": "Has no known AGAs (based on the local test results obtained using validated or approved tests as required per local regulation) that have locally available therapies targeting their AGAs in the first-line advanced/metastatic setting.",
+      "reasonFuzzy": "AGA targetability and availability of local therapies are not a single typed biomarker check."
+    },
+    {
+      "id": "NCT06899126-her2",
+      "polarity": "inclusion",
+      "sourceText": "Has no known HER2 mutation based on existing test results (if approved or validated local test is available).",
+      "reasonFuzzy": "There is no typed kind for HER2 variants."
+    },
+    {
+      "id": "NCT06899126-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Has not been treated with systemic anticancer therapy for advanced or metastatic non-squamous NSCLC. Participants who received adjuvant or neoadjuvant therapy other than those listed below, including ICI (ie, anti-PD-1/PD-L1) or a platinum-based regimen, are eligible if the last dose of adjuvant/neoadjuvant therapy was given at least 6 months before the date of the first trial dose if their disease has progressed at least 6 months after the last dose date of adjuvant/neoadjuvant therapy.",
+      "reasonFuzzy": "Complex prior line and washout/adjuvant rules with specific exclusions cannot be expressed as simple typed prior therapy checks."
+    },
+    {
+      "id": "NCT06899126-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "A new biopsy is required if the participant's most recent archival tumor tissue sample cannot be supplied.",
+      "reasonFuzzy": "Willingness or requirement to undergo a biopsy is a subjective/procedure-based criterion."
+    },
+    {
+      "id": "NCT06899126-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Has a medical history of MI within 6 months before randomization/enrollment or symptomatic CHF (NYHA Class II to Class IV). Participants with troponin levels above the ULN at Screening (as defined by the manufacturer) and without any MI-related symptoms must be ruled out for MI.",
+      "reasonFuzzy": "Combines recent MI timeframe, NYHA class for CHF, and troponin evaluations which cannot be expressed as one typed check."
+    },
+    {
+      "id": "NCT06899126-qtc",
+      "polarity": "exclusion",
+      "sourceText": "Has a QTc prolongation to >480 ms based on the average of the Screening triplicate 12- lead ECG.",
+      "reasonFuzzy": "There is no typed kind for QTc prolongation."
+    },
+    {
+      "id": "NCT06899126-ild",
+      "polarity": "exclusion",
+      "sourceText": "Has a history of (non-infectious) ILD/pneumonitis that required steroids, has current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at Screening.",
+      "reasonFuzzy": "ILD history and imaging rules are not covered by any standard typed check."
+    },
+    {
+      "id": "NCT06899126-pulmonary",
+      "polarity": "exclusion",
+      "sourceText": "Has clinically severe pulmonary compromise resulting from intercurrent, pulmonary illnesses including, but not limited to: Any underlying pulmonary disorder (eg, pulmonary emboli within 3 months of the trial randomization, severe asthma, severe COPD, restrictive lung disease, pleural effusion). Any auto immune, connective tissue, or inflammatory disorders with potential pulmonary involvement (eg, rheumatoid arthritis, Sjogren's syndrome, sarcoidosis). Severe conditions are those defined as impacting daily activities and/or requiring use of supplemental oxygen.",
+      "reasonFuzzy": "Clinical severity, daily activity impact, and miscellaneous pulmonary disorders are judgment-based and cannot be mapped to a single typed check."
+    },
+    {
+      "id": "NCT06899126-pneumonectomy",
+      "polarity": "exclusion",
+      "sourceText": "Had a prior complete pneumonectomy.",
+      "reasonFuzzy": "Prior pneumonectomy is not a covered typed check kind."
+    },
+    {
+      "id": "NCT06899126-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically documented non-squamous locally advanced unresectable or metastatic NSCLC",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 3648
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 8023
+  },
+  "ms": 19660,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06899126",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06899126-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adults ≥18 years of age on the day of signing the ICF.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06899126-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically documented non-squamous locally advanced unresectable or metastatic NSCLC",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06899126-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Has Stage IV NSCLC disease or Stage IIIB or IIIC disease but is not a candidate for surgical resection or definitive chemoradiation at the time of randomization",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06899126-agas",
+        "polarity": "inclusion",
+        "sourceText": "Has no known AGAs (based on the local test results obtained using validated or approved tests as required per local regulation) that have locally available therapies targeting their AGAs in the first-line advanced/metastatic setting.",
+        "reasonFuzzy": "Lack of targetable AGAs is not a single standard biomarker status check."
+      },
+      {
+        "id": "NCT06899126-her2",
+        "polarity": "inclusion",
+        "sourceText": "Has no known HER2 mutation based on existing test results (if approved or validated local test is available).",
+        "reasonFuzzy": "There is no typed kind for HER2 variants."
+      },
+      {
+        "id": "NCT06899126-priorsystemic",
+        "polarity": "inclusion",
+        "sourceText": "Has not been treated with systemic anticancer therapy for advanced or metastatic non-squamous NSCLC. Participants who received adjuvant or neoadjuvant therapy other than those listed below... are eligible if the last dose of adjuvant/neoadjuvant therapy was given at least 6 months before...",
+        "reasonFuzzy": "Prior systemic therapy rules with specific exceptions for adjuvant/neoadjuvant therapies and washout intervals are too complex for a simple typed prior therapy check."
+      },
+      {
+        "id": "NCT06899126-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "A new biopsy is required if the participant's most recent archival tumor tissue sample cannot be supplied.",
+        "reasonFuzzy": "Willingness or requirement to undergo a biopsy is a procedure-based criterion, not a typed check."
+      },
+      {
+        "id": "NCT06899126-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Has a medical history of MI within 6 months before randomization/enrollment or symptomatic CHF (NYHA Class II to Class IV). Participants with troponin levels above the ULN at Screening... must be ruled out for MI.",
+        "reasonFuzzy": "Cardiac history and troponin screening rules involve clinical judgment and multiple conditions."
+      },
+      {
+        "id": "NCT06899126-qtc",
+        "polarity": "exclusion",
+        "sourceText": "Has a QTc prolongation to >480 ms based on the average of the Screening triplicate 12- lead ECG.",
+        "reasonFuzzy": "QTc prolongation is not one of the allowed typed checks."
+      },
+      {
+        "id": "NCT06899126-ild",
+        "polarity": "exclusion",
+        "sourceText": "Has a history of (non-infectious) ILD/pneumonitis that required steroids, has current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at Screening.",
+        "reasonFuzzy": "ILD and pneumonitis history with steroid requirements is not a standard typed check."
+      },
+      {
+        "id": "NCT06899126-pulmonary",
+        "polarity": "exclusion",
+        "sourceText": "Has clinically severe pulmonary compromise resulting from intercurrent, pulmonary illnesses including, but not limited to: Any underlying pulmonary disorder... Any auto immune, connective tissue, or inflammatory disorders...",
+        "reasonFuzzy": "Severe pulmonary compromise is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06899126-pneumonectomy",
+        "polarity": "exclusion",
+        "sourceText": "Had a prior complete pneumonectomy.",
+        "reasonFuzzy": "Prior pneumonectomy is a surgical history item, not an allowed typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06899126",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06899126-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adults ≥18 years of age on the day of signing the ICF.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06899126-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Has Stage IV NSCLC disease or Stage IIIB or IIIC disease but is not a candidate for surgical resection or definitive chemoradiation at the time of randomization (based on the American Joint Committee on Cancer, Eighth Edition).",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06899126-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically documented non-squamous locally advanced unresectable or metastatic NSCLC",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06899126-aga",
+        "polarity": "inclusion",
+        "sourceText": "Has no known AGAs (based on the local test results obtained using validated or approved tests as required per local regulation) that have locally available therapies targeting their AGAs in the first-line advanced/metastatic setting.",
+        "reasonFuzzy": "AGA targetability and availability of local therapies are not a single typed biomarker check."
+      },
+      {
+        "id": "NCT06899126-her2",
+        "polarity": "inclusion",
+        "sourceText": "Has no known HER2 mutation based on existing test results (if approved or validated local test is available).",
+        "reasonFuzzy": "There is no typed kind for HER2 variants."
+      },
+      {
+        "id": "NCT06899126-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Has not been treated with systemic anticancer therapy for advanced or metastatic non-squamous NSCLC. Participants who received adjuvant or neoadjuvant therapy other than those listed below, including ICI (ie, anti-PD-1/PD-L1) or a platinum-based regimen, are eligible if the last dose of adjuvant/neoadjuvant therapy was given at least 6 months before the date of the first trial dose if their disease has progressed at least 6 months after the last dose date of adjuvant/neoadjuvant therapy.",
+        "reasonFuzzy": "Complex prior line and washout/adjuvant rules with specific exclusions cannot be expressed as simple typed prior therapy checks."
+      },
+      {
+        "id": "NCT06899126-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "A new biopsy is required if the participant's most recent archival tumor tissue sample cannot be supplied.",
+        "reasonFuzzy": "Willingness or requirement to undergo a biopsy is a subjective/procedure-based criterion."
+      },
+      {
+        "id": "NCT06899126-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Has a medical history of MI within 6 months before randomization/enrollment or symptomatic CHF (NYHA Class II to Class IV). Participants with troponin levels above the ULN at Screening (as defined by the manufacturer) and without any MI-related symptoms must be ruled out for MI.",
+        "reasonFuzzy": "Combines recent MI timeframe, NYHA class for CHF, and troponin evaluations which cannot be expressed as one typed check."
+      },
+      {
+        "id": "NCT06899126-qtc",
+        "polarity": "exclusion",
+        "sourceText": "Has a QTc prolongation to >480 ms based on the average of the Screening triplicate 12- lead ECG.",
+        "reasonFuzzy": "There is no typed kind for QTc prolongation."
+      },
+      {
+        "id": "NCT06899126-ild",
+        "polarity": "exclusion",
+        "sourceText": "Has a history of (non-infectious) ILD/pneumonitis that required steroids, has current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at Screening.",
+        "reasonFuzzy": "ILD history and imaging rules are not covered by any standard typed check."
+      },
+      {
+        "id": "NCT06899126-pulmonary",
+        "polarity": "exclusion",
+        "sourceText": "Has clinically severe pulmonary compromise resulting from intercurrent, pulmonary illnesses including, but not limited to: Any underlying pulmonary disorder (eg, pulmonary emboli within 3 months of the trial randomization, severe asthma, severe COPD, restrictive lung disease, pleural effusion). Any auto immune, connective tissue, or inflammatory disorders with potential pulmonary involvement (eg, rheumatoid arthritis, Sjogren's syndrome, sarcoidosis). Severe conditions are those defined as impacting daily activities and/or requiring use of supplemental oxygen.",
+        "reasonFuzzy": "Clinical severity, daily activity impact, and miscellaneous pulmonary disorders are judgment-based and cannot be mapped to a single typed check."
+      },
+      {
+        "id": "NCT06899126-pneumonectomy",
+        "polarity": "exclusion",
+        "sourceText": "Had a prior complete pneumonectomy.",
+        "reasonFuzzy": "Prior pneumonectomy is not a covered typed check kind."
+      }
+    ]
+  }
+}

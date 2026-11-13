@@ -1,0 +1,134 @@
+1
+00:00:03,120 --> 00:00:08,379
+Trial eligibility is written for researchers,
+not for the visit you are about to walk into.
+
+2
+00:00:08,379 --> 00:00:16,866
+Inclusion keeps your chart on this computer and
+turns nearby public trial language into a short
+
+3
+00:00:16,986 --> 00:00:23,627
+On a computer that can run Chrome's on-device
+model, you can paste a synthetic clinic note and
+
+4
+00:00:23,827 --> 00:00:28,541
+This is Alex Rivera, a synthetic demo
+patient, not a real person.
+
+5
+00:00:28,541 --> 00:00:31,582
+Gemini Nano reads the note on this device.
+
+6
+00:00:31,582 --> 00:00:36,284
+The fact chips fill in, and an On this
+device badge stays on the fact sheet.
+
+7
+00:00:36,284 --> 00:00:39,802
+The status line says nothing is sent to a
+cloud model.
+
+8
+00:00:46,150 --> 00:00:48,507
+The Proof pill counted 0 chart bytes.
+
+9
+00:00:48,507 --> 00:00:54,045
+Public trial lookups do leave this computer, and
+they are kept separate from the chart.
+
+10
+00:00:58,150 --> 00:01:03,502
+Matching runs on this computer, against a
+cache of 277 nearby trials.
+
+11
+00:01:03,502 --> 00:01:08,657
+For Alex, this build finds nine strong
+matches, ranked by strength of evidence.
+
+12
+00:01:08,657 --> 00:01:15,193
+Strong means there is quoted evidence to take to
+clinic, not a decision that Alex belongs on the
+
+13
+00:01:15,313 --> 00:01:30,174
+The first card is NCT04486833, an EGFR-mutant
+study for patients who progressed on
+
+14
+00:01:30,374 --> 00:01:36,876
+Public trial text is parsed in the cloud, twice,
+through Firebase AI Logic, then checked.
+
+15
+00:01:37,150 --> 00:01:45,068
+The briefing quotes the trial's own words, and
+it names what the chart shows, including EGFR
+
+16
+00:01:45,068 --> 00:01:49,735
+These are the trial's sentences, not a
+verdict from the app.
+
+17
+00:01:50,150 --> 00:01:52,484
+It also leaves an honest open question.
+
+18
+00:01:52,484 --> 00:01:58,091
+Brain metastases are not checked automatically,
+and that still needs a conversation.
+
+19
+00:01:58,091 --> 00:02:03,757
+That is the point of the briefing: what to
+ask, not what to conclude.
+
+20
+00:02:08,150 --> 00:02:10,437
+Print the sheet and take it to the
+oncologist.
+
+21
+00:02:10,437 --> 00:02:16,172
+It lists quoted findings and questions,
+plus the source, ClinicalTrials.gov.
+
+22
+00:02:16,172 --> 00:02:19,249
+The conversation still belongs in the
+clinic.
+
+23
+00:02:23,801 --> 00:02:26,634
+For Sam, this build finds four strong
+matches.
+
+24
+00:02:26,634 --> 00:02:32,392
+His top card meets four of six key
+criteria, including the ALK driver.
+
+25
+00:02:33,300 --> 00:02:34,607
+Try the hosted demo.
+
+26
+00:02:34,607 --> 00:02:36,615
+Synthetic patients only.
+
+27
+00:02:36,615 --> 00:02:39,866
+Clinic-note reading needs Chrome's
+on-device model.
+
+28
+00:02:39,866 --> 00:02:41,800
+The rest works on any Chrome.
+

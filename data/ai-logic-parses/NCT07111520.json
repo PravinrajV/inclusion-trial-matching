@@ -1,0 +1,270 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07111520",
+  "briefTitle": "A Clinical Trial to Test if an Investigational Combination Therapy With BNT326 and BNT327 is Safe and Potentially Beneficial for People With Advanced Non-small Cell Lung Cancer (NSCLC)",
+  "parsedAt": "2026-11-12T10:45:50.946Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07111520-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Aged ≥18 years at the time of giving informed consent. Local laws will be followed if the age of consent is older.",
+      "numberValue": 18,
+      "evidence_quote": "Aged ≥18 years at the time of giving informed consent. Local laws will be followed if the age of consent is older.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07111520-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Have Eastern Cooperative Oncology Group performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Have Eastern Cooperative Oncology Group performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07111520-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease defined by RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07111520-cohorts",
+      "polarity": "inclusion",
+      "sourceText": "Cohort-specific inclusion criteria ...",
+      "reasonFuzzy": "Prior therapy and biomarker rules differ significantly across multiple study parts and cohorts, making them unsuitable for a single typed check."
+    },
+    {
+      "id": "NCT07111520-excl-her3",
+      "polarity": "exclusion",
+      "sourceText": "Had disease progression on or were intolerant to prior treatment with an agent targeting HER3 (including antibody, ADC, cell therapy, and other drugs) or with a topoisomerase I inhibitor payload (including topoisomerase I inhibitor-containing ADCs).",
+      "reasonFuzzy": "Prior therapy exclusion involves broad classes and exceptions per cohort, which cannot be captured by a simple typed check."
+    },
+    {
+      "id": "NCT07111520-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease defined by RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07111520-cohorts",
+      "polarity": "inclusion",
+      "sourceText": "Cohort-specific inclusion criteria...",
+      "reasonFuzzy": "Criteria vary extensively across multiple cohorts, including different prior lines and genomic alteration statuses, which cannot be modeled into single typed checks."
+    },
+    {
+      "id": "NCT07111520-exclusion-her3",
+      "polarity": "exclusion",
+      "sourceText": "Had disease progression on or were intolerant to prior treatment with an agent targeting HER3 (including antibody, ADC, cell therapy, and other drugs) or with a topoisomerase I inhibitor payload (including topoisomerase I inhibitor-containing ADCs).",
+      "reasonFuzzy": "Exclusion involves specific drug classes and payload types that do not map to simple typed prior therapy exclusions."
+    },
+    {
+      "id": "NCT07111520-brain",
+      "polarity": "exclusion",
+      "sourceText": "Have clinically active central nervous system metastases, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07111520-brain",
+      "polarity": "exclusion",
+      "sourceText": "Have clinically active central nervous system metastases, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07111520-histology",
+      "polarity": "inclusion",
+      "sourceText": "Have advanced (i.e., metastatic or locally recurrent where local therapy with curative intent is not possible) non-squamous or squamous NSCLC.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos,squamous"
+        }
+      ],
+      "normalizerTypedCount": 7
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2749
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3648
+  },
+  "ms": 14430,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07111520",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07111520-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Aged ≥18 years at the time of giving informed consent. Local laws will be followed if the age of consent is older.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07111520-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have Eastern Cooperative Oncology Group performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07111520-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Have advanced (i.e., metastatic or locally recurrent where local therapy with curative intent is not possible) non-squamous or squamous NSCLC.",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07111520-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Have clinically active central nervous system metastases, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07111520-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease defined by RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07111520-cohorts",
+        "polarity": "inclusion",
+        "sourceText": "Cohort-specific inclusion criteria ...",
+        "reasonFuzzy": "Prior therapy and biomarker rules differ significantly across multiple study parts and cohorts, making them unsuitable for a single typed check."
+      },
+      {
+        "id": "NCT07111520-excl-her3",
+        "polarity": "exclusion",
+        "sourceText": "Had disease progression on or were intolerant to prior treatment with an agent targeting HER3 (including antibody, ADC, cell therapy, and other drugs) or with a topoisomerase I inhibitor payload (including topoisomerase I inhibitor-containing ADCs).",
+        "reasonFuzzy": "Prior therapy exclusion involves broad classes and exceptions per cohort, which cannot be captured by a simple typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07111520",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07111520-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Aged ≥18 years at the time of giving informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07111520-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have Eastern Cooperative Oncology Group performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07111520-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Have advanced (i.e., metastatic or locally recurrent where local therapy with curative intent is not possible) non-squamous or squamous NSCLC.",
+        "histologies": [
+          "squamous",
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07111520-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Have clinically active central nervous system metastases, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07111520-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease defined by RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07111520-cohorts",
+        "polarity": "inclusion",
+        "sourceText": "Cohort-specific inclusion criteria...",
+        "reasonFuzzy": "Criteria vary extensively across multiple cohorts, including different prior lines and genomic alteration statuses, which cannot be modeled into single typed checks."
+      },
+      {
+        "id": "NCT07111520-exclusion-her3",
+        "polarity": "exclusion",
+        "sourceText": "Had disease progression on or were intolerant to prior treatment with an agent targeting HER3 (including antibody, ADC, cell therapy, and other drugs) or with a topoisomerase I inhibitor payload (including topoisomerase I inhibitor-containing ADCs).",
+        "reasonFuzzy": "Exclusion involves specific drug classes and payload types that do not map to simple typed prior therapy exclusions."
+      }
+    ]
+  }
+}

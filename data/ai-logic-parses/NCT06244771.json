@@ -1,0 +1,382 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06244771",
+  "briefTitle": "A Study Evaluating FMC-376 in Participants With KRAS G12C Mutated Solid Tumors",
+  "parsedAt": "2026-11-12T06:30:05.545Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06244771-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06244771-stage",
+      "polarity": "inclusion",
+      "sourceText": "locally advanced unresectable or metastatic solid tumors",
+      "reasonFuzzy": "The trial enrolls general solid tumors with KRAS G12C mutation, including NSCLC, but lacks a specific numbered stage list for NSCLC stage_in."
+    },
+    {
+      "id": "NCT06244771-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Received and progressed or been intolerant to prior standard therapy OR standard therapy is considered inappropriate OR an investigational agent is considered standard of care",
+      "reasonFuzzy": "Prior therapy requirements depend on alternatives and investigator discretion rather than a simple numeric prior lines count."
+    },
+    {
+      "id": "NCT06244771-nsclc-setting",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC Participants (in the first-line advanced or metastatic setting who refused standard therapy or standard therapy was considered inappropriate)",
+      "reasonFuzzy": "Specific first-line setting rule with refusal or inappropriate status is not a simple typed check."
+    },
+    {
+      "id": "NCT06244771-organ-function",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematological, renal, and hepatic function",
+      "reasonFuzzy": "Organ function is stated generally without specific numeric cutoffs in this line."
+    },
+    {
+      "id": "NCT06244771-pembrolizumab-inc",
+      "polarity": "inclusion",
+      "sourceText": "For patients receiving FMC-376 in combination with pembrolizumab: No history of autoimmune disease, and no history of immune-related adverse events or hepatitis",
+      "reasonFuzzy": "Combination-specific rule for pembrolizumab is conditional and subjective."
+    },
+    {
+      "id": "NCT06244771-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "Leptomeningeal disease or carcinomatous meningitis",
+      "reasonFuzzy": "Leptomeningeal disease is a specific CNS exclusion not covered by standard brain_mets types."
+    },
+    {
+      "id": "NCT06244771-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Clinically significant toxicity resulting from prior cancer therapies",
+      "reasonFuzzy": "Clinically significant toxicity is a judgment-based exclusion."
+    },
+    {
+      "id": "NCT06244771-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Known or suspected hypersensitivity to FMC-376 or any components of the study drug",
+      "reasonFuzzy": "Hypersensitivity to study drug is a standard medical exclusion without a typed kind."
+    },
+    {
+      "id": "NCT06244771-absorption",
+      "polarity": "exclusion",
+      "sourceText": "Condition that would interfere with study drug absorption",
+      "reasonFuzzy": "Interference with drug absorption is a judgment-based medical condition check."
+    },
+    {
+      "id": "NCT06244771-compliance",
+      "polarity": "exclusion",
+      "sourceText": "Any illness or medical history that would impact safety or compliance with study requirements or impact ability to interpret study data",
+      "reasonFuzzy": "Investigator judgment rule regarding general health and compliance."
+    },
+    {
+      "id": "NCT06244771-pembrolizumab-exc",
+      "polarity": "exclusion",
+      "sourceText": "For patients receiving FMC-376 in combination with pembrolizumab: Has severe hypersensitivity (≥ Grade 3) to pembrolizumab, history of radiation-related toxicities, or history of non-infectious pneumonitis.",
+      "reasonFuzzy": "Combination-specific and multi-part exclusion criteria for pembrolizumab."
+    },
+    {
+      "id": "NCT06244771-stage",
+      "polarity": "inclusion",
+      "sourceText": "locally advanced unresectable or metastatic solid tumors",
+      "reasonFuzzy": "The trial enrolls solid tumors broadly including NSCLC with advanced staging descriptions, but does not provide a numbered stage list for stage_in."
+    },
+    {
+      "id": "NCT06244771-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Received and progressed or been intolerant to prior standard therapy OR standard therapy is considered inappropriate OR an investigational agent is considered standard of care",
+      "reasonFuzzy": "Prior therapy requirements involve subjective clinician judgment about appropriateness and alternative standard care."
+    },
+    {
+      "id": "NCT06244771-nsclc-firstline",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC Participants (in the first-line advanced or metastatic setting who refused standard therapy or standard therapy was considered inappropriate)",
+      "reasonFuzzy": "Rule depends on refusal or appropriateness of standard therapy in the first-line setting."
+    },
+    {
+      "id": "NCT06244771-organ-function",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematological, renal, and hepatic function",
+      "reasonFuzzy": "General organ function statement without explicit numerical cutoffs."
+    },
+    {
+      "id": "NCT06244771-pembro-inc",
+      "polarity": "inclusion",
+      "sourceText": "For patients receiving FMC-376 in combination with pembrolizumab: No history of autoimmune disease, and no history of immune-related adverse events or hepatitis",
+      "reasonFuzzy": "Conditional rules specific to pembrolizumab combination cohort with multiple qualitative medical history exclusions."
+    },
+    {
+      "id": "NCT06244771-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "Leptomeningeal disease or carcinomatous meningitis",
+      "reasonFuzzy": "CNS involvement is specified as leptomeningeal disease/carcinomatous meningitis rather than standard brain metastases categories."
+    },
+    {
+      "id": "NCT06244771-pembro-exc",
+      "polarity": "exclusion",
+      "sourceText": "For patients receiving FMC-376 in combination with pembrolizumab: Has severe hypersensitivity (≥ Grade 3) to pembrolizumab, history of radiation-related toxicities, or history of non-infectious pneumonitis.",
+      "reasonFuzzy": "Conditional exclusion criteria for pembrolizumab combination cohort involving grade severity and qualitative pneumonitis history."
+    },
+    {
+      "id": "NCT06244771-age",
+      "polarity": "inclusion",
+      "sourceText": "Age: 18 Years and older",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06244771-kras",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed locally advanced unresectable or metastatic solid tumors with KRAS G12C mutation",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06244771-krasvariant",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed locally advanced unresectable or metastatic solid tumors with KRAS G12C mutation",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Age: 18 Years and older"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12c"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 11,
+    "attempts": 1,
+    "ms": 33883
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 3427
+  },
+  "ms": 45299,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06244771",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06244771-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed locally advanced unresectable or metastatic solid tumors with KRAS G12C mutation",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06244771-krasvariant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed locally advanced unresectable or metastatic solid tumors with KRAS G12C mutation",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT06244771-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06244771-stage",
+        "polarity": "inclusion",
+        "sourceText": "locally advanced unresectable or metastatic solid tumors",
+        "reasonFuzzy": "The trial enrolls general solid tumors with KRAS G12C mutation, including NSCLC, but lacks a specific numbered stage list for NSCLC stage_in."
+      },
+      {
+        "id": "NCT06244771-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Received and progressed or been intolerant to prior standard therapy OR standard therapy is considered inappropriate OR an investigational agent is considered standard of care",
+        "reasonFuzzy": "Prior therapy requirements depend on alternatives and investigator discretion rather than a simple numeric prior lines count."
+      },
+      {
+        "id": "NCT06244771-nsclc-setting",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC Participants (in the first-line advanced or metastatic setting who refused standard therapy or standard therapy was considered inappropriate)",
+        "reasonFuzzy": "Specific first-line setting rule with refusal or inappropriate status is not a simple typed check."
+      },
+      {
+        "id": "NCT06244771-organ-function",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematological, renal, and hepatic function",
+        "reasonFuzzy": "Organ function is stated generally without specific numeric cutoffs in this line."
+      },
+      {
+        "id": "NCT06244771-pembrolizumab-inc",
+        "polarity": "inclusion",
+        "sourceText": "For patients receiving FMC-376 in combination with pembrolizumab: No history of autoimmune disease, and no history of immune-related adverse events or hepatitis",
+        "reasonFuzzy": "Combination-specific rule for pembrolizumab is conditional and subjective."
+      },
+      {
+        "id": "NCT06244771-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "Leptomeningeal disease or carcinomatous meningitis",
+        "reasonFuzzy": "Leptomeningeal disease is a specific CNS exclusion not covered by standard brain_mets types."
+      },
+      {
+        "id": "NCT06244771-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Clinically significant toxicity resulting from prior cancer therapies",
+        "reasonFuzzy": "Clinically significant toxicity is a judgment-based exclusion."
+      },
+      {
+        "id": "NCT06244771-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Known or suspected hypersensitivity to FMC-376 or any components of the study drug",
+        "reasonFuzzy": "Hypersensitivity to study drug is a standard medical exclusion without a typed kind."
+      },
+      {
+        "id": "NCT06244771-absorption",
+        "polarity": "exclusion",
+        "sourceText": "Condition that would interfere with study drug absorption",
+        "reasonFuzzy": "Interference with drug absorption is a judgment-based medical condition check."
+      },
+      {
+        "id": "NCT06244771-compliance",
+        "polarity": "exclusion",
+        "sourceText": "Any illness or medical history that would impact safety or compliance with study requirements or impact ability to interpret study data",
+        "reasonFuzzy": "Investigator judgment rule regarding general health and compliance."
+      },
+      {
+        "id": "NCT06244771-pembrolizumab-exc",
+        "polarity": "exclusion",
+        "sourceText": "For patients receiving FMC-376 in combination with pembrolizumab: Has severe hypersensitivity (≥ Grade 3) to pembrolizumab, history of radiation-related toxicities, or history of non-infectious pneumonitis.",
+        "reasonFuzzy": "Combination-specific and multi-part exclusion criteria for pembrolizumab."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06244771",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06244771-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed locally advanced unresectable or metastatic solid tumors with KRAS G12C mutation",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06244771-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed locally advanced unresectable or metastatic solid tumors with KRAS G12C mutation",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT06244771-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06244771-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age: 18 Years and older",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06244771-stage",
+        "polarity": "inclusion",
+        "sourceText": "locally advanced unresectable or metastatic solid tumors",
+        "reasonFuzzy": "The trial enrolls solid tumors broadly including NSCLC with advanced staging descriptions, but does not provide a numbered stage list for stage_in."
+      },
+      {
+        "id": "NCT06244771-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Received and progressed or been intolerant to prior standard therapy OR standard therapy is considered inappropriate OR an investigational agent is considered standard of care",
+        "reasonFuzzy": "Prior therapy requirements involve subjective clinician judgment about appropriateness and alternative standard care."
+      },
+      {
+        "id": "NCT06244771-nsclc-firstline",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC Participants (in the first-line advanced or metastatic setting who refused standard therapy or standard therapy was considered inappropriate)",
+        "reasonFuzzy": "Rule depends on refusal or appropriateness of standard therapy in the first-line setting."
+      },
+      {
+        "id": "NCT06244771-organ-function",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematological, renal, and hepatic function",
+        "reasonFuzzy": "General organ function statement without explicit numerical cutoffs."
+      },
+      {
+        "id": "NCT06244771-pembro-inc",
+        "polarity": "inclusion",
+        "sourceText": "For patients receiving FMC-376 in combination with pembrolizumab: No history of autoimmune disease, and no history of immune-related adverse events or hepatitis",
+        "reasonFuzzy": "Conditional rules specific to pembrolizumab combination cohort with multiple qualitative medical history exclusions."
+      },
+      {
+        "id": "NCT06244771-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "Leptomeningeal disease or carcinomatous meningitis",
+        "reasonFuzzy": "CNS involvement is specified as leptomeningeal disease/carcinomatous meningitis rather than standard brain metastases categories."
+      },
+      {
+        "id": "NCT06244771-pembro-exc",
+        "polarity": "exclusion",
+        "sourceText": "For patients receiving FMC-376 in combination with pembrolizumab: Has severe hypersensitivity (≥ Grade 3) to pembrolizumab, history of radiation-related toxicities, or history of non-infectious pneumonitis.",
+        "reasonFuzzy": "Conditional exclusion criteria for pembrolizumab combination cohort involving grade severity and qualitative pneumonitis history."
+      }
+    ]
+  }
+}

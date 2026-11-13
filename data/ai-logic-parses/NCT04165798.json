@@ -1,0 +1,167 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04165798",
+  "briefTitle": "KEYMAKER-U01 Umbrella Master Study: Studies of Investigational Agents With Either Pembrolizumab (MK-3475) Alone or With Pembrolizumab PLUS Chemotherapy in Participants With Non-small Cell Lung Cancer (NSCLC) (MK-3475-U01/KEYMAKER-U01)",
+  "parsedAt": "2026-11-12T06:02:55.991Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04165798-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Has histologically- or cytologically-confirmed diagnosis of Stage IV squamous or nonsquamous NSCLC",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Has histologically- or cytologically-confirmed diagnosis of Stage IV squamous or nonsquamous NSCLC",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04165798-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has measurable disease per Response Evaluation Criteria in Solid Tumors version 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04165798-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has measurable disease per Response Evaluation Criteria in Solid Tumors version 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04165798-histology",
+      "polarity": "inclusion",
+      "sourceText": "Has histologically- or cytologically-confirmed diagnosis of Stage IV squamous or nonsquamous NSCLC",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos,squamous"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 1555
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 1680
+  },
+  "ms": 11223,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04165798",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04165798-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Has histologically- or cytologically-confirmed diagnosis of Stage IV squamous or nonsquamous NSCLC",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT04165798-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Has histologically- or cytologically-confirmed diagnosis of Stage IV squamous or nonsquamous NSCLC",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04165798-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has measurable disease per Response Evaluation Criteria in Solid Tumors version 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04165798",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04165798-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Has histologically- or cytologically-confirmed diagnosis of Stage IV squamous or nonsquamous NSCLC",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT04165798-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Has histologically- or cytologically-confirmed diagnosis of Stage IV squamous or nonsquamous NSCLC",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04165798-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has measurable disease per Response Evaluation Criteria in Solid Tumors version 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      }
+    ]
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06858813",
+  "briefTitle": "A Study to Assess Adverse Events and Change in Disease Activity of Intravenously (IV) Infused ABBV-324 in Adult Participants With Hepatocellular Cancer (HCC) or Squamous-Cell Non-Small Cell Lung Cancer (LUSC)",
+  "parsedAt": "2026-11-12T10:38:34.511Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06858813-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06858813-age",
+      "polarity": "inclusion",
+      "sourceText": "Adult Participants",
+      "reasonFuzzy": "Adult is mentioned in the title, but the exact numeric minimum age is not specified in the eligibility criteria text."
+    },
+    {
+      "id": "NCT06858813-lab",
+      "polarity": "inclusion",
+      "sourceText": "Laboratory values meeting the criteria outlined in the protocol.",
+      "reasonFuzzy": "Specific lab values are not detailed in the source text."
+    },
+    {
+      "id": "NCT06858813-qtc",
+      "polarity": "inclusion",
+      "sourceText": "QT interval corrected for heart rate (QTc) < 470 msec (using Fridericia's correction), no Grade 3 arrythmia, and no other clinically significant cardiac abnormalities.",
+      "reasonFuzzy": "QTc and cardiac criteria are not standard typed kinds in the allowed schema."
+    },
+    {
+      "id": "NCT06858813-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST version 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06858813-hcc",
+      "polarity": "inclusion",
+      "sourceText": "Hepatocellular cancer (HCC) only: Child-Pugh A classification within 7 days before Cycle 1, Day 1 dosing.",
+      "reasonFuzzy": "Hepatocellular cancer is out of scope for NSCLC, and Child-Pugh score is not a typed check."
+    },
+    {
+      "id": "NCT06858813-hcc-disease",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced or metastatic and/or unresectable HCC with diagnosis confirmed by histology or cytology. Participants with fibrolamellar HCC, sarcomatoid HCC, or mixed cholangiocarcinoma/HCC are not eligible to enroll.",
+      "reasonFuzzy": "Hepatocellular cancer cohort criteria are out of scope."
+    },
+    {
+      "id": "NCT06858813-hcc-prior",
+      "polarity": "inclusion",
+      "sourceText": "Part 1: Failure of at least 1 prior systemic treatment for HCC. Part 2: Failure of at least 1 prior systemic treatment consisting of an immune checkpoint inhibitor (CPI) containing regimen for HCC",
+      "reasonFuzzy": "HCC prior treatment rules are out of scope."
+    },
+    {
+      "id": "NCT06858813-lusc-prior",
+      "polarity": "inclusion",
+      "sourceText": "Must have failed at least 1 prior line of therapy that included at least platinum-based chemotherapy and an immune CPI, and/or an appropriate targeted therapy (if applicable), or is not suitable for other approved therapeutic options that have demonstrated clinical benefit at the judgment of the investigator.",
+      "reasonFuzzy": "Complex prior line requirements involving investigator judgment cannot be represented with a single typed prior_lines or prior_therapy check."
+    },
+    {
+      "id": "NCT06858813-ild",
+      "polarity": "exclusion",
+      "sourceText": "History of interstitial lung disease (ILD) or pneumonitis that required treatment with systemic steroids, or any evidence of active ILD or pneumonitis on screening chest computed tomography (CT) scan.",
+      "reasonFuzzy": "ILD and pulmonary exclusion criteria are not typed checks."
+    },
+    {
+      "id": "NCT06858813-washout",
+      "polarity": "exclusion",
+      "sourceText": "Must have discontinued anticancer therapy with antineoplastic intent including chemotherapy, radiation therapy, immunotherapy, biologic, or any investigational therapy within 14 days or 5 half lives of the drug (whichever is shorter) prior to the first dose of ABBV-324.",
+      "reasonFuzzy": "General systemic therapy washout windows are not typed checks."
+    },
+    {
+      "id": "NCT06858813-lab-values",
+      "polarity": "inclusion",
+      "sourceText": "Laboratory values meeting the criteria outlined in the protocol.",
+      "reasonFuzzy": "Specific lab values and cutoffs are not listed in the text."
+    },
+    {
+      "id": "NCT06858813-qtc",
+      "polarity": "inclusion",
+      "sourceText": "QT interval corrected for heart rate (QTc) < 470 msec (using Fridericia's correction), no Grade 3 arrythmia, and no other clinically significant cardiac abnormalities.",
+      "reasonFuzzy": "QTc and cardiac criteria are not standard hematology/chemistry lab checks covered by the allowed typed kinds."
+    },
+    {
+      "id": "NCT06858813-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST version 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06858813-hcc-disease",
+      "polarity": "inclusion",
+      "sourceText": "Part 1 and Part 2 - participants with HCC meeting the following disease activity criteria...",
+      "reasonFuzzy": "Criteria pertain to hepatocellular cancer (HCC), which is out of scope for the NSCLC-focused extraction."
+    },
+    {
+      "id": "NCT06858813-lusc-lines",
+      "polarity": "inclusion",
+      "sourceText": "Must have failed at least 1 prior line of therapy that included at least platinum-based chemotherapy and an immune CPI, and/or an appropriate targeted therapy (if applicable), or is not suitable for other approved therapeutic options that have demonstrated clinical benefit at the judgment of the investigator. Participants should have no more than 2 lines of prior cytotoxic chemotherapy excluding neoadjuvant and/or adjuvant.",
+      "reasonFuzzy": "Prior line requirements involve complex combinations of prior therapies, investigator judgment, and exceptions that cannot be captured by a simple typed prior_lines or prior_therapy rule."
+    },
+    {
+      "id": "NCT06858813-age",
+      "polarity": "inclusion",
+      "sourceText": "adult participants",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06858813-brain",
+      "polarity": "exclusion",
+      "sourceText": "Untreated brain or meningeal metastases (i.e., participants with history of metastases are eligible provided they do not require ongoing steroid treatment for cerebral edema and have shown clinical and radiographic stability for at least 14 days after definitive therapy).",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06858813-brain",
+      "polarity": "exclusion",
+      "sourceText": "Untreated brain or meningeal metastases (i.e., participants with history of metastases are eligible provided they do not require ongoing steroid treatment for cerebral edema and have shown clinical and radiographic stability for at least 14 days after definitive therapy).",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06858813-histology",
+      "polarity": "inclusion",
+      "sourceText": "squamous-cell non-small cell lung cancer (LUSC)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "adult participants"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:squamous"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 10,
+    "attempts": 1,
+    "ms": 3911
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3831
+  },
+  "ms": 15736,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06858813",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06858813-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06858813-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Untreated brain or meningeal metastases (i.e., participants with history of metastases are eligible provided they do not require ongoing steroid treatment for cerebral edema and have shown clinical and radiographic stability for at least 14 days after definitive therapy).",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06858813-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "squamous-cell non-small cell lung cancer (LUSC)",
+        "histologies": [
+          "squamous"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06858813-age",
+        "polarity": "inclusion",
+        "sourceText": "Adult Participants",
+        "reasonFuzzy": "Adult is mentioned in the title, but the exact numeric minimum age is not specified in the eligibility criteria text."
+      },
+      {
+        "id": "NCT06858813-lab",
+        "polarity": "inclusion",
+        "sourceText": "Laboratory values meeting the criteria outlined in the protocol.",
+        "reasonFuzzy": "Specific lab values are not detailed in the source text."
+      },
+      {
+        "id": "NCT06858813-qtc",
+        "polarity": "inclusion",
+        "sourceText": "QT interval corrected for heart rate (QTc) < 470 msec (using Fridericia's correction), no Grade 3 arrythmia, and no other clinically significant cardiac abnormalities.",
+        "reasonFuzzy": "QTc and cardiac criteria are not standard typed kinds in the allowed schema."
+      },
+      {
+        "id": "NCT06858813-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST version 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06858813-hcc",
+        "polarity": "inclusion",
+        "sourceText": "Hepatocellular cancer (HCC) only: Child-Pugh A classification within 7 days before Cycle 1, Day 1 dosing.",
+        "reasonFuzzy": "Hepatocellular cancer is out of scope for NSCLC, and Child-Pugh score is not a typed check."
+      },
+      {
+        "id": "NCT06858813-hcc-disease",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced or metastatic and/or unresectable HCC with diagnosis confirmed by histology or cytology. Participants with fibrolamellar HCC, sarcomatoid HCC, or mixed cholangiocarcinoma/HCC are not eligible to enroll.",
+        "reasonFuzzy": "Hepatocellular cancer cohort criteria are out of scope."
+      },
+      {
+        "id": "NCT06858813-hcc-prior",
+        "polarity": "inclusion",
+        "sourceText": "Part 1: Failure of at least 1 prior systemic treatment for HCC. Part 2: Failure of at least 1 prior systemic treatment consisting of an immune checkpoint inhibitor (CPI) containing regimen for HCC",
+        "reasonFuzzy": "HCC prior treatment rules are out of scope."
+      },
+      {
+        "id": "NCT06858813-lusc-prior",
+        "polarity": "inclusion",
+        "sourceText": "Must have failed at least 1 prior line of therapy that included at least platinum-based chemotherapy and an immune CPI, and/or an appropriate targeted therapy (if applicable), or is not suitable for other approved therapeutic options that have demonstrated clinical benefit at the judgment of the investigator.",
+        "reasonFuzzy": "Complex prior line requirements involving investigator judgment cannot be represented with a single typed prior_lines or prior_therapy check."
+      },
+      {
+        "id": "NCT06858813-ild",
+        "polarity": "exclusion",
+        "sourceText": "History of interstitial lung disease (ILD) or pneumonitis that required treatment with systemic steroids, or any evidence of active ILD or pneumonitis on screening chest computed tomography (CT) scan.",
+        "reasonFuzzy": "ILD and pulmonary exclusion criteria are not typed checks."
+      },
+      {
+        "id": "NCT06858813-washout",
+        "polarity": "exclusion",
+        "sourceText": "Must have discontinued anticancer therapy with antineoplastic intent including chemotherapy, radiation therapy, immunotherapy, biologic, or any investigational therapy within 14 days or 5 half lives of the drug (whichever is shorter) prior to the first dose of ABBV-324.",
+        "reasonFuzzy": "General systemic therapy washout windows are not typed checks."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06858813",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06858813-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06858813-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Untreated brain or meningeal metastases (i.e., participants with history of metastases are eligible provided they do not require ongoing steroid treatment for cerebral edema and have shown clinical and radiographic stability for at least 14 days after definitive therapy).",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06858813-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "adult participants",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06858813-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "squamous-cell non-small cell lung cancer (LUSC)",
+        "histologies": [
+          "squamous"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06858813-lab-values",
+        "polarity": "inclusion",
+        "sourceText": "Laboratory values meeting the criteria outlined in the protocol.",
+        "reasonFuzzy": "Specific lab values and cutoffs are not listed in the text."
+      },
+      {
+        "id": "NCT06858813-qtc",
+        "polarity": "inclusion",
+        "sourceText": "QT interval corrected for heart rate (QTc) < 470 msec (using Fridericia's correction), no Grade 3 arrythmia, and no other clinically significant cardiac abnormalities.",
+        "reasonFuzzy": "QTc and cardiac criteria are not standard hematology/chemistry lab checks covered by the allowed typed kinds."
+      },
+      {
+        "id": "NCT06858813-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST version 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06858813-hcc-disease",
+        "polarity": "inclusion",
+        "sourceText": "Part 1 and Part 2 - participants with HCC meeting the following disease activity criteria...",
+        "reasonFuzzy": "Criteria pertain to hepatocellular cancer (HCC), which is out of scope for the NSCLC-focused extraction."
+      },
+      {
+        "id": "NCT06858813-lusc-lines",
+        "polarity": "inclusion",
+        "sourceText": "Must have failed at least 1 prior line of therapy that included at least platinum-based chemotherapy and an immune CPI, and/or an appropriate targeted therapy (if applicable), or is not suitable for other approved therapeutic options that have demonstrated clinical benefit at the judgment of the investigator. Participants should have no more than 2 lines of prior cytotoxic chemotherapy excluding neoadjuvant and/or adjuvant.",
+        "reasonFuzzy": "Prior line requirements involve complex combinations of prior therapies, investigator judgment, and exceptions that cannot be captured by a simple typed prior_lines or prior_therapy rule."
+      }
+    ]
+  }
+}

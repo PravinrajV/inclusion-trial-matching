@@ -1,0 +1,564 @@
+{
+  "summary": {
+    "ranAt": "2026-11-12T01:57:31.124Z",
+    "model": "gemini-3.5-flash-lite",
+    "promptVersion": "1",
+    "schemaVersion": "1",
+    "dataTimestamp": "2026-11-10T10:00:05",
+    "hits": 0,
+    "total": 26,
+    "percent": 0,
+    "typedHits": 0,
+    "typedTotal": 24,
+    "fuzzyHits": 0,
+    "fuzzyTotal": 2,
+    "rows": [
+      {
+        "id": "C01",
+        "nctId": "NCT03093116",
+        "kind": "age_min",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C02",
+        "nctId": "NCT03093116",
+        "kind": "ecog_max",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C03",
+        "nctId": "NCT04181060",
+        "kind": "ecog_max",
+        "verdict": "miss",
+        "detail": "Expected double-quoted property name in JSON at position 972 (line 34 column 7)"
+      },
+      {
+        "id": "C04",
+        "nctId": "NCT04181060",
+        "kind": "histology_in",
+        "verdict": "miss",
+        "detail": "Expected double-quoted property name in JSON at position 972 (line 34 column 7)"
+      },
+      {
+        "id": "C05",
+        "nctId": "NCT03191149",
+        "kind": "stage_in",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C06",
+        "nctId": "NCT03851445",
+        "kind": "stage_in",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C07",
+        "nctId": "NCT04181060",
+        "kind": "egfr_variant_in",
+        "verdict": "miss",
+        "detail": "Expected double-quoted property name in JSON at position 972 (line 34 column 7)"
+      },
+      {
+        "id": "C08",
+        "nctId": "NCT03191149",
+        "kind": "egfr_variant_in",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C09",
+        "nctId": "NCT04198766",
+        "kind": "egfr_status",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C10",
+        "nctId": "NCT04198766",
+        "kind": "alk_status",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C11",
+        "nctId": "NCT03851445",
+        "kind": "egfr_status",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C12",
+        "nctId": "NCT03851445",
+        "kind": "alk_status",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C13",
+        "nctId": "NCT04613596",
+        "kind": "kras_variant_in",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C14",
+        "nctId": "NCT03093116",
+        "kind": "alk_status",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C15",
+        "nctId": "NCT04181060",
+        "kind": "prior_lines_max",
+        "verdict": "miss",
+        "detail": "Expected double-quoted property name in JSON at position 972 (line 34 column 7)"
+      },
+      {
+        "id": "C16",
+        "nctId": "NCT04181060",
+        "kind": "prior_therapy_excluded",
+        "verdict": "miss",
+        "detail": "Expected double-quoted property name in JSON at position 972 (line 34 column 7)"
+      },
+      {
+        "id": "C17",
+        "nctId": "NCT03851445",
+        "kind": "prior_lines_min",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C18",
+        "nctId": "NCT04165070",
+        "kind": "brain_mets",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C19",
+        "nctId": "NCT06561386",
+        "kind": "brain_mets",
+        "verdict": "miss",
+        "detail": "AI: Error fetching from https://firebasevertexai.googleapis.com/v1beta/projects/inclusion-hybridai/models/gemini-3.5-flash-lite:generateContent: [500 Internal Server Error] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (AI/fetch-error)"
+      },
+      {
+        "id": "C20",
+        "nctId": "NCT01720836",
+        "kind": "egfr_min",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C21",
+        "nctId": "NCT03093116",
+        "kind": "egfr_min",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C22",
+        "nctId": "NCT03093116",
+        "kind": "hemoglobin_min",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C23",
+        "nctId": "NCT01720836",
+        "kind": "platelets_min",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C24",
+        "nctId": "NCT01720836",
+        "kind": "anc_min",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity"
+      },
+      {
+        "id": "C25",
+        "nctId": "NCT04181060",
+        "kind": "fuzzy",
+        "verdict": "miss",
+        "detail": "Expected double-quoted property name in JSON at position 972 (line 34 column 7)"
+      },
+      {
+        "id": "C26",
+        "nctId": "NCT06561386",
+        "kind": "fuzzy",
+        "verdict": "miss",
+        "detail": "AI: Error fetching from https://firebasevertexai.googleapis.com/v1beta/projects/inclusion-hybridai/models/gemini-3.5-flash-lite:generateContent: [500 Internal Server Error] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (AI/fetch-error)"
+      }
+    ]
+  },
+  "parses": {
+    "NCT01720836": {
+      "ok": true,
+      "parsed": {
+        "nctId": "NCT01720836",
+        "typedChecks": [],
+        "fuzzyCriteria": [
+          {
+            "reasonFuzzy": "not clearly typed",
+            "sourceText": "Scope: this cache is for stage III or IV non-small cell lung cancer. If the record is clearly limited to stage I or II disease, or is not NSCLC, set typedChecks to an empty array and put one fuzzy item explaining that the trial is out of scope.",
+            "category": "other",
+            "operator": "equals",
+            "value": "out of scope"
+          }
+        ]
+      }
+    },
+    "NCT03093116": {
+      "ok": true,
+      "parsed": {
+        "nctId": "NCT03093116",
+        "typedChecks": [
+          {
+            "category": "biomarker",
+            "biomarkerName": "ALK, ROS1, or NTRK1-3",
+            "alterationType": "rearrangement",
+            "requiredStatus": "positive",
+            "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) (Stage IV, American Joint Committee on Cancer v.7) that harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement by protocol specified tests."
+          },
+          {
+            "category": "performance_status",
+            "scale": "ECOG",
+            "comparator": "le",
+            "value": 1,
+            "sourceText": "ECOG PS 0-1."
+          },
+          {
+            "category": "age",
+            "comparator": "ge",
+            "value": 18,
+            "sourceText": "Age ≥18 (or age ≥ 20 of age as required by local regulation)."
+          },
+          {
+            "category": "brain_mets",
+            "allowed": true,
+            "status": "asymptomatic",
+            "sourceText": "Patients with asymptomatic CNS metastases (treated or untreated) and/or asymptomatic leptomeningeal carcinomatosis are eligible to enroll if they satisfy the protocol specified criteria."
+          },
+          {
+            "category": "organ_function",
+            "organOrTest": "Absolute neutrophils count (ANC)",
+            "comparator": "ge",
+            "value": 1500,
+            "unit": "/mm3",
+            "sourceText": "Absolute neutrophils count (ANC) ≥1500/mm3 (1.5 × 109/L)"
+          },
+          {
+            "category": "organ_function",
+            "organOrTest": "Platelets (PLTs)",
+            "comparator": "ge",
+            "value": 100000,
+            "unit": "/mm3",
+            "sourceText": "Platelets (PLTs) ≥100,000/mm3 (100 × 109/L)"
+          },
+          {
+            "category": "organ_function",
+            "organOrTest": "Hemoglobin",
+            "comparator": "ge",
+            "value": 9,
+            "unit": "g/dL",
+            "sourceText": "Hemoglobin ≥ 9.0 g/dL transfusions are allowed"
+          },
+          {
+            "category": "organ_function",
+            "organOrTest": "Total serum bilirubin",
+            "comparator": "lt",
+            "value": 1.5,
+            "unit": "x ULN",
+            "sourceText": "Total serum bilirubin < 1.5 × ULN"
+          },
+          {
+            "category": "organ_function",
+            "organOrTest": "Liver transaminases (ASTs/ALTs)",
+            "comparator": "lt",
+            "value": 2.5,
+            "unit": "x ULN",
+            "sourceText": "Liver transaminases (ASTs/ALTs) < 2.5 × ULN; < 5 × ULN if liver metastases are present"
+          },
+          {
+            "category": "organ_function",
+            "organOrTest": "Alkaline phosphatase (ALP)",
+            "comparator": "lt",
+            "value": 2.5,
+            "unit": "x ULN",
+            "sourceText": "Alkaline phosphatase (ALP); < 2.5 × ULN; < 5 × ULN if liver and/or bone metastasis are present"
+          },
+          {
+            "category": "brain_mets",
+            "allowed": false,
+            "status": "symptomatic",
+            "sourceText": "Symptomatic brain metastases or leptomeningeal involvement."
+          }
+        ],
+        "fuzzyCriteria": []
+      }
+    },
+    "NCT03191149": {
+      "ok": true,
+      "parsed": {
+        "nctId": "NCT03191149",
+        "typedChecks": [
+          {
+            "type": "disease_stage",
+            "operator": "equals",
+            "value": "advanced NSCLC (stage IV, stage IIIB not amenable to definitive multi-modality therapy, or recurrent after stage I-III)",
+            "unit": null,
+            "sourceText": "Participants must have advanced disease - either stage IV disease, stage IIIB disease not amenable to definitive multi-modality therapy, or recurrent disease after a prior diagnosis of stage I-III disease."
+          },
+          {
+            "type": "histology",
+            "operator": "equals",
+            "value": "non-small cell lung cancer",
+            "unit": null,
+            "sourceText": "Participants must have a pathologically-confirmed diagnosis of non-small cell lung cancer (NSCLC)"
+          },
+          {
+            "type": "biomarker",
+            "operator": "equals",
+            "value": "EGFR exon 20 insertion mutation",
+            "unit": null,
+            "sourceText": "An EGFR exon 20 insertion mutation must be detected in the tumor tissue."
+          },
+          {
+            "type": "prior_therapy_required",
+            "operator": "greater_than_or_equal",
+            "value": "1",
+            "unit": "lines",
+            "sourceText": "Patients must have previously received at least one line of therapy for their advanced lung cancer"
+          },
+          {
+            "type": "prior_therapy_excluded",
+            "operator": "equals",
+            "value": "osimertinib",
+            "unit": null,
+            "sourceText": "Participants must not have previously received osimertinib"
+          },
+          {
+            "type": "prior_therapy_excluded",
+            "operator": "within",
+            "value": "180 days",
+            "unit": "days",
+            "sourceText": "Participants must have not previously received therapies targeting PDL1, PD1 or CTLA4 within 6 months (180 days) prior to registration"
+          },
+          {
+            "type": "age",
+            "operator": "greater_than_or_equal",
+            "value": 18,
+            "unit": "years",
+            "sourceText": "Age >= 18 years"
+          },
+          {
+            "type": "ecog",
+            "operator": "less_than_or_equal",
+            "value": 1,
+            "unit": null,
+            "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status =< 1"
+          },
+          {
+            "type": "lab_value",
+            "operator": "greater_than_or_equal",
+            "value": 9,
+            "unit": "g/L",
+            "sourceText": "Hemoglobin >= 9.0 g/L (within 4 weeks before registration)"
+          },
+          {
+            "type": "lab_value",
+            "operator": "greater_than_or_equal",
+            "value": 3000,
+            "unit": "/mcL",
+            "sourceText": "Leukocytes/white blood cells >= 3,000/mcL (within 4 weeks before registration)"
+          },
+          {
+            "type": "lab_value",
+            "operator": "greater_than_or_equal",
+            "value": 1500,
+            "unit": "/mcL",
+            "sourceText": "Absolute neutrophil count >= 1,500/mcL (within 4 weeks before registration)"
+          },
+          {
+            "type": "lab_value",
+            "operator": "greater_than_or_equal",
+            "value": 100000,
+            "unit": "/mcL",
+            "sourceText": "Platelets >= 100,000/mcL (within 4 weeks before registration)"
+          },
+          {
+            "type": "lab_value",
+            "operator": "less_than_or_equal",
+            "value": 1.5,
+            "unit": "x ULN",
+            "sourceText": "Total bilirubin =< 1.5 x upper limit of normal (ULN) if no liver metastases or =< 3 times ULN in the presence of documented Gilbert's syndrome (unconjugated hyperbilirubinemia) or liver metastases"
+          },
+          {
+            "type": "lab_value",
+            "operator": "less_than_or_equal",
+            "value": 3,
+            "unit": "x ULN",
+            "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 x institutional upper limit of normal; for patients with known hepatic metastases AST and/or ALT =< 5 x ULN"
+          },
+          {
+            "type": "lab_value",
+            "operator": "less_than_or_equal",
+            "value": 1.5,
+            "unit": "x ULN",
+            "sourceText": "Creatinine =< 1.5 x institutional upper limit of normal (within 4 weeks before registration)"
+          },
+          {
+            "type": "brain_mets",
+            "operator": "equals",
+            "value": "asymptomatic stable or treated",
+            "unit": null,
+            "sourceText": "Participants may not have clinically symptomatic brain metastases, leptomeningeal disease, or spinal cord compression. Patients may be on a stable dose of corticosteroids to control brain metastases if they have been on a stable dose for two weeks (14 days) prior to study treatment and are clinically asymptomatic"
+          },
+          {
+            "type": "lab_value",
+            "operator": "greater_than_or_equal",
+            "value": 50,
+            "unit": "%",
+            "sourceText": "If the LLN is not defined at a site, the LVEF must be >= 50% for the patient to be eligible"
+          }
+        ],
+        "fuzzyCriteria": []
+      }
+    },
+    "NCT03851445": {
+      "ok": true,
+      "parsed": {
+        "nctId": "NCT03851445",
+        "typedChecks": [
+          {
+            "checkType": "age",
+            "operator": ">=",
+            "value": 18,
+            "unit": "years",
+            "sourceText": "Patients must be ≥ 18 years of age."
+          },
+          {
+            "checkType": "disease_stage",
+            "operator": "equals",
+            "value": "Stage IV or recurrent",
+            "sourceText": "Disease must be Stage IV as defined in Section 4.0, or recurrent."
+          },
+          {
+            "checkType": "histology_or_cancer_type",
+            "operator": "equals",
+            "value": "non-small cell lung cancer",
+            "sourceText": "Patients must have pathologically proven non-small cell lung cancer (all histologic types) confirmed by tumor biopsy and/or fine-needle aspiration."
+          },
+          {
+            "checkType": "prior_therapy_required",
+            "operator": "equals",
+            "value": "at least one line of systemic therapy",
+            "sourceText": "To be eligible for screening at progression, patients must have received at least one line of systemic therapy for any stage of disease (Stages I-IV) and must have progressed during or following their most recent line of therapy."
+          }
+        ],
+        "fuzzyCriteria": []
+      }
+    },
+    "NCT04165070": {
+      "ok": true,
+      "parsed": {
+        "nctId": "NCT04165070",
+        "typedChecks": [
+          {
+            "category": "disease_stage",
+            "operator": "equals",
+            "value": "Stage IV",
+            "sourceText": "Has histologically- or cytologically-confirmed diagnosis of Stage IV squamous or nonsquamous NSCLC"
+          },
+          {
+            "category": "histology",
+            "operator": "equals",
+            "value": "NSCLC",
+            "sourceText": "Has histologically- or cytologically-confirmed diagnosis of Stage IV squamous or nonsquamous NSCLC"
+          },
+          {
+            "category": "prior_therapy_excluded",
+            "operator": "equals",
+            "value": "prior systemic treatment for their metastatic NSCLC",
+            "sourceText": "Has not received prior systemic treatment for their metastatic NSCLC"
+          },
+          {
+            "category": "brain_mets",
+            "operator": "equals",
+            "value": "no active CNS metastases",
+            "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis"
+          }
+        ],
+        "fuzzyCriteria": []
+      }
+    },
+    "NCT04181060": {
+      "ok": false,
+      "error": "Expected double-quoted property name in JSON at position 972 (line 34 column 7)"
+    },
+    "NCT04198766": {
+      "ok": true,
+      "parsed": {
+        "nctId": "NCT04198766",
+        "typedChecks": [
+          {
+            "checkType": "age_min",
+            "comparator": ">=",
+            "value": 18,
+            "unit": "years",
+            "sourceText": "Males or females aged ≥18 years."
+          },
+          {
+            "checkType": "prior_therapy_excluded",
+            "category": "experimental_agent",
+            "drugName": "OX40 agonists",
+            "sourceText": "Prior exposure to OX40 agonists."
+          }
+        ],
+        "fuzzyCriteria": []
+      }
+    },
+    "NCT04613596": {
+      "ok": true,
+      "parsed": {
+        "typedChecks": [
+          {
+            "category": "disease_stage",
+            "operator": "equals",
+            "value": "metastatic",
+            "sourceText": "Histologically confirmed diagnosis of unresectable or metastatic NSCLC"
+          },
+          {
+            "category": "biomarker_mutation",
+            "operator": "equals",
+            "value": "KRAS G12C",
+            "sourceText": "Histologically confirmed diagnosis of unresectable or metastatic NSCLC with KRAS G12C mutation"
+          },
+          {
+            "category": "prior_therapy_excluded",
+            "operator": "equals",
+            "value": "chemotherapy, immune checkpoint inhibitor therapy, or a therapy targeting KRAS G12C mutation",
+            "sourceText": "Prior systemic treatment for locally advanced or metastatic NSCLC including chemotherapy, immune checkpoint inhibitor therapy, or a therapy targeting KRAS G12C mutation (e.g., AMG 510)."
+          },
+          {
+            "category": "age",
+            "operator": "greater_than_or_equal",
+            "value": 18,
+            "sourceText": "minimumAge: 18 Years"
+          }
+        ],
+        "fuzzyCriteria": []
+      }
+    },
+    "NCT06561386": {
+      "ok": false,
+      "error": "AI: Error fetching from https://firebasevertexai.googleapis.com/v1beta/projects/inclusion-hybridai/models/gemini-3.5-flash-lite:generateContent: [500 Internal Server Error] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (AI/fetch-error)"
+    }
+  }
+}

@@ -1,0 +1,619 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04683250",
+  "briefTitle": "Study of RET Inhibitor TAS0953/HM06 in Patients With Advanced Solid Tumors With RET Gene Abnormalities",
+  "parsedAt": "2026-11-12T06:06:37.569Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04683250-ret",
+      "polarity": "inclusion",
+      "sourceText": "Available RET-gene abnormalities determined on tissue biopsy or liquid biopsy.",
+      "reasonFuzzy": "RET abnormalities are a target biomarker category without a single dedicated typed kind in the allowed list."
+    },
+    {
+      "id": "NCT04683250-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematopoietic, hepatic and renal function",
+      "reasonFuzzy": "Broad statement without specific numeric lab cutoffs."
+    },
+    {
+      "id": "NCT04683250-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable and/or non-measurable disease as determined by RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04683250-brain-dose-escalation",
+      "polarity": "inclusion",
+      "sourceText": "If patient has brain and/or leptomeningeal metastases, (s)he should be asymptomatic.",
+      "reasonFuzzy": "Mentions symptomatic status without a standard brain_mets category check."
+    },
+    {
+      "id": "NCT04683250-brain-expansion",
+      "polarity": "inclusion",
+      "sourceText": "asymptomatic untreated brain/leptomeningeal metastases off steroids and anticonvulsant for at least 7 days or asymptomatic brain metastases already treated with local therapy and be clinically stable on steroids and anticonvulsant for at least 7 days before study drug administration.",
+      "reasonFuzzy": "Contains complex medication washouts and symptom criteria alongside brain metastasis states."
+    },
+    {
+      "id": "NCT04683250-stage",
+      "polarity": "inclusion",
+      "sourceText": "locally advanced or metastatic NSCLC",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope but does not list specific numbered stages for stage_in."
+    },
+    {
+      "id": "NCT04683250-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Patients who have been treated with neo-adjuvant or adjuvant chemotherapy may be included if it has been completed at least 6 months prior to the first dose of the study.",
+      "reasonFuzzy": "Detailed prior therapy timing window and condition."
+    },
+    {
+      "id": "NCT04683250-washout-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Investigational agents or anticancer therapy within 5 half-lives prior to the first dose of study drug",
+      "reasonFuzzy": "Half-life-based washout window is not a simple fixed-day lab or time cutoff."
+    },
+    {
+      "id": "NCT04683250-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery (excluding placement of vascular access) within 4 weeks prior to the first dose of study drug or planned major surgery during the course of study treatment.",
+      "reasonFuzzy": "Surgery washout rule is not a typed check."
+    },
+    {
+      "id": "NCT04683250-radiotherapy",
+      "polarity": "exclusion",
+      "sourceText": "Whole Brain Radiotherapy within 14 days or other palliative radiotherapy within 7 days prior to the first dose of study drug, or persisting side effects of such therapy, in the opinion of the Investigator.",
+      "reasonFuzzy": "Radiotherapy washout rules involve investigator opinion and multiple timeframes."
+    },
+    {
+      "id": "NCT04683250-cardiovascular",
+      "polarity": "exclusion",
+      "sourceText": "Clinically significant, uncontrolled, cardiovascular disease including myocardial infarction within 3 months prior to Day 1 of Cycle 1, unstable angina pectoris, significant valvular or pericardial disease, history of ventricular tachycardia, symptomatic Congestive Heart Failure (CHF) New York Heart Association (NYHA) class III-IV, and severe uncontrolled arterial hypertension, according to the Investigator's opinion.",
+      "reasonFuzzy": "Relies on investigator opinion and multiple cardiovascular conditions."
+    },
+    {
+      "id": "NCT04683250-qtc",
+      "polarity": "exclusion",
+      "sourceText": "QT interval corrected using Fridericia's formula (QTcF) >470 msec; personal or family history of prolonged QT syndrome or history of Torsades de pointes (TdP). History of risk factors for TdP",
+      "reasonFuzzy": "QTcF cutoff combined with personal and family histories that have no dedicated typed kind."
+    },
+    {
+      "id": "NCT04683250-cyp3a4",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with strong CYP3A4 inhibitors within 1 week prior to the first dose of study drug or strong CYP3A4 inducers within 3 weeks prior to the first dose of study drug.",
+      "reasonFuzzy": "Concomitant medication exclusion for CYP3A4 modulators."
+    },
+    {
+      "id": "NCT04683250-her2-excl",
+      "polarity": "exclusion",
+      "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+      "reasonFuzzy": "HER2 and METex14 do not have dedicated typed check kinds."
+    },
+    {
+      "id": "NCT04683250-ret",
+      "polarity": "inclusion",
+      "sourceText": "Available RET-gene abnormalities determined on tissue biopsy or liquid biopsy. If deemed appropriate by the investigator, determination on a pleural cell block or cell pellet is also acceptable.",
+      "reasonFuzzy": "RET gene abnormalities span fusions and other abnormalities, and there is no simple typed ret_status kind."
+    },
+    {
+      "id": "NCT04683250-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematopoietic, hepatic and renal function",
+      "reasonFuzzy": "Organ function is qualitative without specific lab cutoffs."
+    },
+    {
+      "id": "NCT04683250-measurable-1",
+      "polarity": "inclusion",
+      "sourceText": "Measurable and/or non-measurable disease as determined by RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04683250-brain-1",
+      "polarity": "inclusion",
+      "sourceText": "If patient has brain and/or leptomeningeal metastases, (s)he should be asymptomatic.",
+      "reasonFuzzy": "Symptomatic CNS disease wording does not map to a clean typed brain_mets rule."
+    },
+    {
+      "id": "NCT04683250-cohort-1",
+      "polarity": "inclusion",
+      "sourceText": "Cohort 1, 3: locally advanced or metastatic NSCLC patients naïve to RET selective inhibitors and no prior systemic anti-cancer treatment. Patients who have been treated with neo-adjuvant or adjuvant chemotherapy may be included if it has been completed at least 6 months prior to the first dose of the study.",
+      "reasonFuzzy": "Cohort-specific prior therapy requirements and stage descriptions are complex and differ by study part."
+    },
+    {
+      "id": "NCT04683250-cohort-2",
+      "polarity": "inclusion",
+      "sourceText": "Cohort 2, 4: locally advanced or metastatic NSCLC patients with RET gene fusion and prior exposure to RET selective inhibitors.",
+      "reasonFuzzy": "Cohort-specific prior exposure criteria cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT04683250-measurable-2",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease as determined by RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT04683250-brain-2",
+      "polarity": "inclusion",
+      "sourceText": "If patient has brain and/or leptomeningeal metastases,(s)he should have: asymptomatic untreated brain/leptomeningeal metastases off steroids and anticonvulsant for at least 7 days or asymptomatic brain metastases already treated with local therapy and be clinically stable on steroids and anticonvulsant for at least 7 days before study drug administration.",
+      "reasonFuzzy": "Complex brain metastases conditions involving treatment status, steroids, and duration are not captured by standard allowedBrainMets categories."
+    },
+    {
+      "id": "NCT04683250-phase2-stage",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced or metastatic: NSCLC patients with primary RET gene fusion and prior exposure to RET selective inhibitors; NSCLC patients with RET gene fusion and without prior exposure to RET selective inhibitors; patients with advanced solid tumors that harbour RET gene abnormalities (other than NSCLC patients with primary RET gene fusions) and has failed all the available therapeutic options",
+      "reasonFuzzy": "Advanced or metastatic stage descriptions without numbered stages are kept as fuzzy."
+    },
+    {
+      "id": "NCT04683250-ecog-phase2",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance score of 0-2",
+      "reasonFuzzy": "ECOG max score varies across phases (0-1 for Phase 1, 0-2 for Phase 2), so a single typed check is not sufficient."
+    },
+    {
+      "id": "NCT04683250-washout",
+      "polarity": "exclusion",
+      "sourceText": "Investigational agents or anticancer therapy within 5 half-lives prior to the first dose of study drug",
+      "reasonFuzzy": "Washout window based on half-lives is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT04683250-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery (excluding placement of vascular access) within 4 weeks prior to the first dose of study drug or planned major surgery during the course of study treatment.",
+      "reasonFuzzy": "Major surgery washout window is not a typed lab cutoff."
+    },
+    {
+      "id": "NCT04683250-radiotherapy",
+      "polarity": "exclusion",
+      "sourceText": "Whole Brain Radiotherapy within 14 days or other palliative radiotherapy within 7 days prior to the first dose of study drug, or persisting side effects of such therapy, in the opinion of the Investigator.",
+      "reasonFuzzy": "Radiotherapy washout windows and investigator opinion on persisting side effects are fuzzy."
+    },
+    {
+      "id": "NCT04683250-cardiovascular",
+      "polarity": "exclusion",
+      "sourceText": "Clinically significant, uncontrolled, cardiovascular disease including myocardial infarction within 3 months prior to Day 1 of Cycle 1, unstable angina pectoris, significant valvular or pericardial disease, history of ventricular tachycardia, symptomatic Congestive Heart Failure (CHF) New York Heart Association (NYHA) class III-IV, and severe uncontrolled arterial hypertension, according to the Investigator's opinion.",
+      "reasonFuzzy": "Complex cardiovascular exclusions rely on investigator opinion and multiple combined conditions."
+    },
+    {
+      "id": "NCT04683250-qt",
+      "polarity": "exclusion",
+      "sourceText": "QT interval corrected using Fridericia's formula (QTcF) >470 msec; personal or family history of prolonged QT syndrome or history of Torsades de pointes (TdP). History of risk factors for TdP",
+      "reasonFuzzy": "QTcF cutoff and TdP history risk factors are not part of the allowed typed checks."
+    },
+    {
+      "id": "NCT04683250-cyp",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with strong CYP3A4 inhibitors within 1 week prior to the first dose of study drug or strong CYP3A4 inducers within 3 weeks prior to the first dose of study drug.",
+      "reasonFuzzy": "Concomitant medication restrictions are not a typed check."
+    },
+    {
+      "id": "NCT04683250-her2-excl",
+      "polarity": "exclusion",
+      "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+      "reasonFuzzy": "HER2 and METex14 do not have corresponding typed status kinds."
+    },
+    {
+      "id": "NCT04683250-age",
+      "polarity": "inclusion",
+      "sourceText": "Adult patient (The definition of adulthood shall comply with the regulatory requirements of each region)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04683250-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance score of 0 or 1",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04683250-egfr-excl",
+      "polarity": "exclusion",
+      "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04683250-kras-excl",
+      "polarity": "exclusion",
+      "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04683250-alk-excl",
+      "polarity": "exclusion",
+      "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04683250-ros1-excl",
+      "polarity": "exclusion",
+      "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04683250-braf-excl",
+      "polarity": "exclusion",
+      "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 7,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 7,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 7,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 7,
+      "rejectedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:18"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "ros1_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "braf_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 14,
+    "attempts": 1,
+    "ms": 4851
+  },
+  "runB": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 17,
+    "attempts": 1,
+    "ms": 5793
+  },
+  "ms": 18642,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04683250",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04683250-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adult patient (The definition of adulthood shall comply with the regulatory requirements of each region)",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04683250-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance score of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04683250-egfr-excl",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04683250-kras-excl",
+        "kind": "kras_status",
+        "polarity": "exclusion",
+        "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04683250-alk-excl",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04683250-ros1-excl",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04683250-braf-excl",
+        "kind": "braf_status",
+        "polarity": "exclusion",
+        "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04683250-ret",
+        "polarity": "inclusion",
+        "sourceText": "Available RET-gene abnormalities determined on tissue biopsy or liquid biopsy.",
+        "reasonFuzzy": "RET abnormalities are a target biomarker category without a single dedicated typed kind in the allowed list."
+      },
+      {
+        "id": "NCT04683250-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematopoietic, hepatic and renal function",
+        "reasonFuzzy": "Broad statement without specific numeric lab cutoffs."
+      },
+      {
+        "id": "NCT04683250-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable and/or non-measurable disease as determined by RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT04683250-brain-dose-escalation",
+        "polarity": "inclusion",
+        "sourceText": "If patient has brain and/or leptomeningeal metastases, (s)he should be asymptomatic.",
+        "reasonFuzzy": "Mentions symptomatic status without a standard brain_mets category check."
+      },
+      {
+        "id": "NCT04683250-brain-expansion",
+        "polarity": "inclusion",
+        "sourceText": "asymptomatic untreated brain/leptomeningeal metastases off steroids and anticonvulsant for at least 7 days or asymptomatic brain metastases already treated with local therapy and be clinically stable on steroids and anticonvulsant for at least 7 days before study drug administration.",
+        "reasonFuzzy": "Contains complex medication washouts and symptom criteria alongside brain metastasis states."
+      },
+      {
+        "id": "NCT04683250-stage",
+        "polarity": "inclusion",
+        "sourceText": "locally advanced or metastatic NSCLC",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope but does not list specific numbered stages for stage_in."
+      },
+      {
+        "id": "NCT04683250-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Patients who have been treated with neo-adjuvant or adjuvant chemotherapy may be included if it has been completed at least 6 months prior to the first dose of the study.",
+        "reasonFuzzy": "Detailed prior therapy timing window and condition."
+      },
+      {
+        "id": "NCT04683250-washout-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Investigational agents or anticancer therapy within 5 half-lives prior to the first dose of study drug",
+        "reasonFuzzy": "Half-life-based washout window is not a simple fixed-day lab or time cutoff."
+      },
+      {
+        "id": "NCT04683250-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery (excluding placement of vascular access) within 4 weeks prior to the first dose of study drug or planned major surgery during the course of study treatment.",
+        "reasonFuzzy": "Surgery washout rule is not a typed check."
+      },
+      {
+        "id": "NCT04683250-radiotherapy",
+        "polarity": "exclusion",
+        "sourceText": "Whole Brain Radiotherapy within 14 days or other palliative radiotherapy within 7 days prior to the first dose of study drug, or persisting side effects of such therapy, in the opinion of the Investigator.",
+        "reasonFuzzy": "Radiotherapy washout rules involve investigator opinion and multiple timeframes."
+      },
+      {
+        "id": "NCT04683250-cardiovascular",
+        "polarity": "exclusion",
+        "sourceText": "Clinically significant, uncontrolled, cardiovascular disease including myocardial infarction within 3 months prior to Day 1 of Cycle 1, unstable angina pectoris, significant valvular or pericardial disease, history of ventricular tachycardia, symptomatic Congestive Heart Failure (CHF) New York Heart Association (NYHA) class III-IV, and severe uncontrolled arterial hypertension, according to the Investigator's opinion.",
+        "reasonFuzzy": "Relies on investigator opinion and multiple cardiovascular conditions."
+      },
+      {
+        "id": "NCT04683250-qtc",
+        "polarity": "exclusion",
+        "sourceText": "QT interval corrected using Fridericia's formula (QTcF) >470 msec; personal or family history of prolonged QT syndrome or history of Torsades de pointes (TdP). History of risk factors for TdP",
+        "reasonFuzzy": "QTcF cutoff combined with personal and family histories that have no dedicated typed kind."
+      },
+      {
+        "id": "NCT04683250-cyp3a4",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with strong CYP3A4 inhibitors within 1 week prior to the first dose of study drug or strong CYP3A4 inducers within 3 weeks prior to the first dose of study drug.",
+        "reasonFuzzy": "Concomitant medication exclusion for CYP3A4 modulators."
+      },
+      {
+        "id": "NCT04683250-her2-excl",
+        "polarity": "exclusion",
+        "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+        "reasonFuzzy": "HER2 and METex14 do not have dedicated typed check kinds."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04683250",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04683250-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adult patient (The definition of adulthood shall comply with the regulatory requirements of each region)",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04683250-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance score of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04683250-egfr-excl",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04683250-kras-excl",
+        "kind": "kras_status",
+        "polarity": "exclusion",
+        "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04683250-alk-excl",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04683250-ros1-excl",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04683250-braf-excl",
+        "kind": "braf_status",
+        "polarity": "exclusion",
+        "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04683250-ret",
+        "polarity": "inclusion",
+        "sourceText": "Available RET-gene abnormalities determined on tissue biopsy or liquid biopsy. If deemed appropriate by the investigator, determination on a pleural cell block or cell pellet is also acceptable.",
+        "reasonFuzzy": "RET gene abnormalities span fusions and other abnormalities, and there is no simple typed ret_status kind."
+      },
+      {
+        "id": "NCT04683250-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematopoietic, hepatic and renal function",
+        "reasonFuzzy": "Organ function is qualitative without specific lab cutoffs."
+      },
+      {
+        "id": "NCT04683250-measurable-1",
+        "polarity": "inclusion",
+        "sourceText": "Measurable and/or non-measurable disease as determined by RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT04683250-brain-1",
+        "polarity": "inclusion",
+        "sourceText": "If patient has brain and/or leptomeningeal metastases, (s)he should be asymptomatic.",
+        "reasonFuzzy": "Symptomatic CNS disease wording does not map to a clean typed brain_mets rule."
+      },
+      {
+        "id": "NCT04683250-cohort-1",
+        "polarity": "inclusion",
+        "sourceText": "Cohort 1, 3: locally advanced or metastatic NSCLC patients naïve to RET selective inhibitors and no prior systemic anti-cancer treatment. Patients who have been treated with neo-adjuvant or adjuvant chemotherapy may be included if it has been completed at least 6 months prior to the first dose of the study.",
+        "reasonFuzzy": "Cohort-specific prior therapy requirements and stage descriptions are complex and differ by study part."
+      },
+      {
+        "id": "NCT04683250-cohort-2",
+        "polarity": "inclusion",
+        "sourceText": "Cohort 2, 4: locally advanced or metastatic NSCLC patients with RET gene fusion and prior exposure to RET selective inhibitors.",
+        "reasonFuzzy": "Cohort-specific prior exposure criteria cannot be expressed as a single typed check."
+      },
+      {
+        "id": "NCT04683250-measurable-2",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease as determined by RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT04683250-brain-2",
+        "polarity": "inclusion",
+        "sourceText": "If patient has brain and/or leptomeningeal metastases,(s)he should have: asymptomatic untreated brain/leptomeningeal metastases off steroids and anticonvulsant for at least 7 days or asymptomatic brain metastases already treated with local therapy and be clinically stable on steroids and anticonvulsant for at least 7 days before study drug administration.",
+        "reasonFuzzy": "Complex brain metastases conditions involving treatment status, steroids, and duration are not captured by standard allowedBrainMets categories."
+      },
+      {
+        "id": "NCT04683250-phase2-stage",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced or metastatic: NSCLC patients with primary RET gene fusion and prior exposure to RET selective inhibitors; NSCLC patients with RET gene fusion and without prior exposure to RET selective inhibitors; patients with advanced solid tumors that harbour RET gene abnormalities (other than NSCLC patients with primary RET gene fusions) and has failed all the available therapeutic options",
+        "reasonFuzzy": "Advanced or metastatic stage descriptions without numbered stages are kept as fuzzy."
+      },
+      {
+        "id": "NCT04683250-ecog-phase2",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance score of 0-2",
+        "reasonFuzzy": "ECOG max score varies across phases (0-1 for Phase 1, 0-2 for Phase 2), so a single typed check is not sufficient."
+      },
+      {
+        "id": "NCT04683250-washout",
+        "polarity": "exclusion",
+        "sourceText": "Investigational agents or anticancer therapy within 5 half-lives prior to the first dose of study drug",
+        "reasonFuzzy": "Washout window based on half-lives is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT04683250-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery (excluding placement of vascular access) within 4 weeks prior to the first dose of study drug or planned major surgery during the course of study treatment.",
+        "reasonFuzzy": "Major surgery washout window is not a typed lab cutoff."
+      },
+      {
+        "id": "NCT04683250-radiotherapy",
+        "polarity": "exclusion",
+        "sourceText": "Whole Brain Radiotherapy within 14 days or other palliative radiotherapy within 7 days prior to the first dose of study drug, or persisting side effects of such therapy, in the opinion of the Investigator.",
+        "reasonFuzzy": "Radiotherapy washout windows and investigator opinion on persisting side effects are fuzzy."
+      },
+      {
+        "id": "NCT04683250-cardiovascular",
+        "polarity": "exclusion",
+        "sourceText": "Clinically significant, uncontrolled, cardiovascular disease including myocardial infarction within 3 months prior to Day 1 of Cycle 1, unstable angina pectoris, significant valvular or pericardial disease, history of ventricular tachycardia, symptomatic Congestive Heart Failure (CHF) New York Heart Association (NYHA) class III-IV, and severe uncontrolled arterial hypertension, according to the Investigator's opinion.",
+        "reasonFuzzy": "Complex cardiovascular exclusions rely on investigator opinion and multiple combined conditions."
+      },
+      {
+        "id": "NCT04683250-qt",
+        "polarity": "exclusion",
+        "sourceText": "QT interval corrected using Fridericia's formula (QTcF) >470 msec; personal or family history of prolonged QT syndrome or history of Torsades de pointes (TdP). History of risk factors for TdP",
+        "reasonFuzzy": "QTcF cutoff and TdP history risk factors are not part of the allowed typed checks."
+      },
+      {
+        "id": "NCT04683250-cyp",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with strong CYP3A4 inhibitors within 1 week prior to the first dose of study drug or strong CYP3A4 inducers within 3 weeks prior to the first dose of study drug.",
+        "reasonFuzzy": "Concomitant medication restrictions are not a typed check."
+      },
+      {
+        "id": "NCT04683250-her2-excl",
+        "polarity": "exclusion",
+        "sourceText": "Presence of known EGFR, KRAS, ALK, HER2, ROS1, BRAF and METex14 activating mutations.",
+        "reasonFuzzy": "HER2 and METex14 do not have corresponding typed status kinds."
+      }
+    ]
+  }
+}

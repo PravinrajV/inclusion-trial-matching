@@ -1,0 +1,249 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07365319",
+  "briefTitle": "A Safety and Efficacy Study of EIK1001 in Combination With Pembrolizumab and Chemotherapy in Participants With Stage 4 Non-Small Cell Lung Cancer.",
+  "parsedAt": "2026-11-12T05:58:59.051Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07365319-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Participant must be ≥ 18 years old at the time of signing the informed consent.",
+      "numberValue": 18,
+      "evidence_quote": "Participant must be ≥ 18 years old at the time of signing the informed consent.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07365319-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participant has an ECOG Performance Status of 0 to 1 assessed no more than 10 days before start of the treatment.",
+      "numberValue": 1,
+      "evidence_quote": "Participant has an ECOG Performance Status of 0 to 1 assessed no more than 10 days before start of the treatment.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07365319-life-expectancy",
+      "polarity": "inclusion",
+      "sourceText": "Participant has a life expectancy of at least 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07365319-mutation-directed",
+      "polarity": "inclusion",
+      "sourceText": "Participant must have documented evidence that mutation-directed therapy is not indicated, based on the absence of tumor-activating mutations or fusions (e.g., but not limited to EGFR, ALK, RET, ROS1, BRAF) for which approved first-line targeted therapies are available to the participant in their respective country.",
+      "reasonFuzzy": "This rule specifies the absence of multiple potential mutations and fusions without single clean status kinds for all mentioned genes."
+    },
+    {
+      "id": "NCT07365319-measurable-disease",
+      "polarity": "inclusion",
+      "sourceText": "Participant has at least 1 lesion with measurable disease at Baseline according to RECIST 1.1 as determined locally. Lesions situated in a previously irradiated area are considered measurable if progression has been shown in such lesions.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07365319-life",
+      "polarity": "inclusion",
+      "sourceText": "Participant has a life expectancy of at least 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07365319-mutations",
+      "polarity": "inclusion",
+      "sourceText": "Participant must have documented evidence that mutation-directed therapy is not indicated, based on the absence of tumor-activating mutations or fusions (e.g., but not limited to EGFR, ALK, RET, ROS1, BRAF) for which approved first-line targeted therapies are available to the participant in their respective country.",
+      "reasonFuzzy": "This rule requires the absence of actionable mutations across multiple genes based on availability and is not a single typed status check."
+    },
+    {
+      "id": "NCT07365319-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participant has at least 1 lesion with measurable disease at Baseline according to RECIST 1.1 as determined locally.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07365319-stage",
+      "polarity": "inclusion",
+      "sourceText": "Participant has histologically or cytologically confirmed Stage 4 NSCLC predominately squamous or non-squamous) and is considered a candidate for standard therapy with pembrolizumab and chemotherapy. Participants with NSCLC-NOS (not otherwise specified) will be considered as non-squamous NSCLC.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07365319-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Participant has not received prior systemic therapy for advanced/metastatic NSCLC.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IV,IVA,IVB"
+        },
+        {
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "value": "n:0"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3244
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2501
+  },
+  "ms": 13742,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07365319",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07365319-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant must be ≥ 18 years old at the time of signing the informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07365319-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participant has histologically or cytologically confirmed Stage 4 NSCLC predominately squamous or non-squamous) and is considered a candidate for standard therapy with pembrolizumab and chemotherapy. Participants with NSCLC-NOS (not otherwise specified) will be considered as non-squamous NSCLC.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07365319-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant has an ECOG Performance Status of 0 to 1 assessed no more than 10 days before start of the treatment.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07365319-prior-lines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant has not received prior systemic therapy for advanced/metastatic NSCLC.",
+        "numberValue": 0
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07365319-life-expectancy",
+        "polarity": "inclusion",
+        "sourceText": "Participant has a life expectancy of at least 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT07365319-mutation-directed",
+        "polarity": "inclusion",
+        "sourceText": "Participant must have documented evidence that mutation-directed therapy is not indicated, based on the absence of tumor-activating mutations or fusions (e.g., but not limited to EGFR, ALK, RET, ROS1, BRAF) for which approved first-line targeted therapies are available to the participant in their respective country.",
+        "reasonFuzzy": "This rule specifies the absence of multiple potential mutations and fusions without single clean status kinds for all mentioned genes."
+      },
+      {
+        "id": "NCT07365319-measurable-disease",
+        "polarity": "inclusion",
+        "sourceText": "Participant has at least 1 lesion with measurable disease at Baseline according to RECIST 1.1 as determined locally. Lesions situated in a previously irradiated area are considered measurable if progression has been shown in such lesions.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07365319",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07365319-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant must be ≥ 18 years old at the time of signing the informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07365319-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participant has histologically or cytologically confirmed Stage 4 NSCLC predominately squamous or non-squamous) and is considered a candidate for standard therapy with pembrolizumab and chemotherapy.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07365319-priorlines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant has not received prior systemic therapy for advanced/metastatic NSCLC.",
+        "numberValue": 0
+      },
+      {
+        "id": "NCT07365319-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant has an ECOG Performance Status of 0 to 1 assessed no more than 10 days before start of the treatment.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07365319-life",
+        "polarity": "inclusion",
+        "sourceText": "Participant has a life expectancy of at least 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT07365319-mutations",
+        "polarity": "inclusion",
+        "sourceText": "Participant must have documented evidence that mutation-directed therapy is not indicated, based on the absence of tumor-activating mutations or fusions (e.g., but not limited to EGFR, ALK, RET, ROS1, BRAF) for which approved first-line targeted therapies are available to the participant in their respective country.",
+        "reasonFuzzy": "This rule requires the absence of actionable mutations across multiple genes based on availability and is not a single typed status check."
+      },
+      {
+        "id": "NCT07365319-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participant has at least 1 lesion with measurable disease at Baseline according to RECIST 1.1 as determined locally.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      }
+    ]
+  }
+}

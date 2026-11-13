@@ -1,0 +1,141 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05786924",
+  "briefTitle": "Phase 1/2 Trial of S241656 in Selected RAS/MAPK Mutation- Positive Malignancies",
+  "parsedAt": "2026-11-12T06:17:32.534Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05786924-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of ≥ 12 weeks in the opinion of the investigator.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT05786924-mutation",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed recurrent locally advanced (unresectable) or metastatic solid tumors with documented RAS or RAF mutations or alterations.",
+      "reasonFuzzy": "General RAS or RAF mutations span multiple genes without a single typed check like kras_status or braf_status."
+    },
+    {
+      "id": "NCT05786924-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Prior use of experimental agents that target the KRAS/BRAF/MEK/ERK pathway.",
+      "reasonFuzzy": "Exclusion refers to a broad pathway of experimental agents rather than a specific typed drug or class."
+    },
+    {
+      "id": "NCT05786924-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of ≥ 12 weeks in the opinion of the investigator.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT05786924-mutation",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed recurrent locally advanced (unresectable) or metastatic solid tumors with documented RAS or RAF mutations or alterations.",
+      "reasonFuzzy": "Mutational requirements vary significantly by study part across multiple genes (KRAS, HRAS, NRAS, BRAF, CRAF) and cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT05786924-prior-exp",
+      "polarity": "exclusion",
+      "sourceText": "Prior use of experimental agents that target the KRAS/BRAF/MEK/ERK pathway.",
+      "reasonFuzzy": "Prior therapy rule covers a broad class of experimental agents rather than a specific drug or standard class."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 0,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 0,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 0,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 0,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3132
+  },
+  "runB": {
+    "typedEmitted": 0,
+    "fuzzyEmitted": 3,
+    "attempts": 2,
+    "ms": 16555
+  },
+  "ms": 27662,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05786924",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05786924-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of ≥ 12 weeks in the opinion of the investigator.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT05786924-mutation",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed recurrent locally advanced (unresectable) or metastatic solid tumors with documented RAS or RAF mutations or alterations.",
+        "reasonFuzzy": "General RAS or RAF mutations span multiple genes without a single typed check like kras_status or braf_status."
+      },
+      {
+        "id": "NCT05786924-prior-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Prior use of experimental agents that target the KRAS/BRAF/MEK/ERK pathway.",
+        "reasonFuzzy": "Exclusion refers to a broad pathway of experimental agents rather than a specific typed drug or class."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05786924",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05786924-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of ≥ 12 weeks in the opinion of the investigator.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT05786924-mutation",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed recurrent locally advanced (unresectable) or metastatic solid tumors with documented RAS or RAF mutations or alterations.",
+        "reasonFuzzy": "Mutational requirements vary significantly by study part across multiple genes (KRAS, HRAS, NRAS, BRAF, CRAF) and cannot be expressed as a single typed check."
+      },
+      {
+        "id": "NCT05786924-prior-exp",
+        "polarity": "exclusion",
+        "sourceText": "Prior use of experimental agents that target the KRAS/BRAF/MEK/ERK pathway.",
+        "reasonFuzzy": "Prior therapy rule covers a broad class of experimental agents rather than a specific drug or standard class."
+      }
+    ]
+  }
+}

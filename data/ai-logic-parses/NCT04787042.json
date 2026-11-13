@@ -1,0 +1,262 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04787042",
+  "briefTitle": "Phase 1a and Phase 2 Study for Safety, Preliminary Efficacy, PK and PD of ST-067",
+  "parsedAt": "2026-11-12T06:07:34.543Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04787042-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male and female patients aged ≥18 years",
+      "numberValue": 18,
+      "evidence_quote": "Male and female patients aged ≥18 years",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04787042-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04787042-solid-tumor",
+      "polarity": "inclusion",
+      "sourceText": "Have histologically or cytologically confirmed diagnosis of advanced/metastatic solid tumor",
+      "reasonFuzzy": "Broad solid tumor trial with multiple cohorts and phase-dependent specifications."
+    },
+    {
+      "id": "NCT04787042-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has at least 1 measurable lesion per RECIST 1.1 criteria which has not been biopsied or received prior irradiation",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04787042-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Has an accessible tumor for biopsy pre- and on-treatment (mandatory).",
+      "reasonFuzzy": "Willingness or accessibility for biopsy is a procedural requirement, not a typed check."
+    },
+    {
+      "id": "NCT04787042-brain-1",
+      "polarity": "exclusion",
+      "sourceText": "Known symptomatic brain metastases requiring >10 mg/day of prednisolone or equivalent",
+      "reasonFuzzy": "Symptomatic CNS disease with steroid thresholds is not a clean typed brain_mets rule."
+    },
+    {
+      "id": "NCT04787042-brain-2",
+      "polarity": "exclusion",
+      "sourceText": "Presence of known active CNS metastases and/or carcinomatous meningitis. Subjects with previously treated brain metastases may participate provided they are radiologically stable, i.e., without evidence of progression for at least 4 weeks by repeat imaging, clinically stable, and without requirement of steroid treatment for at least 14 days prior to first dose of study treatment.",
+      "reasonFuzzy": "Combines active CNS exclusion with specific stability and steroid washout windows for treated metastases."
+    },
+    {
+      "id": "NCT04787042-labs",
+      "polarity": "exclusion",
+      "sourceText": "Subjects with any chemistry or hematology laboratory values that are ≥Grade 2",
+      "reasonFuzzy": "General Grade 2 or higher lab abnormality exclusion is not a single specific lab cutoff kind."
+    },
+    {
+      "id": "NCT04787042-tumor",
+      "polarity": "inclusion",
+      "sourceText": "Have histologically or cytologically confirmed diagnosis of advanced/metastatic solid tumor",
+      "reasonFuzzy": "The trial is a basket study for solid tumors, including NSCLC as one of many options across phases with specific phase-dependent mutation exclusions, rather than restricted solely to NSCLC stage definitions."
+    },
+    {
+      "id": "NCT04787042-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has at least 1 measurable lesion per RECIST 1.1 criteria which has not been biopsied or received prior irradiation",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04787042-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Has an accessible tumor for biopsy pre- and on-treatment (mandatory).",
+      "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is a subjective requirement, not a typed check."
+    },
+    {
+      "id": "NCT04787042-brain1",
+      "polarity": "exclusion",
+      "sourceText": "Known symptomatic brain metastases requiring >10 mg/day of prednisolone or equivalent",
+      "reasonFuzzy": "Symptomatic CNS disease with a steroid dose threshold is not a clean typed brain_mets status."
+    },
+    {
+      "id": "NCT04787042-brain2",
+      "polarity": "exclusion",
+      "sourceText": "Presence of known active CNS metastases and/or carcinomatous meningitis. Subjects with previously treated brain metastases may participate provided they are radiologically stable, i.e., without evidence of progression for at least 4 weeks by repeat imaging, clinically stable, and without requirement of steroid treatment for at least 14 days prior to first dose of study treatment.",
+      "reasonFuzzy": "This exclusion applies only to Phase 1 combination therapy and involves stability and steroid washout windows."
+    },
+    {
+      "id": "NCT04787042-labs",
+      "polarity": "exclusion",
+      "sourceText": "Subjects with any chemistry or hematology laboratory values that are ≥Grade 2",
+      "reasonFuzzy": "General CTCAE Grade 2 laboratory cutoffs across multiple unspecified panels cannot be mapped to a single typed lab check."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2543
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2991
+  },
+  "ms": 13532,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04787042",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04787042-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male and female patients aged ≥18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04787042-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04787042-solid-tumor",
+        "polarity": "inclusion",
+        "sourceText": "Have histologically or cytologically confirmed diagnosis of advanced/metastatic solid tumor",
+        "reasonFuzzy": "Broad solid tumor trial with multiple cohorts and phase-dependent specifications."
+      },
+      {
+        "id": "NCT04787042-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has at least 1 measurable lesion per RECIST 1.1 criteria which has not been biopsied or received prior irradiation",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT04787042-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Has an accessible tumor for biopsy pre- and on-treatment (mandatory).",
+        "reasonFuzzy": "Willingness or accessibility for biopsy is a procedural requirement, not a typed check."
+      },
+      {
+        "id": "NCT04787042-brain-1",
+        "polarity": "exclusion",
+        "sourceText": "Known symptomatic brain metastases requiring >10 mg/day of prednisolone or equivalent",
+        "reasonFuzzy": "Symptomatic CNS disease with steroid thresholds is not a clean typed brain_mets rule."
+      },
+      {
+        "id": "NCT04787042-brain-2",
+        "polarity": "exclusion",
+        "sourceText": "Presence of known active CNS metastases and/or carcinomatous meningitis. Subjects with previously treated brain metastases may participate provided they are radiologically stable, i.e., without evidence of progression for at least 4 weeks by repeat imaging, clinically stable, and without requirement of steroid treatment for at least 14 days prior to first dose of study treatment.",
+        "reasonFuzzy": "Combines active CNS exclusion with specific stability and steroid washout windows for treated metastases."
+      },
+      {
+        "id": "NCT04787042-labs",
+        "polarity": "exclusion",
+        "sourceText": "Subjects with any chemistry or hematology laboratory values that are ≥Grade 2",
+        "reasonFuzzy": "General Grade 2 or higher lab abnormality exclusion is not a single specific lab cutoff kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04787042",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04787042-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male and female patients aged ≥18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04787042-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04787042-tumor",
+        "polarity": "inclusion",
+        "sourceText": "Have histologically or cytologically confirmed diagnosis of advanced/metastatic solid tumor",
+        "reasonFuzzy": "The trial is a basket study for solid tumors, including NSCLC as one of many options across phases with specific phase-dependent mutation exclusions, rather than restricted solely to NSCLC stage definitions."
+      },
+      {
+        "id": "NCT04787042-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has at least 1 measurable lesion per RECIST 1.1 criteria which has not been biopsied or received prior irradiation",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT04787042-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Has an accessible tumor for biopsy pre- and on-treatment (mandatory).",
+        "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is a subjective requirement, not a typed check."
+      },
+      {
+        "id": "NCT04787042-brain1",
+        "polarity": "exclusion",
+        "sourceText": "Known symptomatic brain metastases requiring >10 mg/day of prednisolone or equivalent",
+        "reasonFuzzy": "Symptomatic CNS disease with a steroid dose threshold is not a clean typed brain_mets status."
+      },
+      {
+        "id": "NCT04787042-brain2",
+        "polarity": "exclusion",
+        "sourceText": "Presence of known active CNS metastases and/or carcinomatous meningitis. Subjects with previously treated brain metastases may participate provided they are radiologically stable, i.e., without evidence of progression for at least 4 weeks by repeat imaging, clinically stable, and without requirement of steroid treatment for at least 14 days prior to first dose of study treatment.",
+        "reasonFuzzy": "This exclusion applies only to Phase 1 combination therapy and involves stability and steroid washout windows."
+      },
+      {
+        "id": "NCT04787042-labs",
+        "polarity": "exclusion",
+        "sourceText": "Subjects with any chemistry or hematology laboratory values that are ≥Grade 2",
+        "reasonFuzzy": "General CTCAE Grade 2 laboratory cutoffs across multiple unspecified panels cannot be mapped to a single typed lab check."
+      }
+    ]
+  }
+}

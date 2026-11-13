@@ -1,0 +1,916 @@
+{
+  "summary": {
+    "ranAt": "2026-11-12T13:23:31.375Z",
+    "pipeline": "disclosed-variant-gemini-plus-normalizer-fill-zero-unsafe-classes",
+    "note": "Set 3 is no longer truly held out for this variant. Not shipped.",
+    "fillableClasses": [
+      "egfr_status",
+      "alk_status",
+      "kras_status",
+      "ros1_status",
+      "braf_status",
+      "egfr_variant_in",
+      "kras_variant_in",
+      "stage_in",
+      "ecog_max",
+      "brain_mets",
+      "creatinine_max",
+      "egfr_min",
+      "anc_min",
+      "platelets_min",
+      "hemoglobin_min",
+      "bilirubin_max",
+      "ast_max",
+      "alt_max"
+    ],
+    "neverFilled": [
+      "prior_lines_min",
+      "prior_lines_max",
+      "prior_therapy_required",
+      "prior_therapy_excluded"
+    ],
+    "set": 1,
+    "typedHits": 47,
+    "typedTotal": 87,
+    "coverage": 54,
+    "unsafeMisses": 0,
+    "priorTherapyUnsafe": 0,
+    "otherUnsafe": 0,
+    "worseThanBaseline": false,
+    "missingParses": [],
+    "unsafeReport": "0 unsafe out of 87 criteria",
+    "unsafeRows": []
+  },
+  "rows": [
+    {
+      "id": "H01",
+      "nctId": "NCT07688577",
+      "kind": "age_min",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: ecog_max/inclusion, egfr_status/exclusion, alk_status/exclusion, ros1_status/exclusion, prior_therapy_required/inclusion, prior_therapy_excluded/exclusion, brain_mets/exclusion, stage_in/inclusion)",
+      "safety": "safe",
+      "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+    },
+    {
+      "id": "H02",
+      "nctId": "NCT07688577",
+      "kind": "ecog_max",
+      "group": "ecog",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H03",
+      "nctId": "NCT07688577",
+      "kind": "stage_in",
+      "group": "stage",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H04",
+      "nctId": "NCT07688577",
+      "kind": "egfr_status",
+      "group": "driver",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H05",
+      "nctId": "NCT07688577",
+      "kind": "alk_status",
+      "group": "driver",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H06",
+      "nctId": "NCT07688577",
+      "kind": "ros1_status",
+      "group": "driver",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H07",
+      "nctId": "NCT07688577",
+      "kind": "prior_therapy_required",
+      "group": "prior",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H08",
+      "nctId": "NCT07688577",
+      "kind": "prior_therapy_excluded",
+      "group": "prior",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H09",
+      "nctId": "NCT05098132",
+      "kind": "age_min",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/exclusion, alk_status/exclusion, ros1_status/exclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+    },
+    {
+      "id": "H10",
+      "nctId": "NCT05098132",
+      "kind": "stage_in",
+      "group": "stage",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H11",
+      "nctId": "NCT05098132",
+      "kind": "histology_in",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/exclusion, alk_status/exclusion, ros1_status/exclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H12",
+      "nctId": "NCT05098132",
+      "kind": "prior_lines_max",
+      "group": "prior",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/exclusion, alk_status/exclusion, ros1_status/exclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H13",
+      "nctId": "NCT05098132",
+      "kind": "egfr_status",
+      "group": "driver",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H14",
+      "nctId": "NCT05098132",
+      "kind": "alk_status",
+      "group": "driver",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H15",
+      "nctId": "NCT05098132",
+      "kind": "ros1_status",
+      "group": "driver",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H16",
+      "nctId": "NCT05098132",
+      "kind": "prior_therapy_excluded",
+      "group": "prior",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/exclusion, alk_status/exclusion, ros1_status/exclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H17",
+      "nctId": "NCT05098132",
+      "kind": "brain_mets",
+      "group": "brain",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H18",
+      "nctId": "NCT06357533",
+      "kind": "age_min",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, alk_status/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+    },
+    {
+      "id": "H19",
+      "nctId": "NCT06357533",
+      "kind": "histology_in",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, alk_status/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H20",
+      "nctId": "NCT06357533",
+      "kind": "stage_in",
+      "group": "stage",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H21",
+      "nctId": "NCT06357533",
+      "kind": "egfr_status",
+      "group": "driver",
+      "verdict": "hit",
+      "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H22",
+      "nctId": "NCT06357533",
+      "kind": "alk_status",
+      "group": "driver",
+      "verdict": "hit",
+      "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H23",
+      "nctId": "NCT06357533",
+      "kind": "ros1_status",
+      "group": "driver",
+      "verdict": "hit",
+      "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H24",
+      "nctId": "NCT06357533",
+      "kind": "pdl1_min",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, alk_status/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H25",
+      "nctId": "NCT06357533",
+      "kind": "ecog_max",
+      "group": "ecog",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H26",
+      "nctId": "NCT06357533",
+      "kind": "prior_lines_max",
+      "group": "prior",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, alk_status/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H27",
+      "nctId": "NCT06357533",
+      "kind": "brain_mets",
+      "group": "brain",
+      "verdict": "hit",
+      "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H28",
+      "nctId": "NCT06868277",
+      "kind": "age_min",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/exclusion, alk_status/exclusion, ros1_status/exclusion, ecog_max/inclusion, prior_therapy_excluded/exclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+    },
+    {
+      "id": "H29",
+      "nctId": "NCT06868277",
+      "kind": "stage_in",
+      "group": "stage",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H30",
+      "nctId": "NCT06868277",
+      "kind": "egfr_status",
+      "group": "driver",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H31",
+      "nctId": "NCT06868277",
+      "kind": "alk_status",
+      "group": "driver",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H32",
+      "nctId": "NCT06868277",
+      "kind": "ros1_status",
+      "group": "driver",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H33",
+      "nctId": "NCT06868277",
+      "kind": "ecog_max",
+      "group": "ecog",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H34",
+      "nctId": "NCT06868277",
+      "kind": "prior_lines_max",
+      "group": "prior",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/exclusion, alk_status/exclusion, ros1_status/exclusion, ecog_max/inclusion, prior_therapy_excluded/exclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H35",
+      "nctId": "NCT06868277",
+      "kind": "prior_therapy_excluded",
+      "group": "prior",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H36",
+      "nctId": "NCT06868277",
+      "kind": "brain_mets",
+      "group": "brain",
+      "verdict": "hit",
+      "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H37",
+      "nctId": "NCT06248606",
+      "kind": "age_min",
+      "group": "other",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H38",
+      "nctId": "NCT06248606",
+      "kind": "ecog_max",
+      "group": "ecog",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H39",
+      "nctId": "NCT06248606",
+      "kind": "stage_in",
+      "group": "stage",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: age_min/inclusion, ecog_max/inclusion, prior_lines_max/inclusion, hemoglobin_min/inclusion, egfr_min/inclusion, bilirubin_max/inclusion, ast_max/inclusion, alt_max/inclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H40",
+      "nctId": "NCT06248606",
+      "kind": "kras_variant_in",
+      "group": "driver",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: age_min/inclusion, ecog_max/inclusion, prior_lines_max/inclusion, hemoglobin_min/inclusion, egfr_min/inclusion, bilirubin_max/inclusion, ast_max/inclusion, alt_max/inclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H41",
+      "nctId": "NCT06248606",
+      "kind": "brain_mets",
+      "group": "brain",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: age_min/inclusion, ecog_max/inclusion, prior_lines_max/inclusion, hemoglobin_min/inclusion, egfr_min/inclusion, bilirubin_max/inclusion, ast_max/inclusion, alt_max/inclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H42",
+      "nctId": "NCT06248606",
+      "kind": "prior_lines_max",
+      "group": "prior",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H43",
+      "nctId": "NCT06248606",
+      "kind": "prior_therapy_excluded",
+      "group": "prior",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: age_min/inclusion, ecog_max/inclusion, prior_lines_max/inclusion, hemoglobin_min/inclusion, egfr_min/inclusion, bilirubin_max/inclusion, ast_max/inclusion, alt_max/inclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H44",
+      "nctId": "NCT06248606",
+      "kind": "hemoglobin_min",
+      "group": "labs",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H45",
+      "nctId": "NCT06248606",
+      "kind": "egfr_min",
+      "group": "labs",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H46",
+      "nctId": "NCT06248606",
+      "kind": "bilirubin_max",
+      "group": "labs",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H47",
+      "nctId": "NCT06248606",
+      "kind": "ast_max",
+      "group": "labs",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H48",
+      "nctId": "NCT06248606",
+      "kind": "alt_max",
+      "group": "labs",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H49",
+      "nctId": "NCT06627647",
+      "kind": "age_min",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, prior_therapy_excluded/exclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+    },
+    {
+      "id": "H50",
+      "nctId": "NCT06627647",
+      "kind": "histology_in",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, prior_therapy_excluded/exclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H51",
+      "nctId": "NCT06627647",
+      "kind": "stage_in",
+      "group": "stage",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H52",
+      "nctId": "NCT06627647",
+      "kind": "egfr_status",
+      "group": "driver",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, prior_therapy_excluded/exclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H53",
+      "nctId": "NCT06627647",
+      "kind": "alk_status",
+      "group": "driver",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, prior_therapy_excluded/exclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H54",
+      "nctId": "NCT06627647",
+      "kind": "ros1_status",
+      "group": "driver",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, prior_therapy_excluded/exclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H55",
+      "nctId": "NCT06627647",
+      "kind": "pdl1_min",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, prior_therapy_excluded/exclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H56",
+      "nctId": "NCT06627647",
+      "kind": "prior_lines_max",
+      "group": "prior",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, prior_therapy_excluded/exclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H57",
+      "nctId": "NCT06627647",
+      "kind": "prior_therapy_excluded",
+      "group": "prior",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H58",
+      "nctId": "NCT06627647",
+      "kind": "brain_mets",
+      "group": "brain",
+      "verdict": "hit",
+      "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H59",
+      "nctId": "NCT06627647",
+      "kind": "egfr_variant_in",
+      "group": "driver",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, prior_therapy_excluded/exclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H60",
+      "nctId": "NCT06772623",
+      "kind": "age_min",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+    },
+    {
+      "id": "H61",
+      "nctId": "NCT06772623",
+      "kind": "histology_in",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H62",
+      "nctId": "NCT04614103",
+      "kind": "age_min",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+    },
+    {
+      "id": "H63",
+      "nctId": "NCT04614103",
+      "kind": "age_max",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H64",
+      "nctId": "NCT04614103",
+      "kind": "stage_in",
+      "group": "stage",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H65",
+      "nctId": "NCT04614103",
+      "kind": "egfr_status",
+      "group": "driver",
+      "verdict": "hit",
+      "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H66",
+      "nctId": "NCT04614103",
+      "kind": "alk_status",
+      "group": "driver",
+      "verdict": "hit",
+      "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H67",
+      "nctId": "NCT04614103",
+      "kind": "ros1_status",
+      "group": "driver",
+      "verdict": "hit",
+      "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H68",
+      "nctId": "NCT04614103",
+      "kind": "ecog_max",
+      "group": "ecog",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H69",
+      "nctId": "NCT04614103",
+      "kind": "prior_lines_min",
+      "group": "prior",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H70",
+      "nctId": "NCT04614103",
+      "kind": "prior_lines_max",
+      "group": "prior",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H71",
+      "nctId": "NCT07291037",
+      "kind": "age_min",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, braf_status/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+    },
+    {
+      "id": "H72",
+      "nctId": "NCT07291037",
+      "kind": "stage_in",
+      "group": "stage",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H73",
+      "nctId": "NCT07291037",
+      "kind": "histology_in",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, braf_status/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H74",
+      "nctId": "NCT07291037",
+      "kind": "egfr_status",
+      "group": "driver",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, braf_status/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H75",
+      "nctId": "NCT07291037",
+      "kind": "alk_status",
+      "group": "driver",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, braf_status/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H76",
+      "nctId": "NCT07291037",
+      "kind": "ros1_status",
+      "group": "driver",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, braf_status/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H77",
+      "nctId": "NCT07291037",
+      "kind": "kras_variant_in",
+      "group": "driver",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, braf_status/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H78",
+      "nctId": "NCT07291037",
+      "kind": "ecog_max",
+      "group": "ecog",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H79",
+      "nctId": "NCT07291037",
+      "kind": "prior_lines_min",
+      "group": "prior",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, braf_status/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H80",
+      "nctId": "NCT07291037",
+      "kind": "prior_lines_max",
+      "group": "prior",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, braf_status/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H81",
+      "nctId": "NCT07291037",
+      "kind": "prior_therapy_required",
+      "group": "prior",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, braf_status/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H82",
+      "nctId": "NCT07291037",
+      "kind": "brain_mets",
+      "group": "brain",
+      "verdict": "hit",
+      "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H83",
+      "nctId": "NCT07154290",
+      "kind": "age_min",
+      "group": "other",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+    },
+    {
+      "id": "H84",
+      "nctId": "NCT07154290",
+      "kind": "stage_in",
+      "group": "stage",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H85",
+      "nctId": "NCT07154290",
+      "kind": "ecog_max",
+      "group": "ecog",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "H86",
+      "nctId": "NCT07154290",
+      "kind": "prior_lines_min",
+      "group": "prior",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+      "safety": "safe",
+      "safetyReason": "left fuzzy so the on-device judge can handle it"
+    },
+    {
+      "id": "H87",
+      "nctId": "NCT07154290",
+      "kind": "brain_mets",
+      "group": "brain",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    }
+  ]
+}

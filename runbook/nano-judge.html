@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inclusion: on-device fuzzy judge</title>
+    <style>
+      :root { font-family: Georgia, "Palatino Linotype", Palatino, serif; color: #1c1917; background: #faf7f2; }
+      body { max-width: 52rem; margin: 2rem auto; padding: 0 1rem 4rem; line-height: 1.5; }
+      button { font: inherit; padding: 0.5rem 0.9rem; margin: 0.3rem 0.4rem 0.3rem 0; cursor: pointer; }
+      pre, #report { background: #fff; border: 1px solid #d6d3d1; padding: 0.8rem 1rem; white-space: pre-wrap; }
+      table { width: 100%; border-collapse: collapse; margin-top: 1rem; background: #fff; }
+      th, td { border: 1px solid #d6d3d1; padding: 0.4rem 0.5rem; text-align: left; vertical-align: top; font-size: 0.95rem; }
+      .ok { color: #0f4c3a; font-weight: 600; }
+      .fail { color: #7f1d1d; font-weight: 600; }
+      .hint { color: #57534e; }
+    </style>
+  </head>
+  <body>
+    <h1>Inclusion: on-device fuzzy judge</h1>
+    <p>This page talks only to Chrome's built-in Prompt API on this computer. It does not use Firebase, and it does not send the clinic note or the criterion to a cloud model.</p>
+    <p class="hint">The three notes are synthetic. They are not real patients. Do not paste a real medical record here. There are two fuzzy gold criteria, judged once per persona, for six prompts in total. A met or not_met answer is kept only if evidence_quote is copied verbatim from the note and the reason does not hedge (assuming, implying, likely, presumably). Otherwise the page records unknown.</p>
+    <p>
+      <button type="button" id="availability">Check availability</button>
+      <button type="button" id="run">Run the six fuzzy judgments</button>
+    </p>
+    <div id="report">No check yet.</div>
+    <div id="table"></div>
+    <script>
+
+      const GOLD = {
+  "disclaimer": "Synthetic personas only. Not real patients. Criteria sourceText is public ClinicalTrials.gov language.",
+  "schemaVersion": "1",
+  "pulledDataTimestampFromApi": "2026-11-10T10:00:05",
+  "personas": [
+    {
+      "id": "alex-rivera",
+      "displayName": "Alex Rivera",
+      "clinicNote": "Synthetic oncology progress note. Not a real patient.\n\nAlex Rivera is a 62-year-old never-smoker who lives in Columbus, Ohio. Diagnosis: stage IV lung adenocarcinoma, EGFR exon 19 deletion detected on tumor NGS. The patient received osimertinib as first-line therapy and has now progressed. No other systemic lines. ALK rearrangement not detected. KRAS mutation not detected. PD-L1 TPS 30% (22C3). ECOG performance status 1. MRI brain without evidence of metastases. Labs today: creatinine 0.9 mg/dL, eGFR 85 mL/min, AST 28, ALT 22, total bilirubin 0.6 mg/dL, ANC 3200/uL, platelets 210000/uL, hemoglobin 12.4 g/dL. Measurable lung and mediastinal disease on CT."
+    },
+    {
+      "id": "jordan-blake",
+      "displayName": "Jordan Blake",
+      "clinicNote": "Synthetic oncology progress note. Not a real patient.\n\nJordan Blake is a 71-year-old former smoker (40 pack-years, quit 5 years ago) who lives in Cleveland, Ohio. Diagnosis: unresectable stage IIIB squamous non-small cell lung cancer. No EGFR sensitizing mutation, no ALK rearrangement, and no KRAS mutation reported on the molecular panel. PD-L1 TPS 80% (22C3). ECOG performance status 2. No prior systemic therapy for this cancer. No brain metastases. Labs: creatinine 1.6 mg/dL, eGFR 48 mL/min, AST 35, ALT 30, total bilirubin 0.8 mg/dL, ANC 1800/uL, platelets 155000/uL, hemoglobin 11.1 g/dL."
+    },
+    {
+      "id": "sam-okonkwo",
+      "displayName": "Sam Okonkwo",
+      "clinicNote": "Synthetic oncology progress note. Not a real patient.\n\nSam Okonkwo is a 54-year-old never-smoker who lives in Cincinnati, Ohio. Diagnosis: stage IV lung adenocarcinoma with an ALK rearrangement. The patient was treated with alectinib as first-line therapy and has radiographic progression. EGFR mutation not detected. KRAS mutation not detected. PD-L1 TPS 5%. ECOG performance status 0. Brain metastases were treated with stereotactic radiosurgery 6 weeks ago and are stable. The patient is off glucocorticoids and neurologically stable. Labs: creatinine 0.8 mg/dL, eGFR 95 mL/min, AST 24, ALT 20, total bilirubin 0.5 mg/dL, ANC 4100/uL, platelets 240000/uL, hemoglobin 13.6 g/dL."
+    }
+  ],
+  "criteria": [
+    {
+      "id": "C25",
+      "nctId": "NCT04181060",
+      "kind": "fuzzy",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have measurable disease. Baseline measurements of sites of disease must be obtained within 4 weeks prior to study randomization.",
+      "reasonFuzzy": "RECIST-style measurable disease is not a typed field on the fact sheet yet.",
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "unknown",
+        "sam-okonkwo": "unknown"
+      }
+    },
+    {
+      "id": "C26",
+      "nctId": "NCT06561386",
+      "kind": "fuzzy",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a life expectancy of at least 3 months at the time of randomization.",
+      "reasonFuzzy": "Life expectancy is a clinical judgment, not a lab value we can check.",
+      "expected": {
+        "alex-rivera": "unknown",
+        "jordan-blake": "unknown",
+        "sam-okonkwo": "unknown"
+      }
+    }
+  ]
+};
+
+      const OPTIONS = {
+        expectedInputs: [{ type: "text", languages: ["en"] }],
+        expectedOutputs: [{ type: "text", languages: ["en"] }],
+      };
+      const SCHEMA = {
+        type: "object",
+        properties: {
+          judgment: { type: "string", enum: ["met", "not_met", "unknown"] },
+          reason: { type: "string" },
+          evidence_quote: { type: "string" },
+        },
+        required: ["judgment", "reason", "evidence_quote"],
+        additionalProperties: false,
+      };
+      const HEDGE = /\b(assuming|assumed|assume|implying|implied|imply|likely|presumably|presumable|presumed)\b/i;
+
+      const report = document.getElementById("report");
+      const table = document.getElementById("table");
+
+      function log(message, replace) {
+        const text = String(message);
+        if (replace || !report.textContent || report.textContent === "No check yet.") {
+          report.textContent = text;
+        } else {
+          report.textContent = report.textContent.replace(/\n$/, "") + "\n" + text;
+        }
+      }
+
+      function hasPromptApi() {
+        return typeof LanguageModel !== "undefined";
+      }
+
+      function promptFor(persona, criterion) {
+        return (
+          "You judge one public clinical trial eligibility rule against a synthetic clinic note. " +
+          "This is not a real patient. Use only words that appear in the note. " +
+          "If the note does not say enough to decide, return judgment unknown. " +
+          "Do not invent labs, measurements, baseline timing, or a life expectancy that the note does not state. " +
+          "Do not assume, imply, or presume missing facts.\n\n" +
+          "Return JSON with: judgment (met, not_met, or unknown); reason (a short phrase); " +
+          "and evidence_quote, which must be copied verbatim from the clinic note and must be the words that support the judgment. " +
+          "If you cannot copy a supporting phrase from the note, set judgment to unknown and leave evidence_quote empty.\n\n" +
+          "The rule is an " + criterion.polarity + " criterion from " + criterion.nctId + ":\n" +
+          criterion.sourceText +
+          "\n\nSynthetic clinic note:\n" +
+          persona.clinicNote
+        );
+      }
+
+      function normalize(value) {
+        const s = String(value || "").trim().toLowerCase().replace(/[\s-]+/g, "_");
+        if (s === "met" || s === "not_met" || s === "unknown") return s;
+        if (s === "notmet" || s === "not_meet" || s === "fail") return "not_met";
+        return "invalid:" + String(value);
+      }
+
+      function isHedged(text) {
+        return HEDGE.test(String(text || ""));
+      }
+
+      function isVerbatimQuote(quote, note) {
+        const q = String(quote || "").trim();
+        if (q.length < 8) return false;
+        return note.includes(q);
+      }
+
+      function finalizeJudgment(parsed, note) {
+        const raw = normalize(parsed && parsed.judgment);
+        if (raw !== "met" && raw !== "not_met") return "unknown";
+        const quote = parsed && parsed.evidence_quote;
+        const reason = parsed && parsed.reason;
+        if (!isVerbatimQuote(quote, note)) return "unknown";
+        if (isHedged(reason) || isHedged(quote)) return "unknown";
+        return raw;
+      }
+
+      document.getElementById("availability").addEventListener("click", async () => {
+        table.innerHTML = "";
+        if (!hasPromptApi()) {
+          log("FAIL. LanguageModel is not in this browser. Use desktop Chrome 139 or higher.", true);
+          return;
+        }
+        try {
+          const availability = await LanguageModel.availability(OPTIONS);
+          log("availability: " + availability + "\n\nIf this is available, click the other button. The model should already be on this machine from the November 14 hardware check.", true);
+        } catch (err) {
+          log("FAIL. availability() threw: " + String(err), true);
+        }
+      });
+
+      document.getElementById("run").addEventListener("click", async () => {
+        table.innerHTML = "";
+        if (!hasPromptApi()) {
+          log("FAIL. LanguageModel is not in this browser.", true);
+          return;
+        }
+        try {
+          const availability = await LanguageModel.availability(OPTIONS);
+          log("availability: " + availability + "\nCreating a session and running six on-device prompts.", true);
+          const session = await LanguageModel.create({
+            ...OPTIONS,
+            monitor(m) {
+              m.addEventListener("downloadprogress", (e) => {
+                const pct = Math.round((e.loaded || 0) * 10000) / 100;
+                log("Download progress: " + pct + "%");
+              });
+            },
+          });
+          const rows = [];
+          let correct = 0;
+          let total = 0;
+          for (const criterion of GOLD.criteria) {
+            for (const persona of GOLD.personas) {
+              total += 1;
+              log("Running " + criterion.id + " on " + persona.displayName + "...");
+              const raw = await session.prompt(promptFor(persona, criterion), { responseConstraint: SCHEMA });
+              let parsed;
+              try {
+                parsed = JSON.parse(raw);
+              } catch (err) {
+                parsed = { judgment: "invalid", reason: "model did not return JSON: " + String(raw).slice(0, 200), evidence_quote: "" };
+              }
+              const got = finalizeJudgment(parsed, persona.clinicNote);
+              const modelJudgment = normalize(parsed.judgment);
+              const expected = criterion.expected[persona.id];
+              const ok = got === expected;
+              if (ok) correct += 1;
+              let flag = "";
+              if (modelJudgment !== got) {
+                flag = "downgraded from " + modelJudgment;
+              }
+              rows.push({
+                id: criterion.id,
+                persona: persona.displayName,
+                expected,
+                got,
+                modelJudgment,
+                ok,
+                flag,
+                reason: parsed.reason || "",
+                quote: parsed.evidence_quote || "",
+              });
+            }
+          }
+          const pct = Math.round((correct / total) * 1000) / 10;
+          const passBar = "These 6 items are the fuzzy leftover of the 26-criterion gold set. A useful bar is 5 or 6 correct, with unknown used when the note is silent. met or not_met is accepted only when evidence_quote is a verbatim substring of the note and the reason does not hedge.";
+          log(
+            "RESULT. " + correct + " / " + total + " matching gold (" + pct + "%).\n\n" +
+              passBar +
+              "\n\nTake a screenshot of this page, including the table, and send it back."
+          );
+          if (correct < 5) report.className = "fail";
+          else report.className = "ok";
+          let html = "<table><thead><tr><th>Item</th><th>Persona</th><th>Gold</th><th>Final</th><th>Model</th><th>Match</th><th>Reason / quote</th></tr></thead><tbody>";
+          for (const row of rows) {
+            const cls = row.ok ? "ok" : "fail";
+            const detail = [row.flag, row.reason, row.quote ? ('"' + row.quote + '"') : "no quote"]
+              .filter(Boolean)
+              .join(" — ")
+              .replace(/&/g, "&amp;")
+              .replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;");
+            html += "<tr><td>" + row.id + "</td><td>" + row.persona + "</td><td>" + row.expected + "</td><td>" + row.got + "</td><td>" + row.modelJudgment + "</td><td class=\"" + cls + "\">" + (row.ok ? "yes" : "no") + "</td><td>" + detail + "</td></tr>";
+          }
+          html += "</tbody></table>";
+          table.innerHTML = html;
+          console.log(JSON.stringify({ correct, total, pct, rows }, null, 2));
+        } catch (err) {
+          log("FAIL. " + String(err), true);
+        }
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,268 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06170788",
+  "briefTitle": "Sacituzumab Tirumotecan (MK-2870) in Combination With Pembrolizumab Versus Pembrolizumab Alone in Metastatic Non-small Cell Lung Cancer (NSCLC) With Programmed Cell Death Ligand 1 (PD-L1) Tumor Proportion Score (TPS) ≥ 50% (MK-2870-007)",
+  "parsedAt": "2026-11-12T05:50:59.178Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06170788-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "An Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 assessed within 7 days before randomization.",
+      "numberValue": 1,
+      "evidence_quote": "An Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 assessed within 7 days before randomization.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06170788-prior-therapy-1",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Received prior therapy with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor Note: Prior treatment with an anti-PD-1, anti-PD- L1, or anti-PD-L2 agent in the neoadjuvant or adjuvant setting for nonmetastatic resectable NSCLC is allowed as long as therapy was completed at least 12 months before diagnosis of metastatic NSCLC.",
+      "stringValue": "anti-PD-1",
+      "evidence_quote": "Received prior therapy with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor Note: Prior treatment with an anti-PD-1, anti-PD- L1, or anti-PD-L2 agent in the neoadjuvant or adjuvant setting for nonmetastatic resectable NSCLC is allowed as long as therapy was completed at least 12 months before diagnosis of metastatic NSCLC.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06170788-brain-mets",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Known active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Known active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06170788-egfr-alk-ros1",
+      "polarity": "inclusion",
+      "sourceText": "Confirmation that epidermal growth factor receptor- (EGFR-), anaplastic lymphoma kinase- (ALK-), or proto-oncogene tyrosine-protein kinase ROS (ROS1-) directed therapy is not indicated as primary therapy",
+      "reasonFuzzy": "Exclusion of targeted therapy indication is not a standard positive biomarker status check."
+    },
+    {
+      "id": "NCT06170788-life-expectancy",
+      "polarity": "inclusion",
+      "sourceText": "A life expectancy of at least 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06170788-prior-systemic",
+      "polarity": "exclusion",
+      "sourceText": "Received prior systemic anticancer therapy for their metastatic NSCLC.",
+      "reasonFuzzy": "This rule overlaps with specific prior therapy exclusions and is broader than a simple typed prior lines count."
+    },
+    {
+      "id": "NCT06170788-life",
+      "polarity": "inclusion",
+      "sourceText": "A life expectancy of at least 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06170788-stage",
+      "polarity": "inclusion",
+      "sourceText": "Metastatic Non-small Cell Lung Cancer (NSCLC)",
+      "reasonFuzzy": "Metastatic disease is described in descriptive terms rather than an explicit stage list."
+    },
+    {
+      "id": "NCT06170788-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of squamous or nonsquamous NSCLC",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06170788-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Provided tumor tissue that demonstrates programmed cell death ligand 1 (PD-L1) expression in ≥50% of tumor cells as assessed by an immunohistochemistry (IHC) central laboratory",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos,squamous"
+        },
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:50"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2789
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2957
+  },
+  "ms": 13746,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06170788",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06170788-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of squamous or nonsquamous NSCLC",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06170788-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Provided tumor tissue that demonstrates programmed cell death ligand 1 (PD-L1) expression in ≥50% of tumor cells as assessed by an immunohistochemistry (IHC) central laboratory",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT06170788-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "An Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 assessed within 7 days before randomization.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06170788-prior-therapy-1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Received prior therapy with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor Note: Prior treatment with an anti-PD-1, anti-PD- L1, or anti-PD-L2 agent in the neoadjuvant or adjuvant setting for nonmetastatic resectable NSCLC is allowed as long as therapy was completed at least 12 months before diagnosis of metastatic NSCLC.",
+        "stringValue": "anti-PD-1"
+      },
+      {
+        "id": "NCT06170788-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06170788-egfr-alk-ros1",
+        "polarity": "inclusion",
+        "sourceText": "Confirmation that epidermal growth factor receptor- (EGFR-), anaplastic lymphoma kinase- (ALK-), or proto-oncogene tyrosine-protein kinase ROS (ROS1-) directed therapy is not indicated as primary therapy",
+        "reasonFuzzy": "Exclusion of targeted therapy indication is not a standard positive biomarker status check."
+      },
+      {
+        "id": "NCT06170788-life-expectancy",
+        "polarity": "inclusion",
+        "sourceText": "A life expectancy of at least 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06170788-prior-systemic",
+        "polarity": "exclusion",
+        "sourceText": "Received prior systemic anticancer therapy for their metastatic NSCLC.",
+        "reasonFuzzy": "This rule overlaps with specific prior therapy exclusions and is broader than a simple typed prior lines count."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06170788",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06170788-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of squamous or nonsquamous NSCLC",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06170788-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Provided tumor tissue that demonstrates programmed cell death ligand 1 (PD-L1) expression in ≥50% of tumor cells as assessed by an immunohistochemistry (IHC) central laboratory",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT06170788-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "An Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 assessed within 7 days before randomization.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06170788-prior-therapy-pdl1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Received prior therapy with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor Note: Prior treatment with an anti-PD-1, anti-PD- L1, or anti-PD-L2 agent in the neoadjuvant or adjuvant setting for nonmetastatic resectable NSCLC is allowed as long as therapy was completed at least 12 months before diagnosis of metastatic NSCLC.",
+        "stringValue": "anti-PD-1, anti-PD-L1, or anti-PD-L2 agent"
+      },
+      {
+        "id": "NCT06170788-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06170788-life",
+        "polarity": "inclusion",
+        "sourceText": "A life expectancy of at least 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06170788-stage",
+        "polarity": "inclusion",
+        "sourceText": "Metastatic Non-small Cell Lung Cancer (NSCLC)",
+        "reasonFuzzy": "Metastatic disease is described in descriptive terms rather than an explicit stage list."
+      }
+    ]
+  }
+}

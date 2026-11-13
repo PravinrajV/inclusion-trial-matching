@@ -1,0 +1,367 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06669117",
+  "briefTitle": "FIH Trial of VERT-002 in Patients With Locally Advanced or Metastatic Solid Tumors With MET Alterations",
+  "parsedAt": "2026-11-12T10:30:21.126Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06669117-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06669117-part1-solid",
+      "polarity": "inclusion",
+      "sourceText": "Part 1: histological confirmation of relapsed and/or refractory locally advanced or metastatic solid tumor for which no standard of care treatment is available.",
+      "reasonFuzzy": "Part 1 includes general solid tumors rather than being limited exclusively to NSCLC."
+    },
+    {
+      "id": "NCT06669117-met-alterations-1",
+      "polarity": "inclusion",
+      "sourceText": "Part 1: presence of at least one of the following MET alterations based on local documentation of blood or archived tissue results: METex14 mutation, MET kinase domain activating gene mutations (e.g. H1094L/R/Y, D1228H/N/V, Y1230A/C/D/H), MET amplification",
+      "reasonFuzzy": "There are no dedicated typed checks for MET alterations or MET amplification."
+    },
+    {
+      "id": "NCT06669117-met-alterations-2",
+      "polarity": "inclusion",
+      "sourceText": "Part 2-a: presence of METex14 mutation (based on local documentation of blood or archived tissue results) and for Part 2-b presence of at least one of the following MET alterations: METex14 mutation (based on local documentation of blood or archived tissue results), de novo MET amplification (based on local documentation of archived tissue results). Confirmation after enrollment in the trial will be performed by central testing from an archival tumor biopsy sample (either tissue block or at least 15 serial cut unstained slides of 5 μm, at least 20% tumor content). In case no archival biopsy is available for central testing, the patient must be willing to have a fresh tumor biopsy sample collected and the tumor biopsy should be deemed safe and feasible by the investigator.",
+      "reasonFuzzy": "Complex criteria involving optional fresh biopsy feasibility, central testing requirements, and multiple conditional MET alteration sub-parts."
+    },
+    {
+      "id": "NCT06669117-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Part 2: at least one measurable target lesion according to RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06669117-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Part 2: a maximum of 3 prior lines of systemic therapies.",
+      "reasonFuzzy": "Part-specific prior lines limit cannot be combined into a single study-wide rule without part distinction."
+    },
+    {
+      "id": "NCT06669117-organ-function",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematologic function. Adequate hepatic function. Adequate renal function. Albumin ≥ 3 g/dL. Adequate coagulation function. Adequate cardiac function.",
+      "reasonFuzzy": "General organ function categories without specific numeric cutoffs for labs except albumin."
+    },
+    {
+      "id": "NCT06669117-cns-exclusions",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled Central Nervous System (CNS) metastases or spinal cord compression that are associated with progressive neurological symptoms or require increasing doses of corticosteroids to control the CNS disease.",
+      "reasonFuzzy": "Excludes uncontrolled CNS metastases with progressive symptoms or increasing steroids, which does not fit a simple standard allowedBrainMets category."
+    },
+    {
+      "id": "NCT06669117-stage",
+      "polarity": "inclusion",
+      "sourceText": "Part 2: histological confirmation of locally advanced or metastatic NSCLC Stage IIIB/C or IV (American Joint Commission on Cancer [AJCC] 8th edition) in participants who are not eligible for or should have received available standard of care therapies including curative intent surgery, chemoradiation, radiotherapy or systemic therapy.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06669117-age",
+      "polarity": "inclusion",
+      "sourceText": "18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06669117-part1-solid",
+      "polarity": "inclusion",
+      "sourceText": "Part 1: histological confirmation of relapsed and/or refractory locally advanced or metastatic solid tumor for which no standard of care treatment is available.",
+      "reasonFuzzy": "Part 1 applies to general solid tumors, not specific to NSCLC."
+    },
+    {
+      "id": "NCT06669117-met-alt",
+      "polarity": "inclusion",
+      "sourceText": "presence of at least one of the following MET alterations based on local documentation of blood or archived tissue results: METex14 mutation, MET kinase domain activating gene mutations (e.g. H1094L/R/Y, D1228H/N/V, Y1230A/C/D/H), MET amplification",
+      "reasonFuzzy": "MET alterations are not represented by the specific allowed typed status kinds (which are limited to egfr, alk, kras, ros1, braf)."
+    },
+    {
+      "id": "NCT06669117-part2-met",
+      "polarity": "inclusion",
+      "sourceText": "Part 2-a: presence of METex14 mutation (based on local documentation of blood or archived tissue results) and for Part 2-b presence of at least one of the following MET alterations: METex14 mutation (based on local documentation of blood or archived tissue results), de novo MET amplification (based on local documentation of archived tissue results). Confirmation after enrollment in the trial will be performed by central testing from an archival tumor biopsy sample (either tissue block or at least 15 serial cut unstained slides of 5 μm, at least 20% tumor content). In case no archival biopsy is available for central testing, the patient must be willing to have a fresh tumor biopsy sample collected and the tumor biopsy should be deemed safe and feasible by the investigator.",
+      "reasonFuzzy": "Involves complex part-specific rules, biopsy willingness, and investigator judgment."
+    },
+    {
+      "id": "NCT06669117-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Part 2: at least one measurable target lesion according to RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06669117-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Part 2: a maximum of 3 prior lines of systemic therapies.",
+      "reasonFuzzy": "Part 2 prior lines limit is part-dependent and not universally applicable to all study arms."
+    },
+    {
+      "id": "NCT06669117-organs",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematologic function. Adequate hepatic function. Adequate renal function. Albumin ≥ 3 g/dL. Adequate coagulation function. Adequate cardiac function.",
+      "reasonFuzzy": "General organ function statements without specific typed numeric lab cutoffs are subjective or incomplete."
+    },
+    {
+      "id": "NCT06669117-oncogene-excl",
+      "polarity": "exclusion",
+      "sourceText": "Part 2: Documented evidence by local testing of targetable oncogene driver mutations.",
+      "reasonFuzzy": "Exclusion based on general targetable oncogene driver mutations is broader than a single typed biomarker check."
+    },
+    {
+      "id": "NCT06669117-brain-excl",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled Central Nervous System (CNS) metastases or spinal cord compression that are associated with progressive neurological symptoms or require increasing doses of corticosteroids to control the CNS disease.",
+      "reasonFuzzy": "Uncontrolled CNS metastases defined by progressive neurological symptoms and corticosteroid requirements are not a clean binary brain_mets status check."
+    },
+    {
+      "id": "NCT06669117-stage",
+      "polarity": "inclusion",
+      "sourceText": "Part 2: histological confirmation of locally advanced or metastatic NSCLC Stage IIIB/C or IV (American Joint Commission on Cancer [AJCC] 8th edition) in participants who are not eligible for or should have received available standard of care therapies including curative intent surgery, chemoradiation, radiotherapy or systemic therapy.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06669117-age",
+      "polarity": "inclusion",
+      "sourceText": "Part 1: histological confirmation of relapsed and/or refractory locally advanced or metastatic solid tumor for which no standard of care treatment is available.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Part 2: histological confirmation of locally advanced or metastatic NSCLC Stage IIIB/C or IV (American Joint Commission on Cancer [AJCC] 8th edition) in partici"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Part 2: histological confirmation of locally advanced or metastatic NSCLC Stage IIIB/C or IV (American Joint Commission on Cancer [AJCC] 8th edition) in partici"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:18"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 3683
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 6864
+  },
+  "ms": 18546,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06669117",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06669117-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Part 2: histological confirmation of locally advanced or metastatic NSCLC Stage IIIB/C or IV (American Joint Commission on Cancer [AJCC] 8th edition) in participants who are not eligible for or should have received available standard of care therapies including curative intent surgery, chemoradiation, radiotherapy or systemic therapy.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06669117-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06669117-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06669117-part1-solid",
+        "polarity": "inclusion",
+        "sourceText": "Part 1: histological confirmation of relapsed and/or refractory locally advanced or metastatic solid tumor for which no standard of care treatment is available.",
+        "reasonFuzzy": "Part 1 includes general solid tumors rather than being limited exclusively to NSCLC."
+      },
+      {
+        "id": "NCT06669117-met-alterations-1",
+        "polarity": "inclusion",
+        "sourceText": "Part 1: presence of at least one of the following MET alterations based on local documentation of blood or archived tissue results: METex14 mutation, MET kinase domain activating gene mutations (e.g. H1094L/R/Y, D1228H/N/V, Y1230A/C/D/H), MET amplification",
+        "reasonFuzzy": "There are no dedicated typed checks for MET alterations or MET amplification."
+      },
+      {
+        "id": "NCT06669117-met-alterations-2",
+        "polarity": "inclusion",
+        "sourceText": "Part 2-a: presence of METex14 mutation (based on local documentation of blood or archived tissue results) and for Part 2-b presence of at least one of the following MET alterations: METex14 mutation (based on local documentation of blood or archived tissue results), de novo MET amplification (based on local documentation of archived tissue results). Confirmation after enrollment in the trial will be performed by central testing from an archival tumor biopsy sample (either tissue block or at least 15 serial cut unstained slides of 5 μm, at least 20% tumor content). In case no archival biopsy is available for central testing, the patient must be willing to have a fresh tumor biopsy sample collected and the tumor biopsy should be deemed safe and feasible by the investigator.",
+        "reasonFuzzy": "Complex criteria involving optional fresh biopsy feasibility, central testing requirements, and multiple conditional MET alteration sub-parts."
+      },
+      {
+        "id": "NCT06669117-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Part 2: at least one measurable target lesion according to RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06669117-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "Part 2: a maximum of 3 prior lines of systemic therapies.",
+        "reasonFuzzy": "Part-specific prior lines limit cannot be combined into a single study-wide rule without part distinction."
+      },
+      {
+        "id": "NCT06669117-organ-function",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematologic function. Adequate hepatic function. Adequate renal function. Albumin ≥ 3 g/dL. Adequate coagulation function. Adequate cardiac function.",
+        "reasonFuzzy": "General organ function categories without specific numeric cutoffs for labs except albumin."
+      },
+      {
+        "id": "NCT06669117-cns-exclusions",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled Central Nervous System (CNS) metastases or spinal cord compression that are associated with progressive neurological symptoms or require increasing doses of corticosteroids to control the CNS disease.",
+        "reasonFuzzy": "Excludes uncontrolled CNS metastases with progressive symptoms or increasing steroids, which does not fit a simple standard allowedBrainMets category."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06669117",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06669117-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Part 2: histological confirmation of locally advanced or metastatic NSCLC Stage IIIB/C or IV (American Joint Commission on Cancer [AJCC] 8th edition) in participants who are not eligible for or should have received available standard of care therapies including curative intent surgery, chemoradiation, radiotherapy or systemic therapy.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06669117-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06669117-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Part 1: histological confirmation of relapsed and/or refractory locally advanced or metastatic solid tumor for which no standard of care treatment is available.",
+        "exceptions": "Implied via standard metadata minimum age 18 years.",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06669117-part1-solid",
+        "polarity": "inclusion",
+        "sourceText": "Part 1: histological confirmation of relapsed and/or refractory locally advanced or metastatic solid tumor for which no standard of care treatment is available.",
+        "reasonFuzzy": "Part 1 applies to general solid tumors, not specific to NSCLC."
+      },
+      {
+        "id": "NCT06669117-met-alt",
+        "polarity": "inclusion",
+        "sourceText": "presence of at least one of the following MET alterations based on local documentation of blood or archived tissue results: METex14 mutation, MET kinase domain activating gene mutations (e.g. H1094L/R/Y, D1228H/N/V, Y1230A/C/D/H), MET amplification",
+        "reasonFuzzy": "MET alterations are not represented by the specific allowed typed status kinds (which are limited to egfr, alk, kras, ros1, braf)."
+      },
+      {
+        "id": "NCT06669117-part2-met",
+        "polarity": "inclusion",
+        "sourceText": "Part 2-a: presence of METex14 mutation (based on local documentation of blood or archived tissue results) and for Part 2-b presence of at least one of the following MET alterations: METex14 mutation (based on local documentation of blood or archived tissue results), de novo MET amplification (based on local documentation of archived tissue results). Confirmation after enrollment in the trial will be performed by central testing from an archival tumor biopsy sample (either tissue block or at least 15 serial cut unstained slides of 5 μm, at least 20% tumor content). In case no archival biopsy is available for central testing, the patient must be willing to have a fresh tumor biopsy sample collected and the tumor biopsy should be deemed safe and feasible by the investigator.",
+        "reasonFuzzy": "Involves complex part-specific rules, biopsy willingness, and investigator judgment."
+      },
+      {
+        "id": "NCT06669117-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Part 2: at least one measurable target lesion according to RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06669117-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "Part 2: a maximum of 3 prior lines of systemic therapies.",
+        "reasonFuzzy": "Part 2 prior lines limit is part-dependent and not universally applicable to all study arms."
+      },
+      {
+        "id": "NCT06669117-organs",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematologic function. Adequate hepatic function. Adequate renal function. Albumin ≥ 3 g/dL. Adequate coagulation function. Adequate cardiac function.",
+        "reasonFuzzy": "General organ function statements without specific typed numeric lab cutoffs are subjective or incomplete."
+      },
+      {
+        "id": "NCT06669117-oncogene-excl",
+        "polarity": "exclusion",
+        "sourceText": "Part 2: Documented evidence by local testing of targetable oncogene driver mutations.",
+        "reasonFuzzy": "Exclusion based on general targetable oncogene driver mutations is broader than a single typed biomarker check."
+      },
+      {
+        "id": "NCT06669117-brain-excl",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled Central Nervous System (CNS) metastases or spinal cord compression that are associated with progressive neurological symptoms or require increasing doses of corticosteroids to control the CNS disease.",
+        "reasonFuzzy": "Uncontrolled CNS metastases defined by progressive neurological symptoms and corticosteroid requirements are not a clean binary brain_mets status check."
+      }
+    ]
+  }
+}

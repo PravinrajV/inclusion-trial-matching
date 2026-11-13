@@ -1,0 +1,253 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06868485",
+  "briefTitle": "A Study to Assess the Efficacy of WSD0922-FU in Patients With C797S+ Advanced Non-small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:55:35.880Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06868485-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male or female aged ≥18 years old.",
+      "numberValue": 18,
+      "evidence_quote": "Male or female aged ≥18 years old.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06868485-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) 0-1 and a minimum life expectancy of 12 weeks.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) 0-1 and a minimum life expectancy of 12 weeks.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06868485-life",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) 0-1 and a minimum life expectancy of 12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06868485-lesion",
+      "polarity": "inclusion",
+      "sourceText": "At least one lesion, not previously irradiated and not chosen for biopsy during the study.",
+      "reasonFuzzy": "Measurable or specific lesion requirements are subjective imaging judgments, not typed kinds."
+    },
+    {
+      "id": "NCT06868485-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic brain complications that require urgent neurosurgical or medical intervention.",
+      "reasonFuzzy": "Symptomatic CNS disease requiring intervention is not a clean typed brain_mets status."
+    },
+    {
+      "id": "NCT06868485-stage",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced or metastatic NSCLC, not amenable to curative surgery or radiotherapy.",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no specific numerical stage list to emit stage_in."
+    },
+    {
+      "id": "NCT06868485-life",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) 0-1 and a minimum life expectancy of 12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06868485-lesions",
+      "polarity": "inclusion",
+      "sourceText": "At least one lesion, not previously irradiated and not chosen for biopsy during the study.",
+      "reasonFuzzy": "Measurable disease or lesion requirements are subjective or imaging-based criteria."
+    },
+    {
+      "id": "NCT06868485-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic brain complications that require urgent neurosurgical or medical intervention.",
+      "reasonFuzzy": "Symptomatic CNS disease requiring intervention is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT06868485-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Documented EGFR mutation .",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06868485-prior",
+      "polarity": "inclusion",
+      "sourceText": "Evidence of radiological disease progression while on a previous continuous treatment with first-line Osimertinib treatment.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:osimertinib"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2072
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 2019
+  },
+  "ms": 12089,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06868485",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06868485-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female aged ≥18 years old.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06868485-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Documented EGFR mutation .",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06868485-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) 0-1 and a minimum life expectancy of 12 weeks.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06868485-prior",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Evidence of radiological disease progression while on a previous continuous treatment with first-line Osimertinib treatment.",
+        "stringValue": "Osimertinib"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06868485-life",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) 0-1 and a minimum life expectancy of 12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06868485-lesion",
+        "polarity": "inclusion",
+        "sourceText": "At least one lesion, not previously irradiated and not chosen for biopsy during the study.",
+        "reasonFuzzy": "Measurable or specific lesion requirements are subjective imaging judgments, not typed kinds."
+      },
+      {
+        "id": "NCT06868485-brain",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic brain complications that require urgent neurosurgical or medical intervention.",
+        "reasonFuzzy": "Symptomatic CNS disease requiring intervention is not a clean typed brain_mets status."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06868485",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06868485-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female aged ≥18 years old.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06868485-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Documented EGFR mutation .",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06868485-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) 0-1 and a minimum life expectancy of 12 weeks.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06868485-prior-therapy",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Evidence of radiological disease progression while on a previous continuous treatment with first-line Osimertinib treatment.",
+        "stringValue": "Osimertinib"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06868485-stage",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced or metastatic NSCLC, not amenable to curative surgery or radiotherapy.",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no specific numerical stage list to emit stage_in."
+      },
+      {
+        "id": "NCT06868485-life",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) 0-1 and a minimum life expectancy of 12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06868485-lesions",
+        "polarity": "inclusion",
+        "sourceText": "At least one lesion, not previously irradiated and not chosen for biopsy during the study.",
+        "reasonFuzzy": "Measurable disease or lesion requirements are subjective or imaging-based criteria."
+      },
+      {
+        "id": "NCT06868485-brain",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic brain complications that require urgent neurosurgical or medical intervention.",
+        "reasonFuzzy": "Symptomatic CNS disease requiring intervention is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      }
+    ]
+  }
+}

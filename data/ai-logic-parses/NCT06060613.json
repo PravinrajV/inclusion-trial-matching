@@ -1,0 +1,280 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06060613",
+  "briefTitle": "Safety and Efficacy of OBX-115 in Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T06:23:37.548Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06060613-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Participant must be 18 years of age or older at the time of signing the informed consent.",
+      "numberValue": 18,
+      "evidence_quote": "Participant must be 18 years of age or older at the time of signing the informed consent.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06060613-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participant has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 and an estimated life expectancy of greater than 6 months.",
+      "numberValue": 1,
+      "evidence_quote": "Participant has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 and an estimated life expectancy of greater than 6 months.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06060613-nsclc-lines",
+      "polarity": "inclusion",
+      "sourceText": "Participants with non-small cell lung cancer should have relapsed or are refractory to approved systemic therapies (approved ICI-based regimen for all appropriate participants and/or an approved targeted therapy for known molecular abnormalities if applicable to their disease).",
+      "reasonFuzzy": "Prior line requirements are complex and cohort-dependent."
+    },
+    {
+      "id": "NCT06060613-life",
+      "polarity": "inclusion",
+      "sourceText": "estimated life expectancy of greater than 6 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06060613-measurable",
+      "polarity": "inclusion",
+      "sourceText": "After tumor tissue procurement, the participant will have at least one remaining measurable lesion, as defined by RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06060613-anc-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Participant has protocol specified hematologic parameters for absolute neutrophil count (ANC) and platelet count.",
+      "reasonFuzzy": "The specific numerical lab cutoffs are not listed in the text."
+    },
+    {
+      "id": "NCT06060613-organ",
+      "polarity": "inclusion",
+      "sourceText": "Participant has adequate cardiac, liver, lung, and kidney organ function as specified in the protocol.",
+      "reasonFuzzy": "Organ function thresholds are not explicitly defined in the text."
+    },
+    {
+      "id": "NCT06060613-diagnosis",
+      "polarity": "inclusion",
+      "sourceText": "Participant has a histologically confirmed diagnosis of advanced/metastatic melanoma or relapsed refractory metastatic non-small cell lung cancer (NSCLC).",
+      "reasonFuzzy": "Diagnosis spans melanoma and NSCLC with various cohort-specific prior lines and criteria that cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT06060613-cohorts",
+      "polarity": "inclusion",
+      "sourceText": "Cohort and indication specific criteria as follows...",
+      "reasonFuzzy": "Cohort-specific prior line requirements, therapies, and resistance patterns are complex and vary across multiple phases and arms."
+    },
+    {
+      "id": "NCT06060613-lesion",
+      "polarity": "inclusion",
+      "sourceText": "Participant is assessed as having at least one lesion (or aggregate lesions) suitable for OBX-115 generation.",
+      "reasonFuzzy": "Suitability for OBX-115 generation is a subjective procedure-based criterion."
+    },
+    {
+      "id": "NCT06060613-measurable",
+      "polarity": "inclusion",
+      "sourceText": "After tumor tissue procurement, the participant will have at least one remaining measurable lesion, as defined by RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06060613-life",
+      "polarity": "inclusion",
+      "sourceText": "estimated life expectancy of greater than 6 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06060613-labs",
+      "polarity": "inclusion",
+      "sourceText": "Participant has protocol specified hematologic parameters for absolute neutrophil count (ANC) and platelet count. Participant has adequate cardiac, liver, lung, and kidney organ function as specified in the protocol.",
+      "reasonFuzzy": "Lab cutoffs are referred to the protocol rather than stated explicitly as numbers."
+    },
+    {
+      "id": "NCT06060613-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participant has a history of brain metastases or leptomeningeal disease. Participants may be considered for enrollment if they have 4 or fewer brain metastatic lesions that are that have been treated, if clinically indicated. Asymptomatic brain metastases that are equivocal or too small to warrant treatment may not be counted towards the above set limits upon discussion and agreement from the Medical Monitor.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3183
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 8136
+  },
+  "ms": 19320,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06060613",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06060613-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant must be 18 years of age or older at the time of signing the informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06060613-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 and an estimated life expectancy of greater than 6 months.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06060613-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participant has a history of brain metastases or leptomeningeal disease. Participants may be considered for enrollment if they have 4 or fewer brain metastatic lesions that are that have been treated, if clinically indicated. Asymptomatic brain metastases that are equivocal or too small to warrant treatment may not be counted towards the above set limits upon discussion and agreement from the Medical Monitor.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06060613-nsclc-lines",
+        "polarity": "inclusion",
+        "sourceText": "Participants with non-small cell lung cancer should have relapsed or are refractory to approved systemic therapies (approved ICI-based regimen for all appropriate participants and/or an approved targeted therapy for known molecular abnormalities if applicable to their disease).",
+        "reasonFuzzy": "Prior line requirements are complex and cohort-dependent."
+      },
+      {
+        "id": "NCT06060613-life",
+        "polarity": "inclusion",
+        "sourceText": "estimated life expectancy of greater than 6 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06060613-measurable",
+        "polarity": "inclusion",
+        "sourceText": "After tumor tissue procurement, the participant will have at least one remaining measurable lesion, as defined by RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06060613-anc-platelets",
+        "polarity": "inclusion",
+        "sourceText": "Participant has protocol specified hematologic parameters for absolute neutrophil count (ANC) and platelet count.",
+        "reasonFuzzy": "The specific numerical lab cutoffs are not listed in the text."
+      },
+      {
+        "id": "NCT06060613-organ",
+        "polarity": "inclusion",
+        "sourceText": "Participant has adequate cardiac, liver, lung, and kidney organ function as specified in the protocol.",
+        "reasonFuzzy": "Organ function thresholds are not explicitly defined in the text."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06060613",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06060613-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant must be 18 years of age or older at the time of signing the informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06060613-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 and an estimated life expectancy of greater than 6 months.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06060613-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participant has a history of brain metastases or leptomeningeal disease. Participants may be considered for enrollment if they have 4 or fewer brain metastatic lesions that are that have been treated, if clinically indicated.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06060613-diagnosis",
+        "polarity": "inclusion",
+        "sourceText": "Participant has a histologically confirmed diagnosis of advanced/metastatic melanoma or relapsed refractory metastatic non-small cell lung cancer (NSCLC).",
+        "reasonFuzzy": "Diagnosis spans melanoma and NSCLC with various cohort-specific prior lines and criteria that cannot be expressed as a single typed check."
+      },
+      {
+        "id": "NCT06060613-cohorts",
+        "polarity": "inclusion",
+        "sourceText": "Cohort and indication specific criteria as follows...",
+        "reasonFuzzy": "Cohort-specific prior line requirements, therapies, and resistance patterns are complex and vary across multiple phases and arms."
+      },
+      {
+        "id": "NCT06060613-lesion",
+        "polarity": "inclusion",
+        "sourceText": "Participant is assessed as having at least one lesion (or aggregate lesions) suitable for OBX-115 generation.",
+        "reasonFuzzy": "Suitability for OBX-115 generation is a subjective procedure-based criterion."
+      },
+      {
+        "id": "NCT06060613-measurable",
+        "polarity": "inclusion",
+        "sourceText": "After tumor tissue procurement, the participant will have at least one remaining measurable lesion, as defined by RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06060613-life",
+        "polarity": "inclusion",
+        "sourceText": "estimated life expectancy of greater than 6 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06060613-labs",
+        "polarity": "inclusion",
+        "sourceText": "Participant has protocol specified hematologic parameters for absolute neutrophil count (ANC) and platelet count. Participant has adequate cardiac, liver, lung, and kidney organ function as specified in the protocol.",
+        "reasonFuzzy": "Lab cutoffs are referred to the protocol rather than stated explicitly as numbers."
+      }
+    ]
+  }
+}

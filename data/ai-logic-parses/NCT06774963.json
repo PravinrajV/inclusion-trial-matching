@@ -1,0 +1,533 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06774963",
+  "briefTitle": "A Phase 1 Study of LNCB74 in Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T10:34:18.084Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06774963-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "≥ 18 years of age on day of signing informed consent.",
+      "numberValue": 18,
+      "evidence_quote": "≥ 18 years of age on day of signing informed consent.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06774963-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1",
+      "numberValue": 1,
+      "evidence_quote": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06774963-brain-mets",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Has known active CNS metastases and/or carcinomatous meningitis",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Has known active CNS metastases and/or carcinomatous meningitis",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06774963-stage",
+      "polarity": "inclusion",
+      "sourceText": "Participant with histologically or cytologically confirmed diagnosis of advanced unresectable and/or metastatic solid tumors",
+      "reasonFuzzy": "The trial enrolls advanced solid tumors including NSCLC without explicitly stating a numbered stage list."
+    },
+    {
+      "id": "NCT06774963-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease per RECIST 1.1 as assessed by the local site investigator/radiology",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06774963-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Willing to undergo fresh tumor biopsy at Screening and On-treatment if archival tissue not available",
+      "reasonFuzzy": "Willingness to undergo a procedure is a subjective criterion, not a typed check."
+    },
+    {
+      "id": "NCT06774963-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy greater than or equal to 12 weeks as judged by the Investigator.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06774963-washout-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior investigational agents within 4 weeks prior to treatment.",
+      "reasonFuzzy": "Washout window for investigational agents is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT06774963-washout-chemo",
+      "polarity": "exclusion",
+      "sourceText": "Has received anti-cancer chemotherapy (Immunotherapy (non-antibody-based therapy), retinoid therapy, hormonal therapy within 2 weeks prior to treatment.",
+      "reasonFuzzy": "Washout window for chemotherapy and related therapies is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT06774963-washout-antibody",
+      "polarity": "exclusion",
+      "sourceText": "Has received antibody-based anti-cancer therapy within 4 weeks prior to treatment.",
+      "reasonFuzzy": "Washout window for antibody-based therapy is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT06774963-washout-targeted",
+      "polarity": "exclusion",
+      "sourceText": "Has received targeted agents and small molecules within 2 weeks or 5 half-lives, whichever is longer.",
+      "reasonFuzzy": "Washout window with a half-life condition is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT06774963-platinum-refractory",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior platinum-based chemotherapy and progressed within 4 weeks of initiating therapy (platinum-refractory disease)",
+      "reasonFuzzy": "Complex prior therapy progression rule rather than a simple inclusion or exclusion of a drug class."
+    },
+    {
+      "id": "NCT06774963-washout-radio",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior radiotherapy within 2 weeks of start of study treatment for focal radiation or within 4 weeks for wide-field radiotherapy",
+      "reasonFuzzy": "Radiation washout rules are not simple lab cutoffs."
+    },
+    {
+      "id": "NCT06774963-washout-gcsf",
+      "polarity": "exclusion",
+      "sourceText": "Has received G-CSF or GM-CSF within 7 days prior to start of study treatment.",
+      "reasonFuzzy": "G-CSF/GM-CSF washout window is not a typed prior therapy exclusion kind."
+    },
+    {
+      "id": "NCT06774963-washout-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Has received a live or live-attenuated vaccine within 30 days prior to the first dose of study intervention.",
+      "reasonFuzzy": "Vaccine washout window is not a typed prior therapy check."
+    },
+    {
+      "id": "NCT06774963-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy (in dosing exceeding 10 mg daily of prednisone equivalent) or any other form of immunosuppressive therapy within 7 days prior to the first dose of study drug",
+      "reasonFuzzy": "Steroid dosage and immunosuppressive therapy exclusions are complex clinical rules."
+    },
+    {
+      "id": "NCT06774963-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Has a known additional malignancy that is progressing or has required active treatment within the past 3 years",
+      "reasonFuzzy": "Secondary malignancy history is a complex clinical evaluation."
+    },
+    {
+      "id": "NCT06774963-neuropathy",
+      "polarity": "exclusion",
+      "sourceText": "Has active ≥Grade 2 sensory or motor neuropathy.",
+      "reasonFuzzy": "Neuropathy grade is a clinical toxicity assessment, not a simple lab cutoff."
+    },
+    {
+      "id": "NCT06774963-organ-allograft",
+      "polarity": "exclusion",
+      "sourceText": "Prior organ or tissue allograft.",
+      "reasonFuzzy": "Prior transplant history is not covered by the allowed typed kinds."
+    },
+    {
+      "id": "NCT06774963-stage",
+      "polarity": "inclusion",
+      "sourceText": "Participant with histologically or cytologically confirmed diagnosis of advanced unresectable and/or metastatic solid tumors",
+      "reasonFuzzy": "The study enrolls advanced solid tumors including NSCLC, but lacks a precise numbered stage list."
+    },
+    {
+      "id": "NCT06774963-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease per RECIST 1.1 as assessed by the local site investigator/radiology",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06774963-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Willing to undergo fresh tumor biopsy at Screening and On-treatment if archival tissue not available",
+      "reasonFuzzy": "Willingness to undergo a procedure is a subjective requirement, not a typed check."
+    },
+    {
+      "id": "NCT06774963-life-expectancy",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy greater than or equal to 12 weeks as judged by the Investigator.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06774963-washout-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior investigational agents within 4 weeks prior to treatment.",
+      "reasonFuzzy": "Washout window for investigational agents is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT06774963-washout-chemo",
+      "polarity": "exclusion",
+      "sourceText": "Has received anti-cancer chemotherapy (Immunotherapy (non-antibody-based therapy), retinoid therapy, hormonal therapy within 2 weeks prior to treatment.",
+      "reasonFuzzy": "Complex washout window for various systemic therapies."
+    },
+    {
+      "id": "NCT06774963-washout-antibody",
+      "polarity": "exclusion",
+      "sourceText": "Has received antibody-based anti-cancer therapy within 4 weeks prior to treatment.",
+      "reasonFuzzy": "Washout window for antibody-based therapy is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT06774963-washout-targeted",
+      "polarity": "exclusion",
+      "sourceText": "Has received targeted agents and small molecules within 2 weeks or 5 half-lives, whichever is longer.",
+      "reasonFuzzy": "Conditional half-life washout is not a simple fixed lab cutoff."
+    },
+    {
+      "id": "NCT06774963-platinum-refractory",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior platinum-based chemotherapy and progressed within 4 weeks of initiating therapy (platinum-refractory disease)",
+      "reasonFuzzy": "Progression timing relative to initiation is complex and not a simple prior therapy exclusion."
+    },
+    {
+      "id": "NCT06774963-washout-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior radiotherapy within 2 weeks of start of study treatment for focal radiation or within 4 weeks for wide-field radiotherapy",
+      "reasonFuzzy": "Radiation washout varies by field type."
+    },
+    {
+      "id": "NCT06774963-gcsf",
+      "polarity": "exclusion",
+      "sourceText": "Has received G-CSF or GM-CSF within 7 days prior to start of study treatment.",
+      "reasonFuzzy": "G-CSF/GM-CSF washout is not a typed prior therapy check."
+    },
+    {
+      "id": "NCT06774963-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Has received a live or live-attenuated vaccine within 30 days prior to the first dose of study intervention.",
+      "reasonFuzzy": "Vaccine washout is not a typed check."
+    },
+    {
+      "id": "NCT06774963-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy (in dosing exceeding 10 mg daily of prednisone equivalent) or any other form of immunosuppressive therapy within 7 days prior to the first dose of study drug",
+      "reasonFuzzy": "Chronic steroid dosage and immunosuppressive therapy rules are complex."
+    },
+    {
+      "id": "NCT06774963-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Has a known additional malignancy that is progressing or has required active treatment within the past 3 years",
+      "reasonFuzzy": "Prior malignancy history rule is not a typed check."
+    },
+    {
+      "id": "NCT06774963-prior-adc",
+      "polarity": "exclusion",
+      "sourceText": "Has received an ADC with MMAE payload.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:adc with mmae payload"
+        }
+      ],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 16,
+    "attempts": 1,
+    "ms": 4427
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 14,
+    "attempts": 1,
+    "ms": 4481
+  },
+  "ms": 16906,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06774963",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06774963-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "≥ 18 years of age on day of signing informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06774963-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06774963-prior-adc",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received an ADC with MMAE payload.",
+        "stringValue": "ADC with MMAE payload"
+      },
+      {
+        "id": "NCT06774963-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active CNS metastases and/or carcinomatous meningitis",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06774963-stage",
+        "polarity": "inclusion",
+        "sourceText": "Participant with histologically or cytologically confirmed diagnosis of advanced unresectable and/or metastatic solid tumors",
+        "reasonFuzzy": "The trial enrolls advanced solid tumors including NSCLC without explicitly stating a numbered stage list."
+      },
+      {
+        "id": "NCT06774963-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease per RECIST 1.1 as assessed by the local site investigator/radiology",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06774963-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Willing to undergo fresh tumor biopsy at Screening and On-treatment if archival tissue not available",
+        "reasonFuzzy": "Willingness to undergo a procedure is a subjective criterion, not a typed check."
+      },
+      {
+        "id": "NCT06774963-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy greater than or equal to 12 weeks as judged by the Investigator.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06774963-washout-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior investigational agents within 4 weeks prior to treatment.",
+        "reasonFuzzy": "Washout window for investigational agents is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT06774963-washout-chemo",
+        "polarity": "exclusion",
+        "sourceText": "Has received anti-cancer chemotherapy (Immunotherapy (non-antibody-based therapy), retinoid therapy, hormonal therapy within 2 weeks prior to treatment.",
+        "reasonFuzzy": "Washout window for chemotherapy and related therapies is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT06774963-washout-antibody",
+        "polarity": "exclusion",
+        "sourceText": "Has received antibody-based anti-cancer therapy within 4 weeks prior to treatment.",
+        "reasonFuzzy": "Washout window for antibody-based therapy is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT06774963-washout-targeted",
+        "polarity": "exclusion",
+        "sourceText": "Has received targeted agents and small molecules within 2 weeks or 5 half-lives, whichever is longer.",
+        "reasonFuzzy": "Washout window with a half-life condition is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT06774963-platinum-refractory",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior platinum-based chemotherapy and progressed within 4 weeks of initiating therapy (platinum-refractory disease)",
+        "reasonFuzzy": "Complex prior therapy progression rule rather than a simple inclusion or exclusion of a drug class."
+      },
+      {
+        "id": "NCT06774963-washout-radio",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior radiotherapy within 2 weeks of start of study treatment for focal radiation or within 4 weeks for wide-field radiotherapy",
+        "reasonFuzzy": "Radiation washout rules are not simple lab cutoffs."
+      },
+      {
+        "id": "NCT06774963-washout-gcsf",
+        "polarity": "exclusion",
+        "sourceText": "Has received G-CSF or GM-CSF within 7 days prior to start of study treatment.",
+        "reasonFuzzy": "G-CSF/GM-CSF washout window is not a typed prior therapy exclusion kind."
+      },
+      {
+        "id": "NCT06774963-washout-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Has received a live or live-attenuated vaccine within 30 days prior to the first dose of study intervention.",
+        "reasonFuzzy": "Vaccine washout window is not a typed prior therapy check."
+      },
+      {
+        "id": "NCT06774963-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy (in dosing exceeding 10 mg daily of prednisone equivalent) or any other form of immunosuppressive therapy within 7 days prior to the first dose of study drug",
+        "reasonFuzzy": "Steroid dosage and immunosuppressive therapy exclusions are complex clinical rules."
+      },
+      {
+        "id": "NCT06774963-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Has a known additional malignancy that is progressing or has required active treatment within the past 3 years",
+        "reasonFuzzy": "Secondary malignancy history is a complex clinical evaluation."
+      },
+      {
+        "id": "NCT06774963-neuropathy",
+        "polarity": "exclusion",
+        "sourceText": "Has active ≥Grade 2 sensory or motor neuropathy.",
+        "reasonFuzzy": "Neuropathy grade is a clinical toxicity assessment, not a simple lab cutoff."
+      },
+      {
+        "id": "NCT06774963-organ-allograft",
+        "polarity": "exclusion",
+        "sourceText": "Prior organ or tissue allograft.",
+        "reasonFuzzy": "Prior transplant history is not covered by the allowed typed kinds."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06774963",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06774963-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "≥ 18 years of age on day of signing informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06774963-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06774963-prior-adc",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received an ADC with MMAE payload.",
+        "stringValue": "ADC with MMAE payload"
+      },
+      {
+        "id": "NCT06774963-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active CNS metastases and/or carcinomatous meningitis",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06774963-stage",
+        "polarity": "inclusion",
+        "sourceText": "Participant with histologically or cytologically confirmed diagnosis of advanced unresectable and/or metastatic solid tumors",
+        "reasonFuzzy": "The study enrolls advanced solid tumors including NSCLC, but lacks a precise numbered stage list."
+      },
+      {
+        "id": "NCT06774963-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease per RECIST 1.1 as assessed by the local site investigator/radiology",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06774963-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Willing to undergo fresh tumor biopsy at Screening and On-treatment if archival tissue not available",
+        "reasonFuzzy": "Willingness to undergo a procedure is a subjective requirement, not a typed check."
+      },
+      {
+        "id": "NCT06774963-life-expectancy",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy greater than or equal to 12 weeks as judged by the Investigator.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06774963-washout-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior investigational agents within 4 weeks prior to treatment.",
+        "reasonFuzzy": "Washout window for investigational agents is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT06774963-washout-chemo",
+        "polarity": "exclusion",
+        "sourceText": "Has received anti-cancer chemotherapy (Immunotherapy (non-antibody-based therapy), retinoid therapy, hormonal therapy within 2 weeks prior to treatment.",
+        "reasonFuzzy": "Complex washout window for various systemic therapies."
+      },
+      {
+        "id": "NCT06774963-washout-antibody",
+        "polarity": "exclusion",
+        "sourceText": "Has received antibody-based anti-cancer therapy within 4 weeks prior to treatment.",
+        "reasonFuzzy": "Washout window for antibody-based therapy is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT06774963-washout-targeted",
+        "polarity": "exclusion",
+        "sourceText": "Has received targeted agents and small molecules within 2 weeks or 5 half-lives, whichever is longer.",
+        "reasonFuzzy": "Conditional half-life washout is not a simple fixed lab cutoff."
+      },
+      {
+        "id": "NCT06774963-platinum-refractory",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior platinum-based chemotherapy and progressed within 4 weeks of initiating therapy (platinum-refractory disease)",
+        "reasonFuzzy": "Progression timing relative to initiation is complex and not a simple prior therapy exclusion."
+      },
+      {
+        "id": "NCT06774963-washout-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior radiotherapy within 2 weeks of start of study treatment for focal radiation or within 4 weeks for wide-field radiotherapy",
+        "reasonFuzzy": "Radiation washout varies by field type."
+      },
+      {
+        "id": "NCT06774963-gcsf",
+        "polarity": "exclusion",
+        "sourceText": "Has received G-CSF or GM-CSF within 7 days prior to start of study treatment.",
+        "reasonFuzzy": "G-CSF/GM-CSF washout is not a typed prior therapy check."
+      },
+      {
+        "id": "NCT06774963-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Has received a live or live-attenuated vaccine within 30 days prior to the first dose of study intervention.",
+        "reasonFuzzy": "Vaccine washout is not a typed check."
+      },
+      {
+        "id": "NCT06774963-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy (in dosing exceeding 10 mg daily of prednisone equivalent) or any other form of immunosuppressive therapy within 7 days prior to the first dose of study drug",
+        "reasonFuzzy": "Chronic steroid dosage and immunosuppressive therapy rules are complex."
+      },
+      {
+        "id": "NCT06774963-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Has a known additional malignancy that is progressing or has required active treatment within the past 3 years",
+        "reasonFuzzy": "Prior malignancy history rule is not a typed check."
+      }
+    ]
+  }
+}

@@ -1,0 +1,516 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04198766",
+  "briefTitle": "Study of INBRX-106 and INBRX-106 in Combination With Pembrolizumab (Keytruda®) in Subjects With Locally Advanced or Metastatic Solid Tumors (Hexavalent OX40 Agonist)",
+  "parsedAt": "2026-11-12T06:03:45.070Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04198766-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Males or females aged ≥18 years.",
+      "numberValue": 18,
+      "evidence_quote": "Males or females aged ≥18 years.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04198766-egfr",
+      "kind": "egfr_status",
+      "polarity": "inclusion",
+      "sourceText": "All subjects with non-squamous NSCLC must have documentation of absence of tumor activating EGFR mutations and absence of ALK gene rearrangements.",
+      "presence": "absent",
+      "evidence_quote": "All subjects with non-squamous NSCLC must have documentation of absence of tumor activating EGFR mutations and absence of ALK gene rearrangements.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04198766-alk",
+      "kind": "alk_status",
+      "polarity": "inclusion",
+      "sourceText": "All subjects with non-squamous NSCLC must have documentation of absence of tumor activating EGFR mutations and absence of ALK gene rearrangements.",
+      "presence": "absent",
+      "evidence_quote": "All subjects with non-squamous NSCLC must have documentation of absence of tumor activating EGFR mutations and absence of ALK gene rearrangements.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04198766-cohort-f3-lines",
+      "polarity": "inclusion",
+      "sourceText": "For Cohort F3 (NSCLC), subjects may have progressed on no more than 2 lines of standard therapy that must include at least one PD-1/L1 regimen.",
+      "reasonFuzzy": "Cohort-specific prior therapy and line limits apply only to a subset of subjects and cannot be expressed as a single global prior lines or prior therapy check."
+    },
+    {
+      "id": "NCT04198766-cohort-f4-lines",
+      "polarity": "inclusion",
+      "sourceText": "For Cohort F4 (HNSCC and NPC), subjects may be previously treated with no more than 1 prior chemotherapy regimen in metastatic setting.",
+      "reasonFuzzy": "Cohort-specific prior therapy limits apply only to specific non-NSCLC cohorts."
+    },
+    {
+      "id": "NCT04198766-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Combined Positive Score (CPS) ≥ 1% (or Tumor Proportion Score ≥50% for NSCLC; for TMB-high tumors, any TPS% is allowed).",
+      "reasonFuzzy": "PD-L1 cutoffs vary by part and alternate between CPS and TPS depending on tumor type, making it too complex for a single typed pdl1_min check."
+    },
+    {
+      "id": "NCT04198766-organ-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematologic, coagulation, hepatic and renal function and ECOG score as defined per protocol.",
+      "reasonFuzzy": "Specific lab values and ECOG cutoffs are not explicitly listed in the source text and are deferred to the protocol."
+    },
+    {
+      "id": "NCT04198766-investigational-product",
+      "polarity": "exclusion",
+      "sourceText": "Receipt of any investigational product or any approved anticancer drug(s) or biological product(s) within 4 weeks prior to the first dose of study drug with certain exceptions.",
+      "reasonFuzzy": "Washout window with protocol-defined exceptions cannot be represented as a simple typed check."
+    },
+    {
+      "id": "NCT04198766-prior-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Prior or concurrent malignancies. Exception: Subjects with a prior or concurrent malignancy whose natural history or treatment does not have the potential to interfere with the safety or efficacy assessments of INBRX-106.",
+      "reasonFuzzy": "Subjective clinical judgment regarding whether a prior or concurrent malignancy interferes with safety or efficacy assessments."
+    },
+    {
+      "id": "NCT04198766-irAE",
+      "polarity": "exclusion",
+      "sourceText": "Grade ≥ 3 immune-related adverse events (irAEs) or irAE that lead to discontinuation of prior immunotherapy. Some exceptions as defined per protocol apply.",
+      "reasonFuzzy": "Exclusion involves specific toxicity grades and protocol-defined exceptions."
+    },
+    {
+      "id": "NCT04198766-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Active autoimmune disease or documented history of autoimmune disease that required systemic steroids or other immunosuppressive medications. Certain exceptions as defined in protocol apply.",
+      "reasonFuzzy": "Autoimmune disease history with systemic therapy requirements and protocol exceptions."
+    },
+    {
+      "id": "NCT04198766-immunodeficiency",
+      "polarity": "exclusion",
+      "sourceText": "Diagnosis of immunodeficiency or treatment with systemic immunosuppressive medications within 7 days prior to the first dose of study drug. Certain exceptions as defined in protocol apply.",
+      "reasonFuzzy": "Immunosuppressive medication washout with protocol-defined exceptions."
+    },
+    {
+      "id": "NCT04198766-hiv-hep",
+      "polarity": "exclusion",
+      "sourceText": "History of hepatitis B, hepatitis C, or human immunodeficiency virus (HIV) infection. Exceptions as defined in protocol apply.",
+      "reasonFuzzy": "Infection exclusion with protocol-defined exceptions."
+    },
+    {
+      "id": "NCT04198766-ild",
+      "polarity": "exclusion",
+      "sourceText": "Active interstitial lung disease (ILD) or pneumonitis or a history of ILD or pneumonitis requiring treatment with steroids or other immunosuppressive medications.",
+      "reasonFuzzy": "Complex history of ILD/pneumonitis requiring specific treatment."
+    },
+    {
+      "id": "NCT04198766-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Clinically significant cardiac condition, including myocardial infarction, uncontrolled angina, viral myocarditis, cerebrovascular accident, or other acute uncontrolled heart disease < 3 months prior to enrollment on this trial; left ventricular ejection fraction (LVEF) < 50%; New York Heart Association (NYHA) Class III or IV congestive heart failure; or uncontrolled hypertension; or oxygen saturation <92% on room air.",
+      "reasonFuzzy": "Multiple combined cardiovascular and physiological parameters with varying timeframes."
+    },
+    {
+      "id": "NCT04198766-pe",
+      "polarity": "exclusion",
+      "sourceText": "Active, hemodynamically significant pulmonary embolism within 12 weeks prior to enrollment on this trial.",
+      "reasonFuzzy": "Hemodynamically significant pulmonary embolism requires clinical judgment and a specific timeframe."
+    },
+    {
+      "id": "NCT04198766-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery within 4 weeks prior to enrollment on this trial.",
+      "reasonFuzzy": "Major surgery washout window is not a simple lab or biomarker cutoff."
+    },
+    {
+      "id": "NCT04198766-antibiotics",
+      "polarity": "exclusion",
+      "sourceText": "Anti-infectious drug treatments (i.e., antibiotics) within 4 weeks prior to the first dose of study drug.",
+      "reasonFuzzy": "Antibiotic washout window is not a standard lab or biomarker rule."
+    },
+    {
+      "id": "NCT04198766-transplant",
+      "polarity": "exclusion",
+      "sourceText": "Prior organ allograft transplantations or allogeneic peripheral blood stem cell (PBSC) or bone marrow (BM) transplantation.",
+      "reasonFuzzy": "Prior transplantations exclusion."
+    },
+    {
+      "id": "NCT04198766-cohort-f8-stage",
+      "polarity": "inclusion",
+      "sourceText": "For Cohort F8, subjects must have previously untreated, histologically confirmed Stage II, IIIA or IIIB (T3-4N2) NSCLC.",
+      "reasonFuzzy": "Stage criteria vary by specific study cohort, and include stage II which falls outside of the primary stage III-IV scope, making a single typed stage check inappropriate."
+    },
+    {
+      "id": "NCT04198766-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "For Cohort F3 (NSCLC), subjects may have progressed on no more than 2 lines of standard therapy that must include at least one PD-1/L1 regimen.",
+      "reasonFuzzy": "Prior lines and required therapies differ depending on the specific cohort, so a single typed prior lines or prior therapy check does not apply universally."
+    },
+    {
+      "id": "NCT04198766-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Combined Positive Score (CPS) ≥ 1% (or Tumor Proportion Score ≥50% for NSCLC; for TMB-high tumors, any TPS% is allowed).",
+      "reasonFuzzy": "PD-L1 cutoffs vary by study part and biomarker type (CPS vs TPS vs TMB), making a single pdl1_min check insufficient."
+    },
+    {
+      "id": "NCT04198766-ecog-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematologic, coagulation, hepatic and renal function and ECOG score as defined per protocol.",
+      "reasonFuzzy": "Lab and ECOG thresholds are not explicitly stated in the text and refer to protocol definitions."
+    },
+    {
+      "id": "NCT04198766-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Receipt of any investigational product or any approved anticancer drug(s) or biological product(s) within 4 weeks prior to the first dose of study drug with certain exceptions.",
+      "reasonFuzzy": "Washout windows with various complex exceptions are not a simple typed lab cutoff."
+    },
+    {
+      "id": "NCT04198766-malignancies",
+      "polarity": "exclusion",
+      "sourceText": "Prior or concurrent malignancies. Exception: Subjects with a prior or concurrent malignancy whose natural history or treatment does not have the potential to interfere with the safety or efficacy assessments of INBRX-106.",
+      "reasonFuzzy": "Concurrent malignancy exclusion with investigator-dependent exception is a judgment-based item."
+    },
+    {
+      "id": "NCT04198766-irae",
+      "polarity": "exclusion",
+      "sourceText": "Grade ≥ 3 immune-related adverse events (irAEs) or irAE that lead to discontinuation of prior immunotherapy. Some exceptions as defined per protocol apply.",
+      "reasonFuzzy": "Immune-related adverse events and protocol exceptions are clinical judgment items."
+    },
+    {
+      "id": "NCT04198766-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Active autoimmune disease or documented history of autoimmune disease that required systemic steroids or other immunosuppressive medications. Certain exceptions as defined in protocol apply.",
+      "reasonFuzzy": "Autoimmune disease history and immunosuppressive medication use with exceptions are subjective criteria."
+    },
+    {
+      "id": "NCT04198766-ild",
+      "polarity": "exclusion",
+      "sourceText": "Active interstitial lung disease (ILD) or pneumonitis or a history of ILD or pneumonitis requiring treatment with steroids or other immunosuppressive medications.",
+      "reasonFuzzy": "Interstitial lung disease history and treatment requirement are clinical judgment conditions."
+    },
+    {
+      "id": "NCT04198766-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Clinically significant cardiac condition, including myocardial infarction, uncontrolled angina, viral myocarditis, cerebrovascular accident, or other acute uncontrolled heart disease < 3 months prior to enrollment on this trial; left ventricular ejection fraction (LVEF) < 50%; New York Heart Association (NYHA) Class III or IV congestive heart failure; or uncontrolled hypertension; or oxygen saturation <92% on room air.",
+      "reasonFuzzy": "Complex cardiac conditions and multiple disparate clinical measurements cannot be represented by a single typed check."
+    },
+    {
+      "id": "NCT04198766-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery within 4 weeks prior to enrollment on this trial.",
+      "reasonFuzzy": "Major surgery washout window is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT04198766-stage",
+      "polarity": "inclusion",
+      "sourceText": "For Cohort F8, subjects must have previously untreated, histologically confirmed Stage II, IIIA or IIIB (T3-4N2) NSCLC.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT04198766-prior-ox40",
+      "polarity": "exclusion",
+      "sourceText": "Prior exposure to OX40 agonists.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIA,IIB,IIIA,IIIB"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:ox40 agonists"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 16,
+    "attempts": 1,
+    "ms": 5071
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 11,
+    "attempts": 1,
+    "ms": 4579
+  },
+  "ms": 17620,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04198766",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04198766-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Males or females aged ≥18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04198766-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "For Cohort F8, subjects must have previously untreated, histologically confirmed Stage II, IIIA or IIIB (T3-4N2) NSCLC.",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT04198766-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "All subjects with non-squamous NSCLC must have documentation of absence of tumor activating EGFR mutations and absence of ALK gene rearrangements.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT04198766-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "All subjects with non-squamous NSCLC must have documentation of absence of tumor activating EGFR mutations and absence of ALK gene rearrangements.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT04198766-prior-ox40",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior exposure to OX40 agonists.",
+        "stringValue": "OX40 agonists"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04198766-cohort-f3-lines",
+        "polarity": "inclusion",
+        "sourceText": "For Cohort F3 (NSCLC), subjects may have progressed on no more than 2 lines of standard therapy that must include at least one PD-1/L1 regimen.",
+        "reasonFuzzy": "Cohort-specific prior therapy and line limits apply only to a subset of subjects and cannot be expressed as a single global prior lines or prior therapy check."
+      },
+      {
+        "id": "NCT04198766-cohort-f4-lines",
+        "polarity": "inclusion",
+        "sourceText": "For Cohort F4 (HNSCC and NPC), subjects may be previously treated with no more than 1 prior chemotherapy regimen in metastatic setting.",
+        "reasonFuzzy": "Cohort-specific prior therapy limits apply only to specific non-NSCLC cohorts."
+      },
+      {
+        "id": "NCT04198766-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "Combined Positive Score (CPS) ≥ 1% (or Tumor Proportion Score ≥50% for NSCLC; for TMB-high tumors, any TPS% is allowed).",
+        "reasonFuzzy": "PD-L1 cutoffs vary by part and alternate between CPS and TPS depending on tumor type, making it too complex for a single typed pdl1_min check."
+      },
+      {
+        "id": "NCT04198766-organ-ecog",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematologic, coagulation, hepatic and renal function and ECOG score as defined per protocol.",
+        "reasonFuzzy": "Specific lab values and ECOG cutoffs are not explicitly listed in the source text and are deferred to the protocol."
+      },
+      {
+        "id": "NCT04198766-investigational-product",
+        "polarity": "exclusion",
+        "sourceText": "Receipt of any investigational product or any approved anticancer drug(s) or biological product(s) within 4 weeks prior to the first dose of study drug with certain exceptions.",
+        "reasonFuzzy": "Washout window with protocol-defined exceptions cannot be represented as a simple typed check."
+      },
+      {
+        "id": "NCT04198766-prior-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Prior or concurrent malignancies. Exception: Subjects with a prior or concurrent malignancy whose natural history or treatment does not have the potential to interfere with the safety or efficacy assessments of INBRX-106.",
+        "reasonFuzzy": "Subjective clinical judgment regarding whether a prior or concurrent malignancy interferes with safety or efficacy assessments."
+      },
+      {
+        "id": "NCT04198766-irAE",
+        "polarity": "exclusion",
+        "sourceText": "Grade ≥ 3 immune-related adverse events (irAEs) or irAE that lead to discontinuation of prior immunotherapy. Some exceptions as defined per protocol apply.",
+        "reasonFuzzy": "Exclusion involves specific toxicity grades and protocol-defined exceptions."
+      },
+      {
+        "id": "NCT04198766-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Active autoimmune disease or documented history of autoimmune disease that required systemic steroids or other immunosuppressive medications. Certain exceptions as defined in protocol apply.",
+        "reasonFuzzy": "Autoimmune disease history with systemic therapy requirements and protocol exceptions."
+      },
+      {
+        "id": "NCT04198766-immunodeficiency",
+        "polarity": "exclusion",
+        "sourceText": "Diagnosis of immunodeficiency or treatment with systemic immunosuppressive medications within 7 days prior to the first dose of study drug. Certain exceptions as defined in protocol apply.",
+        "reasonFuzzy": "Immunosuppressive medication washout with protocol-defined exceptions."
+      },
+      {
+        "id": "NCT04198766-hiv-hep",
+        "polarity": "exclusion",
+        "sourceText": "History of hepatitis B, hepatitis C, or human immunodeficiency virus (HIV) infection. Exceptions as defined in protocol apply.",
+        "reasonFuzzy": "Infection exclusion with protocol-defined exceptions."
+      },
+      {
+        "id": "NCT04198766-ild",
+        "polarity": "exclusion",
+        "sourceText": "Active interstitial lung disease (ILD) or pneumonitis or a history of ILD or pneumonitis requiring treatment with steroids or other immunosuppressive medications.",
+        "reasonFuzzy": "Complex history of ILD/pneumonitis requiring specific treatment."
+      },
+      {
+        "id": "NCT04198766-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Clinically significant cardiac condition, including myocardial infarction, uncontrolled angina, viral myocarditis, cerebrovascular accident, or other acute uncontrolled heart disease < 3 months prior to enrollment on this trial; left ventricular ejection fraction (LVEF) < 50%; New York Heart Association (NYHA) Class III or IV congestive heart failure; or uncontrolled hypertension; or oxygen saturation <92% on room air.",
+        "reasonFuzzy": "Multiple combined cardiovascular and physiological parameters with varying timeframes."
+      },
+      {
+        "id": "NCT04198766-pe",
+        "polarity": "exclusion",
+        "sourceText": "Active, hemodynamically significant pulmonary embolism within 12 weeks prior to enrollment on this trial.",
+        "reasonFuzzy": "Hemodynamically significant pulmonary embolism requires clinical judgment and a specific timeframe."
+      },
+      {
+        "id": "NCT04198766-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery within 4 weeks prior to enrollment on this trial.",
+        "reasonFuzzy": "Major surgery washout window is not a simple lab or biomarker cutoff."
+      },
+      {
+        "id": "NCT04198766-antibiotics",
+        "polarity": "exclusion",
+        "sourceText": "Anti-infectious drug treatments (i.e., antibiotics) within 4 weeks prior to the first dose of study drug.",
+        "reasonFuzzy": "Antibiotic washout window is not a standard lab or biomarker rule."
+      },
+      {
+        "id": "NCT04198766-transplant",
+        "polarity": "exclusion",
+        "sourceText": "Prior organ allograft transplantations or allogeneic peripheral blood stem cell (PBSC) or bone marrow (BM) transplantation.",
+        "reasonFuzzy": "Prior transplantations exclusion."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04198766",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04198766-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Males or females aged ≥18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04198766-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "All subjects with non-squamous NSCLC must have documentation of absence of tumor activating EGFR mutations and absence of ALK gene rearrangements.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT04198766-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "All subjects with non-squamous NSCLC must have documentation of absence of tumor activating EGFR mutations and absence of ALK gene rearrangements.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT04198766-prior-ox40",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior exposure to OX40 agonists.",
+        "stringValue": "OX40 agonists"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04198766-cohort-f8-stage",
+        "polarity": "inclusion",
+        "sourceText": "For Cohort F8, subjects must have previously untreated, histologically confirmed Stage II, IIIA or IIIB (T3-4N2) NSCLC.",
+        "reasonFuzzy": "Stage criteria vary by specific study cohort, and include stage II which falls outside of the primary stage III-IV scope, making a single typed stage check inappropriate."
+      },
+      {
+        "id": "NCT04198766-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "For Cohort F3 (NSCLC), subjects may have progressed on no more than 2 lines of standard therapy that must include at least one PD-1/L1 regimen.",
+        "reasonFuzzy": "Prior lines and required therapies differ depending on the specific cohort, so a single typed prior lines or prior therapy check does not apply universally."
+      },
+      {
+        "id": "NCT04198766-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "Combined Positive Score (CPS) ≥ 1% (or Tumor Proportion Score ≥50% for NSCLC; for TMB-high tumors, any TPS% is allowed).",
+        "reasonFuzzy": "PD-L1 cutoffs vary by study part and biomarker type (CPS vs TPS vs TMB), making a single pdl1_min check insufficient."
+      },
+      {
+        "id": "NCT04198766-ecog-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematologic, coagulation, hepatic and renal function and ECOG score as defined per protocol.",
+        "reasonFuzzy": "Lab and ECOG thresholds are not explicitly stated in the text and refer to protocol definitions."
+      },
+      {
+        "id": "NCT04198766-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Receipt of any investigational product or any approved anticancer drug(s) or biological product(s) within 4 weeks prior to the first dose of study drug with certain exceptions.",
+        "reasonFuzzy": "Washout windows with various complex exceptions are not a simple typed lab cutoff."
+      },
+      {
+        "id": "NCT04198766-malignancies",
+        "polarity": "exclusion",
+        "sourceText": "Prior or concurrent malignancies. Exception: Subjects with a prior or concurrent malignancy whose natural history or treatment does not have the potential to interfere with the safety or efficacy assessments of INBRX-106.",
+        "reasonFuzzy": "Concurrent malignancy exclusion with investigator-dependent exception is a judgment-based item."
+      },
+      {
+        "id": "NCT04198766-irae",
+        "polarity": "exclusion",
+        "sourceText": "Grade ≥ 3 immune-related adverse events (irAEs) or irAE that lead to discontinuation of prior immunotherapy. Some exceptions as defined per protocol apply.",
+        "reasonFuzzy": "Immune-related adverse events and protocol exceptions are clinical judgment items."
+      },
+      {
+        "id": "NCT04198766-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Active autoimmune disease or documented history of autoimmune disease that required systemic steroids or other immunosuppressive medications. Certain exceptions as defined in protocol apply.",
+        "reasonFuzzy": "Autoimmune disease history and immunosuppressive medication use with exceptions are subjective criteria."
+      },
+      {
+        "id": "NCT04198766-ild",
+        "polarity": "exclusion",
+        "sourceText": "Active interstitial lung disease (ILD) or pneumonitis or a history of ILD or pneumonitis requiring treatment with steroids or other immunosuppressive medications.",
+        "reasonFuzzy": "Interstitial lung disease history and treatment requirement are clinical judgment conditions."
+      },
+      {
+        "id": "NCT04198766-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Clinically significant cardiac condition, including myocardial infarction, uncontrolled angina, viral myocarditis, cerebrovascular accident, or other acute uncontrolled heart disease < 3 months prior to enrollment on this trial; left ventricular ejection fraction (LVEF) < 50%; New York Heart Association (NYHA) Class III or IV congestive heart failure; or uncontrolled hypertension; or oxygen saturation <92% on room air.",
+        "reasonFuzzy": "Complex cardiac conditions and multiple disparate clinical measurements cannot be represented by a single typed check."
+      },
+      {
+        "id": "NCT04198766-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery within 4 weeks prior to enrollment on this trial.",
+        "reasonFuzzy": "Major surgery washout window is not a simple lab cutoff."
+      }
+    ]
+  }
+}

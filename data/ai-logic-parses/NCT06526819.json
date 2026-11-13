@@ -1,0 +1,517 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06526819",
+  "briefTitle": "SMP-3124LP in Adults With Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T10:07:03.368Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06526819-prior-therapy-checkpoint",
+      "polarity": "exclusion",
+      "sourceText": "Patient has received prior treatment at any time with a cell cycle checkpoint inhibitor (eg, CHK1 and/or CHK2, WEE1, or ATR inhibition)",
+      "reasonFuzzy": "Cell cycle checkpoint inhibitors represent a broad class with multiple example targets and are not a simple single drug or class name."
+    },
+    {
+      "id": "NCT06526819-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06526819-ecog",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance <= 2 at screening",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06526819-hemoglobin",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin >= 9 g/dL (transfusion or use of erythropoietin to obtain this are not permitted)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06526819-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count >= 1500 uL (platelet transfusion not allowed to achieve this)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06526819-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count >= 100 x 10 (platelet transfusion not alled to achieve this)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06526819-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Bilirubin <= 1.5 x ULN (or <= 3.0 x if ULN if Gilbert's syndrome)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06526819-ast",
+      "polarity": "inclusion",
+      "sourceText": "AST and ALT <= 3.0 x ULN (or <= 5 x ULN if the liver has tumor involvement",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06526819-alt",
+      "polarity": "inclusion",
+      "sourceText": "AST and ALT <= 3.0 x ULN (or <= 5 x ULN if the liver has tumor involvement",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06526819-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Calculated creatinine clearance >= 60 mL/min using Cockcroft-Gault formula",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06526819-nsclc-histology",
+      "polarity": "inclusion",
+      "sourceText": "Non-small cell lung cancer (NSCLC: adenocarcinoma, large cell, and squamous cell carcinoma)",
+      "reasonFuzzy": "Listing allowed histologies alongside multiple different tumor types makes a typed histology_in check ambiguous for the whole study."
+    },
+    {
+      "id": "NCT06526819-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06526819-histology",
+      "polarity": "inclusion",
+      "sourceText": "Non-small cell lung cancer (NSCLC: adenocarcinoma, large cell, and squamous cell carcinoma)",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06526819-ecog",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance </= 2 at screening",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06526819-hemoglobin",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin >/= 9 g/dL (transfusion or use of erythropoietin to obtain this are not permitted)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06526819-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count >/= 1500 uL (platelet transfusion not allowed to achieve this)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06526819-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count >/= 100 x 10 (platelet transfusion not alled to achieve this)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06526819-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Bilirubin </= 1.5 x ULN (or </= 3.0 x if ULN if Gilbert's syndrome)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06526819-ast",
+      "polarity": "inclusion",
+      "sourceText": "AST and ALT </= 3.0 x ULN (or </= 5 x ULN if the liver has tumor involvement",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06526819-alt",
+      "polarity": "inclusion",
+      "sourceText": "AST and ALT </= 3.0 x ULN (or </= 5 x ULN if the liver has tumor involvement",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06526819-egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Calculated creatinine clearance >/= 60 mL/min using Cockcroft-Gault formula",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06526819-prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Patient has received prior treatment at any time with a cell cycle checkpoint inhibitor (eg, CHK1 and/or CHK2, WEE1, or ATR inhibition)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06526819-brain",
+      "polarity": "exclusion",
+      "sourceText": "Patient has central nervous system metastasis or leptomeningeal disease",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 9,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "ECOG performance <= 2 at screening"
+        },
+        {
+          "kind": "hemoglobin_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Hemoglobin >= 9 g/dL (transfusion or use of erythropoietin to obtain this are not permitted)"
+        },
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count >= 1500 uL (platelet transfusion not allowed to achieve this)"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelet count >= 100 x 10 (platelet transfusion not alled to achieve this)"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Bilirubin <= 1.5 x ULN (or <= 3.0 x if ULN if Gilbert's syndrome)"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "AST and ALT <= 3.0 x ULN (or <= 5 x ULN if the liver has tumor involvement"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "AST and ALT <= 3.0 x ULN (or <= 5 x ULN if the liver has tumor involvement"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Calculated creatinine clearance >= 60 mL/min using Cockcroft-Gault formula"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 10,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 10,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos,squamous"
+        },
+        {
+          "side": "b-only",
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:2"
+        },
+        {
+          "side": "b-only",
+          "kind": "hemoglobin_min",
+          "polarity": "inclusion",
+          "value": "n:9"
+        },
+        {
+          "side": "b-only",
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "value": "n:1500"
+        },
+        {
+          "side": "b-only",
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "value": "n:100"
+        },
+        {
+          "side": "b-only",
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "side": "b-only",
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        },
+        {
+          "side": "b-only",
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        },
+        {
+          "side": "b-only",
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "value": "n:60"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:cell cycle checkpoint inhibitor"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none"
+        }
+      ],
+      "normalizerTypedCount": 6
+    }
+  },
+  "runA": {
+    "typedEmitted": 11,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 5951
+  },
+  "runB": {
+    "typedEmitted": 11,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 3235
+  },
+  "ms": 13217,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06526819",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06526819-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06526819-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Non-small cell lung cancer (NSCLC: adenocarcinoma, large cell, and squamous cell carcinoma)",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "squamous",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06526819-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance <= 2 at screening",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06526819-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin >= 9 g/dL (transfusion or use of erythropoietin to obtain this are not permitted)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT06526819-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count >= 1500 uL (platelet transfusion not allowed to achieve this)",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT06526819-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count >= 100 x 10 (platelet transfusion not alled to achieve this)",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT06526819-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Bilirubin <= 1.5 x ULN (or <= 3.0 x if ULN if Gilbert's syndrome)",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "1.5 x ULN"
+      },
+      {
+        "id": "NCT06526819-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT <= 3.0 x ULN (or <= 5 x ULN if the liver has tumor involvement",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06526819-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT <= 3.0 x ULN (or <= 5 x ULN if the liver has tumor involvement",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06526819-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Calculated creatinine clearance >= 60 mL/min using Cockcroft-Gault formula",
+        "numberValue": 60
+      },
+      {
+        "id": "NCT06526819-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Patient has central nervous system metastasis or leptomeningeal disease",
+        "allowedBrainMets": [
+          "none"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06526819-prior-therapy-checkpoint",
+        "polarity": "exclusion",
+        "sourceText": "Patient has received prior treatment at any time with a cell cycle checkpoint inhibitor (eg, CHK1 and/or CHK2, WEE1, or ATR inhibition)",
+        "reasonFuzzy": "Cell cycle checkpoint inhibitors represent a broad class with multiple example targets and are not a simple single drug or class name."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06526819",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06526819-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06526819-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance </= 2 at screening",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06526819-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin >/= 9 g/dL (transfusion or use of erythropoietin to obtain this are not permitted)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT06526819-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count >/= 1500 uL (platelet transfusion not allowed to achieve this)",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT06526819-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count >/= 100 x 10 (platelet transfusion not alled to achieve this)",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT06526819-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Bilirubin </= 1.5 x ULN (or </= 3.0 x if ULN if Gilbert's syndrome)",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT06526819-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT </= 3.0 x ULN (or </= 5 x ULN if the liver has tumor involvement",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06526819-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT </= 3.0 x ULN (or </= 5 x ULN if the liver has tumor involvement",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06526819-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Calculated creatinine clearance >/= 60 mL/min using Cockcroft-Gault formula",
+        "numberValue": 60
+      },
+      {
+        "id": "NCT06526819-prior_therapy_excluded",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Patient has received prior treatment at any time with a cell cycle checkpoint inhibitor (eg, CHK1 and/or CHK2, WEE1, or ATR inhibition)",
+        "stringValue": "cell cycle checkpoint inhibitor"
+      },
+      {
+        "id": "NCT06526819-brain_mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Patient has central nervous system metastasis or leptomeningeal disease",
+        "allowedBrainMets": [
+          "none"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06526819-nsclc-histology",
+        "polarity": "inclusion",
+        "sourceText": "Non-small cell lung cancer (NSCLC: adenocarcinoma, large cell, and squamous cell carcinoma)",
+        "reasonFuzzy": "Listing allowed histologies alongside multiple different tumor types makes a typed histology_in check ambiguous for the whole study."
+      }
+    ]
+  }
+}

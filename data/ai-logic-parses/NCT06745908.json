@@ -1,0 +1,480 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06745908",
+  "briefTitle": "Clinical Trial of N-803 Plus Tislelizumab or Prior Failed Immune Checkpoint Inhibitor and Docetaxel Versus Docetaxel Monotherapy in Participants With Advanced or Metastatic Non-Small Cell Lung Cancer Who Have Acquired Resistance to Immune Checkpoint Inhibitor Therapy",
+  "parsedAt": "2026-11-12T05:54:21.855Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06745908-age-min",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years old.",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years old.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06745908-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically confirmed stage IV NSCLC disease.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Pathologically confirmed stage IV NSCLC disease.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06745908-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status of 0 to 2.",
+      "numberValue": 2,
+      "evidence_quote": "ECOG performance status of 0 to 2.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06745908-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable tumor lesions according to RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06745908-life",
+      "polarity": "inclusion",
+      "sourceText": "Have a life expectancy of at least 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06745908-cohort_differences",
+      "polarity": "inclusion",
+      "sourceText": "Cohort A vs Cohort B differing inclusion and exclusion criteria",
+      "reasonFuzzy": "The trial has multiple cohorts (Cohort A and Cohort B) with varying requirements for prior therapies and brain metastases rules that cannot be reduced to a single simple typed check."
+    },
+    {
+      "id": "NCT06745908-age-max",
+      "polarity": "inclusion",
+      "sourceText": "maximumAge: 90 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06745908-ast",
+      "polarity": "exclusion",
+      "sourceText": "Aspartate aminotransferase (AST [serum glutamic-oxaloacetic transaminase; SGOT]) or alanine aminotransferase (ALT [serum glutamic pyruvic transaminase; SGPT]) > 1.5 × ULN.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06745908-alt",
+      "polarity": "exclusion",
+      "sourceText": "Aspartate aminotransferase (AST [serum glutamic-oxaloacetic transaminase; SGOT]) or alanine aminotransferase (ALT [serum glutamic pyruvic transaminase; SGPT]) > 1.5 × ULN.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06745908-cohort-a-prior",
+      "polarity": "inclusion",
+      "sourceText": "Have acquired resistance to a regional Health Authority-approved immune plus platinum-based chemotherapy...",
+      "reasonFuzzy": "Complex multiline prior therapy and acquired resistance rules spanning multiple cohorts cannot be reduced to a single typed prior therapy check."
+    },
+    {
+      "id": "NCT06745908-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable tumor lesions according to RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06745908-life",
+      "polarity": "inclusion",
+      "sourceText": "Have a life expectancy of at least 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06745908-brain",
+      "polarity": "exclusion",
+      "sourceText": "Have known active central nervous system (CNS) metastases, carcinomatous meningitis, and/or spinal cord compression.",
+      "reasonFuzzy": "Refers to active CNS metastases without a clean allowedBrainMets status."
+    },
+    {
+      "id": "NCT06745908-age-max",
+      "polarity": "inclusion",
+      "sourceText": "maximumAge: 90 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06745908-ast",
+      "polarity": "exclusion",
+      "sourceText": "Aspartate aminotransferase (AST [serum glutamic-oxaloacetic transaminase; SGOT]) or alanine aminotransferase (ALT [serum glutamic pyruvic transaminase; SGPT]) > 1.5 × ULN.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06745908-alt",
+      "polarity": "exclusion",
+      "sourceText": "Aspartate aminotransferase (AST [serum glutamic-oxaloacetic transaminase; SGOT]) or alanine aminotransferase (ALT [serum glutamic pyruvic transaminase; SGPT]) > 1.5 × ULN.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06745908-brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Have known active central nervous system (CNS) metastases, carcinomatous meningitis, and/or spinal cord compression.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06745908-anc",
+      "polarity": "exclusion",
+      "sourceText": "Absolute neutrophil count ≤ 1,500 cells/mm3.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06745908-platelets",
+      "polarity": "exclusion",
+      "sourceText": "Platelet count ≤ 100,000 cells/mm3.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06745908-hemoglobin",
+      "polarity": "exclusion",
+      "sourceText": "Hemoglobin < 9.0 g/dL.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06745908-egfr_min",
+      "polarity": "exclusion",
+      "sourceText": "Serum creatinine > 2.0 mg/dL or 177 μmol/L or creatinine clearance < 40 mL/min (using the Cockcroft-Gault formula below)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 8,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "maximumAge: 90 Years"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST [serum glutamic-oxaloacetic transaminase; SGOT]) or alanine aminotransferase (ALT [serum glutamic pyruvic transaminase; SGPT]) >"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST [serum glutamic-oxaloacetic transaminase; SGOT]) or alanine aminotransferase (ALT [serum glutamic pyruvic transaminase; SGPT]) >"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 7,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "maximumAge: 90 Years"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST [serum glutamic-oxaloacetic transaminase; SGOT]) or alanine aminotransferase (ALT [serum glutamic pyruvic transaminase; SGPT]) >"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST [serum glutamic-oxaloacetic transaminase; SGOT]) or alanine aminotransferase (ALT [serum glutamic pyruvic transaminase; SGPT]) >"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 7,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:untreated"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "exclusion",
+          "value": "n:1500"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "exclusion",
+          "value": "n:100000"
+        },
+        {
+          "kind": "hemoglobin_min",
+          "polarity": "exclusion",
+          "value": "n:9"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "exclusion",
+          "value": "n:40"
+        }
+      ],
+      "normalizerTypedCount": 8
+    }
+  },
+  "runA": {
+    "typedEmitted": 11,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3600
+  },
+  "runB": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 3123
+  },
+  "ms": 14851,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06745908",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06745908-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years old.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06745908-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "maximumAge: 90 Years",
+        "numberValue": 90
+      },
+      {
+        "id": "NCT06745908-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed stage IV NSCLC disease.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06745908-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0 to 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06745908-anc",
+        "kind": "anc_min",
+        "polarity": "exclusion",
+        "sourceText": "Absolute neutrophil count ≤ 1,500 cells/mm3.",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT06745908-platelets",
+        "kind": "platelets_min",
+        "polarity": "exclusion",
+        "sourceText": "Platelet count ≤ 100,000 cells/mm3.",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT06745908-ast",
+        "kind": "ast_max",
+        "polarity": "exclusion",
+        "sourceText": "Aspartate aminotransferase (AST [serum glutamic-oxaloacetic transaminase; SGOT]) or alanine aminotransferase (ALT [serum glutamic pyruvic transaminase; SGPT]) > 1.5 × ULN.",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT06745908-alt",
+        "kind": "alt_max",
+        "polarity": "exclusion",
+        "sourceText": "Aspartate aminotransferase (AST [serum glutamic-oxaloacetic transaminase; SGOT]) or alanine aminotransferase (ALT [serum glutamic pyruvic transaminase; SGPT]) > 1.5 × ULN.",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT06745908-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "exclusion",
+        "sourceText": "Hemoglobin < 9.0 g/dL.",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT06745908-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "exclusion",
+        "sourceText": "Creatinine clearance < 40 mL/min (using the Cockcroft-Gault formula below)",
+        "numberValue": 40,
+        "stages": [],
+        "stringValue": "mL/min"
+      },
+      {
+        "id": "NCT06745908-brain_mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Have known active central nervous system (CNS) metastases, carcinomatous meningitis, and/or spinal cord compression.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06745908-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable tumor lesions according to RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06745908-life",
+        "polarity": "inclusion",
+        "sourceText": "Have a life expectancy of at least 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06745908-cohort_differences",
+        "polarity": "inclusion",
+        "sourceText": "Cohort A vs Cohort B differing inclusion and exclusion criteria",
+        "reasonFuzzy": "The trial has multiple cohorts (Cohort A and Cohort B) with varying requirements for prior therapies and brain metastases rules that cannot be reduced to a single simple typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06745908",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06745908-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years old.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06745908-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "maximumAge: 90 Years",
+        "numberValue": 90
+      },
+      {
+        "id": "NCT06745908-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed stage IV NSCLC disease.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06745908-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0 to 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06745908-anc",
+        "kind": "anc_min",
+        "polarity": "exclusion",
+        "sourceText": "Absolute neutrophil count ≤ 1,500 cells/mm3.",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT06745908-platelets",
+        "kind": "platelets_min",
+        "polarity": "exclusion",
+        "sourceText": "Platelet count ≤ 100,000 cells/mm3.",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT06745908-ast",
+        "kind": "ast_max",
+        "polarity": "exclusion",
+        "sourceText": "Aspartate aminotransferase (AST [serum glutamic-oxaloacetic transaminase; SGOT]) or alanine aminotransferase (ALT [serum glutamic pyruvic transaminase; SGPT]) > 1.5 × ULN.",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT06745908-alt",
+        "kind": "alt_max",
+        "polarity": "exclusion",
+        "sourceText": "Aspartate aminotransferase (AST [serum glutamic-oxaloacetic transaminase; SGOT]) or alanine aminotransferase (ALT [serum glutamic pyruvic transaminase; SGPT]) > 1.5 × ULN.",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT06745908-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "exclusion",
+        "sourceText": "Hemoglobin < 9.0 g/dL.",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT06745908-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "exclusion",
+        "sourceText": "Serum creatinine > 2.0 mg/dL or 177 μmol/L or creatinine clearance < 40 mL/min (using the Cockcroft-Gault formula below)",
+        "numberValue": 40
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06745908-cohort-a-prior",
+        "polarity": "inclusion",
+        "sourceText": "Have acquired resistance to a regional Health Authority-approved immune plus platinum-based chemotherapy...",
+        "reasonFuzzy": "Complex multiline prior therapy and acquired resistance rules spanning multiple cohorts cannot be reduced to a single typed prior therapy check."
+      },
+      {
+        "id": "NCT06745908-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable tumor lesions according to RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06745908-life",
+        "polarity": "inclusion",
+        "sourceText": "Have a life expectancy of at least 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06745908-brain",
+        "polarity": "exclusion",
+        "sourceText": "Have known active central nervous system (CNS) metastases, carcinomatous meningitis, and/or spinal cord compression.",
+        "reasonFuzzy": "Refers to active CNS metastases without a clean allowedBrainMets status."
+      }
+    ]
+  }
+}

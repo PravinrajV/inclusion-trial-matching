@@ -1,0 +1,178 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07444814",
+  "briefTitle": "Study Evaluating the Safety and Efficacy of HWK-007, a PTK7-directed Antibody Drug Conjugate in Participants With Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T11:54:12.349Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07444814-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "Age is part of study metadata rather than text criteria, but omitted from typed checks since it's standard; however, standard age_min check can be placed if present in structured fields. Let's add age if needed, but the prompt's criteria section did not list text age. Wait, minimumAge is in payload as 18 Years. Let's add age_min if it's explicitly given in the payload metadata."
+    },
+    {
+      "id": "NCT07444814-cns",
+      "polarity": "exclusion",
+      "sourceText": "Individual with known or suspected uncontrolled central nervous system (CNS) metastases",
+      "reasonFuzzy": "Uncontrolled CNS metastases wording is not a clean typed brain_mets status."
+    },
+    {
+      "id": "NCT07444814-stage",
+      "polarity": "inclusion",
+      "sourceText": "Have one of the following solid tumor cancers: non-squamous EGFR-Wt NSCLC",
+      "reasonFuzzy": "Advanced solid tumors are listed without a specific numbered stage list, but advanced NSCLC is in scope."
+    },
+    {
+      "id": "NCT07444814-cns",
+      "polarity": "exclusion",
+      "sourceText": "Individual with known or suspected uncontrolled central nervous system (CNS) metastases",
+      "reasonFuzzy": "Uncontrolled CNS metastases wording is subjective and not a simple allowedBrainMets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT07444814-histology",
+      "polarity": "inclusion",
+      "sourceText": "non-squamous EGFR-Wt NSCLC",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07444814-egfr",
+      "polarity": "inclusion",
+      "sourceText": "non-squamous EGFR-Wt NSCLC",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:absent"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 5468
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 1831
+  },
+  "ms": 15280,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07444814",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07444814-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "non-squamous EGFR-Wt NSCLC",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07444814-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "non-squamous EGFR-Wt NSCLC",
+        "presence": "absent"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07444814-age",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "reasonFuzzy": "Age is part of study metadata rather than text criteria, but omitted from typed checks since it's standard; however, standard age_min check can be placed if present in structured fields. Let's add age if needed, but the prompt's criteria section did not list text age. Wait, minimumAge is in payload as 18 Years. Let's add age_min if it's explicitly given in the payload metadata."
+      },
+      {
+        "id": "NCT07444814-cns",
+        "polarity": "exclusion",
+        "sourceText": "Individual with known or suspected uncontrolled central nervous system (CNS) metastases",
+        "reasonFuzzy": "Uncontrolled CNS metastases wording is not a clean typed brain_mets status."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07444814",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07444814-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "non-squamous EGFR-Wt NSCLC",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07444814-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "non-squamous EGFR-Wt NSCLC",
+        "presence": "absent"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07444814-stage",
+        "polarity": "inclusion",
+        "sourceText": "Have one of the following solid tumor cancers: non-squamous EGFR-Wt NSCLC",
+        "reasonFuzzy": "Advanced solid tumors are listed without a specific numbered stage list, but advanced NSCLC is in scope."
+      },
+      {
+        "id": "NCT07444814-cns",
+        "polarity": "exclusion",
+        "sourceText": "Individual with known or suspected uncontrolled central nervous system (CNS) metastases",
+        "reasonFuzzy": "Uncontrolled CNS metastases wording is subjective and not a simple allowedBrainMets status of none, treated_stable, or untreated."
+      }
+    ]
+  }
+}

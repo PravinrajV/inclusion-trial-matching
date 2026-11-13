@@ -1,0 +1,198 @@
+{
+  "ranAt": "2026-11-12T01:57:31.124Z",
+  "model": "gemini-3.5-flash-lite",
+  "promptVersion": "1",
+  "schemaVersion": "1",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "hits": 0,
+  "total": 26,
+  "percent": 0,
+  "typedHits": 0,
+  "typedTotal": 24,
+  "fuzzyHits": 0,
+  "fuzzyTotal": 2,
+  "rows": [
+    {
+      "id": "C01",
+      "nctId": "NCT03093116",
+      "kind": "age_min",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C02",
+      "nctId": "NCT03093116",
+      "kind": "ecog_max",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C03",
+      "nctId": "NCT04181060",
+      "kind": "ecog_max",
+      "verdict": "miss",
+      "detail": "Expected double-quoted property name in JSON at position 972 (line 34 column 7)"
+    },
+    {
+      "id": "C04",
+      "nctId": "NCT04181060",
+      "kind": "histology_in",
+      "verdict": "miss",
+      "detail": "Expected double-quoted property name in JSON at position 972 (line 34 column 7)"
+    },
+    {
+      "id": "C05",
+      "nctId": "NCT03191149",
+      "kind": "stage_in",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C06",
+      "nctId": "NCT03851445",
+      "kind": "stage_in",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C07",
+      "nctId": "NCT04181060",
+      "kind": "egfr_variant_in",
+      "verdict": "miss",
+      "detail": "Expected double-quoted property name in JSON at position 972 (line 34 column 7)"
+    },
+    {
+      "id": "C08",
+      "nctId": "NCT03191149",
+      "kind": "egfr_variant_in",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C09",
+      "nctId": "NCT04198766",
+      "kind": "egfr_status",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C10",
+      "nctId": "NCT04198766",
+      "kind": "alk_status",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C11",
+      "nctId": "NCT03851445",
+      "kind": "egfr_status",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C12",
+      "nctId": "NCT03851445",
+      "kind": "alk_status",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C13",
+      "nctId": "NCT04613596",
+      "kind": "kras_variant_in",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C14",
+      "nctId": "NCT03093116",
+      "kind": "alk_status",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C15",
+      "nctId": "NCT04181060",
+      "kind": "prior_lines_max",
+      "verdict": "miss",
+      "detail": "Expected double-quoted property name in JSON at position 972 (line 34 column 7)"
+    },
+    {
+      "id": "C16",
+      "nctId": "NCT04181060",
+      "kind": "prior_therapy_excluded",
+      "verdict": "miss",
+      "detail": "Expected double-quoted property name in JSON at position 972 (line 34 column 7)"
+    },
+    {
+      "id": "C17",
+      "nctId": "NCT03851445",
+      "kind": "prior_lines_min",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C18",
+      "nctId": "NCT04165070",
+      "kind": "brain_mets",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C19",
+      "nctId": "NCT06561386",
+      "kind": "brain_mets",
+      "verdict": "miss",
+      "detail": "AI: Error fetching from https://firebasevertexai.googleapis.com/v1beta/projects/inclusion-hybridai/models/gemini-3.5-flash-lite:generateContent: [500 Internal Server Error] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (AI/fetch-error)"
+    },
+    {
+      "id": "C20",
+      "nctId": "NCT01720836",
+      "kind": "egfr_min",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C21",
+      "nctId": "NCT03093116",
+      "kind": "egfr_min",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C22",
+      "nctId": "NCT03093116",
+      "kind": "hemoglobin_min",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C23",
+      "nctId": "NCT01720836",
+      "kind": "platelets_min",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C24",
+      "nctId": "NCT01720836",
+      "kind": "anc_min",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity"
+    },
+    {
+      "id": "C25",
+      "nctId": "NCT04181060",
+      "kind": "fuzzy",
+      "verdict": "miss",
+      "detail": "Expected double-quoted property name in JSON at position 972 (line 34 column 7)"
+    },
+    {
+      "id": "C26",
+      "nctId": "NCT06561386",
+      "kind": "fuzzy",
+      "verdict": "miss",
+      "detail": "AI: Error fetching from https://firebasevertexai.googleapis.com/v1beta/projects/inclusion-hybridai/models/gemini-3.5-flash-lite:generateContent: [500 Internal Server Error] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (AI/fetch-error)"
+    }
+  ]
+}

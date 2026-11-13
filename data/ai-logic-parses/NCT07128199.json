@@ -1,0 +1,551 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07128199",
+  "briefTitle": "A Study to Assess Zipalertinib Versus Placebo in Participants With Early Stage NSCLC With Uncommon EGFR Mutations, Following Complete Tumor Resection",
+  "parsedAt": "2026-11-12T10:46:24.526Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07128199-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern cooperative oncology group performance status (ECOG PS) of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern cooperative oncology group performance status (ECOG PS) of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07128199-surgery-timing",
+      "polarity": "inclusion",
+      "sourceText": "Complete recovery from surgery, including post-operative wound healing, and prior adjuvant chemotherapy (if applicable) at the time of randomization. Randomization timing is defined as follows: 1. For participants without prior adjuvant chemotherapy: 4 weeks and 12 weeks following surgery. 2. For participants with prior adjuvant chemotherapy: 4 weeks and 8 weeks after the last dose of adjuvant chemotherapy.",
+      "reasonFuzzy": "Surgical recovery and randomization timing rules involve multi-part conditional time windows based on prior chemotherapy."
+    },
+    {
+      "id": "NCT07128199-surgical-resection",
+      "polarity": "inclusion",
+      "sourceText": "Complete surgical resection of the primary NSCLC is mandatory with negative surgical margins and systematic lymph node sampling or dissection.",
+      "reasonFuzzy": "Surgical margin status and lymph node sampling details are procedural requirements rather than typed checks."
+    },
+    {
+      "id": "NCT07128199-radiation-exc",
+      "polarity": "exclusion",
+      "sourceText": "Pre-operative or post-operative or planned radiation therapy for the current lung cancer.",
+      "reasonFuzzy": "Radiation therapy exclusion rules involve complex procedural timing and intent."
+    },
+    {
+      "id": "NCT07128199-surgery-type",
+      "polarity": "exclusion",
+      "sourceText": "Has received only wedge resections (complete anatomic segmentectomy is acceptable).",
+      "reasonFuzzy": "Surgical procedure type restrictions (wedge vs segmentectomy) are not captured by standard typed criteria."
+    },
+    {
+      "id": "NCT07128199-investigator-opinion",
+      "polarity": "exclusion",
+      "sourceText": "Other curatively treated cancer, with no evidence of disease for >3 years following the end of treatment and, in the opinion of the treating physician, has no substantial risk of recurrence.",
+      "reasonFuzzy": "Contains investigator opinion and discretion on cancer recurrence risk."
+    },
+    {
+      "id": "NCT07128199-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Documented EGFRmt status as determined by local testing performed at a clinical laboratory improvement amendment (CLIA) certified (United States [US]) or accredited (outside of the US) local laboratory, defined as either one of the following EGFRmt: exon20 insertion mutations (ex20ins) or other uncommon, non-ex20ins EGFRmt (eg, G719X, L861Q, or S768I) exons 18-21 of the EGFR tyrosine kinase domain",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07128199-brain",
+      "polarity": "inclusion",
+      "sourceText": "Baseline imaging assessment of the brain (MRI [preferred modality] or CT scan) performed within 8 weeks prior to randomization must show no evidence of brain metastasis",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07128199-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07128199-surgery",
+      "polarity": "inclusion",
+      "sourceText": "Complete surgical resection of the primary NSCLC is mandatory with negative surgical margins and systematic lymph node sampling or dissection.",
+      "reasonFuzzy": "Surgical resection requirements are procedural and not a typed check."
+    },
+    {
+      "id": "NCT07128199-recovery-timing",
+      "polarity": "inclusion",
+      "sourceText": "Complete recovery from surgery, including post-operative wound healing, and prior adjuvant chemotherapy (if applicable) at the time of randomization. Randomization timing is defined as follows: 1. For participants without prior adjuvant chemotherapy: 4 weeks and 12 weeks following surgery. 2. For participants with prior adjuvant chemotherapy: 4 weeks and 8 weeks after the last dose of adjuvant chemotherapy.",
+      "reasonFuzzy": "Recovery and specific time windows relative to surgery and chemotherapy are complex and not expressible as a single typed check."
+    },
+    {
+      "id": "NCT07128199-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Archival tumor tissue available for submission, with minimum quantity sufficient to evaluate EGFRmt status and, where possible, other biomarkers.",
+      "reasonFuzzy": "Tissue availability is not a typed check."
+    },
+    {
+      "id": "NCT07128199-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Is currently receiving an investigational drug in a clinical trial or participating in any other type of medical research.",
+      "reasonFuzzy": "Concurrent clinical trial participation is an exclusion that cannot be represented by a standard kind."
+    },
+    {
+      "id": "NCT07128199-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Pre-operative or post-operative or planned radiation therapy for the current lung cancer.",
+      "reasonFuzzy": "Prior or planned radiation therapy is not a typed prior therapy exclusion kind."
+    },
+    {
+      "id": "NCT07128199-systemic-therapy-excl",
+      "polarity": "exclusion",
+      "sourceText": "Any prior systemic anticancer therapy for NSCLC, including preoperative (neoadjuvant) chemotherapy, immunotherapy, or investigational therapy. (Exception: Participants who have received postoperative adjuvant platinum-based chemotherapy up to 4 cycles are permitted)",
+      "reasonFuzzy": "The exclusion of prior systemic therapies with complex exceptions (adjuvant platinum-based chemotherapy up to 4 cycles) cannot be captured by a simple typed check."
+    },
+    {
+      "id": "NCT07128199-major-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery (including primary tumor surgery, excluding placement of vascular access) within 4 weeks prior to the first dose of study treatment.",
+      "reasonFuzzy": "Washout window for major surgery is not a typed laboratory or prior therapy check."
+    },
+    {
+      "id": "NCT07128199-investigational-half-life",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with an investigational drug within five half-lives of the compound or any of its related material, if known.",
+      "reasonFuzzy": "Half-life based washout for investigational drugs is not a standard typed check."
+    },
+    {
+      "id": "NCT07128199-wedge",
+      "polarity": "exclusion",
+      "sourceText": "Has received only wedge resections (complete anatomic segmentectomy is acceptable).",
+      "reasonFuzzy": "Surgical resection type details are not a typed check."
+    },
+    {
+      "id": "NCT07128199-ild",
+      "polarity": "exclusion",
+      "sourceText": "Past medical history of interstitial lung disease (ILD)/pneumonitis, drug-induced ILD/pneumonitis or any evidence of clinically active ILD/pneumonitis.",
+      "reasonFuzzy": "Interstitial lung disease history is not a typed check."
+    },
+    {
+      "id": "NCT07128199-swallow",
+      "polarity": "exclusion",
+      "sourceText": "Unable to swallow tablets or has any disease or condition that may significantly affect gastrointestinal (GI) absorption of zipalertinib (such as inflammatory bowel disease, malabsorption syndrome, or prior significant bowel resection).",
+      "reasonFuzzy": "Gastrointestinal absorption and swallowing ability are clinical judgments, not typed checks."
+    },
+    {
+      "id": "NCT07128199-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Has a history of any other cancer except for any of the following: 1. Non-melanoma skin cancer treated with curative intent 2. Carcinoma in situ treated with curative intent 3. Other curatively treated cancer, with no evidence of disease for >3 years following the end of treatment and, in the opinion of the treating physician, has no substantial risk of recurrence. 4. Concurrent malignancy of which natural history does not have the potential to interfere with the safety or efficacy assessment (eg, Gleason 6 prostate cancer)",
+      "reasonFuzzy": "History of other cancers with specific exceptions and timeframes cannot be expressed via typed checks."
+    },
+    {
+      "id": "NCT07128199-hiv-hep",
+      "polarity": "exclusion",
+      "sourceText": "Known history of hepatitis B, hepatitis C, or human immunodeficiency virus (HIV) that is unstable or not controlled with treatment.",
+      "reasonFuzzy": "Stability/control status of viral infections is not a simple typed check."
+    },
+    {
+      "id": "NCT07128199-bleeding",
+      "polarity": "exclusion",
+      "sourceText": "Active bleeding disorders.",
+      "reasonFuzzy": "Active bleeding disorders are not a typed check."
+    },
+    {
+      "id": "NCT07128199-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Known hypersensitivity to the ingredients in zipalertinib/placebo or any drugs similar in structure or class.",
+      "reasonFuzzy": "Hypersensitivity is not a typed check."
+    },
+    {
+      "id": "NCT07128199-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Documented EGFRmt status as determined by local testing performed at a clinical laboratory improvement amendment (CLIA) certified (United States [US]) or accredited (outside of the US) local laboratory, defined as either one of the following EGFRmt: exon20 insertion mutations (ex20ins) or other uncommon, non-ex20ins EGFRmt (eg, G719X, L861Q, or S768I) exons 18-21 of the EGFR tyrosine kinase domain",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07128199-brain",
+      "polarity": "inclusion",
+      "sourceText": "Baseline imaging assessment of the brain (MRI [preferred modality] or CT scan) performed within 8 weeks prior to randomization must show no evidence of brain metastasis",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07128199-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07128199-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed diagnosis of primary NSCLC on predominantly non-squamous histology.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07128199-stage",
+      "polarity": "inclusion",
+      "sourceText": "Pathologic (post-operative) Stage IB, IIA, IIB, or IIIA according to the AJCC 9th tumor nodes metastasis (TNM) staging system for lung cancer. In addition, participants with stage IIIB are eligible when regional lymph node involvement is N2.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07128199-egfr-inh-exc",
+      "polarity": "exclusion",
+      "sourceText": "Zipalertinib (TAS6417/CLN-081) or any other EGFR inhibitor at any time.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Documented EGFRmt status as determined by local testing performed at a clinical laboratory improvement amendment (CLIA) certified (United States [US]) or accred"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Baseline imaging assessment of the brain (MRI [preferred modality] or CT scan) performed within 8 weeks prior to randomization must show no evidence of brain me"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Documented EGFRmt status as determined by local testing performed at a clinical laboratory improvement amendment (CLIA) certified (United States [US]) or accred"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Baseline imaging assessment of the brain (MRI [preferred modality] or CT scan) performed within 8 weeks prior to randomization must show no evidence of brain me"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        },
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IB,IIA,IIB,IIIA,IIIB"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:egfr inhibitor"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3350
+  },
+  "runB": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 15,
+    "attempts": 1,
+    "ms": 5189
+  },
+  "ms": 16522,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07128199",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07128199-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed diagnosis of primary NSCLC on predominantly non-squamous histology.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07128199-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Documented EGFRmt status as determined by local testing performed at a clinical laboratory improvement amendment (CLIA) certified (United States [US]) or accredited (outside of the US) local laboratory, defined as either one of the following EGFRmt: exon20 insertion mutations (ex20ins) or other uncommon, non-ex20ins EGFRmt (eg, G719X, L861Q, or S768I) exons 18-21 of the EGFR tyrosine kinase domain",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07128199-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Baseline imaging assessment of the brain (MRI [preferred modality] or CT scan) performed within 8 weeks prior to randomization must show no evidence of brain metastasis",
+        "allowedBrainMets": [
+          "none"
+        ]
+      },
+      {
+        "id": "NCT07128199-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern cooperative oncology group performance status (ECOG PS) of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07128199-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologic (post-operative) Stage IB, IIA, IIB, or IIIA according to the AJCC 9th tumor nodes metastasis (TNM) staging system for lung cancer. In addition, participants with stage IIIB are eligible when regional lymph node involvement is N2.",
+        "stages": [
+          "IB",
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT07128199-egfr-inh-exc",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Zipalertinib (TAS6417/CLN-081) or any other EGFR inhibitor at any time.",
+        "stringValue": "EGFR inhibitor"
+      },
+      {
+        "id": "NCT07128199-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07128199-surgery-timing",
+        "polarity": "inclusion",
+        "sourceText": "Complete recovery from surgery, including post-operative wound healing, and prior adjuvant chemotherapy (if applicable) at the time of randomization. Randomization timing is defined as follows: 1. For participants without prior adjuvant chemotherapy: 4 weeks and 12 weeks following surgery. 2. For participants with prior adjuvant chemotherapy: 4 weeks and 8 weeks after the last dose of adjuvant chemotherapy.",
+        "reasonFuzzy": "Surgical recovery and randomization timing rules involve multi-part conditional time windows based on prior chemotherapy."
+      },
+      {
+        "id": "NCT07128199-surgical-resection",
+        "polarity": "inclusion",
+        "sourceText": "Complete surgical resection of the primary NSCLC is mandatory with negative surgical margins and systematic lymph node sampling or dissection.",
+        "reasonFuzzy": "Surgical margin status and lymph node sampling details are procedural requirements rather than typed checks."
+      },
+      {
+        "id": "NCT07128199-radiation-exc",
+        "polarity": "exclusion",
+        "sourceText": "Pre-operative or post-operative or planned radiation therapy for the current lung cancer.",
+        "reasonFuzzy": "Radiation therapy exclusion rules involve complex procedural timing and intent."
+      },
+      {
+        "id": "NCT07128199-surgery-type",
+        "polarity": "exclusion",
+        "sourceText": "Has received only wedge resections (complete anatomic segmentectomy is acceptable).",
+        "reasonFuzzy": "Surgical procedure type restrictions (wedge vs segmentectomy) are not captured by standard typed criteria."
+      },
+      {
+        "id": "NCT07128199-investigator-opinion",
+        "polarity": "exclusion",
+        "sourceText": "Other curatively treated cancer, with no evidence of disease for >3 years following the end of treatment and, in the opinion of the treating physician, has no substantial risk of recurrence.",
+        "reasonFuzzy": "Contains investigator opinion and discretion on cancer recurrence risk."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07128199",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07128199-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed diagnosis of primary NSCLC on predominantly non-squamous histology.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07128199-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Documented EGFRmt status as determined by local testing performed at a clinical laboratory improvement amendment (CLIA) certified (United States [US]) or accredited (outside of the US) local laboratory, defined as either one of the following EGFRmt: exon20 insertion mutations (ex20ins) or other uncommon, non-ex20ins EGFRmt (eg, G719X, L861Q, or S768I) exons 18-21 of the EGFR tyrosine kinase domain",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07128199-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Baseline imaging assessment of the brain (MRI [preferred modality] or CT scan) performed within 8 weeks prior to randomization must show no evidence of brain metastasis",
+        "allowedBrainMets": [
+          "none"
+        ]
+      },
+      {
+        "id": "NCT07128199-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern cooperative oncology group performance status (ECOG PS) of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07128199-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologic (post-operative) Stage IB, IIA, IIB, or IIIA according to the AJCC 9th tumor nodes metastasis (TNM) staging system for lung cancer. In addition, participants with stage IIIB are eligible when regional lymph node involvement is N2.",
+        "stages": [
+          "IB",
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT07128199-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07128199-egfr-inhibitor-excl",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Zipalertinib (TAS6417/CLN-081) or any other EGFR inhibitor at any time.",
+        "stringValue": "EGFR inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07128199-surgery",
+        "polarity": "inclusion",
+        "sourceText": "Complete surgical resection of the primary NSCLC is mandatory with negative surgical margins and systematic lymph node sampling or dissection.",
+        "reasonFuzzy": "Surgical resection requirements are procedural and not a typed check."
+      },
+      {
+        "id": "NCT07128199-recovery-timing",
+        "polarity": "inclusion",
+        "sourceText": "Complete recovery from surgery, including post-operative wound healing, and prior adjuvant chemotherapy (if applicable) at the time of randomization. Randomization timing is defined as follows: 1. For participants without prior adjuvant chemotherapy: 4 weeks and 12 weeks following surgery. 2. For participants with prior adjuvant chemotherapy: 4 weeks and 8 weeks after the last dose of adjuvant chemotherapy.",
+        "reasonFuzzy": "Recovery and specific time windows relative to surgery and chemotherapy are complex and not expressible as a single typed check."
+      },
+      {
+        "id": "NCT07128199-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Archival tumor tissue available for submission, with minimum quantity sufficient to evaluate EGFRmt status and, where possible, other biomarkers.",
+        "reasonFuzzy": "Tissue availability is not a typed check."
+      },
+      {
+        "id": "NCT07128199-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Is currently receiving an investigational drug in a clinical trial or participating in any other type of medical research.",
+        "reasonFuzzy": "Concurrent clinical trial participation is an exclusion that cannot be represented by a standard kind."
+      },
+      {
+        "id": "NCT07128199-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Pre-operative or post-operative or planned radiation therapy for the current lung cancer.",
+        "reasonFuzzy": "Prior or planned radiation therapy is not a typed prior therapy exclusion kind."
+      },
+      {
+        "id": "NCT07128199-systemic-therapy-excl",
+        "polarity": "exclusion",
+        "sourceText": "Any prior systemic anticancer therapy for NSCLC, including preoperative (neoadjuvant) chemotherapy, immunotherapy, or investigational therapy. (Exception: Participants who have received postoperative adjuvant platinum-based chemotherapy up to 4 cycles are permitted)",
+        "reasonFuzzy": "The exclusion of prior systemic therapies with complex exceptions (adjuvant platinum-based chemotherapy up to 4 cycles) cannot be captured by a simple typed check."
+      },
+      {
+        "id": "NCT07128199-major-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery (including primary tumor surgery, excluding placement of vascular access) within 4 weeks prior to the first dose of study treatment.",
+        "reasonFuzzy": "Washout window for major surgery is not a typed laboratory or prior therapy check."
+      },
+      {
+        "id": "NCT07128199-investigational-half-life",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with an investigational drug within five half-lives of the compound or any of its related material, if known.",
+        "reasonFuzzy": "Half-life based washout for investigational drugs is not a standard typed check."
+      },
+      {
+        "id": "NCT07128199-wedge",
+        "polarity": "exclusion",
+        "sourceText": "Has received only wedge resections (complete anatomic segmentectomy is acceptable).",
+        "reasonFuzzy": "Surgical resection type details are not a typed check."
+      },
+      {
+        "id": "NCT07128199-ild",
+        "polarity": "exclusion",
+        "sourceText": "Past medical history of interstitial lung disease (ILD)/pneumonitis, drug-induced ILD/pneumonitis or any evidence of clinically active ILD/pneumonitis.",
+        "reasonFuzzy": "Interstitial lung disease history is not a typed check."
+      },
+      {
+        "id": "NCT07128199-swallow",
+        "polarity": "exclusion",
+        "sourceText": "Unable to swallow tablets or has any disease or condition that may significantly affect gastrointestinal (GI) absorption of zipalertinib (such as inflammatory bowel disease, malabsorption syndrome, or prior significant bowel resection).",
+        "reasonFuzzy": "Gastrointestinal absorption and swallowing ability are clinical judgments, not typed checks."
+      },
+      {
+        "id": "NCT07128199-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Has a history of any other cancer except for any of the following: 1. Non-melanoma skin cancer treated with curative intent 2. Carcinoma in situ treated with curative intent 3. Other curatively treated cancer, with no evidence of disease for >3 years following the end of treatment and, in the opinion of the treating physician, has no substantial risk of recurrence. 4. Concurrent malignancy of which natural history does not have the potential to interfere with the safety or efficacy assessment (eg, Gleason 6 prostate cancer)",
+        "reasonFuzzy": "History of other cancers with specific exceptions and timeframes cannot be expressed via typed checks."
+      },
+      {
+        "id": "NCT07128199-hiv-hep",
+        "polarity": "exclusion",
+        "sourceText": "Known history of hepatitis B, hepatitis C, or human immunodeficiency virus (HIV) that is unstable or not controlled with treatment.",
+        "reasonFuzzy": "Stability/control status of viral infections is not a simple typed check."
+      },
+      {
+        "id": "NCT07128199-bleeding",
+        "polarity": "exclusion",
+        "sourceText": "Active bleeding disorders.",
+        "reasonFuzzy": "Active bleeding disorders are not a typed check."
+      },
+      {
+        "id": "NCT07128199-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Known hypersensitivity to the ingredients in zipalertinib/placebo or any drugs similar in structure or class.",
+        "reasonFuzzy": "Hypersensitivity is not a typed check."
+      }
+    ]
+  }
+}

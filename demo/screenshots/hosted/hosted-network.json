@@ -1,0 +1,153 @@
+[
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://inclusion-hybridai.web.app/",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://inclusion-hybridai.web.app/assets/index-CAugtDO_.css",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://inclusion-hybridai.web.app/fonts/plex-sans-400.woff2",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://inclusion-hybridai.web.app/fonts/plex-sans-600.woff2",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://inclusion-hybridai.web.app/fonts/plex-sans-500.woff2",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://inclusion-hybridai.web.app/assets/index-TtnLAjET.js",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://inclusion-hybridai.web.app/fonts/plex-mono-400.woff2",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://www.google.com/recaptcha/enterprise.js",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://www.gstatic.com/recaptcha/releases/0lEGiwO4Qwx5R9ArxUy0mBpf/recaptcha__en.js",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://www.google.com/recaptcha/enterprise/anchor",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://www.gstatic.com/recaptcha/releases/0lEGiwO4Qwx5R9ArxUy0mBpf/recaptcha__en.js",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://www.gstatic.com/recaptcha/releases/0lEGiwO4Qwx5R9ArxUy0mBpf/styles__ltr.css",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://www.google.com/recaptcha/enterprise/webworker.js",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://www.gstatic.com/recaptcha/releases/0lEGiwO4Qwx5R9ArxUy0mBpf/recaptcha__en.js",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "POST",
+    "url": "https://www.google.com/recaptcha/enterprise/reload",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "POST",
+    "url": "https://www.google.com/recaptcha/enterprise/clr",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 403,
+    "method": "POST",
+    "url": "https://content-firebaseappcheck.googleapis.com/v1/projects/inclusion-hybridai/apps/1:643759140603:web:528ba958d6a8785dae4a5e:exchangeRecaptchaEnterpriseToken",
+    "appcheck_header_len": 0,
+    "kind": "appcheck-exchange",
+    "has_token": false,
+    "ttl": null,
+    "error_message": "App attestation failed."
+  },
+  {
+    "status": 200,
+    "method": "POST",
+    "url": "https://identitytoolkit.googleapis.com/v1/accounts:signUp",
+    "appcheck_header_len": 36,
+    "kind": "signup"
+  },
+  {
+    "status": 200,
+    "method": "POST",
+    "url": "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+    "appcheck_header_len": 36
+  },
+  {
+    "status": 200,
+    "method": "POST",
+    "url": "https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel",
+    "appcheck_header_len": 0,
+    "kind": "firestore"
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel",
+    "appcheck_header_len": 0,
+    "kind": "firestore"
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://inclusion-hybridai.web.app/trial-records.json",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://inclusion-hybridai.web.app/trial-meta.json",
+    "appcheck_header_len": 0
+  },
+  {
+    "status": 200,
+    "method": "GET",
+    "url": "https://inclusion-hybridai.web.app/map/region-states.json",
+    "appcheck_header_len": 0
+  }
+]

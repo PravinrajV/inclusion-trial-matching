@@ -1,0 +1,353 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06275360",
+  "briefTitle": "Repositioning Immunotherapy in VetArans With Lung Cancer",
+  "parsedAt": "2026-11-12T06:31:35.569Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06275360-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Unresectable Stage III NSCLC as assessed by investigator or multidisciplinary tumor board assessment",
+      "stages": [
+        "IIIA",
+        "IIIB",
+        "IIIC"
+      ],
+      "evidence_quote": "Unresectable Stage III NSCLC as assessed by investigator or multidisciplinary tumor board assessment",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06275360-chemoradiation",
+      "polarity": "inclusion",
+      "sourceText": "Patient must be a candidate for concurrent chemoradiation",
+      "reasonFuzzy": "Candidate for concurrent chemoradiation is an investigator judgment and procedural requirement."
+    },
+    {
+      "id": "NCT06275360-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Presence of measurable disease according to RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06275360-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function",
+      "reasonFuzzy": "Adequate organ function without explicit lab cutoffs is qualitative."
+    },
+    {
+      "id": "NCT06275360-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Available tissue (archival FFPE preferred) with adequate tumor content ( 20% tumor cellularity)",
+      "reasonFuzzy": "Tissue availability and cellularity are procedural criteria."
+    },
+    {
+      "id": "NCT06275360-prior-tx",
+      "polarity": "exclusion",
+      "sourceText": "Prior thoracic radiotherapy or prior systemic treatment for stage IIIB/IV NSCLC",
+      "reasonFuzzy": "Prior therapy exclusion details are too broad and complex for a single simple prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT06275360-chemoradiation",
+      "polarity": "inclusion",
+      "sourceText": "Patient must be a candidate for concurrent chemoradiation",
+      "reasonFuzzy": "Candidate for concurrent chemoradiation is an investigator judgment and clinical assessment."
+    },
+    {
+      "id": "NCT06275360-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Presence of measurable disease according to RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06275360-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function",
+      "reasonFuzzy": "Adequate organ function without specific lab thresholds is a subjective clinical evaluation."
+    },
+    {
+      "id": "NCT06275360-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Available tissue (archival FFPE preferred) with adequate tumor content ( 20% tumor cellularity)",
+      "reasonFuzzy": "Tissue availability and cellularity assessment are not standard typed trial checks."
+    },
+    {
+      "id": "NCT06275360-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Prior thoracic radiotherapy or prior systemic treatment for stage IIIB/IV NSCLC",
+      "reasonFuzzy": "Prior treatment restriction combines modality and stage-specific clauses that cannot be represented by a single typed prior therapy check."
+    },
+    {
+      "id": "NCT06275360-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have a performance status of 0-1 (ECOG Performance Scale)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06275360-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "PD-L1 tumor expression greater than or equal to 1%",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06275360-egfr-excl",
+      "polarity": "exclusion",
+      "sourceText": "Tumor with known EGFR, ALK, ROS1, MET or RET mutations/fusions",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06275360-alk-excl",
+      "polarity": "exclusion",
+      "sourceText": "Tumor with known EGFR, ALK, ROS1, MET or RET mutations/fusions",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06275360-ros1-excl",
+      "polarity": "exclusion",
+      "sourceText": "Tumor with known EGFR, ALK, ROS1, MET or RET mutations/fusions",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 6,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 5,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "ros1_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 2765
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 6066
+  },
+  "ms": 16823,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06275360",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06275360-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have a performance status of 0-1 (ECOG Performance Scale)",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06275360-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Unresectable Stage III NSCLC as assessed by investigator or multidisciplinary tumor board assessment",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT06275360-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "PD-L1 tumor expression greater than or equal to 1%",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06275360-egfr-excl",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Tumor with known EGFR, ALK, ROS1, MET or RET mutations/fusions",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06275360-alk-excl",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Tumor with known EGFR, ALK, ROS1, MET or RET mutations/fusions",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06275360-ros1-excl",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Tumor with known EGFR, ALK, ROS1, MET or RET mutations/fusions",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06275360-chemoradiation",
+        "polarity": "inclusion",
+        "sourceText": "Patient must be a candidate for concurrent chemoradiation",
+        "reasonFuzzy": "Candidate for concurrent chemoradiation is an investigator judgment and procedural requirement."
+      },
+      {
+        "id": "NCT06275360-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Presence of measurable disease according to RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06275360-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function",
+        "reasonFuzzy": "Adequate organ function without explicit lab cutoffs is qualitative."
+      },
+      {
+        "id": "NCT06275360-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Available tissue (archival FFPE preferred) with adequate tumor content ( 20% tumor cellularity)",
+        "reasonFuzzy": "Tissue availability and cellularity are procedural criteria."
+      },
+      {
+        "id": "NCT06275360-prior-tx",
+        "polarity": "exclusion",
+        "sourceText": "Prior thoracic radiotherapy or prior systemic treatment for stage IIIB/IV NSCLC",
+        "reasonFuzzy": "Prior therapy exclusion details are too broad and complex for a single simple prior_therapy_excluded check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06275360",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06275360-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have a performance status of 0-1 (ECOG Performance Scale)",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06275360-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Unresectable Stage III NSCLC as assessed by investigator or multidisciplinary tumor board assessment",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT06275360-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "PD-L1 tumor expression greater than or equal to 1%",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06275360-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Tumor with known EGFR, ALK, ROS1, MET or RET mutations/fusions",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06275360-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Tumor with known EGFR, ALK, ROS1, MET or RET mutations/fusions",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06275360-ros1",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Tumor with known EGFR, ALK, ROS1, MET or RET mutations/fusions",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06275360-chemoradiation",
+        "polarity": "inclusion",
+        "sourceText": "Patient must be a candidate for concurrent chemoradiation",
+        "reasonFuzzy": "Candidate for concurrent chemoradiation is an investigator judgment and clinical assessment."
+      },
+      {
+        "id": "NCT06275360-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Presence of measurable disease according to RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06275360-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function",
+        "reasonFuzzy": "Adequate organ function without specific lab thresholds is a subjective clinical evaluation."
+      },
+      {
+        "id": "NCT06275360-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Available tissue (archival FFPE preferred) with adequate tumor content ( 20% tumor cellularity)",
+        "reasonFuzzy": "Tissue availability and cellularity assessment are not standard typed trial checks."
+      },
+      {
+        "id": "NCT06275360-prior-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Prior thoracic radiotherapy or prior systemic treatment for stage IIIB/IV NSCLC",
+        "reasonFuzzy": "Prior treatment restriction combines modality and stage-specific clauses that cannot be represented by a single typed prior therapy check."
+      }
+    ]
+  }
+}

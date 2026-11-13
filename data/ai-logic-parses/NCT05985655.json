@@ -1,0 +1,239 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05985655",
+  "briefTitle": "Study to Assess GTAEXS617 in Participants With Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T06:21:39.853Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05985655-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status 0-1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05985655-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy > 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed check."
+    },
+    {
+      "id": "NCT05985655-histology",
+      "polarity": "inclusion",
+      "sourceText": "One of the following histologically or cytologically confirmed advanced solid tumors: head and neck squamous cell carcinoma (HNSCC), pancreatic adenocarcinoma, non-small cell lung cancer (NSCLC), breast carcinoma (hormone receptor-positive [HR+] and Human Epidermal Growth Factor Receptor 2 negative [HER2-] that has progressed to a prior treatment with Cyclin-Dependent Kinase 4 (CDK4)/ Cyclin-Dependent Kinase 6 [CDK6] inhibitor), or platinum-resistant high-grade epithelial ovarian, primary peritoneal, or fallopian tube cancers (HGSOC), or triple negative breast cancer (TNBC).",
+      "reasonFuzzy": "The trial allows multiple different solid tumors alongside NSCLC and does not specify a single NSCLC-specific histology or stage list."
+    },
+    {
+      "id": "NCT05985655-advanced",
+      "polarity": "inclusion",
+      "sourceText": "Must have disease that is advanced (ie, surgery or radiotherapy are not considered to be potentially curative), recurrent, or metastatic following SoC treatments.",
+      "reasonFuzzy": "Disease extent is described broadly rather than via a typed stage list."
+    },
+    {
+      "id": "NCT05985655-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematological, liver, and renal function.",
+      "reasonFuzzy": "General organ function statement without specific lab cutoffs."
+    },
+    {
+      "id": "NCT05985655-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Must have tumor lesion(s) or metastases amenable to biopsy, excluding bone metastases.",
+      "reasonFuzzy": "Willingness or amenability to undergo biopsy is subjective/judgment-based."
+    },
+    {
+      "id": "NCT05985655-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic central nervous system (CNS) malignancy or metastases.",
+      "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets check of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT05985655-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy > 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed check."
+    },
+    {
+      "id": "NCT05985655-tumor",
+      "polarity": "inclusion",
+      "sourceText": "One of the following histologically or cytologically confirmed advanced solid tumors: head and neck squamous cell carcinoma (HNSCC), pancreatic adenocarcinoma, non-small cell lung cancer (NSCLC), breast carcinoma (hormone receptor-positive [HR+] and Human Epidermal Growth Factor Receptor 2 negative [HER2-] that has progressed to a prior treatment with Cyclin-Dependent Kinase 4 (CDK4)/ Cyclin-Dependent Kinase 6 [CDK6] inhibitor), or platinum-resistant high-grade epithelial ovarian, primary peritoneal, or fallopian tube cancers (HGSOC), or triple negative breast cancer (TNBC).",
+      "reasonFuzzy": "The tumor inclusion lists multiple histologies and specific prior lines/subtypes for multiple cancer types, making it too complex for a single typed check."
+    },
+    {
+      "id": "NCT05985655-advanced",
+      "polarity": "inclusion",
+      "sourceText": "Must have disease that is advanced (ie, surgery or radiotherapy are not considered to be potentially curative), recurrent, or metastatic following SoC treatments.",
+      "reasonFuzzy": "Disease advancement and prior SoC treatments are descriptive criteria rather than a typed stage list."
+    },
+    {
+      "id": "NCT05985655-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematological, liver, and renal function.",
+      "reasonFuzzy": "No specific numeric lab cutoffs are provided in this text."
+    },
+    {
+      "id": "NCT05985655-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Must have tumor lesion(s) or metastases amenable to biopsy, excluding bone metastases.",
+      "reasonFuzzy": "Willingness or amenability to undergo a biopsy is a procedure-based judgment."
+    },
+    {
+      "id": "NCT05985655-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic central nervous system (CNS) malignancy or metastases.",
+      "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2678
+  },
+  "runB": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 3455
+  },
+  "ms": 14045,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05985655",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05985655-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0-1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05985655-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy > 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed check."
+      },
+      {
+        "id": "NCT05985655-histology",
+        "polarity": "inclusion",
+        "sourceText": "One of the following histologically or cytologically confirmed advanced solid tumors: head and neck squamous cell carcinoma (HNSCC), pancreatic adenocarcinoma, non-small cell lung cancer (NSCLC), breast carcinoma (hormone receptor-positive [HR+] and Human Epidermal Growth Factor Receptor 2 negative [HER2-] that has progressed to a prior treatment with Cyclin-Dependent Kinase 4 (CDK4)/ Cyclin-Dependent Kinase 6 [CDK6] inhibitor), or platinum-resistant high-grade epithelial ovarian, primary peritoneal, or fallopian tube cancers (HGSOC), or triple negative breast cancer (TNBC).",
+        "reasonFuzzy": "The trial allows multiple different solid tumors alongside NSCLC and does not specify a single NSCLC-specific histology or stage list."
+      },
+      {
+        "id": "NCT05985655-advanced",
+        "polarity": "inclusion",
+        "sourceText": "Must have disease that is advanced (ie, surgery or radiotherapy are not considered to be potentially curative), recurrent, or metastatic following SoC treatments.",
+        "reasonFuzzy": "Disease extent is described broadly rather than via a typed stage list."
+      },
+      {
+        "id": "NCT05985655-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematological, liver, and renal function.",
+        "reasonFuzzy": "General organ function statement without specific lab cutoffs."
+      },
+      {
+        "id": "NCT05985655-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Must have tumor lesion(s) or metastases amenable to biopsy, excluding bone metastases.",
+        "reasonFuzzy": "Willingness or amenability to undergo biopsy is subjective/judgment-based."
+      },
+      {
+        "id": "NCT05985655-brain",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic central nervous system (CNS) malignancy or metastases.",
+        "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets check of none, treated_stable, or untreated."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05985655",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05985655-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0-1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05985655-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy > 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed check."
+      },
+      {
+        "id": "NCT05985655-tumor",
+        "polarity": "inclusion",
+        "sourceText": "One of the following histologically or cytologically confirmed advanced solid tumors: head and neck squamous cell carcinoma (HNSCC), pancreatic adenocarcinoma, non-small cell lung cancer (NSCLC), breast carcinoma (hormone receptor-positive [HR+] and Human Epidermal Growth Factor Receptor 2 negative [HER2-] that has progressed to a prior treatment with Cyclin-Dependent Kinase 4 (CDK4)/ Cyclin-Dependent Kinase 6 [CDK6] inhibitor), or platinum-resistant high-grade epithelial ovarian, primary peritoneal, or fallopian tube cancers (HGSOC), or triple negative breast cancer (TNBC).",
+        "reasonFuzzy": "The tumor inclusion lists multiple histologies and specific prior lines/subtypes for multiple cancer types, making it too complex for a single typed check."
+      },
+      {
+        "id": "NCT05985655-advanced",
+        "polarity": "inclusion",
+        "sourceText": "Must have disease that is advanced (ie, surgery or radiotherapy are not considered to be potentially curative), recurrent, or metastatic following SoC treatments.",
+        "reasonFuzzy": "Disease advancement and prior SoC treatments are descriptive criteria rather than a typed stage list."
+      },
+      {
+        "id": "NCT05985655-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematological, liver, and renal function.",
+        "reasonFuzzy": "No specific numeric lab cutoffs are provided in this text."
+      },
+      {
+        "id": "NCT05985655-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Must have tumor lesion(s) or metastases amenable to biopsy, excluding bone metastases.",
+        "reasonFuzzy": "Willingness or amenability to undergo a biopsy is a procedure-based judgment."
+      },
+      {
+        "id": "NCT05985655-brain",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic central nervous system (CNS) malignancy or metastases.",
+        "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      }
+    ]
+  }
+}

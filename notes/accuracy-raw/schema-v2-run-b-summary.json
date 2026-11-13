@@ -1,0 +1,212 @@
+{
+  "ranAt": "2026-11-12T02:06:30.150Z",
+  "model": "gemini-3.5-flash-lite",
+  "promptVersion": "2",
+  "schemaLocked": true,
+  "responseMimeType": "application/json",
+  "runId": "b",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "schemaVersion": "1",
+  "hits": 17,
+  "total": 26,
+  "percent": 65.4,
+  "typedHits": 15,
+  "typedTotal": 24,
+  "fuzzyHits": 2,
+  "fuzzyTotal": 2,
+  "retries": {
+    "NCT01720836": 1,
+    "NCT03093116": 1,
+    "NCT03191149": 2,
+    "NCT03851445": 1,
+    "NCT04165070": 1,
+    "NCT04181060": 1,
+    "NCT04198766": 1,
+    "NCT04613596": 1,
+    "NCT06561386": 1
+  },
+  "rows": [
+    {
+      "id": "C01",
+      "nctId": "NCT03093116",
+      "kind": "age_min",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C02",
+      "nctId": "NCT03093116",
+      "kind": "ecog_max",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C03",
+      "nctId": "NCT04181060",
+      "kind": "ecog_max",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C04",
+      "nctId": "NCT04181060",
+      "kind": "histology_in",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C05",
+      "nctId": "NCT03191149",
+      "kind": "stage_in",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C06",
+      "nctId": "NCT03851445",
+      "kind": "stage_in",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C07",
+      "nctId": "NCT04181060",
+      "kind": "egfr_variant_in",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: histology_in/inclusion, stage_in/inclusion, egfr_status/inclusion, prior_therapy_excluded/exclusion, age_min/inclusion, ecog_max/inclusion, anc_min/inclusion, platelets_min/inclusion, hemoglobin_min/inclusion, bilirubin_max/inclusion, creatinine_max/inclusion, ast_max/inclusion, alt_max/inclusion, brain_mets/inclusion)"
+    },
+    {
+      "id": "C08",
+      "nctId": "NCT03191149",
+      "kind": "egfr_variant_in",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C09",
+      "nctId": "NCT04198766",
+      "kind": "egfr_status",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C10",
+      "nctId": "NCT04198766",
+      "kind": "alk_status",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C11",
+      "nctId": "NCT03851445",
+      "kind": "egfr_status",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, age_min/inclusion)"
+    },
+    {
+      "id": "C12",
+      "nctId": "NCT03851445",
+      "kind": "alk_status",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, age_min/inclusion)"
+    },
+    {
+      "id": "C13",
+      "nctId": "NCT04613596",
+      "kind": "kras_variant_in",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C14",
+      "nctId": "NCT03093116",
+      "kind": "alk_status",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C15",
+      "nctId": "NCT04181060",
+      "kind": "prior_lines_max",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: histology_in/inclusion, stage_in/inclusion, egfr_status/inclusion, prior_therapy_excluded/exclusion, age_min/inclusion, ecog_max/inclusion, anc_min/inclusion, platelets_min/inclusion, hemoglobin_min/inclusion, bilirubin_max/inclusion, creatinine_max/inclusion, ast_max/inclusion, alt_max/inclusion, brain_mets/inclusion)"
+    },
+    {
+      "id": "C16",
+      "nctId": "NCT04181060",
+      "kind": "prior_therapy_excluded",
+      "verdict": "miss",
+      "detail": "kind and polarity matched, value did not (emitted {\"stringValue\":\"anti-VEGF agent\"})"
+    },
+    {
+      "id": "C17",
+      "nctId": "NCT03851445",
+      "kind": "prior_lines_min",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, age_min/inclusion)"
+    },
+    {
+      "id": "C18",
+      "nctId": "NCT04165070",
+      "kind": "brain_mets",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C19",
+      "nctId": "NCT06561386",
+      "kind": "brain_mets",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, histology_in/inclusion, pdl1_min/inclusion, ecog_max/inclusion, egfr_status/exclusion, alk_status/exclusion, ros1_status/exclusion, braf_status/exclusion, brain_mets/exclusion, prior_therapy_excluded/exclusion, prior_therapy_excluded/exclusion, prior_therapy_excluded/exclusion, prior_therapy_excluded/exclusion)"
+    },
+    {
+      "id": "C20",
+      "nctId": "NCT01720836",
+      "kind": "egfr_min",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, age_min/inclusion, ecog_max/inclusion, anc_min/inclusion, hemoglobin_min/inclusion, platelets_min/inclusion, bilirubin_max/inclusion, prior_therapy_excluded/exclusion)"
+    },
+    {
+      "id": "C21",
+      "nctId": "NCT03093116",
+      "kind": "egfr_min",
+      "verdict": "miss",
+      "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, age_min/inclusion, brain_mets/inclusion, anc_min/inclusion, platelets_min/inclusion, hemoglobin_min/inclusion, bilirubin_max/inclusion, brain_mets/exclusion, age_min/inclusion)"
+    },
+    {
+      "id": "C22",
+      "nctId": "NCT03093116",
+      "kind": "hemoglobin_min",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C23",
+      "nctId": "NCT01720836",
+      "kind": "platelets_min",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C24",
+      "nctId": "NCT01720836",
+      "kind": "anc_min",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C25",
+      "nctId": "NCT04181060",
+      "kind": "fuzzy",
+      "verdict": "hit",
+      "detail": "left fuzzy"
+    },
+    {
+      "id": "C26",
+      "nctId": "NCT06561386",
+      "kind": "fuzzy",
+      "verdict": "hit",
+      "detail": "left fuzzy"
+    }
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07028489",
+  "briefTitle": "Prospective External Control Cohort In Patients With Newly Diagnosed Advanced or Metastatic EGFR Mutant Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:57:01.155Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07028489-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Be ≥18 years of age at the time of informed consent",
+      "numberValue": 18,
+      "evidence_quote": "Be ≥18 years of age at the time of informed consent",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07028489-excl-osimertinib",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Evidence of prior treatment with osimertinib, amivantamab or lazertinib.",
+      "stringValue": "osimertinib",
+      "evidence_quote": "Evidence of prior treatment with osimertinib, amivantamab or lazertinib.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07028489-date",
+      "polarity": "inclusion",
+      "sourceText": "diagnosed on Jan 1st 2024 or later.",
+      "reasonFuzzy": "Diagnosis date restriction is not a typed check kind."
+    },
+    {
+      "id": "NCT07028489-sap",
+      "polarity": "inclusion",
+      "sourceText": "For the planned selection and analysis of external controls, further eligibility criteria will be applied according to the COPERNICUS SAP.",
+      "reasonFuzzy": "External reference to SAP criteria is not fully specified in the text."
+    },
+    {
+      "id": "NCT07028489-diagnosis-date",
+      "polarity": "inclusion",
+      "sourceText": "diagnosed on Jan 1st 2024 or later.",
+      "reasonFuzzy": "Diagnosis date restriction is not a typed check kind."
+    },
+    {
+      "id": "NCT07028489-sap",
+      "polarity": "exclusion",
+      "sourceText": "For the planned selection and analysis of external controls, further eligibility criteria will be applied according to the COPERNICUS SAP.",
+      "reasonFuzzy": "Refers to external protocol/SAP documents that are not fully detailed in the text."
+    },
+    {
+      "id": "NCT07028489-egfr-var-l858r",
+      "polarity": "inclusion",
+      "sourceText": "Evidence of a confirmed diagnosis of EGFR mutant (EGFR exon 19del or EGFR exon 21 L858R) locally advanced or metastatic NSCLC diagnosed on Jan 1st 2024 or later.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07028489-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Evidence of a confirmed diagnosis of EGFR mutant (EGFR exon 19del or EGFR exon 21 L858R) locally advanced or metastatic NSCLC diagnosed on Jan 1st 2024 or later.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07028489-egfr-var",
+      "polarity": "inclusion",
+      "sourceText": "Evidence of a confirmed diagnosis of EGFR mutant (EGFR exon 19del or EGFR exon 21 L858R) locally advanced or metastatic NSCLC diagnosed on Jan 1st 2024 or later.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07028489-ecog",
+      "polarity": "exclusion",
+      "sourceText": "ECOG≥2 at diagnosis of advanced or metastatic NSCLC",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07028489-excl-amivantamab",
+      "polarity": "exclusion",
+      "sourceText": "Evidence of prior treatment with osimertinib, amivantamab or lazertinib.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07028489-excl-lazertinib",
+      "polarity": "exclusion",
+      "sourceText": "Evidence of prior treatment with osimertinib, amivantamab or lazertinib.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 7,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 8,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 7,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:l858r"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 5,
+      "rejectedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:exon 19del, l858r"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "exclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:amivantamab"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:lazertinib"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2547
+  },
+  "runB": {
+    "typedEmitted": 8,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2972
+  },
+  "ms": 13515,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07028489",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07028489-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Be ≥18 years of age at the time of informed consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07028489-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Evidence of a confirmed diagnosis of EGFR mutant (EGFR exon 19del or EGFR exon 21 L858R) locally advanced or metastatic NSCLC diagnosed on Jan 1st 2024 or later.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07028489-egfr-var",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Evidence of a confirmed diagnosis of EGFR mutant (EGFR exon 19del or EGFR exon 21 L858R) locally advanced or metastatic NSCLC diagnosed on Jan 1st 2024 or later.",
+        "stringValue": "exon 19del, L858R"
+      },
+      {
+        "id": "NCT07028489-ecog",
+        "kind": "ecog_max",
+        "polarity": "exclusion",
+        "sourceText": "ECOG≥2 at diagnosis of advanced or metastatic NSCLC",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07028489-excl-osimertinib",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Evidence of prior treatment with osimertinib, amivantamab or lazertinib.",
+        "stringValue": "osimertinib"
+      },
+      {
+        "id": "NCT07028489-excl-amivantamab",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Evidence of prior treatment with osimertinib, amivantamab or lazertinib.",
+        "stringValue": "amivantamab"
+      },
+      {
+        "id": "NCT07028489-excl-lazertinib",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Evidence of prior treatment with osimertinib, amivantamab or lazertinib.",
+        "stringValue": "lazertinib"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07028489-date",
+        "polarity": "inclusion",
+        "sourceText": "diagnosed on Jan 1st 2024 or later.",
+        "reasonFuzzy": "Diagnosis date restriction is not a typed check kind."
+      },
+      {
+        "id": "NCT07028489-sap",
+        "polarity": "inclusion",
+        "sourceText": "For the planned selection and analysis of external controls, further eligibility criteria will be applied according to the COPERNICUS SAP.",
+        "reasonFuzzy": "External reference to SAP criteria is not fully specified in the text."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07028489",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07028489-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Be ≥18 years of age at the time of informed consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07028489-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Evidence of a confirmed diagnosis of EGFR mutant (EGFR exon 19del or EGFR exon 21 L858R) locally advanced or metastatic NSCLC diagnosed on Jan 1st 2024 or later.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07028489-egfr-var-19",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Evidence of a confirmed diagnosis of EGFR mutant (EGFR exon 19del or EGFR exon 21 L858R) locally advanced or metastatic NSCLC diagnosed on Jan 1st 2024 or later.",
+        "stringValue": "exon 19del"
+      },
+      {
+        "id": "NCT07028489-egfr-var-l858r",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Evidence of a confirmed diagnosis of EGFR mutant (EGFR exon 19del or EGFR exon 21 L858R) locally advanced or metastatic NSCLC diagnosed on Jan 1st 2024 or later.",
+        "stringValue": "L858R"
+      },
+      {
+        "id": "NCT07028489-ecog",
+        "kind": "ecog_max",
+        "polarity": "exclusion",
+        "sourceText": "ECOG≥2 at diagnosis of advanced or metastatic NSCLC",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07028489-prior-osimertinib",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Evidence of prior treatment with osimertinib, amivantamab or lazertinib.",
+        "stringValue": "osimertinib"
+      },
+      {
+        "id": "NCT07028489-prior-amivantamab",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Evidence of prior treatment with osimertinib, amivantamab or lazertinib.",
+        "stringValue": "amivantamab"
+      },
+      {
+        "id": "NCT07028489-prior-lazertinib",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Evidence of prior treatment with osimertinib, amivantamab or lazertinib.",
+        "stringValue": "lazertinib"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07028489-diagnosis-date",
+        "polarity": "inclusion",
+        "sourceText": "diagnosed on Jan 1st 2024 or later.",
+        "reasonFuzzy": "Diagnosis date restriction is not a typed check kind."
+      },
+      {
+        "id": "NCT07028489-sap",
+        "polarity": "exclusion",
+        "sourceText": "For the planned selection and analysis of external controls, further eligibility criteria will be applied according to the COPERNICUS SAP.",
+        "reasonFuzzy": "Refers to external protocol/SAP documents that are not fully detailed in the text."
+      }
+    ]
+  }
+}

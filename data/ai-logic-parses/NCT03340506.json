@@ -1,0 +1,235 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT03340506",
+  "briefTitle": "Dabrafenib and/or Trametinib Rollover Study",
+  "parsedAt": "2026-11-12T06:01:39.492Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT03340506-investigator-opinion",
+      "polarity": "inclusion",
+      "sourceText": "In the opinion of the Investigator would benefit from continued treatment.",
+      "reasonFuzzy": "Investigator opinion is subjective and not a typed check."
+    },
+    {
+      "id": "NCT03340506-commercial",
+      "polarity": "exclusion",
+      "sourceText": "Patient's indication is commercially available and reimbursed in the local country.",
+      "reasonFuzzy": "Commercial availability and local reimbursement rules are not a typed check."
+    },
+    {
+      "id": "NCT03340506-age-min",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT03340506-age-max",
+      "polarity": "inclusion",
+      "sourceText": "maximumAge: 100 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT03340506-investigator-opinion",
+      "polarity": "inclusion",
+      "sourceText": "In the opinion of the Investigator would benefit from continued treatment.",
+      "reasonFuzzy": "Investigator opinion is subjective and judgment-based."
+    },
+    {
+      "id": "NCT03340506-commercial-availability",
+      "polarity": "exclusion",
+      "sourceText": "Patient's indication is commercially available and reimbursed in the local country.",
+      "reasonFuzzy": "Commercial availability and reimbursement status are outside standard typed criteria."
+    },
+    {
+      "id": "NCT03340506-unresolved-toxicities",
+      "polarity": "exclusion",
+      "sourceText": "Patient currently has unresolved toxicities for which dabrafenib and/or trametinib dosing has been interrupted in the parent study.",
+      "reasonFuzzy": "Unresolved toxicity and study drug interruption status are not simple lab cutoffs or typed checks."
+    },
+    {
+      "id": "NCT03340506-age-min",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT03340506-age-max",
+      "polarity": "inclusion",
+      "sourceText": "maximumAge: 100 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT03340506-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Patient is currently receiving treatment with dabrafenib/trametinib monotherapy or combination within a Novartis or former GSK sponsored study which has fulfilled the requirements for the primary objective.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        },
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "maximumAge: 100 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        },
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "maximumAge: 100 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:dabrafenib/trametinib"
+        }
+      ],
+      "normalizerTypedCount": 0
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2291
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 5963
+  },
+  "ms": 16249,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT03340506",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT03340506-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT03340506-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "maximumAge: 100 Years",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT03340506-prior-therapy",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Patient is currently receiving treatment with dabrafenib/trametinib monotherapy or combination within a Novartis or former GSK sponsored study which has fulfilled the requirements for the primary objective.",
+        "stringValue": "dabrafenib/trametinib"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT03340506-investigator-opinion",
+        "polarity": "inclusion",
+        "sourceText": "In the opinion of the Investigator would benefit from continued treatment.",
+        "reasonFuzzy": "Investigator opinion is subjective and not a typed check."
+      },
+      {
+        "id": "NCT03340506-commercial",
+        "polarity": "exclusion",
+        "sourceText": "Patient's indication is commercially available and reimbursed in the local country.",
+        "reasonFuzzy": "Commercial availability and local reimbursement rules are not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT03340506",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT03340506-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT03340506-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "maximumAge: 100 Years",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT03340506-prior-dabrafenib-trametinib",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Patient is currently receiving treatment with dabrafenib/trametinib monotherapy or combination within a Novartis or former GSK sponsored study which has fulfilled the requirements for the primary objective.",
+        "stringValue": "dabrafenib/trametinib"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT03340506-investigator-opinion",
+        "polarity": "inclusion",
+        "sourceText": "In the opinion of the Investigator would benefit from continued treatment.",
+        "reasonFuzzy": "Investigator opinion is subjective and judgment-based."
+      },
+      {
+        "id": "NCT03340506-commercial-availability",
+        "polarity": "exclusion",
+        "sourceText": "Patient's indication is commercially available and reimbursed in the local country.",
+        "reasonFuzzy": "Commercial availability and reimbursement status are outside standard typed criteria."
+      },
+      {
+        "id": "NCT03340506-unresolved-toxicities",
+        "polarity": "exclusion",
+        "sourceText": "Patient currently has unresolved toxicities for which dabrafenib and/or trametinib dosing has been interrupted in the parent study.",
+        "reasonFuzzy": "Unresolved toxicity and study drug interruption status are not simple lab cutoffs or typed checks."
+      }
+    ]
+  }
+}

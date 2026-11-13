@@ -1,0 +1,339 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07030257",
+  "briefTitle": "Study of CP-383 in Patients With Advanced or Metastatic Solid Tumors",
+  "parsedAt": "2026-11-12T10:43:16.258Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07030257-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable or non measurable cancer that the research can assess for changes",
+      "reasonFuzzy": "Measurable disease assessment is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07030257-standard",
+      "polarity": "inclusion",
+      "sourceText": "Not eligible or able to take existing standard therapies for cancer",
+      "reasonFuzzy": "Eligibility for standard therapies is a clinical judgment, not a typed check."
+    },
+    {
+      "id": "NCT07030257-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Availability of a part of a tumor for laboratory testing or willing to have a safe biopsy taken from a tumor",
+      "reasonFuzzy": "Willingness to undergo a biopsy procedure is subjective."
+    },
+    {
+      "id": "NCT07030257-stage",
+      "polarity": "inclusion",
+      "sourceText": "Diagnosed with locally advanced, recurrent or metastatic incurable disease",
+      "reasonFuzzy": "Locally advanced, recurrent or metastatic disease without a numbered stage list cannot be mapped to stage_in."
+    },
+    {
+      "id": "NCT07030257-part1",
+      "polarity": "inclusion",
+      "sourceText": "Part 1: any solid tumor (with the exception of brain cancer) that has progressed, standard therapy is no longer or has not helped the cancer, or is too toxic and for whom a clinical trial is an option for continued treatment",
+      "reasonFuzzy": "Broad solid tumor inclusion across multiple parts with specific gene mutations is complex and not a clean typed check."
+    },
+    {
+      "id": "NCT07030257-labs",
+      "polarity": "inclusion",
+      "sourceText": "Adequate blood and urine lab tests",
+      "reasonFuzzy": "General lab adequacy is not a specific numeric cutoff check."
+    },
+    {
+      "id": "NCT07030257-swallow",
+      "polarity": "exclusion",
+      "sourceText": "Inability to swallow pills",
+      "reasonFuzzy": "Ability to swallow pills is a clinical assessment."
+    },
+    {
+      "id": "NCT07030257-hiv",
+      "polarity": "exclusion",
+      "sourceText": "Known history of HIV, HCV, HBV unless cured, controlled with undetectable viral load",
+      "reasonFuzzy": "Conditions with exceptions for controlled or cured status are not simple typed exclusions."
+    },
+    {
+      "id": "NCT07030257-liver",
+      "polarity": "exclusion",
+      "sourceText": "Clinically significant liver disease",
+      "reasonFuzzy": "Clinically significant disease is an investigator judgment."
+    },
+    {
+      "id": "NCT07030257-gi",
+      "polarity": "exclusion",
+      "sourceText": "Significant gastrointestinal diseases",
+      "reasonFuzzy": "Significant disease is an investigator judgment."
+    },
+    {
+      "id": "NCT07030257-priorcancer",
+      "polarity": "exclusion",
+      "sourceText": "History of other cancer within past 5 years with certain exceptions for cancers that are likely cured",
+      "reasonFuzzy": "Prior cancer history with cure exceptions cannot be represented as a simple typed check."
+    },
+    {
+      "id": "NCT07030257-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Significant cardiac disease",
+      "reasonFuzzy": "Significant cardiac disease is an investigator judgment."
+    },
+    {
+      "id": "NCT07030257-other",
+      "polarity": "exclusion",
+      "sourceText": "Other diseases that are not well controlled that could make taking the drug unsafe",
+      "reasonFuzzy": "Unspecified well-controlled diseases are subject to investigator discretion."
+    },
+    {
+      "id": "NCT07030257-washout",
+      "polarity": "exclusion",
+      "sourceText": "Exposure to certain anti-cancer or other drugs within a certain period before the start of study drug",
+      "reasonFuzzy": "Washout window with unspecified drugs and periods cannot be expressed as a simple typed check."
+    },
+    {
+      "id": "NCT07030257-disease",
+      "polarity": "inclusion",
+      "sourceText": "Diagnosed with locally advanced, recurrent or metastatic incurable disease",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but the criteria refer broadly to advanced or metastatic solid tumors without a numbered stage list."
+    },
+    {
+      "id": "NCT07030257-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Availability of a part of a tumor for laboratory testing or willing to have a safe biopsy taken from a tumor",
+      "reasonFuzzy": "Willingness to undergo a biopsy is a subjective procedure requirement."
+    },
+    {
+      "id": "NCT07030257-labs",
+      "polarity": "inclusion",
+      "sourceText": "Adequate blood and urine lab tests",
+      "reasonFuzzy": "General statement about adequate labs without specific numerical cutoffs."
+    },
+    {
+      "id": "NCT07030257-age",
+      "polarity": "inclusion",
+      "sourceText": "18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07030257-brain",
+      "polarity": "exclusion",
+      "sourceText": "Active tumor in the brain",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07030257-brain",
+      "polarity": "exclusion",
+      "sourceText": "Active tumor in the brain",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 0,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:untreated"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 14,
+    "attempts": 1,
+    "ms": 3646
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2310
+  },
+  "ms": 13951,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07030257",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07030257-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active tumor in the brain",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07030257-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable or non measurable cancer that the research can assess for changes",
+        "reasonFuzzy": "Measurable disease assessment is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07030257-standard",
+        "polarity": "inclusion",
+        "sourceText": "Not eligible or able to take existing standard therapies for cancer",
+        "reasonFuzzy": "Eligibility for standard therapies is a clinical judgment, not a typed check."
+      },
+      {
+        "id": "NCT07030257-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Availability of a part of a tumor for laboratory testing or willing to have a safe biopsy taken from a tumor",
+        "reasonFuzzy": "Willingness to undergo a biopsy procedure is subjective."
+      },
+      {
+        "id": "NCT07030257-stage",
+        "polarity": "inclusion",
+        "sourceText": "Diagnosed with locally advanced, recurrent or metastatic incurable disease",
+        "reasonFuzzy": "Locally advanced, recurrent or metastatic disease without a numbered stage list cannot be mapped to stage_in."
+      },
+      {
+        "id": "NCT07030257-part1",
+        "polarity": "inclusion",
+        "sourceText": "Part 1: any solid tumor (with the exception of brain cancer) that has progressed, standard therapy is no longer or has not helped the cancer, or is too toxic and for whom a clinical trial is an option for continued treatment",
+        "reasonFuzzy": "Broad solid tumor inclusion across multiple parts with specific gene mutations is complex and not a clean typed check."
+      },
+      {
+        "id": "NCT07030257-labs",
+        "polarity": "inclusion",
+        "sourceText": "Adequate blood and urine lab tests",
+        "reasonFuzzy": "General lab adequacy is not a specific numeric cutoff check."
+      },
+      {
+        "id": "NCT07030257-swallow",
+        "polarity": "exclusion",
+        "sourceText": "Inability to swallow pills",
+        "reasonFuzzy": "Ability to swallow pills is a clinical assessment."
+      },
+      {
+        "id": "NCT07030257-hiv",
+        "polarity": "exclusion",
+        "sourceText": "Known history of HIV, HCV, HBV unless cured, controlled with undetectable viral load",
+        "reasonFuzzy": "Conditions with exceptions for controlled or cured status are not simple typed exclusions."
+      },
+      {
+        "id": "NCT07030257-liver",
+        "polarity": "exclusion",
+        "sourceText": "Clinically significant liver disease",
+        "reasonFuzzy": "Clinically significant disease is an investigator judgment."
+      },
+      {
+        "id": "NCT07030257-gi",
+        "polarity": "exclusion",
+        "sourceText": "Significant gastrointestinal diseases",
+        "reasonFuzzy": "Significant disease is an investigator judgment."
+      },
+      {
+        "id": "NCT07030257-priorcancer",
+        "polarity": "exclusion",
+        "sourceText": "History of other cancer within past 5 years with certain exceptions for cancers that are likely cured",
+        "reasonFuzzy": "Prior cancer history with cure exceptions cannot be represented as a simple typed check."
+      },
+      {
+        "id": "NCT07030257-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Significant cardiac disease",
+        "reasonFuzzy": "Significant cardiac disease is an investigator judgment."
+      },
+      {
+        "id": "NCT07030257-other",
+        "polarity": "exclusion",
+        "sourceText": "Other diseases that are not well controlled that could make taking the drug unsafe",
+        "reasonFuzzy": "Unspecified well-controlled diseases are subject to investigator discretion."
+      },
+      {
+        "id": "NCT07030257-washout",
+        "polarity": "exclusion",
+        "sourceText": "Exposure to certain anti-cancer or other drugs within a certain period before the start of study drug",
+        "reasonFuzzy": "Washout window with unspecified drugs and periods cannot be expressed as a simple typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07030257",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07030257-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07030257-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active tumor in the brain",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07030257-disease",
+        "polarity": "inclusion",
+        "sourceText": "Diagnosed with locally advanced, recurrent or metastatic incurable disease",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but the criteria refer broadly to advanced or metastatic solid tumors without a numbered stage list."
+      },
+      {
+        "id": "NCT07030257-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Availability of a part of a tumor for laboratory testing or willing to have a safe biopsy taken from a tumor",
+        "reasonFuzzy": "Willingness to undergo a biopsy is a subjective procedure requirement."
+      },
+      {
+        "id": "NCT07030257-labs",
+        "polarity": "inclusion",
+        "sourceText": "Adequate blood and urine lab tests",
+        "reasonFuzzy": "General statement about adequate labs without specific numerical cutoffs."
+      }
+    ]
+  }
+}

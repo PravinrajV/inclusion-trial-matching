@@ -1,0 +1,475 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04928846",
+  "briefTitle": "A Study to Assess Disease Activity and Adverse Events of Intravenous (IV) Telisotuzumab Vedotin Compared to IV Docetaxel in Adult Participants With Previously Treated Non-Squamous Non-Small Cell Lung Cancer (NSCLC)",
+  "parsedAt": "2026-11-12T05:44:27.316Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04928846-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "An Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.",
+      "numberValue": 1,
+      "evidence_quote": "An Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04928846-brainexcl",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Evidence of new, untreated CNS metastases or progressing CNS metastases after treatment.",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Evidence of new, untreated CNS metastases or progressing CNS metastases after treatment.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04928846-life",
+      "polarity": "inclusion",
+      "sourceText": "Projected life expectancy of at least 12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT04928846-cmet",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have c-Met overexpressing non-small cell lung cancer (NSCLC) as assessed by an AbbVie designated immunohistochemistry (IHC) laboratory using the VENTANA MET (SP44) RxDx assay.",
+      "reasonFuzzy": "c-Met overexpression using a specific designated laboratory assay does not map to a standard typed biomarker check."
+    },
+    {
+      "id": "NCT04928846-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT04928846-priorlinescomplex",
+      "polarity": "inclusion",
+      "sourceText": "Have progressed on at least 1 line of prior therapy for locally advanced/metastatic NSCLC",
+      "reasonFuzzy": "Complex rules regarding actionable alterations, platinum-based chemotherapy, and immune checkpoint inhibitor requirements cannot be captured as a single simple prior lines check."
+    },
+    {
+      "id": "NCT04928846-docetaxelappr",
+      "polarity": "inclusion",
+      "sourceText": "Must be considered appropriate for docetaxel therapy based on the assessment of the treating physician.",
+      "reasonFuzzy": "Investigator opinion is a subjective assessment."
+    },
+    {
+      "id": "NCT04928846-histologyexcl",
+      "polarity": "exclusion",
+      "sourceText": "Participants with adenosquamous or neuroendocrine histology, nor sarcomatoid features.",
+      "reasonFuzzy": "Specific excluded histologies like adenosquamous, neuroendocrine, and sarcomatoid features do not fit into the standard allowed typed histologies list."
+    },
+    {
+      "id": "NCT04928846-priortargeted",
+      "polarity": "exclusion",
+      "sourceText": "Participants who have received prior c-Met-targeted antibodies, prior telisotuzumab vedotin, or prior antibody-drug conjugates either targeting c-Met or consisting of monomethylauristatin E.",
+      "reasonFuzzy": "Multiple prior drug classes and specific agents cannot be combined into a single simple prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT04928846-life",
+      "polarity": "inclusion",
+      "sourceText": "Projected life expectancy of at least 12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT04928846-cmet",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have c-Met overexpressing non-small cell lung cancer (NSCLC) as assessed by an AbbVie designated immunohistochemistry (IHC) laboratory using the VENTANA MET (SP44) RxDx assay.",
+      "reasonFuzzy": "c-Met overexpression by a specific assay is not a standard typed biomarker check."
+    },
+    {
+      "id": "NCT04928846-stage",
+      "polarity": "inclusion",
+      "sourceText": "A histologically or cytologically documented non-squamous cell NSCLC that is locally advanced or metastatic.",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but lacks a specific numbered stage list for stage_in."
+    },
+    {
+      "id": "NCT04928846-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04928846-prior-therapy-cond",
+      "polarity": "inclusion",
+      "sourceText": "Participants WITHOUT an actionable gene alteration: must have progressed on (or be considered ineligible for) platinum-based chemotherapy and immune checkpoint inhibitor (as monotherapy or in combination with chemotherapy).",
+      "reasonFuzzy": "Complex conditional prior therapy requirements based on actionable gene alterations cannot be represented as simple typed checks."
+    },
+    {
+      "id": "NCT04928846-docetaxel-appr",
+      "polarity": "inclusion",
+      "sourceText": "Must be considered appropriate for docetaxel therapy based on the assessment of the treating physician.",
+      "reasonFuzzy": "Investigator discretion regarding treatment appropriateness is subjective."
+    },
+    {
+      "id": "NCT04928846-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "Evidence of leptomeningeal disease.",
+      "reasonFuzzy": "Leptomeningeal disease is a specific CNS exclusion not covered by general brain_mets kinds."
+    },
+    {
+      "id": "NCT04928846-histology-excl",
+      "polarity": "exclusion",
+      "sourceText": "Participants with adenosquamous or neuroendocrine histology, nor sarcomatoid features.",
+      "reasonFuzzy": "Exclusion of specific rare histologies is not fully covered by the standard histology_in inclusion list."
+    },
+    {
+      "id": "NCT04928846-egfr",
+      "polarity": "exclusion",
+      "sourceText": "-- Participants with EGFR activating mutations are not eligible",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT04928846-egfr",
+      "polarity": "exclusion",
+      "sourceText": "Participants with EGFR activating mutations are not eligible",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT04928846-prior-therapy-1",
+      "polarity": "exclusion",
+      "sourceText": "Participants who have received prior c-Met-targeted antibodies, prior telisotuzumab vedotin, or prior antibody-drug conjugates either targeting c-Met or consisting of monomethylauristatin E..",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT04928846-histology",
+      "polarity": "inclusion",
+      "sourceText": "A histologically or cytologically documented non-squamous cell NSCLC that is locally advanced or metastatic.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04928846-priorlines",
+      "polarity": "inclusion",
+      "sourceText": "Have received no more than 1 line of prior systemic cytotoxic chemotherapy in the locally advanced or metastatic setting.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04928846-brain",
+      "polarity": "inclusion",
+      "sourceText": "Participants with metastases to the central nervous system (CNS) are eligible only after adequate treatment (such as surgery, radiotherapy, or drug therapy) is provided and",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04928846-priordocetaxel",
+      "polarity": "exclusion",
+      "sourceText": "Participants who have received prior docetaxel therapy.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 7,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 8,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 6,
+      "disagreements": 3,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "b-only",
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:telisotuzumab vedotin"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        },
+        {
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:docetaxel"
+        }
+      ],
+      "normalizerTypedCount": 6
+    }
+  },
+  "runA": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 8653
+  },
+  "runB": {
+    "typedEmitted": 8,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 9317
+  },
+  "ms": 25943,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04928846",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04928846-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "A histologically or cytologically documented non-squamous cell NSCLC that is locally advanced or metastatic.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT04928846-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "-- Participants with EGFR activating mutations are not eligible",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04928846-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "An Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04928846-priorlines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Have received no more than 1 line of prior systemic cytotoxic chemotherapy in the locally advanced or metastatic setting.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04928846-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Participants with metastases to the central nervous system (CNS) are eligible only after adequate treatment (such as surgery, radiotherapy, or drug therapy) is provided and",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT04928846-brainexcl",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Evidence of new, untreated CNS metastases or progressing CNS metastases after treatment.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      },
+      {
+        "id": "NCT04928846-priordocetaxel",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants who have received prior docetaxel therapy.",
+        "stringValue": "docetaxel"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04928846-life",
+        "polarity": "inclusion",
+        "sourceText": "Projected life expectancy of at least 12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT04928846-cmet",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have c-Met overexpressing non-small cell lung cancer (NSCLC) as assessed by an AbbVie designated immunohistochemistry (IHC) laboratory using the VENTANA MET (SP44) RxDx assay.",
+        "reasonFuzzy": "c-Met overexpression using a specific designated laboratory assay does not map to a standard typed biomarker check."
+      },
+      {
+        "id": "NCT04928846-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT04928846-priorlinescomplex",
+        "polarity": "inclusion",
+        "sourceText": "Have progressed on at least 1 line of prior therapy for locally advanced/metastatic NSCLC",
+        "reasonFuzzy": "Complex rules regarding actionable alterations, platinum-based chemotherapy, and immune checkpoint inhibitor requirements cannot be captured as a single simple prior lines check."
+      },
+      {
+        "id": "NCT04928846-docetaxelappr",
+        "polarity": "inclusion",
+        "sourceText": "Must be considered appropriate for docetaxel therapy based on the assessment of the treating physician.",
+        "reasonFuzzy": "Investigator opinion is a subjective assessment."
+      },
+      {
+        "id": "NCT04928846-histologyexcl",
+        "polarity": "exclusion",
+        "sourceText": "Participants with adenosquamous or neuroendocrine histology, nor sarcomatoid features.",
+        "reasonFuzzy": "Specific excluded histologies like adenosquamous, neuroendocrine, and sarcomatoid features do not fit into the standard allowed typed histologies list."
+      },
+      {
+        "id": "NCT04928846-priortargeted",
+        "polarity": "exclusion",
+        "sourceText": "Participants who have received prior c-Met-targeted antibodies, prior telisotuzumab vedotin, or prior antibody-drug conjugates either targeting c-Met or consisting of monomethylauristatin E.",
+        "reasonFuzzy": "Multiple prior drug classes and specific agents cannot be combined into a single simple prior_therapy_excluded check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04928846",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04928846-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "A histologically or cytologically documented non-squamous cell NSCLC that is locally advanced or metastatic.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT04928846-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with EGFR activating mutations are not eligible",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT04928846-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "An Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04928846-prior-lines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Have received no more than 1 line of prior systemic cytotoxic chemotherapy in the locally advanced or metastatic setting.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04928846-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Participants with metastases to the central nervous system (CNS) are eligible only after adequate treatment (such as surgery, radiotherapy, or drug therapy) is provided and",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT04928846-brain-excl",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Evidence of new, untreated CNS metastases or progressing CNS metastases after treatment.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      },
+      {
+        "id": "NCT04928846-prior-therapy-1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants who have received prior c-Met-targeted antibodies, prior telisotuzumab vedotin, or prior antibody-drug conjugates either targeting c-Met or consisting of monomethylauristatin E..",
+        "stringValue": "telisotuzumab vedotin"
+      },
+      {
+        "id": "NCT04928846-prior-therapy-2",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants who have received prior docetaxel therapy.",
+        "stringValue": "docetaxel"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04928846-life",
+        "polarity": "inclusion",
+        "sourceText": "Projected life expectancy of at least 12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT04928846-cmet",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have c-Met overexpressing non-small cell lung cancer (NSCLC) as assessed by an AbbVie designated immunohistochemistry (IHC) laboratory using the VENTANA MET (SP44) RxDx assay.",
+        "reasonFuzzy": "c-Met overexpression by a specific assay is not a standard typed biomarker check."
+      },
+      {
+        "id": "NCT04928846-stage",
+        "polarity": "inclusion",
+        "sourceText": "A histologically or cytologically documented non-squamous cell NSCLC that is locally advanced or metastatic.",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but lacks a specific numbered stage list for stage_in."
+      },
+      {
+        "id": "NCT04928846-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT04928846-prior-therapy-cond",
+        "polarity": "inclusion",
+        "sourceText": "Participants WITHOUT an actionable gene alteration: must have progressed on (or be considered ineligible for) platinum-based chemotherapy and immune checkpoint inhibitor (as monotherapy or in combination with chemotherapy).",
+        "reasonFuzzy": "Complex conditional prior therapy requirements based on actionable gene alterations cannot be represented as simple typed checks."
+      },
+      {
+        "id": "NCT04928846-docetaxel-appr",
+        "polarity": "inclusion",
+        "sourceText": "Must be considered appropriate for docetaxel therapy based on the assessment of the treating physician.",
+        "reasonFuzzy": "Investigator discretion regarding treatment appropriateness is subjective."
+      },
+      {
+        "id": "NCT04928846-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "Evidence of leptomeningeal disease.",
+        "reasonFuzzy": "Leptomeningeal disease is a specific CNS exclusion not covered by general brain_mets kinds."
+      },
+      {
+        "id": "NCT04928846-histology-excl",
+        "polarity": "exclusion",
+        "sourceText": "Participants with adenosquamous or neuroendocrine histology, nor sarcomatoid features.",
+        "reasonFuzzy": "Exclusion of specific rare histologies is not fully covered by the standard histology_in inclusion list."
+      }
+    ]
+  }
+}

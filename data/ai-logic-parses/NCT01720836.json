@@ -1,0 +1,582 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT01720836",
+  "briefTitle": "Study of the Immune Response of MUC1 (Mucin1) Peptide Vaccine for Non-small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T06:00:05.529Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT01720836-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Women and men at least 18 years of age",
+      "numberValue": 18,
+      "evidence_quote": "Women and men at least 18 years of age",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT01720836-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status 0-1(Appendix A)",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status 0-1(Appendix A)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT01720836-hgb",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin > 10 g/dL",
+      "numberValue": 10,
+      "evidence_quote": "Hemoglobin > 10 g/dL",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT01720836-plt",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets > 100,000/µL",
+      "numberValue": 100000,
+      "evidence_quote": "Platelets > 100,000/µL",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT01720836-histology",
+      "polarity": "inclusion",
+      "sourceText": "Subjects must have histologically or cytologically confirmed non-small cell lung cancer (NSCLC) or neuroendocrine carcinoid tumor",
+      "reasonFuzzy": "Includes neuroendocrine carcinoid tumor alongside NSCLC, making a straightforward histology classification complex."
+    },
+    {
+      "id": "NCT01720836-stable",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have stable disease at the time of enrollment",
+      "reasonFuzzy": "Stable disease is a clinical/imaging assessment, not a typed check."
+    },
+    {
+      "id": "NCT01720836-timing1",
+      "polarity": "inclusion",
+      "sourceText": "Subjects must be within 4 to 24 weeks of standard of care treatment for their particular stage of disease",
+      "reasonFuzzy": "Requires a complex window relative to prior standard of care treatment."
+    },
+    {
+      "id": "NCT01720836-creatinine",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine within normal institutional limits OR Creatinine clearance > 60 mL/min/1.73 m2 for subjects with above normal AST and ALT with alkaline phosphatase within < 1.5 times upper limit of normal",
+      "reasonFuzzy": "Conditional creatinine clearance based on AST and ALT levels cannot be represented purely by simple cutoffs."
+    },
+    {
+      "id": "NCT01720836-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Subjects may not be receiving any other investigational agents",
+      "reasonFuzzy": "Concurrent treatment restriction is not a typed check."
+    },
+    {
+      "id": "NCT01720836-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "No history of prior malignancy, except for non-melanoma skin cancer",
+      "reasonFuzzy": "Prior malignancy exclusion with exception is not a typed check."
+    },
+    {
+      "id": "NCT01720836-ana",
+      "polarity": "exclusion",
+      "sourceText": "Any positive ANA titer above 1:160, even in an asymptomatic individual.",
+      "reasonFuzzy": "Lab titer cutoff with clinical exceptions is not a standard typed lab."
+    },
+    {
+      "id": "NCT01720836-hep",
+      "polarity": "exclusion",
+      "sourceText": "Known Hepatitis B on immunomodulators (i.e. interferon)",
+      "reasonFuzzy": "Conditional infection exclusion is not a typed check."
+    },
+    {
+      "id": "NCT01720836-hepc",
+      "polarity": "exclusion",
+      "sourceText": "Known Hepatitis C on immunomodulators (i.e. interferon)",
+      "reasonFuzzy": "Conditional infection exclusion is not a typed check."
+    },
+    {
+      "id": "NCT01720836-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Patients may not be receiving any steroids or other anti-immune therapy at the time of registration.",
+      "reasonFuzzy": "Concomitant medication exclusion is not a typed check."
+    },
+    {
+      "id": "NCT01720836-timing2",
+      "polarity": "exclusion",
+      "sourceText": "Subjects must not be more than 24 weeks from standard of care treatment for their particular stage of disease",
+      "reasonFuzzy": "Exclusion window based on prior standard of care treatment."
+    },
+    {
+      "id": "NCT01720836-infection",
+      "polarity": "exclusion",
+      "sourceText": "Subjects must not have post-obstructive pneumonia or other serious infection at the time of registration or other serious underlying medical condition that would impair the ability of the subjects to receive protocol treatment",
+      "reasonFuzzy": "Complex investigator discretion and medical condition exclusion."
+    },
+    {
+      "id": "NCT01720836-priorresection",
+      "polarity": "inclusion",
+      "sourceText": "Prior resection of lung cancer is allowed, if at least five years have elapsed between previous resection and registration",
+      "reasonFuzzy": "Conditional prior resection timeline is not a typed check."
+    },
+    {
+      "id": "NCT01720836-uncontrolled",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements",
+      "reasonFuzzy": "Uncontrolled illness and psychiatric/social situation evaluation is subjective."
+    },
+    {
+      "id": "NCT01720836-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant women are excluded from this study. Women of childbearing potential must have a negative pregnancy test",
+      "reasonFuzzy": "Pregnancy testing and status are standard clinical exclusions not mapped to typed checks."
+    },
+    {
+      "id": "NCT01720836-hiv",
+      "polarity": "exclusion",
+      "sourceText": "Subjects with immune deficiency are not expected to respond to the vaccine. Therefore, known HIV-positive patients are excluded from the study",
+      "reasonFuzzy": "HIV status exclusion is not a typed check."
+    },
+    {
+      "id": "NCT01720836-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Subjects with a history of known autoimmune disease are excluded from this study",
+      "reasonFuzzy": "Autoimmune disease history exclusion is not a typed check."
+    },
+    {
+      "id": "NCT01720836-stable",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have stable disease at the time of enrollment",
+      "reasonFuzzy": "Disease stability is a clinical or radiological assessment, not a typed lab or staging check."
+    },
+    {
+      "id": "NCT01720836-timing",
+      "polarity": "inclusion",
+      "sourceText": "Subjects must be within 4 to 24 weeks of standard of care treatment for their particular stage of disease",
+      "reasonFuzzy": "Washout or prior treatment window relative to standard of care is not a simple typed prior therapy or interval rule."
+    },
+    {
+      "id": "NCT01720836-creat",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine within normal institutional limits OR Creatinine clearance > 60 mL/min/1.73 m2 for subjects with above normal AST and ALT with alkaline phosphatase within < 1.5 times upper limit of normal",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT01720836-egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine within normal institutional limits OR Creatinine clearance > 60 mL/min/1.73 m2 for subjects with above normal AST and ALT with alkaline phosphatase within < 1.5 times upper limit of normal",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT01720836-bili",
+      "polarity": "inclusion",
+      "sourceText": "Total Bilirubin within normal institutional limits",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT01720836-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine clearance > 60 mL/min/1.73 m2 for subjects with above normal AST and ALT with alkaline phosphatase within < 1.5 times upper limit of normal",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT01720836-bili",
+      "polarity": "inclusion",
+      "sourceText": "Total Bilirubin within normal institutional limits",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT01720836-stage",
+      "polarity": "inclusion",
+      "sourceText": "All subjects must have one of the following stages: Stage IA(T1NO); IB (T2NO), II & IIIA (N2 negative); IIIA (N2+), IIIB (N3+)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT01720836-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute Neutrophils > 1,500/µL",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT01720836-priorvaccine",
+      "polarity": "exclusion",
+      "sourceText": "No prior vaccine therapy",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 9,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 8,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "creatinine_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Creatinine within normal institutional limits OR Creatinine clearance > 60 mL/min/1.73 m2 for subjects with above normal AST and ALT with alkaline phosphatase w"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Creatinine within normal institutional limits OR Creatinine clearance > 60 mL/min/1.73 m2 for subjects with above normal AST and ALT with alkaline phosphatase w"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 7,
+      "disagreements": 3,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:0"
+        },
+        {
+          "side": "a-only",
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "value": "n:60"
+        },
+        {
+          "side": "b-only",
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "empty"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IA,IB,IIA,IIB,IIIA,IIIB"
+        },
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "value": "n:1500"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:vaccine"
+        }
+      ],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 9,
+    "fuzzyEmitted": 17,
+    "attempts": 1,
+    "ms": 5704
+  },
+  "runB": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 3038
+  },
+  "ms": 16745,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT01720836",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT01720836-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "All subjects must have one of the following stages: Stage IA(T1NO); IB (T2NO), II & IIIA (N2 negative); IIIA (N2+), IIIB (N3+)",
+        "stages": [
+          "IA",
+          "IB",
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT01720836-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Women and men at least 18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT01720836-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status 0-1(Appendix A)",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT01720836-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute Neutrophils > 1,500/µL",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT01720836-hgb",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin > 10 g/dL",
+        "numberValue": 10
+      },
+      {
+        "id": "NCT01720836-plt",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets > 100,000/µL",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT01720836-bili",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total Bilirubin within normal institutional limits",
+        "numberValue": 0
+      },
+      {
+        "id": "NCT01720836-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine clearance > 60 mL/min/1.73 m2 for subjects with above normal AST and ALT with alkaline phosphatase within < 1.5 times upper limit of normal",
+        "numberValue": 60,
+        "stages": [],
+        "stringValue": "60 mL/min/1.73 m2"
+      },
+      {
+        "id": "NCT01720836-priorvaccine",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "No prior vaccine therapy",
+        "stringValue": "vaccine"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT01720836-histology",
+        "polarity": "inclusion",
+        "sourceText": "Subjects must have histologically or cytologically confirmed non-small cell lung cancer (NSCLC) or neuroendocrine carcinoid tumor",
+        "reasonFuzzy": "Includes neuroendocrine carcinoid tumor alongside NSCLC, making a straightforward histology classification complex."
+      },
+      {
+        "id": "NCT01720836-stable",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have stable disease at the time of enrollment",
+        "reasonFuzzy": "Stable disease is a clinical/imaging assessment, not a typed check."
+      },
+      {
+        "id": "NCT01720836-timing1",
+        "polarity": "inclusion",
+        "sourceText": "Subjects must be within 4 to 24 weeks of standard of care treatment for their particular stage of disease",
+        "reasonFuzzy": "Requires a complex window relative to prior standard of care treatment."
+      },
+      {
+        "id": "NCT01720836-creatinine",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine within normal institutional limits OR Creatinine clearance > 60 mL/min/1.73 m2 for subjects with above normal AST and ALT with alkaline phosphatase within < 1.5 times upper limit of normal",
+        "reasonFuzzy": "Conditional creatinine clearance based on AST and ALT levels cannot be represented purely by simple cutoffs."
+      },
+      {
+        "id": "NCT01720836-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Subjects may not be receiving any other investigational agents",
+        "reasonFuzzy": "Concurrent treatment restriction is not a typed check."
+      },
+      {
+        "id": "NCT01720836-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "No history of prior malignancy, except for non-melanoma skin cancer",
+        "reasonFuzzy": "Prior malignancy exclusion with exception is not a typed check."
+      },
+      {
+        "id": "NCT01720836-ana",
+        "polarity": "exclusion",
+        "sourceText": "Any positive ANA titer above 1:160, even in an asymptomatic individual.",
+        "reasonFuzzy": "Lab titer cutoff with clinical exceptions is not a standard typed lab."
+      },
+      {
+        "id": "NCT01720836-hep",
+        "polarity": "exclusion",
+        "sourceText": "Known Hepatitis B on immunomodulators (i.e. interferon)",
+        "reasonFuzzy": "Conditional infection exclusion is not a typed check."
+      },
+      {
+        "id": "NCT01720836-hepc",
+        "polarity": "exclusion",
+        "sourceText": "Known Hepatitis C on immunomodulators (i.e. interferon)",
+        "reasonFuzzy": "Conditional infection exclusion is not a typed check."
+      },
+      {
+        "id": "NCT01720836-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Patients may not be receiving any steroids or other anti-immune therapy at the time of registration.",
+        "reasonFuzzy": "Concomitant medication exclusion is not a typed check."
+      },
+      {
+        "id": "NCT01720836-timing2",
+        "polarity": "exclusion",
+        "sourceText": "Subjects must not be more than 24 weeks from standard of care treatment for their particular stage of disease",
+        "reasonFuzzy": "Exclusion window based on prior standard of care treatment."
+      },
+      {
+        "id": "NCT01720836-infection",
+        "polarity": "exclusion",
+        "sourceText": "Subjects must not have post-obstructive pneumonia or other serious infection at the time of registration or other serious underlying medical condition that would impair the ability of the subjects to receive protocol treatment",
+        "reasonFuzzy": "Complex investigator discretion and medical condition exclusion."
+      },
+      {
+        "id": "NCT01720836-priorresection",
+        "polarity": "inclusion",
+        "sourceText": "Prior resection of lung cancer is allowed, if at least five years have elapsed between previous resection and registration",
+        "reasonFuzzy": "Conditional prior resection timeline is not a typed check."
+      },
+      {
+        "id": "NCT01720836-uncontrolled",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements",
+        "reasonFuzzy": "Uncontrolled illness and psychiatric/social situation evaluation is subjective."
+      },
+      {
+        "id": "NCT01720836-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant women are excluded from this study. Women of childbearing potential must have a negative pregnancy test",
+        "reasonFuzzy": "Pregnancy testing and status are standard clinical exclusions not mapped to typed checks."
+      },
+      {
+        "id": "NCT01720836-hiv",
+        "polarity": "exclusion",
+        "sourceText": "Subjects with immune deficiency are not expected to respond to the vaccine. Therefore, known HIV-positive patients are excluded from the study",
+        "reasonFuzzy": "HIV status exclusion is not a typed check."
+      },
+      {
+        "id": "NCT01720836-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Subjects with a history of known autoimmune disease are excluded from this study",
+        "reasonFuzzy": "Autoimmune disease history exclusion is not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT01720836",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT01720836-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "All subjects must have one of the following stages: Stage IA(T1NO); IB (T2NO), II & IIIA (N2 negative); IIIA (N2+), IIIB (N3+)",
+        "stages": [
+          "IA",
+          "IB",
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT01720836-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Women and men at least 18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT01720836-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status 0-1(Appendix A)",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT01720836-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute Neutrophils > 1,500/µL",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT01720836-hgb",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin > 10 g/dL",
+        "numberValue": 10
+      },
+      {
+        "id": "NCT01720836-plt",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets > 100,000/µL",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT01720836-bili",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total Bilirubin within normal institutional limits"
+      },
+      {
+        "id": "NCT01720836-creat",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine within normal institutional limits OR Creatinine clearance > 60 mL/min/1.73 m2 for subjects with above normal AST and ALT with alkaline phosphatase within < 1.5 times upper limit of normal",
+        "exceptions": "Creatinine clearance > 60 mL/min/1.73 m2 allowed for subjects with above normal AST and ALT with alkaline phosphatase within < 1.5 times upper limit of normal"
+      },
+      {
+        "id": "NCT01720836-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine within normal institutional limits OR Creatinine clearance > 60 mL/min/1.73 m2 for subjects with above normal AST and ALT with alkaline phosphatase within < 1.5 times upper limit of normal",
+        "numberValue": 60,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT01720836-prior_vaccine",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "No prior vaccine therapy",
+        "stringValue": "vaccine therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT01720836-stable",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have stable disease at the time of enrollment",
+        "reasonFuzzy": "Disease stability is a clinical or radiological assessment, not a typed lab or staging check."
+      },
+      {
+        "id": "NCT01720836-timing",
+        "polarity": "inclusion",
+        "sourceText": "Subjects must be within 4 to 24 weeks of standard of care treatment for their particular stage of disease",
+        "reasonFuzzy": "Washout or prior treatment window relative to standard of care is not a simple typed prior therapy or interval rule."
+      }
+    ]
+  }
+}

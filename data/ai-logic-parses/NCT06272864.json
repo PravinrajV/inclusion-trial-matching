@@ -1,0 +1,252 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06272864",
+  "briefTitle": "BostonGene and Exigent Genomic INsight Study",
+  "parsedAt": "2026-11-12T06:31:18.729Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06272864-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Unresectable stage III or metastatic non-small cell lung cancer",
+      "stages": [
+        "IIIA",
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Unresectable stage III or metastatic non-small cell lung cancer",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06272864-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy > 3 months as per the treating physician",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06272864-consent",
+      "polarity": "inclusion",
+      "sourceText": "Willingness to provide informed consent",
+      "reasonFuzzy": "Willingness to undergo procedures or consent is subjective and not a typed check."
+    },
+    {
+      "id": "NCT06272864-location",
+      "polarity": "inclusion",
+      "sourceText": "Living in the United States at time of enrollment",
+      "reasonFuzzy": "Geographic residency requirement is not a typed clinical check."
+    },
+    {
+      "id": "NCT06272864-profiling",
+      "polarity": "inclusion",
+      "sourceText": "Agree to participate in genomic and molecular profiling",
+      "reasonFuzzy": "Willingness to participate in a protocol procedure is subjective/judgment-based."
+    },
+    {
+      "id": "NCT06272864-age",
+      "polarity": "inclusion",
+      "sourceText": "18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06272864-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy > 3 months as per the treating physician",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment and not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06272864-consent",
+      "polarity": "inclusion",
+      "sourceText": "Willingness to provide informed consent",
+      "reasonFuzzy": "Willingness to undergo a procedure or provide consent is a subjective criterion, not a typed check."
+    },
+    {
+      "id": "NCT06272864-location",
+      "polarity": "inclusion",
+      "sourceText": "Living in the United States at time of enrollment",
+      "reasonFuzzy": "Geographic location is a logistical criterion, not a typed biomedical check."
+    },
+    {
+      "id": "NCT06272864-profiling",
+      "polarity": "inclusion",
+      "sourceText": "Agree to participate in genomic and molecular profiling",
+      "reasonFuzzy": "Willingness to undergo procedures or profiling is a subjective criterion, not a typed check."
+    },
+    {
+      "id": "NCT06272864-age",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have a confirmed malignancy of...",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Patients must have a confirmed malignancy of..."
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 8889
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 9278
+  },
+  "ms": 26160,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06272864",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06272864-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Unresectable stage III or metastatic non-small cell lung cancer",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06272864-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06272864-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy > 3 months as per the treating physician",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06272864-consent",
+        "polarity": "inclusion",
+        "sourceText": "Willingness to provide informed consent",
+        "reasonFuzzy": "Willingness to undergo procedures or consent is subjective and not a typed check."
+      },
+      {
+        "id": "NCT06272864-location",
+        "polarity": "inclusion",
+        "sourceText": "Living in the United States at time of enrollment",
+        "reasonFuzzy": "Geographic residency requirement is not a typed clinical check."
+      },
+      {
+        "id": "NCT06272864-profiling",
+        "polarity": "inclusion",
+        "sourceText": "Agree to participate in genomic and molecular profiling",
+        "reasonFuzzy": "Willingness to participate in a protocol procedure is subjective/judgment-based."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06272864",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06272864-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Unresectable stage III or metastatic non-small cell lung cancer",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06272864-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have a confirmed malignancy of...",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06272864-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy > 3 months as per the treating physician",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment and not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06272864-consent",
+        "polarity": "inclusion",
+        "sourceText": "Willingness to provide informed consent",
+        "reasonFuzzy": "Willingness to undergo a procedure or provide consent is a subjective criterion, not a typed check."
+      },
+      {
+        "id": "NCT06272864-location",
+        "polarity": "inclusion",
+        "sourceText": "Living in the United States at time of enrollment",
+        "reasonFuzzy": "Geographic location is a logistical criterion, not a typed biomedical check."
+      },
+      {
+        "id": "NCT06272864-profiling",
+        "polarity": "inclusion",
+        "sourceText": "Agree to participate in genomic and molecular profiling",
+        "reasonFuzzy": "Willingness to undergo procedures or profiling is a subjective criterion, not a typed check."
+      }
+    ]
+  }
+}

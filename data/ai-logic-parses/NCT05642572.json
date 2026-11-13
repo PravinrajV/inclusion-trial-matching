@@ -1,0 +1,608 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05642572",
+  "briefTitle": "Comparing Combinations of Targeted Drugs for Advanced Non-Small Cell Lung Cancer That Has EGFR and MET Gene Changes (A Lung-MAP Treatment Trial)",
+  "parsedAt": "2026-11-12T05:48:23.405Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05642572-egfr-min",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a serum creatinine =< the IULN OR calculated creatinine clearance >= 50 mL/min using the following Cockcroft-Gault Formula.",
+      "numberValue": 50,
+      "stages": [],
+      "stringValue": "calculated creatinine clearance >= 50 mL/min or serum creatinine =< IULN",
+      "evidence_quote": "Participants must have a serum creatinine =< the IULN OR calculated creatinine clearance >= 50 mL/min using the following Cockcroft-Gault Formula.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05642572-hemoglobin",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin < 9.0 g/dL (within 28 days prior to sub-study randomization)",
+      "reasonFuzzy": "The threshold specifies hemoglobin < 9.0 g/dL as inclusion criteria which appears to be a typographic error in the protocol text (usually requires >=), but it is retained as fuzzy due to ambiguity."
+    },
+    {
+      "id": "NCT05642572-met",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a MET amplification determined by tissue-based or blood-based (circulating tumor DNA [ctDNA]) next generation sequencing (NGS) assay.",
+      "reasonFuzzy": "There is no standard typed check kind for MET amplification status."
+    },
+    {
+      "id": "NCT05642572-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have either measurable disease or non-measurable disease documented by CT or MRI.",
+      "reasonFuzzy": "Measurable disease by RECIST/imaging is a subjective assessment."
+    },
+    {
+      "id": "NCT05642572-brain",
+      "polarity": "inclusion",
+      "sourceText": "Participants with symptomatic CNS metastasis (brain metastases or leptomeningeal disease) must be neurologically stable and have a stable or decreasing corticosteroid requirement for at least 5 days before sub-study randomization",
+      "reasonFuzzy": "Symptomatic CNS disease criteria with stability and corticosteroid rules cannot be captured by a standard brain_mets check."
+    },
+    {
+      "id": "NCT05642572-zubrod",
+      "polarity": "inclusion",
+      "sourceText": "Participants' most recent Zubrod performance status must be 0-1 and be documented within 28 days prior to sub-study randomization",
+      "reasonFuzzy": "Zubrod performance status is similar to ECOG but uses a different scale name not directly mapped to ecog_max."
+    },
+    {
+      "id": "NCT05642572-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05642572-stage",
+      "polarity": "inclusion",
+      "sourceText": "Stage IV Lung Cancer AJCC v8",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05642572-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count >= 1.5 x 10^3/uL (within 28 days prior to sub-study randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05642572-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelets >= 100 x 10^3/uL (within 28 days prior to sub-study randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05642572-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) =< 2.5 x institutional ULN (within 28 days prior to sub-study randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05642572-stage",
+      "polarity": "inclusion",
+      "sourceText": "Stage IV Lung Cancer AJCC v8",
+      "reasonFuzzy": "Stage listed as condition/eligibility reference rather than standard stage_in check format."
+    },
+    {
+      "id": "NCT05642572-osimertinib",
+      "polarity": "inclusion",
+      "sourceText": "have radiologically or clinically progressed (in the opinion of the treating physician) on osimertinib, alone or in combination with other agent(s)",
+      "reasonFuzzy": "Progression opinion and specific therapy context are not simple typed fields."
+    },
+    {
+      "id": "NCT05642572-met_amp",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a MET amplification determined by tissue-based or blood-based (circulating tumor DNA [ctDNA]) next generation sequencing (NGS) assay.",
+      "reasonFuzzy": "MET amplification is not covered by a specific typed mutation/status enum like EGFR."
+    },
+    {
+      "id": "NCT05642572-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have either measurable disease or non-measurable disease documented by CT or MRI.",
+      "reasonFuzzy": "Measurable vs non-measurable imaging assessment is subjective/judgment-based."
+    },
+    {
+      "id": "NCT05642572-brain_mets",
+      "polarity": "inclusion",
+      "sourceText": "Participants with symptomatic CNS metastasis (brain metastases or leptomeningeal disease) must be neurologically stable and have a stable or decreasing corticosteroid requirement for at least 5 days before sub-study randomization",
+      "reasonFuzzy": "Symptomatic CNS disease with stability criteria does not map cleanly to standard brain_mets types."
+    },
+    {
+      "id": "NCT05642572-recovery",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have recovered (=< grade 1) from any side effects of prior therapy, except for alopecia and vitiligo",
+      "reasonFuzzy": "General toxicity recovery is a clinical judgment item."
+    },
+    {
+      "id": "NCT05642572-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Participants' most recent Zubrod performance status must be 0-1",
+      "reasonFuzzy": "Zubrod performance status is used instead of ECOG max enum."
+    },
+    {
+      "id": "NCT05642572-urinalysis",
+      "polarity": "inclusion",
+      "sourceText": "Participant must have a urinary protein =< 1+ on dipstick or routine urinalysis (UA).",
+      "reasonFuzzy": "Urinalysis and proteinuria thresholds are not standard typed checks."
+    },
+    {
+      "id": "NCT05642572-inr",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have an International Normalized Ratio (INR) =< 1.5 seconds above the institutional upper limit of normal (IULN) (unless receiving anticoagulation therapy)",
+      "reasonFuzzy": "Coagulation parameters like INR/PTT are not covered by typed checks."
+    },
+    {
+      "id": "NCT05642572-hiv",
+      "polarity": "inclusion",
+      "sourceText": "Participants with known human immunodeficiency virus (HIV) infection must be on effective anti-retroviral therapy at randomization and have undetectable viral load within 6 months",
+      "reasonFuzzy": "HIV management criteria are too complex for a typed check."
+    },
+    {
+      "id": "NCT05642572-cardiac",
+      "polarity": "inclusion",
+      "sourceText": "To be eligible for this trial, participants must be class 2B or better using the New York Heart Association Functional Classification.",
+      "reasonFuzzy": "NYHA functional classification is a subjective cardiac judgment."
+    },
+    {
+      "id": "NCT05642572-prior_meds",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have received strong inducers of CYP3A4... within 7 days prior",
+      "reasonFuzzy": "Exclusion of multiple drug classes and enzyme inhibitors/inducers is too complex for simple typed items."
+    },
+    {
+      "id": "NCT05642572-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count >= 1.5 x 10^3/uL (within 28 days prior to sub-study randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05642572-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelets >= 100 x 10^3/uL (within 28 days prior to sub-study randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05642572-age",
+      "polarity": "inclusion",
+      "sourceText": "Patients must meet all SCREENING/PRE-SCREENING and SUB-STUDY REGISTRATION COMMON ELIGIBILITY CRITERIA as specified in S1400: Phase II/III Biomarker-Driven Master Protocol for Previously Treated Squamous Cell Lung Cancer (Lung-Map)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT05642572-hemoglobin",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin < 9.0 g/dL (within 28 days prior to sub-study randomization)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT05642572-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) =< 2.5 x institutional ULN. Participants with history of liver metastasis must have AST =< 5 x ULN (within 28 days prior to sub-study randomization)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT05642572-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have documentation of NSCLC with a sensitizing EGFR mutation",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05642572-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin =< 1.5 x institutional upper limit of normal (ULN) unless history of Gilbert's disease (within 28 days prior to sub-study randomization). Participants with history of Gilbert's disease must have total bilirubin =< 5 x institutional ULN",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05642572-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) =< 2.5 x institutional ULN. Participants with history of liver metastasis must have AST =< 5 x ULN (within 28 days prior to sub-study randomization)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05642572-prior-vegf",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have received an anti-VEGF or VEGFR inhibitor or MET inhibitor",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 5,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        },
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Stage IV Lung Cancer AJCC v8"
+        },
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count >= 1.5 x 10^3/uL (within 28 days prior to sub-study randomization)"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelets >= 100 x 10^3/uL (within 28 days prior to sub-study randomization)"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) =< 2.5 x institutional ULN (within 28 days prior to sub-study randomization)"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 8,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count >= 1.5 x 10^3/uL (within 28 days prior to sub-study randomization)"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelets >= 100 x 10^3/uL (within 28 days prior to sub-study randomization)"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 3,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:18"
+        },
+        {
+          "side": "b-only",
+          "kind": "hemoglobin_min",
+          "polarity": "inclusion",
+          "value": "n:9"
+        },
+        {
+          "side": "b-only",
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-vegf or vegfr inhibitor or met inhibitor"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 4169
+  },
+  "runB": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 12,
+    "attempts": 1,
+    "ms": 9216
+  },
+  "ms": 21404,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05642572",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05642572-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05642572-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage IV Lung Cancer AJCC v8",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05642572-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have documentation of NSCLC with a sensitizing EGFR mutation",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05642572-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count >= 1.5 x 10^3/uL (within 28 days prior to sub-study randomization)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05642572-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets >= 100 x 10^3/uL (within 28 days prior to sub-study randomization)",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT05642572-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin =< 1.5 x institutional upper limit of normal (ULN) unless history of Gilbert's disease (within 28 days prior to sub-study randomization). Participants with history of Gilbert's disease must have total bilirubin =< 5 x institutional ULN",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "1.5 x institutional ULN (or <= 5 x ULN if history of Gilbert's disease)"
+      },
+      {
+        "id": "NCT05642572-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) =< 2.5 x institutional ULN. Participants with history of liver metastasis must have AST =< 5 x ULN (within 28 days prior to sub-study randomization)",
+        "numberValue": 2.5,
+        "stringValue": "2.5 x institutional ULN (or <= 5 x ULN with history of liver metastasis)"
+      },
+      {
+        "id": "NCT05642572-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) =< 2.5 x institutional ULN (within 28 days prior to sub-study randomization)",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT05642572-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a serum creatinine =< the IULN OR calculated creatinine clearance >= 50 mL/min using the following Cockcroft-Gault Formula.",
+        "numberValue": 50,
+        "stages": [],
+        "stringValue": "calculated creatinine clearance >= 50 mL/min or serum creatinine =< IULN"
+      },
+      {
+        "id": "NCT05642572-prior-vegf",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have received an anti-VEGF or VEGFR inhibitor or MET inhibitor",
+        "stringValue": "anti-VEGF or VEGFR inhibitor or MET inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05642572-hemoglobin",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin < 9.0 g/dL (within 28 days prior to sub-study randomization)",
+        "reasonFuzzy": "The threshold specifies hemoglobin < 9.0 g/dL as inclusion criteria which appears to be a typographic error in the protocol text (usually requires >=), but it is retained as fuzzy due to ambiguity."
+      },
+      {
+        "id": "NCT05642572-met",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a MET amplification determined by tissue-based or blood-based (circulating tumor DNA [ctDNA]) next generation sequencing (NGS) assay.",
+        "reasonFuzzy": "There is no standard typed check kind for MET amplification status."
+      },
+      {
+        "id": "NCT05642572-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have either measurable disease or non-measurable disease documented by CT or MRI.",
+        "reasonFuzzy": "Measurable disease by RECIST/imaging is a subjective assessment."
+      },
+      {
+        "id": "NCT05642572-brain",
+        "polarity": "inclusion",
+        "sourceText": "Participants with symptomatic CNS metastasis (brain metastases or leptomeningeal disease) must be neurologically stable and have a stable or decreasing corticosteroid requirement for at least 5 days before sub-study randomization",
+        "reasonFuzzy": "Symptomatic CNS disease criteria with stability and corticosteroid rules cannot be captured by a standard brain_mets check."
+      },
+      {
+        "id": "NCT05642572-zubrod",
+        "polarity": "inclusion",
+        "sourceText": "Participants' most recent Zubrod performance status must be 0-1 and be documented within 28 days prior to sub-study randomization",
+        "reasonFuzzy": "Zubrod performance status is similar to ECOG but uses a different scale name not directly mapped to ecog_max."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05642572",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05642572-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients must meet all SCREENING/PRE-SCREENING and SUB-STUDY REGISTRATION COMMON ELIGIBILITY CRITERIA as specified in S1400: Phase II/III Biomarker-Driven Master Protocol for Previously Treated Squamous Cell Lung Cancer (Lung-Map)",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05642572-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have documentation of NSCLC with a sensitizing EGFR mutation",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05642572-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count >= 1.5 x 10^3/uL (within 28 days prior to sub-study randomization)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05642572-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin < 9.0 g/dL (within 28 days prior to sub-study randomization)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT05642572-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets >= 100 x 10^3/uL (within 28 days prior to sub-study randomization)",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT05642572-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin =< 1.5 x institutional upper limit of normal (ULN) unless history of Gilbert's disease (within 28 days prior to sub-study randomization). Participants with history of Gilbert's disease must have total bilirubin =< 5 x institutional ULN",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "Participants with history of Gilbert's disease must have total bilirubin =< 5 x institutional ULN"
+      },
+      {
+        "id": "NCT05642572-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) =< 2.5 x institutional ULN. Participants with history of liver metastasis must have AST =< 5 x ULN (within 28 days prior to sub-study randomization)",
+        "numberValue": 2.5,
+        "stringValue": "Participants with history of liver metastasis must have AST =< 5 x ULN"
+      },
+      {
+        "id": "NCT05642572-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) =< 2.5 x institutional ULN. Participants with history of liver metastasis must have AST =< 5 x ULN (within 28 days prior to sub-study randomization)",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT05642572-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a serum creatinine =< the IULN OR calculated creatinine clearance >= 50 mL/min using the following Cockcroft-Gault Formula.",
+        "numberValue": 50,
+        "stringValue": "serum creatinine =< the IULN"
+      },
+      {
+        "id": "NCT05642572-prior_therapy_excluded",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have received an anti-VEGF or VEGFR inhibitor or MET inhibitor",
+        "stringValue": "anti-VEGF or VEGFR inhibitor or MET inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05642572-stage",
+        "polarity": "inclusion",
+        "sourceText": "Stage IV Lung Cancer AJCC v8",
+        "reasonFuzzy": "Stage listed as condition/eligibility reference rather than standard stage_in check format."
+      },
+      {
+        "id": "NCT05642572-osimertinib",
+        "polarity": "inclusion",
+        "sourceText": "have radiologically or clinically progressed (in the opinion of the treating physician) on osimertinib, alone or in combination with other agent(s)",
+        "reasonFuzzy": "Progression opinion and specific therapy context are not simple typed fields."
+      },
+      {
+        "id": "NCT05642572-met_amp",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a MET amplification determined by tissue-based or blood-based (circulating tumor DNA [ctDNA]) next generation sequencing (NGS) assay.",
+        "reasonFuzzy": "MET amplification is not covered by a specific typed mutation/status enum like EGFR."
+      },
+      {
+        "id": "NCT05642572-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have either measurable disease or non-measurable disease documented by CT or MRI.",
+        "reasonFuzzy": "Measurable vs non-measurable imaging assessment is subjective/judgment-based."
+      },
+      {
+        "id": "NCT05642572-brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Participants with symptomatic CNS metastasis (brain metastases or leptomeningeal disease) must be neurologically stable and have a stable or decreasing corticosteroid requirement for at least 5 days before sub-study randomization",
+        "reasonFuzzy": "Symptomatic CNS disease with stability criteria does not map cleanly to standard brain_mets types."
+      },
+      {
+        "id": "NCT05642572-recovery",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have recovered (=< grade 1) from any side effects of prior therapy, except for alopecia and vitiligo",
+        "reasonFuzzy": "General toxicity recovery is a clinical judgment item."
+      },
+      {
+        "id": "NCT05642572-ecog",
+        "polarity": "inclusion",
+        "sourceText": "Participants' most recent Zubrod performance status must be 0-1",
+        "reasonFuzzy": "Zubrod performance status is used instead of ECOG max enum."
+      },
+      {
+        "id": "NCT05642572-urinalysis",
+        "polarity": "inclusion",
+        "sourceText": "Participant must have a urinary protein =< 1+ on dipstick or routine urinalysis (UA).",
+        "reasonFuzzy": "Urinalysis and proteinuria thresholds are not standard typed checks."
+      },
+      {
+        "id": "NCT05642572-inr",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an International Normalized Ratio (INR) =< 1.5 seconds above the institutional upper limit of normal (IULN) (unless receiving anticoagulation therapy)",
+        "reasonFuzzy": "Coagulation parameters like INR/PTT are not covered by typed checks."
+      },
+      {
+        "id": "NCT05642572-hiv",
+        "polarity": "inclusion",
+        "sourceText": "Participants with known human immunodeficiency virus (HIV) infection must be on effective anti-retroviral therapy at randomization and have undetectable viral load within 6 months",
+        "reasonFuzzy": "HIV management criteria are too complex for a typed check."
+      },
+      {
+        "id": "NCT05642572-cardiac",
+        "polarity": "inclusion",
+        "sourceText": "To be eligible for this trial, participants must be class 2B or better using the New York Heart Association Functional Classification.",
+        "reasonFuzzy": "NYHA functional classification is a subjective cardiac judgment."
+      },
+      {
+        "id": "NCT05642572-prior_meds",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have received strong inducers of CYP3A4... within 7 days prior",
+        "reasonFuzzy": "Exclusion of multiple drug classes and enzyme inhibitors/inducers is too complex for simple typed items."
+      }
+    ]
+  }
+}

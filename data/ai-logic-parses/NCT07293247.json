@@ -1,0 +1,702 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07293247",
+  "briefTitle": "A Study of Targeted Post-Surgery Radiation Therapy for Non-Small Cell Lung Cancer With Remaining Lymph Node Cancer After Treatment",
+  "parsedAt": "2026-11-12T11:08:01.624Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07293247-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07293247-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2",
+      "numberValue": 2,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07293247-egfr-min",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Calculated (Calc.) creatinine clearance ≥ 30 mL/min",
+      "numberValue": 30,
+      "evidence_quote": "Calculated (Calc.) creatinine clearance ≥ 30 mL/min",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07293247-bilirubin",
+      "kind": "bilirubin_max",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin ≤ 3 x upper limit of normal (ULN)",
+      "numberValue": 3,
+      "evidence_quote": "Total bilirubin ≤ 3 x upper limit of normal (ULN)",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07293247-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histopathologic diagnosis of NSCLC, may have mixed or multiple histologies but no small cell component",
+      "reasonFuzzy": "Mixed or multiple histologies with an exclusion for small cell component cannot be captured by a single precise histology_in check."
+    },
+    {
+      "id": "NCT07293247-metastatic",
+      "polarity": "exclusion",
+      "sourceText": "No metastatic disease (M0) per most recent PET/CT and head CT/MRI imaging",
+      "reasonFuzzy": "M0 status and imaging requirements are not mapped to standard typed checks."
+    },
+    {
+      "id": "NCT07293247-progression",
+      "polarity": "exclusion",
+      "sourceText": "No disease progression per CT chest (including upper abdomen as per standard practice) with intravenous (IV) contrast (unless IV contrast is contraindicated) or FDG-PET performed post-neoadjuvant therapy ≤ 90 days prior to registration, either before or after surgery",
+      "reasonFuzzy": "Absence of disease progression on imaging is a clinical assessment not covered by typed checks."
+    },
+    {
+      "id": "NCT07293247-neoadjuvant",
+      "polarity": "inclusion",
+      "sourceText": "Prior treatment with 2-4 cycles of neoadjuvant systemic therapy with any guideline (National Comprehensive Cancer Network [NCCN]) concordant regimen",
+      "reasonFuzzy": "Prior therapy requirement refers to a general guideline-concordant regimen rather than a specific drug name."
+    },
+    {
+      "id": "NCT07293247-surgery",
+      "polarity": "inclusion",
+      "sourceText": "Lobectomy or greater oncologic surgical resection within 8 weeks prior to registration",
+      "reasonFuzzy": "Surgical resection type and timing is a procedure requirement, not a typed check."
+    },
+    {
+      "id": "NCT07293247-resection",
+      "polarity": "inclusion",
+      "sourceText": "Complete (R0) resection showing ypN2 disease",
+      "reasonFuzzy": "Resection margin and nodal status are specialized pathology criteria."
+    },
+    {
+      "id": "NCT07293247-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Not pregnant, because this study involves radiation therapy, which has known genotoxic, mutagenic and teratogenic effects. Therefore, for women of childbearing potential only, a negative urine or serum pregnancy test done ≤ 7 days prior to registration is required",
+      "reasonFuzzy": "Pregnancy testing and status are standard exclusion criteria not modeled with a typed check."
+    },
+    {
+      "id": "NCT07293247-malignancy",
+      "polarity": "inclusion",
+      "sourceText": "Patients with a prior or concurrent malignancy whose natural history or treatment does not have the potential to interfere with the safety or efficacy assessment of the investigational regimen are eligible for this trial",
+      "reasonFuzzy": "Prior malignancy allowance depends on investigator judgment regarding interference."
+    },
+    {
+      "id": "NCT07293247-cardiac",
+      "polarity": "inclusion",
+      "sourceText": "Cardiac function: Patients with known history or current symptoms of cardiac disease, or history of treatment with cardiotoxic agents, should have a clinical risk assessment of cardiac function using the New York Heart Association Functional Classification. To be eligible for this trial, patients should be class 2B or better",
+      "reasonFuzzy": "NYHA functional classification requires clinical judgment."
+    },
+    {
+      "id": "NCT07293247-fibrosis",
+      "polarity": "exclusion",
+      "sourceText": "No idiopathic pulmonary fibrosis requiring anti-fibrotic medication: Patients with idiopathic pulmonary fibrosis or inflammatory/interstitial lung disease compromising pulmonary function or requiring ongoing treatment with nintedanib, pirfenidone, or other anti-fibrotic drug are excluded",
+      "reasonFuzzy": "Pulmonary fibrosis and anti-fibrotic drug exclusions are complex clinical rules."
+    },
+    {
+      "id": "NCT07293247-hiv",
+      "polarity": "inclusion",
+      "sourceText": "HIV-infected patients on effective anti-retroviral therapy with an undetectable viral load within 6 months are eligible for this trial",
+      "reasonFuzzy": "HIV infection status with viral load criteria is not a standard typed check."
+    },
+    {
+      "id": "NCT07293247-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥ 1,000/mm^3",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07293247-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count ≥ 50,000/mm^3",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07293247-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 5 x upper limit of normal (ULN)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07293247-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 5 x upper limit of normal (ULN)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07293247-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histopathologic diagnosis of NSCLC, may have mixed or multiple histologies but no small cell component",
+      "reasonFuzzy": "General histology rule covering mixed or multiple subtypes without specifying standard subset histologies."
+    },
+    {
+      "id": "NCT07293247-metastasis",
+      "polarity": "exclusion",
+      "sourceText": "No metastatic disease (M0) per most recent PET/CT and head CT/MRI imaging",
+      "reasonFuzzy": "Absence of metastatic disease refers to M0 staging and imaging interpretation rather than stage_in."
+    },
+    {
+      "id": "NCT07293247-progression",
+      "polarity": "exclusion",
+      "sourceText": "No disease progression per CT chest (including upper abdomen as per standard practice) with intravenous (IV) contrast (unless IV contrast is contraindicated) or FDG-PET performed post-neoadjuvant therapy ≤ 90 days prior to registration, either before or after surgery",
+      "reasonFuzzy": "Imaging evaluation for disease progression is a subjective judgment."
+    },
+    {
+      "id": "NCT07293247-metastasis2",
+      "polarity": "exclusion",
+      "sourceText": "No metastatic disease (M0) per head CT/MRI imaging",
+      "reasonFuzzy": "Imaging assessment for brain metastasis exclusion."
+    },
+    {
+      "id": "NCT07293247-neoadjuvant",
+      "polarity": "inclusion",
+      "sourceText": "Prior treatment with 2-4 cycles of neoadjuvant systemic therapy with any guideline (National Comprehensive Cancer Network [NCCN]) concordant regimen",
+      "reasonFuzzy": "Prior therapy rule specifying a regimen range and NCCN guidelines rather than a specific drug name."
+    },
+    {
+      "id": "NCT07293247-surgery",
+      "polarity": "inclusion",
+      "sourceText": "Lobectomy or greater oncologic surgical resection within 8 weeks prior to registration",
+      "reasonFuzzy": "Surgical procedure requirement with a timeline."
+    },
+    {
+      "id": "NCT07293247-resection",
+      "polarity": "inclusion",
+      "sourceText": "Complete (R0) resection showing ypN2 disease",
+      "reasonFuzzy": "Pathological resection status and ypN2 finding."
+    },
+    {
+      "id": "NCT07293247-radiotherapy",
+      "polarity": "exclusion",
+      "sourceText": "No prior radiotherapy to the lungs or mediastinum",
+      "reasonFuzzy": "Prior radiation exclusion for specific anatomical areas."
+    },
+    {
+      "id": "NCT07293247-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Not pregnant, because this study involves radiation therapy, which has known genotoxic, mutagenic and teratogenic effects. Therefore, for women of childbearing potential only, a negative urine or serum pregnancy test done ≤ 7 days prior to registration is required",
+      "reasonFuzzy": "Pregnancy testing and childbearing potential rules are not typed kinds."
+    },
+    {
+      "id": "NCT07293247-malignancy",
+      "polarity": "inclusion",
+      "sourceText": "Patients with a prior or concurrent malignancy whose natural history or treatment does not have the potential to interfere with the safety or efficacy assessment of the investigational regimen are eligible for this trial",
+      "reasonFuzzy": "Subjective investigator evaluation of prior or concurrent malignancy."
+    },
+    {
+      "id": "NCT07293247-cardiac",
+      "polarity": "inclusion",
+      "sourceText": "Cardiac function: Patients with known history or current symptoms of cardiac disease, or history of treatment with cardiotoxic agents, should have a clinical risk assessment of cardiac function using the New York Heart Association Functional Classification. To be eligible for this trial, patients should be class 2B or better",
+      "reasonFuzzy": "NYHA functional classification assessment is a clinical judgment-based criterion."
+    },
+    {
+      "id": "NCT07293247-fibrosis",
+      "polarity": "exclusion",
+      "sourceText": "No idiopathic pulmonary fibrosis requiring anti-fibrotic medication: Patients with idiopathic pulmonary fibrosis or inflammatory/interstitial lung disease compromising pulmonary function or requiring ongoing treatment with nintedanib, pirfenidone, or other anti-fibrotic drug are excluded",
+      "reasonFuzzy": "Pulmonary fibrosis and anti-fibrotic medication rules are complex clinical exclusions."
+    },
+    {
+      "id": "NCT07293247-hiv",
+      "polarity": "inclusion",
+      "sourceText": "HIV-infected patients on effective anti-retroviral therapy with an undetectable viral load within 6 months are eligible for this trial",
+      "reasonFuzzy": "HIV status with viral load condition."
+    },
+    {
+      "id": "NCT07293247-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥ 1,000/mm^3",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07293247-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count ≥ 50,000/mm^3",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07293247-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 5 x upper limit of normal (ULN)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07293247-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 5 x upper limit of normal (ULN)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07293247-prior-rt",
+      "polarity": "exclusion",
+      "sourceText": "No prior radiotherapy to the lungs or mediastinum",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07293247-egfr",
+      "polarity": "exclusion",
+      "sourceText": "No known EGFR mutation or ALK rearrangement",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07293247-alk",
+      "polarity": "exclusion",
+      "sourceText": "No known EGFR mutation or ALK rearrangement",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07293247-vegf",
+      "polarity": "exclusion",
+      "sourceText": "No treatment with a VEGF inhibitor ≤ 90 days prior to registration or plan to treat with adjuvant systemic therapy including a VEGF inhibitor",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 8,
+      "unquoted": 4,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) ≥ 1,000/mm^3"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelet count ≥ 50,000/mm^3"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ "
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ "
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 7,
+      "unquoted": 4,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) ≥ 1,000/mm^3"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelet count ≥ 50,000/mm^3"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ "
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ "
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 7,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:radiotherapy"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:vegf inhibitor"
+        }
+      ],
+      "normalizerTypedCount": 8
+    }
+  },
+  "runA": {
+    "typedEmitted": 12,
+    "fuzzyEmitted": 11,
+    "attempts": 2,
+    "ms": 21159
+  },
+  "runB": {
+    "typedEmitted": 11,
+    "fuzzyEmitted": 13,
+    "attempts": 1,
+    "ms": 5618
+  },
+  "ms": 34754,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07293247",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07293247-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "No known EGFR mutation or ALK rearrangement",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT07293247-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "No known EGFR mutation or ALK rearrangement",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT07293247-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07293247-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07293247-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥ 1,000/mm^3",
+        "numberValue": 1000
+      },
+      {
+        "id": "NCT07293247-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count ≥ 50,000/mm^3",
+        "numberValue": 50000
+      },
+      {
+        "id": "NCT07293247-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Calculated (Calc.) creatinine clearance ≥ 30 mL/min",
+        "numberValue": 30
+      },
+      {
+        "id": "NCT07293247-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 3 x upper limit of normal (ULN)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT07293247-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 5 x upper limit of normal (ULN)",
+        "numberValue": 5
+      },
+      {
+        "id": "NCT07293247-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 5 x upper limit of normal (ULN)",
+        "numberValue": 5
+      },
+      {
+        "id": "NCT07293247-prior-rt",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "No prior radiotherapy to the lungs or mediastinum",
+        "stringValue": "radiotherapy"
+      },
+      {
+        "id": "NCT07293247-vegf",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "No treatment with a VEGF inhibitor ≤ 90 days prior to registration or plan to treat with adjuvant systemic therapy including a VEGF inhibitor",
+        "stringValue": "VEGF inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07293247-histology",
+        "polarity": "inclusion",
+        "sourceText": "Histopathologic diagnosis of NSCLC, may have mixed or multiple histologies but no small cell component",
+        "reasonFuzzy": "Mixed or multiple histologies with an exclusion for small cell component cannot be captured by a single precise histology_in check."
+      },
+      {
+        "id": "NCT07293247-metastatic",
+        "polarity": "exclusion",
+        "sourceText": "No metastatic disease (M0) per most recent PET/CT and head CT/MRI imaging",
+        "reasonFuzzy": "M0 status and imaging requirements are not mapped to standard typed checks."
+      },
+      {
+        "id": "NCT07293247-progression",
+        "polarity": "exclusion",
+        "sourceText": "No disease progression per CT chest (including upper abdomen as per standard practice) with intravenous (IV) contrast (unless IV contrast is contraindicated) or FDG-PET performed post-neoadjuvant therapy ≤ 90 days prior to registration, either before or after surgery",
+        "reasonFuzzy": "Absence of disease progression on imaging is a clinical assessment not covered by typed checks."
+      },
+      {
+        "id": "NCT07293247-neoadjuvant",
+        "polarity": "inclusion",
+        "sourceText": "Prior treatment with 2-4 cycles of neoadjuvant systemic therapy with any guideline (National Comprehensive Cancer Network [NCCN]) concordant regimen",
+        "reasonFuzzy": "Prior therapy requirement refers to a general guideline-concordant regimen rather than a specific drug name."
+      },
+      {
+        "id": "NCT07293247-surgery",
+        "polarity": "inclusion",
+        "sourceText": "Lobectomy or greater oncologic surgical resection within 8 weeks prior to registration",
+        "reasonFuzzy": "Surgical resection type and timing is a procedure requirement, not a typed check."
+      },
+      {
+        "id": "NCT07293247-resection",
+        "polarity": "inclusion",
+        "sourceText": "Complete (R0) resection showing ypN2 disease",
+        "reasonFuzzy": "Resection margin and nodal status are specialized pathology criteria."
+      },
+      {
+        "id": "NCT07293247-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Not pregnant, because this study involves radiation therapy, which has known genotoxic, mutagenic and teratogenic effects. Therefore, for women of childbearing potential only, a negative urine or serum pregnancy test done ≤ 7 days prior to registration is required",
+        "reasonFuzzy": "Pregnancy testing and status are standard exclusion criteria not modeled with a typed check."
+      },
+      {
+        "id": "NCT07293247-malignancy",
+        "polarity": "inclusion",
+        "sourceText": "Patients with a prior or concurrent malignancy whose natural history or treatment does not have the potential to interfere with the safety or efficacy assessment of the investigational regimen are eligible for this trial",
+        "reasonFuzzy": "Prior malignancy allowance depends on investigator judgment regarding interference."
+      },
+      {
+        "id": "NCT07293247-cardiac",
+        "polarity": "inclusion",
+        "sourceText": "Cardiac function: Patients with known history or current symptoms of cardiac disease, or history of treatment with cardiotoxic agents, should have a clinical risk assessment of cardiac function using the New York Heart Association Functional Classification. To be eligible for this trial, patients should be class 2B or better",
+        "reasonFuzzy": "NYHA functional classification requires clinical judgment."
+      },
+      {
+        "id": "NCT07293247-fibrosis",
+        "polarity": "exclusion",
+        "sourceText": "No idiopathic pulmonary fibrosis requiring anti-fibrotic medication: Patients with idiopathic pulmonary fibrosis or inflammatory/interstitial lung disease compromising pulmonary function or requiring ongoing treatment with nintedanib, pirfenidone, or other anti-fibrotic drug are excluded",
+        "reasonFuzzy": "Pulmonary fibrosis and anti-fibrotic drug exclusions are complex clinical rules."
+      },
+      {
+        "id": "NCT07293247-hiv",
+        "polarity": "inclusion",
+        "sourceText": "HIV-infected patients on effective anti-retroviral therapy with an undetectable viral load within 6 months are eligible for this trial",
+        "reasonFuzzy": "HIV infection status with viral load criteria is not a standard typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07293247",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07293247-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "No known EGFR mutation or ALK rearrangement",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT07293247-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "No known EGFR mutation or ALK rearrangement",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT07293247-prior-therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "No treatment with a VEGF inhibitor ≤ 90 days prior to registration or plan to treat with adjuvant systemic therapy including a VEGF inhibitor",
+        "stringValue": "VEGF inhibitor"
+      },
+      {
+        "id": "NCT07293247-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07293247-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07293247-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥ 1,000/mm^3",
+        "numberValue": 1000
+      },
+      {
+        "id": "NCT07293247-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count ≥ 50,000/mm^3",
+        "numberValue": 50000
+      },
+      {
+        "id": "NCT07293247-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Calculated (Calc.) creatinine clearance ≥ 30 mL/min",
+        "numberValue": 30
+      },
+      {
+        "id": "NCT07293247-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 3 x upper limit of normal (ULN)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT07293247-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 5 x upper limit of normal (ULN)",
+        "numberValue": 5
+      },
+      {
+        "id": "NCT07293247-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 5 x upper limit of normal (ULN)",
+        "numberValue": 5
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07293247-histology",
+        "polarity": "inclusion",
+        "sourceText": "Histopathologic diagnosis of NSCLC, may have mixed or multiple histologies but no small cell component",
+        "reasonFuzzy": "General histology rule covering mixed or multiple subtypes without specifying standard subset histologies."
+      },
+      {
+        "id": "NCT07293247-metastasis",
+        "polarity": "exclusion",
+        "sourceText": "No metastatic disease (M0) per most recent PET/CT and head CT/MRI imaging",
+        "reasonFuzzy": "Absence of metastatic disease refers to M0 staging and imaging interpretation rather than stage_in."
+      },
+      {
+        "id": "NCT07293247-progression",
+        "polarity": "exclusion",
+        "sourceText": "No disease progression per CT chest (including upper abdomen as per standard practice) with intravenous (IV) contrast (unless IV contrast is contraindicated) or FDG-PET performed post-neoadjuvant therapy ≤ 90 days prior to registration, either before or after surgery",
+        "reasonFuzzy": "Imaging evaluation for disease progression is a subjective judgment."
+      },
+      {
+        "id": "NCT07293247-metastasis2",
+        "polarity": "exclusion",
+        "sourceText": "No metastatic disease (M0) per head CT/MRI imaging",
+        "reasonFuzzy": "Imaging assessment for brain metastasis exclusion."
+      },
+      {
+        "id": "NCT07293247-neoadjuvant",
+        "polarity": "inclusion",
+        "sourceText": "Prior treatment with 2-4 cycles of neoadjuvant systemic therapy with any guideline (National Comprehensive Cancer Network [NCCN]) concordant regimen",
+        "reasonFuzzy": "Prior therapy rule specifying a regimen range and NCCN guidelines rather than a specific drug name."
+      },
+      {
+        "id": "NCT07293247-surgery",
+        "polarity": "inclusion",
+        "sourceText": "Lobectomy or greater oncologic surgical resection within 8 weeks prior to registration",
+        "reasonFuzzy": "Surgical procedure requirement with a timeline."
+      },
+      {
+        "id": "NCT07293247-resection",
+        "polarity": "inclusion",
+        "sourceText": "Complete (R0) resection showing ypN2 disease",
+        "reasonFuzzy": "Pathological resection status and ypN2 finding."
+      },
+      {
+        "id": "NCT07293247-radiotherapy",
+        "polarity": "exclusion",
+        "sourceText": "No prior radiotherapy to the lungs or mediastinum",
+        "reasonFuzzy": "Prior radiation exclusion for specific anatomical areas."
+      },
+      {
+        "id": "NCT07293247-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Not pregnant, because this study involves radiation therapy, which has known genotoxic, mutagenic and teratogenic effects. Therefore, for women of childbearing potential only, a negative urine or serum pregnancy test done ≤ 7 days prior to registration is required",
+        "reasonFuzzy": "Pregnancy testing and childbearing potential rules are not typed kinds."
+      },
+      {
+        "id": "NCT07293247-malignancy",
+        "polarity": "inclusion",
+        "sourceText": "Patients with a prior or concurrent malignancy whose natural history or treatment does not have the potential to interfere with the safety or efficacy assessment of the investigational regimen are eligible for this trial",
+        "reasonFuzzy": "Subjective investigator evaluation of prior or concurrent malignancy."
+      },
+      {
+        "id": "NCT07293247-cardiac",
+        "polarity": "inclusion",
+        "sourceText": "Cardiac function: Patients with known history or current symptoms of cardiac disease, or history of treatment with cardiotoxic agents, should have a clinical risk assessment of cardiac function using the New York Heart Association Functional Classification. To be eligible for this trial, patients should be class 2B or better",
+        "reasonFuzzy": "NYHA functional classification assessment is a clinical judgment-based criterion."
+      },
+      {
+        "id": "NCT07293247-fibrosis",
+        "polarity": "exclusion",
+        "sourceText": "No idiopathic pulmonary fibrosis requiring anti-fibrotic medication: Patients with idiopathic pulmonary fibrosis or inflammatory/interstitial lung disease compromising pulmonary function or requiring ongoing treatment with nintedanib, pirfenidone, or other anti-fibrotic drug are excluded",
+        "reasonFuzzy": "Pulmonary fibrosis and anti-fibrotic medication rules are complex clinical exclusions."
+      },
+      {
+        "id": "NCT07293247-hiv",
+        "polarity": "inclusion",
+        "sourceText": "HIV-infected patients on effective anti-retroviral therapy with an undetectable viral load within 6 months are eligible for this trial",
+        "reasonFuzzy": "HIV status with viral load condition."
+      }
+    ]
+  }
+}

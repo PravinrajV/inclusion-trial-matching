@@ -1,0 +1,379 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05059444",
+  "briefTitle": "ORACLE: Observation of ResiduAl Cancer With Liquid Biopsy Evaluation",
+  "parsedAt": "2026-11-12T06:09:22.124Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05059444-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age > 18 years old AND",
+      "numberValue": 18,
+      "evidence_quote": "Age > 18 years old AND",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05059444-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Cohort 2: Cohort 2: Non-small cell lung cancer (stage IB-III):",
+      "stages": [
+        "IB",
+        "IIA",
+        "IIB",
+        "IIIA",
+        "IIIB",
+        "IIIC"
+      ],
+      "evidence_quote": "Cohort 2: Cohort 2: Non-small cell lung cancer (stage IB-III):",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05059444-intent",
+      "polarity": "inclusion",
+      "sourceText": "Initial treatment is given with curative/radical intent AND",
+      "reasonFuzzy": "Treatment intent is subjective and not a typed clinical check."
+    },
+    {
+      "id": "NCT05059444-followup",
+      "polarity": "inclusion",
+      "sourceText": "Are planning to undergo regular follow-up and monitoring for cancer recurrence per standard of care at the enrolling site AND",
+      "reasonFuzzy": "Follow-up planning is subjective and not a typed check."
+    },
+    {
+      "id": "NCT05059444-consent",
+      "polarity": "inclusion",
+      "sourceText": "Provided written informed consent to participate in the study AND",
+      "reasonFuzzy": "Informed consent is a standard administrative requirement."
+    },
+    {
+      "id": "NCT05059444-datashare",
+      "polarity": "inclusion",
+      "sourceText": "Are willing to have de-identified clinical data shared with investigators at regular intervals as outlined in the study protocol and informed consent AND",
+      "reasonFuzzy": "Data sharing willingness is administrative."
+    },
+    {
+      "id": "NCT05059444-blood",
+      "polarity": "inclusion",
+      "sourceText": "Are willing to provide blood samples at enrollment and at subsequent clinical visits coinciding with standard of care follow-up, for up to 3 years as outlined in the study protocol and informed consent AND",
+      "reasonFuzzy": "Willingness to provide blood samples is a procedure requirement."
+    },
+    {
+      "id": "NCT05059444-landmark",
+      "polarity": "inclusion",
+      "sourceText": "Have at least one Landmark blood sample collected. Landmark samples are collected 3-12 weeks after surgery, chemotherapy and/or radiation/chemoradiation as applicable based on the participant's planned treatment regimen",
+      "reasonFuzzy": "Landmark sample timing depends on planned treatment regimens."
+    },
+    {
+      "id": "NCT05059444-transplant",
+      "polarity": "exclusion",
+      "sourceText": "History of allogeneic organ or tissue transplant",
+      "reasonFuzzy": "Prior transplant history is an exclusion not covered by a typed check."
+    },
+    {
+      "id": "NCT05059444-neuro",
+      "polarity": "exclusion",
+      "sourceText": "Index cancer has predominantly neuroendocrine histology",
+      "reasonFuzzy": "Predominantly neuroendocrine histology is not a standard typed histology exclusion kind."
+    },
+    {
+      "id": "NCT05059444-priorcancer",
+      "polarity": "exclusion",
+      "sourceText": "History of another primary cancer diagnosed within 3 years of enrollment, with the exception that in situ cancers, non-melanoma skin carcinomas, localized low- or intermediate risk prostate cancers (defined as cancers confined to the prostate with Gleason score of 7 or lower and prostate-specific antigen (PSA) of less than 20), and stage I papillary thyroid carcinoma, and participants with bilateral/multifocal tumors within the same organ (for example, bilateral breast cancer) are allowed if diagnosed within 3 years of enrollment",
+      "reasonFuzzy": "History of another primary cancer with complex multi-disease exceptions is not a typed check."
+    },
+    {
+      "id": "NCT05059444-mets",
+      "polarity": "exclusion",
+      "sourceText": "Known distant metastasis at time of enrollment (with the exception of participants with limited/resectable stage IV cutaneous melanoma or RCC)",
+      "reasonFuzzy": "Distant metastasis exclusion with cohort-specific exceptions is not a typed check."
+    },
+    {
+      "id": "NCT05059444-intent",
+      "polarity": "inclusion",
+      "sourceText": "Initial treatment is given with curative/radical intent AND",
+      "reasonFuzzy": "Treatment intent is subjective and not a typed clinical or laboratory check."
+    },
+    {
+      "id": "NCT05059444-followup",
+      "polarity": "inclusion",
+      "sourceText": "Are planning to undergo regular follow-up and monitoring for cancer recurrence per standard of care at the enrolling site AND",
+      "reasonFuzzy": "Compliance with follow-up is not a typed clinical criterion."
+    },
+    {
+      "id": "NCT05059444-consent",
+      "polarity": "inclusion",
+      "sourceText": "Provided written informed consent to participate in the study AND",
+      "reasonFuzzy": "Informed consent administrative requirement is not a typed check."
+    },
+    {
+      "id": "NCT05059444-sharing",
+      "polarity": "inclusion",
+      "sourceText": "Are willing to have de-identified clinical data shared with investigators at regular intervals as outlined in the study protocol and informed consent AND",
+      "reasonFuzzy": "Data sharing willingness is administrative, not a typed check."
+    },
+    {
+      "id": "NCT05059444-blood",
+      "polarity": "inclusion",
+      "sourceText": "Are willing to provide blood samples at enrollment and at subsequent clinical visits coinciding with standard of care follow-up, for up to 3 years as outlined in the study protocol and informed consent AND",
+      "reasonFuzzy": "Willingness to provide blood samples is not a typed check."
+    },
+    {
+      "id": "NCT05059444-landmark",
+      "polarity": "inclusion",
+      "sourceText": "Have at least one Landmark blood sample collected. Landmark samples are collected 3-12 weeks after surgery, chemotherapy and/or radiation/chemoradiation as applicable based on the participant's planned treatment regimen",
+      "reasonFuzzy": "Landmark sample timing is protocol schedule criteria, not a typed check."
+    },
+    {
+      "id": "NCT05059444-transplant",
+      "polarity": "exclusion",
+      "sourceText": "History of allogeneic organ or tissue transplant",
+      "reasonFuzzy": "Prior transplant history does not correspond to a typed prior therapy or exclusion category."
+    },
+    {
+      "id": "NCT05059444-neuroendocrine",
+      "polarity": "exclusion",
+      "sourceText": "Index cancer has predominantly neuroendocrine histology",
+      "reasonFuzzy": "Histology exclusion for neuroendocrine is not covered by the allowed histology values."
+    },
+    {
+      "id": "NCT05059444-prior_cancer",
+      "polarity": "exclusion",
+      "sourceText": "History of another primary cancer diagnosed within 3 years of enrollment, with the exception that in situ cancers, non-melanoma skin carcinomas, localized low- or intermediate risk prostate cancers (defined as cancers confined to the prostate with Gleason score of 7 or lower and prostate-specific antigen (PSA) of less than 20), and stage I papillary thyroid carcinoma, and participants with bilateral/multifocal tumors within the same organ (for example, bilateral breast cancer) are allowed if diagnosed within 3 years of enrollment",
+      "reasonFuzzy": "Complex prior malignancy rule with multiple specific exceptions cannot be represented as a typed check."
+    },
+    {
+      "id": "NCT05059444-metastasis",
+      "polarity": "exclusion",
+      "sourceText": "Known distant metastasis at time of enrollment (with the exception of participants with limited/resectable stage IV cutaneous melanoma or RCC)",
+      "reasonFuzzy": "Distant metastasis exclusion with cancer-specific stage IV exceptions is not a simple typed check."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 6
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 10,
+    "attempts": 1,
+    "ms": 3816
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 10,
+    "attempts": 1,
+    "ms": 4904
+  },
+  "ms": 16716,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05059444",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05059444-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age > 18 years old AND",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05059444-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Cohort 2: Cohort 2: Non-small cell lung cancer (stage IB-III):",
+        "stages": [
+          "IB",
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05059444-intent",
+        "polarity": "inclusion",
+        "sourceText": "Initial treatment is given with curative/radical intent AND",
+        "reasonFuzzy": "Treatment intent is subjective and not a typed clinical check."
+      },
+      {
+        "id": "NCT05059444-followup",
+        "polarity": "inclusion",
+        "sourceText": "Are planning to undergo regular follow-up and monitoring for cancer recurrence per standard of care at the enrolling site AND",
+        "reasonFuzzy": "Follow-up planning is subjective and not a typed check."
+      },
+      {
+        "id": "NCT05059444-consent",
+        "polarity": "inclusion",
+        "sourceText": "Provided written informed consent to participate in the study AND",
+        "reasonFuzzy": "Informed consent is a standard administrative requirement."
+      },
+      {
+        "id": "NCT05059444-datashare",
+        "polarity": "inclusion",
+        "sourceText": "Are willing to have de-identified clinical data shared with investigators at regular intervals as outlined in the study protocol and informed consent AND",
+        "reasonFuzzy": "Data sharing willingness is administrative."
+      },
+      {
+        "id": "NCT05059444-blood",
+        "polarity": "inclusion",
+        "sourceText": "Are willing to provide blood samples at enrollment and at subsequent clinical visits coinciding with standard of care follow-up, for up to 3 years as outlined in the study protocol and informed consent AND",
+        "reasonFuzzy": "Willingness to provide blood samples is a procedure requirement."
+      },
+      {
+        "id": "NCT05059444-landmark",
+        "polarity": "inclusion",
+        "sourceText": "Have at least one Landmark blood sample collected. Landmark samples are collected 3-12 weeks after surgery, chemotherapy and/or radiation/chemoradiation as applicable based on the participant's planned treatment regimen",
+        "reasonFuzzy": "Landmark sample timing depends on planned treatment regimens."
+      },
+      {
+        "id": "NCT05059444-transplant",
+        "polarity": "exclusion",
+        "sourceText": "History of allogeneic organ or tissue transplant",
+        "reasonFuzzy": "Prior transplant history is an exclusion not covered by a typed check."
+      },
+      {
+        "id": "NCT05059444-neuro",
+        "polarity": "exclusion",
+        "sourceText": "Index cancer has predominantly neuroendocrine histology",
+        "reasonFuzzy": "Predominantly neuroendocrine histology is not a standard typed histology exclusion kind."
+      },
+      {
+        "id": "NCT05059444-priorcancer",
+        "polarity": "exclusion",
+        "sourceText": "History of another primary cancer diagnosed within 3 years of enrollment, with the exception that in situ cancers, non-melanoma skin carcinomas, localized low- or intermediate risk prostate cancers (defined as cancers confined to the prostate with Gleason score of 7 or lower and prostate-specific antigen (PSA) of less than 20), and stage I papillary thyroid carcinoma, and participants with bilateral/multifocal tumors within the same organ (for example, bilateral breast cancer) are allowed if diagnosed within 3 years of enrollment",
+        "reasonFuzzy": "History of another primary cancer with complex multi-disease exceptions is not a typed check."
+      },
+      {
+        "id": "NCT05059444-mets",
+        "polarity": "exclusion",
+        "sourceText": "Known distant metastasis at time of enrollment (with the exception of participants with limited/resectable stage IV cutaneous melanoma or RCC)",
+        "reasonFuzzy": "Distant metastasis exclusion with cohort-specific exceptions is not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05059444",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05059444-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age > 18 years old AND",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05059444-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Cohort 2: Cohort 2: Non-small cell lung cancer (stage IB-III):",
+        "stages": [
+          "IB",
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05059444-intent",
+        "polarity": "inclusion",
+        "sourceText": "Initial treatment is given with curative/radical intent AND",
+        "reasonFuzzy": "Treatment intent is subjective and not a typed clinical or laboratory check."
+      },
+      {
+        "id": "NCT05059444-followup",
+        "polarity": "inclusion",
+        "sourceText": "Are planning to undergo regular follow-up and monitoring for cancer recurrence per standard of care at the enrolling site AND",
+        "reasonFuzzy": "Compliance with follow-up is not a typed clinical criterion."
+      },
+      {
+        "id": "NCT05059444-consent",
+        "polarity": "inclusion",
+        "sourceText": "Provided written informed consent to participate in the study AND",
+        "reasonFuzzy": "Informed consent administrative requirement is not a typed check."
+      },
+      {
+        "id": "NCT05059444-sharing",
+        "polarity": "inclusion",
+        "sourceText": "Are willing to have de-identified clinical data shared with investigators at regular intervals as outlined in the study protocol and informed consent AND",
+        "reasonFuzzy": "Data sharing willingness is administrative, not a typed check."
+      },
+      {
+        "id": "NCT05059444-blood",
+        "polarity": "inclusion",
+        "sourceText": "Are willing to provide blood samples at enrollment and at subsequent clinical visits coinciding with standard of care follow-up, for up to 3 years as outlined in the study protocol and informed consent AND",
+        "reasonFuzzy": "Willingness to provide blood samples is not a typed check."
+      },
+      {
+        "id": "NCT05059444-landmark",
+        "polarity": "inclusion",
+        "sourceText": "Have at least one Landmark blood sample collected. Landmark samples are collected 3-12 weeks after surgery, chemotherapy and/or radiation/chemoradiation as applicable based on the participant's planned treatment regimen",
+        "reasonFuzzy": "Landmark sample timing is protocol schedule criteria, not a typed check."
+      },
+      {
+        "id": "NCT05059444-transplant",
+        "polarity": "exclusion",
+        "sourceText": "History of allogeneic organ or tissue transplant",
+        "reasonFuzzy": "Prior transplant history does not correspond to a typed prior therapy or exclusion category."
+      },
+      {
+        "id": "NCT05059444-neuroendocrine",
+        "polarity": "exclusion",
+        "sourceText": "Index cancer has predominantly neuroendocrine histology",
+        "reasonFuzzy": "Histology exclusion for neuroendocrine is not covered by the allowed histology values."
+      },
+      {
+        "id": "NCT05059444-prior_cancer",
+        "polarity": "exclusion",
+        "sourceText": "History of another primary cancer diagnosed within 3 years of enrollment, with the exception that in situ cancers, non-melanoma skin carcinomas, localized low- or intermediate risk prostate cancers (defined as cancers confined to the prostate with Gleason score of 7 or lower and prostate-specific antigen (PSA) of less than 20), and stage I papillary thyroid carcinoma, and participants with bilateral/multifocal tumors within the same organ (for example, bilateral breast cancer) are allowed if diagnosed within 3 years of enrollment",
+        "reasonFuzzy": "Complex prior malignancy rule with multiple specific exceptions cannot be represented as a typed check."
+      },
+      {
+        "id": "NCT05059444-metastasis",
+        "polarity": "exclusion",
+        "sourceText": "Known distant metastasis at time of enrollment (with the exception of participants with limited/resectable stage IV cutaneous melanoma or RCC)",
+        "reasonFuzzy": "Distant metastasis exclusion with cancer-specific stage IV exceptions is not a simple typed check."
+      }
+    ]
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06046495",
+  "briefTitle": "A Study of the Oral EGFR Inhibitor PLB1004 in Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T06:22:26.039Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06046495-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male or female adult patients 18 years of age or older;",
+      "numberValue": 18,
+      "evidence_quote": "Male or female adult patients 18 years of age or older;",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06046495-life",
+      "polarity": "inclusion",
+      "sourceText": "At least 12 weeks life expectancy;",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06046495-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Must have at least one measurable lesion per RECIST v 1.1;",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06046495-toxicity",
+      "polarity": "inclusion",
+      "sourceText": "Patients should have recovered from toxicities related to prior anti-tumor therapy",
+      "reasonFuzzy": "Recovery from toxicities is an investigator judgment and not a typed lab or status check."
+    },
+    {
+      "id": "NCT06046495-surgery",
+      "polarity": "inclusion",
+      "sourceText": "Patients should have recovered from the effects of major surgery",
+      "reasonFuzzy": "Recovery from surgery is a subjective clinical judgment, not a typed check."
+    },
+    {
+      "id": "NCT06046495-life",
+      "polarity": "inclusion",
+      "sourceText": "At least 12 weeks life expectancy",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06046495-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Must have at least one measurable lesion per RECIST v 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06046495-radio",
+      "polarity": "exclusion",
+      "sourceText": "Received radiotherapy within 14 days before enrollment",
+      "reasonFuzzy": "Washout windows that are not simple lab cutoffs remain in fuzzyCriteria."
+    },
+    {
+      "id": "NCT06046495-exp",
+      "polarity": "exclusion",
+      "sourceText": "Have used other experimental drugs within 2 weeks prior to the first dose of PLB1004",
+      "reasonFuzzy": "Washout windows for experimental drugs are not typed prior therapy checks."
+    },
+    {
+      "id": "NCT06046495-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Have a documented EGFR mutation by a local test in tissue or plasma;",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2616
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2365
+  },
+  "ms": 12974,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06046495",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06046495-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female adult patients 18 years of age or older;",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06046495-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Have a documented EGFR mutation by a local test in tissue or plasma;",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06046495-life",
+        "polarity": "inclusion",
+        "sourceText": "At least 12 weeks life expectancy;",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06046495-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Must have at least one measurable lesion per RECIST v 1.1;",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06046495",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06046495-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female adult patients 18 years of age or older",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06046495-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Have a documented EGFR mutation by a local test in tissue or plasma",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06046495-toxicity",
+        "polarity": "inclusion",
+        "sourceText": "Patients should have recovered from toxicities related to prior anti-tumor therapy",
+        "reasonFuzzy": "Recovery from toxicities is an investigator judgment and not a typed lab or status check."
+      },
+      {
+        "id": "NCT06046495-surgery",
+        "polarity": "inclusion",
+        "sourceText": "Patients should have recovered from the effects of major surgery",
+        "reasonFuzzy": "Recovery from surgery is a subjective clinical judgment, not a typed check."
+      },
+      {
+        "id": "NCT06046495-life",
+        "polarity": "inclusion",
+        "sourceText": "At least 12 weeks life expectancy",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06046495-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Must have at least one measurable lesion per RECIST v 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06046495-radio",
+        "polarity": "exclusion",
+        "sourceText": "Received radiotherapy within 14 days before enrollment",
+        "reasonFuzzy": "Washout windows that are not simple lab cutoffs remain in fuzzyCriteria."
+      },
+      {
+        "id": "NCT06046495-exp",
+        "polarity": "exclusion",
+        "sourceText": "Have used other experimental drugs within 2 weeks prior to the first dose of PLB1004",
+        "reasonFuzzy": "Washout windows for experimental drugs are not typed prior therapy checks."
+      }
+    ]
+  }
+}

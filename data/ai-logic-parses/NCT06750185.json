@@ -1,0 +1,303 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06750185",
+  "briefTitle": "Safety and Preliminary Effectiveness of BNT317, an Investigational Therapy for Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T10:33:23.595Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06750185-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have at least one measurable lesion based on RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06750185-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematologic and organ function, as defined in the protocol.",
+      "reasonFuzzy": "Organ and hematologic function refers to protocol definitions without explicit lab cutoffs."
+    },
+    {
+      "id": "NCT06750185-washout",
+      "polarity": "inclusion",
+      "sourceText": "Have had an adequate treatment washout period before randomization/enrollment, as defined in the protocol.",
+      "reasonFuzzy": "Washout period is protocol-defined and variable."
+    },
+    {
+      "id": "NCT06750185-partb1",
+      "polarity": "inclusion",
+      "sourceText": "Part B1 only: Histologically confirmed diagnosis of locally advanced, unresectable (not amenable to curative surgery or radiation therapy) or metastatic clear cell RCC (including those with sarcomatoid features).",
+      "reasonFuzzy": "This trial is a basket study for advanced solid tumors with sub-cohorts (RCC, GC/GEJC, and NSCLC), and Part B1 specifies renal cell carcinoma."
+    },
+    {
+      "id": "NCT06750185-partb2",
+      "polarity": "inclusion",
+      "sourceText": "Part B2 only: Histologically and/or cytologically documented metastatic adenocarcinoma and squamous carcinoma of GC/GEJC.",
+      "reasonFuzzy": "Part B2 is specific to GC/GEJC rather than NSCLC."
+    },
+    {
+      "id": "NCT06750185-partb3-histology",
+      "polarity": "inclusion",
+      "sourceText": "Part B3 only: Have advanced (i.e., metastatic or locally recurrent where local therapy with curative intent is not possible) non-squamous or squamous NSCLC.",
+      "reasonFuzzy": "Part B3 covers NSCLC with multiple complex prior lines and biomarker rules that cannot be reduced to a single standard histology_in or prior_therapy check."
+    },
+    {
+      "id": "NCT06750185-brain",
+      "polarity": "exclusion",
+      "sourceText": "Have any of the following CNS metastases: Untreated brain metastases that are symptomatic or large (e.g., greater than 2 cm). Treated CNS metastases who are not neurologically stable or on steroids or anticonvulsants within 2 weeks before initiating IMP of this study. Brain metastases treated with radiotherapy that are not confirmed stable by magnetic resonance imaging or contrast-enhanced computer tomography 4 weeks after radiotherapy. Participants with known leptomeningeal metastases.",
+      "reasonFuzzy": "The brain metastases criteria include nuanced conditions such as size, symptom status, steroid/anticonvulsant use, and imaging confirmation timelines that do not fit a simple allowedBrainMets category."
+    },
+    {
+      "id": "NCT06750185-prior-therapies",
+      "polarity": "exclusion",
+      "sourceText": "Have received any of the following therapies or drugs within the noted time intervals prior to study treatment: Any prior treatment which inhibits cluster of differentiation 39. Vaccination with live attenuated vaccine(s) within 4 weeks prior to the first dose of IMP. Any investigational product within 4 weeks or 5 half lives... Systemic cytotoxic chemotherapy, immunotherapy within 3 weeks... Radiation therapy... Palliative radiotherapy... Systemic corticosteroids...",
+      "reasonFuzzy": "These are specific washout windows and prior drug exclusions that are too complex for simple typed checks."
+    },
+    {
+      "id": "NCT06750185-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06750185-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have at least one measurable lesion based on RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06750185-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematologic and organ function, as defined in the protocol.",
+      "reasonFuzzy": "Refers to protocol definitions without explicit standalone thresholds in the text."
+    },
+    {
+      "id": "NCT06750185-washout",
+      "polarity": "inclusion",
+      "sourceText": "Have had an adequate treatment washout period before randomization/enrollment, as defined in the protocol.",
+      "reasonFuzzy": "Washout period is defined by protocol rather than a simple lab cutoff."
+    },
+    {
+      "id": "NCT06750185-rcc",
+      "polarity": "inclusion",
+      "sourceText": "Part B1 only: Histologically confirmed diagnosis of locally advanced, unresectable (not amenable to curative surgery or radiation therapy) or metastatic clear cell RCC (including those with sarcomatoid features).",
+      "reasonFuzzy": "Applies only to part B1 clear cell RCC, which is a different cancer type than NSCLC."
+    },
+    {
+      "id": "NCT06750185-gc",
+      "polarity": "inclusion",
+      "sourceText": "Part B2 only: Histologically and/or cytologically documented metastatic adenocarcinoma and squamous carcinoma of GC/GEJC.",
+      "reasonFuzzy": "Applies only to part B2 GC/GEJC, which is a different cancer type than NSCLC."
+    },
+    {
+      "id": "NCT06750185-nsclc-stage",
+      "polarity": "inclusion",
+      "sourceText": "Part B3 only: Have advanced (i.e., metastatic or locally recurrent where local therapy with curative intent is not possible) non-squamous or squamous NSCLC.",
+      "reasonFuzzy": "Advanced disease wording does not map to a strict numeric TNM stage list."
+    },
+    {
+      "id": "NCT06750185-brain",
+      "polarity": "exclusion",
+      "sourceText": "Untreated brain metastases that are symptomatic or large (e.g., greater than 2 cm).",
+      "reasonFuzzy": "Complex criteria involving symptoms, size, and treatment status for CNS metastases do not fit a clean typed brain_mets category."
+    },
+    {
+      "id": "NCT06750185-corticosteroid",
+      "polarity": "exclusion",
+      "sourceText": "Systemic corticosteroids (at a dosage greater than 10 mg/day of prednisone or an equivalent dose of other corticosteroids) within 2 weeks prior to the first dose of IMP.",
+      "reasonFuzzy": "Corticosteroid dosage and washout rule is not covered by a typed check kind."
+    },
+    {
+      "id": "NCT06750185-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 0,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 0,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 0,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 3739
+  },
+  "runB": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 3695
+  },
+  "ms": 15443,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06750185",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06750185-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06750185-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have at least one measurable lesion based on RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06750185-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematologic and organ function, as defined in the protocol.",
+        "reasonFuzzy": "Organ and hematologic function refers to protocol definitions without explicit lab cutoffs."
+      },
+      {
+        "id": "NCT06750185-washout",
+        "polarity": "inclusion",
+        "sourceText": "Have had an adequate treatment washout period before randomization/enrollment, as defined in the protocol.",
+        "reasonFuzzy": "Washout period is protocol-defined and variable."
+      },
+      {
+        "id": "NCT06750185-partb1",
+        "polarity": "inclusion",
+        "sourceText": "Part B1 only: Histologically confirmed diagnosis of locally advanced, unresectable (not amenable to curative surgery or radiation therapy) or metastatic clear cell RCC (including those with sarcomatoid features).",
+        "reasonFuzzy": "This trial is a basket study for advanced solid tumors with sub-cohorts (RCC, GC/GEJC, and NSCLC), and Part B1 specifies renal cell carcinoma."
+      },
+      {
+        "id": "NCT06750185-partb2",
+        "polarity": "inclusion",
+        "sourceText": "Part B2 only: Histologically and/or cytologically documented metastatic adenocarcinoma and squamous carcinoma of GC/GEJC.",
+        "reasonFuzzy": "Part B2 is specific to GC/GEJC rather than NSCLC."
+      },
+      {
+        "id": "NCT06750185-partb3-histology",
+        "polarity": "inclusion",
+        "sourceText": "Part B3 only: Have advanced (i.e., metastatic or locally recurrent where local therapy with curative intent is not possible) non-squamous or squamous NSCLC.",
+        "reasonFuzzy": "Part B3 covers NSCLC with multiple complex prior lines and biomarker rules that cannot be reduced to a single standard histology_in or prior_therapy check."
+      },
+      {
+        "id": "NCT06750185-brain",
+        "polarity": "exclusion",
+        "sourceText": "Have any of the following CNS metastases: Untreated brain metastases that are symptomatic or large (e.g., greater than 2 cm). Treated CNS metastases who are not neurologically stable or on steroids or anticonvulsants within 2 weeks before initiating IMP of this study. Brain metastases treated with radiotherapy that are not confirmed stable by magnetic resonance imaging or contrast-enhanced computer tomography 4 weeks after radiotherapy. Participants with known leptomeningeal metastases.",
+        "reasonFuzzy": "The brain metastases criteria include nuanced conditions such as size, symptom status, steroid/anticonvulsant use, and imaging confirmation timelines that do not fit a simple allowedBrainMets category."
+      },
+      {
+        "id": "NCT06750185-prior-therapies",
+        "polarity": "exclusion",
+        "sourceText": "Have received any of the following therapies or drugs within the noted time intervals prior to study treatment: Any prior treatment which inhibits cluster of differentiation 39. Vaccination with live attenuated vaccine(s) within 4 weeks prior to the first dose of IMP. Any investigational product within 4 weeks or 5 half lives... Systemic cytotoxic chemotherapy, immunotherapy within 3 weeks... Radiation therapy... Palliative radiotherapy... Systemic corticosteroids...",
+        "reasonFuzzy": "These are specific washout windows and prior drug exclusions that are too complex for simple typed checks."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06750185",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06750185-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06750185-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have at least one measurable lesion based on RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06750185-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematologic and organ function, as defined in the protocol.",
+        "reasonFuzzy": "Refers to protocol definitions without explicit standalone thresholds in the text."
+      },
+      {
+        "id": "NCT06750185-washout",
+        "polarity": "inclusion",
+        "sourceText": "Have had an adequate treatment washout period before randomization/enrollment, as defined in the protocol.",
+        "reasonFuzzy": "Washout period is defined by protocol rather than a simple lab cutoff."
+      },
+      {
+        "id": "NCT06750185-rcc",
+        "polarity": "inclusion",
+        "sourceText": "Part B1 only: Histologically confirmed diagnosis of locally advanced, unresectable (not amenable to curative surgery or radiation therapy) or metastatic clear cell RCC (including those with sarcomatoid features).",
+        "reasonFuzzy": "Applies only to part B1 clear cell RCC, which is a different cancer type than NSCLC."
+      },
+      {
+        "id": "NCT06750185-gc",
+        "polarity": "inclusion",
+        "sourceText": "Part B2 only: Histologically and/or cytologically documented metastatic adenocarcinoma and squamous carcinoma of GC/GEJC.",
+        "reasonFuzzy": "Applies only to part B2 GC/GEJC, which is a different cancer type than NSCLC."
+      },
+      {
+        "id": "NCT06750185-nsclc-stage",
+        "polarity": "inclusion",
+        "sourceText": "Part B3 only: Have advanced (i.e., metastatic or locally recurrent where local therapy with curative intent is not possible) non-squamous or squamous NSCLC.",
+        "reasonFuzzy": "Advanced disease wording does not map to a strict numeric TNM stage list."
+      },
+      {
+        "id": "NCT06750185-brain",
+        "polarity": "exclusion",
+        "sourceText": "Untreated brain metastases that are symptomatic or large (e.g., greater than 2 cm).",
+        "reasonFuzzy": "Complex criteria involving symptoms, size, and treatment status for CNS metastases do not fit a clean typed brain_mets category."
+      },
+      {
+        "id": "NCT06750185-corticosteroid",
+        "polarity": "exclusion",
+        "sourceText": "Systemic corticosteroids (at a dosage greater than 10 mg/day of prednisone or an equivalent dose of other corticosteroids) within 2 weeks prior to the first dose of IMP.",
+        "reasonFuzzy": "Corticosteroid dosage and washout rule is not covered by a typed check kind."
+      }
+    ]
+  }
+}

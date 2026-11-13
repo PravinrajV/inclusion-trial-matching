@@ -1,0 +1,261 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06228326",
+  "briefTitle": "A Study Assessing KB707 for the Treatment of Advanced Solid Tumor Malignancies Affecting the Lungs",
+  "parsedAt": "2026-11-12T06:28:53.627Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06228326-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age 18 years or older at the time of informed consent",
+      "numberValue": 18,
+      "evidence_quote": "Age 18 years or older at the time of informed consent",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06228326-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06228326-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy >12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06228326-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have at least one measurable lung lesion per RECIST v1.1 at Screening",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06228326-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Subject has previously received no more than one line of prior immune checkpoint inhibitor (ICI) with or without platinum-based chemotherapy, or no more than two prior lines of therapy when given the ICI and platinum-based chemotherapy sequentially as two separate lines.",
+      "reasonFuzzy": "Prior line limits are complex and conditional based on regimen type, so they cannot be expressed as a simple typed prior_lines check."
+    },
+    {
+      "id": "NCT06228326-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy >12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06228326-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have at least one measurable lung lesion per RECIST v1.1 at Screening",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06228326-priorlines",
+      "polarity": "inclusion",
+      "sourceText": "Subject has previously received no more than one line of prior immune checkpoint inhibitor (ICI) with or without platinum-based chemotherapy, or no more than two prior lines of therapy when given the ICI and platinum-based chemotherapy sequentially as two separate lines.",
+      "reasonFuzzy": "Prior-line rules vary by treatment modality combination and cannot be represented with a simple prior_lines_max check."
+    },
+    {
+      "id": "NCT06228326-stage",
+      "polarity": "inclusion",
+      "sourceText": "(1) Histologically or cytologically confirmed diagnosis of stage 3 or 4 NSCLC, as per American Joint Committee on Cancer (AJCC) staging system (8th edition)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06228326-brain",
+      "polarity": "exclusion",
+      "sourceText": "Subject has active brain metastases or leptomeningeal metastases",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIIA,IIIB,IIIC,IV,IVA,IVB"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 3,
+    "attempts": 2,
+    "ms": 14959
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 6959
+  },
+  "ms": 29907,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06228326",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06228326-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 years or older at the time of informed consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06228326-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06228326-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of stage 3 or 4 NSCLC, as per American Joint Committee on Cancer (AJCC) staging system (8th edition)",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06228326-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Subject has active brain metastases or leptomeningeal metastases",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06228326-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy >12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06228326-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have at least one measurable lung lesion per RECIST v1.1 at Screening",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06228326-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "Subject has previously received no more than one line of prior immune checkpoint inhibitor (ICI) with or without platinum-based chemotherapy, or no more than two prior lines of therapy when given the ICI and platinum-based chemotherapy sequentially as two separate lines.",
+        "reasonFuzzy": "Prior line limits are complex and conditional based on regimen type, so they cannot be expressed as a simple typed prior_lines check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06228326",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06228326-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 years or older at the time of informed consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06228326-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06228326-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "(1) Histologically or cytologically confirmed diagnosis of stage 3 or 4 NSCLC, as per American Joint Committee on Cancer (AJCC) staging system (8th edition)",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06228326-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Subject has active brain metastases or leptomeningeal metastases",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06228326-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy >12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06228326-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have at least one measurable lung lesion per RECIST v1.1 at Screening",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06228326-priorlines",
+        "polarity": "inclusion",
+        "sourceText": "Subject has previously received no more than one line of prior immune checkpoint inhibitor (ICI) with or without platinum-based chemotherapy, or no more than two prior lines of therapy when given the ICI and platinum-based chemotherapy sequentially as two separate lines.",
+        "reasonFuzzy": "Prior-line rules vary by treatment modality combination and cannot be represented with a simple prior_lines_max check."
+      }
+    ]
+  }
+}

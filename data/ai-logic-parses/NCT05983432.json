@@ -1,0 +1,399 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05983432",
+  "briefTitle": "Evaluate BL-B01D1 in Patients With Metastatic or Unresectable Non-Small Cell Lung Cancer (NSCLC) and Other Solid Tumors",
+  "parsedAt": "2026-11-12T06:21:25.791Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05983432-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age: ≥18 years",
+      "numberValue": 18,
+      "evidence_quote": "Age: ≥18 years",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05983432-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Has an Eastern Cooperative Oncology Group performance status (ECOG PS) 0 to 1",
+      "numberValue": 1,
+      "evidence_quote": "Has an Eastern Cooperative Oncology Group performance status (ECOG PS) 0 to 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05983432-life-expectancy",
+      "polarity": "inclusion",
+      "sourceText": "Has a life expectancy of ≥3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05983432-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has at least one measurable lesion based on RECIST V1.1 (with the exception of Prostate adenocarcinoma cohort, where subjects with bone metastasis are allowed)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05983432-prior-therapy-adc",
+      "polarity": "exclusion",
+      "sourceText": "Participants who have received prior therapy with any ADC targeting EGFR and/or HER3 or containing a topoisomerase 1 inhibitor payload (all dose expansion cohorts with exception of TNBC noted below).",
+      "reasonFuzzy": "The rule excludes multiple ADC classes and topoisomerase 1 inhibitors with specific cohort exceptions, which cannot be expressed as a single simple prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT05983432-life",
+      "polarity": "inclusion",
+      "sourceText": "Has a life expectancy of ≥3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05983432-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has at least one measurable lesion based on RECIST V1.1 (with the exception of Prostate adenocarcinoma cohort, where subjects with bone metastasis are allowed)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05983432-prior-lines-nsclc",
+      "polarity": "exclusion",
+      "sourceText": "Participants treated with more than two systemic chemotherapies prior to randomization.",
+      "reasonFuzzy": "Prior lines limits vary by specific cohort and treatment history details, making it complex for a single global typed prior_lines check."
+    },
+    {
+      "id": "NCT05983432-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥1.2×109 /L",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05983432-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count ≥100×109 /L",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05983432-hemoglobin",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin (Hb) ≥90 g/L",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05983432-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin（TBIL≤1.5 ULN",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05983432-ast",
+      "polarity": "inclusion",
+      "sourceText": "AST and ALT without liver metastasis ≤2.5 ULN, AST and ALT with liver metastasis ≤5.0 ULN",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05983432-alt",
+      "polarity": "inclusion",
+      "sourceText": "AST and ALT without liver metastasis ≤2.5 ULN, AST and ALT with liver metastasis ≤5.0 ULN",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05983432-egfr-min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine clearance ≥50 mL/min (According to the Cockcroft and Gault equation)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05983432-brain-mets",
+      "polarity": "exclusion",
+      "sourceText": "Participants with primary tumors in the central nervous system (CNS) and active or untreated CNS metastases and/or carcinomatous meningitis should be excluded. Participants with previously treated brain metastases may participate provided they are clinically stable for at least 4 weeks and have no evidence of new or enlarging brain metastases and no requirements for corticosteroids 14 days prior to dosing with the investigational product (IP). Participants on low dose corticosteroids (<20 mg prednisone or equivalent/day) may participate.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 10,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 10,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 10,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 8,
+      "rejectedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "value": "n:1.2"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "value": "n:100"
+        },
+        {
+          "kind": "hemoglobin_min",
+          "polarity": "inclusion",
+          "value": "n:90"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "value": "n:50"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 8
+    }
+  },
+  "runA": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3679
+  },
+  "runB": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3336
+  },
+  "ms": 15018,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05983432",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05983432-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age: ≥18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05983432-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has an Eastern Cooperative Oncology Group performance status (ECOG PS) 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05983432-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥1.2×109 /L",
+        "numberValue": 1.2
+      },
+      {
+        "id": "NCT05983432-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count ≥100×109 /L",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT05983432-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin (Hb) ≥90 g/L",
+        "numberValue": 90
+      },
+      {
+        "id": "NCT05983432-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin（TBIL≤1.5 ULN",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05983432-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT without liver metastasis ≤2.5 ULN, AST and ALT with liver metastasis ≤5.0 ULN",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "without liver metastasis ≤2.5 ULN, with liver metastasis ≤5.0 ULN"
+      },
+      {
+        "id": "NCT05983432-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT without liver metastasis ≤2.5 ULN, AST and ALT with liver metastasis ≤5.0 ULN",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT05983432-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine clearance ≥50 mL/min (According to the Cockcroft and Gault equation)",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT05983432-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participants with primary tumors in the central nervous system (CNS) and active or untreated CNS metastases and/or carcinomatous meningitis should be excluded. Participants with previously treated brain metastases may participate provided they are clinically stable for at least 4 weeks and have no evidence of new or enlarging brain metastases and no requirements for corticosteroids 14 days prior to dosing with the investigational product (IP). Participants on low dose corticosteroids (<20 mg prednisone or equivalent/day) may participate.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05983432-life-expectancy",
+        "polarity": "inclusion",
+        "sourceText": "Has a life expectancy of ≥3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05983432-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has at least one measurable lesion based on RECIST V1.1 (with the exception of Prostate adenocarcinoma cohort, where subjects with bone metastasis are allowed)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05983432-prior-therapy-adc",
+        "polarity": "exclusion",
+        "sourceText": "Participants who have received prior therapy with any ADC targeting EGFR and/or HER3 or containing a topoisomerase 1 inhibitor payload (all dose expansion cohorts with exception of TNBC noted below).",
+        "reasonFuzzy": "The rule excludes multiple ADC classes and topoisomerase 1 inhibitors with specific cohort exceptions, which cannot be expressed as a single simple prior_therapy_excluded check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05983432",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05983432-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age: ≥18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05983432-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has an Eastern Cooperative Oncology Group performance status (ECOG PS) 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05983432-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥1.2×109 /L",
+        "numberValue": 1.2
+      },
+      {
+        "id": "NCT05983432-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count ≥100×109 /L",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT05983432-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin (Hb) ≥90 g/L",
+        "numberValue": 90
+      },
+      {
+        "id": "NCT05983432-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin（TBIL≤1.5 ULN",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05983432-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT without liver metastasis ≤2.5 ULN, AST and ALT with liver metastasis ≤5.0 ULN",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "without liver metastasis ≤2.5 ULN, with liver metastasis ≤5.0 ULN"
+      },
+      {
+        "id": "NCT05983432-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT without liver metastasis ≤2.5 ULN, AST and ALT with liver metastasis ≤5.0 ULN",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT05983432-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine clearance ≥50 mL/min (According to the Cockcroft and Gault equation)",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT05983432-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participants with primary tumors in the central nervous system (CNS) and active or untreated CNS metastases and/or carcinomatous meningitis should be excluded. Participants with previously treated brain metastases may participate provided they are clinically stable for at least 4 weeks and have no evidence of new or enlarging brain metastases and no requirements for corticosteroids 14 days prior to dosing with the investigational product (IP).",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05983432-life",
+        "polarity": "inclusion",
+        "sourceText": "Has a life expectancy of ≥3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05983432-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has at least one measurable lesion based on RECIST V1.1 (with the exception of Prostate adenocarcinoma cohort, where subjects with bone metastasis are allowed)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05983432-prior-lines-nsclc",
+        "polarity": "exclusion",
+        "sourceText": "Participants treated with more than two systemic chemotherapies prior to randomization.",
+        "reasonFuzzy": "Prior lines limits vary by specific cohort and treatment history details, making it complex for a single global typed prior_lines check."
+      }
+    ]
+  }
+}

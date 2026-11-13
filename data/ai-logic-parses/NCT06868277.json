@@ -1,0 +1,394 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06868277",
+  "briefTitle": "A Global Phase III Study of Rilvegostomig or Pembrolizumab Monotherapy for First-Line Treatment of PD-L1-high Metastatic Non-small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:55:23.786Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06868277-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Stage IV mNSCLC (metastatic non-small cell lung cancer) (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Stage IV mNSCLC (metastatic non-small cell lung cancer) (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06868277-egfr",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements. Negative assay result is required for all non-squamous histology subtypes.",
+      "presence": "present",
+      "evidence_quote": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements. Negative assay result is required for all non-squamous histology subtypes.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06868277-alk",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements. Negative assay result is required for all non-squamous histology subtypes.",
+      "presence": "present",
+      "evidence_quote": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements. Negative assay result is required for all non-squamous histology subtypes.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06868277-ros1",
+      "kind": "ros1_status",
+      "polarity": "exclusion",
+      "sourceText": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements. Negative assay result is required for all non-squamous histology subtypes.",
+      "presence": "present",
+      "evidence_quote": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements. Negative assay result is required for all non-squamous histology subtypes.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06868277-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "WHO (World Health Organization)/ECOG (Eastern Cooperative Oncology Group) performance status of 0 or 1, with no deterioration over the previous 2 weeks prior to baseline at screening and prior to randomization.",
+      "numberValue": 1,
+      "evidence_quote": "WHO (World Health Organization)/ECOG (Eastern Cooperative Oncology Group) performance status of 0 or 1, with no deterioration over the previous 2 weeks prior to baseline at screening and prior to randomization.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06868277-pd1",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Any prior treatment with an anti-PD-1 (programmed cell death protein 1) or anti-PD-L1 (anti-programmed death-ligand 1) agent.",
+      "stringValue": "anti-PD-1 or anti-PD-L1 agent",
+      "evidence_quote": "Any prior treatment with an anti-PD-1 (programmed cell death protein 1) or anti-PD-L1 (anti-programmed death-ligand 1) agent.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06868277-life",
+      "polarity": "inclusion",
+      "sourceText": "Minimum life expectancy of 12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06868277-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Provision of acceptable tumor sample for the central testing prior to randomization.",
+      "reasonFuzzy": "Tissue provision requirement is not a typed check."
+    },
+    {
+      "id": "NCT06868277-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 (Response Evaluation Criteria in Solid Tumors, Version 1.1) TL (target lesion) at baseline and can be accurately measured at baseline as ≥ 10 mm in the longest diameter (except lymph nodes, which must have short axis ≥ 15 mm) with CT (computed tomography) or MRI (magnetic resonance imaging) and is suitable for accurate repeated measurements.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06868277-life",
+      "polarity": "inclusion",
+      "sourceText": "Minimum life expectancy of 12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06868277-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Provision of acceptable tumor sample for the central testing prior to randomization.",
+      "reasonFuzzy": "Willingness or provision of tumor sample for biopsy/testing is a procedural requirement, not a typed check."
+    },
+    {
+      "id": "NCT06868277-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 (Response Evaluation Criteria in Solid Tumors, Version 1.1) TL (target lesion) at baseline and can be accurately measured at baseline as ≥ 10 mm in the longest diameter (except lymph nodes, which must have short axis ≥ 15 mm) with CT (computed tomography) or MRI (magnetic resonance imaging) and is suitable for accurate repeated measurements.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06868277-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum age of 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06868277-brain",
+      "polarity": "inclusion",
+      "sourceText": "Brain metastases unless asymptomatic, stable, and not requiring steroids or anticonvulsants for at least 4 weeks prior to start of study intervention.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06868277-prior-adv",
+      "polarity": "exclusion",
+      "sourceText": "Any prior systemic therapy received for advanced or mNSCLC (metastatic non-small cell lung cancer).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06868277-tigit",
+      "polarity": "exclusion",
+      "sourceText": "Any prior exposure to an anti-TIGIT (T-cell immunoglobulin and immunoreceptor tyrosine-based inhibitory motif domain) therapy or any other anticancer therapy targeting immune-regulatory receptors or mechanisms.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 9,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 9,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum age of 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 9,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 6,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:systemic therapy for advanced or mnsclc"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-tigit therapy"
+        }
+      ],
+      "normalizerTypedCount": 7
+    }
+  },
+  "runA": {
+    "typedEmitted": 9,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3663
+  },
+  "runB": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3519
+  },
+  "ms": 15183,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06868277",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06868277-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage IV mNSCLC (metastatic non-small cell lung cancer) (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06868277-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements. Negative assay result is required for all non-squamous histology subtypes.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06868277-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements. Negative assay result is required for all non-squamous histology subtypes.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06868277-ros1",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements. Negative assay result is required for all non-squamous histology subtypes.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06868277-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "WHO (World Health Organization)/ECOG (Eastern Cooperative Oncology Group) performance status of 0 or 1, with no deterioration over the previous 2 weeks prior to baseline at screening and prior to randomization.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06868277-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Brain metastases unless asymptomatic, stable, and not requiring steroids or anticonvulsants for at least 4 weeks prior to start of study intervention.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06868277-prior-adv",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior systemic therapy received for advanced or mNSCLC (metastatic non-small cell lung cancer).",
+        "stringValue": "systemic therapy for advanced or mNSCLC"
+      },
+      {
+        "id": "NCT06868277-tigit",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior exposure to an anti-TIGIT (T-cell immunoglobulin and immunoreceptor tyrosine-based inhibitory motif domain) therapy or any other anticancer therapy targeting immune-regulatory receptors or mechanisms.",
+        "stringValue": "anti-TIGIT therapy"
+      },
+      {
+        "id": "NCT06868277-pd1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior treatment with an anti-PD-1 (programmed cell death protein 1) or anti-PD-L1 (anti-programmed death-ligand 1) agent.",
+        "stringValue": "anti-PD-1 or anti-PD-L1 agent"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06868277-life",
+        "polarity": "inclusion",
+        "sourceText": "Minimum life expectancy of 12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06868277-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Provision of acceptable tumor sample for the central testing prior to randomization.",
+        "reasonFuzzy": "Tissue provision requirement is not a typed check."
+      },
+      {
+        "id": "NCT06868277-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 (Response Evaluation Criteria in Solid Tumors, Version 1.1) TL (target lesion) at baseline and can be accurately measured at baseline as ≥ 10 mm in the longest diameter (except lymph nodes, which must have short axis ≥ 15 mm) with CT (computed tomography) or MRI (magnetic resonance imaging) and is suitable for accurate repeated measurements.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06868277",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06868277-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage IV mNSCLC (metastatic non-small cell lung cancer) (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06868277-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements. Negative assay result is required for all non-squamous histology subtypes.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06868277-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements. Negative assay result is required for all non-squamous histology subtypes.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06868277-ros1",
+        "kind": "ros1_status",
+        "polarity": "inclusion",
+        "sourceText": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements. Negative assay result is required for all non-squamous histology subtypes.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06868277-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "WHO (World Health Organization)/ECOG (Eastern Cooperative Oncology Group) performance status of 0 or 1, with no deterioration over the previous 2 weeks prior to baseline at screening and prior to randomization.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06868277-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum age of 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06868277-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Brain metastases unless asymptomatic, stable, and not requiring steroids or anticonvulsants for at least 4 weeks prior to start of study intervention.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06868277-prior-systemic",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior systemic therapy received for advanced or mNSCLC (metastatic non-small cell lung cancer).",
+        "stringValue": "systemic therapy"
+      },
+      {
+        "id": "NCT06868277-prior-tigit",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior exposure to an anti-TIGIT (T-cell immunoglobulin and immunoreceptor tyrosine-based inhibitory motif domain) therapy or any other anticancer therapy targeting immune-regulatory receptors or mechanisms.",
+        "stringValue": "anti-TIGIT"
+      },
+      {
+        "id": "NCT06868277-prior-pdl1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior treatment with an anti-PD-1 (programmed cell death protein 1) or anti-PD-L1 (anti-programmed death-ligand 1) agent.",
+        "stringValue": "anti-PD-1 or anti-PD-L1"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06868277-life",
+        "polarity": "inclusion",
+        "sourceText": "Minimum life expectancy of 12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06868277-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Provision of acceptable tumor sample for the central testing prior to randomization.",
+        "reasonFuzzy": "Willingness or provision of tumor sample for biopsy/testing is a procedural requirement, not a typed check."
+      },
+      {
+        "id": "NCT06868277-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 (Response Evaluation Criteria in Solid Tumors, Version 1.1) TL (target lesion) at baseline and can be accurately measured at baseline as ≥ 10 mm in the longest diameter (except lymph nodes, which must have short axis ≥ 15 mm) with CT (computed tomography) or MRI (magnetic resonance imaging) and is suitable for accurate repeated measurements.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      }
+    ]
+  }
+}

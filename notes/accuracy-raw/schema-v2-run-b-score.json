@@ -1,0 +1,1323 @@
+{
+  "summary": {
+    "ranAt": "2026-11-12T02:06:30.150Z",
+    "model": "gemini-3.5-flash-lite",
+    "promptVersion": "2",
+    "schemaLocked": true,
+    "responseMimeType": "application/json",
+    "runId": "b",
+    "dataTimestamp": "2026-11-10T10:00:05",
+    "schemaVersion": "1",
+    "hits": 17,
+    "total": 26,
+    "percent": 65.4,
+    "typedHits": 15,
+    "typedTotal": 24,
+    "fuzzyHits": 2,
+    "fuzzyTotal": 2,
+    "retries": {
+      "NCT01720836": 1,
+      "NCT03093116": 1,
+      "NCT03191149": 2,
+      "NCT03851445": 1,
+      "NCT04165070": 1,
+      "NCT04181060": 1,
+      "NCT04198766": 1,
+      "NCT04613596": 1,
+      "NCT06561386": 1
+    },
+    "rows": [
+      {
+        "id": "C01",
+        "nctId": "NCT03093116",
+        "kind": "age_min",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched"
+      },
+      {
+        "id": "C02",
+        "nctId": "NCT03093116",
+        "kind": "ecog_max",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched"
+      },
+      {
+        "id": "C03",
+        "nctId": "NCT04181060",
+        "kind": "ecog_max",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched"
+      },
+      {
+        "id": "C04",
+        "nctId": "NCT04181060",
+        "kind": "histology_in",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched"
+      },
+      {
+        "id": "C05",
+        "nctId": "NCT03191149",
+        "kind": "stage_in",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched"
+      },
+      {
+        "id": "C06",
+        "nctId": "NCT03851445",
+        "kind": "stage_in",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched"
+      },
+      {
+        "id": "C07",
+        "nctId": "NCT04181060",
+        "kind": "egfr_variant_in",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: histology_in/inclusion, stage_in/inclusion, egfr_status/inclusion, prior_therapy_excluded/exclusion, age_min/inclusion, ecog_max/inclusion, anc_min/inclusion, platelets_min/inclusion, hemoglobin_min/inclusion, bilirubin_max/inclusion, creatinine_max/inclusion, ast_max/inclusion, alt_max/inclusion, brain_mets/inclusion)"
+      },
+      {
+        "id": "C08",
+        "nctId": "NCT03191149",
+        "kind": "egfr_variant_in",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched"
+      },
+      {
+        "id": "C09",
+        "nctId": "NCT04198766",
+        "kind": "egfr_status",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched"
+      },
+      {
+        "id": "C10",
+        "nctId": "NCT04198766",
+        "kind": "alk_status",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched"
+      },
+      {
+        "id": "C11",
+        "nctId": "NCT03851445",
+        "kind": "egfr_status",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, age_min/inclusion)"
+      },
+      {
+        "id": "C12",
+        "nctId": "NCT03851445",
+        "kind": "alk_status",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, age_min/inclusion)"
+      },
+      {
+        "id": "C13",
+        "nctId": "NCT04613596",
+        "kind": "kras_variant_in",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched"
+      },
+      {
+        "id": "C14",
+        "nctId": "NCT03093116",
+        "kind": "alk_status",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched"
+      },
+      {
+        "id": "C15",
+        "nctId": "NCT04181060",
+        "kind": "prior_lines_max",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: histology_in/inclusion, stage_in/inclusion, egfr_status/inclusion, prior_therapy_excluded/exclusion, age_min/inclusion, ecog_max/inclusion, anc_min/inclusion, platelets_min/inclusion, hemoglobin_min/inclusion, bilirubin_max/inclusion, creatinine_max/inclusion, ast_max/inclusion, alt_max/inclusion, brain_mets/inclusion)"
+      },
+      {
+        "id": "C16",
+        "nctId": "NCT04181060",
+        "kind": "prior_therapy_excluded",
+        "verdict": "miss",
+        "detail": "kind and polarity matched, value did not (emitted {\"stringValue\":\"anti-VEGF agent\"})"
+      },
+      {
+        "id": "C17",
+        "nctId": "NCT03851445",
+        "kind": "prior_lines_min",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, age_min/inclusion)"
+      },
+      {
+        "id": "C18",
+        "nctId": "NCT04165070",
+        "kind": "brain_mets",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched"
+      },
+      {
+        "id": "C19",
+        "nctId": "NCT06561386",
+        "kind": "brain_mets",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, histology_in/inclusion, pdl1_min/inclusion, ecog_max/inclusion, egfr_status/exclusion, alk_status/exclusion, ros1_status/exclusion, braf_status/exclusion, brain_mets/exclusion, prior_therapy_excluded/exclusion, prior_therapy_excluded/exclusion, prior_therapy_excluded/exclusion, prior_therapy_excluded/exclusion)"
+      },
+      {
+        "id": "C20",
+        "nctId": "NCT01720836",
+        "kind": "egfr_min",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, age_min/inclusion, ecog_max/inclusion, anc_min/inclusion, hemoglobin_min/inclusion, platelets_min/inclusion, bilirubin_max/inclusion, prior_therapy_excluded/exclusion)"
+      },
+      {
+        "id": "C21",
+        "nctId": "NCT03093116",
+        "kind": "egfr_min",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, age_min/inclusion, brain_mets/inclusion, anc_min/inclusion, platelets_min/inclusion, hemoglobin_min/inclusion, bilirubin_max/inclusion, brain_mets/exclusion, age_min/inclusion)"
+      },
+      {
+        "id": "C22",
+        "nctId": "NCT03093116",
+        "kind": "hemoglobin_min",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched"
+      },
+      {
+        "id": "C23",
+        "nctId": "NCT01720836",
+        "kind": "platelets_min",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched"
+      },
+      {
+        "id": "C24",
+        "nctId": "NCT01720836",
+        "kind": "anc_min",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched"
+      },
+      {
+        "id": "C25",
+        "nctId": "NCT04181060",
+        "kind": "fuzzy",
+        "verdict": "hit",
+        "detail": "left fuzzy"
+      },
+      {
+        "id": "C26",
+        "nctId": "NCT06561386",
+        "kind": "fuzzy",
+        "verdict": "hit",
+        "detail": "left fuzzy"
+      }
+    ]
+  },
+  "parses": {
+    "NCT01720836": {
+      "ok": true,
+      "parsed": {
+        "schemaVersion": "1",
+        "nctId": "NCT01720836",
+        "parserModel": "gemini-3.5-flash-lite",
+        "promptVersion": "2",
+        "typedChecks": [
+          {
+            "id": "NCT01720836-stage",
+            "kind": "stage_in",
+            "polarity": "inclusion",
+            "sourceText": "All subjects must have one of the following stages: Stage IA(T1NO); IB (T2NO), II \\& IIIA (N2 negative); IIIA (N2+), IIIB (N3+)",
+            "stages": [
+              "IA",
+              "IB",
+              "IIA",
+              "IIB",
+              "IIIA",
+              "IIIB"
+            ]
+          },
+          {
+            "id": "NCT01720836-age",
+            "kind": "age_min",
+            "polarity": "inclusion",
+            "sourceText": "Women and men at least 18 years of age",
+            "numberValue": 18
+          },
+          {
+            "id": "NCT01720836-ecog",
+            "kind": "ecog_max",
+            "polarity": "inclusion",
+            "sourceText": "ECOG performance status 0-1(Appendix A)",
+            "numberValue": 1
+          },
+          {
+            "id": "NCT01720836-anc",
+            "kind": "anc_min",
+            "polarity": "inclusion",
+            "sourceText": "Absolute Neutrophils > 1,500/µL",
+            "numberValue": 1500
+          },
+          {
+            "id": "NCT01720836-hemoglobin",
+            "kind": "hemoglobin_min",
+            "polarity": "inclusion",
+            "sourceText": "Hemoglobin > 10 g/dL",
+            "numberValue": 10
+          },
+          {
+            "id": "NCT01720836-platelets",
+            "kind": "platelets_min",
+            "polarity": "inclusion",
+            "sourceText": "Platelets > 100,000/µL",
+            "numberValue": 100000
+          },
+          {
+            "id": "NCT01720836-bilirubin",
+            "kind": "bilirubin_max",
+            "polarity": "inclusion",
+            "sourceText": "Total Bilirubin within normal institutional limits",
+            "numberValue": 0
+          },
+          {
+            "id": "NCT01720836-vaccine",
+            "kind": "prior_therapy_excluded",
+            "polarity": "exclusion",
+            "sourceText": "No prior vaccine therapy",
+            "stringValue": "vaccine therapy"
+          }
+        ],
+        "fuzzyCriteria": [
+          {
+            "id": "NCT01720836-stable",
+            "polarity": "inclusion",
+            "sourceText": "Patients must have stable disease at the time of enrollment",
+            "reasonFuzzy": "Stable disease is a disease status assessment, not a typed check."
+          },
+          {
+            "id": "NCT01720836-washout",
+            "polarity": "inclusion",
+            "sourceText": "Subjects must be within 4 to 24 weeks of standard of care treatment for their particular stage of disease",
+            "reasonFuzzy": "Treatment timing and washout windows are complex clinical criteria."
+          },
+          {
+            "id": "NCT01720836-creatinine",
+            "polarity": "inclusion",
+            "sourceText": "Creatinine within normal institutional limits OR Creatinine clearance > 60 mL/min/1.73 m2 for subjects with above normal AST and ALT with alkaline phosphatase within < 1.5 times upper limit of normal",
+            "reasonFuzzy": "Conditional creatinine criteria and alternative clearance thresholds with dependent LFTs cannot be expressed as a simple creatinine cutoff."
+          },
+          {
+            "id": "NCT01720836-malignancy",
+            "polarity": "exclusion",
+            "sourceText": "No history of prior malignancy, except for non-melanoma skin cancer",
+            "reasonFuzzy": "Prior malignancy history with an exception is not a simple typed prior therapy check."
+          },
+          {
+            "id": "NCT01720836-ana",
+            "polarity": "exclusion",
+            "sourceText": "Any positive ANA titer above 1:160, even in an asymptomatic individual. Note: Weakly positive ANA defined as ANA titers up to 1:160 maximum (<= 1:160) will be acceptable in an asymptomatic individual who is otherwise eligible for the study.",
+            "reasonFuzzy": "ANA titer threshold with conditional exceptions is not a standard typed lab check."
+          },
+          {
+            "id": "NCT01720836-steroids",
+            "polarity": "exclusion",
+            "sourceText": "Patients may not be receiving any steroids or other anti-immune therapy at the time of registration.",
+            "reasonFuzzy": "Exclusion of steroids and anti-immune therapy is a concomitant medication rule."
+          }
+        ]
+      },
+      "raw": "{\n  \"schemaVersion\": \"1\",\n  \"nctId\": \"NCT01720836\",\n  \"parserModel\": \"gemini-3.5-flash-lite\",\n  \"promptVersion\": \"2\",\n  \"typedChecks\": [\n    {\n      \"id\": \"NCT01720836-stage\",\n      \"kind\": \"stage_in\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"All subjects must have one of the following stages: Stage IA(T1NO); IB (T2NO), II \\\\& IIIA (N2 negative); IIIA (N2+), IIIB (N3+)\",\n      \"stages\": [\n        \"IA\",\n        \"IB\",\n        \"IIA\",\n        \"IIB\",\n        \"IIIA\",\n        \"IIIB\"\n      ]\n    },\n    {\n      \"id\": \"NCT01720836-age\",\n      \"kind\": \"age_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Women and men at least 18 years of age\",\n      \"numberValue\": 18\n    },\n    {\n      \"id\": \"NCT01720836-ecog\",\n      \"kind\": \"ecog_max\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"ECOG performance status 0-1(Appendix A)\",\n      \"numberValue\": 1\n    },\n    {\n      \"id\": \"NCT01720836-anc\",\n      \"kind\": \"anc_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Absolute Neutrophils > 1,500/µL\",\n      \"numberValue\": 1500\n    },\n    {\n      \"id\": \"NCT01720836-hemoglobin\",\n      \"kind\": \"hemoglobin_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Hemoglobin > 10 g/dL\",\n      \"numberValue\": 10\n    },\n    {\n      \"id\": \"NCT01720836-platelets\",\n      \"kind\": \"platelets_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Platelets > 100,000/µL\",\n      \"numberValue\": 100000\n    },\n    {\n      \"id\": \"NCT01720836-bilirubin\",\n      \"kind\": \"bilirubin_max\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Total Bilirubin within normal institutional limits\",\n      \"numberValue\": 0\n    },\n    {\n      \"id\": \"NCT01720836-vaccine\",\n      \"kind\": \"prior_therapy_excluded\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"No prior vaccine therapy\",\n      \"stringValue\": \"vaccine therapy\"\n    }\n  ],\n  \"fuzzyCriteria\": [\n    {\n      \"id\": \"NCT01720836-stable\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Patients must have stable disease at the time of enrollment\",\n      \"reasonFuzzy\": \"Stable disease is a disease status assessment, not a typed check.\"\n    },\n    {\n      \"id\": \"NCT01720836-washout\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Subjects must be within 4 to 24 weeks of standard of care treatment for their particular stage of disease\",\n      \"reasonFuzzy\": \"Treatment timing and washout windows are complex clinical criteria.\"\n    },\n    {\n      \"id\": \"NCT01720836-creatinine\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Creatinine within normal institutional limits OR Creatinine clearance > 60 mL/min/1.73 m2 for subjects with above normal AST and ALT with alkaline phosphatase within < 1.5 times upper limit of normal\",\n      \"reasonFuzzy\": \"Conditional creatinine criteria and alternative clearance thresholds with dependent LFTs cannot be expressed as a simple creatinine cutoff.\"\n    },\n    {\n      \"id\": \"NCT01720836-malignancy\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"No history of prior malignancy, except for non-melanoma skin cancer\",\n      \"reasonFuzzy\": \"Prior malignancy history with an exception is not a simple typed prior therapy check.\"\n    },\n    {\n      \"id\": \"NCT01720836-ana\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Any positive ANA titer above 1:160, even in an asymptomatic individual. Note: Weakly positive ANA defined as ANA titers up to 1:160 maximum (<= 1:160) will be acceptable in an asymptomatic individual who is otherwise eligible for the study.\",\n      \"reasonFuzzy\": \"ANA titer threshold with conditional exceptions is not a standard typed lab check.\"\n    },\n    {\n      \"id\": \"NCT01720836-steroids\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Patients may not be receiving any steroids or other anti-immune therapy at the time of registration.\",\n      \"reasonFuzzy\": \"Exclusion of steroids and anti-immune therapy is a concomitant medication rule.\"\n    }\n  ]\n}",
+      "attempts": 1,
+      "ms": 3844,
+      "invalidKind": []
+    },
+    "NCT03093116": {
+      "ok": true,
+      "parsed": {
+        "schemaVersion": "1",
+        "nctId": "NCT03093116",
+        "parserModel": "gemini-3.5-flash-lite",
+        "promptVersion": "2",
+        "typedChecks": [
+          {
+            "id": "NCT03093116-stage",
+            "kind": "stage_in",
+            "polarity": "inclusion",
+            "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) (Stage IV, American Joint Committee on Cancer v.7)",
+            "stages": [
+              "IV",
+              "IVA",
+              "IVB"
+            ]
+          },
+          {
+            "id": "NCT03093116-alk",
+            "kind": "alk_status",
+            "polarity": "inclusion",
+            "sourceText": "harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement",
+            "presence": "present"
+          },
+          {
+            "id": "NCT03093116-ros1",
+            "kind": "ros1_status",
+            "polarity": "inclusion",
+            "sourceText": "harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement",
+            "presence": "present"
+          },
+          {
+            "id": "NCT03093116-ecog",
+            "kind": "ecog_max",
+            "polarity": "inclusion",
+            "sourceText": "ECOG PS 0-1.",
+            "numberValue": 1
+          },
+          {
+            "id": "NCT03093116-age1",
+            "kind": "age_min",
+            "polarity": "inclusion",
+            "sourceText": "Age ≥18 (or age ≥ 20 of age as required by local regulation).",
+            "numberValue": 18
+          },
+          {
+            "id": "NCT03093116-brain1",
+            "kind": "brain_mets",
+            "polarity": "inclusion",
+            "sourceText": "Patients with asymptomatic CNS metastases (treated or untreated) and/or asymptomatic leptomeningeal carcinomatosis are eligible to enroll if they satisfy the protocol specified criteria.",
+            "allowedBrainMets": [
+              "treated_stable",
+              "untreated"
+            ]
+          },
+          {
+            "id": "NCT03093116-anc",
+            "kind": "anc_min",
+            "polarity": "inclusion",
+            "sourceText": "Absolute neutrophils count (ANC) ≥1500/mm3 (1.5 × 109/L);",
+            "numberValue": 1500
+          },
+          {
+            "id": "NCT03093116-platelets",
+            "kind": "platelets_min",
+            "polarity": "inclusion",
+            "sourceText": "Platelets (PLTs) ≥100,000/mm3 (100 × 109/L);",
+            "numberValue": 100000
+          },
+          {
+            "id": "NCT03093116-hemoglobin",
+            "kind": "hemoglobin_min",
+            "polarity": "inclusion",
+            "sourceText": "Hemoglobin ≥ 9.0 g/dL transfusions are allowed;",
+            "numberValue": 9
+          },
+          {
+            "id": "NCT03093116-bilirubin",
+            "kind": "bilirubin_max",
+            "polarity": "inclusion",
+            "sourceText": "Total serum bilirubin < 1.5 × ULN;",
+            "numberValue": 1.5
+          },
+          {
+            "id": "NCT03093116-brain2",
+            "kind": "brain_mets",
+            "polarity": "exclusion",
+            "sourceText": "Symptomatic brain metastases or leptomeningeal involvement.",
+            "allowedBrainMets": [
+              "none",
+              "treated_stable"
+            ]
+          },
+          {
+            "id": "NCT03093116-age2",
+            "kind": "age_min",
+            "polarity": "inclusion",
+            "sourceText": "Age ≥12 (or age ≥ 20 as required by local regulation).",
+            "numberValue": 12
+          }
+        ],
+        "fuzzyCriteria": [
+          {
+            "id": "NCT03093116-swallow",
+            "polarity": "inclusion",
+            "sourceText": "Capability to swallow capsules intact (without chewing, crushing, or opening).",
+            "reasonFuzzy": "Ability to swallow capsules is a subjective physical capability, not a typed check."
+          },
+          {
+            "id": "NCT03093116-measurable",
+            "polarity": "inclusion",
+            "sourceText": "At least 1 measurable target lesion according to RECIST version 1.1. CNS-only measurable disease as defined by RECIST version 1.1 is allowed.",
+            "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+          },
+          {
+            "id": "NCT03093116-resolution",
+            "polarity": "inclusion",
+            "sourceText": "Resolution of all acute toxic effects (excluding alopecia) of any prior anti-cancer therapy to National Cancer Institute Common Terminology Criteria for Adverse Events (NCI CTCAE) Version 4.03 Grade less than or equal to 1.",
+            "reasonFuzzy": "Resolution of all prior toxicities is a clinical judgment, not a specific lab cutoff or typed check."
+          },
+          {
+            "id": "NCT03093116-creatinine",
+            "polarity": "inclusion",
+            "sourceText": "Serum creatinine or creatinine clearance Within normal limits or > 40 mL/min;",
+            "reasonFuzzy": "Compound condition between serum creatinine and creatinine clearance with alternative thresholds."
+          },
+          {
+            "id": "NCT03093116-ast",
+            "polarity": "inclusion",
+            "sourceText": "Liver transaminases (ASTs/ALTs) < 2.5 × ULN; < 5 × ULN if liver metastases are present",
+            "reasonFuzzy": "Conditional threshold based on the presence of liver metastases."
+          },
+          {
+            "id": "NCT03093116-life",
+            "polarity": "inclusion",
+            "sourceText": "Life expectancy ≥ 3 months.",
+            "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+          },
+          {
+            "id": "NCT03093116-consent",
+            "polarity": "inclusion",
+            "sourceText": "Willing and able to provide written institutional review board (IRB)/institutional ethics committee-approved Informed Consent or an Assent signed by a parent or legal guardian for subjects age 12 to 17.",
+            "reasonFuzzy": "Informed consent willingness is a subjective administrative requirement."
+          },
+          {
+            "id": "NCT03093116-prior-cancer",
+            "polarity": "exclusion",
+            "sourceText": "History of previous cancer, except for squamous cell or basal-cell carcinoma of the skin, or any in situ carcinoma that has been completely resected, requiring therapy within the previous 2 years.",
+            "reasonFuzzy": "Complex prior malignancy exclusion with multiple histological and timing exceptions."
+          },
+          {
+            "id": "NCT03093116-surgery",
+            "polarity": "exclusion",
+            "sourceText": "Major surgery within 4 weeks of start of repotrectinib treatment. Radiation therapy (except palliative to relieve bone pain) within 2 weeks of study entry. Palliative radiation (≤10 fractions) must have been completed at least 48 hours prior to study entry",
+            "reasonFuzzy": "Washout windows for major surgery and radiation therapy with specific exceptions."
+          },
+          {
+            "id": "NCT03093116-cardiac",
+            "polarity": "exclusion",
+            "sourceText": "Clinically significant cardiovascular disease (either active or within 6 months prior to enrollment): myocardial infarction, unstable angina, coronary/peripheral artery bypass graft, symptomatic congestive heart failure (New York Heart Association Classification Class ≥ II), cerebrovascular accident or transient ischemic attack, symptomatic bradycardia, requirement for anti-arrhythmic medication. Ongoing cardiac dysrhythmias of NCI CTCAE grade ≥2",
+            "reasonFuzzy": "Multi-item clinical cardiovascular disease history and symptom exclusions."
+          },
+          {
+            "id": "NCT03093116-qtc",
+            "polarity": "exclusion",
+            "sourceText": "Mean resting corrected QT interval (ECG interval measured from the onset of the QRS complex to the end of the T wave) for heart rate (QTcF) > 470 msec obtained from 3 ECGs, using the screening clinic ECG machine-derived QTc value Any clinically important abnormalities in rhythm, conduction or morphology of resting ECG (e.g., complete left bundle branch block, third degree heart block, second degree heart block, PR interval > 250 msec) Any factors that increase the risk of QTc prolongation or risk of arrhythmic events such as heart failure, hypokalemia, congenital long QT syndrome, family history of long QT syndrome, or any concomitant medication known to prolong the QT interval.",
+            "reasonFuzzy": "Complex ECG findings, QTc interval values, and arrhythmia risk factor exclusions."
+          },
+          {
+            "id": "NCT03093116-gi",
+            "polarity": "exclusion",
+            "sourceText": "Gastrointestinal disease (e.g., Crohn's disease, ulcerative colitis, or short gut syndrome) or other malabsorption syndromes that would impact drug absorption.",
+            "reasonFuzzy": "Specific GI disease exclusions impacting drug absorption."
+          },
+          {
+            "id": "NCT03093116-neuropathy",
+            "polarity": "exclusion",
+            "sourceText": "Peripheral neuropathy of CTCAE ≥grade 2.",
+            "reasonFuzzy": "Peripheral neuropathy grade cutoff is not mapped to a specific allowed typed kind in the instructions."
+          },
+          {
+            "id": "NCT03093116-fibrosis",
+            "polarity": "exclusion",
+            "sourceText": "History of extensive, disseminated, bilateral, or presence of CTCAE grade 3 or 4 interstitial fibrosis or interstitial lung disease including a history of pneumonitis, hypersensitivity pneumonitis, interstitial pneumonia, interstitial lung disease, obliterative bronchiolitis, and pulmonary fibrosis. Subjects with history of prior radiation pneumonitis are not excluded.",
+            "reasonFuzzy": "Complex interstitial lung disease history and exception criteria."
+          }
+        ]
+      },
+      "raw": "{\n  \"schemaVersion\": \"1\",\n  \"nctId\": \"NCT03093116\",\n  \"parserModel\": \"gemini-3.5-flash-lite\",\n  \"promptVersion\": \"2\",\n  \"typedChecks\": [\n    {\n      \"id\": \"NCT03093116-stage\",\n      \"kind\": \"stage_in\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) (Stage IV, American Joint Committee on Cancer v.7)\",\n      \"stages\": [\n        \"IV\",\n        \"IVA\",\n        \"IVB\"\n      ]\n    },\n    {\n      \"id\": \"NCT03093116-alk\",\n      \"kind\": \"alk_status\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement\",\n      \"presence\": \"present\"\n    },\n    {\n      \"id\": \"NCT03093116-ros1\",\n      \"kind\": \"ros1_status\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement\",\n      \"presence\": \"present\"\n    },\n    {\n      \"id\": \"NCT03093116-ecog\",\n      \"kind\": \"ecog_max\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"ECOG PS 0-1.\",\n      \"numberValue\": 1\n    },\n    {\n      \"id\": \"NCT03093116-age1\",\n      \"kind\": \"age_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Age ≥18 (or age ≥ 20 of age as required by local regulation).\",\n      \"numberValue\": 18\n    },\n    {\n      \"id\": \"NCT03093116-brain1\",\n      \"kind\": \"brain_mets\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Patients with asymptomatic CNS metastases (treated or untreated) and/or asymptomatic leptomeningeal carcinomatosis are eligible to enroll if they satisfy the protocol specified criteria.\",\n      \"allowedBrainMets\": [\n        \"treated_stable\",\n        \"untreated\"\n      ]\n    },\n    {\n      \"id\": \"NCT03093116-anc\",\n      \"kind\": \"anc_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Absolute neutrophils count (ANC) ≥1500/mm3 (1.5 × 109/L);\",\n      \"numberValue\": 1500\n    },\n    {\n      \"id\": \"NCT03093116-platelets\",\n      \"kind\": \"platelets_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Platelets (PLTs) ≥100,000/mm3 (100 × 109/L);\",\n      \"numberValue\": 100000\n    },\n    {\n      \"id\": \"NCT03093116-hemoglobin\",\n      \"kind\": \"hemoglobin_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Hemoglobin ≥ 9.0 g/dL transfusions are allowed;\",\n      \"numberValue\": 9.0\n    },\n    {\n      \"id\": \"NCT03093116-bilirubin\",\n      \"kind\": \"bilirubin_max\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Total serum bilirubin < 1.5 × ULN;\",\n      \"numberValue\": 1.5\n    },\n    {\n      \"id\": \"NCT03093116-brain2\",\n      \"kind\": \"brain_mets\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Symptomatic brain metastases or leptomeningeal involvement.\",\n      \"allowedBrainMets\": [\n        \"none\",\n        \"treated_stable\"\n      ]\n    },\n    {\n      \"id\": \"NCT03093116-age2\",\n      \"kind\": \"age_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Age ≥12 (or age ≥ 20 as required by local regulation).\",\n      \"numberValue\": 12\n    }\n  ],\n  \"fuzzyCriteria\": [\n    {\n      \"id\": \"NCT03093116-swallow\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Capability to swallow capsules intact (without chewing, crushing, or opening).\",\n      \"reasonFuzzy\": \"Ability to swallow capsules is a subjective physical capability, not a typed check.\"\n    },\n    {\n      \"id\": \"NCT03093116-measurable\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"At least 1 measurable target lesion according to RECIST version 1.1. CNS-only measurable disease as defined by RECIST version 1.1 is allowed.\",\n      \"reasonFuzzy\": \"Measurable disease by RECIST is a subjective imaging judgment, not a typed kind.\"\n    },\n    {\n      \"id\": \"NCT03093116-resolution\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Resolution of all acute toxic effects (excluding alopecia) of any prior anti-cancer therapy to National Cancer Institute Common Terminology Criteria for Adverse Events (NCI CTCAE) Version 4.03 Grade less than or equal to 1.\",\n      \"reasonFuzzy\": \"Resolution of all prior toxicities is a clinical judgment, not a specific lab cutoff or typed check.\"\n    },\n    {\n      \"id\": \"NCT03093116-creatinine\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Serum creatinine or creatinine clearance Within normal limits or > 40 mL/min;\",\n      \"reasonFuzzy\": \"Compound condition between serum creatinine and creatinine clearance with alternative thresholds.\"\n    },\n    {\n      \"id\": \"NCT03093116-ast\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Liver transaminases (ASTs/ALTs) < 2.5 × ULN; < 5 × ULN if liver metastases are present\",\n      \"reasonFuzzy\": \"Conditional threshold based on the presence of liver metastases.\"\n    },\n    {\n      \"id\": \"NCT03093116-life\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Life expectancy ≥ 3 months.\",\n      \"reasonFuzzy\": \"Life expectancy is a subjective clinical judgment.\"\n    },\n    {\n      \"id\": \"NCT03093116-consent\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Willing and able to provide written institutional review board (IRB)/institutional ethics committee-approved Informed Consent or an Assent signed by a parent or legal guardian for subjects age 12 to 17.\",\n      \"reasonFuzzy\": \"Informed consent willingness is a subjective administrative requirement.\"\n    },\n    {\n      \"id\": \"NCT03093116-prior-cancer\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"History of previous cancer, except for squamous cell or basal-cell carcinoma of the skin, or any in situ carcinoma that has been completely resected, requiring therapy within the previous 2 years.\",\n      \"reasonFuzzy\": \"Complex prior malignancy exclusion with multiple histological and timing exceptions.\"\n    },\n    {\n      \"id\": \"NCT03093116-surgery\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Major surgery within 4 weeks of start of repotrectinib treatment. Radiation therapy (except palliative to relieve bone pain) within 2 weeks of study entry. Palliative radiation (≤10 fractions) must have been completed at least 48 hours prior to study entry\",\n      \"reasonFuzzy\": \"Washout windows for major surgery and radiation therapy with specific exceptions.\"\n    },\n    {\n      \"id\": \"NCT03093116-cardiac\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Clinically significant cardiovascular disease (either active or within 6 months prior to enrollment): myocardial infarction, unstable angina, coronary/peripheral artery bypass graft, symptomatic congestive heart failure (New York Heart Association Classification Class ≥ II), cerebrovascular accident or transient ischemic attack, symptomatic bradycardia, requirement for anti-arrhythmic medication. Ongoing cardiac dysrhythmias of NCI CTCAE grade ≥2\",\n      \"reasonFuzzy\": \"Multi-item clinical cardiovascular disease history and symptom exclusions.\"\n    },\n    {\n      \"id\": \"NCT03093116-qtc\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Mean resting corrected QT interval (ECG interval measured from the onset of the QRS complex to the end of the T wave) for heart rate (QTcF) > 470 msec obtained from 3 ECGs, using the screening clinic ECG machine-derived QTc value Any clinically important abnormalities in rhythm, conduction or morphology of resting ECG (e.g., complete left bundle branch block, third degree heart block, second degree heart block, PR interval > 250 msec) Any factors that increase the risk of QTc prolongation or risk of arrhythmic events such as heart failure, hypokalemia, congenital long QT syndrome, family history of long QT syndrome, or any concomitant medication known to prolong the QT interval.\",\n      \"reasonFuzzy\": \"Complex ECG findings, QTc interval values, and arrhythmia risk factor exclusions.\"\n    },\n    {\n      \"id\": \"NCT03093116-gi\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Gastrointestinal disease (e.g., Crohn's disease, ulcerative colitis, or short gut syndrome) or other malabsorption syndromes that would impact drug absorption.\",\n      \"reasonFuzzy\": \"Specific GI disease exclusions impacting drug absorption.\"\n    },\n    {\n      \"id\": \"NCT03093116-neuropathy\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Peripheral neuropathy of CTCAE ≥grade 2.\",\n      \"reasonFuzzy\": \"Peripheral neuropathy grade cutoff is not mapped to a specific allowed typed kind in the instructions.\"\n    },\n    {\n      \"id\": \"NCT03093116-fibrosis\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"History of extensive, disseminated, bilateral, or presence of CTCAE grade 3 or 4 interstitial fibrosis or interstitial lung disease including a history of pneumonitis, hypersensitivity pneumonitis, interstitial pneumonia, interstitial lung disease, obliterative bronchiolitis, and pulmonary fibrosis. Subjects with history of prior radiation pneumonitis are not excluded.\",\n      \"reasonFuzzy\": \"Complex interstitial lung disease history and exception criteria.\"\n    }\n  ]\n}",
+      "attempts": 1,
+      "ms": 6852,
+      "invalidKind": []
+    },
+    "NCT03191149": {
+      "ok": true,
+      "parsed": {
+        "schemaVersion": "1",
+        "nctId": "NCT03191149",
+        "parserModel": "gemini-3.5-flash-lite",
+        "promptVersion": "2",
+        "typedChecks": [
+          {
+            "id": "NCT03191149-stage",
+            "kind": "stage_in",
+            "polarity": "inclusion",
+            "sourceText": "Participants must have advanced disease - either stage IV disease, stage IIIB disease not amenable to definitive multi-modality therapy, or recurrent disease after a prior diagnosis of stage I-III disease. All staging is via the American Joint Committee on Cancer (AJCC)/International Association for the Study of Lung Cancer (IASLC) 7th edition staging criteria",
+            "stages": [
+              "IIIB",
+              "IIIC",
+              "IV",
+              "IVA",
+              "IVB"
+            ]
+          },
+          {
+            "id": "NCT03191149-egfr-variant",
+            "kind": "egfr_variant_in",
+            "polarity": "inclusion",
+            "sourceText": "An EGFR exon 20 insertion mutation must be detected in the tumor tissue.",
+            "stringValue": "exon 20 insertion"
+          },
+          {
+            "id": "NCT03191149-prior-therapy-osimertinib",
+            "kind": "prior_therapy_excluded",
+            "polarity": "exclusion",
+            "sourceText": "Participants must not have previously received osimertinib",
+            "stringValue": "osimertinib"
+          },
+          {
+            "id": "NCT03191149-age",
+            "kind": "age_min",
+            "polarity": "inclusion",
+            "sourceText": "Age >= 18 years",
+            "numberValue": 18
+          },
+          {
+            "id": "NCT03191149-ecog",
+            "kind": "ecog_max",
+            "polarity": "inclusion",
+            "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status =< 1",
+            "numberValue": 1
+          },
+          {
+            "id": "NCT03191149-hemoglobin",
+            "kind": "hemoglobin_min",
+            "polarity": "inclusion",
+            "sourceText": "Hemoglobin >= 9.0 g/L (within 4 weeks before registration)",
+            "numberValue": 9
+          },
+          {
+            "id": "NCT03191149-anc",
+            "kind": "anc_min",
+            "polarity": "inclusion",
+            "sourceText": "Absolute neutrophil count >= 1,500/mcL (within 4 weeks before registration)",
+            "numberValue": 1500
+          },
+          {
+            "id": "NCT03191149-platelets",
+            "kind": "platelets_min",
+            "polarity": "inclusion",
+            "sourceText": "Platelets >= 100,000/mcL (within 4 weeks before registration)",
+            "numberValue": 100000
+          },
+          {
+            "id": "NCT03191149-bilirubin",
+            "kind": "bilirubin_max",
+            "polarity": "inclusion",
+            "sourceText": "Total bilirubin =< 1.5 x upper limit of normal (ULN) if no liver metastases or =< 3 times ULN in the presence of documented Gilbert's syndrome (unconjugated hyperbilirubinemia) or liver metastases (within 4 weeks before registration)",
+            "numberValue": 1.5
+          },
+          {
+            "id": "NCT03191149-ast",
+            "kind": "ast_max",
+            "polarity": "inclusion",
+            "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 x institutional upper limit of normal; for patients with known hepatic metastases AST and/or ALT =< 5 x ULN (within 4 weeks before registration)",
+            "numberValue": 3
+          },
+          {
+            "id": "NCT03191149-alt",
+            "kind": "alt_max",
+            "polarity": "inclusion",
+            "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 x institutional upper limit of normal; for patients with known hepatic metastases AST and/or ALT =< 5 x ULN (within 4 weeks before registration)",
+            "numberValue": 3
+          },
+          {
+            "id": "NCT03191149-creatinine",
+            "kind": "creatinine_max",
+            "polarity": "inclusion",
+            "sourceText": "Creatinine =< 1.5 x institutional upper limit of normal (within 4 weeks before registration)",
+            "numberValue": 1.5
+          }
+        ],
+        "fuzzyCriteria": [
+          {
+            "id": "NCT03191149-measurable",
+            "polarity": "inclusion",
+            "sourceText": "Patients must have measurable disease; baseline measurements and ALL sites of disease must be obtained within 4 weeks to registration",
+            "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+          },
+          {
+            "id": "NCT03191149-prior-lines",
+            "polarity": "inclusion",
+            "sourceText": "Patients must have previously received at least one line of therapy for their advanced lung cancer; there are no restrictions on the maximum number of prior therapies allowed",
+            "reasonFuzzy": "This check involves prior lines minimum but lacks a single simple prior_lines_min constraint representation because of wording on advanced context and absence of upper limits."
+          },
+          {
+            "id": "NCT03191149-prior-immunotherapy",
+            "polarity": "exclusion",
+            "sourceText": "Participants must have not previously received therapies targeting PDL1, PD1 or CTLA4 within 6 months (180 days) prior to registration",
+            "reasonFuzzy": "This is a complex prior therapy exclusion involving a time window washout, not a simple prior_therapy_excluded check."
+          },
+          {
+            "id": "NCT03191149-ild",
+            "polarity": "exclusion",
+            "sourceText": "Participants may not have clinically active or symptomatic interstitial lung disease or interstitial pneumonitis (i.e., affecting activities of daily living or requiring therapeutic intervention), or a history of clinically significant interstitial lung disease or radiation pneumonitis",
+            "reasonFuzzy": "Interstitial lung disease rules are clinical judgment-based and include clinical history and symptom status."
+          },
+          {
+            "id": "NCT03191149-radiation-washout",
+            "polarity": "exclusion",
+            "sourceText": "Participants may not have had radiation to the lung fields within four weeks (28 days) of starting treatment...",
+            "reasonFuzzy": "Complex radiation washout windows involving varying days depending on the site and intent of radiation cannot be modeled as a simple lab or basic exclusion kind."
+          },
+          {
+            "id": "NCT03191149-brain-mets",
+            "polarity": "exclusion",
+            "sourceText": "Participants may not have clinically symptomatic brain metastases, leptomeningeal disease, or spinal cord compression. Patients may be on a stable dose of corticosteroids to control brain metastases if they have been on a stable dose for two weeks (14 days) prior to study treatment and are clinically asymptomatic",
+            "reasonFuzzy": "Wording mixes symptomatic, stable corticosteroid use, leptomeningeal disease, and spinal cord compression, which is not a clean typed brain_mets status of none, treated_stable, or untreated."
+          },
+          {
+            "id": "NCT03191149-cardiac",
+            "polarity": "exclusion",
+            "sourceText": "Patients must have an ECHO or a nuclear study (MUGA or first pass) within 4 weeks (28 days) prior to registration to treatment and must not have a left ventricular ejection fraction (LVEF) < institutional lower limit of normal (LLN). If the LLN is not defined at a site, the LVEF must be >= 50% for the patient to be eligible",
+            "reasonFuzzy": "Cardiac ejection fraction rule depends on site-specific lower limit of normal or 50% fallback with imaging test requirements, making it non-standard for typed checks."
+          },
+          {
+            "id": "NCT03191149-qtc",
+            "polarity": "exclusion",
+            "sourceText": "Mean resting corrected QT interval (QTc) >= 470 msec obtained from 3 electrocardiograms (ECGs) using the screening clinic ECG machine-derived QTc value",
+            "reasonFuzzy": "QTc cutoff criteria is not part of the allowed list of typed checks."
+          },
+          {
+            "id": "NCT03191149-other-cancers",
+            "polarity": "exclusion",
+            "sourceText": "Participants may not have a second, clinically active, cancer. Patients with second cancers which have been treated with curative intent and/or are currently inactive are allowed",
+            "reasonFuzzy": "Second cancer history and activity assessment is a clinical judgment item."
+          },
+          {
+            "id": "NCT03191149-investigational",
+            "polarity": "exclusion",
+            "sourceText": "Participants may not be receiving any other investigational agents. Patients previously treated with investigational agents must complete a washout period of at least two weeks or five half-lives, whichever is longer, before starting treatment",
+            "reasonFuzzy": "Investigational agent washout and concurrent prohibition are not simple typed items."
+          },
+          {
+            "id": "NCT03191149-uncontrolled",
+            "polarity": "exclusion",
+            "sourceText": "Participants may not have uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements",
+            "reasonFuzzy": "Uncontrolled intercurrent illness is a broad investigator-assessed safety exclusion."
+          },
+          {
+            "id": "NCT03191149-hypersensitivity",
+            "polarity": "exclusion",
+            "sourceText": "Patients must have no history of hypersensitivity active or inactive excipients of osimertinib (AZD9291) or drugs with a similar chemical structure or class to osimertinib (AZD9291)",
+            "reasonFuzzy": "Hypersensitivity to specific drug excipients or structural classes is not a standard typed check."
+          },
+          {
+            "id": "NCT03191149-cyp3a4",
+            "polarity": "exclusion",
+            "sourceText": "Patients must not currently be receiving (or unable to stop use prior to receiving the first dose of study treatment) medications or herbal supplements known to be potent inducers of CYP3A4 (at least 3 week prior)...",
+            "reasonFuzzy": "Medication interaction restrictions like CYP3A4 inducers are complex drug-class rules not covered by allowed types."
+          }
+        ]
+      },
+      "raw": "{\n  \"schemaVersion\": \"1\",\n  \"nctId\": \"NCT03191149\",\n  \"parserModel\": \"gemini-3.5-flash-lite\",\n  \"promptVersion\": \"2\",\n  \"typedChecks\": [\n    {\n      \"id\": \"NCT03191149-stage\",\n      \"kind\": \"stage_in\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Participants must have advanced disease - either stage IV disease, stage IIIB disease not amenable to definitive multi-modality therapy, or recurrent disease after a prior diagnosis of stage I-III disease. All staging is via the American Joint Committee on Cancer (AJCC)/International Association for the Study of Lung Cancer (IASLC) 7th edition staging criteria\",\n      \"stages\": [\"IIIB\", \"IIIC\", \"IV\", \"IVA\", \"IVB\"]\n    },\n    {\n      \"id\": \"NCT03191149-egfr-variant\",\n      \"kind\": \"egfr_variant_in\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"An EGFR exon 20 insertion mutation must be detected in the tumor tissue.\",\n      \"stringValue\": \"exon 20 insertion\"\n    },\n    {\n      \"id\": \"NCT03191149-prior-therapy-osimertinib\",\n      \"kind\": \"prior_therapy_excluded\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Participants must not have previously received osimertinib\",\n      \"stringValue\": \"osimertinib\"\n    },\n    {\n      \"id\": \"NCT03191149-age\",\n      \"kind\": \"age_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Age >= 18 years\",\n      \"numberValue\": 18\n    },\n    {\n      \"id\": \"NCT03191149-ecog\",\n      \"kind\": \"ecog_max\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Eastern Cooperative Oncology Group (ECOG) performance status =< 1\",\n      \"numberValue\": 1\n    },\n    {\n      \"id\": \"NCT03191149-hemoglobin\",\n      \"kind\": \"hemoglobin_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Hemoglobin >= 9.0 g/L (within 4 weeks before registration)\",\n      \"numberValue\": 9.0\n    },\n    {\n      \"id\": \"NCT03191149-anc\",\n      \"kind\": \"anc_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Absolute neutrophil count >= 1,500/mcL (within 4 weeks before registration)\",\n      \"numberValue\": 1500\n    },\n    {\n      \"id\": \"NCT03191149-platelets\",\n      \"kind\": \"platelets_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Platelets >= 100,000/mcL (within 4 weeks before registration)\",\n      \"numberValue\": 100000\n    },\n    {\n      \"id\": \"NCT03191149-bilirubin\",\n      \"kind\": \"bilirubin_max\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Total bilirubin =< 1.5 x upper limit of normal (ULN) if no liver metastases or =< 3 times ULN in the presence of documented Gilbert's syndrome (unconjugated hyperbilirubinemia) or liver metastases (within 4 weeks before registration)\",\n      \"numberValue\": 1.5\n    },\n    {\n      \"id\": \"NCT03191149-ast\",\n      \"kind\": \"ast_max\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 x institutional upper limit of normal; for patients with known hepatic metastases AST and/or ALT =< 5 x ULN (within 4 weeks before registration)\",\n      \"numberValue\": 3\n    },\n    {\n      \"id\": \"NCT03191149-alt\",\n      \"kind\": \"alt_max\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 x institutional upper limit of normal; for patients with known hepatic metastases AST and/or ALT =< 5 x ULN (within 4 weeks before registration)\",\n      \"numberValue\": 3\n    },\n    {\n      \"id\": \"NCT03191149-creatinine\",\n      \"kind\": \"creatinine_max\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Creatinine =< 1.5 x institutional upper limit of normal (within 4 weeks before registration)\",\n      \"numberValue\": 1.5\n    }\n  ],\n  \"fuzzyCriteria\": [\n    {\n      \"id\": \"NCT03191149-measurable\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Patients must have measurable disease; baseline measurements and ALL sites of disease must be obtained within 4 weeks to registration\",\n      \"reasonFuzzy\": \"Measurable disease by RECIST is a subjective imaging judgment, not a typed kind.\"\n    },\n    {\n      \"id\": \"NCT03191149-prior-lines\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Patients must have previously received at least one line of therapy for their advanced lung cancer; there are no restrictions on the maximum number of prior therapies allowed\",\n      \"reasonFuzzy\": \"This check involves prior lines minimum but lacks a single simple prior_lines_min constraint representation because of wording on advanced context and absence of upper limits.\"\n    },\n    {\n      \"id\": \"NCT03191149-prior-immunotherapy\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Participants must have not previously received therapies targeting PDL1, PD1 or CTLA4 within 6 months (180 days) prior to registration\",\n      \"reasonFuzzy\": \"This is a complex prior therapy exclusion involving a time window washout, not a simple prior_therapy_excluded check.\"\n    },\n    {\n      \"id\": \"NCT03191149-ild\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Participants may not have clinically active or symptomatic interstitial lung disease or interstitial pneumonitis (i.e., affecting activities of daily living or requiring therapeutic intervention), or a history of clinically significant interstitial lung disease or radiation pneumonitis\",\n      \"reasonFuzzy\": \"Interstitial lung disease rules are clinical judgment-based and include clinical history and symptom status.\"\n    },\n    {\n      \"id\": \"NCT03191149-radiation-washout\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Participants may not have had radiation to the lung fields within four weeks (28 days) of starting treatment...\",\n      \"reasonFuzzy\": \"Complex radiation washout windows involving varying days depending on the site and intent of radiation cannot be modeled as a simple lab or basic exclusion kind.\"\n    },\n    {\n      \"id\": \"NCT03191149-brain-mets\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Participants may not have clinically symptomatic brain metastases, leptomeningeal disease, or spinal cord compression. Patients may be on a stable dose of corticosteroids to control brain metastases if they have been on a stable dose for two weeks (14 days) prior to study treatment and are clinically asymptomatic\",\n      \"reasonFuzzy\": \"Wording mixes symptomatic, stable corticosteroid use, leptomeningeal disease, and spinal cord compression, which is not a clean typed brain_mets status of none, treated_stable, or untreated.\"\n    },\n    {\n      \"id\": \"NCT03191149-cardiac\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Patients must have an ECHO or a nuclear study (MUGA or first pass) within 4 weeks (28 days) prior to registration to treatment and must not have a left ventricular ejection fraction (LVEF) < institutional lower limit of normal (LLN). If the LLN is not defined at a site, the LVEF must be >= 50% for the patient to be eligible\",\n      \"reasonFuzzy\": \"Cardiac ejection fraction rule depends on site-specific lower limit of normal or 50% fallback with imaging test requirements, making it non-standard for typed checks.\"\n    },\n    {\n      \"id\": \"NCT03191149-qtc\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Mean resting corrected QT interval (QTc) >= 470 msec obtained from 3 electrocardiograms (ECGs) using the screening clinic ECG machine-derived QTc value\",\n      \"reasonFuzzy\": \"QTc cutoff criteria is not part of the allowed list of typed checks.\"\n    },\n    {\n      \"id\": \"NCT03191149-other-cancers\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Participants may not have a second, clinically active, cancer. Patients with second cancers which have been treated with curative intent and/or are currently inactive are allowed\",\n      \"reasonFuzzy\": \"Second cancer history and activity assessment is a clinical judgment item.\"\n    },\n    {\n      \"id\": \"NCT03191149-investigational\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Participants may not be receiving any other investigational agents. Patients previously treated with investigational agents must complete a washout period of at least two weeks or five half-lives, whichever is longer, before starting treatment\",\n      \"reasonFuzzy\": \"Investigational agent washout and concurrent prohibition are not simple typed items.\"\n    },\n    {\n      \"id\": \"NCT03191149-uncontrolled\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Participants may not have uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements\",\n      \"reasonFuzzy\": \"Uncontrolled intercurrent illness is a broad investigator-assessed safety exclusion.\"\n    },\n    {\n      \"id\": \"NCT03191149-hypersensitivity\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Patients must have no history of hypersensitivity active or inactive excipients of osimertinib (AZD9291) or drugs with a similar chemical structure or class to osimertinib (AZD9291)\",\n      \"reasonFuzzy\": \"Hypersensitivity to specific drug excipients or structural classes is not a standard typed check.\"\n    },\n    {\n      \"id\": \"NCT03191149-cyp3a4\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Patients must not currently be receiving (or unable to stop use prior to receiving the first dose of study treatment) medications or herbal supplements known to be potent inducers of CYP3A4 (at least 3 week prior)...\",\n      \"reasonFuzzy\": \"Medication interaction restrictions like CYP3A4 inducers are complex drug-class rules not covered by allowed types.\"\n    }\n  ]\n}",
+      "attempts": 2,
+      "ms": 22327,
+      "invalidKind": []
+    },
+    "NCT03851445": {
+      "ok": true,
+      "parsed": {
+        "schemaVersion": "1",
+        "nctId": "NCT03851445",
+        "parserModel": "gemini-3.5-flash-lite",
+        "promptVersion": "2",
+        "typedChecks": [
+          {
+            "id": "NCT03851445-stage",
+            "kind": "stage_in",
+            "polarity": "inclusion",
+            "sourceText": "Disease must be Stage IV as defined in Section 4.0, or recurrent.",
+            "stages": [
+              "IV",
+              "IVA",
+              "IVB"
+            ]
+          },
+          {
+            "id": "NCT03851445-ecog",
+            "kind": "ecog_max",
+            "polarity": "inclusion",
+            "sourceText": "Patients must have Zubrod performance status 0-1 (see Section 10.2) documented within 28 days prior to Step 1 registration.",
+            "numberValue": 1
+          },
+          {
+            "id": "NCT03851445-age",
+            "kind": "age_min",
+            "polarity": "inclusion",
+            "sourceText": "Patients must be ≥ 18 years of age.",
+            "numberValue": 18
+          }
+        ],
+        "fuzzyCriteria": [
+          {
+            "id": "NCT03851445-prior-therapy",
+            "polarity": "inclusion",
+            "sourceText": "To be eligible for screening at progression, patients must have received at least one line of systemic therapy for any stage of disease (Stages I-IV) and must have progressed during or following their most recent line of therapy.",
+            "reasonFuzzy": "Prior-line and progression criteria depend on disease stage and prior treatment type with multiple complex sub-rules, making it unsuitable for a single simple typed prior lines or therapy check."
+          },
+          {
+            "id": "NCT03851445-biopsy-tissue",
+            "polarity": "inclusion",
+            "sourceText": "Patients must have adequate tumor tissue available, defined as ≥ 20% tumor cells and ≥ 0.2 mm3 tumor volume.",
+            "reasonFuzzy": "Tumor tissue availability and cellularity requirements are not standard typed lab or biomarker checks."
+          },
+          {
+            "id": "NCT03851445-mutations-excl",
+            "polarity": "exclusion",
+            "sourceText": "Patients with known EGFR sensitizing mutations, EGFR T790M mutation, ALK gene fusion, ROS 1 gene rearrangement, or BRAF V600E mutation are not eligible unless they have progressed following all standard of care targeted therapy.",
+            "reasonFuzzy": "The exclusion for specific mutations has an exception for progression following standard of care targeted therapy, which cannot be expressed simply as a standard typed mutation exclusion."
+          }
+        ]
+      },
+      "raw": "{\n  \"schemaVersion\": \"1\",\n  \"nctId\": \"NCT03851445\",\n  \"parserModel\": \"gemini-3.5-flash-lite\",\n  \"promptVersion\": \"2\",\n  \"typedChecks\": [\n    {\n      \"id\": \"NCT03851445-stage\",\n      \"kind\": \"stage_in\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Disease must be Stage IV as defined in Section 4.0, or recurrent.\",\n      \"stages\": [\"IV\", \"IVA\", \"IVB\"]\n    },\n    {\n      \"id\": \"NCT03851445-ecog\",\n      \"kind\": \"ecog_max\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Patients must have Zubrod performance status 0-1 (see Section 10.2) documented within 28 days prior to Step 1 registration.\",\n      \"numberValue\": 1\n    },\n    {\n      \"id\": \"NCT03851445-age\",\n      \"kind\": \"age_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Patients must be ≥ 18 years of age.\",\n      \"numberValue\": 18\n    }\n  ],\n  \"fuzzyCriteria\": [\n    {\n      \"id\": \"NCT03851445-prior-therapy\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"To be eligible for screening at progression, patients must have received at least one line of systemic therapy for any stage of disease (Stages I-IV) and must have progressed during or following their most recent line of therapy.\",\n      \"reasonFuzzy\": \"Prior-line and progression criteria depend on disease stage and prior treatment type with multiple complex sub-rules, making it unsuitable for a single simple typed prior lines or therapy check.\"\n    },\n    {\n      \"id\": \"NCT03851445-biopsy-tissue\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Patients must have adequate tumor tissue available, defined as ≥ 20% tumor cells and ≥ 0.2 mm3 tumor volume.\",\n      \"reasonFuzzy\": \"Tumor tissue availability and cellularity requirements are not standard typed lab or biomarker checks.\"\n    },\n    {\n      \"id\": \"NCT03851445-mutations-excl\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Patients with known EGFR sensitizing mutations, EGFR T790M mutation, ALK gene fusion, ROS 1 gene rearrangement, or BRAF V600E mutation are not eligible unless they have progressed following all standard of care targeted therapy.\",\n      \"reasonFuzzy\": \"The exclusion for specific mutations has an exception for progression following standard of care targeted therapy, which cannot be expressed simply as a standard typed mutation exclusion.\"\n    }\n  ]\n}",
+      "attempts": 1,
+      "ms": 2427,
+      "invalidKind": []
+    },
+    "NCT04165070": {
+      "ok": true,
+      "parsed": {
+        "schemaVersion": "1",
+        "nctId": "NCT04165070",
+        "parserModel": "gemini-3.5-flash-lite",
+        "promptVersion": "2",
+        "typedChecks": [
+          {
+            "id": "NCT04165070-stage",
+            "kind": "stage_in",
+            "polarity": "inclusion",
+            "sourceText": "Has histologically- or cytologically-confirmed diagnosis of Stage IV squamous or nonsquamous NSCLC",
+            "stages": [
+              "IV",
+              "IVA",
+              "IVB"
+            ]
+          },
+          {
+            "id": "NCT04165070-histology",
+            "kind": "histology_in",
+            "polarity": "inclusion",
+            "sourceText": "Has histologically- or cytologically-confirmed diagnosis of Stage IV squamous or nonsquamous NSCLC",
+            "histologies": [
+              "adenocarcinoma",
+              "squamous",
+              "nsclc_nos"
+            ]
+          },
+          {
+            "id": "NCT04165070-age",
+            "kind": "age_min",
+            "polarity": "inclusion",
+            "sourceText": "minimumAge: 18 Years",
+            "numberValue": 18
+          },
+          {
+            "id": "NCT04165070-brain",
+            "kind": "brain_mets",
+            "polarity": "exclusion",
+            "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis",
+            "allowedBrainMets": [
+              "untreated"
+            ]
+          }
+        ],
+        "fuzzyCriteria": [
+          {
+            "id": "NCT04165070-biopsy",
+            "polarity": "inclusion",
+            "sourceText": "Is able to provide archival tumor tissue sample collected either within 5 years or within the interval from completion of last treatment but before entering the screening period or newly obtained core or excisional biopsy of a tumor lesion not previously irradiated obtained within 90 days of treatment initiation",
+            "reasonFuzzy": "Willingness or ability to provide a tissue biopsy is a procedural requirement, not a typed kind."
+          },
+          {
+            "id": "NCT04165070-prior-systemic",
+            "polarity": "inclusion",
+            "sourceText": "Has not received prior systemic treatment for their metastatic NSCLC",
+            "reasonFuzzy": "This rule specifies treatment for metastatic disease rather than a simple prior lines count."
+          },
+          {
+            "id": "NCT04165070-screening-window",
+            "polarity": "inclusion",
+            "sourceText": "Is able to complete all screening procedures within the 35-day screening window for Part A and 28-day screening window for Part B",
+            "reasonFuzzy": "Screening window adherence is a procedural requirement, not a typed check."
+          }
+        ]
+      },
+      "raw": "{\n  \"schemaVersion\": \"1\",\n  \"nctId\": \"NCT04165070\",\n  \"parserModel\": \"gemini-3.5-flash-lite\",\n  \"promptVersion\": \"2\",\n  \"typedChecks\": [\n    {\n      \"id\": \"NCT04165070-stage\",\n      \"kind\": \"stage_in\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Has histologically- or cytologically-confirmed diagnosis of Stage IV squamous or nonsquamous NSCLC\",\n      \"stages\": [\"IV\", \"IVA\", \"IVB\"]\n    },\n    {\n      \"id\": \"NCT04165070-histology\",\n      \"kind\": \"histology_in\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Has histologically- or cytologically-confirmed diagnosis of Stage IV squamous or nonsquamous NSCLC\",\n      \"histologies\": [\"adenocarcinoma\", \"squamous\", \"nsclc_nos\"]\n    },\n    {\n      \"id\": \"NCT04165070-age\",\n      \"kind\": \"age_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"minimumAge: 18 Years\",\n      \"numberValue\": 18\n    },\n    {\n      \"id\": \"NCT04165070-brain\",\n      \"kind\": \"brain_mets\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis\",\n      \"allowedBrainMets\": [\"untreated\"]\n    }\n  ],\n  \"fuzzyCriteria\": [\n    {\n      \"id\": \"NCT04165070-biopsy\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Is able to provide archival tumor tissue sample collected either within 5 years or within the interval from completion of last treatment but before entering the screening period or newly obtained core or excisional biopsy of a tumor lesion not previously irradiated obtained within 90 days of treatment initiation\",\n      \"reasonFuzzy\": \"Willingness or ability to provide a tissue biopsy is a procedural requirement, not a typed kind.\"\n    },\n    {\n      \"id\": \"NCT04165070-prior-systemic\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Has not received prior systemic treatment for their metastatic NSCLC\",\n      \"reasonFuzzy\": \"This rule specifies treatment for metastatic disease rather than a simple prior lines count.\"\n    },\n    {\n      \"id\": \"NCT04165070-screening-window\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Is able to complete all screening procedures within the 35-day screening window for Part A and 28-day screening window for Part B\",\n      \"reasonFuzzy\": \"Screening window adherence is a procedural requirement, not a typed check.\"\n    }\n  ]\n}",
+      "attempts": 1,
+      "ms": 5136,
+      "invalidKind": []
+    },
+    "NCT04181060": {
+      "ok": true,
+      "parsed": {
+        "schemaVersion": "1",
+        "nctId": "NCT04181060",
+        "parserModel": "gemini-3.5-flash-lite",
+        "promptVersion": "2",
+        "typedChecks": [
+          {
+            "id": "NCT04181060-histology",
+            "kind": "histology_in",
+            "polarity": "inclusion",
+            "sourceText": "Patient must have a pathologically-confirmed diagnosis of non-squamous, non-small cell lung cancer (NSCLC)",
+            "histologies": [
+              "adenocarcinoma",
+              "large_cell",
+              "nsclc_nos"
+            ]
+          },
+          {
+            "id": "NCT04181060-stage",
+            "kind": "stage_in",
+            "polarity": "inclusion",
+            "sourceText": "Patient must have advanced disease, defined as - either stage IV disease, stage IIIB disease not amenable to definitive multi-modality therapy, or recurrent disease after a prior diagnosis of stage I-III disease.",
+            "stages": [
+              "IIIB",
+              "IV",
+              "IVA",
+              "IVB"
+            ]
+          },
+          {
+            "id": "NCT04181060-egfr",
+            "kind": "egfr_status",
+            "polarity": "inclusion",
+            "sourceText": "Patient must have somatic activating sensitizing mutation in EGFR (e.g. but not limited to Exon 19 deletion, L858R, E709X, G719X, exon 19 insertions, L861Q, S768I).",
+            "presence": "present"
+          },
+          {
+            "id": "NCT04181060-prior-vegf",
+            "kind": "prior_therapy_excluded",
+            "polarity": "exclusion",
+            "sourceText": "Patient must not have received any prior treatment with an anti-VEGF agent",
+            "stringValue": "anti-VEGF agent"
+          },
+          {
+            "id": "NCT04181060-age",
+            "kind": "age_min",
+            "polarity": "inclusion",
+            "sourceText": "Patient must be ≥ 18 years of age",
+            "numberValue": 18
+          },
+          {
+            "id": "NCT04181060-ecog",
+            "kind": "ecog_max",
+            "polarity": "inclusion",
+            "sourceText": "Patient must have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2",
+            "numberValue": 2
+          },
+          {
+            "id": "NCT04181060-anc",
+            "kind": "anc_min",
+            "polarity": "inclusion",
+            "sourceText": "Absolute neutrophil count >= 1,500/mcL (obtained =< 14 days prior to randomization)",
+            "numberValue": 1500
+          },
+          {
+            "id": "NCT04181060-platelets",
+            "kind": "platelets_min",
+            "polarity": "inclusion",
+            "sourceText": "Platelets >= 100,000/mcL (obtained =< 14 days prior to randomization)",
+            "numberValue": 100000
+          },
+          {
+            "id": "NCT04181060-hemoglobin",
+            "kind": "hemoglobin_min",
+            "polarity": "inclusion",
+            "sourceText": "Hemoglobin >= 9 g/dL (obtained =< 14 days prior to randomization)",
+            "numberValue": 9
+          },
+          {
+            "id": "NCT04181060-bilirubin",
+            "kind": "bilirubin_max",
+            "polarity": "inclusion",
+            "sourceText": "Total bilirubin and creatinine =< 1.5 x institutional upper limit of normal (ULN) (obtained =< 14 days prior to randomization)",
+            "numberValue": 1.5
+          },
+          {
+            "id": "NCT04181060-creatinine",
+            "kind": "creatinine_max",
+            "polarity": "inclusion",
+            "sourceText": "Total bilirubin and creatinine =< 1.5 x institutional upper limit of normal (ULN) (obtained =< 14 days prior to randomization)",
+            "numberValue": 1.5
+          },
+          {
+            "id": "NCT04181060-ast",
+            "kind": "ast_max",
+            "polarity": "inclusion",
+            "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN (obtained =< 14 days prior to randomization)",
+            "numberValue": 2.5
+          },
+          {
+            "id": "NCT04181060-alt",
+            "kind": "alt_max",
+            "polarity": "inclusion",
+            "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN (obtained =< 14 days prior to randomization)",
+            "numberValue": 2.5
+          },
+          {
+            "id": "NCT04181060-brain",
+            "kind": "brain_mets",
+            "polarity": "inclusion",
+            "sourceText": "Patients with treated brain metastases are eligible if neurologically stable without glucocorticoid therapy after the stated washout period from radiation therapy (RT) or surgery provided the metastatic lesions are non-hemorrhagic",
+            "allowedBrainMets": [
+              "treated_stable",
+              "untreated"
+            ]
+          }
+        ],
+        "fuzzyCriteria": [
+          {
+            "id": "NCT04181060-egfr-excl",
+            "polarity": "exclusion",
+            "sourceText": "Patients with non-sensitizing mutations in EGFR (EGFR exon 20 insertions) are not eligible.",
+            "reasonFuzzy": "Exclusion of exon 20 insertions is a specific variant exclusion, not a standard negative egfr_status."
+          },
+          {
+            "id": "NCT04181060-osimertinib-washout",
+            "polarity": "inclusion",
+            "sourceText": "Prior treatment with an EGFR TKI is not allowed, however if a candidate for this study has already started osimertinib within 21 days prior to randomization, the exact osimertinib start date is known, and the patient had the required study baseline imaging completed prior to the osimertinib start date, the patient will be eligible",
+            "reasonFuzzy": "Conditional prior osimertinib rule with complex timing conditions rather than a simple prior_therapy check."
+          },
+          {
+            "id": "NCT04181060-radiation",
+            "polarity": "inclusion",
+            "sourceText": "Patients that have received prior radiation therapy are eligible. Radiation (limited field stereotactic radiation or conventional radiation) must have been completed at least one week prior to study drug initiation and more extensive field radiation (i.e., whole-brain radiotherapy [WBRT]) must have been completed at least two weeks prior to drug initiation",
+            "reasonFuzzy": "Complex radiation washout windows depending on field size."
+          },
+          {
+            "id": "NCT04181060-vegf-risk",
+            "polarity": "exclusion",
+            "sourceText": "Patient must not have any risk factors for anti-VEGF administration, specifically, hemoptysis, active cardiovascular disease, uncontrolled hypertension, significant proteinuria (screening urinalysis > 300 mg/dl) and tumor invading major blood vessels",
+            "reasonFuzzy": "Multiple combined clinical and laboratory conditions related to anti-VEGF risk."
+          },
+          {
+            "id": "NCT04181060-measurable",
+            "polarity": "inclusion",
+            "sourceText": "Patient must have measurable disease. Baseline measurements of sites of disease must be obtained within 4 weeks prior to study randomization.",
+            "reasonFuzzy": "Measurable disease by RECIST/imaging is a subjective assessment."
+          },
+          {
+            "id": "NCT04181060-prior-metastatic-treatment",
+            "polarity": "exclusion",
+            "sourceText": "Patient must not have had any prior systemic treatment for metastatic disease",
+            "reasonFuzzy": "Prior systemic treatment for metastatic disease is broad and not a single simple prior_therapy_excluded drug name."
+          },
+          {
+            "id": "NCT04181060-investigator-discretion",
+            "polarity": "exclusion",
+            "sourceText": "Patient must not have any evidence of severe or uncontrolled systemic diseases, including uncontrolled hypertension and active bleeding diatheses, which in the investigator's opinion makes it challenging for the patient to participate in the study.",
+            "reasonFuzzy": "Depends on investigator opinion."
+          }
+        ]
+      },
+      "raw": "{\n  \"schemaVersion\": \"1\",\n  \"nctId\": \"NCT04181060\",\n  \"parserModel\": \"gemini-3.5-flash-lite\",\n  \"promptVersion\": \"2\",\n  \"typedChecks\": [\n    {\n      \"id\": \"NCT04181060-histology\",\n      \"kind\": \"histology_in\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Patient must have a pathologically-confirmed diagnosis of non-squamous, non-small cell lung cancer (NSCLC)\",\n      \"histologies\": [\n        \"adenocarcinoma\",\n        \"large_cell\",\n        \"nsclc_nos\"\n      ]\n    },\n    {\n      \"id\": \"NCT04181060-stage\",\n      \"kind\": \"stage_in\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Patient must have advanced disease, defined as - either stage IV disease, stage IIIB disease not amenable to definitive multi-modality therapy, or recurrent disease after a prior diagnosis of stage I-III disease.\",\n      \"stages\": [\n        \"IIIB\",\n        \"IV\",\n        \"IVA\",\n        \"IVB\"\n      ]\n    },\n    {\n      \"id\": \"NCT04181060-egfr\",\n      \"kind\": \"egfr_status\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Patient must have somatic activating sensitizing mutation in EGFR (e.g. but not limited to Exon 19 deletion, L858R, E709X, G719X, exon 19 insertions, L861Q, S768I).\",\n      \"presence\": \"present\"\n    },\n    {\n      \"id\": \"NCT04181060-prior-vegf\",\n      \"kind\": \"prior_therapy_excluded\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Patient must not have received any prior treatment with an anti-VEGF agent\",\n      \"stringValue\": \"anti-VEGF agent\"\n    },\n    {\n      \"id\": \"NCT04181060-age\",\n      \"kind\": \"age_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Patient must be ≥ 18 years of age\",\n      \"numberValue\": 18\n    },\n    {\n      \"id\": \"NCT04181060-ecog\",\n      \"kind\": \"ecog_max\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Patient must have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2\",\n      \"numberValue\": 2\n    },\n    {\n      \"id\": \"NCT04181060-anc\",\n      \"kind\": \"anc_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Absolute neutrophil count >= 1,500/mcL (obtained =< 14 days prior to randomization)\",\n      \"numberValue\": 1500\n    },\n    {\n      \"id\": \"NCT04181060-platelets\",\n      \"kind\": \"platelets_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Platelets >= 100,000/mcL (obtained =< 14 days prior to randomization)\",\n      \"numberValue\": 100000\n    },\n    {\n      \"id\": \"NCT04181060-hemoglobin\",\n      \"kind\": \"hemoglobin_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Hemoglobin >= 9 g/dL (obtained =< 14 days prior to randomization)\",\n      \"numberValue\": 9\n    },\n    {\n      \"id\": \"NCT04181060-bilirubin\",\n      \"kind\": \"bilirubin_max\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Total bilirubin and creatinine =< 1.5 x institutional upper limit of normal (ULN) (obtained =< 14 days prior to randomization)\",\n      \"numberValue\": 1.5\n    },\n    {\n      \"id\": \"NCT04181060-creatinine\",\n      \"kind\": \"creatinine_max\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Total bilirubin and creatinine =< 1.5 x institutional upper limit of normal (ULN) (obtained =< 14 days prior to randomization)\",\n      \"numberValue\": 1.5\n    },\n    {\n      \"id\": \"NCT04181060-ast\",\n      \"kind\": \"ast_max\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN (obtained =< 14 days prior to randomization)\",\n      \"numberValue\": 2.5\n    },\n    {\n      \"id\": \"NCT04181060-alt\",\n      \"kind\": \"alt_max\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN (obtained =< 14 days prior to randomization)\",\n      \"numberValue\": 2.5\n    },\n    {\n      \"id\": \"NCT04181060-brain\",\n      \"kind\": \"brain_mets\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Patients with treated brain metastases are eligible if neurologically stable without glucocorticoid therapy after the stated washout period from radiation therapy (RT) or surgery provided the metastatic lesions are non-hemorrhagic\",\n      \"allowedBrainMets\": [\n        \"treated_stable\",\n        \"untreated\"\n      ]\n    }\n  ],\n  \"fuzzyCriteria\": [\n    {\n      \"id\": \"NCT04181060-egfr-excl\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Patients with non-sensitizing mutations in EGFR (EGFR exon 20 insertions) are not eligible.\",\n      \"reasonFuzzy\": \"Exclusion of exon 20 insertions is a specific variant exclusion, not a standard negative egfr_status.\"\n    },\n    {\n      \"id\": \"NCT04181060-osimertinib-washout\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Prior treatment with an EGFR TKI is not allowed, however if a candidate for this study has already started osimertinib within 21 days prior to randomization, the exact osimertinib start date is known, and the patient had the required study baseline imaging completed prior to the osimertinib start date, the patient will be eligible\",\n      \"reasonFuzzy\": \"Conditional prior osimertinib rule with complex timing conditions rather than a simple prior_therapy check.\"\n    },\n    {\n      \"id\": \"NCT04181060-radiation\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Patients that have received prior radiation therapy are eligible. Radiation (limited field stereotactic radiation or conventional radiation) must have been completed at least one week prior to study drug initiation and more extensive field radiation (i.e., whole-brain radiotherapy [WBRT]) must have been completed at least two weeks prior to drug initiation\",\n      \"reasonFuzzy\": \"Complex radiation washout windows depending on field size.\"\n    },\n    {\n      \"id\": \"NCT04181060-vegf-risk\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Patient must not have any risk factors for anti-VEGF administration, specifically, hemoptysis, active cardiovascular disease, uncontrolled hypertension, significant proteinuria (screening urinalysis > 300 mg/dl) and tumor invading major blood vessels\",\n      \"reasonFuzzy\": \"Multiple combined clinical and laboratory conditions related to anti-VEGF risk.\"\n    },\n    {\n      \"id\": \"NCT04181060-measurable\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Patient must have measurable disease. Baseline measurements of sites of disease must be obtained within 4 weeks prior to study randomization.\",\n      \"reasonFuzzy\": \"Measurable disease by RECIST/imaging is a subjective assessment.\"\n    },\n    {\n      \"id\": \"NCT04181060-prior-metastatic-treatment\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Patient must not have had any prior systemic treatment for metastatic disease\",\n      \"reasonFuzzy\": \"Prior systemic treatment for metastatic disease is broad and not a single simple prior_therapy_excluded drug name.\"\n    },\n    {\n      \"id\": \"NCT04181060-investigator-discretion\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Patient must not have any evidence of severe or uncontrolled systemic diseases, including uncontrolled hypertension and active bleeding diatheses, which in the investigator's opinion makes it challenging for the patient to participate in the study.\",\n      \"reasonFuzzy\": \"Depends on investigator opinion.\"\n    }\n  ]\n}",
+      "attempts": 1,
+      "ms": 9157,
+      "invalidKind": []
+    },
+    "NCT04198766": {
+      "ok": true,
+      "parsed": {
+        "schemaVersion": "1",
+        "nctId": "NCT04198766",
+        "parserModel": "gemini-3.5-flash-lite",
+        "promptVersion": "2",
+        "typedChecks": [
+          {
+            "id": "NCT04198766-age",
+            "kind": "age_min",
+            "polarity": "inclusion",
+            "sourceText": "Males or females aged ≥18 years.",
+            "numberValue": 18
+          },
+          {
+            "id": "NCT04198766-stage",
+            "kind": "stage_in",
+            "polarity": "inclusion",
+            "sourceText": "For Cohort F8, subjects must have previously untreated, histologically confirmed Stage II, IIIA or IIIB (T3-4N2) NSCLC.",
+            "stages": [
+              "IIA",
+              "IIB",
+              "IIIA",
+              "IIIB"
+            ]
+          },
+          {
+            "id": "NCT04198766-egfr",
+            "kind": "egfr_status",
+            "polarity": "inclusion",
+            "sourceText": "All subjects with non-squamous NSCLC must have documentation of absence of tumor activating EGFR mutations",
+            "presence": "absent"
+          },
+          {
+            "id": "NCT04198766-alk",
+            "kind": "alk_status",
+            "polarity": "inclusion",
+            "sourceText": "and absence of ALK gene rearrangements.",
+            "presence": "absent"
+          },
+          {
+            "id": "NCT04198766-pdl1",
+            "kind": "pdl1_min",
+            "polarity": "inclusion",
+            "sourceText": "Combined Positive Score (CPS) ≥ 1% (or Tumor Proportion Score ≥50% for NSCLC; for TMB-high tumors, any TPS% is allowed).",
+            "numberValue": 50
+          },
+          {
+            "id": "NCT04198766-prior-ox40",
+            "kind": "prior_therapy_excluded",
+            "polarity": "exclusion",
+            "sourceText": "Prior exposure to OX40 agonists.",
+            "stringValue": "OX40 agonists"
+          }
+        ],
+        "fuzzyCriteria": [
+          {
+            "id": "NCT04198766-lines-f3",
+            "polarity": "inclusion",
+            "sourceText": "For Cohort F3 (NSCLC), subjects may have progressed on no more than 2 lines of standard therapy that must include at least one PD-1/L1 regimen.",
+            "reasonFuzzy": "Prior lines and therapy requirements vary by cohort, making it complex to represent as a single global typed check."
+          },
+          {
+            "id": "NCT04198766-organ-function",
+            "polarity": "inclusion",
+            "sourceText": "Adequate hematologic, coagulation, hepatic and renal function and ECOG score as defined per protocol.",
+            "reasonFuzzy": "Organ function and ECOG score are defined per protocol without explicit standalone cutoff values in the text."
+          },
+          {
+            "id": "NCT04198766-investigational",
+            "polarity": "exclusion",
+            "sourceText": "Receipt of any investigational product or any approved anticancer drug(s) or biological product(s) within 4 weeks prior to the first dose of study drug with certain exceptions.",
+            "reasonFuzzy": "Washout window applies broadly with exceptions, not a simple clean lab or drug exclusion."
+          },
+          {
+            "id": "NCT04198766-malignancy",
+            "polarity": "exclusion",
+            "sourceText": "Prior or concurrent malignancies. Exception: Subjects with a prior or concurrent malignancy whose natural history or treatment does not have the potential to interfere with the safety or efficacy assessments of INBRX-106.",
+            "reasonFuzzy": "Subjective exception criteria based on natural history and potential to interfere with assessments."
+          },
+          {
+            "id": "NCT04198766-irae",
+            "polarity": "exclusion",
+            "sourceText": "Grade ≥ 3 immune-related adverse events (irAEs) or irAE that lead to discontinuation of prior immunotherapy. Some exceptions as defined per protocol apply.",
+            "reasonFuzzy": "Immune-related adverse events with protocol-defined exceptions cannot be expressed as a simple typed check."
+          },
+          {
+            "id": "NCT04198766-autoimmune",
+            "polarity": "exclusion",
+            "sourceText": "Active autoimmune disease or documented history of autoimmune disease that required systemic steroids or other immunosuppressive medications. Certain exceptions as defined in protocol apply.",
+            "reasonFuzzy": "Complex medical history exclusion with protocol-defined exceptions."
+          },
+          {
+            "id": "NCT04198766-cardiac",
+            "polarity": "exclusion",
+            "sourceText": "Clinically significant cardiac condition, including myocardial infarction, uncontrolled angina, viral myocarditis, cerebrovascular accident, or other acute uncontrolled heart disease < 3 months prior to enrollment on this trial; left ventricular ejection fraction (LVEF) < 50%; New York Heart Association (NYHA) Class III or IV congestive heart failure; or uncontrolled hypertension; or oxygen saturation <92% on room air.",
+            "reasonFuzzy": "Multiple combined cardiac and physiological parameters, some subjective, packed into a single exclusion rule."
+          },
+          {
+            "id": "NCT04198766-surgery",
+            "polarity": "exclusion",
+            "sourceText": "Major surgery within 4 weeks prior to enrollment on this trial.",
+            "reasonFuzzy": "Major surgery washout is a clinical event window, not a simple lab cutoff."
+          }
+        ]
+      },
+      "raw": "{\n  \"schemaVersion\": \"1\",\n  \"nctId\": \"NCT04198766\",\n  \"parserModel\": \"gemini-3.5-flash-lite\",\n  \"promptVersion\": \"2\",\n  \"typedChecks\": [\n    {\n      \"id\": \"NCT04198766-age\",\n      \"kind\": \"age_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Males or females aged ≥18 years.\",\n      \"numberValue\": 18\n    },\n    {\n      \"id\": \"NCT04198766-stage\",\n      \"kind\": \"stage_in\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"For Cohort F8, subjects must have previously untreated, histologically confirmed Stage II, IIIA or IIIB (T3-4N2) NSCLC.\",\n      \"stages\": [\n        \"IIA\",\n        \"IIB\",\n        \"IIIA\",\n        \"IIIB\"\n      ]\n    },\n    {\n      \"id\": \"NCT04198766-egfr\",\n      \"kind\": \"egfr_status\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"All subjects with non-squamous NSCLC must have documentation of absence of tumor activating EGFR mutations\",\n      \"presence\": \"absent\"\n    },\n    {\n      \"id\": \"NCT04198766-alk\",\n      \"kind\": \"alk_status\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"and absence of ALK gene rearrangements.\",\n      \"presence\": \"absent\"\n    },\n    {\n      \"id\": \"NCT04198766-pdl1\",\n      \"kind\": \"pdl1_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Combined Positive Score (CPS) ≥ 1% (or Tumor Proportion Score ≥50% for NSCLC; for TMB-high tumors, any TPS% is allowed).\",\n      \"numberValue\": 50\n    },\n    {\n      \"id\": \"NCT04198766-prior-ox40\",\n      \"kind\": \"prior_therapy_excluded\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Prior exposure to OX40 agonists.\",\n      \"stringValue\": \"OX40 agonists\"\n    }\n  ],\n  \"fuzzyCriteria\": [\n    {\n      \"id\": \"NCT04198766-lines-f3\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"For Cohort F3 (NSCLC), subjects may have progressed on no more than 2 lines of standard therapy that must include at least one PD-1/L1 regimen.\",\n      \"reasonFuzzy\": \"Prior lines and therapy requirements vary by cohort, making it complex to represent as a single global typed check.\"\n    },\n    {\n      \"id\": \"NCT04198766-organ-function\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Adequate hematologic, coagulation, hepatic and renal function and ECOG score as defined per protocol.\",\n      \"reasonFuzzy\": \"Organ function and ECOG score are defined per protocol without explicit standalone cutoff values in the text.\"\n    },\n    {\n      \"id\": \"NCT04198766-investigational\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Receipt of any investigational product or any approved anticancer drug(s) or biological product(s) within 4 weeks prior to the first dose of study drug with certain exceptions.\",\n      \"reasonFuzzy\": \"Washout window applies broadly with exceptions, not a simple clean lab or drug exclusion.\"\n    },\n    {\n      \"id\": \"NCT04198766-malignancy\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Prior or concurrent malignancies. Exception: Subjects with a prior or concurrent malignancy whose natural history or treatment does not have the potential to interfere with the safety or efficacy assessments of INBRX-106.\",\n      \"reasonFuzzy\": \"Subjective exception criteria based on natural history and potential to interfere with assessments.\"\n    },\n    {\n      \"id\": \"NCT04198766-irae\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Grade ≥ 3 immune-related adverse events (irAEs) or irAE that lead to discontinuation of prior immunotherapy. Some exceptions as defined per protocol apply.\",\n      \"reasonFuzzy\": \"Immune-related adverse events with protocol-defined exceptions cannot be expressed as a simple typed check.\"\n    },\n    {\n      \"id\": \"NCT04198766-autoimmune\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Active autoimmune disease or documented history of autoimmune disease that required systemic steroids or other immunosuppressive medications. Certain exceptions as defined in protocol apply.\",\n      \"reasonFuzzy\": \"Complex medical history exclusion with protocol-defined exceptions.\"\n    },\n    {\n      \"id\": \"NCT04198766-cardiac\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Clinically significant cardiac condition, including myocardial infarction, uncontrolled angina, viral myocarditis, cerebrovascular accident, or other acute uncontrolled heart disease < 3 months prior to enrollment on this trial; left ventricular ejection fraction (LVEF) < 50%; New York Heart Association (NYHA) Class III or IV congestive heart failure; or uncontrolled hypertension; or oxygen saturation <92% on room air.\",\n      \"reasonFuzzy\": \"Multiple combined cardiac and physiological parameters, some subjective, packed into a single exclusion rule.\"\n    },\n    {\n      \"id\": \"NCT04198766-surgery\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Major surgery within 4 weeks prior to enrollment on this trial.\",\n      \"reasonFuzzy\": \"Major surgery washout is a clinical event window, not a simple lab cutoff.\"\n    }\n  ]\n}",
+      "attempts": 1,
+      "ms": 4727,
+      "invalidKind": []
+    },
+    "NCT04613596": {
+      "ok": true,
+      "parsed": {
+        "schemaVersion": "1",
+        "nctId": "NCT04613596",
+        "parserModel": "gemini-3.5-flash-lite",
+        "promptVersion": "2",
+        "typedChecks": [
+          {
+            "id": "NCT04613596-kras",
+            "kind": "kras_variant_in",
+            "polarity": "inclusion",
+            "sourceText": "Phase 2: Histologically confirmed diagnosis of unresectable or metastatic NSCLC with KRAS G12C mutation and any PD-L1 TPS",
+            "stringValue": "G12C"
+          },
+          {
+            "id": "NCT04613596-pdl1",
+            "kind": "pdl1_min",
+            "polarity": "inclusion",
+            "sourceText": "Phase 3: Histologically confirmed diagnosis of unresectable or metastatic squamous or nonsquamous NSCLC with KRAS G12C mutation and PD-L1 TPS>=50%",
+            "numberValue": 50
+          },
+          {
+            "id": "NCT04613596-brain-phase3",
+            "kind": "brain_mets",
+            "polarity": "inclusion",
+            "sourceText": "Phase 3: CNS Inclusion - Based on screening brain imaging, patients must have one of the following: 1. No evidence of brain metastases 2. Untreated brain metastases not needing immediate local therapy 3. Previously treated brain metastases not needing immediate local therapy",
+            "allowedBrainMets": [
+              "none",
+              "untreated",
+              "treated_stable"
+            ]
+          },
+          {
+            "id": "NCT04613596-prior-tx",
+            "kind": "prior_therapy_excluded",
+            "polarity": "exclusion",
+            "sourceText": "Phase 2 and Phase 3: Prior systemic treatment for locally advanced or metastatic NSCLC including chemotherapy, immune checkpoint inhibitor therapy, or a therapy targeting KRAS G12C mutation (e.g., AMG 510).",
+            "stringValue": "chemotherapy"
+          }
+        ],
+        "fuzzyCriteria": [
+          {
+            "id": "NCT04613596-measurable",
+            "polarity": "inclusion",
+            "sourceText": "Phase 3: Presence of measurable disease per RECIST1.1",
+            "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+          },
+          {
+            "id": "NCT04613596-brain-p2",
+            "polarity": "exclusion",
+            "sourceText": "Phase 2: Active brain metastases",
+            "reasonFuzzy": "Active brain metastases is not a clean typed brain_mets status."
+          },
+          {
+            "id": "NCT04613596-brain-p3",
+            "polarity": "exclusion",
+            "sourceText": "Phase 3: Patients with known central nervous system (CNS) lesions must not have any of the following: 1. Any untreated brain lesions > 2.0 cm in size 2. Any brainstem lesions 3. Ongoing use of systemic corticosteroids for control of symptoms of brain lesions at a total daily dose of > 10 mg of prednisone (or equivalent) prior to randomization. 4. Have poorly controlled (> 1/week) generalized or complex partial seizures, or manifest neurologic progression due to brain lesions notwithstanding CNS-directed therapy",
+            "reasonFuzzy": "Complex criteria involving lesion size, brainstem location, corticosteroid dose, and seizure control cannot be expressed with one typed brain_mets kind and value."
+          }
+        ]
+      },
+      "raw": "{\n  \"schemaVersion\": \"1\",\n  \"nctId\": \"NCT04613596\",\n  \"parserModel\": \"gemini-3.5-flash-lite\",\n  \"promptVersion\": \"2\",\n  \"typedChecks\": [\n    {\n      \"id\": \"NCT04613596-kras\",\n      \"kind\": \"kras_variant_in\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Phase 2: Histologically confirmed diagnosis of unresectable or metastatic NSCLC with KRAS G12C mutation and any PD-L1 TPS\",\n      \"stringValue\": \"G12C\"\n    },\n    {\n      \"id\": \"NCT04613596-pdl1\",\n      \"kind\": \"pdl1_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Phase 3: Histologically confirmed diagnosis of unresectable or metastatic squamous or nonsquamous NSCLC with KRAS G12C mutation and PD-L1 TPS>=50%\",\n      \"numberValue\": 50\n    },\n    {\n      \"id\": \"NCT04613596-brain-phase3\",\n      \"kind\": \"brain_mets\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Phase 3: CNS Inclusion - Based on screening brain imaging, patients must have one of the following: 1. No evidence of brain metastases 2. Untreated brain metastases not needing immediate local therapy 3. Previously treated brain metastases not needing immediate local therapy\",\n      \"allowedBrainMets\": [\"none\", \"untreated\", \"treated_stable\"]\n    },\n    {\n      \"id\": \"NCT04613596-prior-tx\",\n      \"kind\": \"prior_therapy_excluded\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Phase 2 and Phase 3: Prior systemic treatment for locally advanced or metastatic NSCLC including chemotherapy, immune checkpoint inhibitor therapy, or a therapy targeting KRAS G12C mutation (e.g., AMG 510).\",\n      \"stringValue\": \"chemotherapy\"\n    }\n  ],\n  \"fuzzyCriteria\": [\n    {\n      \"id\": \"NCT04613596-measurable\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Phase 3: Presence of measurable disease per RECIST1.1\",\n      \"reasonFuzzy\": \"Measurable disease by RECIST is a subjective imaging judgment, not a typed kind.\"\n    },\n    {\n      \"id\": \"NCT04613596-brain-p2\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Phase 2: Active brain metastases\",\n      \"reasonFuzzy\": \"Active brain metastases is not a clean typed brain_mets status.\"\n    },\n    {\n      \"id\": \"NCT04613596-brain-p3\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Phase 3: Patients with known central nervous system (CNS) lesions must not have any of the following: 1. Any untreated brain lesions > 2.0 cm in size 2. Any brainstem lesions 3. Ongoing use of systemic corticosteroids for control of symptoms of brain lesions at a total daily dose of > 10 mg of prednisone (or equivalent) prior to randomization. 4. Have poorly controlled (> 1/week) generalized or complex partial seizures, or manifest neurologic progression due to brain lesions notwithstanding CNS-directed therapy\",\n      \"reasonFuzzy\": \"Complex criteria involving lesion size, brainstem location, corticosteroid dose, and seizure control cannot be expressed with one typed brain_mets kind and value.\"\n    }\n  ]\n}",
+      "attempts": 1,
+      "ms": 2720,
+      "invalidKind": []
+    },
+    "NCT06561386": {
+      "ok": true,
+      "parsed": {
+        "schemaVersion": "1",
+        "nctId": "NCT06561386",
+        "parserModel": "gemini-3.5-flash-lite",
+        "promptVersion": "2",
+        "typedChecks": [
+          {
+            "id": "NCT06561386-stage",
+            "kind": "stage_in",
+            "polarity": "inclusion",
+            "sourceText": "Participants must have histologically confirmed Stage IV or recurrent Non-small Cell Lung Cancer (NSCLC) of non-squamous (NSQ) histology with no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.",
+            "stages": [
+              "IV",
+              "IVA",
+              "IVB"
+            ]
+          },
+          {
+            "id": "NCT06561386-histology",
+            "kind": "histology_in",
+            "polarity": "inclusion",
+            "sourceText": "Participants must have histologically confirmed Stage IV or recurrent Non-small Cell Lung Cancer (NSCLC) of non-squamous (NSQ) histology with no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.",
+            "histologies": [
+              "adenocarcinoma",
+              "large_cell",
+              "nsclc_nos"
+            ]
+          },
+          {
+            "id": "NCT06561386-pdl1",
+            "kind": "pdl1_min",
+            "polarity": "inclusion",
+            "sourceText": "Participants must have measurable PD-L1 ≥ 1% Tumor Cell (TC) score by the investigational PD-L1 immunohistochemistry (IHC) assay VENTANA PD-L1 (SP263) CDx Assay conducted by central laboratory during the screening period prior to randomization.",
+            "numberValue": 1
+          },
+          {
+            "id": "NCT06561386-ecog",
+            "kind": "ecog_max",
+            "polarity": "inclusion",
+            "sourceText": "Participants must have an Easter Cooperative Oncology Group (ECOG) performance status of ≤ 1 at screening.",
+            "numberValue": 1
+          },
+          {
+            "id": "NCT06561386-egfr",
+            "kind": "egfr_status",
+            "polarity": "exclusion",
+            "sourceText": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.",
+            "presence": "absent"
+          },
+          {
+            "id": "NCT06561386-alk",
+            "kind": "alk_status",
+            "polarity": "exclusion",
+            "sourceText": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.",
+            "presence": "absent"
+          },
+          {
+            "id": "NCT06561386-ros1",
+            "kind": "ros1_status",
+            "polarity": "exclusion",
+            "sourceText": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.",
+            "presence": "absent"
+          },
+          {
+            "id": "NCT06561386-braf",
+            "kind": "braf_status",
+            "polarity": "exclusion",
+            "sourceText": "Participants with known BRAFV600E mutations, that are sensitive to available targeted inhibitor therapy; participants with known activating rearranged during transfection (RET) mutations or neurotrophic tyrosine receptor kinase (NTRK) fusion gene alterations are excluded. Participants with unknown or indeterminate BRAF mutation, activating RET mutations or NTRK fusion gene alterations are eligible.",
+            "presence": "absent"
+          },
+          {
+            "id": "NCT06561386-brain",
+            "kind": "brain_mets",
+            "polarity": "exclusion",
+            "sourceText": "Participants must not have untreated central nervous system (CNS) metastases.",
+            "allowedBrainMets": [
+              "untreated"
+            ]
+          },
+          {
+            "id": "NCT06561386-prior-pd1",
+            "kind": "prior_therapy_excluded",
+            "polarity": "exclusion",
+            "sourceText": "Prior treatment with an anti-PD-1, anti-PD-L1, anti-PD-L2, or anti-CTLA-4 antibody, or any other antibody or drug specifically targeting T-cell co-stimulation or checkpoint pathways. Note: Anti-PD-1, anti-PD-L1 or anti-CTLA-4 therapy given in an adjuvant, neoadjuvant or perioperative setting with at least 6 months between the last dose and date of recurrence are allowed.",
+            "stringValue": "anti-PD-1"
+          },
+          {
+            "id": "NCT06561386-prior-pdl1",
+            "kind": "prior_therapy_excluded",
+            "polarity": "exclusion",
+            "sourceText": "Prior treatment with an anti-PD-1, anti-PD-L1, anti-PD-L2, or anti-CTLA-4 antibody, or any other antibody or drug specifically targeting T-cell co-stimulation or checkpoint pathways. Note: Anti-PD-1, anti-PD-L1 or anti-CTLA-4 therapy given in an adjuvant, neoadjuvant or perioperative setting with at least 6 months between the last dose and date of recurrence are allowed.",
+            "stringValue": "anti-PD-L1"
+          },
+          {
+            "id": "NCT06561386-prior-pdl2",
+            "kind": "prior_therapy_excluded",
+            "polarity": "exclusion",
+            "sourceText": "Prior treatment with an anti-PD-1, anti-PD-L1, anti-PD-L2, or anti-CTLA-4 antibody, or any other antibody or drug specifically targeting T-cell co-stimulation or checkpoint pathways. Note: Anti-PD-1, anti-PD-L1 or anti-CTLA-4 therapy given in an adjuvant, neoadjuvant or perioperative setting with at least 6 months between the last dose and date of recurrence are allowed.",
+            "stringValue": "anti-PD-L2"
+          },
+          {
+            "id": "NCT06561386-prior-ctla4",
+            "kind": "prior_therapy_excluded",
+            "polarity": "exclusion",
+            "sourceText": "Prior treatment with an anti-PD-1, anti-PD-L1, anti-PD-L2, or anti-CTLA-4 antibody, or any other antibody or drug specifically targeting T-cell co-stimulation or checkpoint pathways. Note: Anti-PD-1, anti-PD-L1 or anti-CTLA-4 therapy given in an adjuvant, neoadjuvant or perioperative setting with at least 6 months between the last dose and date of recurrence are allowed.",
+            "stringValue": "anti-CTLA-4"
+          }
+        ],
+        "fuzzyCriteria": [
+          {
+            "id": "NCT06561386-measurable",
+            "polarity": "inclusion",
+            "sourceText": "Participants must have measurable disease by computed tomography (CT) or magnetic resonance imaging (MRI) per RECIST v1.1 criteria.",
+            "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+          },
+          {
+            "id": "NCT06561386-life",
+            "polarity": "inclusion",
+            "sourceText": "Participants must have a life expectancy of at least 3 months at the time of randomization.",
+            "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+          }
+        ]
+      },
+      "raw": "{\n  \"schemaVersion\": \"1\",\n  \"nctId\": \"NCT06561386\",\n  \"parserModel\": \"gemini-3.5-flash-lite\",\n  \"promptVersion\": \"2\",\n  \"typedChecks\": [\n    {\n      \"id\": \"NCT06561386-stage\",\n      \"kind\": \"stage_in\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Participants must have histologically confirmed Stage IV or recurrent Non-small Cell Lung Cancer (NSCLC) of non-squamous (NSQ) histology with no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.\",\n      \"stages\": [\n        \"IV\",\n        \"IVA\",\n        \"IVB\"\n      ]\n    },\n    {\n      \"id\": \"NCT06561386-histology\",\n      \"kind\": \"histology_in\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Participants must have histologically confirmed Stage IV or recurrent Non-small Cell Lung Cancer (NSCLC) of non-squamous (NSQ) histology with no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.\",\n      \"histologies\": [\n        \"adenocarcinoma\",\n        \"large_cell\",\n        \"nsclc_nos\"\n      ]\n    },\n    {\n      \"id\": \"NCT06561386-pdl1\",\n      \"kind\": \"pdl1_min\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Participants must have measurable PD-L1 ≥ 1% Tumor Cell (TC) score by the investigational PD-L1 immunohistochemistry (IHC) assay VENTANA PD-L1 (SP263) CDx Assay conducted by central laboratory during the screening period prior to randomization.\",\n      \"numberValue\": 1\n    },\n    {\n      \"id\": \"NCT06561386-ecog\",\n      \"kind\": \"ecog_max\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Participants must have an Easter Cooperative Oncology Group (ECOG) performance status of ≤ 1 at screening.\",\n      \"numberValue\": 1\n    },\n    {\n      \"id\": \"NCT06561386-egfr\",\n      \"kind\": \"egfr_status\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.\",\n      \"presence\": \"absent\"\n    },\n    {\n      \"id\": \"NCT06561386-alk\",\n      \"kind\": \"alk_status\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.\",\n      \"presence\": \"absent\"\n    },\n    {\n      \"id\": \"NCT06561386-ros1\",\n      \"kind\": \"ros1_status\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.\",\n      \"presence\": \"absent\"\n    },\n    {\n      \"id\": \"NCT06561386-braf\",\n      \"kind\": \"braf_status\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Participants with known BRAFV600E mutations, that are sensitive to available targeted inhibitor therapy; participants with known activating rearranged during transfection (RET) mutations or neurotrophic tyrosine receptor kinase (NTRK) fusion gene alterations are excluded. Participants with unknown or indeterminate BRAF mutation, activating RET mutations or NTRK fusion gene alterations are eligible.\",\n      \"presence\": \"absent\"\n    },\n    {\n      \"id\": \"NCT06561386-brain\",\n      \"kind\": \"brain_mets\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Participants must not have untreated central nervous system (CNS) metastases.\",\n      \"allowedBrainMets\": [\n        \"untreated\"\n      ]\n    },\n    {\n      \"id\": \"NCT06561386-prior-pd1\",\n      \"kind\": \"prior_therapy_excluded\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Prior treatment with an anti-PD-1, anti-PD-L1, anti-PD-L2, or anti-CTLA-4 antibody, or any other antibody or drug specifically targeting T-cell co-stimulation or checkpoint pathways. Note: Anti-PD-1, anti-PD-L1 or anti-CTLA-4 therapy given in an adjuvant, neoadjuvant or perioperative setting with at least 6 months between the last dose and date of recurrence are allowed.\",\n      \"stringValue\": \"anti-PD-1\"\n    },\n    {\n      \"id\": \"NCT06561386-prior-pdl1\",\n      \"kind\": \"prior_therapy_excluded\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Prior treatment with an anti-PD-1, anti-PD-L1, anti-PD-L2, or anti-CTLA-4 antibody, or any other antibody or drug specifically targeting T-cell co-stimulation or checkpoint pathways. Note: Anti-PD-1, anti-PD-L1 or anti-CTLA-4 therapy given in an adjuvant, neoadjuvant or perioperative setting with at least 6 months between the last dose and date of recurrence are allowed.\",\n      \"stringValue\": \"anti-PD-L1\"\n    },\n    {\n      \"id\": \"NCT06561386-prior-pdl2\",\n      \"kind\": \"prior_therapy_excluded\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Prior treatment with an anti-PD-1, anti-PD-L1, anti-PD-L2, or anti-CTLA-4 antibody, or any other antibody or drug specifically targeting T-cell co-stimulation or checkpoint pathways. Note: Anti-PD-1, anti-PD-L1 or anti-CTLA-4 therapy given in an adjuvant, neoadjuvant or perioperative setting with at least 6 months between the last dose and date of recurrence are allowed.\",\n      \"stringValue\": \"anti-PD-L2\"\n    },\n    {\n      \"id\": \"NCT06561386-prior-ctla4\",\n      \"kind\": \"prior_therapy_excluded\",\n      \"polarity\": \"exclusion\",\n      \"sourceText\": \"Prior treatment with an anti-PD-1, anti-PD-L1, anti-PD-L2, or anti-CTLA-4 antibody, or any other antibody or drug specifically targeting T-cell co-stimulation or checkpoint pathways. Note: Anti-PD-1, anti-PD-L1 or anti-CTLA-4 therapy given in an adjuvant, neoadjuvant or perioperative setting with at least 6 months between the last dose and date of recurrence are allowed.\",\n      \"stringValue\": \"anti-CTLA-4\"\n    }\n  ],\n  \"fuzzyCriteria\": [\n    {\n      \"id\": \"NCT06561386-measurable\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Participants must have measurable disease by computed tomography (CT) or magnetic resonance imaging (MRI) per RECIST v1.1 criteria.\",\n      \"reasonFuzzy\": \"Measurable disease by RECIST is a subjective imaging judgment, not a typed kind.\"\n    },\n    {\n      \"id\": \"NCT06561386-life\",\n      \"polarity\": \"inclusion\",\n      \"sourceText\": \"Participants must have a life expectancy of at least 3 months at the time of randomization.\",\n      \"reasonFuzzy\": \"Life expectancy is a subjective clinical judgment, not a typed lab or stage check.\"\n    }\n  ]\n}",
+      "attempts": 1,
+      "ms": 5820,
+      "invalidKind": []
+    }
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07756645",
+  "briefTitle": "A Study to Assess Intravenous ABBV-1480 Combined With Chemotherapy Versus Pembrolizumab Combined With Chemotherapy for the First Line Treatment of Locally Advanced/Metastatic Non-Small Cell Lung Cancer in Adult Participants",
+  "parsedAt": "2026-11-12T12:00:52.262Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07756645-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Adult subjects with a histologically or cytologically confirmed diagnosis of Stage IIIB, IIIC, or IV sqNSCLC that is not amenable to curative treatment",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Adult subjects with a histologically or cytologically confirmed diagnosis of Stage IIIB, IIIC, or IV sqNSCLC that is not amenable to curative treatment",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07756645-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07756645-brain",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07756645-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one lesion with measurable disease based on Response Evaluation Criteria in Solid Tumors (RECIST) v1.1 as determined by the local site investigator/radiology assessment.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07756645-alterations",
+      "polarity": "exclusion",
+      "sourceText": "Known actionable genomic alterations (including EGFR, ALK, ROS1, BRAF, NTRK, RET, and MET) for which first-line approved therapies are available.",
+      "reasonFuzzy": "Multiple gene alterations combined with conditional approval status cannot be expressed as a single simple typed biomarker status check."
+    },
+    {
+      "id": "NCT07756645-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one lesion with measurable disease based on Response Evaluation Criteria in Solid Tumors (RECIST) v1.1 as determined by the local site investigator/radiology assessment.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07756645-genomic",
+      "polarity": "exclusion",
+      "sourceText": "Known actionable genomic alterations (including EGFR, ALK, ROS1, BRAF, NTRK, RET, and MET) for which first-line approved therapies are available.",
+      "reasonFuzzy": "This exclusion encompasses multiple gene alterations with condition-dependent approvals rather than a single standalone biomarker status."
+    },
+    {
+      "id": "NCT07756645-histology",
+      "polarity": "inclusion",
+      "sourceText": "Adult subjects with a histologically or cytologically confirmed diagnosis of Stage IIIB, IIIC, or IV sqNSCLC that is not amenable to curative treatment",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07756645-systemic",
+      "polarity": "exclusion",
+      "sourceText": "Prior systemic treatment received for locally advanced or metastatic NSCLC.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07756645-histology-excl",
+      "polarity": "exclusion",
+      "sourceText": "Histologically or cytologically confirmed non-sqNSCLC.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 6,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:squamous"
+        },
+        {
+          "kind": "prior_lines_max",
+          "polarity": "exclusion",
+          "value": "n:0"
+        },
+        {
+          "kind": "histology_in",
+          "polarity": "exclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 21264
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 5831
+  },
+  "ms": 35073,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07756645",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07756645-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Adult subjects with a histologically or cytologically confirmed diagnosis of Stage IIIB, IIIC, or IV sqNSCLC that is not amenable to curative treatment",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07756645-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Adult subjects with a histologically or cytologically confirmed diagnosis of Stage IIIB, IIIC, or IV sqNSCLC that is not amenable to curative treatment",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT07756645-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07756645-systemic",
+        "kind": "prior_lines_max",
+        "polarity": "exclusion",
+        "sourceText": "Prior systemic treatment received for locally advanced or metastatic NSCLC.",
+        "numberValue": 0
+      },
+      {
+        "id": "NCT07756645-histology-excl",
+        "kind": "histology_in",
+        "polarity": "exclusion",
+        "sourceText": "Histologically or cytologically confirmed non-sqNSCLC.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07756645-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07756645-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one lesion with measurable disease based on Response Evaluation Criteria in Solid Tumors (RECIST) v1.1 as determined by the local site investigator/radiology assessment.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07756645-alterations",
+        "polarity": "exclusion",
+        "sourceText": "Known actionable genomic alterations (including EGFR, ALK, ROS1, BRAF, NTRK, RET, and MET) for which first-line approved therapies are available.",
+        "reasonFuzzy": "Multiple gene alterations combined with conditional approval status cannot be expressed as a single simple typed biomarker status check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07756645",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07756645-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Adult subjects with a histologically or cytologically confirmed diagnosis of Stage IIIB, IIIC, or IV sqNSCLC that is not amenable to curative treatment",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07756645-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage IIIB, IIIC, or IV sqNSCLC that is not amenable to curative treatment",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT07756645-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07756645-priorsys",
+        "kind": "prior_lines_max",
+        "polarity": "exclusion",
+        "sourceText": "Prior systemic treatment received for locally advanced or metastatic NSCLC.",
+        "numberValue": 0
+      },
+      {
+        "id": "NCT07756645-histologyexcl",
+        "kind": "histology_in",
+        "polarity": "exclusion",
+        "sourceText": "Histologically or cytologically confirmed non-sqNSCLC.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07756645-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07756645-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one lesion with measurable disease based on Response Evaluation Criteria in Solid Tumors (RECIST) v1.1 as determined by the local site investigator/radiology assessment.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07756645-genomic",
+        "polarity": "exclusion",
+        "sourceText": "Known actionable genomic alterations (including EGFR, ALK, ROS1, BRAF, NTRK, RET, and MET) for which first-line approved therapies are available.",
+        "reasonFuzzy": "This exclusion encompasses multiple gene alterations with condition-dependent approvals rather than a single standalone biomarker status."
+      }
+    ]
+  }
+}

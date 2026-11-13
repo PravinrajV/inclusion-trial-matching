@@ -1,0 +1,505 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06449313",
+  "briefTitle": "Neoadjuvant Chemo-Immunotherapy and Surgical Resection in Locally Advanced Non-small Cell Lung Cancer With N3 Lymph Node or Other High Risk Features",
+  "parsedAt": "2026-11-12T05:52:53.614Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06449313-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years at time of signing the informed consent form (ICF).",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years at time of signing the informed consent form (ICF).",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06449313-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0-1.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06449313-egfr",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine clearance ≥ 45 mL/min (calculated using the Cockcroft-Gault formula). If creatinine clearance determined by Cockcroft-Gault is <45 mL/min, another appropriate validated formula or 24hr urine collection may be used in consultation with the study PI.",
+      "numberValue": 45,
+      "evidence_quote": "Creatinine clearance ≥ 45 mL/min (calculated using the Cockcroft-Gault formula). If creatinine clearance determined by Cockcroft-Gault is <45 mL/min, another appropriate validated formula or 24hr urine collection may be used in consultation with the study PI.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06449313-criteria-2",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically-confirmed contralateral mediastinal or ipsilateral supraclavicular (N3) lymph node involvement. Primary tumor and involved lymph nodes should otherwise be deemed appropriate for resection/removal with curative intent as assessed by the treating surgeon prior to study enrollment.",
+      "reasonFuzzy": "Complex anatomic staging subcriteria and surgeon judgment regarding resectability cannot be expressed as simple typed checks."
+    },
+    {
+      "id": "NCT06449313-surgery-risk",
+      "polarity": "inclusion",
+      "sourceText": "Absence of major associated pathologies and co-morbidities that elevate surgery risk to a prohibitive level, as assessed by treating surgeon prior to study enrollment.",
+      "reasonFuzzy": "Surgeon assessment of surgery risk is a subjective judgment."
+    },
+    {
+      "id": "NCT06449313-pulmonary-function",
+      "polarity": "inclusion",
+      "sourceText": "Pulmonary function capacity capable of tolerating the lung resection proposed by the treating surgeon.",
+      "reasonFuzzy": "Functional capacity to tolerate surgery is an investigator/surgeon judgment rather than a single simple lab cutoff."
+    },
+    {
+      "id": "NCT06449313-biomarker-rules",
+      "polarity": "inclusion",
+      "sourceText": "EGFR, ALK, wild-type assessed via any CLIA-certified tissue testing platform. Documentation of EGFR and ALK status is not required for pure squamous NSCLC histology.",
+      "reasonFuzzy": "The biomarker inclusion rules depend on histology and are structured conditionally, not as simple binary presence checks."
+    },
+    {
+      "id": "NCT06449313-m1",
+      "polarity": "exclusion",
+      "sourceText": "Any M1 disease.",
+      "reasonFuzzy": "M1 disease describes metastatic stage IV NSCLC, which is out of scope for stage III studies unless handled contextually; here it is listed as an exclusion."
+    },
+    {
+      "id": "NCT06449313-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute Neutrophil count (ANC) ≥ 1.0 x 10^9/L (1000/uL) without granulocyte colony-stimulating factor support",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06449313-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count ≥ 100 x 10^9/L (100,000/uL) without transfusion",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06449313-surgery_risk",
+      "polarity": "inclusion",
+      "sourceText": "Absence of major associated pathologies and co-morbidities that elevate surgery risk to a prohibitive level, as assessed by treating surgeon prior to study enrollment.",
+      "reasonFuzzy": "Subjective surgical risk assessment by the treating surgeon."
+    },
+    {
+      "id": "NCT06449313-pulmonary_function",
+      "polarity": "inclusion",
+      "sourceText": "Pulmonary function capacity capable of tolerating the lung resection proposed by the treating surgeon.",
+      "reasonFuzzy": "Subjective judgment of pulmonary function capacity for surgery."
+    },
+    {
+      "id": "NCT06449313-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Active or history of clinically significant autoimmune disease that, in the opinion of the investigator, could compromise the health and safety of the patient if treated with anti-PD1 immunotherapy.",
+      "reasonFuzzy": "Investigator judgment of clinical significance and safety."
+    },
+    {
+      "id": "NCT06449313-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute Neutrophil count (ANC) ≥ 1.0 x 10^9/L (1000/uL) without granulocyte colony-stimulating factor support",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06449313-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count ≥ 100 x 10^9/L (100,000/uL) without transfusion",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06449313-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed stage 3 Non-Small Cell Lung Cancer (NSCLC) as assessed per the 8th American Joint Committee on Cancer (AJCC) that meets one of the below criteria:",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06449313-hemoglobin",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin ≥ 90 g/L (9.0 g/dL) (Patients may be transfused to meet this criterion.)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06449313-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) and Alanine aminotransferase (ALT) </= 3 x upper limit of normal (ULN)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06449313-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) and Alanine aminotransferase (ALT) </= 3 x upper limit of normal (ULN)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06449313-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Serum bilirubin </= 2.0 x ULN with the following exception: Patients with known Gilbert disease: serum bilirubin </= 3 x ULN",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06449313-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Any prior systemic therapy for index lung cancer, including immunotherapy, chemotherapy.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06449313-prior-checkpoint",
+      "polarity": "exclusion",
+      "sourceText": "Any prior use of an immune checkpoint blockade therapy including agents directed against CTLA-4, PD-1, and PD-L1.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 10,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute Neutrophil count (ANC) ≥ 1.0 x 10^9/L (1000/uL) without granulocyte colony-stimulating factor support"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelet count ≥ 100 x 10^9/L (100,000/uL) without transfusion"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 10,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute Neutrophil count (ANC) ≥ 1.0 x 10^9/L (1000/uL) without granulocyte colony-stimulating factor support"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelet count ≥ 100 x 10^9/L (100,000/uL) without transfusion"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 10,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 7,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIIA,IIIB,IIIC"
+        },
+        {
+          "kind": "hemoglobin_min",
+          "polarity": "inclusion",
+          "value": "n:90"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:2"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:systemic therapy"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:immune checkpoint blockade therapy"
+        }
+      ],
+      "normalizerTypedCount": 6
+    }
+  },
+  "runA": {
+    "typedEmitted": 12,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 4398
+  },
+  "runB": {
+    "typedEmitted": 12,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 4130
+  },
+  "ms": 16572,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06449313",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06449313-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years at time of signing the informed consent form (ICF).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06449313-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed stage 3 Non-Small Cell Lung Cancer (NSCLC) as assessed per the 8th American Joint Committee on Cancer (AJCC) that meets one of the below criteria:",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT06449313-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06449313-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute Neutrophil count (ANC) ≥ 1.0 x 10^9/L (1000/uL) without granulocyte colony-stimulating factor support",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06449313-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count ≥ 100 x 10^9/L (100,000/uL) without transfusion",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT06449313-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 90 g/L (9.0 g/dL) (Patients may be transfused to meet this criterion.)",
+        "numberValue": 90
+      },
+      {
+        "id": "NCT06449313-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and Alanine aminotransferase (ALT) </= 3 x upper limit of normal (ULN)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06449313-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and Alanine aminotransferase (ALT) </= 3 x upper limit of normal (ULN)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06449313-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Serum bilirubin </= 2.0 x ULN with the following exception: Patients with known Gilbert disease: serum bilirubin </= 3 x ULN",
+        "numberValue": 2,
+        "stages": [],
+        "stringValue": "serum bilirubin <= 2.0 x ULN with the following exception: Patients with known Gilbert disease: serum bilirubin <= 3 x ULN"
+      },
+      {
+        "id": "NCT06449313-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine clearance ≥ 45 mL/min (calculated using the Cockcroft-Gault formula). If creatinine clearance determined by Cockcroft-Gault is <45 mL/min, another appropriate validated formula or 24hr urine collection may be used in consultation with the study PI.",
+        "numberValue": 45
+      },
+      {
+        "id": "NCT06449313-prior-therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior systemic therapy for index lung cancer, including immunotherapy, chemotherapy.",
+        "stringValue": "systemic therapy"
+      },
+      {
+        "id": "NCT06449313-prior-checkpoint",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior use of an immune checkpoint blockade therapy including agents directed against CTLA-4, PD-1, and PD-L1.",
+        "stringValue": "immune checkpoint blockade therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06449313-criteria-2",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically-confirmed contralateral mediastinal or ipsilateral supraclavicular (N3) lymph node involvement. Primary tumor and involved lymph nodes should otherwise be deemed appropriate for resection/removal with curative intent as assessed by the treating surgeon prior to study enrollment.",
+        "reasonFuzzy": "Complex anatomic staging subcriteria and surgeon judgment regarding resectability cannot be expressed as simple typed checks."
+      },
+      {
+        "id": "NCT06449313-surgery-risk",
+        "polarity": "inclusion",
+        "sourceText": "Absence of major associated pathologies and co-morbidities that elevate surgery risk to a prohibitive level, as assessed by treating surgeon prior to study enrollment.",
+        "reasonFuzzy": "Surgeon assessment of surgery risk is a subjective judgment."
+      },
+      {
+        "id": "NCT06449313-pulmonary-function",
+        "polarity": "inclusion",
+        "sourceText": "Pulmonary function capacity capable of tolerating the lung resection proposed by the treating surgeon.",
+        "reasonFuzzy": "Functional capacity to tolerate surgery is an investigator/surgeon judgment rather than a single simple lab cutoff."
+      },
+      {
+        "id": "NCT06449313-biomarker-rules",
+        "polarity": "inclusion",
+        "sourceText": "EGFR, ALK, wild-type assessed via any CLIA-certified tissue testing platform. Documentation of EGFR and ALK status is not required for pure squamous NSCLC histology.",
+        "reasonFuzzy": "The biomarker inclusion rules depend on histology and are structured conditionally, not as simple binary presence checks."
+      },
+      {
+        "id": "NCT06449313-m1",
+        "polarity": "exclusion",
+        "sourceText": "Any M1 disease.",
+        "reasonFuzzy": "M1 disease describes metastatic stage IV NSCLC, which is out of scope for stage III studies unless handled contextually; here it is listed as an exclusion."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06449313",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06449313-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years at time of signing the informed consent form (ICF).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06449313-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed stage 3 Non-Small Cell Lung Cancer (NSCLC) as assessed per the 8th American Joint Committee on Cancer (AJCC)",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT06449313-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06449313-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute Neutrophil count (ANC) ≥ 1.0 x 10^9/L (1000/uL) without granulocyte colony-stimulating factor support",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06449313-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count ≥ 100 x 10^9/L (100,000/uL) without transfusion",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT06449313-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 90 g/L (9.0 g/dL) (Patients may be transfused to meet this criterion.)",
+        "numberValue": 90
+      },
+      {
+        "id": "NCT06449313-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and Alanine aminotransferase (ALT) </= 3 x upper limit of normal (ULN)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06449313-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and Alanine aminotransferase (ALT) </= 3 x upper limit of normal (ULN)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06449313-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Serum bilirubin </= 2.0 x ULN with the following exception: Patients with known Gilbert disease: serum bilirubin </= 3 x ULN",
+        "numberValue": 2,
+        "stages": [],
+        "stringValue": "Patients with known Gilbert disease: serum bilirubin </= 3 x ULN"
+      },
+      {
+        "id": "NCT06449313-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine clearance ≥ 45 mL/min (calculated using the Cockcroft-Gault formula). If creatinine clearance determined by Cockcroft-Gault is <45 mL/min, another appropriate validated formula or 24hr urine collection may be used in consultation with the study PI.",
+        "numberValue": 45,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT06449313-prior_therapy_excluded",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior systemic therapy for index lung cancer, including immunotherapy, chemotherapy.",
+        "stringValue": "systemic therapy"
+      },
+      {
+        "id": "NCT06449313-prior_therapy_excluded_checkpoint",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior use of an immune checkpoint blockade therapy including agents directed against CTLA-4, PD-1, and PD-L1.",
+        "stringValue": "immune checkpoint blockade therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06449313-surgery_risk",
+        "polarity": "inclusion",
+        "sourceText": "Absence of major associated pathologies and co-morbidities that elevate surgery risk to a prohibitive level, as assessed by treating surgeon prior to study enrollment.",
+        "reasonFuzzy": "Subjective surgical risk assessment by the treating surgeon."
+      },
+      {
+        "id": "NCT06449313-pulmonary_function",
+        "polarity": "inclusion",
+        "sourceText": "Pulmonary function capacity capable of tolerating the lung resection proposed by the treating surgeon.",
+        "reasonFuzzy": "Subjective judgment of pulmonary function capacity for surgery."
+      },
+      {
+        "id": "NCT06449313-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Active or history of clinically significant autoimmune disease that, in the opinion of the investigator, could compromise the health and safety of the patient if treated with anti-PD1 immunotherapy.",
+        "reasonFuzzy": "Investigator judgment of clinical significance and safety."
+      }
+    ]
+  }
+}

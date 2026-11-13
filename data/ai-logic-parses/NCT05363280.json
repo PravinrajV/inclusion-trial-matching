@@ -1,0 +1,190 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05363280",
+  "briefTitle": "Phase 2 Study for the Patient, Who Has Diagnosed With Small Cell Lung Cancer (SCLC) or Non Small Cell Lung Cancer (NSCLC) or Renal Cell Carcinoma (RCC) and Finished the First Line Stand Treatment , Need More Treatment",
+  "parsedAt": "2026-11-12T06:13:33.839Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05363280-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male or female, 18 years of age or older",
+      "numberValue": 18,
+      "evidence_quote": "Male or female, 18 years of age or older",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05363280-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05363280-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed SCLC /NSCLC/RCC",
+      "reasonFuzzy": "The trial enrolls multiple cancer types (SCLC, NSCLC, RCC) and does not specify NSCLC stage or a single clean histology subset."
+    },
+    {
+      "id": "NCT05363280-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have at least 1 lesion that meets the criteria for being measurable, as defined by RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05363280-life",
+      "polarity": "inclusion",
+      "sourceText": "Have a life expectancy of at least 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05363280-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed SCLC /NSCLC/RCC",
+      "reasonFuzzy": "This trial enrolls multiple different cancer types including SCLC and RCC alongside NSCLC, and does not specify a typed histology check for NSCLC subtypes."
+    },
+    {
+      "id": "NCT05363280-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have at least 1 lesion that meets the criteria for being measurable, as defined by RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05363280-life",
+      "polarity": "inclusion",
+      "sourceText": "Have a life expectancy of at least 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 4190
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 14300
+  },
+  "ms": 26476,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05363280",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05363280-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female, 18 years of age or older",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05363280-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05363280-histology",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed SCLC /NSCLC/RCC",
+        "reasonFuzzy": "The trial enrolls multiple cancer types (SCLC, NSCLC, RCC) and does not specify NSCLC stage or a single clean histology subset."
+      },
+      {
+        "id": "NCT05363280-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have at least 1 lesion that meets the criteria for being measurable, as defined by RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05363280-life",
+        "polarity": "inclusion",
+        "sourceText": "Have a life expectancy of at least 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05363280",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05363280-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female, 18 years of age or older",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05363280-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05363280-histology",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed SCLC /NSCLC/RCC",
+        "reasonFuzzy": "This trial enrolls multiple different cancer types including SCLC and RCC alongside NSCLC, and does not specify a typed histology check for NSCLC subtypes."
+      },
+      {
+        "id": "NCT05363280-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have at least 1 lesion that meets the criteria for being measurable, as defined by RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05363280-life",
+        "polarity": "inclusion",
+        "sourceText": "Have a life expectancy of at least 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      }
+    ]
+  }
+}

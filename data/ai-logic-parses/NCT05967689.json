@@ -1,0 +1,289 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05967689",
+  "briefTitle": "A Study of Zipalertinib in Patients With Advanced Non-Small Cell Lung Cancer With Epidermal Growth Factor Receptor (EGFR) Exon 20 Insertions or Other Uncommon Mutation.",
+  "parsedAt": "2026-11-12T06:21:10.761Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05967689-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "≥18 years of age (or meets the country's regulatory definition of legal adult age, whichever is greater.",
+      "numberValue": 18,
+      "evidence_quote": "≥18 years of age (or meets the country's regulatory definition of legal adult age, whichever is greater.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05967689-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group Performance Status (ECOG PS) 0 or 17.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group Performance Status (ECOG PS) 0 or 17.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05967689-cohorts-brain",
+      "polarity": "inclusion",
+      "sourceText": "Participants with brain metastasis must be neurologically stable. Participants must have received central nervous system (CNS)-directed therapy and have no evidence of progression for at least 4 weeks after CNS-directed treatment",
+      "reasonFuzzy": "Brain metastasis and CNS rules vary across multiple study cohorts and include complex stability and treatment criteria that cannot be represented as a single typed check."
+    },
+    {
+      "id": "NCT05967689-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST 1.1).",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05967689-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function, as defined by the hematologic, renal and hepatic laboratory values.",
+      "reasonFuzzy": "Organ function requires specific lab cutoffs not fully detailed in this sentence."
+    },
+    {
+      "id": "NCT05967689-excl-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "Participants with leptomeningeal CNS disease.",
+      "reasonFuzzy": "Leptomeningeal disease is a specific CNS exclusion not covered by standard brain_mets kinds."
+    },
+    {
+      "id": "NCT05967689-stage",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically confirmed, locally advanced or metastatic NSCLC",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but lacks a specific numbered stage list for a stage_in check."
+    },
+    {
+      "id": "NCT05967689-cohort-a-brain",
+      "polarity": "inclusion",
+      "sourceText": "Participants with brain metastasis must be neurologically stable. Participants must have received central nervous system (CNS)-directed therapy and have no evidence of progression for at least 4 weeks after CNS-directed treatment",
+      "reasonFuzzy": "Complex cohort-specific brain metastasis criteria that combine neurological stability, prior CNS-directed therapy, and time cutoffs."
+    },
+    {
+      "id": "NCT05967689-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST 1.1).",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT05967689-organ-function",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function, as defined by the hematologic, renal and hepatic laboratory values.",
+      "reasonFuzzy": "Refers generally to laboratory values without explicit individual cutoffs listed in this sentence."
+    },
+    {
+      "id": "NCT05967689-excl-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "Participants with leptomeningeal CNS disease.",
+      "reasonFuzzy": "Leptomeningeal disease is a specific CNS subset not fully captured by simple allowedBrainMets categories."
+    },
+    {
+      "id": "NCT05967689-excl-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Have any unresolved toxicity of Grade ≥2 from previous anticancer treatment, except for Grade 2 alopecia or skin pigmentation.",
+      "reasonFuzzy": "Unresolved toxicity grading and exceptions are judgment-based."
+    },
+    {
+      "id": "NCT05967689-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Documented EGFR ex20ins status",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05967689-prior-drug",
+      "polarity": "exclusion",
+      "sourceText": "Participant has received Zipalertinib (TAS6417/CLN081) at any time",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:zipalertinib"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 4,
+    "attempts": 2,
+    "ms": 16131
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2802
+  },
+  "ms": 26979,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05967689",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05967689-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "≥18 years of age (or meets the country's regulatory definition of legal adult age, whichever is greater.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05967689-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Documented EGFR ex20ins status",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05967689-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group Performance Status (ECOG PS) 0 or 17.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05967689-prior-drug",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participant has received Zipalertinib (TAS6417/CLN081) at any time",
+        "stringValue": "Zipalertinib"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05967689-cohorts-brain",
+        "polarity": "inclusion",
+        "sourceText": "Participants with brain metastasis must be neurologically stable. Participants must have received central nervous system (CNS)-directed therapy and have no evidence of progression for at least 4 weeks after CNS-directed treatment",
+        "reasonFuzzy": "Brain metastasis and CNS rules vary across multiple study cohorts and include complex stability and treatment criteria that cannot be represented as a single typed check."
+      },
+      {
+        "id": "NCT05967689-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST 1.1).",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05967689-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function, as defined by the hematologic, renal and hepatic laboratory values.",
+        "reasonFuzzy": "Organ function requires specific lab cutoffs not fully detailed in this sentence."
+      },
+      {
+        "id": "NCT05967689-excl-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "Participants with leptomeningeal CNS disease.",
+        "reasonFuzzy": "Leptomeningeal disease is a specific CNS exclusion not covered by standard brain_mets kinds."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05967689",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05967689-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "≥18 years of age (or meets the country's regulatory definition of legal adult age, whichever is greater.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05967689-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Documented EGFR ex20ins status",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05967689-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group Performance Status (ECOG PS) 0 or 17.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05967689-prior-drug-excl",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participant has received Zipalertinib (TAS6417/CLN081) at any time",
+        "stringValue": "Zipalertinib"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05967689-stage",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed, locally advanced or metastatic NSCLC",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but lacks a specific numbered stage list for a stage_in check."
+      },
+      {
+        "id": "NCT05967689-cohort-a-brain",
+        "polarity": "inclusion",
+        "sourceText": "Participants with brain metastasis must be neurologically stable. Participants must have received central nervous system (CNS)-directed therapy and have no evidence of progression for at least 4 weeks after CNS-directed treatment",
+        "reasonFuzzy": "Complex cohort-specific brain metastasis criteria that combine neurological stability, prior CNS-directed therapy, and time cutoffs."
+      },
+      {
+        "id": "NCT05967689-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST 1.1).",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT05967689-organ-function",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function, as defined by the hematologic, renal and hepatic laboratory values.",
+        "reasonFuzzy": "Refers generally to laboratory values without explicit individual cutoffs listed in this sentence."
+      },
+      {
+        "id": "NCT05967689-excl-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "Participants with leptomeningeal CNS disease.",
+        "reasonFuzzy": "Leptomeningeal disease is a specific CNS subset not fully captured by simple allowedBrainMets categories."
+      },
+      {
+        "id": "NCT05967689-excl-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Have any unresolved toxicity of Grade ≥2 from previous anticancer treatment, except for Grade 2 alopecia or skin pigmentation.",
+        "reasonFuzzy": "Unresolved toxicity grading and exceptions are judgment-based."
+      }
+    ]
+  }
+}

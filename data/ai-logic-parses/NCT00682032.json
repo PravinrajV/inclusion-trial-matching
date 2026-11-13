@@ -1,0 +1,392 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT00682032",
+  "briefTitle": "The Effect of Beta-glucan in Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:59:48.776Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT00682032-ecog-aim2",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 3",
+      "numberValue": 3,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 3",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT00682032-anc-aim2",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "absolute neutrophil count (ANC) at least 1500/microl",
+      "numberValue": 1500,
+      "evidence_quote": "absolute neutrophil count (ANC) at least 1500/microl",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT00682032-ecog-aim3",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2",
+      "numberValue": 2,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT00682032-anc-aim3",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "absolute neutrophil count (ANC) at least 1500/microl",
+      "numberValue": 1500,
+      "evidence_quote": "absolute neutrophil count (ANC) at least 1500/microl",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT00682032-swallow-aim2",
+      "polarity": "inclusion",
+      "sourceText": "able to swallow pills",
+      "reasonFuzzy": "Ability to swallow pills is a subjective or procedural requirement, not a typed check."
+    },
+    {
+      "id": "NCT00682032-consent-aim2",
+      "polarity": "inclusion",
+      "sourceText": "able to understand and willing to sign a written informed consent document",
+      "reasonFuzzy": "Willingness and ability to provide informed consent is a regulatory requirement, not a typed check."
+    },
+    {
+      "id": "NCT00682032-stage-aim3",
+      "polarity": "inclusion",
+      "sourceText": "resectable non-small cell lung cancer (NSCLC), as determined by a thoracic surgeon",
+      "reasonFuzzy": "Resectability as determined by a thoracic surgeon involves investigator judgment and does not specify a numbered stage list."
+    },
+    {
+      "id": "NCT00682032-operative-aim3",
+      "polarity": "inclusion",
+      "sourceText": "must be an operative candidate",
+      "reasonFuzzy": "Operative candidate status is investigator judgment, not a typed check."
+    },
+    {
+      "id": "NCT00682032-swallow-aim3",
+      "polarity": "inclusion",
+      "sourceText": "able to swallow pills",
+      "reasonFuzzy": "Ability to swallow pills is a subjective or procedural requirement, not a typed check."
+    },
+    {
+      "id": "NCT00682032-consent-aim3",
+      "polarity": "inclusion",
+      "sourceText": "able to understand and willing to sign a written informed consent document",
+      "reasonFuzzy": "Willingness and ability to provide informed consent is a regulatory requirement, not a typed check."
+    },
+    {
+      "id": "NCT00682032-aim2-treatment",
+      "polarity": "inclusion",
+      "sourceText": "treatment naive or no treatment within 6 months prior to enrollment",
+      "reasonFuzzy": "Prior therapy rule allows treatment naive or a time window, which cannot be expressed as a simple typed prior therapy check."
+    },
+    {
+      "id": "NCT00682032-aim2-swallow",
+      "polarity": "inclusion",
+      "sourceText": "able to swallow pills",
+      "reasonFuzzy": "Ability to swallow pills is a physical capability/subjective judgment, not a typed check."
+    },
+    {
+      "id": "NCT00682032-aim2-consent",
+      "polarity": "inclusion",
+      "sourceText": "able to understand and willing to sign a written informed consent document",
+      "reasonFuzzy": "Willingness and ability to sign informed consent is a subjective criterion."
+    },
+    {
+      "id": "NCT00682032-aim2-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "history of hypersensitivity reactions attributed to beta-glucan",
+      "reasonFuzzy": "Hypersensitivity to the specific investigational agent is not a standard typed exclusion."
+    },
+    {
+      "id": "NCT00682032-aim2-steroids",
+      "polarity": "exclusion",
+      "sourceText": "currently receiving continuous corticosteroids or other ongoing immunosuppressive therapy",
+      "reasonFuzzy": "Ongoing immunosuppressive therapy and continuous corticosteroids are not a simple typed prior therapy exclusion."
+    },
+    {
+      "id": "NCT00682032-aim2-uncontrolled",
+      "polarity": "exclusion",
+      "sourceText": "presence of an uncontrolled intercurrent illness including but not limited to: ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements",
+      "reasonFuzzy": "Uncontrolled intercurrent illnesses and investigator assessment of compliance are subjective clinical judgments."
+    },
+    {
+      "id": "NCT00682032-aim3-resectable",
+      "polarity": "inclusion",
+      "sourceText": "resectable non-small cell lung cancer (NSCLC), as determined by a thoracic surgeon",
+      "reasonFuzzy": "Resectability determined by a thoracic surgeon is a subjective assessment, and stage is not explicitly numbered."
+    },
+    {
+      "id": "NCT00682032-aim3-operative",
+      "polarity": "inclusion",
+      "sourceText": "must be an operative candidate",
+      "reasonFuzzy": "Operative candidacy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT00682032-aim3-swallow",
+      "polarity": "inclusion",
+      "sourceText": "able to swallow pills",
+      "reasonFuzzy": "Ability to swallow pills is a physical capability, not a typed check."
+    },
+    {
+      "id": "NCT00682032-aim3-consent",
+      "polarity": "inclusion",
+      "sourceText": "able to understand and willing to sign a written informed consent document",
+      "reasonFuzzy": "Willingness and ability to sign informed consent is a subjective criterion."
+    },
+    {
+      "id": "NCT00682032-aim3-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "history of hypersensitivity reactions attributed to beta-glucan",
+      "reasonFuzzy": "Hypersensitivity to the specific investigational agent is not a standard typed exclusion."
+    },
+    {
+      "id": "NCT00682032-aim3-steroids",
+      "polarity": "exclusion",
+      "sourceText": "currently receiving continuous corticosteroids or other ongoing immunosuppressive therapy",
+      "reasonFuzzy": "Ongoing immunosuppressive therapy and continuous corticosteroids are not a simple typed prior therapy exclusion."
+    },
+    {
+      "id": "NCT00682032-aim3-uncontrolled",
+      "polarity": "exclusion",
+      "sourceText": "presence of an uncontrolled intercurrent illness including but not limited to: ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements",
+      "reasonFuzzy": "Uncontrolled intercurrent illnesses and investigator assessment of compliance are subjective clinical judgments."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2502
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 13,
+    "attempts": 1,
+    "ms": 3622
+  },
+  "ms": 14076,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT00682032",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT00682032-ecog-aim2",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 3",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT00682032-anc-aim2",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "absolute neutrophil count (ANC) at least 1500/microl",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT00682032-ecog-aim3",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT00682032-anc-aim3",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "absolute neutrophil count (ANC) at least 1500/microl",
+        "numberValue": 1500
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT00682032-swallow-aim2",
+        "polarity": "inclusion",
+        "sourceText": "able to swallow pills",
+        "reasonFuzzy": "Ability to swallow pills is a subjective or procedural requirement, not a typed check."
+      },
+      {
+        "id": "NCT00682032-consent-aim2",
+        "polarity": "inclusion",
+        "sourceText": "able to understand and willing to sign a written informed consent document",
+        "reasonFuzzy": "Willingness and ability to provide informed consent is a regulatory requirement, not a typed check."
+      },
+      {
+        "id": "NCT00682032-stage-aim3",
+        "polarity": "inclusion",
+        "sourceText": "resectable non-small cell lung cancer (NSCLC), as determined by a thoracic surgeon",
+        "reasonFuzzy": "Resectability as determined by a thoracic surgeon involves investigator judgment and does not specify a numbered stage list."
+      },
+      {
+        "id": "NCT00682032-operative-aim3",
+        "polarity": "inclusion",
+        "sourceText": "must be an operative candidate",
+        "reasonFuzzy": "Operative candidate status is investigator judgment, not a typed check."
+      },
+      {
+        "id": "NCT00682032-swallow-aim3",
+        "polarity": "inclusion",
+        "sourceText": "able to swallow pills",
+        "reasonFuzzy": "Ability to swallow pills is a subjective or procedural requirement, not a typed check."
+      },
+      {
+        "id": "NCT00682032-consent-aim3",
+        "polarity": "inclusion",
+        "sourceText": "able to understand and willing to sign a written informed consent document",
+        "reasonFuzzy": "Willingness and ability to provide informed consent is a regulatory requirement, not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT00682032",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT00682032-ecog-aim2",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 3",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT00682032-anc-aim2",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "absolute neutrophil count (ANC) at least 1500/microl",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT00682032-ecog-aim3",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT00682032-anc-aim3",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "absolute neutrophil count (ANC) at least 1500/microl",
+        "numberValue": 1500
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT00682032-aim2-treatment",
+        "polarity": "inclusion",
+        "sourceText": "treatment naive or no treatment within 6 months prior to enrollment",
+        "reasonFuzzy": "Prior therapy rule allows treatment naive or a time window, which cannot be expressed as a simple typed prior therapy check."
+      },
+      {
+        "id": "NCT00682032-aim2-swallow",
+        "polarity": "inclusion",
+        "sourceText": "able to swallow pills",
+        "reasonFuzzy": "Ability to swallow pills is a physical capability/subjective judgment, not a typed check."
+      },
+      {
+        "id": "NCT00682032-aim2-consent",
+        "polarity": "inclusion",
+        "sourceText": "able to understand and willing to sign a written informed consent document",
+        "reasonFuzzy": "Willingness and ability to sign informed consent is a subjective criterion."
+      },
+      {
+        "id": "NCT00682032-aim2-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "history of hypersensitivity reactions attributed to beta-glucan",
+        "reasonFuzzy": "Hypersensitivity to the specific investigational agent is not a standard typed exclusion."
+      },
+      {
+        "id": "NCT00682032-aim2-steroids",
+        "polarity": "exclusion",
+        "sourceText": "currently receiving continuous corticosteroids or other ongoing immunosuppressive therapy",
+        "reasonFuzzy": "Ongoing immunosuppressive therapy and continuous corticosteroids are not a simple typed prior therapy exclusion."
+      },
+      {
+        "id": "NCT00682032-aim2-uncontrolled",
+        "polarity": "exclusion",
+        "sourceText": "presence of an uncontrolled intercurrent illness including but not limited to: ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements",
+        "reasonFuzzy": "Uncontrolled intercurrent illnesses and investigator assessment of compliance are subjective clinical judgments."
+      },
+      {
+        "id": "NCT00682032-aim3-resectable",
+        "polarity": "inclusion",
+        "sourceText": "resectable non-small cell lung cancer (NSCLC), as determined by a thoracic surgeon",
+        "reasonFuzzy": "Resectability determined by a thoracic surgeon is a subjective assessment, and stage is not explicitly numbered."
+      },
+      {
+        "id": "NCT00682032-aim3-operative",
+        "polarity": "inclusion",
+        "sourceText": "must be an operative candidate",
+        "reasonFuzzy": "Operative candidacy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT00682032-aim3-swallow",
+        "polarity": "inclusion",
+        "sourceText": "able to swallow pills",
+        "reasonFuzzy": "Ability to swallow pills is a physical capability, not a typed check."
+      },
+      {
+        "id": "NCT00682032-aim3-consent",
+        "polarity": "inclusion",
+        "sourceText": "able to understand and willing to sign a written informed consent document",
+        "reasonFuzzy": "Willingness and ability to sign informed consent is a subjective criterion."
+      },
+      {
+        "id": "NCT00682032-aim3-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "history of hypersensitivity reactions attributed to beta-glucan",
+        "reasonFuzzy": "Hypersensitivity to the specific investigational agent is not a standard typed exclusion."
+      },
+      {
+        "id": "NCT00682032-aim3-steroids",
+        "polarity": "exclusion",
+        "sourceText": "currently receiving continuous corticosteroids or other ongoing immunosuppressive therapy",
+        "reasonFuzzy": "Ongoing immunosuppressive therapy and continuous corticosteroids are not a simple typed prior therapy exclusion."
+      },
+      {
+        "id": "NCT00682032-aim3-uncontrolled",
+        "polarity": "exclusion",
+        "sourceText": "presence of an uncontrolled intercurrent illness including but not limited to: ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements",
+        "reasonFuzzy": "Uncontrolled intercurrent illnesses and investigator assessment of compliance are subjective clinical judgments."
+      }
+    ]
+  }
+}

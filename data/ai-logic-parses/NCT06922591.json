@@ -1,0 +1,368 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06922591",
+  "briefTitle": "Study to Evaluate the Safety, Tolerability & Efficacy of TNG462 in Combination in PDAC & NSCLC Patients",
+  "parsedAt": "2026-11-12T10:40:45.877Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06922591-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Is ≥18 years of age at the time of signature of the main study ICF.",
+      "numberValue": 18,
+      "evidence_quote": "Is ≥18 years of age at the time of signature of the main study ICF.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06922591-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Has an ECOG PS of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Has an ECOG PS of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06922591-brain",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Has known or suspected active or untreated CNS metastases associated with progressive neurological symptoms",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Has known or suspected active or untreated CNS metastases associated with progressive neurological symptoms",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06922591-mtap",
+      "polarity": "inclusion",
+      "sourceText": "Has a tumor with loss of MTAP protein or bi-allelic deletion of the MTAP gene",
+      "reasonFuzzy": "There is no typed biomarker kind for MTAP."
+    },
+    {
+      "id": "NCT06922591-stage",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically documented metastatic PDAC or locally advanced, recurrent or metastatic NSCLC",
+      "reasonFuzzy": "The stage description is locally advanced, recurrent, or metastatic without a strict stage listing, but remains in scope."
+    },
+    {
+      "id": "NCT06922591-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Has received prior standard therapy",
+      "reasonFuzzy": "Prior standard therapy is a broad requirement that cannot be mapped to a specific typed prior_therapy check."
+    },
+    {
+      "id": "NCT06922591-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has evidence of measurable disease based on RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06922591-trial-enrollment",
+      "polarity": "exclusion",
+      "sourceText": "Arms A and B only: Prior enrollment in any phase 3 clinical trial of RMC-6236 or RMC-9805",
+      "reasonFuzzy": "Prior enrollment in specific phase 3 clinical trials is not a standard drug or therapy class exclusion."
+    },
+    {
+      "id": "NCT06922591-mtap",
+      "polarity": "inclusion",
+      "sourceText": "Has a tumor with loss of MTAP protein or bi-allelic deletion of the MTAP gene",
+      "reasonFuzzy": "MTAP status is not one of the allowed typed biomarker kinds."
+    },
+    {
+      "id": "NCT06922591-stage",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically documented metastatic PDAC or locally advanced, recurrent or metastatic NSCLC",
+      "reasonFuzzy": "The text lists locally advanced, recurrent, or metastatic disease without a numbered stage list, keeping it in scope as advanced NSCLC."
+    },
+    {
+      "id": "NCT06922591-priors",
+      "polarity": "inclusion",
+      "sourceText": "Has received prior standard therapy",
+      "reasonFuzzy": "Prior standard therapy is not a specific prior lines or typed therapy check."
+    },
+    {
+      "id": "NCT06922591-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has evidence of measurable disease based on RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06922591-rmc",
+      "polarity": "exclusion",
+      "sourceText": "Arms A and B only: Prior enrollment in any phase 3 clinical trial of RMC-6236 or RMC-9805",
+      "reasonFuzzy": "Prior trial enrollment is not a typed prior therapy or drug class check."
+    },
+    {
+      "id": "NCT06922591-kras",
+      "polarity": "inclusion",
+      "sourceText": "Arms A and B only: Has a tumor with a RAS mutation",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06922591-prior-ras",
+      "polarity": "exclusion",
+      "sourceText": "Arms A and B only: Must not have received prior RAS-targeted therapy",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06922591-prior-prmt5",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior treatment with a PRMT5 inhibitor, or MAT2A inhibitor",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06922591-prior-mat2a",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior treatment with a PRMT5 inhibitor, or MAT2A inhibitor",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 7,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 7,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 7,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:ras-targeted therapy"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:prmt5 inhibitor"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:mat2a inhibitor"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 14330
+  },
+  "runB": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 9489
+  },
+  "ms": 31814,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06922591",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06922591-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Is ≥18 years of age at the time of signature of the main study ICF.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06922591-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has an ECOG PS of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06922591-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Arms A and B only: Has a tumor with a RAS mutation",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06922591-prior-ras",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Arms A and B only: Must not have received prior RAS-targeted therapy",
+        "stringValue": "RAS-targeted therapy"
+      },
+      {
+        "id": "NCT06922591-prior-prmt5",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior treatment with a PRMT5 inhibitor, or MAT2A inhibitor",
+        "stringValue": "PRMT5 inhibitor"
+      },
+      {
+        "id": "NCT06922591-prior-mat2a",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior treatment with a PRMT5 inhibitor, or MAT2A inhibitor",
+        "stringValue": "MAT2A inhibitor"
+      },
+      {
+        "id": "NCT06922591-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known or suspected active or untreated CNS metastases associated with progressive neurological symptoms",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06922591-mtap",
+        "polarity": "inclusion",
+        "sourceText": "Has a tumor with loss of MTAP protein or bi-allelic deletion of the MTAP gene",
+        "reasonFuzzy": "There is no typed biomarker kind for MTAP."
+      },
+      {
+        "id": "NCT06922591-stage",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically documented metastatic PDAC or locally advanced, recurrent or metastatic NSCLC",
+        "reasonFuzzy": "The stage description is locally advanced, recurrent, or metastatic without a strict stage listing, but remains in scope."
+      },
+      {
+        "id": "NCT06922591-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Has received prior standard therapy",
+        "reasonFuzzy": "Prior standard therapy is a broad requirement that cannot be mapped to a specific typed prior_therapy check."
+      },
+      {
+        "id": "NCT06922591-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has evidence of measurable disease based on RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06922591-trial-enrollment",
+        "polarity": "exclusion",
+        "sourceText": "Arms A and B only: Prior enrollment in any phase 3 clinical trial of RMC-6236 or RMC-9805",
+        "reasonFuzzy": "Prior enrollment in specific phase 3 clinical trials is not a standard drug or therapy class exclusion."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06922591",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06922591-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Is ≥18 years of age at the time of signature of the main study ICF.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06922591-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has an ECOG PS of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06922591-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Arms A and B only: Has a tumor with a RAS mutation",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06922591-prmt5-excl",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior treatment with a PRMT5 inhibitor, or MAT2A inhibitor",
+        "stringValue": "PRMT5 inhibitor"
+      },
+      {
+        "id": "NCT06922591-mat2a-excl",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior treatment with a PRMT5 inhibitor, or MAT2A inhibitor",
+        "stringValue": "MAT2A inhibitor"
+      },
+      {
+        "id": "NCT06922591-ras-excl",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Arms A and B only: Must not have received prior RAS-targeted therapy",
+        "stringValue": "RAS-targeted therapy"
+      },
+      {
+        "id": "NCT06922591-brain-excl",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known or suspected active or untreated CNS metastases associated with progressive neurological symptoms",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06922591-mtap",
+        "polarity": "inclusion",
+        "sourceText": "Has a tumor with loss of MTAP protein or bi-allelic deletion of the MTAP gene",
+        "reasonFuzzy": "MTAP status is not one of the allowed typed biomarker kinds."
+      },
+      {
+        "id": "NCT06922591-stage",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically documented metastatic PDAC or locally advanced, recurrent or metastatic NSCLC",
+        "reasonFuzzy": "The text lists locally advanced, recurrent, or metastatic disease without a numbered stage list, keeping it in scope as advanced NSCLC."
+      },
+      {
+        "id": "NCT06922591-priors",
+        "polarity": "inclusion",
+        "sourceText": "Has received prior standard therapy",
+        "reasonFuzzy": "Prior standard therapy is not a specific prior lines or typed therapy check."
+      },
+      {
+        "id": "NCT06922591-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has evidence of measurable disease based on RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06922591-rmc",
+        "polarity": "exclusion",
+        "sourceText": "Arms A and B only: Prior enrollment in any phase 3 clinical trial of RMC-6236 or RMC-9805",
+        "reasonFuzzy": "Prior trial enrollment is not a typed prior therapy or drug class check."
+      }
+    ]
+  }
+}

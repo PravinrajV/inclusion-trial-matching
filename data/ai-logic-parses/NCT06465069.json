@@ -1,0 +1,255 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06465069",
+  "briefTitle": "A Study of LY4052031 in Participants With Advanced or Metastatic Urothelial Cancer or Other Solid Tumors",
+  "parsedAt": "2026-11-12T09:23:26.620Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06465069-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06465069-cohort",
+      "polarity": "inclusion",
+      "sourceText": "Cohort A1: urothelial carcinoma, triple negative breast cancer, non-small cell lung cancer, esophageal cancer, pancreatic cancer, ovarian cancer, cervical cancer (squamous cell carcinoma), head and neck squamous cell carcinoma or prostate cancer",
+      "reasonFuzzy": "Tumor type requirements differ across multiple cohorts, including non-small cell lung cancer alongside other solid tumors."
+    },
+    {
+      "id": "NCT06465069-prior",
+      "polarity": "inclusion",
+      "sourceText": "Cohort A1/C: Individual has received all standard therapies for which the participant was deemed to be an appropriate candidate by the treating investigator; OR there is no standard therapy available for the disease.",
+      "reasonFuzzy": "Prior systemic therapy rules are complex and cohort-dependent, not expressible as a single typed prior lines or therapy check."
+    },
+    {
+      "id": "NCT06465069-ev",
+      "polarity": "inclusion",
+      "sourceText": "Cohorts A1/A2/C/D: prior treatment with enfortumab vedotin is allowed, but not required",
+      "reasonFuzzy": "Enfortumab vedotin prior treatment rules vary by cohort."
+    },
+    {
+      "id": "NCT06465069-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease is required as defined by Response Evaluation Criteria in Solid Tumors v1.1 (RECIST v1.1) for all Cohorts. Cohort A1 may permit non-measurable disease as defined by RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06465069-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Have adequate archival tumor tissue sample available or undergo a screening biopsy if allowed per country specific regulations",
+      "reasonFuzzy": "Willingness or requirement to undergo a biopsy is a subjective clinical procedure, not a typed check."
+    },
+    {
+      "id": "NCT06465069-cns",
+      "polarity": "exclusion",
+      "sourceText": "Individual with known or suspected uncontrolled CNS metastases",
+      "reasonFuzzy": "Uncontrolled CNS metastases wording is subjective and not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT06465069-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06465069-cohorts",
+      "polarity": "inclusion",
+      "sourceText": "Have one of the following solid tumor cancers: Cohort A1: urothelial carcinoma, triple negative breast cancer, non-small cell lung cancer, esophageal cancer, pancreatic cancer, ovarian cancer, cervical cancer (squamous cell carcinoma), head and neck squamous cell carcinoma or prostate cancer...",
+      "reasonFuzzy": "Tumor type and prior therapy requirements differ extensively by multiple study cohorts."
+    },
+    {
+      "id": "NCT06465069-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurability of disease: Cohort A1: measurable or non-measurable disease as defined by Response Evaluation Criteria in Solid Tumors v1.1 (RECIST 1.1). Measurable disease is required as defined by Response Evaluation Criteria in Solid Tumors v1.1 (RECIST v1.1) for all Cohorts.",
+      "reasonFuzzy": "Measurable disease requirements vary by study cohort and depend on RECIST v1.1 assessments."
+    },
+    {
+      "id": "NCT06465069-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Have adequate archival tumor tissue sample available or undergo a screening biopsy if allowed per country specific regulations",
+      "reasonFuzzy": "Willingness or requirement to undergo a biopsy or provide tissue is a subjective procedure criterion."
+    },
+    {
+      "id": "NCT06465069-brain",
+      "polarity": "exclusion",
+      "sourceText": "Individual with known or suspected uncontrolled CNS metastases",
+      "reasonFuzzy": "Uncontrolled CNS metastases is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT06465069-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2791
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 5538
+  },
+  "ms": 16296,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06465069",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06465069-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06465069-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06465069-cohort",
+        "polarity": "inclusion",
+        "sourceText": "Cohort A1: urothelial carcinoma, triple negative breast cancer, non-small cell lung cancer, esophageal cancer, pancreatic cancer, ovarian cancer, cervical cancer (squamous cell carcinoma), head and neck squamous cell carcinoma or prostate cancer",
+        "reasonFuzzy": "Tumor type requirements differ across multiple cohorts, including non-small cell lung cancer alongside other solid tumors."
+      },
+      {
+        "id": "NCT06465069-prior",
+        "polarity": "inclusion",
+        "sourceText": "Cohort A1/C: Individual has received all standard therapies for which the participant was deemed to be an appropriate candidate by the treating investigator; OR there is no standard therapy available for the disease.",
+        "reasonFuzzy": "Prior systemic therapy rules are complex and cohort-dependent, not expressible as a single typed prior lines or therapy check."
+      },
+      {
+        "id": "NCT06465069-ev",
+        "polarity": "inclusion",
+        "sourceText": "Cohorts A1/A2/C/D: prior treatment with enfortumab vedotin is allowed, but not required",
+        "reasonFuzzy": "Enfortumab vedotin prior treatment rules vary by cohort."
+      },
+      {
+        "id": "NCT06465069-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease is required as defined by Response Evaluation Criteria in Solid Tumors v1.1 (RECIST v1.1) for all Cohorts. Cohort A1 may permit non-measurable disease as defined by RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06465069-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Have adequate archival tumor tissue sample available or undergo a screening biopsy if allowed per country specific regulations",
+        "reasonFuzzy": "Willingness or requirement to undergo a biopsy is a subjective clinical procedure, not a typed check."
+      },
+      {
+        "id": "NCT06465069-cns",
+        "polarity": "exclusion",
+        "sourceText": "Individual with known or suspected uncontrolled CNS metastases",
+        "reasonFuzzy": "Uncontrolled CNS metastases wording is subjective and not a clean typed brain_mets status of none, treated_stable, or untreated."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06465069",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06465069-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06465069-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06465069-cohorts",
+        "polarity": "inclusion",
+        "sourceText": "Have one of the following solid tumor cancers: Cohort A1: urothelial carcinoma, triple negative breast cancer, non-small cell lung cancer, esophageal cancer, pancreatic cancer, ovarian cancer, cervical cancer (squamous cell carcinoma), head and neck squamous cell carcinoma or prostate cancer...",
+        "reasonFuzzy": "Tumor type and prior therapy requirements differ extensively by multiple study cohorts."
+      },
+      {
+        "id": "NCT06465069-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurability of disease: Cohort A1: measurable or non-measurable disease as defined by Response Evaluation Criteria in Solid Tumors v1.1 (RECIST 1.1). Measurable disease is required as defined by Response Evaluation Criteria in Solid Tumors v1.1 (RECIST v1.1) for all Cohorts.",
+        "reasonFuzzy": "Measurable disease requirements vary by study cohort and depend on RECIST v1.1 assessments."
+      },
+      {
+        "id": "NCT06465069-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Have adequate archival tumor tissue sample available or undergo a screening biopsy if allowed per country specific regulations",
+        "reasonFuzzy": "Willingness or requirement to undergo a biopsy or provide tissue is a subjective procedure criterion."
+      },
+      {
+        "id": "NCT06465069-brain",
+        "polarity": "exclusion",
+        "sourceText": "Individual with known or suspected uncontrolled CNS metastases",
+        "reasonFuzzy": "Uncontrolled CNS metastases is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      }
+    ]
+  }
+}

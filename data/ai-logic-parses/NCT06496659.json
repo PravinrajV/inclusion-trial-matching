@@ -1,0 +1,601 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06496659",
+  "briefTitle": "Segmentectomy After Induction Therapy (SAINT)",
+  "parsedAt": "2026-11-12T09:25:18.868Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06496659-age-min",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Patients must be age ≥ 18 years.",
+      "numberValue": 18,
+      "evidence_quote": "Patients must be age ≥ 18 years.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06496659-stage",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have histologically confirmed non-small-cell lung cancer that is clinically staged as ≤ycT1cN0M0 (tumor size 3cm or less on greatest dimension measured by cross-sectional imaging) after receiving induction therapy.",
+      "reasonFuzzy": "The staging is described using a specific T/N/M descriptor (≤ycT1cN0M0) rather than standard stage Roman numerals, so stage_in cannot be directly assigned."
+    },
+    {
+      "id": "NCT06496659-consent",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have the ability to understand and the willingness to sign a written informed consent document.",
+      "reasonFuzzy": "Willingness to sign informed consent is a subjective and procedural criterion."
+    },
+    {
+      "id": "NCT06496659-organ",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have adequate organ function as defined below: These are guidelines that may or should be modified based on protocol-specific or drug development-specific needs.",
+      "reasonFuzzy": "Organ function is evaluated by flexible guidelines and FEV1/DLCO rather than standard lab cutoffs."
+    },
+    {
+      "id": "NCT06496659-hiv-hep",
+      "polarity": "inclusion",
+      "sourceText": "For patients with a known history of Human immunodeficiency virus (HIV), infected patients on effective anti-retroviral therapy must have a viral load undetectable for 6 months prior to registration.",
+      "reasonFuzzy": "Viral load and treatment conditions for HIV, HBV, and HCV are complex medical history criteria rather than typed checks."
+    },
+    {
+      "id": "NCT06496659-surgical-candidate",
+      "polarity": "inclusion",
+      "sourceText": "To be eligible for this trial, patients should be considered a candidate for surgical resection under general anesthesia.",
+      "reasonFuzzy": "Surgical candidacy under general anesthesia is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06496659-prior-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have had prior lung resection or thoracic surgery.",
+      "reasonFuzzy": "Prior thoracic surgery is a surgical history exclusion, not a typed prior therapy check."
+    },
+    {
+      "id": "NCT06496659-prior-tox",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have not recovered from adverse events due to prior anti-cancer therapy (i.e., have residual toxicities > Grade 1) with the exception of alopecia.",
+      "reasonFuzzy": "Recovery from prior adverse events to Grade <= 1 is a general toxicity status rather than a typed lab or drug rule."
+    },
+    {
+      "id": "NCT06496659-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Patients who are receiving any other investigational agents.",
+      "reasonFuzzy": "Concurrent investigational agents exclusion is a procedural rule."
+    },
+    {
+      "id": "NCT06496659-consensus",
+      "polarity": "exclusion",
+      "sourceText": "Patients that do not have documented consensus agreement on the feasibility of anatomic sublobar resection (segmentectomy) from at least 2 study surgeons will not be enrolled.",
+      "reasonFuzzy": "Surgeon consensus is an investigator and team judgment."
+    },
+    {
+      "id": "NCT06496659-tumor-lobe",
+      "polarity": "exclusion",
+      "sourceText": "Patients with pre-induction therapy tumor involving greater than 1 lobe.",
+      "reasonFuzzy": "Tumor location involving more than one lobe is an anatomical assessment."
+    },
+    {
+      "id": "NCT06496659-uncontrolled",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have an uncontrolled intercurrent illness including, but not limited to any of the following, are not eligible",
+      "reasonFuzzy": "Uncontrolled intercurrent illnesses and investigator discretion are subjective clinical judgments."
+    },
+    {
+      "id": "NCT06496659-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Female patients who are pregnant. Pregnant patients are excluded from this study because the study protocol requires frequent cross-sectional imaging with potential for teratogenic effects.",
+      "reasonFuzzy": "Pregnancy exclusion is standard and not a typed check."
+    },
+    {
+      "id": "NCT06496659-other-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Patients with another malignancy within 3 years (except for non-melanoma skin cancer, CIS of cervix (a preinvasive carcinomatous change of the cervix), superficial bladder cancer). Patients with prior malignancies are excluded to isolate overall survival outcomes.",
+      "reasonFuzzy": "Prior malignancy timeframe and exceptions do not map to a standard typed check."
+    },
+    {
+      "id": "NCT06496659-smoking",
+      "polarity": "exclusion",
+      "sourceText": "Patients with active smoking status or cessation <4 weeks prior to surgical resection.",
+      "reasonFuzzy": "Smoking status and cessation window are lifestyle criteria rather than typed checks."
+    },
+    {
+      "id": "NCT06496659-lymph-nodes",
+      "polarity": "exclusion",
+      "sourceText": "Patients with biopsy positive hilar or mediastinal lymph nodes following induction therapy detected by EBUS (endobronchial ultrasound), mediastinoscopy, or intraoperative sampling.",
+      "reasonFuzzy": "Biopsy positive lymph node status following induction is a specific procedural finding, not a typed check."
+    },
+    {
+      "id": "NCT06496659-age-max",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years, maximumAge: 89 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06496659-stage",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have histologically confirmed non-small-cell lung cancer that is clinically staged as ≤ycT1cN0M0 (tumor size 3cm or less on greatest dimension measured by cross-sectional imaging) after receiving induction therapy.",
+      "reasonFuzzy": "Stage is described using clinical TNM parameters (≤ycT1cN0M0) rather than standard stage Roman numerals."
+    },
+    {
+      "id": "NCT06496659-consent",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have the ability to understand and the willingness to sign a written informed consent document.",
+      "reasonFuzzy": "Willingness to sign a consent document is a subjective judgment and administrative criterion."
+    },
+    {
+      "id": "NCT06496659-organ",
+      "polarity": "inclusion",
+      "sourceText": "Table 1: Measures of Adequate Organ Function. FEV1 or DLCO ≥40% (DLCO: diffusing capacity of lung for carbon monoxide)",
+      "reasonFuzzy": "Pulmonary function tests (FEV1, DLCO) are not included in the allowed typed check kinds."
+    },
+    {
+      "id": "NCT06496659-hiv",
+      "polarity": "inclusion",
+      "sourceText": "For patients with a known history of Human immunodeficiency virus (HIV), infected patients on effective anti-retroviral therapy must have a viral load undetectable for 6 months prior to registration.",
+      "reasonFuzzy": "Viral load history and anti-retroviral therapy requirements are not covered by standard typed checks."
+    },
+    {
+      "id": "NCT06496659-hbv",
+      "polarity": "inclusion",
+      "sourceText": "For patients with a known history of chronic hepatitis B virus (HBV) infection, the HBV viral load must be undetectable on suppressive therapy, if indicated.",
+      "reasonFuzzy": "Hepatitis B viral load status is not a typed check kind."
+    },
+    {
+      "id": "NCT06496659-hcv",
+      "polarity": "inclusion",
+      "sourceText": "Patients with a known history of hepatitis C virus (HCV) infection must have been treated and cured. For patients with HCV infection who are currently on treatment, they are eligible if they have an undetectable HCV viral load.",
+      "reasonFuzzy": "Hepatitis C status and cure criteria are not typed checks."
+    },
+    {
+      "id": "NCT06496659-cardiac",
+      "polarity": "inclusion",
+      "sourceText": "Patients with known history or current symptoms of cardiac disease, or history of treatment with cardiotoxic agents, should have a clinical risk assessment of cardiac function using the New York Heart Association Functional Classification. To be eligible for this trial, patients should be considered a candidate for surgical resection under general anesthesia.",
+      "reasonFuzzy": "Clinical risk assessment and surgical candidacy under general anesthesia are investigator judgments."
+    },
+    {
+      "id": "NCT06496659-pregnancy",
+      "polarity": "inclusion",
+      "sourceText": "Females of child-bearing potential (FOCBP) must have a negative pregnancy test prior to registration on study.",
+      "reasonFuzzy": "Pregnancy test requirement is not a typed check."
+    },
+    {
+      "id": "NCT06496659-prior-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have had prior lung resection or thoracic surgery.",
+      "reasonFuzzy": "Prior surgical history is not covered by typed prior therapy kinds."
+    },
+    {
+      "id": "NCT06496659-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have not recovered from adverse events due to prior anti-cancer therapy (i.e., have residual toxicities > Grade 1) with the exception of alopecia.",
+      "reasonFuzzy": "Resolution of adverse events to general CTCAE grades is a clinical assessment."
+    },
+    {
+      "id": "NCT06496659-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Patients who are receiving any other investigational agents.",
+      "reasonFuzzy": "Concurrent investigational agents check is not a standard typed item."
+    },
+    {
+      "id": "NCT06496659-surgeons",
+      "polarity": "exclusion",
+      "sourceText": "Patients that do not have documented consensus agreement on the feasibility of anatomic sublobar resection (segmentectomy) from at least 2 study surgeons will not be enrolled.",
+      "reasonFuzzy": "Surgeon consensus agreement is a trial-specific committee judgment."
+    },
+    {
+      "id": "NCT06496659-tumor-involvement",
+      "polarity": "exclusion",
+      "sourceText": "Patients with pre-induction therapy tumor involving greater than 1 lobe.",
+      "reasonFuzzy": "Tumor anatomical lobe involvement is an imaging/anatomical assessment."
+    },
+    {
+      "id": "NCT06496659-uncontrolled",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have an uncontrolled intercurrent illness including, but not limited to any of the following, are not eligible: Hypertension that is not controlled on medication, Ongoing or active infection requiring systemic treatment, Symptomatic congestive heart failure, Unstable angina pectoris, Cardiac arrhythmia, Psychiatric illness/social situations that would limit compliance with study requirements, Any other illness or condition that the treating investigator feels would interfere with study compliance or would compromise the patient's safety or study endpoints",
+      "reasonFuzzy": "Uncontrolled intercurrent illnesses and investigator discretion are subjective clinical exclusions."
+    },
+    {
+      "id": "NCT06496659-pregnant-excl",
+      "polarity": "exclusion",
+      "sourceText": "Female patients who are pregnant. Pregnant patients are excluded from this study because the study protocol requires frequent cross-sectional imaging with potential for teratogenic effects.",
+      "reasonFuzzy": "Pregnancy exclusion is not a typed check kind."
+    },
+    {
+      "id": "NCT06496659-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Patients with another malignancy within 3 years (except for non-melanoma skin cancer, CIS of cervix (a preinvasive carcinomatous change of the cervix), superficial bladder cancer). Patients with prior malignancies are excluded to isolate overall survival outcomes.",
+      "reasonFuzzy": "Prior malignancy history with specific exceptions and timeframes is not a typed check."
+    },
+    {
+      "id": "NCT06496659-smoking",
+      "polarity": "exclusion",
+      "sourceText": "Patients with active smoking status or cessation <4 weeks prior to surgical resection.",
+      "reasonFuzzy": "Smoking status and cessation timing are not typed check kinds."
+    },
+    {
+      "id": "NCT06496659-lymph-nodes",
+      "polarity": "exclusion",
+      "sourceText": "Patients with biopsy positive hilar or mediastinal lymph nodes following induction therapy detected by EBUS (endobronchial ultrasound), mediastinoscopy, or intraoperative sampling.",
+      "reasonFuzzy": "Biopsy positive lymph node findings after induction are procedural pathology results, not typed checks."
+    },
+    {
+      "id": "NCT06496659-age-max",
+      "polarity": "inclusion",
+      "sourceText": "maximumAge: 89 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06496659-brain-mets",
+      "polarity": "exclusion",
+      "sourceText": "Patients with evidence of distant metastases including brain metastases will be excluded from this study because they will not benefit from surgical resection.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06496659-brain",
+      "polarity": "exclusion",
+      "sourceText": "Patients with evidence of distant metastases including brain metastases will be excluded from this study because they will not benefit from surgical resection.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06496659-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Patients must exhibit a/an ECOG (Eastern Cooperative Oncology Group) performance status of <3.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years, maximumAge: 89 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "maximumAge: 89 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:2"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 15,
+    "attempts": 2,
+    "ms": 40825
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 18,
+    "attempts": 1,
+    "ms": 22228
+  },
+  "ms": 71050,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06496659",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06496659-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients must be age ≥ 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06496659-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years, maximumAge: 89 Years",
+        "numberValue": 89
+      },
+      {
+        "id": "NCT06496659-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Patients must exhibit a/an ECOG (Eastern Cooperative Oncology Group) performance status of <3.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06496659-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Patients with evidence of distant metastases including brain metastases will be excluded from this study because they will not benefit from surgical resection.",
+        "allowedBrainMets": [
+          "none"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06496659-stage",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have histologically confirmed non-small-cell lung cancer that is clinically staged as ≤ycT1cN0M0 (tumor size 3cm or less on greatest dimension measured by cross-sectional imaging) after receiving induction therapy.",
+        "reasonFuzzy": "The staging is described using a specific T/N/M descriptor (≤ycT1cN0M0) rather than standard stage Roman numerals, so stage_in cannot be directly assigned."
+      },
+      {
+        "id": "NCT06496659-consent",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have the ability to understand and the willingness to sign a written informed consent document.",
+        "reasonFuzzy": "Willingness to sign informed consent is a subjective and procedural criterion."
+      },
+      {
+        "id": "NCT06496659-organ",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have adequate organ function as defined below: These are guidelines that may or should be modified based on protocol-specific or drug development-specific needs.",
+        "reasonFuzzy": "Organ function is evaluated by flexible guidelines and FEV1/DLCO rather than standard lab cutoffs."
+      },
+      {
+        "id": "NCT06496659-hiv-hep",
+        "polarity": "inclusion",
+        "sourceText": "For patients with a known history of Human immunodeficiency virus (HIV), infected patients on effective anti-retroviral therapy must have a viral load undetectable for 6 months prior to registration.",
+        "reasonFuzzy": "Viral load and treatment conditions for HIV, HBV, and HCV are complex medical history criteria rather than typed checks."
+      },
+      {
+        "id": "NCT06496659-surgical-candidate",
+        "polarity": "inclusion",
+        "sourceText": "To be eligible for this trial, patients should be considered a candidate for surgical resection under general anesthesia.",
+        "reasonFuzzy": "Surgical candidacy under general anesthesia is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06496659-prior-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have had prior lung resection or thoracic surgery.",
+        "reasonFuzzy": "Prior thoracic surgery is a surgical history exclusion, not a typed prior therapy check."
+      },
+      {
+        "id": "NCT06496659-prior-tox",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have not recovered from adverse events due to prior anti-cancer therapy (i.e., have residual toxicities > Grade 1) with the exception of alopecia.",
+        "reasonFuzzy": "Recovery from prior adverse events to Grade <= 1 is a general toxicity status rather than a typed lab or drug rule."
+      },
+      {
+        "id": "NCT06496659-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Patients who are receiving any other investigational agents.",
+        "reasonFuzzy": "Concurrent investigational agents exclusion is a procedural rule."
+      },
+      {
+        "id": "NCT06496659-consensus",
+        "polarity": "exclusion",
+        "sourceText": "Patients that do not have documented consensus agreement on the feasibility of anatomic sublobar resection (segmentectomy) from at least 2 study surgeons will not be enrolled.",
+        "reasonFuzzy": "Surgeon consensus is an investigator and team judgment."
+      },
+      {
+        "id": "NCT06496659-tumor-lobe",
+        "polarity": "exclusion",
+        "sourceText": "Patients with pre-induction therapy tumor involving greater than 1 lobe.",
+        "reasonFuzzy": "Tumor location involving more than one lobe is an anatomical assessment."
+      },
+      {
+        "id": "NCT06496659-uncontrolled",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have an uncontrolled intercurrent illness including, but not limited to any of the following, are not eligible",
+        "reasonFuzzy": "Uncontrolled intercurrent illnesses and investigator discretion are subjective clinical judgments."
+      },
+      {
+        "id": "NCT06496659-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Female patients who are pregnant. Pregnant patients are excluded from this study because the study protocol requires frequent cross-sectional imaging with potential for teratogenic effects.",
+        "reasonFuzzy": "Pregnancy exclusion is standard and not a typed check."
+      },
+      {
+        "id": "NCT06496659-other-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Patients with another malignancy within 3 years (except for non-melanoma skin cancer, CIS of cervix (a preinvasive carcinomatous change of the cervix), superficial bladder cancer). Patients with prior malignancies are excluded to isolate overall survival outcomes.",
+        "reasonFuzzy": "Prior malignancy timeframe and exceptions do not map to a standard typed check."
+      },
+      {
+        "id": "NCT06496659-smoking",
+        "polarity": "exclusion",
+        "sourceText": "Patients with active smoking status or cessation <4 weeks prior to surgical resection.",
+        "reasonFuzzy": "Smoking status and cessation window are lifestyle criteria rather than typed checks."
+      },
+      {
+        "id": "NCT06496659-lymph-nodes",
+        "polarity": "exclusion",
+        "sourceText": "Patients with biopsy positive hilar or mediastinal lymph nodes following induction therapy detected by EBUS (endobronchial ultrasound), mediastinoscopy, or intraoperative sampling.",
+        "reasonFuzzy": "Biopsy positive lymph node status following induction is a specific procedural finding, not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06496659",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06496659-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients must be age ≥ 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06496659-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "maximumAge: 89 Years",
+        "numberValue": 89
+      },
+      {
+        "id": "NCT06496659-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Patients must exhibit a/an ECOG (Eastern Cooperative Oncology Group) performance status of <3.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06496659-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Patients with evidence of distant metastases including brain metastases will be excluded from this study because they will not benefit from surgical resection.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06496659-stage",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have histologically confirmed non-small-cell lung cancer that is clinically staged as ≤ycT1cN0M0 (tumor size 3cm or less on greatest dimension measured by cross-sectional imaging) after receiving induction therapy.",
+        "reasonFuzzy": "Stage is described using clinical TNM parameters (≤ycT1cN0M0) rather than standard stage Roman numerals."
+      },
+      {
+        "id": "NCT06496659-consent",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have the ability to understand and the willingness to sign a written informed consent document.",
+        "reasonFuzzy": "Willingness to sign a consent document is a subjective judgment and administrative criterion."
+      },
+      {
+        "id": "NCT06496659-organ",
+        "polarity": "inclusion",
+        "sourceText": "Table 1: Measures of Adequate Organ Function. FEV1 or DLCO ≥40% (DLCO: diffusing capacity of lung for carbon monoxide)",
+        "reasonFuzzy": "Pulmonary function tests (FEV1, DLCO) are not included in the allowed typed check kinds."
+      },
+      {
+        "id": "NCT06496659-hiv",
+        "polarity": "inclusion",
+        "sourceText": "For patients with a known history of Human immunodeficiency virus (HIV), infected patients on effective anti-retroviral therapy must have a viral load undetectable for 6 months prior to registration.",
+        "reasonFuzzy": "Viral load history and anti-retroviral therapy requirements are not covered by standard typed checks."
+      },
+      {
+        "id": "NCT06496659-hbv",
+        "polarity": "inclusion",
+        "sourceText": "For patients with a known history of chronic hepatitis B virus (HBV) infection, the HBV viral load must be undetectable on suppressive therapy, if indicated.",
+        "reasonFuzzy": "Hepatitis B viral load status is not a typed check kind."
+      },
+      {
+        "id": "NCT06496659-hcv",
+        "polarity": "inclusion",
+        "sourceText": "Patients with a known history of hepatitis C virus (HCV) infection must have been treated and cured. For patients with HCV infection who are currently on treatment, they are eligible if they have an undetectable HCV viral load.",
+        "reasonFuzzy": "Hepatitis C status and cure criteria are not typed checks."
+      },
+      {
+        "id": "NCT06496659-cardiac",
+        "polarity": "inclusion",
+        "sourceText": "Patients with known history or current symptoms of cardiac disease, or history of treatment with cardiotoxic agents, should have a clinical risk assessment of cardiac function using the New York Heart Association Functional Classification. To be eligible for this trial, patients should be considered a candidate for surgical resection under general anesthesia.",
+        "reasonFuzzy": "Clinical risk assessment and surgical candidacy under general anesthesia are investigator judgments."
+      },
+      {
+        "id": "NCT06496659-pregnancy",
+        "polarity": "inclusion",
+        "sourceText": "Females of child-bearing potential (FOCBP) must have a negative pregnancy test prior to registration on study.",
+        "reasonFuzzy": "Pregnancy test requirement is not a typed check."
+      },
+      {
+        "id": "NCT06496659-prior-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have had prior lung resection or thoracic surgery.",
+        "reasonFuzzy": "Prior surgical history is not covered by typed prior therapy kinds."
+      },
+      {
+        "id": "NCT06496659-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have not recovered from adverse events due to prior anti-cancer therapy (i.e., have residual toxicities > Grade 1) with the exception of alopecia.",
+        "reasonFuzzy": "Resolution of adverse events to general CTCAE grades is a clinical assessment."
+      },
+      {
+        "id": "NCT06496659-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Patients who are receiving any other investigational agents.",
+        "reasonFuzzy": "Concurrent investigational agents check is not a standard typed item."
+      },
+      {
+        "id": "NCT06496659-surgeons",
+        "polarity": "exclusion",
+        "sourceText": "Patients that do not have documented consensus agreement on the feasibility of anatomic sublobar resection (segmentectomy) from at least 2 study surgeons will not be enrolled.",
+        "reasonFuzzy": "Surgeon consensus agreement is a trial-specific committee judgment."
+      },
+      {
+        "id": "NCT06496659-tumor-involvement",
+        "polarity": "exclusion",
+        "sourceText": "Patients with pre-induction therapy tumor involving greater than 1 lobe.",
+        "reasonFuzzy": "Tumor anatomical lobe involvement is an imaging/anatomical assessment."
+      },
+      {
+        "id": "NCT06496659-uncontrolled",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have an uncontrolled intercurrent illness including, but not limited to any of the following, are not eligible: Hypertension that is not controlled on medication, Ongoing or active infection requiring systemic treatment, Symptomatic congestive heart failure, Unstable angina pectoris, Cardiac arrhythmia, Psychiatric illness/social situations that would limit compliance with study requirements, Any other illness or condition that the treating investigator feels would interfere with study compliance or would compromise the patient's safety or study endpoints",
+        "reasonFuzzy": "Uncontrolled intercurrent illnesses and investigator discretion are subjective clinical exclusions."
+      },
+      {
+        "id": "NCT06496659-pregnant-excl",
+        "polarity": "exclusion",
+        "sourceText": "Female patients who are pregnant. Pregnant patients are excluded from this study because the study protocol requires frequent cross-sectional imaging with potential for teratogenic effects.",
+        "reasonFuzzy": "Pregnancy exclusion is not a typed check kind."
+      },
+      {
+        "id": "NCT06496659-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Patients with another malignancy within 3 years (except for non-melanoma skin cancer, CIS of cervix (a preinvasive carcinomatous change of the cervix), superficial bladder cancer). Patients with prior malignancies are excluded to isolate overall survival outcomes.",
+        "reasonFuzzy": "Prior malignancy history with specific exceptions and timeframes is not a typed check."
+      },
+      {
+        "id": "NCT06496659-smoking",
+        "polarity": "exclusion",
+        "sourceText": "Patients with active smoking status or cessation <4 weeks prior to surgical resection.",
+        "reasonFuzzy": "Smoking status and cessation timing are not typed check kinds."
+      },
+      {
+        "id": "NCT06496659-lymph-nodes",
+        "polarity": "exclusion",
+        "sourceText": "Patients with biopsy positive hilar or mediastinal lymph nodes following induction therapy detected by EBUS (endobronchial ultrasound), mediastinoscopy, or intraoperative sampling.",
+        "reasonFuzzy": "Biopsy positive lymph node findings after induction are procedural pathology results, not typed checks."
+      }
+    ]
+  }
+}

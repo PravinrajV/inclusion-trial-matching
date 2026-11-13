@@ -1,0 +1,525 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT03093116",
+  "briefTitle": "A Study of Repotrectinib (TPX-0005) in Patients With Advanced Solid Tumors Harboring ALK, ROS1, or NTRK1-3 Rearrangements",
+  "parsedAt": "2026-11-12T06:00:47.864Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT03093116-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) (Stage IV, American Joint Committee on Cancer v.7) that harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement by protocol specified tests.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) (Stage IV, American Joint Committee on Cancer v.7) that harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement by protocol specified tests.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT03093116-ros1",
+      "kind": "ros1_status",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) (Stage IV, American Joint Committee on Cancer v.7) that harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement by protocol specified tests.",
+      "presence": "present",
+      "evidence_quote": "Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) (Stage IV, American Joint Committee on Cancer v.7) that harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement by protocol specified tests.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT03093116-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG PS 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "ECOG PS 0-1.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT03093116-anc",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophils count (ANC) ≥1500/mm3 (1.5 × 109/L);",
+      "numberValue": 1500,
+      "evidence_quote": "Absolute neutrophils count (ANC) ≥1500/mm3 (1.5 × 109/L);",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT03093116-platelets",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets (PLTs) ≥100,000/mm3 (100 × 109/L);",
+      "numberValue": 100000,
+      "evidence_quote": "Platelets (PLTs) ≥100,000/mm3 (100 × 109/L);",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT03093116-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin ≥ 9.0 g/dL transfusions are allowed;",
+      "numberValue": 9,
+      "evidence_quote": "Hemoglobin ≥ 9.0 g/dL transfusions are allowed;",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT03093116-egfr",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Serum creatinine or creatinine clearance Within normal limits or > 40 mL/min;",
+      "numberValue": 40,
+      "stages": [],
+      "stringValue": "40 mL/min",
+      "evidence_quote": "Serum creatinine or creatinine clearance Within normal limits or > 40 mL/min;",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT03093116-bilirubin",
+      "kind": "bilirubin_max",
+      "polarity": "inclusion",
+      "sourceText": "Total serum bilirubin < 1.5 × ULN;",
+      "numberValue": 1.5,
+      "evidence_quote": "Total serum bilirubin < 1.5 × ULN;",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT03093116-swallow",
+      "polarity": "inclusion",
+      "sourceText": "Capability to swallow capsules intact (without chewing, crushing, or opening).",
+      "reasonFuzzy": "Ability to swallow capsules is a procedural and capability judgment, not a typed check."
+    },
+    {
+      "id": "NCT03093116-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least 1 measurable target lesion according to RECIST version 1.1. CNS-only measurable disease as defined by RECIST version 1.1 is allowed.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT03093116-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy ≥ 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT03093116-phase2-age",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥12 (or age ≥ 20 as required by local regulation).",
+      "reasonFuzzy": "Phase 2 has a different age threshold from Phase 1, and can be represented as a study rule limitation."
+    },
+    {
+      "id": "NCT03093116-swallow",
+      "polarity": "inclusion",
+      "sourceText": "Capability to swallow capsules intact (without chewing, crushing, or opening).",
+      "reasonFuzzy": "Subjective capability to swallow capsules is not a typed check."
+    },
+    {
+      "id": "NCT03093116-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least 1 measurable target lesion according to RECIST version 1.1. CNS-only measurable disease as defined by RECIST version 1.1 is allowed.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT03093116-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy ≥ 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT03093116-brain-excl",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic brain metastases or leptomeningeal involvement.",
+      "reasonFuzzy": "Symptomatic brain metastases are not a clean typed brain_mets exclusion of untreated or all CNS disease."
+    },
+    {
+      "id": "NCT03093116-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic brain metastases or leptomeningeal involvement.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT03093116-brain",
+      "polarity": "inclusion",
+      "sourceText": "Patients with asymptomatic CNS metastases (treated or untreated) and/or asymptomatic leptomeningeal carcinomatosis are eligible to enroll if they satisfy the protocol specified criteria.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT03093116-alk",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) (Stage IV, American Joint Committee on Cancer v.7) that harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement by protocol specified tests.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT03093116-age",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥18 (or age ≥ 20 of age as required by local regulation).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT03093116-ast",
+      "polarity": "inclusion",
+      "sourceText": "Liver transaminases (ASTs/ALTs) < 2.5 × ULN; < 5 × ULN if liver metastases are present",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT03093116-alt",
+      "polarity": "inclusion",
+      "sourceText": "Liver transaminases (ASTs/ALTs) < 2.5 × ULN; < 5 × ULN if liver metastases are present",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 13,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 13,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 12,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable,untreated"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable,untreated"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 8,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:18"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        }
+      ],
+      "normalizerTypedCount": 9
+    }
+  },
+  "runA": {
+    "typedEmitted": 13,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 4119
+  },
+  "runB": {
+    "typedEmitted": 13,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 3934
+  },
+  "ms": 16071,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT03093116",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT03093116-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) (Stage IV, American Joint Committee on Cancer v.7) that harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement by protocol specified tests.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT03093116-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "that harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement by protocol specified tests.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT03093116-ros1",
+        "kind": "ros1_status",
+        "polarity": "inclusion",
+        "sourceText": "that harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement by protocol specified tests.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT03093116-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG PS 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT03093116-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥18 (or age ≥ 20 of age as required by local regulation).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT03093116-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic brain metastases or leptomeningeal involvement.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable",
+          "untreated"
+        ]
+      },
+      {
+        "id": "NCT03093116-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophils count (ANC) ≥1500/mm3 (1.5 × 109/L)",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT03093116-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets (PLTs) ≥100,000/mm3 (100 × 109/L)",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT03093116-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 9.0 g/dL transfusions are allowed",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT03093116-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Serum creatinine or creatinine clearance Within normal limits or > 40 mL/min",
+        "numberValue": 40,
+        "stages": [],
+        "stringValue": "40 mL/min"
+      },
+      {
+        "id": "NCT03093116-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total serum bilirubin < 1.5 × ULN",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT03093116-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Liver transaminases (ASTs/ALTs) < 2.5 × ULN; < 5 × ULN if liver metastases are present",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "2.5 × ULN"
+      },
+      {
+        "id": "NCT03093116-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Liver transaminases (ASTs/ALTs) < 2.5 × ULN; < 5 × ULN if liver metastases are present",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "2.5 × ULN"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT03093116-swallow",
+        "polarity": "inclusion",
+        "sourceText": "Capability to swallow capsules intact (without chewing, crushing, or opening).",
+        "reasonFuzzy": "Ability to swallow capsules is a procedural and capability judgment, not a typed check."
+      },
+      {
+        "id": "NCT03093116-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least 1 measurable target lesion according to RECIST version 1.1. CNS-only measurable disease as defined by RECIST version 1.1 is allowed.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT03093116-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy ≥ 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT03093116-phase2-age",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥12 (or age ≥ 20 as required by local regulation).",
+        "reasonFuzzy": "Phase 2 has a different age threshold from Phase 1, and can be represented as a study rule limitation."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT03093116",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT03093116-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) (Stage IV, American Joint Committee on Cancer v.7) that harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement by protocol specified tests.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT03093116-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) (Stage IV, American Joint Committee on Cancer v.7) that harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement by protocol specified tests.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT03093116-ros1",
+        "kind": "ros1_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) (Stage IV, American Joint Committee on Cancer v.7) that harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement by protocol specified tests.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT03093116-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG PS 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT03093116-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥18 (or age ≥ 20 of age as required by local regulation).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT03093116-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Patients with asymptomatic CNS metastases (treated or untreated) and/or asymptomatic leptomeningeal carcinomatosis are eligible to enroll if they satisfy the protocol specified criteria.",
+        "allowedBrainMets": [
+          "treated_stable",
+          "untreated"
+        ]
+      },
+      {
+        "id": "NCT03093116-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophils count (ANC) ≥1500/mm3 (1.5 × 109/L);",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT03093116-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets (PLTs) ≥100,000/mm3 (100 × 109/L);",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT03093116-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 9.0 g/dL transfusions are allowed;",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT03093116-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Serum creatinine or creatinine clearance Within normal limits or > 40 mL/min;",
+        "numberValue": 40,
+        "stages": [],
+        "stringValue": "Within normal limits or > 40 mL/min"
+      },
+      {
+        "id": "NCT03093116-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total serum bilirubin < 1.5 × ULN;",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT03093116-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Liver transaminases (ASTs/ALTs) < 2.5 × ULN; < 5 × ULN if liver metastases are present",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "< 2.5 × ULN; < 5 × ULN if liver metastases are present"
+      },
+      {
+        "id": "NCT03093116-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Liver transaminases (ASTs/ALTs) < 2.5 × ULN; < 5 × ULN if liver metastases are present",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "< 2.5 × ULN; < 5 × ULN if liver metastases are present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT03093116-swallow",
+        "polarity": "inclusion",
+        "sourceText": "Capability to swallow capsules intact (without chewing, crushing, or opening).",
+        "reasonFuzzy": "Subjective capability to swallow capsules is not a typed check."
+      },
+      {
+        "id": "NCT03093116-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least 1 measurable target lesion according to RECIST version 1.1. CNS-only measurable disease as defined by RECIST version 1.1 is allowed.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT03093116-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy ≥ 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT03093116-brain-excl",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic brain metastases or leptomeningeal involvement.",
+        "reasonFuzzy": "Symptomatic brain metastases are not a clean typed brain_mets exclusion of untreated or all CNS disease."
+      }
+    ]
+  }
+}

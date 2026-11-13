@@ -1,0 +1,251 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06400472",
+  "briefTitle": "A Study of Sofe-M in Participants With Selected Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T09:21:40.615Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06400472-cancers",
+      "polarity": "inclusion",
+      "sourceText": "Have one of the following solid tumor cancers: Dose Escalation: Ovarian (epithelial ovarian, primary peritoneal, and fallopian tube) cancer, endometrial cancer, cervical cancer, non-small cell lung cancer (NSCLC), triple negative breast cancer (TNBC), pancreatic cancer, or colorectal cancer (CRC) ... Dose Expansion: Low grade serous ovarian cancer, cervical cancer, NSCLC, TNBC, and high grade endometrioid cancer",
+      "reasonFuzzy": "Solid tumor cohorts vary by study part and do not state a clean stage_in check."
+    },
+    {
+      "id": "NCT06400472-infection",
+      "polarity": "exclusion",
+      "sourceText": "Individual with active uncontrolled systemic bacterial, viral, fungal, or parasitic infection",
+      "reasonFuzzy": "Uncontrolled infection is a clinical judgment, not a typed check."
+    },
+    {
+      "id": "NCT06400472-corneal",
+      "polarity": "exclusion",
+      "sourceText": "Individual with evidence of corneal keratopathy or history of corneal transplant",
+      "reasonFuzzy": "Corneal keratopathy or transplant is not a supported typed check kind."
+    },
+    {
+      "id": "NCT06400472-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Any serious unresolved toxicities from prior therapy",
+      "reasonFuzzy": "Unresolved prior toxicity is an investigator judgment."
+    },
+    {
+      "id": "NCT06400472-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Significant cardiovascular disease",
+      "reasonFuzzy": "Significant cardiovascular disease is a subjective judgment."
+    },
+    {
+      "id": "NCT06400472-qtcf",
+      "polarity": "exclusion",
+      "sourceText": "Prolongation of QT interval corrected for heart rate using Fridericia's formula (QTcF) ≥ 470 milliseconds (ms)",
+      "reasonFuzzy": "QTcF cutoff is not among the allowed typed lab kinds."
+    },
+    {
+      "id": "NCT06400472-pneumonitis",
+      "polarity": "exclusion",
+      "sourceText": "History of pneumonitis/interstitial lung disease",
+      "reasonFuzzy": "History of pneumonitis or interstitial lung disease is not a supported typed kind."
+    },
+    {
+      "id": "NCT06400472-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06400472-tumor",
+      "polarity": "inclusion",
+      "sourceText": "Dose Escalation: ... non-small cell lung cancer (NSCLC) ... Dose Expansion: ... NSCLC",
+      "reasonFuzzy": "Tumor types vary across study arms and phases, and are not a simple stage or histology_in list."
+    },
+    {
+      "id": "NCT06400472-meningitis",
+      "polarity": "exclusion",
+      "sourceText": "Individual with history of carcinomatous meningitis",
+      "reasonFuzzy": "Carcinomatous meningitis is not a standard brain_mets category."
+    },
+    {
+      "id": "NCT06400472-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06400472-brain",
+      "polarity": "exclusion",
+      "sourceText": "Individual with known or suspected uncontrolled central nervous system (CNS) metastases",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 2916
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2162
+  },
+  "ms": 13048,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06400472",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06400472-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06400472-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Individual with known or suspected uncontrolled central nervous system (CNS) metastases",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06400472-cancers",
+        "polarity": "inclusion",
+        "sourceText": "Have one of the following solid tumor cancers: Dose Escalation: Ovarian (epithelial ovarian, primary peritoneal, and fallopian tube) cancer, endometrial cancer, cervical cancer, non-small cell lung cancer (NSCLC), triple negative breast cancer (TNBC), pancreatic cancer, or colorectal cancer (CRC) ... Dose Expansion: Low grade serous ovarian cancer, cervical cancer, NSCLC, TNBC, and high grade endometrioid cancer",
+        "reasonFuzzy": "Solid tumor cohorts vary by study part and do not state a clean stage_in check."
+      },
+      {
+        "id": "NCT06400472-infection",
+        "polarity": "exclusion",
+        "sourceText": "Individual with active uncontrolled systemic bacterial, viral, fungal, or parasitic infection",
+        "reasonFuzzy": "Uncontrolled infection is a clinical judgment, not a typed check."
+      },
+      {
+        "id": "NCT06400472-corneal",
+        "polarity": "exclusion",
+        "sourceText": "Individual with evidence of corneal keratopathy or history of corneal transplant",
+        "reasonFuzzy": "Corneal keratopathy or transplant is not a supported typed check kind."
+      },
+      {
+        "id": "NCT06400472-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Any serious unresolved toxicities from prior therapy",
+        "reasonFuzzy": "Unresolved prior toxicity is an investigator judgment."
+      },
+      {
+        "id": "NCT06400472-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Significant cardiovascular disease",
+        "reasonFuzzy": "Significant cardiovascular disease is a subjective judgment."
+      },
+      {
+        "id": "NCT06400472-qtcf",
+        "polarity": "exclusion",
+        "sourceText": "Prolongation of QT interval corrected for heart rate using Fridericia's formula (QTcF) ≥ 470 milliseconds (ms)",
+        "reasonFuzzy": "QTcF cutoff is not among the allowed typed lab kinds."
+      },
+      {
+        "id": "NCT06400472-pneumonitis",
+        "polarity": "exclusion",
+        "sourceText": "History of pneumonitis/interstitial lung disease",
+        "reasonFuzzy": "History of pneumonitis or interstitial lung disease is not a supported typed kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06400472",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06400472-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06400472-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Individual with known or suspected uncontrolled central nervous system (CNS) metastases",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06400472-tumor",
+        "polarity": "inclusion",
+        "sourceText": "Dose Escalation: ... non-small cell lung cancer (NSCLC) ... Dose Expansion: ... NSCLC",
+        "reasonFuzzy": "Tumor types vary across study arms and phases, and are not a simple stage or histology_in list."
+      },
+      {
+        "id": "NCT06400472-meningitis",
+        "polarity": "exclusion",
+        "sourceText": "Individual with history of carcinomatous meningitis",
+        "reasonFuzzy": "Carcinomatous meningitis is not a standard brain_mets category."
+      }
+    ]
+  }
+}

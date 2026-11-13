@@ -1,0 +1,8 @@
+# Allow the public Firebase web apiKey and public reCAPTCHA site key
+# in .env.example. Those are client values, not privileged secrets.
+# Debug tokens and other env files stay gitignored and must not be allowlisted.
+title = "Inclusion public-repo gitleaks config"
+
+[allowlist]
+description = "Public Firebase web config and public reCAPTCHA site key in .env.example"
+paths = ['''(?:^|/)(?:\.env\.example)$''']

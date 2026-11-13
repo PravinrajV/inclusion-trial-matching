@@ -1,0 +1,254 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07224971",
+  "briefTitle": "Impact of Circadian Rhythm on Immunotherapy",
+  "parsedAt": "2026-11-12T11:05:04.663Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07224971-cohort",
+      "polarity": "inclusion",
+      "sourceText": "Cohort A: Advanced/metastatic NSCLC patients for which 1st line PD-1/PD-L1 therapy is on-label either alone or in combination. Cohort B: Advanced/metastatic NSCLC patients who have completed up to 4 cycles of induction therapy who have stable disease or responsive disease and for which maintenance anti-PD-1/PD-L1 therapy is on-label either alone or in combination.",
+      "reasonFuzzy": "Cohort-specific indication and prior therapy requirements are complex and cannot be captured in simple typed checks."
+    },
+    {
+      "id": "NCT07224971-ici",
+      "polarity": "inclusion",
+      "sourceText": "Patients should be ICI-naïve (this should be first-line therapy) (Cohorts A and C), or should have received ICI induction therapy and are now eligible for ICI maintenance therapy (Cohort B).",
+      "reasonFuzzy": "Prior ICI status differs by cohort and is tied to specific treatment phases, so it cannot be expressed with a single typed prior_therapy_required or prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT07224971-randomized",
+      "polarity": "inclusion",
+      "sourceText": "Must be willing to be randomized to complete therapy at assigned time of day, which may be early in the morning OR later in the day/into the evening.",
+      "reasonFuzzy": "Willingness to be randomized to a time of day is a behavioral requirement, not a typed check."
+    },
+    {
+      "id": "NCT07224971-eligible",
+      "polarity": "inclusion",
+      "sourceText": "Must be eligible to receive anti-PD-1/PD-L1 therapy singly or in combination with other FDA-approved agents according to standard of care practices, as determined by the clinical judgment of the investigator but according to approved label indications",
+      "reasonFuzzy": "Investigator judgment of standard of care eligibility is subjective."
+    },
+    {
+      "id": "NCT07224971-consent",
+      "polarity": "inclusion",
+      "sourceText": "Must have the ability to understand and the willingness to sign a written informed consent document. Able to read and write in English.",
+      "reasonFuzzy": "Informed consent and language ability are subjective administrative criteria."
+    },
+    {
+      "id": "NCT07224971-excl",
+      "polarity": "exclusion",
+      "sourceText": "Participant unable to receive anti-PD-1/PD-L1 therapy due to prior allergic reactions to therapy or any therapy ingredients.",
+      "reasonFuzzy": "Allergic reactions and therapy contraindications are investigator judgment-based exclusions."
+    },
+    {
+      "id": "NCT07224971-cohort",
+      "polarity": "inclusion",
+      "sourceText": "Cohort A: Advanced/metastatic NSCLC patients for which 1st line PD-1/PD-L1 therapy is on-label either alone or in combination. Cohort B: Advanced/metastatic NSCLC patients who have completed up to 4 cycles of induction therapy who have stable disease or responsive disease and for which maintenance anti-PD-1/PD-L1 therapy is on-label either alone or in combination.",
+      "reasonFuzzy": "Cohort-specific eligibility rules depend on on-label indications, induction cycle counts, and disease response status, which cannot be expressed as a single typed stage or line check."
+    },
+    {
+      "id": "NCT07224971-ici-naive",
+      "polarity": "inclusion",
+      "sourceText": "Patients should be ICI-naïve (this should be first-line therapy) (Cohorts A and C), or should have received ICI induction therapy and are now eligible for ICI maintenance therapy (Cohort B).",
+      "reasonFuzzy": "Prior therapy requirements vary by cohort, combining ICI-naïve status with prior ICI induction, and cannot be captured by a standard typed prior_therapy_required or prior_lines check."
+    },
+    {
+      "id": "NCT07224971-randomization",
+      "polarity": "inclusion",
+      "sourceText": "Must be willing to be randomized to complete therapy at assigned time of day, which may be early in the morning OR later in the day/into the evening.",
+      "reasonFuzzy": "Willingness to undergo randomization and time-of-day compliance are subjective behavioral requirements."
+    },
+    {
+      "id": "NCT07224971-investigator",
+      "polarity": "inclusion",
+      "sourceText": "Must be eligible to receive anti-PD-1/PD-L1 therapy singly or in combination with other FDA-approved agents according to standard of care practices, as determined by the clinical judgment of the investigator but according to approved label indications",
+      "reasonFuzzy": "Requires investigator judgment regarding standard of care practices and FDA-approved label indications."
+    },
+    {
+      "id": "NCT07224971-consent",
+      "polarity": "inclusion",
+      "sourceText": "Must have the ability to understand and the willingness to sign a written informed consent document.",
+      "reasonFuzzy": "Informed consent willingness is a subjective judgment."
+    },
+    {
+      "id": "NCT07224971-language",
+      "polarity": "inclusion",
+      "sourceText": "Able to read and write in English.",
+      "reasonFuzzy": "Language proficiency is not a typed check."
+    },
+    {
+      "id": "NCT07224971-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07224971-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Participant unable to receive anti-PD-1/PD-L1 therapy due to prior allergic reactions to therapy or any therapy ingredients.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 0,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 0,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-pd-1/pd-l1"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 0,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2847
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 3150
+  },
+  "ms": 13972,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07224971",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07224971-cohort",
+        "polarity": "inclusion",
+        "sourceText": "Cohort A: Advanced/metastatic NSCLC patients for which 1st line PD-1/PD-L1 therapy is on-label either alone or in combination. Cohort B: Advanced/metastatic NSCLC patients who have completed up to 4 cycles of induction therapy who have stable disease or responsive disease and for which maintenance anti-PD-1/PD-L1 therapy is on-label either alone or in combination.",
+        "reasonFuzzy": "Cohort-specific indication and prior therapy requirements are complex and cannot be captured in simple typed checks."
+      },
+      {
+        "id": "NCT07224971-ici",
+        "polarity": "inclusion",
+        "sourceText": "Patients should be ICI-naïve (this should be first-line therapy) (Cohorts A and C), or should have received ICI induction therapy and are now eligible for ICI maintenance therapy (Cohort B).",
+        "reasonFuzzy": "Prior ICI status differs by cohort and is tied to specific treatment phases, so it cannot be expressed with a single typed prior_therapy_required or prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT07224971-randomized",
+        "polarity": "inclusion",
+        "sourceText": "Must be willing to be randomized to complete therapy at assigned time of day, which may be early in the morning OR later in the day/into the evening.",
+        "reasonFuzzy": "Willingness to be randomized to a time of day is a behavioral requirement, not a typed check."
+      },
+      {
+        "id": "NCT07224971-eligible",
+        "polarity": "inclusion",
+        "sourceText": "Must be eligible to receive anti-PD-1/PD-L1 therapy singly or in combination with other FDA-approved agents according to standard of care practices, as determined by the clinical judgment of the investigator but according to approved label indications",
+        "reasonFuzzy": "Investigator judgment of standard of care eligibility is subjective."
+      },
+      {
+        "id": "NCT07224971-consent",
+        "polarity": "inclusion",
+        "sourceText": "Must have the ability to understand and the willingness to sign a written informed consent document. Able to read and write in English.",
+        "reasonFuzzy": "Informed consent and language ability are subjective administrative criteria."
+      },
+      {
+        "id": "NCT07224971-excl",
+        "polarity": "exclusion",
+        "sourceText": "Participant unable to receive anti-PD-1/PD-L1 therapy due to prior allergic reactions to therapy or any therapy ingredients.",
+        "reasonFuzzy": "Allergic reactions and therapy contraindications are investigator judgment-based exclusions."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07224971",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07224971-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07224971-prior-therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participant unable to receive anti-PD-1/PD-L1 therapy due to prior allergic reactions to therapy or any therapy ingredients.",
+        "stringValue": "anti-PD-1/PD-L1"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07224971-cohort",
+        "polarity": "inclusion",
+        "sourceText": "Cohort A: Advanced/metastatic NSCLC patients for which 1st line PD-1/PD-L1 therapy is on-label either alone or in combination. Cohort B: Advanced/metastatic NSCLC patients who have completed up to 4 cycles of induction therapy who have stable disease or responsive disease and for which maintenance anti-PD-1/PD-L1 therapy is on-label either alone or in combination.",
+        "reasonFuzzy": "Cohort-specific eligibility rules depend on on-label indications, induction cycle counts, and disease response status, which cannot be expressed as a single typed stage or line check."
+      },
+      {
+        "id": "NCT07224971-ici-naive",
+        "polarity": "inclusion",
+        "sourceText": "Patients should be ICI-naïve (this should be first-line therapy) (Cohorts A and C), or should have received ICI induction therapy and are now eligible for ICI maintenance therapy (Cohort B).",
+        "reasonFuzzy": "Prior therapy requirements vary by cohort, combining ICI-naïve status with prior ICI induction, and cannot be captured by a standard typed prior_therapy_required or prior_lines check."
+      },
+      {
+        "id": "NCT07224971-randomization",
+        "polarity": "inclusion",
+        "sourceText": "Must be willing to be randomized to complete therapy at assigned time of day, which may be early in the morning OR later in the day/into the evening.",
+        "reasonFuzzy": "Willingness to undergo randomization and time-of-day compliance are subjective behavioral requirements."
+      },
+      {
+        "id": "NCT07224971-investigator",
+        "polarity": "inclusion",
+        "sourceText": "Must be eligible to receive anti-PD-1/PD-L1 therapy singly or in combination with other FDA-approved agents according to standard of care practices, as determined by the clinical judgment of the investigator but according to approved label indications",
+        "reasonFuzzy": "Requires investigator judgment regarding standard of care practices and FDA-approved label indications."
+      },
+      {
+        "id": "NCT07224971-consent",
+        "polarity": "inclusion",
+        "sourceText": "Must have the ability to understand and the willingness to sign a written informed consent document.",
+        "reasonFuzzy": "Informed consent willingness is a subjective judgment."
+      },
+      {
+        "id": "NCT07224971-language",
+        "polarity": "inclusion",
+        "sourceText": "Able to read and write in English.",
+        "reasonFuzzy": "Language proficiency is not a typed check."
+      }
+    ]
+  }
+}

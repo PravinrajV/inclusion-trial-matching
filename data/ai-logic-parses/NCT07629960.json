@@ -1,0 +1,288 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07629960",
+  "briefTitle": "A First-in-Human Trial of BLU-924 (SAR449336) in Advanced Solid Tumors Harboring KRAS Mutations",
+  "parsedAt": "2026-11-12T11:58:59.315Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07629960-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) 0-1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07629960-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07629960-stdthx",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have received all standard therapies for their cancer type in the metastatic setting, unless they are unable to receive such therapies due to clinical characteristics, comorbidities, or other medically justified reasons.",
+      "reasonFuzzy": "Standard therapy requirement with exceptions for clinical characteristics or comorbidities is investigator-dependent and not a simple prior lines or therapy check."
+    },
+    {
+      "id": "NCT07629960-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07629960-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07629960-standardtherapy",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have received all standard therapies for their cancer type in the metastatic setting, unless they are unable to receive such therapies due to clinical characteristics, comorbidities, or other medically justified reasons.",
+      "reasonFuzzy": "Prior therapy requirement depends on prior standard treatments across various cancer types and clinical justifications, not a single typed prior therapy check."
+    },
+    {
+      "id": "NCT07629960-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07629960-kras",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically confirmed diagnosis of metastatic Kirsten rat sarcoma viral oncogene homolog (KRAS)-mutant pancreatic ductal adenocarcinoma (PDAC), non-small cell lung cancer (NSCLC), or colorectal cancer (CRC) with evidence of a single KRAS G12C, G12D, G12V, G12A, G12S, or G13D mutation in tumor tissue or circulating tumor deoxyribonucleic acid (ctDNA).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07629960-krasvar",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically confirmed diagnosis of metastatic Kirsten rat sarcoma viral oncogene homolog (KRAS)-mutant pancreatic ductal adenocarcinoma (PDAC), non-small cell lung cancer (NSCLC), or colorectal cancer (CRC) with evidence of a single KRAS G12C, G12D, G12V, G12A, G12S, or G13D mutation in tumor tissue or circulating tumor deoxyribonucleic acid (ctDNA).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07629960-brain",
+      "polarity": "exclusion",
+      "sourceText": "Active brain metastases (participants with asymptomatic brain metastases may be eligible).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07629960-krasthx",
+      "polarity": "exclusion",
+      "sourceText": "Have received prior targeted treatment(s) against KRAS, including pan-KRAS inhibitors, multi-RAS inhibitors, mutant-selective KRAS inhibitors, and RAS or KRAS degraders.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12c, g12d, g12v, g12a, g12s, g13d"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:kras"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 11258
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 8437
+  },
+  "ms": 27670,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07629960",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07629960-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed diagnosis of metastatic Kirsten rat sarcoma viral oncogene homolog (KRAS)-mutant pancreatic ductal adenocarcinoma (PDAC), non-small cell lung cancer (NSCLC), or colorectal cancer (CRC) with evidence of a single KRAS G12C, G12D, G12V, G12A, G12S, or G13D mutation in tumor tissue or circulating tumor deoxyribonucleic acid (ctDNA).",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07629960-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed diagnosis of metastatic Kirsten rat sarcoma viral oncogene homolog (KRAS)-mutant pancreatic ductal adenocarcinoma (PDAC), non-small cell lung cancer (NSCLC), or colorectal cancer (CRC) with evidence of a single KRAS G12C, G12D, G12V, G12A, G12S, or G13D mutation in tumor tissue or circulating tumor deoxyribonucleic acid (ctDNA).",
+        "stringValue": "G12C, G12D, G12V, G12A, G12S, G13D"
+      },
+      {
+        "id": "NCT07629960-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07629960-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07629960-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active brain metastases (participants with asymptomatic brain metastases may be eligible).",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT07629960-krasthx",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Have received prior targeted treatment(s) against KRAS, including pan-KRAS inhibitors, multi-RAS inhibitors, mutant-selective KRAS inhibitors, and RAS or KRAS degraders.",
+        "stringValue": "KRAS"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07629960-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07629960-stdthx",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have received all standard therapies for their cancer type in the metastatic setting, unless they are unable to receive such therapies due to clinical characteristics, comorbidities, or other medically justified reasons.",
+        "reasonFuzzy": "Standard therapy requirement with exceptions for clinical characteristics or comorbidities is investigator-dependent and not a simple prior lines or therapy check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07629960",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07629960-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed diagnosis of metastatic Kirsten rat sarcoma viral oncogene homolog (KRAS)-mutant pancreatic ductal adenocarcinoma (PDAC), non-small cell lung cancer (NSCLC), or colorectal cancer (CRC) with evidence of a single KRAS G12C, G12D, G12V, G12A, G12S, or G13D mutation in tumor tissue or circulating tumor deoxyribonucleic acid (ctDNA).",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07629960-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "evidence of a single KRAS G12C, G12D, G12V, G12A, G12S, or G13D mutation in tumor tissue or circulating tumor deoxyribonucleic acid (ctDNA).",
+        "stringValue": "G12C, G12D, G12V, G12A, G12S, G13D"
+      },
+      {
+        "id": "NCT07629960-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07629960-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07629960-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active brain metastases (participants with asymptomatic brain metastases may be eligible).",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT07629960-priorkras",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Have received prior targeted treatment(s) against KRAS, including pan-KRAS inhibitors, multi-RAS inhibitors, mutant-selective KRAS inhibitors, and RAS or KRAS degraders.",
+        "stringValue": "KRAS inhibitors"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07629960-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07629960-standardtherapy",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have received all standard therapies for their cancer type in the metastatic setting, unless they are unable to receive such therapies due to clinical characteristics, comorbidities, or other medically justified reasons.",
+        "reasonFuzzy": "Prior therapy requirement depends on prior standard treatments across various cancer types and clinical justifications, not a single typed prior therapy check."
+      }
+    ]
+  }
+}

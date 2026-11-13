@@ -1,0 +1,2845 @@
+{
+  "summary": {
+    "ranAt": "2026-11-12T02:40:48.910Z",
+    "parserModel": "deterministic-normalizer",
+    "promptVersion": "4-deterministic",
+    "labelSet": "held-out-2026-11-11",
+    "goldPath": "/workspace/competitions/firebase-hybridai/inclusion/gold/held-out-criteria-2026-11-11T211725-0500.json",
+    "typedHits": 49,
+    "typedTotal": 87,
+    "typedAccuracy": 56.3,
+    "coverage": 56.3,
+    "safeMisses": 38,
+    "unsafeMisses": 0,
+    "unsafeReport": "0 unsafe out of 87 criteria",
+    "decidedShare": {
+      "total": 87,
+      "decided": 49,
+      "discuss": 38,
+      "decidedShare": 56.3
+    },
+    "sixTypeDecidedShare": {
+      "total": 69,
+      "decided": 48,
+      "discuss": 21,
+      "decidedShare": 69.6
+    },
+    "perGroup": {
+      "driver": {
+        "total": 24,
+        "decided": 15,
+        "discuss": 9,
+        "decidedShare": 62.5
+      },
+      "stage": {
+        "total": 9,
+        "decided": 8,
+        "discuss": 1,
+        "decidedShare": 88.9
+      },
+      "prior": {
+        "total": 17,
+        "decided": 7,
+        "discuss": 10,
+        "decidedShare": 41.2
+      },
+      "ecog": {
+        "total": 7,
+        "decided": 7,
+        "discuss": 0,
+        "decidedShare": 100
+      },
+      "brain": {
+        "total": 7,
+        "decided": 6,
+        "discuss": 1,
+        "decidedShare": 85.7
+      },
+      "labs": {
+        "total": 5,
+        "decided": 5,
+        "discuss": 0,
+        "decidedShare": 100
+      },
+      "other": {
+        "total": 18,
+        "decided": 1,
+        "discuss": 17,
+        "decidedShare": 5.6
+      }
+    },
+    "perTrial": {
+      "NCT07688577": {
+        "total": 8,
+        "decided": 7,
+        "discuss": 1,
+        "decidedShare": 87.5,
+        "typedEmitted": 8,
+        "fuzzyEmitted": 1,
+        "hits": [
+          "H02",
+          "H03",
+          "H04",
+          "H05",
+          "H06",
+          "H07",
+          "H08"
+        ],
+        "unsafe": [],
+        "safe": [
+          {
+            "id": "H01",
+            "kind": "age_min",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          }
+        ]
+      },
+      "NCT05098132": {
+        "total": 9,
+        "decided": 6,
+        "discuss": 3,
+        "decidedShare": 66.7,
+        "typedEmitted": 7,
+        "fuzzyEmitted": 3,
+        "hits": [
+          "H10",
+          "H13",
+          "H14",
+          "H15",
+          "H16",
+          "H17"
+        ],
+        "unsafe": [],
+        "safe": [
+          {
+            "id": "H09",
+            "kind": "age_min",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H11",
+            "kind": "histology_in",
+            "reason": "omitted from typedChecks with no competing wrong typed check"
+          },
+          {
+            "id": "H12",
+            "kind": "prior_lines_max",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          }
+        ]
+      },
+      "NCT06357533": {
+        "total": 10,
+        "decided": 6,
+        "discuss": 4,
+        "decidedShare": 60,
+        "typedEmitted": 6,
+        "fuzzyEmitted": 4,
+        "hits": [
+          "H20",
+          "H21",
+          "H22",
+          "H23",
+          "H25",
+          "H27"
+        ],
+        "unsafe": [],
+        "safe": [
+          {
+            "id": "H18",
+            "kind": "age_min",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H19",
+            "kind": "histology_in",
+            "reason": "omitted from typedChecks with no competing wrong typed check"
+          },
+          {
+            "id": "H24",
+            "kind": "pdl1_min",
+            "reason": "omitted from typedChecks with no competing wrong typed check"
+          },
+          {
+            "id": "H26",
+            "kind": "prior_lines_max",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          }
+        ]
+      },
+      "NCT06868277": {
+        "total": 9,
+        "decided": 7,
+        "discuss": 2,
+        "decidedShare": 77.8,
+        "typedEmitted": 7,
+        "fuzzyEmitted": 6,
+        "hits": [
+          "H29",
+          "H30",
+          "H31",
+          "H32",
+          "H33",
+          "H35",
+          "H36"
+        ],
+        "unsafe": [],
+        "safe": [
+          {
+            "id": "H28",
+            "kind": "age_min",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H34",
+            "kind": "prior_lines_max",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          }
+        ]
+      },
+      "NCT06248606": {
+        "total": 12,
+        "decided": 8,
+        "discuss": 4,
+        "decidedShare": 66.7,
+        "typedEmitted": 8,
+        "fuzzyEmitted": 29,
+        "hits": [
+          "H37",
+          "H38",
+          "H42",
+          "H44",
+          "H45",
+          "H46",
+          "H47",
+          "H48"
+        ],
+        "unsafe": [],
+        "safe": [
+          {
+            "id": "H39",
+            "kind": "stage_in",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H40",
+            "kind": "kras_variant_in",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H41",
+            "kind": "brain_mets",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H43",
+            "kind": "prior_therapy_excluded",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          }
+        ]
+      },
+      "NCT06627647": {
+        "total": 11,
+        "decided": 3,
+        "discuss": 8,
+        "decidedShare": 27.3,
+        "typedEmitted": 3,
+        "fuzzyEmitted": 8,
+        "hits": [
+          "H51",
+          "H57",
+          "H58"
+        ],
+        "unsafe": [],
+        "safe": [
+          {
+            "id": "H49",
+            "kind": "age_min",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H50",
+            "kind": "histology_in",
+            "reason": "omitted from typedChecks with no competing wrong typed check"
+          },
+          {
+            "id": "H52",
+            "kind": "egfr_status",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H53",
+            "kind": "alk_status",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H54",
+            "kind": "ros1_status",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H55",
+            "kind": "pdl1_min",
+            "reason": "omitted from typedChecks with no competing wrong typed check"
+          },
+          {
+            "id": "H56",
+            "kind": "prior_lines_max",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H59",
+            "kind": "egfr_variant_in",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          }
+        ]
+      },
+      "NCT06772623": {
+        "total": 2,
+        "decided": 0,
+        "discuss": 2,
+        "decidedShare": 0,
+        "typedEmitted": 3,
+        "fuzzyEmitted": 6,
+        "hits": [],
+        "unsafe": [],
+        "safe": [
+          {
+            "id": "H60",
+            "kind": "age_min",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H61",
+            "kind": "histology_in",
+            "reason": "omitted from typedChecks with no competing wrong typed check"
+          }
+        ]
+      },
+      "NCT04614103": {
+        "total": 9,
+        "decided": 5,
+        "discuss": 4,
+        "decidedShare": 55.6,
+        "typedEmitted": 6,
+        "fuzzyEmitted": 10,
+        "hits": [
+          "H64",
+          "H65",
+          "H66",
+          "H67",
+          "H68"
+        ],
+        "unsafe": [],
+        "safe": [
+          {
+            "id": "H62",
+            "kind": "age_min",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H63",
+            "kind": "age_max",
+            "reason": "omitted from typedChecks with no competing wrong typed check"
+          },
+          {
+            "id": "H69",
+            "kind": "prior_lines_min",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H70",
+            "kind": "prior_lines_max",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          }
+        ]
+      },
+      "NCT07291037": {
+        "total": 12,
+        "decided": 4,
+        "discuss": 8,
+        "decidedShare": 33.3,
+        "typedEmitted": 6,
+        "fuzzyEmitted": 6,
+        "hits": [
+          "H72",
+          "H78",
+          "H81",
+          "H82"
+        ],
+        "unsafe": [],
+        "safe": [
+          {
+            "id": "H71",
+            "kind": "age_min",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H73",
+            "kind": "histology_in",
+            "reason": "omitted from typedChecks with no competing wrong typed check"
+          },
+          {
+            "id": "H74",
+            "kind": "egfr_status",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H75",
+            "kind": "alk_status",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H76",
+            "kind": "ros1_status",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H77",
+            "kind": "kras_variant_in",
+            "reason": "omitted from typedChecks with no competing wrong typed check"
+          },
+          {
+            "id": "H79",
+            "kind": "prior_lines_min",
+            "reason": "omitted from typedChecks with no competing wrong typed check"
+          },
+          {
+            "id": "H80",
+            "kind": "prior_lines_max",
+            "reason": "omitted from typedChecks with no competing wrong typed check"
+          }
+        ]
+      },
+      "NCT07154290": {
+        "total": 5,
+        "decided": 3,
+        "discuss": 2,
+        "decidedShare": 60,
+        "typedEmitted": 3,
+        "fuzzyEmitted": 7,
+        "hits": [
+          "H84",
+          "H85",
+          "H87"
+        ],
+        "unsafe": [],
+        "safe": [
+          {
+            "id": "H83",
+            "kind": "age_min",
+            "reason": "left fuzzy so the on-device judge can handle it"
+          },
+          {
+            "id": "H86",
+            "kind": "prior_lines_min",
+            "reason": "omitted from typedChecks with no competing wrong typed check"
+          }
+        ]
+      }
+    },
+    "unsafeRows": [],
+    "rows": [
+      {
+        "id": "H01",
+        "nctId": "NCT07688577",
+        "kind": "age_min",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: ecog_max/inclusion, stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, prior_therapy_required/inclusion, prior_therapy_excluded/exclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H02",
+        "nctId": "NCT07688577",
+        "kind": "ecog_max",
+        "group": "ecog",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H03",
+        "nctId": "NCT07688577",
+        "kind": "stage_in",
+        "group": "stage",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H04",
+        "nctId": "NCT07688577",
+        "kind": "egfr_status",
+        "group": "driver",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H05",
+        "nctId": "NCT07688577",
+        "kind": "alk_status",
+        "group": "driver",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H06",
+        "nctId": "NCT07688577",
+        "kind": "ros1_status",
+        "group": "driver",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H07",
+        "nctId": "NCT07688577",
+        "kind": "prior_therapy_required",
+        "group": "prior",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H08",
+        "nctId": "NCT07688577",
+        "kind": "prior_therapy_excluded",
+        "group": "prior",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H09",
+        "nctId": "NCT05098132",
+        "kind": "age_min",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, prior_therapy_excluded/exclusion, prior_therapy_excluded/exclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H10",
+        "nctId": "NCT05098132",
+        "kind": "stage_in",
+        "group": "stage",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H11",
+        "nctId": "NCT05098132",
+        "kind": "histology_in",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, prior_therapy_excluded/exclusion, prior_therapy_excluded/exclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+      },
+      {
+        "id": "H12",
+        "nctId": "NCT05098132",
+        "kind": "prior_lines_max",
+        "group": "prior",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, prior_therapy_excluded/exclusion, prior_therapy_excluded/exclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H13",
+        "nctId": "NCT05098132",
+        "kind": "egfr_status",
+        "group": "driver",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H14",
+        "nctId": "NCT05098132",
+        "kind": "alk_status",
+        "group": "driver",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H15",
+        "nctId": "NCT05098132",
+        "kind": "ros1_status",
+        "group": "driver",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H16",
+        "nctId": "NCT05098132",
+        "kind": "prior_therapy_excluded",
+        "group": "prior",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H17",
+        "nctId": "NCT05098132",
+        "kind": "brain_mets",
+        "group": "brain",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H18",
+        "nctId": "NCT06357533",
+        "kind": "age_min",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H19",
+        "nctId": "NCT06357533",
+        "kind": "histology_in",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+      },
+      {
+        "id": "H20",
+        "nctId": "NCT06357533",
+        "kind": "stage_in",
+        "group": "stage",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H21",
+        "nctId": "NCT06357533",
+        "kind": "egfr_status",
+        "group": "driver",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H22",
+        "nctId": "NCT06357533",
+        "kind": "alk_status",
+        "group": "driver",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H23",
+        "nctId": "NCT06357533",
+        "kind": "ros1_status",
+        "group": "driver",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H24",
+        "nctId": "NCT06357533",
+        "kind": "pdl1_min",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+      },
+      {
+        "id": "H25",
+        "nctId": "NCT06357533",
+        "kind": "ecog_max",
+        "group": "ecog",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H26",
+        "nctId": "NCT06357533",
+        "kind": "prior_lines_max",
+        "group": "prior",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H27",
+        "nctId": "NCT06357533",
+        "kind": "brain_mets",
+        "group": "brain",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H28",
+        "nctId": "NCT06868277",
+        "kind": "age_min",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, brain_mets/exclusion, prior_therapy_excluded/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H29",
+        "nctId": "NCT06868277",
+        "kind": "stage_in",
+        "group": "stage",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H30",
+        "nctId": "NCT06868277",
+        "kind": "egfr_status",
+        "group": "driver",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H31",
+        "nctId": "NCT06868277",
+        "kind": "alk_status",
+        "group": "driver",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H32",
+        "nctId": "NCT06868277",
+        "kind": "ros1_status",
+        "group": "driver",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H33",
+        "nctId": "NCT06868277",
+        "kind": "ecog_max",
+        "group": "ecog",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H34",
+        "nctId": "NCT06868277",
+        "kind": "prior_lines_max",
+        "group": "prior",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, brain_mets/exclusion, prior_therapy_excluded/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H35",
+        "nctId": "NCT06868277",
+        "kind": "prior_therapy_excluded",
+        "group": "prior",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H36",
+        "nctId": "NCT06868277",
+        "kind": "brain_mets",
+        "group": "brain",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H37",
+        "nctId": "NCT06248606",
+        "kind": "age_min",
+        "group": "other",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H38",
+        "nctId": "NCT06248606",
+        "kind": "ecog_max",
+        "group": "ecog",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H39",
+        "nctId": "NCT06248606",
+        "kind": "stage_in",
+        "group": "stage",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: age_min/inclusion, ecog_max/inclusion, prior_lines_max/inclusion, hemoglobin_min/inclusion, egfr_min/inclusion, bilirubin_max/inclusion, ast_max/inclusion, alt_max/inclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H40",
+        "nctId": "NCT06248606",
+        "kind": "kras_variant_in",
+        "group": "driver",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: age_min/inclusion, ecog_max/inclusion, prior_lines_max/inclusion, hemoglobin_min/inclusion, egfr_min/inclusion, bilirubin_max/inclusion, ast_max/inclusion, alt_max/inclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H41",
+        "nctId": "NCT06248606",
+        "kind": "brain_mets",
+        "group": "brain",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: age_min/inclusion, ecog_max/inclusion, prior_lines_max/inclusion, hemoglobin_min/inclusion, egfr_min/inclusion, bilirubin_max/inclusion, ast_max/inclusion, alt_max/inclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H42",
+        "nctId": "NCT06248606",
+        "kind": "prior_lines_max",
+        "group": "prior",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H43",
+        "nctId": "NCT06248606",
+        "kind": "prior_therapy_excluded",
+        "group": "prior",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: age_min/inclusion, ecog_max/inclusion, prior_lines_max/inclusion, hemoglobin_min/inclusion, egfr_min/inclusion, bilirubin_max/inclusion, ast_max/inclusion, alt_max/inclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H44",
+        "nctId": "NCT06248606",
+        "kind": "hemoglobin_min",
+        "group": "labs",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H45",
+        "nctId": "NCT06248606",
+        "kind": "egfr_min",
+        "group": "labs",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H46",
+        "nctId": "NCT06248606",
+        "kind": "bilirubin_max",
+        "group": "labs",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H47",
+        "nctId": "NCT06248606",
+        "kind": "ast_max",
+        "group": "labs",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H48",
+        "nctId": "NCT06248606",
+        "kind": "alt_max",
+        "group": "labs",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H49",
+        "nctId": "NCT06627647",
+        "kind": "age_min",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, brain_mets/exclusion, prior_therapy_excluded/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H50",
+        "nctId": "NCT06627647",
+        "kind": "histology_in",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, brain_mets/exclusion, prior_therapy_excluded/exclusion)",
+        "safety": "safe",
+        "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+      },
+      {
+        "id": "H51",
+        "nctId": "NCT06627647",
+        "kind": "stage_in",
+        "group": "stage",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H52",
+        "nctId": "NCT06627647",
+        "kind": "egfr_status",
+        "group": "driver",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, brain_mets/exclusion, prior_therapy_excluded/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H53",
+        "nctId": "NCT06627647",
+        "kind": "alk_status",
+        "group": "driver",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, brain_mets/exclusion, prior_therapy_excluded/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H54",
+        "nctId": "NCT06627647",
+        "kind": "ros1_status",
+        "group": "driver",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, brain_mets/exclusion, prior_therapy_excluded/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H55",
+        "nctId": "NCT06627647",
+        "kind": "pdl1_min",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, brain_mets/exclusion, prior_therapy_excluded/exclusion)",
+        "safety": "safe",
+        "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+      },
+      {
+        "id": "H56",
+        "nctId": "NCT06627647",
+        "kind": "prior_lines_max",
+        "group": "prior",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, brain_mets/exclusion, prior_therapy_excluded/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H57",
+        "nctId": "NCT06627647",
+        "kind": "prior_therapy_excluded",
+        "group": "prior",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H58",
+        "nctId": "NCT06627647",
+        "kind": "brain_mets",
+        "group": "brain",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H59",
+        "nctId": "NCT06627647",
+        "kind": "egfr_variant_in",
+        "group": "driver",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, brain_mets/exclusion, prior_therapy_excluded/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H60",
+        "nctId": "NCT06772623",
+        "kind": "age_min",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H61",
+        "nctId": "NCT06772623",
+        "kind": "histology_in",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+      },
+      {
+        "id": "H62",
+        "nctId": "NCT04614103",
+        "kind": "age_min",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H63",
+        "nctId": "NCT04614103",
+        "kind": "age_max",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+      },
+      {
+        "id": "H64",
+        "nctId": "NCT04614103",
+        "kind": "stage_in",
+        "group": "stage",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H65",
+        "nctId": "NCT04614103",
+        "kind": "egfr_status",
+        "group": "driver",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H66",
+        "nctId": "NCT04614103",
+        "kind": "alk_status",
+        "group": "driver",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H67",
+        "nctId": "NCT04614103",
+        "kind": "ros1_status",
+        "group": "driver",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H68",
+        "nctId": "NCT04614103",
+        "kind": "ecog_max",
+        "group": "ecog",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H69",
+        "nctId": "NCT04614103",
+        "kind": "prior_lines_min",
+        "group": "prior",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H70",
+        "nctId": "NCT04614103",
+        "kind": "prior_lines_max",
+        "group": "prior",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, egfr_status/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H71",
+        "nctId": "NCT07291037",
+        "kind": "age_min",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, braf_status/inclusion, prior_therapy_required/inclusion, prior_therapy_required/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H72",
+        "nctId": "NCT07291037",
+        "kind": "stage_in",
+        "group": "stage",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H73",
+        "nctId": "NCT07291037",
+        "kind": "histology_in",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, braf_status/inclusion, prior_therapy_required/inclusion, prior_therapy_required/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+      },
+      {
+        "id": "H74",
+        "nctId": "NCT07291037",
+        "kind": "egfr_status",
+        "group": "driver",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, braf_status/inclusion, prior_therapy_required/inclusion, prior_therapy_required/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H75",
+        "nctId": "NCT07291037",
+        "kind": "alk_status",
+        "group": "driver",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, braf_status/inclusion, prior_therapy_required/inclusion, prior_therapy_required/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H76",
+        "nctId": "NCT07291037",
+        "kind": "ros1_status",
+        "group": "driver",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, braf_status/inclusion, prior_therapy_required/inclusion, prior_therapy_required/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H77",
+        "nctId": "NCT07291037",
+        "kind": "kras_variant_in",
+        "group": "driver",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, braf_status/inclusion, prior_therapy_required/inclusion, prior_therapy_required/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+      },
+      {
+        "id": "H78",
+        "nctId": "NCT07291037",
+        "kind": "ecog_max",
+        "group": "ecog",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H79",
+        "nctId": "NCT07291037",
+        "kind": "prior_lines_min",
+        "group": "prior",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, braf_status/inclusion, prior_therapy_required/inclusion, prior_therapy_required/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+      },
+      {
+        "id": "H80",
+        "nctId": "NCT07291037",
+        "kind": "prior_lines_max",
+        "group": "prior",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, braf_status/inclusion, prior_therapy_required/inclusion, prior_therapy_required/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+      },
+      {
+        "id": "H81",
+        "nctId": "NCT07291037",
+        "kind": "prior_therapy_required",
+        "group": "prior",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H82",
+        "nctId": "NCT07291037",
+        "kind": "brain_mets",
+        "group": "brain",
+        "verdict": "hit",
+        "detail": "matcher-equivalent encoding (same judgments, different polarity or presence form)",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H83",
+        "nctId": "NCT07154290",
+        "kind": "age_min",
+        "group": "other",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "left fuzzy so the on-device judge can handle it"
+      },
+      {
+        "id": "H84",
+        "nctId": "NCT07154290",
+        "kind": "stage_in",
+        "group": "stage",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H85",
+        "nctId": "NCT07154290",
+        "kind": "ecog_max",
+        "group": "ecog",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      },
+      {
+        "id": "H86",
+        "nctId": "NCT07154290",
+        "kind": "prior_lines_min",
+        "group": "prior",
+        "verdict": "miss",
+        "detail": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, brain_mets/exclusion)",
+        "safety": "safe",
+        "safetyReason": "omitted from typedChecks with no competing wrong typed check"
+      },
+      {
+        "id": "H87",
+        "nctId": "NCT07154290",
+        "kind": "brain_mets",
+        "group": "brain",
+        "verdict": "hit",
+        "detail": "kind, polarity, and value matched",
+        "safety": "not_a_miss",
+        "safetyReason": "official hit"
+      }
+    ]
+  },
+  "parses": {
+    "NCT07688577": {
+      "schemaVersion": "1",
+      "nctId": "NCT07688577",
+      "typedChecks": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "numberValue": 1,
+          "evidence_quote": "ECOG performance status of 0 or 1",
+          "sourceText": "ECOG performance status of 0 or 1",
+          "section": "inclusion",
+          "id": "NCT07688577-ecog_max-0"
+        },
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "stages": [
+            "IV",
+            "IVA",
+            "IVB"
+          ],
+          "evidence_quote": "Metastatic NSCLC:",
+          "sourceText": "Metastatic NSCLC:",
+          "section": "inclusion",
+          "id": "NCT07688577-stage_in-1"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "Tumor must have been assessed for EGFR and ALK per local standard of practice; patients with these driver mutations are excluded.",
+          "sourceText": "Tumor must have been assessed for EGFR and ALK per local standard of practice; patients with these driver mutations are excluded.",
+          "section": "inclusion",
+          "id": "NCT07688577-egfr_status-3"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "Tumor must have been assessed for EGFR and ALK per local standard of practice; patients with these driver mutations are excluded.",
+          "sourceText": "Tumor must have been assessed for EGFR and ALK per local standard of practice; patients with these driver mutations are excluded.",
+          "section": "inclusion",
+          "id": "NCT07688577-alk_status-4"
+        },
+        {
+          "kind": "ros1_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "Patients with tumors known to have the following alterations are excluded: ROS1, RET, MET, HER-2, NTRK 1/2/3.",
+          "sourceText": "Patients with tumors known to have the following alterations are excluded: ROS1, RET, MET, HER-2, NTRK 1/2/3.",
+          "section": "inclusion",
+          "id": "NCT07688577-ros1_status-5"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "stringValue": "PD-1/PD-L1 inhibitor",
+          "evidence_quote": "Patients must have previously derived clinical benefit from a PD-1/PD-L1 inhibitor or PD-1/PDL-1 bispecific without progression for at least 6 months.",
+          "sourceText": "Patients must have previously derived clinical benefit from a PD-1/PD-L1 inhibitor or PD-1/PDL-1 bispecific without progression for at least 6 months.",
+          "section": "inclusion",
+          "id": "NCT07688577-prior_therapy_required-6"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "stringValue": "IL-2",
+          "evidence_quote": "Prior treatment with IL-2",
+          "sourceText": "Prior treatment with IL-2",
+          "section": "exclusion",
+          "id": "NCT07688577-prior_therapy_excluded-7"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "allowedBrainMets": [
+            "untreated"
+          ],
+          "evidence_quote": "Active CNS metastases",
+          "sourceText": "Active CNS metastases",
+          "section": "exclusion",
+          "id": "NCT07688577-brain_mets-8"
+        }
+      ],
+      "fuzzyCriteria": [
+        {
+          "id": "NCT07688577-age-structured",
+          "polarity": "inclusion",
+          "sourceText": "minimumAge: 18 Years",
+          "reasonFuzzy": "Age came from the structured minimumAge field, not a verbatim eligibility sentence."
+        }
+      ],
+      "postprocessActions": [
+        {
+          "action": "normalized",
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "id": "NCT07688577-ecog_max-0"
+        },
+        {
+          "action": "normalized",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "id": "NCT07688577-stage_in-1"
+        },
+        {
+          "action": "normalized",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "id": "NCT07688577-stage_in-2"
+        },
+        {
+          "action": "normalized",
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "id": "NCT07688577-egfr_status-3"
+        },
+        {
+          "action": "normalized",
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "id": "NCT07688577-alk_status-4"
+        },
+        {
+          "action": "normalized",
+          "kind": "ros1_status",
+          "polarity": "inclusion",
+          "id": "NCT07688577-ros1_status-5"
+        },
+        {
+          "action": "normalized",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "id": "NCT07688577-prior_therapy_required-6"
+        },
+        {
+          "action": "normalized",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "id": "NCT07688577-prior_therapy_excluded-7"
+        },
+        {
+          "action": "normalized",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "id": "NCT07688577-brain_mets-8"
+        }
+      ],
+      "parserModel": "deterministic-normalizer",
+      "promptVersion": "4-deterministic"
+    },
+    "NCT05098132": {
+      "schemaVersion": "1",
+      "nctId": "NCT05098132",
+      "typedChecks": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "stages": [
+            "IIIB",
+            "IIIC",
+            "IV",
+            "IVA",
+            "IVB"
+          ],
+          "evidence_quote": "Stage IV or Stage IIIB/IIIC and not a candidate for definitive treatment",
+          "sourceText": "Stage IV or Stage IIIB/IIIC and not a candidate for definitive treatment.",
+          "section": "inclusion",
+          "id": "NCT05098132-stage_in-0"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+          "sourceText": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+          "section": "inclusion",
+          "id": "NCT05098132-egfr_status-3"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+          "sourceText": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+          "section": "inclusion",
+          "id": "NCT05098132-alk_status-4"
+        },
+        {
+          "kind": "ros1_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+          "sourceText": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+          "section": "inclusion",
+          "id": "NCT05098132-ros1_status-5"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "stringValue": "immune checkpoint inhibitor",
+          "evidence_quote": "Prior immune checkpoint inhibitor (anti-PD\\[L\\]1 and/or anti-CTLA-4) treatment",
+          "sourceText": "Prior immune checkpoint inhibitor (anti-PD\\[L\\]1 and/or anti-CTLA-4) treatment",
+          "section": "exclusion",
+          "id": "NCT05098132-prior_therapy_excluded-6"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "stringValue": "anti-CTLA-4",
+          "evidence_quote": "Prior immune checkpoint inhibitor (anti-PD\\[L\\]1 and/or anti-CTLA-4) treatment",
+          "sourceText": "Prior immune checkpoint inhibitor (anti-PD\\[L\\]1 and/or anti-CTLA-4) treatment",
+          "section": "exclusion",
+          "id": "NCT05098132-prior_therapy_excluded-7"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "allowedBrainMets": [
+            "untreated"
+          ],
+          "evidence_quote": "Known active central nervous system metastases",
+          "sourceText": "Known active central nervous system metastases",
+          "section": "exclusion",
+          "id": "NCT05098132-brain_mets-8"
+        }
+      ],
+      "fuzzyCriteria": [
+        {
+          "id": "NCT05098132-fz-1",
+          "polarity": "inclusion",
+          "sourceText": "No prior systemic therapy for advanced/metastatic NSQ NSCLC.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT05098132-fz-2",
+          "polarity": "inclusion",
+          "sourceText": "Must have a tumor that meets at least one of the following criteria on local testing:",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT05098132-age-structured",
+          "polarity": "inclusion",
+          "sourceText": "minimumAge: 18 Years",
+          "reasonFuzzy": "Age came from the structured minimumAge field, not a verbatim eligibility sentence."
+        }
+      ],
+      "postprocessActions": [
+        {
+          "action": "normalized",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "id": "NCT05098132-stage_in-0"
+        },
+        {
+          "action": "normalized",
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "id": "NCT05098132-egfr_status-3"
+        },
+        {
+          "action": "normalized",
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "id": "NCT05098132-alk_status-4"
+        },
+        {
+          "action": "normalized",
+          "kind": "ros1_status",
+          "polarity": "inclusion",
+          "id": "NCT05098132-ros1_status-5"
+        },
+        {
+          "action": "normalized",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "id": "NCT05098132-prior_therapy_excluded-6"
+        },
+        {
+          "action": "normalized",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "id": "NCT05098132-prior_therapy_excluded-7"
+        },
+        {
+          "action": "normalized",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "id": "NCT05098132-brain_mets-8"
+        }
+      ],
+      "parserModel": "deterministic-normalizer",
+      "promptVersion": "4-deterministic"
+    },
+    "NCT06357533": {
+      "schemaVersion": "1",
+      "nctId": "NCT06357533",
+      "typedChecks": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "stages": [
+            "IIIB",
+            "IIIC",
+            "IV",
+            "IVA",
+            "IVB"
+          ],
+          "evidence_quote": "Stage IIIB or IIIC or Stage IV metastatic NSCLC (according to Edition 8 of the AJCC sta",
+          "sourceText": "Stage IIIB or IIIC or Stage IV metastatic NSCLC (according to Edition 8 of the AJCC staging manual) not amenable to curative surgery or definitive chemoradiation.",
+          "section": "inclusion",
+          "id": "NCT06357533-stage_in-0"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+          "sourceText": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+          "section": "inclusion",
+          "id": "NCT06357533-egfr_status-1"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+          "sourceText": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+          "section": "inclusion",
+          "id": "NCT06357533-alk_status-2"
+        },
+        {
+          "kind": "ros1_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+          "sourceText": "Absence of sensitising EGFR mutations, and ALK and ROS1 rearrangements, and absence of documented local test result for any other known genomic alteration for which there are locally approved and available targeted first-line therapies.",
+          "section": "inclusion",
+          "id": "NCT06357533-ros1_status-3"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "numberValue": 1,
+          "evidence_quote": "ECOG performance status of 0 or 1",
+          "sourceText": "ECOG performance status of 0 or 1",
+          "section": "inclusion",
+          "id": "NCT06357533-ecog_max-5"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "allowedBrainMets": [
+            "untreated"
+          ],
+          "evidence_quote": "Spinal cord compression, or brain metastases unless participant treated and no longer symptomatic, radiologically stable, and who require no treatment with corticosteroids or anticonvulsants.",
+          "sourceText": "Spinal cord compression, or brain metastases unless participant treated and no longer symptomatic, radiologically stable, and who require no treatment with corticosteroids or anticonvulsants.",
+          "section": "exclusion",
+          "id": "NCT06357533-brain_mets-8"
+        }
+      ],
+      "fuzzyCriteria": [
+        {
+          "id": "NCT06357533-fz-4",
+          "polarity": "inclusion",
+          "sourceText": "Must provide tumor sample to determine PD-L1 status, TROP2 status and other biomarkers.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06357533-fz-6",
+          "polarity": "exclusion",
+          "sourceText": "Prior systemic therapy for advanced/metastatic NSCLC.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06357533-fz-7",
+          "polarity": "exclusion",
+          "sourceText": "Active or prior documented autoimmune or inflammatory disorders (with exceptions)",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06357533-age-structured",
+          "polarity": "inclusion",
+          "sourceText": "minimumAge: 18 Years",
+          "reasonFuzzy": "Age came from the structured minimumAge field, not a verbatim eligibility sentence."
+        }
+      ],
+      "postprocessActions": [
+        {
+          "action": "normalized",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "id": "NCT06357533-stage_in-0"
+        },
+        {
+          "action": "normalized",
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "id": "NCT06357533-egfr_status-1"
+        },
+        {
+          "action": "normalized",
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "id": "NCT06357533-alk_status-2"
+        },
+        {
+          "action": "normalized",
+          "kind": "ros1_status",
+          "polarity": "inclusion",
+          "id": "NCT06357533-ros1_status-3"
+        },
+        {
+          "action": "normalized",
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "id": "NCT06357533-ecog_max-5"
+        },
+        {
+          "action": "normalized",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "id": "NCT06357533-brain_mets-8"
+        }
+      ],
+      "parserModel": "deterministic-normalizer",
+      "promptVersion": "4-deterministic"
+    },
+    "NCT06868277": {
+      "schemaVersion": "1",
+      "nctId": "NCT06868277",
+      "typedChecks": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "stages": [
+            "IV",
+            "IVA",
+            "IVB"
+          ],
+          "evidence_quote": "Stage IV mNSCLC (metastatic non-small cell lung cancer) (based on the American Joint Committee on Cancer Edition 8) not amena",
+          "sourceText": "Stage IV mNSCLC (metastatic non-small cell lung cancer) (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment.",
+          "section": "inclusion",
+          "id": "NCT06868277-stage_in-0"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements.",
+          "sourceText": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements.",
+          "section": "inclusion",
+          "id": "NCT06868277-egfr_status-1"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements.",
+          "sourceText": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements.",
+          "section": "inclusion",
+          "id": "NCT06868277-alk_status-2"
+        },
+        {
+          "kind": "ros1_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements.",
+          "sourceText": "Absence of sensitizing EGFR (epidermal growth factor) mutations and ALK (anaplastic lymphoma kinase) and ROS1 (c-ros oncogene 1) rearrangements.",
+          "section": "inclusion",
+          "id": "NCT06868277-ros1_status-3"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "numberValue": 1,
+          "evidence_quote": "ECOG (Eastern Cooperative Oncology Group) performance status of 0 or 1",
+          "sourceText": "ECOG (Eastern Cooperative Oncology Group) performance status of 0 or 1",
+          "section": "inclusion",
+          "id": "NCT06868277-ecog_max-4"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "allowedBrainMets": [
+            "untreated"
+          ],
+          "evidence_quote": "Brain metastases unless asymptomatic, stable, and not requiring steroids or anticonvulsants for at least 4 weeks prior to start of study intervention.",
+          "sourceText": "Brain metastases unless asymptomatic, stable, and not requiring steroids or anticonvulsants for at least 4 weeks prior to start of study intervention.",
+          "section": "exclusion",
+          "id": "NCT06868277-brain_mets-8"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "stringValue": "anti-PD-1",
+          "evidence_quote": "Any prior treatment with an anti-PD-1 (programmed cell death protein 1) or anti-PD-L1 (anti-programmed death-ligand 1) agent.",
+          "sourceText": "Any prior treatment with an anti-PD-1 (programmed cell death protein 1) or anti-PD-L1 (anti-programmed death-ligand 1) agent.",
+          "section": "exclusion",
+          "id": "NCT06868277-prior_therapy_excluded-11"
+        }
+      ],
+      "fuzzyCriteria": [
+        {
+          "id": "NCT06868277-fz-5",
+          "polarity": "inclusion",
+          "sourceText": "Provision of acceptable tumor sample for the central testing prior to randomization.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06868277-fz-6",
+          "polarity": "inclusion",
+          "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 (Response Evaluation Criteria in Solid Tumors, Version 1.1) TL (target lesion) at baseline and can be accurately measured at baseline as ≥ 10 mm in the longest diameter (except lymph nodes, which must have short axis ≥ 15 mm) with CT (computed tomography) or MRI (magnetic resonance imaging) and is suitable for accurate repeated measurements.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06868277-fz-7",
+          "polarity": "exclusion",
+          "sourceText": "Active or prior documented autoimmune or inflammatory disorders requiring chronic treatment with steroids or other immunosuppressive treatment.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06868277-fz-9",
+          "polarity": "exclusion",
+          "sourceText": "Any prior systemic therapy received for advanced or mNSCLC (metastatic non-small cell lung cancer).",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06868277-fz-10",
+          "polarity": "exclusion",
+          "sourceText": "Any prior exposure to an anti-TIGIT (T-cell immunoglobulin and immunoreceptor tyrosine-based inhibitory motif domain) therapy or any other anticancer therapy targeting immune-regulatory receptors or mechanisms.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06868277-age-structured",
+          "polarity": "inclusion",
+          "sourceText": "minimumAge: 18 Years",
+          "reasonFuzzy": "Age came from the structured minimumAge field, not a verbatim eligibility sentence."
+        }
+      ],
+      "postprocessActions": [
+        {
+          "action": "normalized",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "id": "NCT06868277-stage_in-0"
+        },
+        {
+          "action": "normalized",
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "id": "NCT06868277-egfr_status-1"
+        },
+        {
+          "action": "normalized",
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "id": "NCT06868277-alk_status-2"
+        },
+        {
+          "action": "normalized",
+          "kind": "ros1_status",
+          "polarity": "inclusion",
+          "id": "NCT06868277-ros1_status-3"
+        },
+        {
+          "action": "normalized",
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "id": "NCT06868277-ecog_max-4"
+        },
+        {
+          "action": "normalized",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "id": "NCT06868277-brain_mets-8"
+        },
+        {
+          "action": "normalized",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "id": "NCT06868277-prior_therapy_excluded-11"
+        }
+      ],
+      "parserModel": "deterministic-normalizer",
+      "promptVersion": "4-deterministic"
+    },
+    "NCT06248606": {
+      "schemaVersion": "1",
+      "nctId": "NCT06248606",
+      "typedChecks": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "numberValue": 18,
+          "evidence_quote": "Age ≥ 18 years",
+          "sourceText": "Age ≥ 18 years at the time of consent.",
+          "section": "inclusion",
+          "id": "NCT06248606-age_min-1"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "numberValue": 1,
+          "evidence_quote": "ECOG Performance Status of 0-1",
+          "sourceText": "ECOG Performance Status of 0-1",
+          "section": "inclusion",
+          "id": "NCT06248606-ecog_max-2"
+        },
+        {
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "numberValue": 2,
+          "evidence_quote": "up to 2 prior lines",
+          "sourceText": "Patients may be treatment-naïve OR have received up to 2 prior lines of systemic therapy.",
+          "section": "inclusion",
+          "id": "NCT06248606-prior_lines_max-18"
+        },
+        {
+          "kind": "hemoglobin_min",
+          "polarity": "inclusion",
+          "numberValue": 8,
+          "evidence_quote": "Hemoglobin (Hgb): ≥ 8.0 g/dL",
+          "sourceText": "Hemoglobin (Hgb): ≥ 8.0 g/dL in the absence of transfusions within 7 days prior to testing.",
+          "section": "inclusion",
+          "id": "NCT06248606-hemoglobin_min-21"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "numberValue": 60,
+          "evidence_quote": "creatinine clearance: ≥ 60 mL/min",
+          "sourceText": "Calculated creatinine clearance: ≥ 60 mL/min",
+          "section": "inclusion",
+          "id": "NCT06248606-egfr_min-22"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "numberValue": 1.5,
+          "evidence_quote": "Bilirubin: ≤ 1.5 mg/dL",
+          "sourceText": "Bilirubin: ≤ 1.5 mg/dL",
+          "section": "inclusion",
+          "id": "NCT06248606-bilirubin_max-23"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "numberValue": 3,
+          "evidence_quote": "AST): ≤ 3.0 × ULN",
+          "sourceText": "Aspartate aminotransferase (AST): ≤ 3.0 × ULN",
+          "section": "inclusion",
+          "id": "NCT06248606-ast_max-24"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "numberValue": 3,
+          "evidence_quote": "ALT): ≤ 3.0 × ULN",
+          "sourceText": "Alanine aminotransferase (ALT): ≤ 3.0 × ULN",
+          "section": "inclusion",
+          "id": "NCT06248606-alt_max-25"
+        }
+      ],
+      "fuzzyCriteria": [
+        {
+          "id": "NCT06248606-fz-0",
+          "polarity": "inclusion",
+          "sourceText": "Written informed consent and HIPAA authorization for release of personal health information prior to registration.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-3",
+          "polarity": "inclusion",
+          "sourceText": "Confirmation of stage IV non-small cell lung cancer (NSCLC) per AJCC, 8th edition, or metastatic recurrence after treatment for earlier stage disease.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-4",
+          "polarity": "inclusion",
+          "sourceText": "Known to have a KRAS G12C mutation.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-5",
+          "polarity": "inclusion",
+          "sourceText": "KRAS G12C mutation can be determined based on local tissue and/or ctDNA testing.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-6",
+          "polarity": "inclusion",
+          "sourceText": "Presence of brain metastases that meet the following criteria:",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-7",
+          "polarity": "inclusion",
+          "sourceText": "Patients must have at least 1 untreated enhancing intracranial lesion, per local radiology interpretation, measuring at least 2mm.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-8",
+          "polarity": "inclusion",
+          "sourceText": "Must have no single metastasis measuring larger than 3 cm.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-9",
+          "polarity": "inclusion",
+          "sourceText": "Patients with surgically resected brain metastases are eligible provided there are additional brain metastases amenable to SRS",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-10",
+          "polarity": "inclusion",
+          "sourceText": "Patients with progression of previously radiated or surgically resected CNS metastases are eligible if solid component of lesion has enlarged and there is no concern for radionecrosis based on investigator discretion.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-11",
+          "polarity": "inclusion",
+          "sourceText": "Patients who received SRS within 4 weeks prior to registration are eligible provided baseline brain MRI prior to SRS treatment is within 4 weeks of study registration and SRS treatment meets requirements in #7 below.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-12",
+          "polarity": "inclusion",
+          "sourceText": "Symptomatic brain metastases are permitted if the following criteria are met:",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-13",
+          "polarity": "inclusion",
+          "sourceText": "Patients on steroids must have stable or improving neurologic symptoms that have not worsened during a steroid taper.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-14",
+          "polarity": "inclusion",
+          "sourceText": "Must be receiving the equivalent of dexamethasone 8 mg total daily dose or less at the time of registration.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-15",
+          "polarity": "inclusion",
+          "sourceText": "CNS lesions have already been treated with SRS (within 3 weeks prior to Cycle 1 Day 1) or are amenable to SRS as determined by radiation oncologist and/or neurosurgeon.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-16",
+          "polarity": "inclusion",
+          "sourceText": "SRS treatment must use GammaKnife or linear accelerator-based treatments with nominal x-ray energy of 6MV or greater.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-17",
+          "polarity": "inclusion",
+          "sourceText": "Patients on anticoagulation must be able to hold anticoagulation for SRS treatment based on investigator discretion.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-19",
+          "polarity": "inclusion",
+          "sourceText": "Treatment with systemic therapy for Stage I-III disease \\> 12 months prior to development of metastases do not count as a line of therapy.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-20",
+          "polarity": "inclusion",
+          "sourceText": "All screening labs to be obtained within 28 days prior to registration.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-26",
+          "polarity": "inclusion",
+          "sourceText": "Females of childbearing potential must have a negative urine or serum pregnancy test within 7 days prior to treatment initiation.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-27",
+          "polarity": "inclusion",
+          "sourceText": "Females of childbearing potential who are sexually active with a male able to father a child must be willing to abstain from heterosexual activity or to use an effective method(s) of contraception.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-28",
+          "polarity": "inclusion",
+          "sourceText": "Males able to father a child who are sexually active with female of childbearing potential must be willing to abstain from heterosexual activity or to use an effective method(s) of contraception.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-29",
+          "polarity": "inclusion",
+          "sourceText": "Patients with evidence of chronic hepatitis B virus (HBV) infection, the HBV viral load must be undetectable on suppressive therapy, if indicated.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-30",
+          "polarity": "inclusion",
+          "sourceText": "Patients with a history of hepatitis C virus (HCV) infection must have been treated and cured.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-31",
+          "polarity": "inclusion",
+          "sourceText": "For patients with HCV infection who are currently on treatment, the HCV viral load must be undetectable to be eligible for this trial.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-32",
+          "polarity": "exclusion",
+          "sourceText": "Prior treatment with KRAS G12C tyrosine kinase inhibitor.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-33",
+          "polarity": "exclusion",
+          "sourceText": "Ongoing need for treatment with concomitant medication known as a strong inhibitor or inducer of CYP3A enzyme and that cannot be switched to an alternative treatment prior to study enrollment.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-34",
+          "polarity": "exclusion",
+          "sourceText": "NOTE: Discontinuation of CYP3A4 inducers should occur a minimum of 7 days or 5 times their half-life, whichever is longer, prior to C1D1 study treatment.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-35",
+          "polarity": "exclusion",
+          "sourceText": "Treatment with any investigational drug within 28 days prior to registration.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06248606-fz-36",
+          "polarity": "exclusion",
+          "sourceText": "Patients with a prior or concurrent malignancy whose natural history or treatment has the potential to interfere with the safety or efficacy assessment of the investigational regimen, per treating physician discretion, are not eligible for this trial.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        }
+      ],
+      "postprocessActions": [
+        {
+          "action": "normalized",
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "id": "NCT06248606-age_min-1"
+        },
+        {
+          "action": "normalized",
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "id": "NCT06248606-ecog_max-2"
+        },
+        {
+          "action": "normalized",
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "id": "NCT06248606-prior_lines_max-18"
+        },
+        {
+          "action": "normalized",
+          "kind": "hemoglobin_min",
+          "polarity": "inclusion",
+          "id": "NCT06248606-hemoglobin_min-21"
+        },
+        {
+          "action": "normalized",
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "id": "NCT06248606-egfr_min-22"
+        },
+        {
+          "action": "normalized",
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "id": "NCT06248606-bilirubin_max-23"
+        },
+        {
+          "action": "normalized",
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "id": "NCT06248606-ast_max-24"
+        },
+        {
+          "action": "normalized",
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "id": "NCT06248606-alt_max-25"
+        }
+      ],
+      "parserModel": "deterministic-normalizer",
+      "promptVersion": "4-deterministic"
+    },
+    "NCT06627647": {
+      "schemaVersion": "1",
+      "nctId": "NCT06627647",
+      "typedChecks": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "stages": [
+            "IIIB",
+            "IIIC",
+            "IV",
+            "IVA",
+            "IVB"
+          ],
+          "evidence_quote": "Stage III B/C or IV NSCLC (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment",
+          "sourceText": "Stage III B/C or IV NSCLC (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment.",
+          "section": "inclusion",
+          "id": "NCT06627647-stage_in-0"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "allowedBrainMets": [
+            "untreated"
+          ],
+          "evidence_quote": "Brain metastases unless asymptomatic, stable, and not requiring steroids or anticonvulsants for at least 7 days prior to randomization.",
+          "sourceText": "Brain metastases unless asymptomatic, stable, and not requiring steroids or anticonvulsants for at least 7 days prior to randomization.",
+          "section": "exclusion",
+          "id": "NCT06627647-brain_mets-3"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "stringValue": "anti-PD-1 or anti-PD-L1 agent",
+          "evidence_quote": "Any prior treatment with an anti-PD-1 or anti-PD-L1 agent.",
+          "sourceText": "Any prior treatment with an anti-PD-1 or anti-PD-L1 agent.",
+          "section": "exclusion",
+          "id": "NCT06627647-prior_therapy_excluded-8"
+        }
+      ],
+      "fuzzyCriteria": [
+        {
+          "id": "NCT06627647-fz-1",
+          "polarity": "inclusion",
+          "sourceText": "Absence of sensitizing EGFR mutations (including, but not limited to, exon 19 deletion and exon 21 L858R, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations) and ALK and ROS1 rearrangements.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06627647-fz-2",
+          "polarity": "inclusion",
+          "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 TL at baseline and can be accurately measured at baseline as ≥ 10 mm in the longest diameter (except lymph nodes, which must have short axis ≥ 15 mm) with CT or MRI and is suitable for accurate repeated measurements.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06627647-fz-4",
+          "polarity": "exclusion",
+          "sourceText": "A minimum of 2 weeks must have elapsed between the end of local therapy (brain radiotherapy or surgery) and randomization.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06627647-fz-5",
+          "polarity": "exclusion",
+          "sourceText": "Participants must have recovered from the acute toxic effect of radiotherapy (eg, dizziness and signs of increased intracranial pressure) or surgery prior to randomization.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06627647-fz-6",
+          "polarity": "exclusion",
+          "sourceText": "Any prior systemic therapy received for NSCLC except in the neoadjuvant or adjuvant setting or definitive chemoradiotherapy with the intent to cure, provided that progression has occurred \\> 12 months after the end of systemic therapy treatment.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06627647-fz-7",
+          "polarity": "exclusion",
+          "sourceText": "Any prior exposure to an anti-TIGIT therapy or any other anticancer therapy targeting immune-regulatory receptors or mechanisms.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06627647-fz-9",
+          "polarity": "exclusion",
+          "sourceText": "Active or prior documented autoimmune or inflammatory disorders requiring chronic systemic treatment with the use of disease-modifying agents, corticosteroids, or immunosuppressive drugs.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06627647-age-structured",
+          "polarity": "inclusion",
+          "sourceText": "minimumAge: 18 Years",
+          "reasonFuzzy": "Age came from the structured minimumAge field, not a verbatim eligibility sentence."
+        }
+      ],
+      "postprocessActions": [
+        {
+          "action": "normalized",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "id": "NCT06627647-stage_in-0"
+        },
+        {
+          "action": "normalized",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "id": "NCT06627647-brain_mets-3"
+        },
+        {
+          "action": "normalized",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "id": "NCT06627647-prior_therapy_excluded-8"
+        }
+      ],
+      "parserModel": "deterministic-normalizer",
+      "promptVersion": "4-deterministic"
+    },
+    "NCT06772623": {
+      "schemaVersion": "1",
+      "nctId": "NCT06772623",
+      "typedChecks": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "stages": [
+            "IIIA",
+            "IIIB",
+            "IIIC",
+            "IV",
+            "IVA",
+            "IVB"
+          ],
+          "evidence_quote": "Must have histologically documented non-squamous (NSq) non small cell lung carcinoma (NSCLC) that is locally advanced or metastatic will be enrolled into the study.",
+          "sourceText": "Must have histologically documented non-squamous (NSq) non small cell lung carcinoma (NSCLC) that is locally advanced or metastatic will be enrolled into the study.",
+          "section": "inclusion",
+          "id": "NCT06772623-stage_in-0"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "For Part 1, participants must have had no more than 1 systemic therapy for advanced disease including platinum-based chemotherapy or an immune checkpoint inhibitor (as monotherapy or in combination with chemotherapy), or appropriate targeted therapy for an actionable gene alteration, if applicable, for epidermal growth factor receptor (EGFR) wild-type (WT) NSq NSCLC.",
+          "sourceText": "For Part 1, participants must have had no more than 1 systemic therapy for advanced disease including platinum-based chemotherapy or an immune checkpoint inhibitor (as monotherapy or in combination with chemotherapy), or appropriate targeted therapy for an actionable gene alteration, if applicable, for epidermal growth factor receptor (EGFR) wild-type (WT) NSq NSCLC.",
+          "section": "inclusion",
+          "id": "NCT06772623-egfr_status-2"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "allowedBrainMets": [
+            "untreated"
+          ],
+          "evidence_quote": "Known uncontrolled metastases to the central nervous system.",
+          "sourceText": "Known uncontrolled metastases to the central nervous system.",
+          "section": "exclusion",
+          "id": "NCT06772623-brain_mets-7"
+        }
+      ],
+      "fuzzyCriteria": [
+        {
+          "id": "NCT06772623-fz-1",
+          "polarity": "inclusion",
+          "sourceText": "Must have measurable disease per response evaluation criteria in solid tumors (RECIST) v1.1.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06772623-fz-3",
+          "polarity": "inclusion",
+          "sourceText": "For Part 2, participants must have no prior systemic therapy for advanced disease, no known actionable genomic alteration.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06772623-fz-4",
+          "polarity": "inclusion",
+          "sourceText": "Must have documented programmed death ligand 1 (PD-L1) status.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06772623-fz-5",
+          "polarity": "inclusion",
+          "sourceText": "For Part 2, participant must have evaluable c-Met immunohistochemistry (IHC) result per central testing prior to randomization.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06772623-fz-6",
+          "polarity": "inclusion",
+          "sourceText": "Must have adequate organ function.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT06772623-age-structured",
+          "polarity": "inclusion",
+          "sourceText": "minimumAge: 18 Years",
+          "reasonFuzzy": "Age came from the structured minimumAge field, not a verbatim eligibility sentence."
+        }
+      ],
+      "postprocessActions": [
+        {
+          "action": "normalized",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "id": "NCT06772623-stage_in-0"
+        },
+        {
+          "action": "normalized",
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "id": "NCT06772623-egfr_status-2"
+        },
+        {
+          "action": "normalized",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "id": "NCT06772623-brain_mets-7"
+        }
+      ],
+      "parserModel": "deterministic-normalizer",
+      "promptVersion": "4-deterministic"
+    },
+    "NCT04614103": {
+      "schemaVersion": "1",
+      "nctId": "NCT04614103",
+      "typedChecks": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "stages": [
+            "IV",
+            "IVA",
+            "IVB"
+          ],
+          "evidence_quote": "cally confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations",
+          "sourceText": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+          "section": "inclusion",
+          "id": "NCT04614103-stage_in-0"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+          "sourceText": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+          "section": "inclusion",
+          "id": "NCT04614103-egfr_status-1"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+          "sourceText": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+          "section": "inclusion",
+          "id": "NCT04614103-alk_status-2"
+        },
+        {
+          "kind": "ros1_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+          "sourceText": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+          "section": "inclusion",
+          "id": "NCT04614103-ros1_status-3"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "numberValue": 1,
+          "evidence_quote": "ECOG performance status of 0 or 1",
+          "sourceText": "ECOG performance status of 0 or 1",
+          "section": "inclusion",
+          "id": "NCT04614103-ecog_max-9"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "allowedBrainMets": [
+            "untreated"
+          ],
+          "evidence_quote": "Patients who have symptomatic, untreated brain metastases.",
+          "sourceText": "Patients who have symptomatic, untreated brain metastases.",
+          "section": "exclusion",
+          "id": "NCT04614103-brain_mets-12"
+        }
+      ],
+      "fuzzyCriteria": [
+        {
+          "id": "NCT04614103-fz-4",
+          "polarity": "inclusion",
+          "sourceText": "For patients who have actionable mutations (other than EGFR, ALK, or ROS1 genomic alterations), 1 additional line of therapy with the appropriate health authority approved targeted therapy is required.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT04614103-fz-5",
+          "polarity": "inclusion",
+          "sourceText": "Patients must have documented radiographic disease progression on or after the first-line therapy, including concurrent or sequential ICI and platinum-based chemotherapy ± bevacizumab.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT04614103-fz-6",
+          "polarity": "inclusion",
+          "sourceText": "No more than 1 prior line is allowed if ICI and platinum-based chemotherapy were administered concurrently and no more than 2 prior lines are allowed for sequential administration of platinum-based chemotherapy and ICI as 2 separate lines.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT04614103-fz-7",
+          "polarity": "inclusion",
+          "sourceText": "These patients must intend to receive TIL therapy after disease progression",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT04614103-fz-8",
+          "polarity": "inclusion",
+          "sourceText": "Prior systemic therapy in the adjuvant or neoadjuvant setting, or as part of definitive chemoradiotherapy, will count as a line of therapy if the patient had disease progression during or within 12 months after the completion of such therapy.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT04614103-fz-10",
+          "polarity": "inclusion",
+          "sourceText": "Patients of childbearing potential or those with partners of childbearing potential must be willing to practice an approved method of highly effective birth control during treatment and up to 12 months after all protocol-related therapy",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT04614103-fz-11",
+          "polarity": "exclusion",
+          "sourceText": "Patients who have EGFR, ALK or ROS1 driver mutations",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT04614103-fz-13",
+          "polarity": "exclusion",
+          "sourceText": "Patients who have had allogeneic organ transplant or prior cell therapy within the past 20 years",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT04614103-fz-14",
+          "polarity": "exclusion",
+          "sourceText": "Patients who have received a live or attenuated vaccination within 28 days prior to the start of treatment",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT04614103-age-structured",
+          "polarity": "inclusion",
+          "sourceText": "minimumAge: 18 Years",
+          "reasonFuzzy": "Age came from the structured minimumAge field, not a verbatim eligibility sentence."
+        }
+      ],
+      "postprocessActions": [
+        {
+          "action": "normalized",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "id": "NCT04614103-stage_in-0"
+        },
+        {
+          "action": "normalized",
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "id": "NCT04614103-egfr_status-1"
+        },
+        {
+          "action": "normalized",
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "id": "NCT04614103-alk_status-2"
+        },
+        {
+          "action": "normalized",
+          "kind": "ros1_status",
+          "polarity": "inclusion",
+          "id": "NCT04614103-ros1_status-3"
+        },
+        {
+          "action": "normalized",
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "id": "NCT04614103-ecog_max-9"
+        },
+        {
+          "action": "normalized",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "id": "NCT04614103-brain_mets-12"
+        }
+      ],
+      "parserModel": "deterministic-normalizer",
+      "promptVersion": "4-deterministic"
+    },
+    "NCT07291037": {
+      "schemaVersion": "1",
+      "nctId": "NCT07291037",
+      "typedChecks": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "stages": [
+            "IIIB",
+            "IIIC",
+            "IV",
+            "IVA",
+            "IVB"
+          ],
+          "evidence_quote": "\\- Pathologically documented Stage IIIB, IIIC, or Stage IV non-squamous non-small cell lung cancer (NSCLC) without actionable genomic alterations (AGA) at",
+          "sourceText": "\\- Pathologically documented Stage IIIB, IIIC, or Stage IV non-squamous non-small cell lung cancer (NSCLC) without actionable genomic alterations (AGA) at the time of randomisation and meets the criteria for NSCLC:",
+          "section": "inclusion",
+          "id": "NCT07291037-stage_in-0"
+        },
+        {
+          "kind": "braf_status",
+          "polarity": "inclusion",
+          "presence": "absent",
+          "evidence_quote": "Has no known tumour genomic alterations in NTRK, BRAF V600, RET, MET exon 14 skipping, KRAS G12C, or HER2.",
+          "sourceText": "Has no known tumour genomic alterations in NTRK, BRAF V600, RET, MET exon 14 skipping, KRAS G12C, or HER2.",
+          "section": "inclusion",
+          "id": "NCT07291037-braf_status-3"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "stringValue": "anti-PD-1",
+          "evidence_quote": "Participants must have received platinum based chemotherapy (PBC) in combination with anti-programmed death-protein 1 (anti-PD-1)/anti-programmed death-ligand 1 (anti-PD-L1) monoclonal antibody (mAb) as the only prior line of therapy or received PBC and anti-PD-1/anti-PD-L1 monoclonal antibody (in either order) sequentially as the only 2 prior lines of therapy.",
+          "sourceText": "Participants must have received platinum based chemotherapy (PBC) in combination with anti-programmed death-protein 1 (anti-PD-1)/anti-programmed death-ligand 1 (anti-PD-L1) monoclonal antibody (mAb) as the only prior line of therapy or received PBC and anti-PD-1/anti-PD-L1 monoclonal antibody (in either order) sequentially as the only 2 prior lines of therapy.",
+          "section": "inclusion",
+          "id": "NCT07291037-prior_therapy_required-6"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "stringValue": "platinum based chemotherapy",
+          "evidence_quote": "Participants must have received platinum based chemotherapy (PBC) in combination with anti-programmed death-protein 1 (anti-PD-1)/anti-programmed death-ligand 1 (anti-PD-L1) monoclonal antibody (mAb) as the only prior line of therapy or received PBC and anti-PD-1/anti-PD-L1 monoclonal antibody (in either order) sequentially as the only 2 prior lines of therapy.",
+          "sourceText": "Participants must have received platinum based chemotherapy (PBC) in combination with anti-programmed death-protein 1 (anti-PD-1)/anti-programmed death-ligand 1 (anti-PD-L1) monoclonal antibody (mAb) as the only prior line of therapy or received PBC and anti-PD-1/anti-PD-L1 monoclonal antibody (in either order) sequentially as the only 2 prior lines of therapy.",
+          "section": "inclusion",
+          "id": "NCT07291037-prior_therapy_required-7"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "numberValue": 1,
+          "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) Performance Status (PS) of 0 or 1",
+          "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status (PS) of 0 or 1",
+          "section": "inclusion",
+          "id": "NCT07291037-ecog_max-9"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "allowedBrainMets": [
+            "untreated"
+          ],
+          "evidence_quote": "Spinal cord compression or brain metastases, unless asymptomatic, stable, and not requiring treatment with corticosteroids or anticonvulsants for at least 7 days prior to randomisation.",
+          "sourceText": "Spinal cord compression or brain metastases, unless asymptomatic, stable, and not requiring treatment with corticosteroids or anticonvulsants for at least 7 days prior to randomisation.",
+          "section": "exclusion",
+          "id": "NCT07291037-brain_mets-10"
+        }
+      ],
+      "fuzzyCriteria": [
+        {
+          "id": "NCT07291037-fz-1",
+          "polarity": "inclusion",
+          "sourceText": "Participants must have documented negative test results for EGFR (eg, exon 19 deletion or exon 21 L858R, exon 21 L861Q, exon 18 G719X, or exon 20 S768I mutation), ALK, and ROS1 genomic alterations.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT07291037-fz-2",
+          "polarity": "inclusion",
+          "sourceText": "Note: If test results for EGFR, ALK, and ROS1 are not available, participants are required to undergo prospective testing performed centrally for these genomic alterations in a Sponsor-designated central laboratory.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT07291037-fz-4",
+          "polarity": "inclusion",
+          "sourceText": "Additionally, participants must not have known tumour genomic alteration of any other actionable driver oncogenes for which there are locally approved targeted first-line therapies.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT07291037-fz-5",
+          "polarity": "inclusion",
+          "sourceText": "Note: Participants whose tumours harbour BRAF (exception V600) or KRAS (exception G12C) mutations are eligible for the study.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT07291037-fz-8",
+          "polarity": "inclusion",
+          "sourceText": "At least one lesion not previously irradiated that qualifies as a Response Evaluation Criteria in Solid Tumours, Version 1.1 (RECIST 1.1) target lesion (TL) at baseline and can be accurately measured at baseline as ≥ 10 mm in the longest diameter (except lymph nodes, which must have short axis ≥ 15 mm) with computed tomography (CT) or magnetic resonance imaging (MRI) and is suitable for accurate repeated measurements.",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT07291037-age-structured",
+          "polarity": "inclusion",
+          "sourceText": "minimumAge: 18 Years",
+          "reasonFuzzy": "Age came from the structured minimumAge field, not a verbatim eligibility sentence."
+        }
+      ],
+      "postprocessActions": [
+        {
+          "action": "normalized",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "id": "NCT07291037-stage_in-0"
+        },
+        {
+          "action": "normalized",
+          "kind": "braf_status",
+          "polarity": "inclusion",
+          "id": "NCT07291037-braf_status-3"
+        },
+        {
+          "action": "normalized",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "id": "NCT07291037-prior_therapy_required-6"
+        },
+        {
+          "action": "normalized",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "id": "NCT07291037-prior_therapy_required-7"
+        },
+        {
+          "action": "normalized",
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "id": "NCT07291037-ecog_max-9"
+        },
+        {
+          "action": "normalized",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "id": "NCT07291037-brain_mets-10"
+        }
+      ],
+      "parserModel": "deterministic-normalizer",
+      "promptVersion": "4-deterministic"
+    },
+    "NCT07154290": {
+      "schemaVersion": "1",
+      "nctId": "NCT07154290",
+      "typedChecks": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "stages": [
+            "IIIB",
+            "IIIC",
+            "IV",
+            "IVA",
+            "IVB"
+          ],
+          "evidence_quote": "ically confirmed diagnosis of advanced (stage IIIB not amenable to definitive chemoradiotherapy or stage IIIC) or metastatic (stage IV) NSCLC",
+          "sourceText": "Has histologically or cytologically confirmed diagnosis of advanced (stage IIIB not amenable to definitive chemoradiotherapy or stage IIIC) or metastatic (stage IV) NSCLC",
+          "section": "inclusion",
+          "id": "NCT07154290-stage_in-0"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "numberValue": 1,
+          "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+          "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+          "section": "inclusion",
+          "id": "NCT07154290-ecog_max-2"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "allowedBrainMets": [
+            "untreated"
+          ],
+          "evidence_quote": "Has untreated or active primary brain tumor, Central Nervous System (CNS) metastases, leptomeningeal disease, or spinal cord compression, as described in the protocol",
+          "sourceText": "Has untreated or active primary brain tumor, Central Nervous System (CNS) metastases, leptomeningeal disease, or spinal cord compression, as described in the protocol",
+          "section": "exclusion",
+          "id": "NCT07154290-brain_mets-4"
+        }
+      ],
+      "fuzzyCriteria": [
+        {
+          "id": "NCT07154290-fz-1",
+          "polarity": "inclusion",
+          "sourceText": "If platinum doublet chemotherapy was not administered as first line therapy, it is required in a later line of therapy prior to enrollment unless there is a documented reason why it is not appropriate",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT07154290-fz-3",
+          "polarity": "exclusion",
+          "sourceText": "Experienced toxicity related to prior treatment that has not resolved to grade 1 prior to initiation of study intervention (except alopecia, hearing loss, grade 2 neuropathy, or endocrinopathy managed with hormone replacement therapy)",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT07154290-fz-5",
+          "polarity": "exclusion",
+          "sourceText": "Has received prior monoclonal antibody against PD-(L)1 within 21 days of the first dose of study intervention",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT07154290-fz-6",
+          "polarity": "exclusion",
+          "sourceText": "Has had other prior anti-cancer immunotherapy within 21 days prior to study intervention, as described in the protocol",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT07154290-fz-7",
+          "polarity": "exclusion",
+          "sourceText": "Has received prior cytotoxic chemotherapy within 21 days of the first dose of study intervention",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT07154290-fz-8",
+          "polarity": "exclusion",
+          "sourceText": "Has received an anti-EGFR antibody therapy within the following drug-specific window prior to first dose of study intervention (approximately 5 half-lives), as described in the protocol",
+          "reasonFuzzy": "Could not be turned into a typed check with a verbatim, section-matched quote. Discuss with your care team."
+        },
+        {
+          "id": "NCT07154290-age-structured",
+          "polarity": "inclusion",
+          "sourceText": "minimumAge: 18 Years",
+          "reasonFuzzy": "Age came from the structured minimumAge field, not a verbatim eligibility sentence."
+        }
+      ],
+      "postprocessActions": [
+        {
+          "action": "normalized",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "id": "NCT07154290-stage_in-0"
+        },
+        {
+          "action": "normalized",
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "id": "NCT07154290-ecog_max-2"
+        },
+        {
+          "action": "normalized",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "id": "NCT07154290-brain_mets-4"
+        }
+      ],
+      "parserModel": "deterministic-normalizer",
+      "promptVersion": "4-deterministic"
+    }
+  }
+}

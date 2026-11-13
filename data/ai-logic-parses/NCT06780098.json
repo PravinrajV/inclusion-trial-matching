@@ -1,0 +1,349 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06780098",
+  "briefTitle": "Substudy 01I: A Study of Investigational Agents in Participants With Previously Treated Stage IV Squamous Non-small Cell Lung Cancer (NSCLC) (MK-3475-01I/KEYMAKER-U01I)",
+  "parsedAt": "2026-11-12T10:34:46.832Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06780098-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of Stage IV squamous non-small cell lung cancer (NSCLC)",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Histologically or cytologically confirmed diagnosis of Stage IV squamous non-small cell lung cancer (NSCLC)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06780098-brain-mets",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Has known untreated central nervous system (CNS) metastases and/or carcinomatous meningitis",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Has known untreated central nervous system (CNS) metastases and/or carcinomatous meningitis",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06780098-progression",
+      "polarity": "inclusion",
+      "sourceText": "Has documented disease progression per Response Evaluation Criteria In Solid Tumors 1.1 (RECIST 1.1), as assessed by investigator after receiving an anti-programmed cell death protein 1 (anti-PD-1)/programmed cell death ligand 1 (PD-L1) treatment and platinum-based chemotherapy for Stage IV disease",
+      "reasonFuzzy": "Disease progression per RECIST 1.1 as assessed by the investigator is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06780098-hiv",
+      "polarity": "inclusion",
+      "sourceText": "Human immunodeficiency virus (HIV)-infected participants must have well controlled HIV on antiretroviral therapy (ART)",
+      "reasonFuzzy": "Well controlled HIV is a clinical judgment rather than a typed lab cutoff."
+    },
+    {
+      "id": "NCT06780098-small-cell",
+      "polarity": "exclusion",
+      "sourceText": "Diagnosis of small cell lung cancer or, for mixed tumors, presence of small cell elements",
+      "reasonFuzzy": "Exclusion of small cell histology or mixed tumors is not a simple typed histology inclusion check."
+    },
+    {
+      "id": "NCT06780098-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06780098-progression",
+      "polarity": "inclusion",
+      "sourceText": "Has documented disease progression per Response Evaluation Criteria In Solid Tumors 1.1 (RECIST 1.1), as assessed by investigator after receiving an anti-programmed cell death protein 1 (anti-PD-1)/programmed cell death ligand 1 (PD-L1) treatment and platinum-based chemotherapy for Stage IV disease",
+      "reasonFuzzy": "Disease progression per RECIST 1.1 assessed by the investigator is a subjective imaging and clinical evaluation."
+    },
+    {
+      "id": "NCT06780098-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06780098-prior-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "after receiving an anti-programmed cell death protein 1 (anti-PD-1)/programmed cell death ligand 1 (PD-L1) treatment and platinum-based chemotherapy for Stage IV disease",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06780098-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of Stage IV squamous non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06780098-prior-pd1",
+      "polarity": "inclusion",
+      "sourceText": "after receiving an anti-programmed cell death protein 1 (anti-PD-1)/programmed cell death ligand 1 (PD-L1) treatment and platinum-based chemotherapy for Stage IV disease",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06780098-prior-platinum",
+      "polarity": "inclusion",
+      "sourceText": "after receiving an anti-programmed cell death protein 1 (anti-PD-1)/programmed cell death ligand 1 (PD-L1) treatment and platinum-based chemotherapy for Stage IV disease",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06780098-prior-docetaxel",
+      "polarity": "exclusion",
+      "sourceText": "Has previously received docetaxel as monotherapy or in combination with other therapies",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 7,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 6,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:pd-l1"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:squamous"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:anti-pd-1"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:platinum-based chemotherapy"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:docetaxel"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 8,
+    "fuzzyEmitted": 3,
+    "attempts": 2,
+    "ms": 13672
+  },
+  "runB": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 7075
+  },
+  "ms": 28732,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06780098",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06780098-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of Stage IV squamous non-small cell lung cancer (NSCLC)",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06780098-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of Stage IV squamous non-small cell lung cancer (NSCLC)",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT06780098-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06780098-prior-pd1",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "after receiving an anti-programmed cell death protein 1 (anti-PD-1)/programmed cell death ligand 1 (PD-L1) treatment and platinum-based chemotherapy for Stage IV disease",
+        "stringValue": "anti-PD-1"
+      },
+      {
+        "id": "NCT06780098-prior-pdl1",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "after receiving an anti-programmed cell death protein 1 (anti-PD-1)/programmed cell death ligand 1 (PD-L1) treatment and platinum-based chemotherapy for Stage IV disease",
+        "stringValue": "PD-L1"
+      },
+      {
+        "id": "NCT06780098-prior-platinum",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "after receiving an anti-programmed cell death protein 1 (anti-PD-1)/programmed cell death ligand 1 (PD-L1) treatment and platinum-based chemotherapy for Stage IV disease",
+        "stringValue": "platinum-based chemotherapy"
+      },
+      {
+        "id": "NCT06780098-prior-docetaxel",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has previously received docetaxel as monotherapy or in combination with other therapies",
+        "stringValue": "docetaxel"
+      },
+      {
+        "id": "NCT06780098-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known untreated central nervous system (CNS) metastases and/or carcinomatous meningitis",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06780098-progression",
+        "polarity": "inclusion",
+        "sourceText": "Has documented disease progression per Response Evaluation Criteria In Solid Tumors 1.1 (RECIST 1.1), as assessed by investigator after receiving an anti-programmed cell death protein 1 (anti-PD-1)/programmed cell death ligand 1 (PD-L1) treatment and platinum-based chemotherapy for Stage IV disease",
+        "reasonFuzzy": "Disease progression per RECIST 1.1 as assessed by the investigator is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06780098-hiv",
+        "polarity": "inclusion",
+        "sourceText": "Human immunodeficiency virus (HIV)-infected participants must have well controlled HIV on antiretroviral therapy (ART)",
+        "reasonFuzzy": "Well controlled HIV is a clinical judgment rather than a typed lab cutoff."
+      },
+      {
+        "id": "NCT06780098-small-cell",
+        "polarity": "exclusion",
+        "sourceText": "Diagnosis of small cell lung cancer or, for mixed tumors, presence of small cell elements",
+        "reasonFuzzy": "Exclusion of small cell histology or mixed tumors is not a simple typed histology inclusion check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06780098",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06780098-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of Stage IV squamous non-small cell lung cancer (NSCLC)",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06780098-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of Stage IV squamous non-small cell lung cancer (NSCLC)",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT06780098-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06780098-prior-pd1",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "after receiving an anti-programmed cell death protein 1 (anti-PD-1)/programmed cell death ligand 1 (PD-L1) treatment and platinum-based chemotherapy for Stage IV disease",
+        "stringValue": "anti-PD-1"
+      },
+      {
+        "id": "NCT06780098-prior-plat",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "after receiving an anti-programmed cell death protein 1 (anti-PD-1)/programmed cell death ligand 1 (PD-L1) treatment and platinum-based chemotherapy for Stage IV disease",
+        "stringValue": "platinum-based chemotherapy"
+      },
+      {
+        "id": "NCT06780098-prior-docetaxel",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has previously received docetaxel as monotherapy or in combination with other therapies",
+        "stringValue": "docetaxel"
+      },
+      {
+        "id": "NCT06780098-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known untreated central nervous system (CNS) metastases and/or carcinomatous meningitis",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06780098-progression",
+        "polarity": "inclusion",
+        "sourceText": "Has documented disease progression per Response Evaluation Criteria In Solid Tumors 1.1 (RECIST 1.1), as assessed by investigator after receiving an anti-programmed cell death protein 1 (anti-PD-1)/programmed cell death ligand 1 (PD-L1) treatment and platinum-based chemotherapy for Stage IV disease",
+        "reasonFuzzy": "Disease progression per RECIST 1.1 assessed by the investigator is a subjective imaging and clinical evaluation."
+      }
+    ]
+  }
+}

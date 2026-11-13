@@ -1,0 +1,350 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05236114",
+  "briefTitle": "GEMINI-NSCLC: NSCLC Biomarker Study",
+  "parsedAt": "2026-11-12T06:11:28.342Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05236114-cohort1-suspected",
+      "polarity": "inclusion",
+      "sourceText": "Suspected NSCLC - Patients with a high index of suspicion for the diagnosis of NSCLC that is resectable may sign informed consent prior to undergoing diagnostic procedure at the discretion of the physician.",
+      "reasonFuzzy": "Includes subjective physician discretion and suspected diagnoses."
+    },
+    {
+      "id": "NCT05236114-cohort1-exclusion",
+      "polarity": "exclusion",
+      "sourceText": "Patients with superior sulcus tumors who are candidates for preoperative concurrent chemoradiation. Stage III locally advanced and unresectable patients who are candidates for chemoradiation followed by immunotherapy.",
+      "reasonFuzzy": "Complex treatment candidate and nodal disease exclusions that cannot be modeled as simple typed checks."
+    },
+    {
+      "id": "NCT05236114-cohort2-biomarker",
+      "polarity": "inclusion",
+      "sourceText": "Tumors that lack activating EGFR mutations (e.g., exon 19 deletion or exon 21 L858R, exon 21 L861Q, exon 18 G719X, or exon 20 S768I mutation) and ALK fusions. Also, per NCCN Guideline recommended testing, tumors must also lack ROS1, BRAF, NTRK 1/2/3, METex14 skipping mutations, and RET for which there is available front-line targeted therapy.",
+      "reasonFuzzy": "Multi-biomarker absence and conditional inclusion rules for multiple genes cannot be represented as a single typed check."
+    },
+    {
+      "id": "NCT05236114-secondary-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Patients with a secondary malignancy must have been both diagnosed > 2 years from the lung cancer of interest and have completed all therapy for that malignancy (including extended adjuvant therapy) > 2 years prior to diagnosis of the lung cancer of interest with the exception of the following: Patients with superficial basal cell carcinoma... Patients with superficial squamous cell carcinoma...",
+      "reasonFuzzy": "Complex secondary malignancy timing and histologic exception rules are too intricate for standard typed exclusion criteria."
+    },
+    {
+      "id": "NCT05236114-biomarker-c2",
+      "polarity": "inclusion",
+      "sourceText": "Tumors that lack activating EGFR mutations (e.g., exon 19 deletion or exon 21 L858R, exon 21 L861Q, exon 18 G719X, or exon 20 S768I mutation) and ALK fusions. Also, per NCCN Guideline recommended testing, tumors must also lack ROS1, BRAF, NTRK 1/2/3, METex14 skipping mutations, and RET for which there is available front-line targeted therapy. Only those patients with KRAS G12C mutations and ERBB2 (HER2) mutations with no contraindications to immunotherapy (PD-L1 1) for which there are no approved front-line targeted therapies and for whom immunotherapy would be the preferred front-line therapy are eligible.",
+      "reasonFuzzy": "Complex multigene biomarker inclusion and exclusion rules spanning multiple alterations and conditional logic cannot be represented as single typed checks."
+    },
+    {
+      "id": "NCT05236114-consent-c1",
+      "polarity": "inclusion",
+      "sourceText": "Willing and able to provide informed consent",
+      "reasonFuzzy": "Willingness to provide informed consent is a subjective procedure-based criterion."
+    },
+    {
+      "id": "NCT05236114-blood-c1",
+      "polarity": "inclusion",
+      "sourceText": "Willing to have additional blood samples collected during routine surveillance visits",
+      "reasonFuzzy": "Willingness to undergo additional blood sample collection is a subjective patient preference criterion."
+    },
+    {
+      "id": "NCT05236114-tissue-c1",
+      "polarity": "inclusion",
+      "sourceText": "Must submit tumor sample representative of current disease",
+      "reasonFuzzy": "Requirement to submit tumor sample is a procedural requirement."
+    },
+    {
+      "id": "NCT05236114-cohort1-excl",
+      "polarity": "exclusion",
+      "sourceText": "Patients with superior sulcus tumors who are candidates for preoperative concurrent chemoradiation. Stage III locally advanced and unresectable patients who are candidates for chemoradiation followed by immunotherapy. It is expected that all patients on the cohort will be treated with a definitive surgical resection. Thus, clinical stage IIIB and IIIC patients who subsequently demonstrate pathologically confirmed N3 nodal disease or T4 N2 or 3 per any confirmatory procedure listed in NCCN guidelines for which definitive chemoradiotherapy rather than surgery is recommended per NCCN Guidelines are not eligible. Patients who receive primary radiation (in lieu of surgery if they are not surgical candidates).",
+      "reasonFuzzy": "Specific treatment candidate exclusions and anatomical exceptions are too complex for typed checks."
+    },
+    {
+      "id": "NCT05236114-consent-c2",
+      "polarity": "inclusion",
+      "sourceText": "Willing and able to provide informed consent",
+      "reasonFuzzy": "Willingness to provide informed consent is a subjective procedure-based criterion."
+    },
+    {
+      "id": "NCT05236114-blood-c2",
+      "polarity": "inclusion",
+      "sourceText": "Willing to have additional blood samples collected during routine surveillance visits",
+      "reasonFuzzy": "Willingness to undergo additional blood sample collection is a subjective patient preference criterion."
+    },
+    {
+      "id": "NCT05236114-tissue-c2",
+      "polarity": "inclusion",
+      "sourceText": "Must submit tumor sample representative of current disease",
+      "reasonFuzzy": "Requirement to submit tumor sample is a procedural requirement."
+    },
+    {
+      "id": "NCT05236114-malignancy-excl",
+      "polarity": "exclusion",
+      "sourceText": "Patients with a secondary malignancy must have been both diagnosed > 2 years from the lung cancer of interest and have completed all therapy for that malignancy (including extended adjuvant therapy) > 2 years prior to diagnosis of the lung cancer of interest with the exception of the following: Patients with superficial basal cell carcinoma of low-risk histology per NCCN Guidelines [...] and low-risk for recurrence per NCCN Guidelines [...] can be included even if they are diagnosed < 2 years from the lung cancer of interest. Patients with superficial squamous cell carcinoma of low-risk pathology per NCCN Guidelines [...] can be included even if they are diagnosed < 2 years from the lung cancer of interest.",
+      "reasonFuzzy": "Secondary malignancy and complex time-since-diagnosis rules with exceptions cannot be represented as typed checks."
+    },
+    {
+      "id": "NCT05236114-stage-cohort1",
+      "polarity": "inclusion",
+      "sourceText": "Undergone or planning to undergo a surgical resection - (Patients with stages I-IIIB who are resectable - per NCCN guidelines of resectability)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05236114-age-cohort1",
+      "polarity": "inclusion",
+      "sourceText": "18 years old or older",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05236114-stage-cohort2",
+      "polarity": "inclusion",
+      "sourceText": "Histologically documented Stage IV NSCLC (de novo metastatic or relapse setting) not amenable to curative surgery or radiation therapy.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05236114-age-cohort2",
+      "polarity": "inclusion",
+      "sourceText": "18 years and older",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IA,IB,IIA,IIB,IIIA,IIIB"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:18"
+        },
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IV,IVA,IVB"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:18"
+        }
+      ],
+      "normalizerTypedCount": 0
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 2971
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 4095
+  },
+  "ms": 15056,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05236114",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05236114-stage-cohort1",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Undergone or planning to undergo a surgical resection - (Patients with stages I-IIIB who are resectable - per NCCN guidelines of resectability)",
+        "stages": [
+          "IA",
+          "IB",
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT05236114-age-cohort1",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 years old or older",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05236114-stage-cohort2",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically documented Stage IV NSCLC (de novo metastatic or relapse setting) not amenable to curative surgery or radiation therapy.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05236114-age-cohort2",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 years and older",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05236114-cohort1-suspected",
+        "polarity": "inclusion",
+        "sourceText": "Suspected NSCLC - Patients with a high index of suspicion for the diagnosis of NSCLC that is resectable may sign informed consent prior to undergoing diagnostic procedure at the discretion of the physician.",
+        "reasonFuzzy": "Includes subjective physician discretion and suspected diagnoses."
+      },
+      {
+        "id": "NCT05236114-cohort1-exclusion",
+        "polarity": "exclusion",
+        "sourceText": "Patients with superior sulcus tumors who are candidates for preoperative concurrent chemoradiation. Stage III locally advanced and unresectable patients who are candidates for chemoradiation followed by immunotherapy.",
+        "reasonFuzzy": "Complex treatment candidate and nodal disease exclusions that cannot be modeled as simple typed checks."
+      },
+      {
+        "id": "NCT05236114-cohort2-biomarker",
+        "polarity": "inclusion",
+        "sourceText": "Tumors that lack activating EGFR mutations (e.g., exon 19 deletion or exon 21 L858R, exon 21 L861Q, exon 18 G719X, or exon 20 S768I mutation) and ALK fusions. Also, per NCCN Guideline recommended testing, tumors must also lack ROS1, BRAF, NTRK 1/2/3, METex14 skipping mutations, and RET for which there is available front-line targeted therapy.",
+        "reasonFuzzy": "Multi-biomarker absence and conditional inclusion rules for multiple genes cannot be represented as a single typed check."
+      },
+      {
+        "id": "NCT05236114-secondary-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Patients with a secondary malignancy must have been both diagnosed > 2 years from the lung cancer of interest and have completed all therapy for that malignancy (including extended adjuvant therapy) > 2 years prior to diagnosis of the lung cancer of interest with the exception of the following: Patients with superficial basal cell carcinoma... Patients with superficial squamous cell carcinoma...",
+        "reasonFuzzy": "Complex secondary malignancy timing and histologic exception rules are too intricate for standard typed exclusion criteria."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05236114",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05236114-age-c1",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 years old or older",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05236114-stage-c1",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Undergone or planning to undergo a surgical resection - (Patients with stages I-IIIB who are resectable - per NCCN guidelines of resectability)",
+        "stages": [
+          "IA",
+          "IB",
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT05236114-stage-c2",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically documented Stage IV NSCLC (de novo metastatic or relapse setting) not amenable to curative surgery or radiation therapy.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05236114-age-c2",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 years and older",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05236114-biomarker-c2",
+        "polarity": "inclusion",
+        "sourceText": "Tumors that lack activating EGFR mutations (e.g., exon 19 deletion or exon 21 L858R, exon 21 L861Q, exon 18 G719X, or exon 20 S768I mutation) and ALK fusions. Also, per NCCN Guideline recommended testing, tumors must also lack ROS1, BRAF, NTRK 1/2/3, METex14 skipping mutations, and RET for which there is available front-line targeted therapy. Only those patients with KRAS G12C mutations and ERBB2 (HER2) mutations with no contraindications to immunotherapy (PD-L1 1) for which there are no approved front-line targeted therapies and for whom immunotherapy would be the preferred front-line therapy are eligible.",
+        "reasonFuzzy": "Complex multigene biomarker inclusion and exclusion rules spanning multiple alterations and conditional logic cannot be represented as single typed checks."
+      },
+      {
+        "id": "NCT05236114-consent-c1",
+        "polarity": "inclusion",
+        "sourceText": "Willing and able to provide informed consent",
+        "reasonFuzzy": "Willingness to provide informed consent is a subjective procedure-based criterion."
+      },
+      {
+        "id": "NCT05236114-blood-c1",
+        "polarity": "inclusion",
+        "sourceText": "Willing to have additional blood samples collected during routine surveillance visits",
+        "reasonFuzzy": "Willingness to undergo additional blood sample collection is a subjective patient preference criterion."
+      },
+      {
+        "id": "NCT05236114-tissue-c1",
+        "polarity": "inclusion",
+        "sourceText": "Must submit tumor sample representative of current disease",
+        "reasonFuzzy": "Requirement to submit tumor sample is a procedural requirement."
+      },
+      {
+        "id": "NCT05236114-cohort1-excl",
+        "polarity": "exclusion",
+        "sourceText": "Patients with superior sulcus tumors who are candidates for preoperative concurrent chemoradiation. Stage III locally advanced and unresectable patients who are candidates for chemoradiation followed by immunotherapy. It is expected that all patients on the cohort will be treated with a definitive surgical resection. Thus, clinical stage IIIB and IIIC patients who subsequently demonstrate pathologically confirmed N3 nodal disease or T4 N2 or 3 per any confirmatory procedure listed in NCCN guidelines for which definitive chemoradiotherapy rather than surgery is recommended per NCCN Guidelines are not eligible. Patients who receive primary radiation (in lieu of surgery if they are not surgical candidates).",
+        "reasonFuzzy": "Specific treatment candidate exclusions and anatomical exceptions are too complex for typed checks."
+      },
+      {
+        "id": "NCT05236114-consent-c2",
+        "polarity": "inclusion",
+        "sourceText": "Willing and able to provide informed consent",
+        "reasonFuzzy": "Willingness to provide informed consent is a subjective procedure-based criterion."
+      },
+      {
+        "id": "NCT05236114-blood-c2",
+        "polarity": "inclusion",
+        "sourceText": "Willing to have additional blood samples collected during routine surveillance visits",
+        "reasonFuzzy": "Willingness to undergo additional blood sample collection is a subjective patient preference criterion."
+      },
+      {
+        "id": "NCT05236114-tissue-c2",
+        "polarity": "inclusion",
+        "sourceText": "Must submit tumor sample representative of current disease",
+        "reasonFuzzy": "Requirement to submit tumor sample is a procedural requirement."
+      },
+      {
+        "id": "NCT05236114-malignancy-excl",
+        "polarity": "exclusion",
+        "sourceText": "Patients with a secondary malignancy must have been both diagnosed > 2 years from the lung cancer of interest and have completed all therapy for that malignancy (including extended adjuvant therapy) > 2 years prior to diagnosis of the lung cancer of interest with the exception of the following: Patients with superficial basal cell carcinoma of low-risk histology per NCCN Guidelines [...] and low-risk for recurrence per NCCN Guidelines [...] can be included even if they are diagnosed < 2 years from the lung cancer of interest. Patients with superficial squamous cell carcinoma of low-risk pathology per NCCN Guidelines [...] can be included even if they are diagnosed < 2 years from the lung cancer of interest.",
+        "reasonFuzzy": "Secondary malignancy and complex time-since-diagnosis rules with exceptions cannot be represented as typed checks."
+      }
+    ]
+  }
+}

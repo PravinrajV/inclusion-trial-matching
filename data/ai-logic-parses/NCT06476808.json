@@ -1,0 +1,191 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06476808",
+  "briefTitle": "A Study to Evaluate the Safety, Tolerability, and Efficacy of Escalating Doses of BMS-986463 in Participants With Select Advanced Malignant Tumors.",
+  "parsedAt": "2026-11-12T09:24:07.805Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06476808-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have an Eastern Cooperative Oncology Group Performance Status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Participants must have an Eastern Cooperative Oncology Group Performance Status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06476808-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have at least 1 lesion accessible for biopsy in addition to the target lesion, from which a fresh pre treatment biopsy must be obtained.",
+      "reasonFuzzy": "Willingness or requirement to undergo a biopsy procedure is subjective/judgment-based and not a typed kind."
+    },
+    {
+      "id": "NCT06476808-stage",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have an unresectable/metastatic carcinoma.",
+      "reasonFuzzy": "Unresectable/metastatic carcinoma does not list a specific numbered stage list for a stage_in check."
+    },
+    {
+      "id": "NCT06476808-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have Leptomeningeal metastases.",
+      "reasonFuzzy": "Leptomeningeal metastases is a specific type of CNS involvement that does not cleanly fit the standard allowedBrainMets categories."
+    },
+    {
+      "id": "NCT06476808-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have at least 1 lesion accessible for biopsy in addition to the target lesion, from which a fresh pre treatment biopsy must be obtained.",
+      "reasonFuzzy": "Willingness or accessibility for biopsy is a subjective clinical procedure judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06476808-stage",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have an unresectable/metastatic carcinoma.",
+      "reasonFuzzy": "Unresectable or metastatic carcinoma is descriptive rather than a numbered stage list, and NSCLC is one of multiple solid tumor types included."
+    },
+    {
+      "id": "NCT06476808-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have Leptomeningeal metastases.",
+      "reasonFuzzy": "Leptomeningeal metastases are not a general brain_mets exclusion type for parenchymal CNS disease."
+    },
+    {
+      "id": "NCT06476808-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have concurrent malignancy (present during screening) requiring treatment or history of prior malignancy active within 2 years prior to treatment.",
+      "reasonFuzzy": "Concurrent malignancy with a time-based history rule is not a typed prior therapy or biomarker check."
+    },
+    {
+      "id": "NCT06476808-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have had any prior radiation therapy within 2 weeks prior to start of study treatment.",
+      "reasonFuzzy": "Prior radiation washouts are not captured by the allowed prior_therapy_excluded kinds."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 6778
+  },
+  "runB": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 8460
+  },
+  "ms": 23228,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06476808",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06476808-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group Performance Status of 0 or 1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06476808-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have at least 1 lesion accessible for biopsy in addition to the target lesion, from which a fresh pre treatment biopsy must be obtained.",
+        "reasonFuzzy": "Willingness or requirement to undergo a biopsy procedure is subjective/judgment-based and not a typed kind."
+      },
+      {
+        "id": "NCT06476808-stage",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an unresectable/metastatic carcinoma.",
+        "reasonFuzzy": "Unresectable/metastatic carcinoma does not list a specific numbered stage list for a stage_in check."
+      },
+      {
+        "id": "NCT06476808-brain",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have Leptomeningeal metastases.",
+        "reasonFuzzy": "Leptomeningeal metastases is a specific type of CNS involvement that does not cleanly fit the standard allowedBrainMets categories."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06476808",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06476808-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group Performance Status of 0 or 1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06476808-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have at least 1 lesion accessible for biopsy in addition to the target lesion, from which a fresh pre treatment biopsy must be obtained.",
+        "reasonFuzzy": "Willingness or accessibility for biopsy is a subjective clinical procedure judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06476808-stage",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an unresectable/metastatic carcinoma.",
+        "reasonFuzzy": "Unresectable or metastatic carcinoma is descriptive rather than a numbered stage list, and NSCLC is one of multiple solid tumor types included."
+      },
+      {
+        "id": "NCT06476808-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have Leptomeningeal metastases.",
+        "reasonFuzzy": "Leptomeningeal metastases are not a general brain_mets exclusion type for parenchymal CNS disease."
+      },
+      {
+        "id": "NCT06476808-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have concurrent malignancy (present during screening) requiring treatment or history of prior malignancy active within 2 years prior to treatment.",
+        "reasonFuzzy": "Concurrent malignancy with a time-based history rule is not a typed prior therapy or biomarker check."
+      },
+      {
+        "id": "NCT06476808-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have had any prior radiation therapy within 2 weeks prior to start of study treatment.",
+        "reasonFuzzy": "Prior radiation washouts are not captured by the allowed prior_therapy_excluded kinds."
+      }
+    ]
+  }
+}

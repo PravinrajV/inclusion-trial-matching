@@ -1,0 +1,509 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05669846",
+  "briefTitle": "Study of Healthy Donor FMT (hdFMT) and Pembrolizumab in Relapsed/Refractory (R/R) PD-L1 Positive NSCLC",
+  "parsedAt": "2026-11-12T06:16:20.024Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05669846-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of stage IV PD-L1+ NSCLC.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Histologically or cytologically confirmed diagnosis of stage IV PD-L1+ NSCLC.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05669846-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1.",
+      "numberValue": 1,
+      "evidence_quote": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05669846-histology-excl",
+      "polarity": "exclusion",
+      "sourceText": "Patients with small cell, large cell, neuroendocrine and/or sarcomatoid NSCLC are excluded.",
+      "reasonFuzzy": "Exclusion lists multiple specific non-adenocarcinoma/squamous histologies that are not handled by a simple histology inclusion list."
+    },
+    {
+      "id": "NCT05669846-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have progressed on treatment with an anti-PD(L)1 ICI administered either as monotherapy or in combination with other checkpoint inhibitors or other standard/investigational therapies. PD-1 treatment progression is defined by meeting all the following criteria: Has received at least 2 doses of an approved anti-PD(L)1 ICI...",
+      "reasonFuzzy": "Prior treatment progression rules and dose counts are complex and require detailed clinical interpretation."
+    },
+    {
+      "id": "NCT05669846-driver",
+      "polarity": "inclusion",
+      "sourceText": "Patients with known oncogenic driver (including but not limited to EGFR, ALK, ROS, MET alterations) must have received and progressed past driver-specific therapy",
+      "reasonFuzzy": "Multiple driver mutations and condition-specific prior therapies cannot be represented as a single typed check."
+    },
+    {
+      "id": "NCT05669846-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Presence of measurable disease based on RECIST 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT05669846-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Able to provide newly obtained core or excisional biopsy of a tumor lesion not previously irradiated to undergo tumor biopsy",
+      "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is a judgment-based requirement."
+    },
+    {
+      "id": "NCT05669846-organ",
+      "polarity": "inclusion",
+      "sourceText": "Have adequate organ function per protocol. Specimens must be collected within 28 days prior to the start of study intervention.",
+      "reasonFuzzy": "General adequate organ function without specific lab value cutoffs cannot be typed."
+    },
+    {
+      "id": "NCT05669846-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05669846-exclusion-histology",
+      "polarity": "exclusion",
+      "sourceText": "NOTE: Patients with small cell, large cell, neuroendocrine and/or sarcomatoid NSCLC are excluded.",
+      "reasonFuzzy": "Excludes specific sub-histologies (small cell, neuroendocrine, sarcomatoid) that do not map directly to the allowed histology list."
+    },
+    {
+      "id": "NCT05669846-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Has received at least 2 doses of an approved anti-PD(L)1 ICI administered as a single agent, in combination with chemotherapy, and/or in combination with other investigational therapy.",
+      "reasonFuzzy": "Refers to dose count rather than a standard lines-of-therapy count."
+    },
+    {
+      "id": "NCT05669846-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "Patients with leptomeningeal involvement (leptomeningeal enhancement on MRI/CT imaging and/or positive CSF cytology) are excluded regardless of stability.",
+      "reasonFuzzy": "Leptomeningeal involvement is a specific subset of CNS disease not fully captured by standard brain_mets categories."
+    },
+    {
+      "id": "NCT05669846-oncogenic-driver",
+      "polarity": "inclusion",
+      "sourceText": "Patients with known oncogenic driver (including but not limited to EGFR, ALK, ROS, MET alterations) must have received and progressed past driver-specific therapy",
+      "reasonFuzzy": "Condition depends on an unspecified list of oncogenic drivers and prior driver-specific therapies."
+    },
+    {
+      "id": "NCT05669846-fmt-willingness",
+      "polarity": "inclusion",
+      "sourceText": "Willingness to repeatedly receive FMT administered endoscopically (colonoscopy or sigmoidoscopy) and via pills following necessary bowel preparation pre-procedure.",
+      "reasonFuzzy": "Willingness to undergo specific procedures and understand risks is a subjective/judgment-based criterion."
+    },
+    {
+      "id": "NCT05669846-measurable-disease",
+      "polarity": "inclusion",
+      "sourceText": "Presence of measurable disease based on RECIST 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT05669846-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Able to provide newly obtained core or excisional biopsy of a tumor lesion not previously irradiated to undergo tumor biopsy (core, punch, incisional or excisional).",
+      "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is judgment-based."
+    },
+    {
+      "id": "NCT05669846-organ-function",
+      "polarity": "inclusion",
+      "sourceText": "Have adequate organ function per protocol. Specimens must be collected within 28 days prior to the start of study intervention.",
+      "reasonFuzzy": "Refers generally to adequate organ function per protocol without specific lab cutoffs in this text section."
+    },
+    {
+      "id": "NCT05669846-hepb-hepc",
+      "polarity": "inclusion",
+      "sourceText": "Patients who are hepatitis B positive (i.e. HBsAg positive) or have a history of history of hepatitis B (i.e. HBcAb positive, or history of documented hepatitis B infection) are eligible if they have received hepatitis B directed antiviral therapy for at least 4 weeks and have undetectable HBV viral load (HBV DNA) prior to enrollment.",
+      "reasonFuzzy": "Complex viral hepatitis criteria involving treatment duration and viral load rules not mapped to single lab max/min kinds."
+    },
+    {
+      "id": "NCT05669846-prior-therapies-exclusion",
+      "polarity": "exclusion",
+      "sourceText": "Receipt of prior agent(s) targeting the intestinal microbiome including but not limited to: FMT, defined bacterial consortia, single bacterial species and/or microbiota derived peptides.",
+      "reasonFuzzy": "Excludes microbiome-targeting agents which do not have a standard typed exclusion kind."
+    },
+    {
+      "id": "NCT05669846-washout-chemo",
+      "polarity": "exclusion",
+      "sourceText": "Prior chemotherapy, targeted therapy, and/or small molecule therapy within 2 weeks (or 4 half lives) prior to study Day 1.",
+      "reasonFuzzy": "Washout window tied to half-lives or multiple therapy types."
+    },
+    {
+      "id": "NCT05669846-fmt-contraindications",
+      "polarity": "exclusion",
+      "sourceText": "Presence of an absolute contraindication(s) to FMT administration • Toxic megacoon • Severe dietary allergies (e.g. shellfish, nuts, seafood) • Inflammatory bowel disease",
+      "reasonFuzzy": "Refers to clinical contraindications to FMT such as toxic megacoon, allergies, and IBD."
+    },
+    {
+      "id": "NCT05669846-concomitant-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Concurrent non-hematologic malignancy within 3 years of data of first planned dose of therapy except for tumors with a negligible risk of metastasis and/or death as defined below:",
+      "reasonFuzzy": "Excludes concurrent malignancies with complex exceptions for indolent or low-risk tumors."
+    },
+    {
+      "id": "NCT05669846-investigator-opinion",
+      "polarity": "exclusion",
+      "sourceText": "Has a history or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the participant's participation for the full duration of the study, or is not in the best interest of the participant to participate, in the opinion of the treating investigator.",
+      "reasonFuzzy": "Investigator discretion and judgment-based assessment."
+    },
+    {
+      "id": "NCT05669846-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05669846-histology",
+      "polarity": "inclusion",
+      "sourceText": "Patients with either squamous or non-squamous NSCLC may enroll.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT05669846-prior-pd-1",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have progressed on treatment with an anti-PD(L)1 ICI administered either as monotherapy or in combination with other checkpoint inhibitors or other standard/investigational therapies.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT05669846-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Documented PD-L1 status (defined as 1% or greater) as determined by immunohistochemistry with anti-PD-L1 antibody (IHC 22C3 pharmDx or other FDA approved diagnostic method) from a core or excisional biopsy (fine needle aspirate is not sufficient).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05669846-brain",
+      "polarity": "inclusion",
+      "sourceText": "Patients with CNS disease are eligible if CNS metastases are treated and deemed stable prior to date of enrollment.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos,squamous"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:anti-pd(l)1"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 8558
+  },
+  "runB": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 14,
+    "attempts": 2,
+    "ms": 40454
+  },
+  "ms": 57072,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05669846",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05669846-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05669846-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of stage IV PD-L1+ NSCLC.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05669846-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Documented PD-L1 status (defined as 1% or greater) as determined by immunohistochemistry with anti-PD-L1 antibody",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05669846-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Patients with CNS disease are eligible if CNS metastases are treated and deemed stable prior to date of enrollment.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT05669846-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05669846-histology-excl",
+        "polarity": "exclusion",
+        "sourceText": "Patients with small cell, large cell, neuroendocrine and/or sarcomatoid NSCLC are excluded.",
+        "reasonFuzzy": "Exclusion lists multiple specific non-adenocarcinoma/squamous histologies that are not handled by a simple histology inclusion list."
+      },
+      {
+        "id": "NCT05669846-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have progressed on treatment with an anti-PD(L)1 ICI administered either as monotherapy or in combination with other checkpoint inhibitors or other standard/investigational therapies. PD-1 treatment progression is defined by meeting all the following criteria: Has received at least 2 doses of an approved anti-PD(L)1 ICI...",
+        "reasonFuzzy": "Prior treatment progression rules and dose counts are complex and require detailed clinical interpretation."
+      },
+      {
+        "id": "NCT05669846-driver",
+        "polarity": "inclusion",
+        "sourceText": "Patients with known oncogenic driver (including but not limited to EGFR, ALK, ROS, MET alterations) must have received and progressed past driver-specific therapy",
+        "reasonFuzzy": "Multiple driver mutations and condition-specific prior therapies cannot be represented as a single typed check."
+      },
+      {
+        "id": "NCT05669846-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Presence of measurable disease based on RECIST 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT05669846-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Able to provide newly obtained core or excisional biopsy of a tumor lesion not previously irradiated to undergo tumor biopsy",
+        "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is a judgment-based requirement."
+      },
+      {
+        "id": "NCT05669846-organ",
+        "polarity": "inclusion",
+        "sourceText": "Have adequate organ function per protocol. Specimens must be collected within 28 days prior to the start of study intervention.",
+        "reasonFuzzy": "General adequate organ function without specific lab value cutoffs cannot be typed."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05669846",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05669846-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05669846-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of stage IV PD-L1+ NSCLC.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05669846-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Documented PD-L1 status (defined as 1% or greater) as determined by immunohistochemistry with anti-PD-L1 antibody (IHC 22C3 pharmDx or other FDA approved diagnostic method) from a core or excisional biopsy (fine needle aspirate is not sufficient).",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05669846-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Patients with either squamous or non-squamous NSCLC may enroll.",
+        "histologies": [
+          "squamous",
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT05669846-prior-pd-1",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have progressed on treatment with an anti-PD(L)1 ICI administered either as monotherapy or in combination with other checkpoint inhibitors or other standard/investigational therapies.",
+        "stringValue": "anti-PD(L)1"
+      },
+      {
+        "id": "NCT05669846-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Patients with CNS disease are eligible if CNS metastases are treated and deemed stable prior to date of enrollment.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT05669846-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05669846-exclusion-histology",
+        "polarity": "exclusion",
+        "sourceText": "NOTE: Patients with small cell, large cell, neuroendocrine and/or sarcomatoid NSCLC are excluded.",
+        "reasonFuzzy": "Excludes specific sub-histologies (small cell, neuroendocrine, sarcomatoid) that do not map directly to the allowed histology list."
+      },
+      {
+        "id": "NCT05669846-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "Has received at least 2 doses of an approved anti-PD(L)1 ICI administered as a single agent, in combination with chemotherapy, and/or in combination with other investigational therapy.",
+        "reasonFuzzy": "Refers to dose count rather than a standard lines-of-therapy count."
+      },
+      {
+        "id": "NCT05669846-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "Patients with leptomeningeal involvement (leptomeningeal enhancement on MRI/CT imaging and/or positive CSF cytology) are excluded regardless of stability.",
+        "reasonFuzzy": "Leptomeningeal involvement is a specific subset of CNS disease not fully captured by standard brain_mets categories."
+      },
+      {
+        "id": "NCT05669846-oncogenic-driver",
+        "polarity": "inclusion",
+        "sourceText": "Patients with known oncogenic driver (including but not limited to EGFR, ALK, ROS, MET alterations) must have received and progressed past driver-specific therapy",
+        "reasonFuzzy": "Condition depends on an unspecified list of oncogenic drivers and prior driver-specific therapies."
+      },
+      {
+        "id": "NCT05669846-fmt-willingness",
+        "polarity": "inclusion",
+        "sourceText": "Willingness to repeatedly receive FMT administered endoscopically (colonoscopy or sigmoidoscopy) and via pills following necessary bowel preparation pre-procedure.",
+        "reasonFuzzy": "Willingness to undergo specific procedures and understand risks is a subjective/judgment-based criterion."
+      },
+      {
+        "id": "NCT05669846-measurable-disease",
+        "polarity": "inclusion",
+        "sourceText": "Presence of measurable disease based on RECIST 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT05669846-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Able to provide newly obtained core or excisional biopsy of a tumor lesion not previously irradiated to undergo tumor biopsy (core, punch, incisional or excisional).",
+        "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is judgment-based."
+      },
+      {
+        "id": "NCT05669846-organ-function",
+        "polarity": "inclusion",
+        "sourceText": "Have adequate organ function per protocol. Specimens must be collected within 28 days prior to the start of study intervention.",
+        "reasonFuzzy": "Refers generally to adequate organ function per protocol without specific lab cutoffs in this text section."
+      },
+      {
+        "id": "NCT05669846-hepb-hepc",
+        "polarity": "inclusion",
+        "sourceText": "Patients who are hepatitis B positive (i.e. HBsAg positive) or have a history of history of hepatitis B (i.e. HBcAb positive, or history of documented hepatitis B infection) are eligible if they have received hepatitis B directed antiviral therapy for at least 4 weeks and have undetectable HBV viral load (HBV DNA) prior to enrollment.",
+        "reasonFuzzy": "Complex viral hepatitis criteria involving treatment duration and viral load rules not mapped to single lab max/min kinds."
+      },
+      {
+        "id": "NCT05669846-prior-therapies-exclusion",
+        "polarity": "exclusion",
+        "sourceText": "Receipt of prior agent(s) targeting the intestinal microbiome including but not limited to: FMT, defined bacterial consortia, single bacterial species and/or microbiota derived peptides.",
+        "reasonFuzzy": "Excludes microbiome-targeting agents which do not have a standard typed exclusion kind."
+      },
+      {
+        "id": "NCT05669846-washout-chemo",
+        "polarity": "exclusion",
+        "sourceText": "Prior chemotherapy, targeted therapy, and/or small molecule therapy within 2 weeks (or 4 half lives) prior to study Day 1.",
+        "reasonFuzzy": "Washout window tied to half-lives or multiple therapy types."
+      },
+      {
+        "id": "NCT05669846-fmt-contraindications",
+        "polarity": "exclusion",
+        "sourceText": "Presence of an absolute contraindication(s) to FMT administration • Toxic megacoon • Severe dietary allergies (e.g. shellfish, nuts, seafood) • Inflammatory bowel disease",
+        "reasonFuzzy": "Refers to clinical contraindications to FMT such as toxic megacoon, allergies, and IBD."
+      },
+      {
+        "id": "NCT05669846-concomitant-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Concurrent non-hematologic malignancy within 3 years of data of first planned dose of therapy except for tumors with a negligible risk of metastasis and/or death as defined below:",
+        "reasonFuzzy": "Excludes concurrent malignancies with complex exceptions for indolent or low-risk tumors."
+      },
+      {
+        "id": "NCT05669846-investigator-opinion",
+        "polarity": "exclusion",
+        "sourceText": "Has a history or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the participant's participation for the full duration of the study, or is not in the best interest of the participant to participate, in the opinion of the treating investigator.",
+        "reasonFuzzy": "Investigator discretion and judgment-based assessment."
+      }
+    ]
+  }
+}

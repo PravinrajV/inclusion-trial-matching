@@ -1,0 +1,661 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04686305",
+  "briefTitle": "Phase Ib Study of the Safety of T-DXd and Immunotherapy Agents With and Without Chemotherapy in Advanced or Metastatic HER2+, Non-squamous NSCLC",
+  "parsedAt": "2026-11-12T06:06:59.724Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04686305-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "WHO / ECOG performance status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "WHO / ECOG performance status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04686305-lines",
+      "polarity": "inclusion",
+      "sourceText": "Part 1: Progression after 1 or 2 lines of systemic therapy for recurrent or metastatic setting. Part 3, Part 4 and Part 5: Patient must be treatment-naïve for advanced or metastatic NSCLC. Patients who have received prior adjuvant, or neoadjuvant chemotherapy, or definitive chemoradiation for advanced disease are eligible, provided that progression has occurred > 6 months from end of last therapy",
+      "reasonFuzzy": "Prior therapy and lines differ across study parts, precluding a single typed prior_lines or prior_therapy check."
+    },
+    {
+      "id": "NCT04686305-genomic",
+      "polarity": "inclusion",
+      "sourceText": "Part 3, Part 4 and Part 5: Patients must have tumors that do not harbor known genomic alterations or actionable driver kinases, for which approved therapies are available are allowed.",
+      "reasonFuzzy": "Broad genomic alteration exclusion depends on specific study parts and available approved therapies."
+    },
+    {
+      "id": "NCT04686305-her2",
+      "polarity": "inclusion",
+      "sourceText": "HER2overexpression status as determined by central review of tumor tissue",
+      "reasonFuzzy": "HER2 overexpression is not a standard typed biomarker kind."
+    },
+    {
+      "id": "NCT04686305-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable target disease assessed by the investigator using RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT04686305-organ",
+      "polarity": "inclusion",
+      "sourceText": "Has protocol defined adequate organ and bone marrow function",
+      "reasonFuzzy": "Protocol-defined adequate organ and bone marrow function lacks specific numeric lab cutoffs in this text snippet."
+    },
+    {
+      "id": "NCT04686305-weight",
+      "polarity": "inclusion",
+      "sourceText": "Part 3, Part 4 and Part 5: Minimum body weight of 35 kg.",
+      "reasonFuzzy": "Body weight is not a supported typed check kind."
+    },
+    {
+      "id": "NCT04686305-her2mut-excl",
+      "polarity": "exclusion",
+      "sourceText": "HER2 mutation if previously known",
+      "reasonFuzzy": "HER2 mutation is not a supported typed variant exclusion kind."
+    },
+    {
+      "id": "NCT04686305-ild",
+      "polarity": "exclusion",
+      "sourceText": "Has a history of (non-infectious) ILD/pneumonitis that required steroids, has current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at screening",
+      "reasonFuzzy": "ILD and pneumonitis history and imaging suspicion are specialized clinical exclusions."
+    },
+    {
+      "id": "NCT04686305-pulmonary",
+      "polarity": "exclusion",
+      "sourceText": "Lung-specific intercurrent clinically significant illnesses including, but not limited to, any underlying pulmonary disorder and prior pneumonectomy",
+      "reasonFuzzy": "Clinically significant pulmonary disorders are subjective medical conditions."
+    },
+    {
+      "id": "NCT04686305-infection",
+      "polarity": "exclusion",
+      "sourceText": "Active primary immunodeficiency known HIV infection, or active chronic and resolved hepatitis B ... or hepatitis C infection ...",
+      "reasonFuzzy": "Complex infectious disease testing rules and conditional PCR exceptions are not simple typed checks."
+    },
+    {
+      "id": "NCT04686305-activeinf",
+      "polarity": "exclusion",
+      "sourceText": "Active infection including tuberculosis and uncontrolled infection requiring IV antibiotics, antivirals, or antifungals",
+      "reasonFuzzy": "Active infection requiring specific treatments is clinical judgment-based."
+    },
+    {
+      "id": "NCT04686305-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Medical history of myocardial infarction within 6 months before treatment assignment, symptomatic CHF (New York Heart Association Class II to IV), clinically important cardiac arrhythmias, or a recent (< 6 months) cardiovascular event including stroke",
+      "reasonFuzzy": "Cardiovascular history timeframes and NYHA classifications are complex clinical exclusions."
+    },
+    {
+      "id": "NCT04686305-cardiac2",
+      "polarity": "exclusion",
+      "sourceText": "For Part 3, Part 4 and Part 5: Cardiomyopathy of any etiology, symptomatic CHF (as defined by New York Heart Association Class > II), unstable angina pectoris, history of MI within the past 12 months, or cardiac arrhythmia are to be excluded. Patients with troponin levels above ULN at screening...",
+      "reasonFuzzy": "Detailed part-specific cardiac histories, troponin rules, and consultations are complex multi-part exclusions."
+    },
+    {
+      "id": "NCT04686305-effusion",
+      "polarity": "exclusion",
+      "sourceText": "Ascites or pericardial effusion that requires drainage, peritoneal shunt, Pleuroperitoneal shunt or CART (Concentrated Ascites Reinfusion Therapy)",
+      "reasonFuzzy": "Ascites or pericardial effusion requiring intervention is a specialized clinical condition."
+    },
+    {
+      "id": "NCT04686305-skin",
+      "polarity": "exclusion",
+      "sourceText": "For Part 3, Part 4 and Part 5: Active non-infectious skin disease ... active or prior documented autoimmune or inflammatory disorders requiring chronic treatment with steroids or other immunosuppressive treatment.",
+      "reasonFuzzy": "Autoimmune and skin disorders requiring chronic treatment are complex medical history exclusions."
+    },
+    {
+      "id": "NCT04686305-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Unresolved toxicities not yet resolved to Grade ≤ 1 or baseline from previous anticancer therapy OR prior discontinuation of any planned study therapy due to toxicity.",
+      "reasonFuzzy": "General unresolved toxicity grades and prior study therapy discontinuations are complex clinical rules."
+    },
+    {
+      "id": "NCT04686305-platinum",
+      "polarity": "exclusion",
+      "sourceText": "must not have any medical contraindication to platinum-based chemotherapy.",
+      "reasonFuzzy": "Medical contraindication to platinum-based chemotherapy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT04686305-immuno",
+      "polarity": "exclusion",
+      "sourceText": "Part 3, Part 4 and Part 5 patients must not have had prior exposure to anti-PD-1, anti-PD-L1, anti-CTLA-4, anti-TIGIT or any other experimental immunotherapy in any setting.",
+      "reasonFuzzy": "Part-specific multiple prior immunotherapy exclusions cannot be captured by a single simple prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT04686305-substance",
+      "polarity": "exclusion",
+      "sourceText": "For Part 3, Part 4 and Part 5: History of substance abuse or any other medical or psychological conditions that may, in the opinion of the Investigator, interfere with the subject's participation in the clinical study or evaluation of the clinical study results",
+      "reasonFuzzy": "Investigator opinion regarding interference with study participation is subjective."
+    },
+    {
+      "id": "NCT04686305-thrombo",
+      "polarity": "exclusion",
+      "sourceText": "For Part 3, Part 4 and Part 5: History of thromboembolic events within 3 months before the first dose of IP (limited to pulmonary embolism, deep vein thrombosis, or cerebral venous sinus thrombosis).",
+      "reasonFuzzy": "Specific part-dependent thromboembolic event timeframes are specialized medical exclusions."
+    },
+    {
+      "id": "NCT04686305-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04686305-lines",
+      "polarity": "inclusion",
+      "sourceText": "Part 1: Progression after 1 or 2 lines of systemic therapy for recurrent or metastatic setting. Part 3, Part 4 and Part 5: Patient must be treatment-naïve for advanced or metastatic NSCLC. Patients who have received prior adjuvant, or neoadjuvant chemotherapy, or definitive chemoradiation for advanced disease are eligible, provided that progression has occurred > 6 months from end of last therapy",
+      "reasonFuzzy": "Prior lines or treatment-naive status differ by study part and include complex conditions."
+    },
+    {
+      "id": "NCT04686305-drivers",
+      "polarity": "inclusion",
+      "sourceText": "Part 3, Part 4 and Part 5: Patients must have tumors that do not harbor known genomic alterations or actionable driver kinases, for which approved therapies are available are allowed.",
+      "reasonFuzzy": "Broad exclusion of genomic alterations without specific single biomarker typed checks."
+    },
+    {
+      "id": "NCT04686305-her2expr",
+      "polarity": "inclusion",
+      "sourceText": "HER2overexpression status as determined by central review of tumor tissue",
+      "reasonFuzzy": "There is no typed kind for HER2 overexpression status."
+    },
+    {
+      "id": "NCT04686305-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable target disease assessed by the investigator using RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04686305-weight",
+      "polarity": "inclusion",
+      "sourceText": "Part 3, Part 4 and Part 5: Minimum body weight of 35 kg.",
+      "reasonFuzzy": "Body weight is not a supported typed check kind."
+    },
+    {
+      "id": "NCT04686305-her2mut",
+      "polarity": "exclusion",
+      "sourceText": "HER2 mutation if previously known",
+      "reasonFuzzy": "HER2 mutation is not a supported typed kind."
+    },
+    {
+      "id": "NCT04686305-ild",
+      "polarity": "exclusion",
+      "sourceText": "Has a history of (non-infectious) ILD/pneumonitis that required steroids, has current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at screening",
+      "reasonFuzzy": "Pulmonary toxicity and ILD history are not standard typed checks."
+    },
+    {
+      "id": "NCT04686305-pulmonary",
+      "polarity": "exclusion",
+      "sourceText": "Lung-specific intercurrent clinically significant illnesses including, but not limited to, any underlying pulmonary disorder and prior pneumonectomy",
+      "reasonFuzzy": "Investigator judgment and broad pulmonary disorders are not typed checks."
+    },
+    {
+      "id": "NCT04686305-hiv_hbv_hcv",
+      "polarity": "exclusion",
+      "sourceText": "Active primary immunodeficiency known HIV infection, or active chronic and resolved hepatitis B ... or hepatitis C infection ...",
+      "reasonFuzzy": "Infectious disease criteria are not standard typed labs or checks."
+    },
+    {
+      "id": "NCT04686305-infection",
+      "polarity": "exclusion",
+      "sourceText": "Active infection including tuberculosis and uncontrolled infection requiring IV antibiotics, antivirals, or antifungals",
+      "reasonFuzzy": "Active infection criteria are not typed checks."
+    },
+    {
+      "id": "NCT04686305-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Medical history of myocardial infarction within 6 months before treatment assignment, symptomatic CHF (New York Heart Association Class II to IV), clinically important cardiac arrhythmias, or a recent (< 6 months) cardiovascular event including stroke",
+      "reasonFuzzy": "Complex cardiovascular history and NYHA class restrictions are not typed checks."
+    },
+    {
+      "id": "NCT04686305-cardiac2",
+      "polarity": "exclusion",
+      "sourceText": "For Part 3, Part 4 and Part 5: Cardiomyopathy of any etiology, symptomatic CHF (as defined by New York Heart Association Class > II), unstable angina pectoris, history of MI within the past 12 months, or cardiac arrhythmia are to be excluded. Patients with troponin levels above ULN at screening...",
+      "reasonFuzzy": "Multi-part cardiac rules and troponin assessment are not simple typed lab checks."
+    },
+    {
+      "id": "NCT04686305-effusion",
+      "polarity": "exclusion",
+      "sourceText": "Ascites or pericardial effusion that requires drainage, peritoneal shunt, Pleuroperitoneal shunt or CART (Concentrated Ascites Reinfusion Therapy)",
+      "reasonFuzzy": "Effusion and drainage requirements are not typed checks."
+    },
+    {
+      "id": "NCT04686305-skin",
+      "polarity": "exclusion",
+      "sourceText": "For Part 3, Part 4 and Part 5: Active non-infectious skin disease (including any grade rash, urticarial, dermatitis, ulceration, or psoriasis) requiring systemic treatment, active or prior documented autoimmune or inflammatory disorders requiring chronic treatment with steroids or other immunosuppressive treatment.",
+      "reasonFuzzy": "Skin and autoimmune disorder rules are not typed checks."
+    },
+    {
+      "id": "NCT04686305-tox",
+      "polarity": "exclusion",
+      "sourceText": "Unresolved toxicities not yet resolved to Grade ≤ 1 or baseline from previous anticancer therapy OR prior discontinuation of any planned study therapy due to toxicity.",
+      "reasonFuzzy": "General toxicity resolution is not a standard typed check."
+    },
+    {
+      "id": "NCT04686305-platinum",
+      "polarity": "exclusion",
+      "sourceText": "must not have any medical contraindication to platinum-based chemotherapy.",
+      "reasonFuzzy": "Medical contraindication is an investigator judgment."
+    },
+    {
+      "id": "NCT04686305-prior_immuno",
+      "polarity": "exclusion",
+      "sourceText": "Part 3, Part 4 and Part 5 patients must not have had prior exposure to anti-PD-1, anti-PD-L1, anti-CTLA-4, anti-TIGIT or any other experimental immunotherapy in any setting.",
+      "reasonFuzzy": "Multiple prior immunotherapy restrictions across specific study parts are not a single typed prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT04686305-substance",
+      "polarity": "exclusion",
+      "sourceText": "For Part 3, Part 4 and Part 5: History of substance abuse or any other medical or psychological conditions that may, in the opinion of the Investigator, interfere with the subject's participation in the clinical study or evaluation of the clinical study results",
+      "reasonFuzzy": "Investigator opinion-based exclusions are not typed checks."
+    },
+    {
+      "id": "NCT04686305-thrombo",
+      "polarity": "exclusion",
+      "sourceText": "For Part 3, Part 4 and Part 5: History of thromboembolic events within 3 months before the first dose of IP (limited to pulmonary embolism, deep vein thrombosis, or cerebral venous sinus thrombosis).",
+      "reasonFuzzy": "Thromboembolic event history is not a typed check."
+    },
+    {
+      "id": "NCT04686305-brain",
+      "polarity": "exclusion",
+      "sourceText": "Spinal cord compression or clinically active central nervous system metastases, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT04686305-brain",
+      "polarity": "exclusion",
+      "sourceText": "Spinal cord compression or clinically active central nervous system metastases, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT04686305-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically documented unresectable locally advanced/metastatic non-squamous NSCLC",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        }
+      ],
+      "normalizerTypedCount": 6
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 20,
+    "attempts": 1,
+    "ms": 8831
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 19,
+    "attempts": 1,
+    "ms": 5313
+  },
+  "ms": 22146,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04686305",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04686305-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically documented unresectable locally advanced/metastatic non-squamous NSCLC",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT04686305-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "WHO / ECOG performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04686305-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04686305-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Spinal cord compression or clinically active central nervous system metastases, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04686305-lines",
+        "polarity": "inclusion",
+        "sourceText": "Part 1: Progression after 1 or 2 lines of systemic therapy for recurrent or metastatic setting. Part 3, Part 4 and Part 5: Patient must be treatment-naïve for advanced or metastatic NSCLC. Patients who have received prior adjuvant, or neoadjuvant chemotherapy, or definitive chemoradiation for advanced disease are eligible, provided that progression has occurred > 6 months from end of last therapy",
+        "reasonFuzzy": "Prior therapy and lines differ across study parts, precluding a single typed prior_lines or prior_therapy check."
+      },
+      {
+        "id": "NCT04686305-genomic",
+        "polarity": "inclusion",
+        "sourceText": "Part 3, Part 4 and Part 5: Patients must have tumors that do not harbor known genomic alterations or actionable driver kinases, for which approved therapies are available are allowed.",
+        "reasonFuzzy": "Broad genomic alteration exclusion depends on specific study parts and available approved therapies."
+      },
+      {
+        "id": "NCT04686305-her2",
+        "polarity": "inclusion",
+        "sourceText": "HER2overexpression status as determined by central review of tumor tissue",
+        "reasonFuzzy": "HER2 overexpression is not a standard typed biomarker kind."
+      },
+      {
+        "id": "NCT04686305-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable target disease assessed by the investigator using RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT04686305-organ",
+        "polarity": "inclusion",
+        "sourceText": "Has protocol defined adequate organ and bone marrow function",
+        "reasonFuzzy": "Protocol-defined adequate organ and bone marrow function lacks specific numeric lab cutoffs in this text snippet."
+      },
+      {
+        "id": "NCT04686305-weight",
+        "polarity": "inclusion",
+        "sourceText": "Part 3, Part 4 and Part 5: Minimum body weight of 35 kg.",
+        "reasonFuzzy": "Body weight is not a supported typed check kind."
+      },
+      {
+        "id": "NCT04686305-her2mut-excl",
+        "polarity": "exclusion",
+        "sourceText": "HER2 mutation if previously known",
+        "reasonFuzzy": "HER2 mutation is not a supported typed variant exclusion kind."
+      },
+      {
+        "id": "NCT04686305-ild",
+        "polarity": "exclusion",
+        "sourceText": "Has a history of (non-infectious) ILD/pneumonitis that required steroids, has current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at screening",
+        "reasonFuzzy": "ILD and pneumonitis history and imaging suspicion are specialized clinical exclusions."
+      },
+      {
+        "id": "NCT04686305-pulmonary",
+        "polarity": "exclusion",
+        "sourceText": "Lung-specific intercurrent clinically significant illnesses including, but not limited to, any underlying pulmonary disorder and prior pneumonectomy",
+        "reasonFuzzy": "Clinically significant pulmonary disorders are subjective medical conditions."
+      },
+      {
+        "id": "NCT04686305-infection",
+        "polarity": "exclusion",
+        "sourceText": "Active primary immunodeficiency known HIV infection, or active chronic and resolved hepatitis B ... or hepatitis C infection ...",
+        "reasonFuzzy": "Complex infectious disease testing rules and conditional PCR exceptions are not simple typed checks."
+      },
+      {
+        "id": "NCT04686305-activeinf",
+        "polarity": "exclusion",
+        "sourceText": "Active infection including tuberculosis and uncontrolled infection requiring IV antibiotics, antivirals, or antifungals",
+        "reasonFuzzy": "Active infection requiring specific treatments is clinical judgment-based."
+      },
+      {
+        "id": "NCT04686305-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Medical history of myocardial infarction within 6 months before treatment assignment, symptomatic CHF (New York Heart Association Class II to IV), clinically important cardiac arrhythmias, or a recent (< 6 months) cardiovascular event including stroke",
+        "reasonFuzzy": "Cardiovascular history timeframes and NYHA classifications are complex clinical exclusions."
+      },
+      {
+        "id": "NCT04686305-cardiac2",
+        "polarity": "exclusion",
+        "sourceText": "For Part 3, Part 4 and Part 5: Cardiomyopathy of any etiology, symptomatic CHF (as defined by New York Heart Association Class > II), unstable angina pectoris, history of MI within the past 12 months, or cardiac arrhythmia are to be excluded. Patients with troponin levels above ULN at screening...",
+        "reasonFuzzy": "Detailed part-specific cardiac histories, troponin rules, and consultations are complex multi-part exclusions."
+      },
+      {
+        "id": "NCT04686305-effusion",
+        "polarity": "exclusion",
+        "sourceText": "Ascites or pericardial effusion that requires drainage, peritoneal shunt, Pleuroperitoneal shunt or CART (Concentrated Ascites Reinfusion Therapy)",
+        "reasonFuzzy": "Ascites or pericardial effusion requiring intervention is a specialized clinical condition."
+      },
+      {
+        "id": "NCT04686305-skin",
+        "polarity": "exclusion",
+        "sourceText": "For Part 3, Part 4 and Part 5: Active non-infectious skin disease ... active or prior documented autoimmune or inflammatory disorders requiring chronic treatment with steroids or other immunosuppressive treatment.",
+        "reasonFuzzy": "Autoimmune and skin disorders requiring chronic treatment are complex medical history exclusions."
+      },
+      {
+        "id": "NCT04686305-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Unresolved toxicities not yet resolved to Grade ≤ 1 or baseline from previous anticancer therapy OR prior discontinuation of any planned study therapy due to toxicity.",
+        "reasonFuzzy": "General unresolved toxicity grades and prior study therapy discontinuations are complex clinical rules."
+      },
+      {
+        "id": "NCT04686305-platinum",
+        "polarity": "exclusion",
+        "sourceText": "must not have any medical contraindication to platinum-based chemotherapy.",
+        "reasonFuzzy": "Medical contraindication to platinum-based chemotherapy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT04686305-immuno",
+        "polarity": "exclusion",
+        "sourceText": "Part 3, Part 4 and Part 5 patients must not have had prior exposure to anti-PD-1, anti-PD-L1, anti-CTLA-4, anti-TIGIT or any other experimental immunotherapy in any setting.",
+        "reasonFuzzy": "Part-specific multiple prior immunotherapy exclusions cannot be captured by a single simple prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT04686305-substance",
+        "polarity": "exclusion",
+        "sourceText": "For Part 3, Part 4 and Part 5: History of substance abuse or any other medical or psychological conditions that may, in the opinion of the Investigator, interfere with the subject's participation in the clinical study or evaluation of the clinical study results",
+        "reasonFuzzy": "Investigator opinion regarding interference with study participation is subjective."
+      },
+      {
+        "id": "NCT04686305-thrombo",
+        "polarity": "exclusion",
+        "sourceText": "For Part 3, Part 4 and Part 5: History of thromboembolic events within 3 months before the first dose of IP (limited to pulmonary embolism, deep vein thrombosis, or cerebral venous sinus thrombosis).",
+        "reasonFuzzy": "Specific part-dependent thromboembolic event timeframes are specialized medical exclusions."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04686305",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04686305-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically documented unresectable locally advanced/metastatic non-squamous NSCLC",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT04686305-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "WHO / ECOG performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04686305-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Spinal cord compression or clinically active central nervous system metastases, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04686305-lines",
+        "polarity": "inclusion",
+        "sourceText": "Part 1: Progression after 1 or 2 lines of systemic therapy for recurrent or metastatic setting. Part 3, Part 4 and Part 5: Patient must be treatment-naïve for advanced or metastatic NSCLC. Patients who have received prior adjuvant, or neoadjuvant chemotherapy, or definitive chemoradiation for advanced disease are eligible, provided that progression has occurred > 6 months from end of last therapy",
+        "reasonFuzzy": "Prior lines or treatment-naive status differ by study part and include complex conditions."
+      },
+      {
+        "id": "NCT04686305-drivers",
+        "polarity": "inclusion",
+        "sourceText": "Part 3, Part 4 and Part 5: Patients must have tumors that do not harbor known genomic alterations or actionable driver kinases, for which approved therapies are available are allowed.",
+        "reasonFuzzy": "Broad exclusion of genomic alterations without specific single biomarker typed checks."
+      },
+      {
+        "id": "NCT04686305-her2expr",
+        "polarity": "inclusion",
+        "sourceText": "HER2overexpression status as determined by central review of tumor tissue",
+        "reasonFuzzy": "There is no typed kind for HER2 overexpression status."
+      },
+      {
+        "id": "NCT04686305-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable target disease assessed by the investigator using RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT04686305-weight",
+        "polarity": "inclusion",
+        "sourceText": "Part 3, Part 4 and Part 5: Minimum body weight of 35 kg.",
+        "reasonFuzzy": "Body weight is not a supported typed check kind."
+      },
+      {
+        "id": "NCT04686305-her2mut",
+        "polarity": "exclusion",
+        "sourceText": "HER2 mutation if previously known",
+        "reasonFuzzy": "HER2 mutation is not a supported typed kind."
+      },
+      {
+        "id": "NCT04686305-ild",
+        "polarity": "exclusion",
+        "sourceText": "Has a history of (non-infectious) ILD/pneumonitis that required steroids, has current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at screening",
+        "reasonFuzzy": "Pulmonary toxicity and ILD history are not standard typed checks."
+      },
+      {
+        "id": "NCT04686305-pulmonary",
+        "polarity": "exclusion",
+        "sourceText": "Lung-specific intercurrent clinically significant illnesses including, but not limited to, any underlying pulmonary disorder and prior pneumonectomy",
+        "reasonFuzzy": "Investigator judgment and broad pulmonary disorders are not typed checks."
+      },
+      {
+        "id": "NCT04686305-hiv_hbv_hcv",
+        "polarity": "exclusion",
+        "sourceText": "Active primary immunodeficiency known HIV infection, or active chronic and resolved hepatitis B ... or hepatitis C infection ...",
+        "reasonFuzzy": "Infectious disease criteria are not standard typed labs or checks."
+      },
+      {
+        "id": "NCT04686305-infection",
+        "polarity": "exclusion",
+        "sourceText": "Active infection including tuberculosis and uncontrolled infection requiring IV antibiotics, antivirals, or antifungals",
+        "reasonFuzzy": "Active infection criteria are not typed checks."
+      },
+      {
+        "id": "NCT04686305-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Medical history of myocardial infarction within 6 months before treatment assignment, symptomatic CHF (New York Heart Association Class II to IV), clinically important cardiac arrhythmias, or a recent (< 6 months) cardiovascular event including stroke",
+        "reasonFuzzy": "Complex cardiovascular history and NYHA class restrictions are not typed checks."
+      },
+      {
+        "id": "NCT04686305-cardiac2",
+        "polarity": "exclusion",
+        "sourceText": "For Part 3, Part 4 and Part 5: Cardiomyopathy of any etiology, symptomatic CHF (as defined by New York Heart Association Class > II), unstable angina pectoris, history of MI within the past 12 months, or cardiac arrhythmia are to be excluded. Patients with troponin levels above ULN at screening...",
+        "reasonFuzzy": "Multi-part cardiac rules and troponin assessment are not simple typed lab checks."
+      },
+      {
+        "id": "NCT04686305-effusion",
+        "polarity": "exclusion",
+        "sourceText": "Ascites or pericardial effusion that requires drainage, peritoneal shunt, Pleuroperitoneal shunt or CART (Concentrated Ascites Reinfusion Therapy)",
+        "reasonFuzzy": "Effusion and drainage requirements are not typed checks."
+      },
+      {
+        "id": "NCT04686305-skin",
+        "polarity": "exclusion",
+        "sourceText": "For Part 3, Part 4 and Part 5: Active non-infectious skin disease (including any grade rash, urticarial, dermatitis, ulceration, or psoriasis) requiring systemic treatment, active or prior documented autoimmune or inflammatory disorders requiring chronic treatment with steroids or other immunosuppressive treatment.",
+        "reasonFuzzy": "Skin and autoimmune disorder rules are not typed checks."
+      },
+      {
+        "id": "NCT04686305-tox",
+        "polarity": "exclusion",
+        "sourceText": "Unresolved toxicities not yet resolved to Grade ≤ 1 or baseline from previous anticancer therapy OR prior discontinuation of any planned study therapy due to toxicity.",
+        "reasonFuzzy": "General toxicity resolution is not a standard typed check."
+      },
+      {
+        "id": "NCT04686305-platinum",
+        "polarity": "exclusion",
+        "sourceText": "must not have any medical contraindication to platinum-based chemotherapy.",
+        "reasonFuzzy": "Medical contraindication is an investigator judgment."
+      },
+      {
+        "id": "NCT04686305-prior_immuno",
+        "polarity": "exclusion",
+        "sourceText": "Part 3, Part 4 and Part 5 patients must not have had prior exposure to anti-PD-1, anti-PD-L1, anti-CTLA-4, anti-TIGIT or any other experimental immunotherapy in any setting.",
+        "reasonFuzzy": "Multiple prior immunotherapy restrictions across specific study parts are not a single typed prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT04686305-substance",
+        "polarity": "exclusion",
+        "sourceText": "For Part 3, Part 4 and Part 5: History of substance abuse or any other medical or psychological conditions that may, in the opinion of the Investigator, interfere with the subject's participation in the clinical study or evaluation of the clinical study results",
+        "reasonFuzzy": "Investigator opinion-based exclusions are not typed checks."
+      },
+      {
+        "id": "NCT04686305-thrombo",
+        "polarity": "exclusion",
+        "sourceText": "For Part 3, Part 4 and Part 5: History of thromboembolic events within 3 months before the first dose of IP (limited to pulmonary embolism, deep vein thrombosis, or cerebral venous sinus thrombosis).",
+        "reasonFuzzy": "Thromboembolic event history is not a typed check."
+      }
+    ]
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04913285",
+  "briefTitle": "A Study to Evaluate KIN-2787 in Participants With BRAF and/or NRAS Mutation Positive Solid Tumors",
+  "parsedAt": "2026-11-12T06:08:13.604Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04913285-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status 0-1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status 0-1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04913285-stage",
+      "polarity": "inclusion",
+      "sourceText": "Metastatic or advanced stage solid tumor",
+      "reasonFuzzy": "The trial enrolls solid tumors generally with metastatic or advanced stage and does not give a numbered stage list for NSCLC specifically."
+    },
+    {
+      "id": "NCT04913285-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable (Part A and B) or evaluable (Part A only) disease by RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04913285-organs",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function, as measured by laboratory values (criteria listed in protocol).",
+      "reasonFuzzy": "Specific lab thresholds are not explicitly stated in the eligibility text."
+    },
+    {
+      "id": "NCT04913285-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known participants who have received local therapy with either surgery and/or radiation therapy (participants with asymptomatic untreated brain metastasis may be eligible if met with certain criteria)",
+      "reasonFuzzy": "Brain metastases and local therapy criteria involve conditional exceptions and are not a clean typed brain_mets check."
+    },
+    {
+      "id": "NCT04913285-prior",
+      "polarity": "exclusion",
+      "sourceText": "In Part B Dose Expansion, previous treatment with any approved or in-development small molecule BRAF-, MEK-, or MAPK-directed inhibitor therapy.",
+      "reasonFuzzy": "Prior therapy exclusion applies only to Part B and includes broad class inhibitors."
+    },
+    {
+      "id": "NCT04913285-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04913285-stage",
+      "polarity": "inclusion",
+      "sourceText": "Metastatic or advanced stage solid tumor",
+      "reasonFuzzy": "The trial enrolls solid tumors generally with metastatic or advanced stage and does not specify NSCLC stage numerically."
+    },
+    {
+      "id": "NCT04913285-nras",
+      "polarity": "inclusion",
+      "sourceText": "melanoma with an NRAS mutation",
+      "reasonFuzzy": "NRAS mutation applies to melanoma rather than NSCLC."
+    },
+    {
+      "id": "NCT04913285-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable (Part A and B) or evaluable (Part A only) disease by RECIST v1.1.",
+      "reasonFuzzy": "Measurable or evaluable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT04913285-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function, as measured by laboratory values (criteria listed in protocol).",
+      "reasonFuzzy": "Specific laboratory cutoffs are not provided in the text."
+    },
+    {
+      "id": "NCT04913285-brain",
+      "polarity": "exclusion",
+      "sourceText": "(participants with asymptomatic untreated brain metastasis may be eligible if met with certain criteria)",
+      "reasonFuzzy": "Asymptomatic untreated brain metastases are subject to conditional criteria rather than a strict simple exclusion."
+    },
+    {
+      "id": "NCT04913285-braf-inhibitor",
+      "polarity": "exclusion",
+      "sourceText": "In Part B Dose Expansion, previous treatment with any approved or in-development small molecule BRAF-, MEK-, or MAPK-directed inhibitor therapy.",
+      "reasonFuzzy": "Prior therapy exclusion applies only to a specific study part and involves broad classes, not a simple typed prior_therapy_excluded."
+    },
+    {
+      "id": "NCT04913285-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04913285-braf",
+      "polarity": "inclusion",
+      "sourceText": "Known BRAF Class I, Class II, or Class III alteration or melanoma with an NRAS mutation as confirmed by previous genomic analysis of tumor tissue or ctDNA.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "braf_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 5,
+    "attempts": 2,
+    "ms": 10629
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2607
+  },
+  "ms": 21203,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04913285",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04913285-braf",
+        "kind": "braf_status",
+        "polarity": "inclusion",
+        "sourceText": "Known BRAF Class I, Class II, or Class III alteration or melanoma with an NRAS mutation as confirmed by previous genomic analysis of tumor tissue or ctDNA.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04913285-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status 0-1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04913285-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04913285-stage",
+        "polarity": "inclusion",
+        "sourceText": "Metastatic or advanced stage solid tumor",
+        "reasonFuzzy": "The trial enrolls solid tumors generally with metastatic or advanced stage and does not give a numbered stage list for NSCLC specifically."
+      },
+      {
+        "id": "NCT04913285-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable (Part A and B) or evaluable (Part A only) disease by RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT04913285-organs",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function, as measured by laboratory values (criteria listed in protocol).",
+        "reasonFuzzy": "Specific lab thresholds are not explicitly stated in the eligibility text."
+      },
+      {
+        "id": "NCT04913285-brain",
+        "polarity": "exclusion",
+        "sourceText": "Known participants who have received local therapy with either surgery and/or radiation therapy (participants with asymptomatic untreated brain metastasis may be eligible if met with certain criteria)",
+        "reasonFuzzy": "Brain metastases and local therapy criteria involve conditional exceptions and are not a clean typed brain_mets check."
+      },
+      {
+        "id": "NCT04913285-prior",
+        "polarity": "exclusion",
+        "sourceText": "In Part B Dose Expansion, previous treatment with any approved or in-development small molecule BRAF-, MEK-, or MAPK-directed inhibitor therapy.",
+        "reasonFuzzy": "Prior therapy exclusion applies only to Part B and includes broad class inhibitors."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04913285",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04913285-braf",
+        "kind": "braf_status",
+        "polarity": "inclusion",
+        "sourceText": "Known BRAF Class I, Class II, or Class III alteration or melanoma with an NRAS mutation as confirmed by previous genomic analysis of tumor tissue or ctDNA.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04913285-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status 0-1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04913285-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04913285-stage",
+        "polarity": "inclusion",
+        "sourceText": "Metastatic or advanced stage solid tumor",
+        "reasonFuzzy": "The trial enrolls solid tumors generally with metastatic or advanced stage and does not specify NSCLC stage numerically."
+      },
+      {
+        "id": "NCT04913285-nras",
+        "polarity": "inclusion",
+        "sourceText": "melanoma with an NRAS mutation",
+        "reasonFuzzy": "NRAS mutation applies to melanoma rather than NSCLC."
+      },
+      {
+        "id": "NCT04913285-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable (Part A and B) or evaluable (Part A only) disease by RECIST v1.1.",
+        "reasonFuzzy": "Measurable or evaluable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT04913285-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function, as measured by laboratory values (criteria listed in protocol).",
+        "reasonFuzzy": "Specific laboratory cutoffs are not provided in the text."
+      },
+      {
+        "id": "NCT04913285-brain",
+        "polarity": "exclusion",
+        "sourceText": "(participants with asymptomatic untreated brain metastasis may be eligible if met with certain criteria)",
+        "reasonFuzzy": "Asymptomatic untreated brain metastases are subject to conditional criteria rather than a strict simple exclusion."
+      },
+      {
+        "id": "NCT04913285-braf-inhibitor",
+        "polarity": "exclusion",
+        "sourceText": "In Part B Dose Expansion, previous treatment with any approved or in-development small molecule BRAF-, MEK-, or MAPK-directed inhibitor therapy.",
+        "reasonFuzzy": "Prior therapy exclusion applies only to a specific study part and involves broad classes, not a simple typed prior_therapy_excluded."
+      }
+    ]
+  }
+}

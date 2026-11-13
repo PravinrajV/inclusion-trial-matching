@@ -1,0 +1,40 @@
+{
+  "name": "inclusion",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Inclusion: private clinical-trial matching. Public trial rules are parsed in the cloud; your chart is read only on your own device.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "ctgov:pull": "node scripts/ctgov-pull.mjs",
+    "ctgov:prepare": "node scripts/prepare-parse-batch.mjs",
+    "cache:parse": "node scripts/parse-regional-trials.mjs",
+    "cache:parse-demo": "node scripts/parse-regional-deterministic.mjs",
+    "cache:write": "node scripts/write-firestore-cache.mjs",
+    "cache:trial-meta": "node scripts/build-trial-meta.mjs",
+    "cache:map": "node scripts/build-map-atlas.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "firebase": "^13.3.0",
+    "pdfjs-dist": "^6.5.438"
+  },
+  "devDependencies": {
+    "@types/dom-chromium-ai": "^0.0.18",
+    "firebase-tools": "^15.36.0",
+    "jsdom": "^31.0.0",
+    "topojson-client": "^3.1.0",
+    "typescript": "^7.0.2",
+    "us-atlas": "^3.0.1",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  },
+  "author": "Pravinraj Vincent"
+}

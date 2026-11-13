@@ -1,0 +1,181 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04606446",
+  "briefTitle": "Study of PF-07248144 in Advanced or Metastatic Solid Tumors",
+  "parsedAt": "2026-11-12T06:06:04.590Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04606446-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Female or male patients aged ≥ 18 years (Japan ≥ 20 years) (South Korea ≥ 19 years).",
+      "numberValue": 18,
+      "evidence_quote": "Female or male patients aged ≥ 18 years (Japan ≥ 20 years) (South Korea ≥ 19 years).",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04606446-disease",
+      "polarity": "inclusion",
+      "sourceText": "Part 1A (Monotherapy Dose Escalation) Histological or cytological diagnosis of locally advanced or metastatic ER+HER2- breast cancer, CRPC, or NSCLC that is intolerant or resistant to standard therapy or for which no standard therapy is available.",
+      "reasonFuzzy": "The trial enrolls multiple distinct cancer types with different rules per part, so no single stage or biomarker inclusion check applies broadly."
+    },
+    {
+      "id": "NCT04606446-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have at least 1 measurable lesion as defined by RECIST version 1.1 that has not been previously irradiated.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04606446-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate renal, liver, and bone marrow function.",
+      "reasonFuzzy": "Adequate organ function is stated broadly without specific numeric cutoffs in this section."
+    },
+    {
+      "id": "NCT04606446-disease",
+      "polarity": "inclusion",
+      "sourceText": "Part 1A (Monotherapy Dose Escalation) Histological or cytological diagnosis of locally advanced or metastatic ER+HER2- breast cancer, CRPC, or NSCLC that is intolerant or resistant to standard therapy or for which no standard therapy is available.",
+      "reasonFuzzy": "The trial enrolls multiple tumor types including NSCLC, but the inclusion criteria for prior treatments and biomarkers are heavily focused on breast cancer."
+    },
+    {
+      "id": "NCT04606446-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have at least 1 measurable lesion as defined by RECIST version 1.1 that has not been previously irradiated.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04606446-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status PS 0 or 1",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2279
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 3468
+  },
+  "ms": 13743,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04606446",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04606446-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status PS 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04606446-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Female or male patients aged ≥ 18 years (Japan ≥ 20 years) (South Korea ≥ 19 years).",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04606446-disease",
+        "polarity": "inclusion",
+        "sourceText": "Part 1A (Monotherapy Dose Escalation) Histological or cytological diagnosis of locally advanced or metastatic ER+HER2- breast cancer, CRPC, or NSCLC that is intolerant or resistant to standard therapy or for which no standard therapy is available.",
+        "reasonFuzzy": "The trial enrolls multiple distinct cancer types with different rules per part, so no single stage or biomarker inclusion check applies broadly."
+      },
+      {
+        "id": "NCT04606446-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have at least 1 measurable lesion as defined by RECIST version 1.1 that has not been previously irradiated.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT04606446-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate renal, liver, and bone marrow function.",
+        "reasonFuzzy": "Adequate organ function is stated broadly without specific numeric cutoffs in this section."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04606446",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04606446-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status PS 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04606446-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Female or male patients aged ≥ 18 years (Japan ≥ 20 years) (South Korea ≥ 19 years).",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04606446-disease",
+        "polarity": "inclusion",
+        "sourceText": "Part 1A (Monotherapy Dose Escalation) Histological or cytological diagnosis of locally advanced or metastatic ER+HER2- breast cancer, CRPC, or NSCLC that is intolerant or resistant to standard therapy or for which no standard therapy is available.",
+        "reasonFuzzy": "The trial enrolls multiple tumor types including NSCLC, but the inclusion criteria for prior treatments and biomarkers are heavily focused on breast cancer."
+      },
+      {
+        "id": "NCT04606446-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have at least 1 measurable lesion as defined by RECIST version 1.1 that has not been previously irradiated.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      }
+    ]
+  }
+}

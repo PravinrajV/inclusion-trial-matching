@@ -1,0 +1,355 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05624996",
+  "briefTitle": "Testing the Addition of High Dose, Targeted Radiation to the Usual Treatment for Locally-Advanced Inoperable Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:48:01.994Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05624996-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age >= 18",
+      "numberValue": 18,
+      "evidence_quote": "Age >= 18",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05624996-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0-2",
+      "numberValue": 2,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status 0-2",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05624996-egfr",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine clearance >= 25 mL/min by the Cockcroft-Gault (C-G) equation",
+      "numberValue": 25,
+      "evidence_quote": "Creatinine clearance >= 25 mL/min by the Cockcroft-Gault (C-G) equation",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05624996-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "non-small cell lung cancer (NSCLC) with known PD-L1 status prior to registration",
+      "reasonFuzzy": "Requires known PD-L1 status without specifying a minimum or maximum percentage cutoff."
+    },
+    {
+      "id": "NCT05624996-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Up to 4 cycles of systemic therapy received prior to registration for the current study cancer is allowable; any prior chemotherapy for a different cancer is also permissible",
+      "reasonFuzzy": "Prior systemic therapy limits up to 4 cycles do not map directly to a simple prior_lines_max check."
+    },
+    {
+      "id": "NCT05624996-hematologic",
+      "polarity": "inclusion",
+      "sourceText": "Hematologic function (e.g. platelets, leukocytes, hemoglobin) amenable, at the discretion of the treating physician, to allow for treatment with chemotherapy and concurrent radiation therapy",
+      "reasonFuzzy": "Hematologic function is based on investigator discretion rather than fixed numeric cutoffs."
+    },
+    {
+      "id": "NCT05624996-pleural",
+      "polarity": "inclusion",
+      "sourceText": "Subjects with non-malignant pleural effusion are eligible provided the effusion is not known or demonstrated to be an exudative effusion",
+      "reasonFuzzy": "Requires evaluation of pleural effusion exudative status which is a complex condition, not a typed check."
+    },
+    {
+      "id": "NCT05624996-stage",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically (histologically or cytologically) proven diagnosis of non-operable stage IIB or III, node positive (American Joint Committee on Cancer [AJCC] eighth edition) non-small cell lung cancer (NSCLC) with known PD-L1 status prior to registration",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05624996-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "with known PD-L1 status prior to registration",
+      "reasonFuzzy": "Requires known status rather than a specific minimum or maximum numeric cutoff."
+    },
+    {
+      "id": "NCT05624996-nodal",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have an identified primary tumor and at least one nodal metastasis (peribronchial/hilar/intrapulmonary, mediastinal/subcarinal, supraclavicular/scalene)",
+      "reasonFuzzy": "Anatomical location rules for nodal metastases are complex and not expressible as simple typed checks."
+    },
+    {
+      "id": "NCT05624996-tumor-size",
+      "polarity": "inclusion",
+      "sourceText": "Primary tumor =< 7 cm",
+      "reasonFuzzy": "Primary tumor size cutoff is not a standard typed check kind in the schema."
+    },
+    {
+      "id": "NCT05624996-hematologic",
+      "polarity": "inclusion",
+      "sourceText": "Hematologic function (e.g. platelets, leukocytes, hemoglobin) amenable, at the discretion of the treating physician, to allow for treatment with chemotherapy and concurrent radiation therapy",
+      "reasonFuzzy": "Subjective investigator discretion on hematologic function rather than specific lab thresholds."
+    },
+    {
+      "id": "NCT05624996-pleural",
+      "polarity": "inclusion",
+      "sourceText": "Subjects with non-malignant pleural effusion are eligible provided the effusion is not known or demonstrated to be an exudative effusion",
+      "reasonFuzzy": "Pleural effusion characteristics and cytological exclusion rules are complex and subjective."
+    },
+    {
+      "id": "NCT05624996-immunotherapy",
+      "polarity": "inclusion",
+      "sourceText": "Medical history consistent with the patient being amenable, at the discretion of the treating physician, to allow for treating with consolidation immunotherapy.",
+      "reasonFuzzy": "Investigator discretion regarding consolidation therapy suitability."
+    },
+    {
+      "id": "NCT05624996-prior-rad",
+      "polarity": "exclusion",
+      "sourceText": "Prior radiotherapy to the study cancer (local recurrence). Prior radiotherapy for a different cancer/condition to the region of the study cancer that would result in overlap of radiation therapy fields that is determined by the treating physician to impede the treatment of the study malignancy",
+      "reasonFuzzy": "Prior radiotherapy exclusion depends on spatial overlap determined by the investigator."
+    },
+    {
+      "id": "NCT05624996-tumor-location",
+      "polarity": "exclusion",
+      "sourceText": "Centrally located primary tumor < 2 cm from involved nodal disease that would result in significant overlap of the primary SBRT and nodal radiation fields.",
+      "reasonFuzzy": "Anatomical proximity and radiation field overlap judgment by the investigator."
+    },
+    {
+      "id": "NCT05624996-stage",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically (histologically or cytologically) proven diagnosis of non-operable stage IIB or III, node positive (American Joint Committee on Cancer [AJCC] eighth edition) non-small cell lung cancer (NSCLC) with known PD-L1 status prior to registration",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05624996-priorlines",
+      "polarity": "inclusion",
+      "sourceText": "Up to 4 cycles of systemic therapy received prior to registration for the current study cancer is allowable; any prior chemotherapy for a different cancer is also permissible",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Pathologically (histologically or cytologically) proven diagnosis of non-operable stage IIB or III, node positive (American Joint Committee on Cancer [AJCC] eig"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Pathologically (histologically or cytologically) proven diagnosis of non-operable stage IIB or III, node positive (American Joint Committee on Cancer [AJCC] eig"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "value": "n:4"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 2917
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 3425
+  },
+  "ms": 72998,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05624996",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05624996-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically (histologically or cytologically) proven diagnosis of non-operable stage IIB or III, node positive (American Joint Committee on Cancer [AJCC] eighth edition) non-small cell lung cancer (NSCLC) with known PD-L1 status prior to registration",
+        "stages": [
+          "IIB",
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT05624996-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age >= 18",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05624996-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0-2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT05624996-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine clearance >= 25 mL/min by the Cockcroft-Gault (C-G) equation",
+        "numberValue": 25
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05624996-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "non-small cell lung cancer (NSCLC) with known PD-L1 status prior to registration",
+        "reasonFuzzy": "Requires known PD-L1 status without specifying a minimum or maximum percentage cutoff."
+      },
+      {
+        "id": "NCT05624996-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Up to 4 cycles of systemic therapy received prior to registration for the current study cancer is allowable; any prior chemotherapy for a different cancer is also permissible",
+        "reasonFuzzy": "Prior systemic therapy limits up to 4 cycles do not map directly to a simple prior_lines_max check."
+      },
+      {
+        "id": "NCT05624996-hematologic",
+        "polarity": "inclusion",
+        "sourceText": "Hematologic function (e.g. platelets, leukocytes, hemoglobin) amenable, at the discretion of the treating physician, to allow for treatment with chemotherapy and concurrent radiation therapy",
+        "reasonFuzzy": "Hematologic function is based on investigator discretion rather than fixed numeric cutoffs."
+      },
+      {
+        "id": "NCT05624996-pleural",
+        "polarity": "inclusion",
+        "sourceText": "Subjects with non-malignant pleural effusion are eligible provided the effusion is not known or demonstrated to be an exudative effusion",
+        "reasonFuzzy": "Requires evaluation of pleural effusion exudative status which is a complex condition, not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05624996",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05624996-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically (histologically or cytologically) proven diagnosis of non-operable stage IIB or III, node positive (American Joint Committee on Cancer [AJCC] eighth edition) non-small cell lung cancer (NSCLC) with known PD-L1 status prior to registration",
+        "stages": [
+          "IIB",
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT05624996-priorlines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Up to 4 cycles of systemic therapy received prior to registration for the current study cancer is allowable; any prior chemotherapy for a different cancer is also permissible",
+        "numberValue": 4
+      },
+      {
+        "id": "NCT05624996-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age >= 18",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05624996-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0-2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT05624996-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine clearance >= 25 mL/min by the Cockcroft-Gault (C-G) equation",
+        "numberValue": 25
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05624996-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "with known PD-L1 status prior to registration",
+        "reasonFuzzy": "Requires known status rather than a specific minimum or maximum numeric cutoff."
+      },
+      {
+        "id": "NCT05624996-nodal",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have an identified primary tumor and at least one nodal metastasis (peribronchial/hilar/intrapulmonary, mediastinal/subcarinal, supraclavicular/scalene)",
+        "reasonFuzzy": "Anatomical location rules for nodal metastases are complex and not expressible as simple typed checks."
+      },
+      {
+        "id": "NCT05624996-tumor-size",
+        "polarity": "inclusion",
+        "sourceText": "Primary tumor =< 7 cm",
+        "reasonFuzzy": "Primary tumor size cutoff is not a standard typed check kind in the schema."
+      },
+      {
+        "id": "NCT05624996-hematologic",
+        "polarity": "inclusion",
+        "sourceText": "Hematologic function (e.g. platelets, leukocytes, hemoglobin) amenable, at the discretion of the treating physician, to allow for treatment with chemotherapy and concurrent radiation therapy",
+        "reasonFuzzy": "Subjective investigator discretion on hematologic function rather than specific lab thresholds."
+      },
+      {
+        "id": "NCT05624996-pleural",
+        "polarity": "inclusion",
+        "sourceText": "Subjects with non-malignant pleural effusion are eligible provided the effusion is not known or demonstrated to be an exudative effusion",
+        "reasonFuzzy": "Pleural effusion characteristics and cytological exclusion rules are complex and subjective."
+      },
+      {
+        "id": "NCT05624996-immunotherapy",
+        "polarity": "inclusion",
+        "sourceText": "Medical history consistent with the patient being amenable, at the discretion of the treating physician, to allow for treating with consolidation immunotherapy.",
+        "reasonFuzzy": "Investigator discretion regarding consolidation therapy suitability."
+      },
+      {
+        "id": "NCT05624996-prior-rad",
+        "polarity": "exclusion",
+        "sourceText": "Prior radiotherapy to the study cancer (local recurrence). Prior radiotherapy for a different cancer/condition to the region of the study cancer that would result in overlap of radiation therapy fields that is determined by the treating physician to impede the treatment of the study malignancy",
+        "reasonFuzzy": "Prior radiotherapy exclusion depends on spatial overlap determined by the investigator."
+      },
+      {
+        "id": "NCT05624996-tumor-location",
+        "polarity": "exclusion",
+        "sourceText": "Centrally located primary tumor < 2 cm from involved nodal disease that would result in significant overlap of the primary SBRT and nodal radiation fields.",
+        "reasonFuzzy": "Anatomical proximity and radiation field overlap judgment by the investigator."
+      }
+    ]
+  }
+}

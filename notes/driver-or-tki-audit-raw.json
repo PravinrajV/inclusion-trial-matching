@@ -1,0 +1,549 @@
+{
+  "cacheTrials": 277,
+  "parserModel": "gemini-3.5-flash-lite",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "hero": {
+    "alex-rivera": {
+      "strong": 9,
+      "possible": 198,
+      "unlikely": 70,
+      "first": {
+        "nctId": "NCT05642572",
+        "metKey": 2,
+        "tier": "strong"
+      }
+    },
+    "sam-okonkwo": {
+      "strong": 4,
+      "possible": 200,
+      "unlikely": 73,
+      "first": {
+        "nctId": "NCT03093116",
+        "metKey": 4,
+        "tier": "strong"
+      }
+    },
+    "jordan-blake": {
+      "strong": 0,
+      "possible": 94,
+      "unlikely": 183,
+      "first": {
+        "nctId": "NCT02468024",
+        "metKey": 0,
+        "tier": "possible"
+      }
+    }
+  },
+  "flipCount": 9,
+  "flipsByPersona": {
+    "alex-rivera": 4,
+    "sam-okonkwo": 4,
+    "jordan-blake": 1
+  },
+  "flips": [
+    {
+      "persona": "Alex Rivera",
+      "nctId": "NCT04614103",
+      "briefTitle": "Autologous LN-145 in Patients With Metastatic Non-Small-Cell Lung Cancer",
+      "officialTitle": "A Phase 2 Multicenter Study of Autologous Tumor Infiltrating Lymphocytes (TIL or LN-145) in Patients With Metastatic Non-Small-Cell Lung Cancer",
+      "oldJudgment": "met",
+      "newJudgment": "not_met",
+      "oldKind": "alk_status",
+      "newKind": "egfr_status",
+      "looseOr": true,
+      "driverChecks": [
+        {
+          "kind": "egfr_status",
+          "judgment": "not_met",
+          "quote": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations."
+        },
+        {
+          "kind": "alk_status",
+          "judgment": "met",
+          "quote": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations."
+        },
+        {
+          "kind": "ros1_status",
+          "judgment": "unknown",
+          "quote": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations."
+        }
+      ],
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Alex Rivera",
+      "nctId": "NCT05098132",
+      "briefTitle": "Study of STK-012 Alone and With Other Treatments in Patients With Advanced Lung Cancer and Other Cancers",
+      "officialTitle": "A Phase 1/2 Study to Evaluate STK-012 as a Single Agent and in Combination Therapy in Subjects With Front-line Advanced NSCLC and Other Selected Indications",
+      "oldJudgment": "met",
+      "newJudgment": "not_met",
+      "oldKind": "alk_status",
+      "newKind": "egfr_status",
+      "looseOr": true,
+      "driverChecks": [
+        {
+          "kind": "egfr_status",
+          "judgment": "not_met",
+          "quote": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy."
+        },
+        {
+          "kind": "alk_status",
+          "judgment": "met",
+          "quote": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy."
+        },
+        {
+          "kind": "ros1_status",
+          "judgment": "unknown",
+          "quote": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy."
+        }
+      ],
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Alex Rivera",
+      "nctId": "NCT06096844",
+      "briefTitle": "Chemotherapy Combined With Immunotherapy Versus Immunotherapy Alone for Older Adults With Stage IIIB-IV Lung Cancer, The ACHIEVE Trial",
+      "officialTitle": "A Randomized Phase III Trial of Chemo-Immunotherapy vs Immunotherapy Alone for the Vulnerable Older Adult With Advanced Non-Small Cell Lung Cancer: The ACHIEVE Study",
+      "oldJudgment": "met",
+      "newJudgment": "not_met",
+      "oldKind": "alk_status",
+      "newKind": "egfr_status",
+      "looseOr": true,
+      "driverChecks": [
+        {
+          "kind": "egfr_status",
+          "judgment": "not_met",
+          "quote": "Patient must have a tumor that is negative for EGFR mutation/ALK translocations or other actionable first line mutations in which patients would receive first-line oral tyrosine kinase inhibitors"
+        },
+        {
+          "kind": "alk_status",
+          "judgment": "met",
+          "quote": "Patient must have a tumor that is negative for EGFR mutation/ALK translocations or other actionable first line mutations in which patients would receive first-line oral tyrosine kinase inhibitors"
+        }
+      ],
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Alex Rivera",
+      "nctId": "NCT06561386",
+      "briefTitle": "A Study to Compare the Efficacy of Nivolumab and Relatlimab Plus Chemotherapy vs Pembrolizumab Plus Chemotherapy for Stage IV/Recurrent Non-squamous Non-small Cell Lung Cancer With PD-L1 Expression ≥ 1%",
+      "officialTitle": "A Phase 3, Randomized, Open-label Study of Nivolumab + Relatlimab Fixed-dose Combination With Chemotherapy Versus Pembrolizumab With Chemotherapy as First-line Treatment for Participants With Non-squamous (NSQ), Stage IV or Recurrent Non-small Cell Lung Cancer and With Tumor Cell PD-L1 Expression ≥ 1%",
+      "oldJudgment": "met",
+      "newJudgment": "not_met",
+      "oldKind": "alk_status",
+      "newKind": "egfr_status",
+      "looseOr": true,
+      "driverChecks": [
+        {
+          "kind": "egfr_status",
+          "judgment": "not_met",
+          "quote": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded."
+        },
+        {
+          "kind": "alk_status",
+          "judgment": "met",
+          "quote": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded."
+        },
+        {
+          "kind": "ros1_status",
+          "judgment": "unknown",
+          "quote": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded."
+        }
+      ],
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Sam Okonkwo",
+      "nctId": "NCT04614103",
+      "briefTitle": "Autologous LN-145 in Patients With Metastatic Non-Small-Cell Lung Cancer",
+      "officialTitle": "A Phase 2 Multicenter Study of Autologous Tumor Infiltrating Lymphocytes (TIL or LN-145) in Patients With Metastatic Non-Small-Cell Lung Cancer",
+      "oldJudgment": "met",
+      "newJudgment": "not_met",
+      "oldKind": "egfr_status",
+      "newKind": "alk_status",
+      "looseOr": true,
+      "driverChecks": [
+        {
+          "kind": "egfr_status",
+          "judgment": "met",
+          "quote": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations."
+        },
+        {
+          "kind": "alk_status",
+          "judgment": "not_met",
+          "quote": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations."
+        },
+        {
+          "kind": "ros1_status",
+          "judgment": "unknown",
+          "quote": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations."
+        }
+      ],
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Sam Okonkwo",
+      "nctId": "NCT05098132",
+      "briefTitle": "Study of STK-012 Alone and With Other Treatments in Patients With Advanced Lung Cancer and Other Cancers",
+      "officialTitle": "A Phase 1/2 Study to Evaluate STK-012 as a Single Agent and in Combination Therapy in Subjects With Front-line Advanced NSCLC and Other Selected Indications",
+      "oldJudgment": "met",
+      "newJudgment": "not_met",
+      "oldKind": "egfr_status",
+      "newKind": "alk_status",
+      "looseOr": true,
+      "driverChecks": [
+        {
+          "kind": "egfr_status",
+          "judgment": "met",
+          "quote": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy."
+        },
+        {
+          "kind": "alk_status",
+          "judgment": "not_met",
+          "quote": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy."
+        },
+        {
+          "kind": "ros1_status",
+          "judgment": "unknown",
+          "quote": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy."
+        }
+      ],
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Sam Okonkwo",
+      "nctId": "NCT06096844",
+      "briefTitle": "Chemotherapy Combined With Immunotherapy Versus Immunotherapy Alone for Older Adults With Stage IIIB-IV Lung Cancer, The ACHIEVE Trial",
+      "officialTitle": "A Randomized Phase III Trial of Chemo-Immunotherapy vs Immunotherapy Alone for the Vulnerable Older Adult With Advanced Non-Small Cell Lung Cancer: The ACHIEVE Study",
+      "oldJudgment": "met",
+      "newJudgment": "not_met",
+      "oldKind": "egfr_status",
+      "newKind": "alk_status",
+      "looseOr": true,
+      "driverChecks": [
+        {
+          "kind": "egfr_status",
+          "judgment": "met",
+          "quote": "Patient must have a tumor that is negative for EGFR mutation/ALK translocations or other actionable first line mutations in which patients would receive first-line oral tyrosine kinase inhibitors"
+        },
+        {
+          "kind": "alk_status",
+          "judgment": "not_met",
+          "quote": "Patient must have a tumor that is negative for EGFR mutation/ALK translocations or other actionable first line mutations in which patients would receive first-line oral tyrosine kinase inhibitors"
+        }
+      ],
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Sam Okonkwo",
+      "nctId": "NCT06561386",
+      "briefTitle": "A Study to Compare the Efficacy of Nivolumab and Relatlimab Plus Chemotherapy vs Pembrolizumab Plus Chemotherapy for Stage IV/Recurrent Non-squamous Non-small Cell Lung Cancer With PD-L1 Expression ≥ 1%",
+      "officialTitle": "A Phase 3, Randomized, Open-label Study of Nivolumab + Relatlimab Fixed-dose Combination With Chemotherapy Versus Pembrolizumab With Chemotherapy as First-line Treatment for Participants With Non-squamous (NSQ), Stage IV or Recurrent Non-small Cell Lung Cancer and With Tumor Cell PD-L1 Expression ≥ 1%",
+      "oldJudgment": "met",
+      "newJudgment": "not_met",
+      "oldKind": "egfr_status",
+      "newKind": "alk_status",
+      "looseOr": true,
+      "driverChecks": [
+        {
+          "kind": "egfr_status",
+          "judgment": "met",
+          "quote": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded."
+        },
+        {
+          "kind": "alk_status",
+          "judgment": "not_met",
+          "quote": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded."
+        },
+        {
+          "kind": "ros1_status",
+          "judgment": "unknown",
+          "quote": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded."
+        }
+      ],
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Jordan Blake",
+      "nctId": "NCT05098132",
+      "briefTitle": "Study of STK-012 Alone and With Other Treatments in Patients With Advanced Lung Cancer and Other Cancers",
+      "officialTitle": "A Phase 1/2 Study to Evaluate STK-012 as a Single Agent and in Combination Therapy in Subjects With Front-line Advanced NSCLC and Other Selected Indications",
+      "oldJudgment": "met",
+      "newJudgment": "unknown",
+      "oldKind": "egfr_status",
+      "newKind": "ros1_status",
+      "looseOr": true,
+      "driverChecks": [
+        {
+          "kind": "egfr_status",
+          "judgment": "met",
+          "quote": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy."
+        },
+        {
+          "kind": "alk_status",
+          "judgment": "met",
+          "quote": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy."
+        },
+        {
+          "kind": "ros1_status",
+          "judgment": "unknown",
+          "quote": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy."
+        }
+      ],
+      "tier": "possible"
+    }
+  ],
+  "tkiHitCount": 14,
+  "tkiHitsByPersona": {
+    "alex-rivera": 7,
+    "sam-okonkwo": 7,
+    "jordan-blake": 0
+  },
+  "tkiHits": [
+    {
+      "persona": "Alex Rivera",
+      "nctId": "NCT04165070",
+      "briefTitle": "KEYMAKER-U01 Substudy 01A: Efficacy and Safety Study of Pembrolizumab (MK-3475) With or Without Chemotherapy When Used With Investigational Agents in Treatment-naïve Participants With Stage IV Non-small Cell Lung Cancer (NSCLC) (MK-3475-01A/KEYMAKER-U01A)",
+      "officialTitle": "KEYMAKER-U01 Substudy 01A: A Phase 1/2, Umbrella Study With Rolling Arms of Investigational Agents With Pembrolizumab With or Without Chemotherapy in Treatment-Naive Participants With Stage IV Non-small Cell Lung Cancer (NSCLC)",
+      "priorLineQuote": "Treatment-Naive",
+      "priorLineHint": "tki_naive",
+      "injectedNotMet": true,
+      "otherNotMetKinds": [],
+      "otherUnlikelyReasons": [],
+      "wouldBeUnlikelyAnyway": false,
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Alex Rivera",
+      "nctId": "NCT05789082",
+      "briefTitle": "A Study Evaluating the Safety, Activity, and Pharmacokinetics of Divarasib as a Single Agent or in Combination With Other Anti-Cancer Therapies in Participants With Previously Untreated Advanced or Metastatic Non-Small Cell Lung Cancer With a KRAS G12C Mutation",
+      "officialTitle": "A Phase Ib/II, Open-Label, Multicenter Study Evaluating the Safety, Activity, and Pharmacokinetics of Divarasib as a Single Agent or in Combination With Other Anti-Cancer Therapies in Patients With Previously Untreated Advanced Or Metastatic Non-Small Cell Lung Cancer With a KRAS G12C Mutation",
+      "priorLineQuote": "Previously Untreated",
+      "priorLineHint": "tki_naive",
+      "injectedNotMet": true,
+      "otherNotMetKinds": [
+        "kras_variant_in"
+      ],
+      "otherUnlikelyReasons": [
+        "other_not_met:kras_variant_in",
+        "driver_conflict"
+      ],
+      "wouldBeUnlikelyAnyway": true,
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Alex Rivera",
+      "nctId": "NCT06765109",
+      "briefTitle": "Neladalkib (NVL-655) for TKI-naive Patients With Advanced ALK-Positive NSCLC",
+      "officialTitle": "A Phase 3 Study of the Selective Anaplastic Lymphoma Kinase (ALK) Inhibitor NVL-655 Compared to Alectinib in First-Line Treatment of Patients With ALK-Positive Advanced Non-Small Cell Lung Cancer (ALKAZAR)",
+      "priorLineQuote": "TKI-naive",
+      "priorLineHint": "tki_naive",
+      "injectedNotMet": true,
+      "otherNotMetKinds": [
+        "alk_status"
+      ],
+      "otherUnlikelyReasons": [
+        "other_not_met:alk_status",
+        "driver_conflict"
+      ],
+      "wouldBeUnlikelyAnyway": true,
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Alex Rivera",
+      "nctId": "NCT06772623",
+      "briefTitle": "Study to Evaluate Adverse Events and Efficacy of Intravenous (IV) Telisotuzumab Adizutecan in Combination With a PD-1 Immune Checkpoint Inhibitor in Adult Participants With Advanced or Metastatic Non-Squamous NSCLC With No Prior Treatment for Advanced Disease, and No Actionable Genomic Alterations",
+      "officialTitle": "An Open-label Multi-Cohort Phase 1b/2 Study to Evaluate the Safety, Efficacy, and Optimal Dose of Telisotuzumab Adizutecan in Combination With a PD-1 Immune Checkpoint Inhibitor in Advanced or Metastatic Non-Squamous NSCLC With No Prior Treatment for Advanced Disease and No Actionable Genomic Alterations",
+      "priorLineQuote": "No Prior Treatment",
+      "priorLineHint": "tki_naive",
+      "injectedNotMet": true,
+      "otherNotMetKinds": [],
+      "otherUnlikelyReasons": [],
+      "wouldBeUnlikelyAnyway": false,
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Alex Rivera",
+      "nctId": "NCT06793215",
+      "briefTitle": "A Study Evaluating the Efficacy and Safety of Divarasib and Pembrolizumab Versus Pembrolizumab and Pemetrexed and Carboplatin or Cisplatin in Participants With Previously Untreated, KRAS G12C-Mutated, Advanced or Metastatic Non-Squamous Non-Small Cell Lung Cancer",
+      "officialTitle": "A Phase III, Randomized, Open-Label Study Evaluating the Efficacy and Safety of Divarasib and Pembrolizumab Versus Pembrolizumab and Pemetrexed and Carboplatin or Cisplatin in Patients With Previously Untreated, KRAS G12C-Mutated, Advanced or Metastatic Non-Squamous Non-Small Cell Lung Cancer",
+      "priorLineQuote": "Previously Untreated",
+      "priorLineHint": "tki_naive",
+      "injectedNotMet": true,
+      "otherNotMetKinds": [
+        "kras_variant_in"
+      ],
+      "otherUnlikelyReasons": [
+        "other_not_met:kras_variant_in",
+        "driver_conflict"
+      ],
+      "wouldBeUnlikelyAnyway": true,
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Alex Rivera",
+      "nctId": "NCT06875310",
+      "briefTitle": "A Study of Adagrasib Plus Pembrolizumab Plus Chemotherapy vs. Placebo Plus Pembrolizumab Plus Chemotherapy in Participants With Previously Untreated Non-squamous Non-small Cell Lung Cancer With KRAS G12C Mutation (KRYSTAL-4)",
+      "officialTitle": "A Randomized, Double-Blind, Phase 3 Trial of Adagrasib Plus Pembrolizumab Plus Chemotherapy vs. Placebo Plus Pembrolizumab Plus Chemotherapy in Participants With Previously Untreated, Locally Advanced or Metastatic Non-squamous Non-small Cell Lung Cancer With KRAS G12C Mutation (KRYSTAL-4)",
+      "priorLineQuote": "Previously Untreated",
+      "priorLineHint": "tki_naive",
+      "injectedNotMet": true,
+      "otherNotMetKinds": [
+        "kras_variant_in"
+      ],
+      "otherUnlikelyReasons": [
+        "other_not_met:kras_variant_in",
+        "driver_conflict"
+      ],
+      "wouldBeUnlikelyAnyway": true,
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Alex Rivera",
+      "nctId": "NCT07361510",
+      "briefTitle": "A Study to Evaluate the Efficacy of Pumitamig Versus Pembrolizumab in Participants With Previously Untreated Advanced Non-Small Cell Lung Cancer and PD-L1 ≥ 50%. (ROSETTA Lung-202)",
+      "officialTitle": "ROSETTA Lung-202: A Randomized, Double-Blind, Phase 3 Study of Pumitamig Monotherapy Compared to Pembrolizumab as First-line Treatment in Participants With Locally Advanced or Metastatic Non-Small Cell Lung Cancer With PD-L1 ≥ 50%.",
+      "priorLineQuote": "Previously Untreated",
+      "priorLineHint": "tki_naive",
+      "injectedNotMet": true,
+      "otherNotMetKinds": [],
+      "otherUnlikelyReasons": [],
+      "wouldBeUnlikelyAnyway": false,
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Sam Okonkwo",
+      "nctId": "NCT04165070",
+      "briefTitle": "KEYMAKER-U01 Substudy 01A: Efficacy and Safety Study of Pembrolizumab (MK-3475) With or Without Chemotherapy When Used With Investigational Agents in Treatment-naïve Participants With Stage IV Non-small Cell Lung Cancer (NSCLC) (MK-3475-01A/KEYMAKER-U01A)",
+      "officialTitle": "KEYMAKER-U01 Substudy 01A: A Phase 1/2, Umbrella Study With Rolling Arms of Investigational Agents With Pembrolizumab With or Without Chemotherapy in Treatment-Naive Participants With Stage IV Non-small Cell Lung Cancer (NSCLC)",
+      "priorLineQuote": "Treatment-Naive",
+      "priorLineHint": "tki_naive",
+      "injectedNotMet": true,
+      "otherNotMetKinds": [],
+      "otherUnlikelyReasons": [],
+      "wouldBeUnlikelyAnyway": false,
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Sam Okonkwo",
+      "nctId": "NCT05789082",
+      "briefTitle": "A Study Evaluating the Safety, Activity, and Pharmacokinetics of Divarasib as a Single Agent or in Combination With Other Anti-Cancer Therapies in Participants With Previously Untreated Advanced or Metastatic Non-Small Cell Lung Cancer With a KRAS G12C Mutation",
+      "officialTitle": "A Phase Ib/II, Open-Label, Multicenter Study Evaluating the Safety, Activity, and Pharmacokinetics of Divarasib as a Single Agent or in Combination With Other Anti-Cancer Therapies in Patients With Previously Untreated Advanced Or Metastatic Non-Small Cell Lung Cancer With a KRAS G12C Mutation",
+      "priorLineQuote": "Previously Untreated",
+      "priorLineHint": "tki_naive",
+      "injectedNotMet": true,
+      "otherNotMetKinds": [
+        "kras_variant_in"
+      ],
+      "otherUnlikelyReasons": [
+        "other_not_met:kras_variant_in",
+        "driver_conflict"
+      ],
+      "wouldBeUnlikelyAnyway": true,
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Sam Okonkwo",
+      "nctId": "NCT06765109",
+      "briefTitle": "Neladalkib (NVL-655) for TKI-naive Patients With Advanced ALK-Positive NSCLC",
+      "officialTitle": "A Phase 3 Study of the Selective Anaplastic Lymphoma Kinase (ALK) Inhibitor NVL-655 Compared to Alectinib in First-Line Treatment of Patients With ALK-Positive Advanced Non-Small Cell Lung Cancer (ALKAZAR)",
+      "priorLineQuote": "TKI-naive",
+      "priorLineHint": "tki_naive",
+      "injectedNotMet": true,
+      "otherNotMetKinds": [],
+      "otherUnlikelyReasons": [],
+      "wouldBeUnlikelyAnyway": false,
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Sam Okonkwo",
+      "nctId": "NCT06772623",
+      "briefTitle": "Study to Evaluate Adverse Events and Efficacy of Intravenous (IV) Telisotuzumab Adizutecan in Combination With a PD-1 Immune Checkpoint Inhibitor in Adult Participants With Advanced or Metastatic Non-Squamous NSCLC With No Prior Treatment for Advanced Disease, and No Actionable Genomic Alterations",
+      "officialTitle": "An Open-label Multi-Cohort Phase 1b/2 Study to Evaluate the Safety, Efficacy, and Optimal Dose of Telisotuzumab Adizutecan in Combination With a PD-1 Immune Checkpoint Inhibitor in Advanced or Metastatic Non-Squamous NSCLC With No Prior Treatment for Advanced Disease and No Actionable Genomic Alterations",
+      "priorLineQuote": "No Prior Treatment",
+      "priorLineHint": "tki_naive",
+      "injectedNotMet": true,
+      "otherNotMetKinds": [],
+      "otherUnlikelyReasons": [],
+      "wouldBeUnlikelyAnyway": false,
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Sam Okonkwo",
+      "nctId": "NCT06793215",
+      "briefTitle": "A Study Evaluating the Efficacy and Safety of Divarasib and Pembrolizumab Versus Pembrolizumab and Pemetrexed and Carboplatin or Cisplatin in Participants With Previously Untreated, KRAS G12C-Mutated, Advanced or Metastatic Non-Squamous Non-Small Cell Lung Cancer",
+      "officialTitle": "A Phase III, Randomized, Open-Label Study Evaluating the Efficacy and Safety of Divarasib and Pembrolizumab Versus Pembrolizumab and Pemetrexed and Carboplatin or Cisplatin in Patients With Previously Untreated, KRAS G12C-Mutated, Advanced or Metastatic Non-Squamous Non-Small Cell Lung Cancer",
+      "priorLineQuote": "Previously Untreated",
+      "priorLineHint": "tki_naive",
+      "injectedNotMet": true,
+      "otherNotMetKinds": [
+        "kras_variant_in"
+      ],
+      "otherUnlikelyReasons": [
+        "other_not_met:kras_variant_in",
+        "driver_conflict"
+      ],
+      "wouldBeUnlikelyAnyway": true,
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Sam Okonkwo",
+      "nctId": "NCT06875310",
+      "briefTitle": "A Study of Adagrasib Plus Pembrolizumab Plus Chemotherapy vs. Placebo Plus Pembrolizumab Plus Chemotherapy in Participants With Previously Untreated Non-squamous Non-small Cell Lung Cancer With KRAS G12C Mutation (KRYSTAL-4)",
+      "officialTitle": "A Randomized, Double-Blind, Phase 3 Trial of Adagrasib Plus Pembrolizumab Plus Chemotherapy vs. Placebo Plus Pembrolizumab Plus Chemotherapy in Participants With Previously Untreated, Locally Advanced or Metastatic Non-squamous Non-small Cell Lung Cancer With KRAS G12C Mutation (KRYSTAL-4)",
+      "priorLineQuote": "Previously Untreated",
+      "priorLineHint": "tki_naive",
+      "injectedNotMet": true,
+      "otherNotMetKinds": [
+        "kras_variant_in"
+      ],
+      "otherUnlikelyReasons": [
+        "other_not_met:kras_variant_in",
+        "driver_conflict"
+      ],
+      "wouldBeUnlikelyAnyway": true,
+      "tier": "unlikely"
+    },
+    {
+      "persona": "Sam Okonkwo",
+      "nctId": "NCT07361510",
+      "briefTitle": "A Study to Evaluate the Efficacy of Pumitamig Versus Pembrolizumab in Participants With Previously Untreated Advanced Non-Small Cell Lung Cancer and PD-L1 ≥ 50%. (ROSETTA Lung-202)",
+      "officialTitle": "ROSETTA Lung-202: A Randomized, Double-Blind, Phase 3 Study of Pumitamig Monotherapy Compared to Pembrolizumab as First-line Treatment in Participants With Locally Advanced or Metastatic Non-Small Cell Lung Cancer With PD-L1 ≥ 50%.",
+      "priorLineQuote": "Previously Untreated",
+      "priorLineHint": "tki_naive",
+      "injectedNotMet": true,
+      "otherNotMetKinds": [],
+      "otherUnlikelyReasons": [],
+      "wouldBeUnlikelyAnyway": false,
+      "tier": "unlikely"
+    }
+  ],
+  "goldTkiNaiveTitleTrials": [
+    {
+      "set": "held-out-2026-11-11",
+      "nctId": "NCT06772623",
+      "inCache": true,
+      "priorLineHint": "tki_naive",
+      "priorLineQuote": "No Prior Treatment",
+      "briefTitle": "Study to Evaluate Adverse Events and Efficacy of Intravenous (IV) Telisotuzumab Adizutecan in Combination With a PD-1 Immune Checkpoint Inhibitor in Adult Participants With Advanced or Metastatic Non-Squamous NSCLC With No Prior Treatment for Advanced Disease, and No Actionable Genomic Alterations",
+      "officialTitle": "An Open-label Multi-Cohort Phase 1b/2 Study to Evaluate the Safety, Efficacy, and Optimal Dose of Telisotuzumab Adizutecan in Combination With a PD-1 Immune Checkpoint Inhibitor in Advanced or Metastatic Non-Squamous NSCLC With No Prior Treatment for Advanced Disease and No Actionable Genomic Alterations",
+      "firesFor": [
+        "Alex Rivera",
+        "Sam Okonkwo"
+      ]
+    },
+    {
+      "set": "held-out-2-2026-11-11",
+      "nctId": "NCT05789082",
+      "inCache": true,
+      "priorLineHint": "tki_naive",
+      "priorLineQuote": "Previously Untreated",
+      "briefTitle": "A Study Evaluating the Safety, Activity, and Pharmacokinetics of Divarasib as a Single Agent or in Combination With Other Anti-Cancer Therapies in Participants With Previously Untreated Advanced or Metastatic Non-Small Cell Lung Cancer With a KRAS G12C Mutation",
+      "officialTitle": "A Phase Ib/II, Open-Label, Multicenter Study Evaluating the Safety, Activity, and Pharmacokinetics of Divarasib as a Single Agent or in Combination With Other Anti-Cancer Therapies in Patients With Previously Untreated Advanced Or Metastatic Non-Small Cell Lung Cancer With a KRAS G12C Mutation",
+      "firesFor": [
+        "Alex Rivera",
+        "Sam Okonkwo"
+      ]
+    }
+  ]
+}

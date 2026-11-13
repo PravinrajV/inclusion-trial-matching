@@ -1,0 +1,342 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06767514",
+  "briefTitle": "Clinical Study of Ivonescimab for First-line Treatment of Metastatic NSCLC Patients With High PD-L1",
+  "parsedAt": "2026-11-12T10:34:01.162Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06767514-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years old at the time of enrollment",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years old at the time of enrollment",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06767514-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status score of 0 - 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status score of 0 - 1",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06767514-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Metastatic (Stage IV) NSCLC",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Metastatic (Stage IV) NSCLC",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06767514-life",
+      "polarity": "inclusion",
+      "sourceText": "Expected life expectancy ≥ 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06767514-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one measurable noncerebral lesion according to RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06767514-sclc",
+      "polarity": "exclusion",
+      "sourceText": "Histologic or cytopathologic evidence of the presence of small cell lung carcinoma for which first-line approved therapies are indicated. For patients with non-squamous histology, actionable driver mutation testing results are required before randomization.",
+      "reasonFuzzy": "SCLC exclusion and non-squamous mutation testing prerequisites are not standard typed exclusions."
+    },
+    {
+      "id": "NCT06767514-prior-metastatic",
+      "polarity": "exclusion",
+      "sourceText": "Has received any prior therapy for NSCLC in the metastatic setting.",
+      "reasonFuzzy": "Duplicate of the prior-lines inclusion condition, kept as fuzzy since prior lines max is already covered."
+    },
+    {
+      "id": "NCT06767514-actionable",
+      "polarity": "exclusion",
+      "sourceText": "Known actionable genomic alterations for which first-line approved therapies are indicated",
+      "reasonFuzzy": "Actionable genomic alterations broadly defined do not map to a single typed mutation status check."
+    },
+    {
+      "id": "NCT06767514-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic CNS metastases, CNS metastasis ≥ 1.5 cm, CNS radiation within 7 days prior to randomization, potential need for CNS radiation within the first cycle, or leptomeningeal disease",
+      "reasonFuzzy": "The CNS metastasis rule involves symptoms, size cutoffs, radiation washout windows, and leptomeningeal disease, which are not a simple allowedBrainMets status."
+    },
+    {
+      "id": "NCT06767514-life",
+      "polarity": "inclusion",
+      "sourceText": "Expected life expectancy ≥ 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06767514-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one measurable noncerebral lesion according to RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06767514-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic CNS metastases, CNS metastasis ≥ 1.5 cm, CNS radiation within 7 days prior to randomization, potential need for CNS radiation within the first cycle, or leptomeningeal disease",
+      "reasonFuzzy": "Symptomatic CNS disease combined with size limits and radiation timing is not a clean typed brain_mets status."
+    },
+    {
+      "id": "NCT06767514-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "No prior systemic treatment for metastatic NSCLC.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06767514-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed squamous or non-squamous NSCLC",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06767514-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Tumor demonstrates high PD-L1 expression ( TPS>50%) based on a 22C3 immunohistochemistry ( IHC) clinical assay approved / cleared by local health authorities.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "value": "n:0"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos,squamous"
+        },
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:50"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 6768
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 6568
+  },
+  "ms": 21329,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06767514",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06767514-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years old at the time of enrollment",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06767514-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status score of 0 - 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06767514-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Metastatic (Stage IV) NSCLC",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06767514-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed squamous or non-squamous NSCLC",
+        "histologies": [
+          "squamous",
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06767514-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Tumor demonstrates high PD-L1 expression ( TPS>50%) based on a 22C3 immunohistochemistry ( IHC) clinical assay approved / cleared by local health authorities.",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT06767514-prior-lines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "No prior systemic treatment for metastatic NSCLC.",
+        "numberValue": 0
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06767514-life",
+        "polarity": "inclusion",
+        "sourceText": "Expected life expectancy ≥ 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06767514-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one measurable noncerebral lesion according to RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06767514-sclc",
+        "polarity": "exclusion",
+        "sourceText": "Histologic or cytopathologic evidence of the presence of small cell lung carcinoma for which first-line approved therapies are indicated. For patients with non-squamous histology, actionable driver mutation testing results are required before randomization.",
+        "reasonFuzzy": "SCLC exclusion and non-squamous mutation testing prerequisites are not standard typed exclusions."
+      },
+      {
+        "id": "NCT06767514-prior-metastatic",
+        "polarity": "exclusion",
+        "sourceText": "Has received any prior therapy for NSCLC in the metastatic setting.",
+        "reasonFuzzy": "Duplicate of the prior-lines inclusion condition, kept as fuzzy since prior lines max is already covered."
+      },
+      {
+        "id": "NCT06767514-actionable",
+        "polarity": "exclusion",
+        "sourceText": "Known actionable genomic alterations for which first-line approved therapies are indicated",
+        "reasonFuzzy": "Actionable genomic alterations broadly defined do not map to a single typed mutation status check."
+      },
+      {
+        "id": "NCT06767514-brain",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic CNS metastases, CNS metastasis ≥ 1.5 cm, CNS radiation within 7 days prior to randomization, potential need for CNS radiation within the first cycle, or leptomeningeal disease",
+        "reasonFuzzy": "The CNS metastasis rule involves symptoms, size cutoffs, radiation washout windows, and leptomeningeal disease, which are not a simple allowedBrainMets status."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06767514",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06767514-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years old at the time of enrollment",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06767514-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status score of 0 - 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06767514-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Metastatic (Stage IV) NSCLC",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06767514-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed squamous or non-squamous NSCLC",
+        "histologies": [
+          "squamous",
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06767514-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Tumor demonstrates high PD-L1 expression ( TPS>50%) based on a 22C3 immunohistochemistry ( IHC) clinical assay approved / cleared by local health authorities.",
+        "numberValue": 50
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06767514-life",
+        "polarity": "inclusion",
+        "sourceText": "Expected life expectancy ≥ 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06767514-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one measurable noncerebral lesion according to RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06767514-brain",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic CNS metastases, CNS metastasis ≥ 1.5 cm, CNS radiation within 7 days prior to randomization, potential need for CNS radiation within the first cycle, or leptomeningeal disease",
+        "reasonFuzzy": "Symptomatic CNS disease combined with size limits and radiation timing is not a clean typed brain_mets status."
+      }
+    ]
+  }
+}

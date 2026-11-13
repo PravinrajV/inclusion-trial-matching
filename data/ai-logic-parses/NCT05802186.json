@@ -1,0 +1,408 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05802186",
+  "briefTitle": "Stereotactic Body Radiation Therapy Planning With Artificial Intelligence-Directed Dose Recommendation for Treatment of Primary or Metastatic Lung Tumors, RAD-AI Study",
+  "parsedAt": "2026-11-12T06:18:03.006Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05802186-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Patients must be age >= 18 years.",
+      "numberValue": 18,
+      "evidence_quote": "Patients must be age >= 18 years.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05802186-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Patients must exhibit an Eastern Cooperative Oncology Group (ECOG) performance status of 0-2.",
+      "numberValue": 2,
+      "evidence_quote": "Patients must exhibit an Eastern Cooperative Oncology Group (ECOG) performance status of 0-2.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05802186-stage",
+      "polarity": "inclusion",
+      "sourceText": "Stage I Lung Cancer AJCC v8, Stage II Lung Cancer AJCC v8, Stage IIIA Lung Cancer AJCC v8",
+      "reasonFuzzy": "This trial includes stage I and II in addition to stage IIIA lung cancer, but involves radiation therapy planning for various lung tumors where stage alone is not a straightforward stage_in inclusion list across all enrolled participants."
+    },
+    {
+      "id": "NCT05802186-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have radiographically measurable or evaluable disease per RECIST v. 1.1.",
+      "reasonFuzzy": "Measurable or evaluable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05802186-pregnancy",
+      "polarity": "inclusion",
+      "sourceText": "Patients of child-bearing potential (POCBP) must have a negative urine or serum pregnancy test prior to registration on study.",
+      "reasonFuzzy": "Pregnancy test requirement is not a typed check."
+    },
+    {
+      "id": "NCT05802186-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Patients of child-bearing potential (POCBP) must agree to use adequate contraception...",
+      "reasonFuzzy": "Contraception agreement is a behavioral requirement, not a typed check."
+    },
+    {
+      "id": "NCT05802186-consent",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have the ability to understand and the willingness to sign a written informed consent document.",
+      "reasonFuzzy": "Informed consent willingness is a subjective judgment."
+    },
+    {
+      "id": "NCT05802186-radiotherapy-overlap",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have had prior radiotherapy with radiation field overlap.",
+      "reasonFuzzy": "Prior radiotherapy overlap is an anatomical and treatment history judgment."
+    },
+    {
+      "id": "NCT05802186-ggo",
+      "polarity": "exclusion",
+      "sourceText": "For primary lung cancers, patients with ground glass opacities without a solid component will be excluded.",
+      "reasonFuzzy": "Ground glass opacity morphology evaluation is an imaging judgment."
+    },
+    {
+      "id": "NCT05802186-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have not recovered from adverse events confined to the thorax (i.e. pneumonitis, bronchial insufficiency, bronchial hemorrhage, esophagitis) due to prior anticancer therapy (i.e., have residual toxicities >= grade 2)...",
+      "reasonFuzzy": "Unresolved prior toxicity grade evaluation is a clinical judgment."
+    },
+    {
+      "id": "NCT05802186-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Patients who are receiving any other concurrent investigational agents or genotoxic chemotherapy for cancer treatment.",
+      "reasonFuzzy": "Concurrent investigational agent exclusion is a treatment history rule with complex exceptions."
+    },
+    {
+      "id": "NCT05802186-uncontrolled-illness",
+      "polarity": "exclusion",
+      "sourceText": "Patients with a prior or concurrent malignancy whose natural history or treatment has the potential to interfere with the safety or efficacy assessment... Patients who have an uncontrolled intercurrent illness including... any other illness or condition that the treating investigator feels would interfere with study compliance...",
+      "reasonFuzzy": "Investigator discretion and complex uncontrolled illness definitions are subjective."
+    },
+    {
+      "id": "NCT05802186-pregnant-exclusion",
+      "polarity": "exclusion",
+      "sourceText": "Female patients who are pregnant or nursing.",
+      "reasonFuzzy": "Pregnancy/nursing exclusion is not a typed lab or condition check."
+    },
+    {
+      "id": "NCT05802186-histology",
+      "polarity": "inclusion",
+      "sourceText": "Most patients will have primary non-small cell lung cancer. For primary lung cancers, we include lesions with ground glass opacities with a solid component of 50% or greater. Patients with solitary or oligo-metastatic disease in the lung may have any other histology or cancer type.",
+      "reasonFuzzy": "Histology criteria mix primary NSCLC with other histologies/cancer types for metastatic disease and include specific lesion characteristics that are not a simple typed histology list."
+    },
+    {
+      "id": "NCT05802186-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have radiographically measurable or evaluable disease per RECIST v. 1.1.",
+      "reasonFuzzy": "Measurable or evaluable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05802186-pregnancy",
+      "polarity": "inclusion",
+      "sourceText": "Patients of child-bearing potential (POCBP) must have a negative urine or serum pregnancy test prior to registration on study.",
+      "reasonFuzzy": "Pregnancy test requirement is not a typed lab test check in the schema."
+    },
+    {
+      "id": "NCT05802186-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Patients of child-bearing potential (POCBP) must agree to use adequate contraception...",
+      "reasonFuzzy": "Contraception compliance is a behavioral requirement, not a typed check."
+    },
+    {
+      "id": "NCT05802186-consent",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have the ability to understand and the willingness to sign a written informed consent document.",
+      "reasonFuzzy": "Willingness to sign informed consent is subjective and not a typed check."
+    },
+    {
+      "id": "NCT05802186-radiotherapy",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have had prior radiotherapy with radiation field overlap.",
+      "reasonFuzzy": "Prior radiotherapy with field overlap is a complex anatomical/treatment history rule, not a typed therapy check."
+    },
+    {
+      "id": "NCT05802186-ggo",
+      "polarity": "exclusion",
+      "sourceText": "For primary lung cancers, patients with ground glass opacities without a solid component will be excluded.",
+      "reasonFuzzy": "Ground glass opacity exclusion without a solid component is an imaging rule, not a typed histology or biomarker check."
+    },
+    {
+      "id": "NCT05802186-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have not recovered from adverse events confined to the thorax (i.e. pneumonitis, bronchial insufficiency, bronchial hemorrhage, esophagitis) due to prior anticancer therapy...",
+      "reasonFuzzy": "Recovery from prior toxicity is a clinical judgment, not a simple typed lab or therapy check."
+    },
+    {
+      "id": "NCT05802186-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Patients who are receiving any other concurrent investigational agents or genotoxic chemotherapy for cancer treatment.",
+      "reasonFuzzy": "Concurrent investigational agents or genotoxic chemotherapy exclusion is not a simple prior therapy check."
+    },
+    {
+      "id": "NCT05802186-illness",
+      "polarity": "exclusion",
+      "sourceText": "Patients with a prior or concurrent malignancy whose natural history or treatment has the potential to interfere with the safety or efficacy assessment... Unstable angina pectoris... Stage 3 or greater idiopathic pulmonary fibrosis... Cardiac arrhythmia... Psychiatric illness/social situations... Any other illness or condition that the treating investigator feels would interfere...",
+      "reasonFuzzy": "Uncontrolled intercurrent illnesses and investigator discretion are subjective clinical judgments."
+    },
+    {
+      "id": "NCT05802186-pregnant-excl",
+      "polarity": "exclusion",
+      "sourceText": "Female patients who are pregnant or nursing.",
+      "reasonFuzzy": "Pregnancy/nursing exclusion is standard and not a typed check."
+    },
+    {
+      "id": "NCT05802186-stage",
+      "polarity": "inclusion",
+      "sourceText": "Stage I Lung Cancer AJCC v8, Stage II Lung Cancer AJCC v8, Stage IIIA Lung Cancer AJCC v8",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Stage I Lung Cancer AJCC v8, Stage II Lung Cancer AJCC v8, Stage IIIA Lung Cancer AJCC v8"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 11,
+    "attempts": 1,
+    "ms": 8354
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 11,
+    "attempts": 1,
+    "ms": 14114
+  },
+  "ms": 30461,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05802186",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05802186-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients must be age >= 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05802186-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Patients must exhibit an Eastern Cooperative Oncology Group (ECOG) performance status of 0-2.",
+        "numberValue": 2
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05802186-stage",
+        "polarity": "inclusion",
+        "sourceText": "Stage I Lung Cancer AJCC v8, Stage II Lung Cancer AJCC v8, Stage IIIA Lung Cancer AJCC v8",
+        "reasonFuzzy": "This trial includes stage I and II in addition to stage IIIA lung cancer, but involves radiation therapy planning for various lung tumors where stage alone is not a straightforward stage_in inclusion list across all enrolled participants."
+      },
+      {
+        "id": "NCT05802186-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have radiographically measurable or evaluable disease per RECIST v. 1.1.",
+        "reasonFuzzy": "Measurable or evaluable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05802186-pregnancy",
+        "polarity": "inclusion",
+        "sourceText": "Patients of child-bearing potential (POCBP) must have a negative urine or serum pregnancy test prior to registration on study.",
+        "reasonFuzzy": "Pregnancy test requirement is not a typed check."
+      },
+      {
+        "id": "NCT05802186-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Patients of child-bearing potential (POCBP) must agree to use adequate contraception...",
+        "reasonFuzzy": "Contraception agreement is a behavioral requirement, not a typed check."
+      },
+      {
+        "id": "NCT05802186-consent",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have the ability to understand and the willingness to sign a written informed consent document.",
+        "reasonFuzzy": "Informed consent willingness is a subjective judgment."
+      },
+      {
+        "id": "NCT05802186-radiotherapy-overlap",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have had prior radiotherapy with radiation field overlap.",
+        "reasonFuzzy": "Prior radiotherapy overlap is an anatomical and treatment history judgment."
+      },
+      {
+        "id": "NCT05802186-ggo",
+        "polarity": "exclusion",
+        "sourceText": "For primary lung cancers, patients with ground glass opacities without a solid component will be excluded.",
+        "reasonFuzzy": "Ground glass opacity morphology evaluation is an imaging judgment."
+      },
+      {
+        "id": "NCT05802186-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have not recovered from adverse events confined to the thorax (i.e. pneumonitis, bronchial insufficiency, bronchial hemorrhage, esophagitis) due to prior anticancer therapy (i.e., have residual toxicities >= grade 2)...",
+        "reasonFuzzy": "Unresolved prior toxicity grade evaluation is a clinical judgment."
+      },
+      {
+        "id": "NCT05802186-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Patients who are receiving any other concurrent investigational agents or genotoxic chemotherapy for cancer treatment.",
+        "reasonFuzzy": "Concurrent investigational agent exclusion is a treatment history rule with complex exceptions."
+      },
+      {
+        "id": "NCT05802186-uncontrolled-illness",
+        "polarity": "exclusion",
+        "sourceText": "Patients with a prior or concurrent malignancy whose natural history or treatment has the potential to interfere with the safety or efficacy assessment... Patients who have an uncontrolled intercurrent illness including... any other illness or condition that the treating investigator feels would interfere with study compliance...",
+        "reasonFuzzy": "Investigator discretion and complex uncontrolled illness definitions are subjective."
+      },
+      {
+        "id": "NCT05802186-pregnant-exclusion",
+        "polarity": "exclusion",
+        "sourceText": "Female patients who are pregnant or nursing.",
+        "reasonFuzzy": "Pregnancy/nursing exclusion is not a typed lab or condition check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05802186",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05802186-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage I Lung Cancer AJCC v8, Stage II Lung Cancer AJCC v8, Stage IIIA Lung Cancer AJCC v8",
+        "stages": [
+          "IA",
+          "IB",
+          "IIA",
+          "IIB",
+          "IIIA"
+        ]
+      },
+      {
+        "id": "NCT05802186-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients must be age >= 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05802186-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Patients must exhibit an Eastern Cooperative Oncology Group (ECOG) performance status of 0-2.",
+        "numberValue": 2
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05802186-histology",
+        "polarity": "inclusion",
+        "sourceText": "Most patients will have primary non-small cell lung cancer. For primary lung cancers, we include lesions with ground glass opacities with a solid component of 50% or greater. Patients with solitary or oligo-metastatic disease in the lung may have any other histology or cancer type.",
+        "reasonFuzzy": "Histology criteria mix primary NSCLC with other histologies/cancer types for metastatic disease and include specific lesion characteristics that are not a simple typed histology list."
+      },
+      {
+        "id": "NCT05802186-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have radiographically measurable or evaluable disease per RECIST v. 1.1.",
+        "reasonFuzzy": "Measurable or evaluable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05802186-pregnancy",
+        "polarity": "inclusion",
+        "sourceText": "Patients of child-bearing potential (POCBP) must have a negative urine or serum pregnancy test prior to registration on study.",
+        "reasonFuzzy": "Pregnancy test requirement is not a typed lab test check in the schema."
+      },
+      {
+        "id": "NCT05802186-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Patients of child-bearing potential (POCBP) must agree to use adequate contraception...",
+        "reasonFuzzy": "Contraception compliance is a behavioral requirement, not a typed check."
+      },
+      {
+        "id": "NCT05802186-consent",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have the ability to understand and the willingness to sign a written informed consent document.",
+        "reasonFuzzy": "Willingness to sign informed consent is subjective and not a typed check."
+      },
+      {
+        "id": "NCT05802186-radiotherapy",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have had prior radiotherapy with radiation field overlap.",
+        "reasonFuzzy": "Prior radiotherapy with field overlap is a complex anatomical/treatment history rule, not a typed therapy check."
+      },
+      {
+        "id": "NCT05802186-ggo",
+        "polarity": "exclusion",
+        "sourceText": "For primary lung cancers, patients with ground glass opacities without a solid component will be excluded.",
+        "reasonFuzzy": "Ground glass opacity exclusion without a solid component is an imaging rule, not a typed histology or biomarker check."
+      },
+      {
+        "id": "NCT05802186-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have not recovered from adverse events confined to the thorax (i.e. pneumonitis, bronchial insufficiency, bronchial hemorrhage, esophagitis) due to prior anticancer therapy...",
+        "reasonFuzzy": "Recovery from prior toxicity is a clinical judgment, not a simple typed lab or therapy check."
+      },
+      {
+        "id": "NCT05802186-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Patients who are receiving any other concurrent investigational agents or genotoxic chemotherapy for cancer treatment.",
+        "reasonFuzzy": "Concurrent investigational agents or genotoxic chemotherapy exclusion is not a simple prior therapy check."
+      },
+      {
+        "id": "NCT05802186-illness",
+        "polarity": "exclusion",
+        "sourceText": "Patients with a prior or concurrent malignancy whose natural history or treatment has the potential to interfere with the safety or efficacy assessment... Unstable angina pectoris... Stage 3 or greater idiopathic pulmonary fibrosis... Cardiac arrhythmia... Psychiatric illness/social situations... Any other illness or condition that the treating investigator feels would interfere...",
+        "reasonFuzzy": "Uncontrolled intercurrent illnesses and investigator discretion are subjective clinical judgments."
+      },
+      {
+        "id": "NCT05802186-pregnant-excl",
+        "polarity": "exclusion",
+        "sourceText": "Female patients who are pregnant or nursing.",
+        "reasonFuzzy": "Pregnancy/nursing exclusion is standard and not a typed check."
+      }
+    ]
+  }
+}

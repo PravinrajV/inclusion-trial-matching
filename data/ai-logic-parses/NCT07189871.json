@@ -1,0 +1,429 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07189871",
+  "briefTitle": "177Lu-BetaBart in Patients With Relapsed/Refractory, Locally Advanced Inoperable, or Metastatic Solid Tumors",
+  "parsedAt": "2026-11-12T11:03:25.123Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07189871-histology",
+      "polarity": "inclusion",
+      "sourceText": "Participants with a documented history of histopathologically confirmed CRPC*, CRC, NSCLC, SCLC, HNSCC, ovarian cancer, cervical cancer, endometrial cancer, TNBC, or ESCC.",
+      "reasonFuzzy": "Multi-tumor trial covering solid tumors and NSCLC without explicit single-stage list."
+    },
+    {
+      "id": "NCT07189871-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Must have at least 1 measurable target lesion according to RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease per RECIST is subjective."
+    },
+    {
+      "id": "NCT07189871-life",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a life expectancy of ≥ 4 months in the opinion of the Investigator.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07189871-investigator",
+      "polarity": "exclusion",
+      "sourceText": "Have any medical condition that would, in the Investigator's judgment, prevent the participant's full participation...",
+      "reasonFuzzy": "Investigator judgment-based exclusion."
+    },
+    {
+      "id": "NCT07189871-brain",
+      "polarity": "inclusion",
+      "sourceText": "Participants with previously treated brain metastases are eligible to participate if: they are neurologically and radiologically stable for at least 28 days prior to the first dose of 177Lu-BetaBart; and have no history of leptomeningeal disease or spinal cord compression.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07189871-history",
+      "polarity": "inclusion",
+      "sourceText": "Participants with a documented history of histopathologically confirmed CRPC*, CRC, NSCLC, SCLC, HNSCC, ovarian cancer, cervical cancer, endometrial cancer, TNBC, or ESCC.",
+      "reasonFuzzy": "The trial is a basket trial enrolling multiple distinct solid tumors without specific stage rules listed for NSCLC, so stage and tumor-specific details are left fuzzy."
+    },
+    {
+      "id": "NCT07189871-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Must have at least 1 measurable target lesion according to RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07189871-life",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a life expectancy of ≥ 4 months in the opinion of the Investigator.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07189871-brain",
+      "polarity": "inclusion",
+      "sourceText": "Participants with previously treated brain metastases are eligible to participate if: they are neurologically and radiologically stable for at least 28 days prior to the first dose of 177Lu-BetaBart; and have no history of leptomeningeal disease or spinal cord compression.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07189871-age",
+      "polarity": "inclusion",
+      "sourceText": "Participants ≥ 18 years of age.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07189871-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07189871-egfr",
+      "polarity": "exclusion",
+      "sourceText": "Estimated glomerular filtration rate (eGFR) < 50 mL/min",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07189871-platelets",
+      "polarity": "exclusion",
+      "sourceText": "Platelet count of < 100 x 109/L",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07189871-anc",
+      "polarity": "exclusion",
+      "sourceText": "Absolute neutrophil count (ANC) < 1.5 x 109/L",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07189871-hemoglobin",
+      "polarity": "exclusion",
+      "sourceText": "Hemoglobin < 9 g/dL",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07189871-ast",
+      "polarity": "exclusion",
+      "sourceText": "Alanine aminotransferase (ALT) or aspartate aminotransferase (AST) > 3 x upper limit of normal (ULN), or > 5 x ULN for participants with known liver metastases",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07189871-alt",
+      "polarity": "exclusion",
+      "sourceText": "Alanine aminotransferase (ALT) or aspartate aminotransferase (AST) > 3 x upper limit of normal (ULN), or > 5 x ULN for participants with known liver metastases",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07189871-bilirubin",
+      "polarity": "exclusion",
+      "sourceText": "Total bilirubin > 1.5 x ULN",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 9,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Participants with previously treated brain metastases are eligible to participate if: they are neurologically and radiologically stable for at least 28 days pri"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 9,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Participants with previously treated brain metastases are eligible to participate if: they are neurologically and radiologically stable for at least 28 days pri"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 9,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 9,
+      "rejectedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:18"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:2"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "exclusion",
+          "value": "n:50"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "exclusion",
+          "value": "n:100"
+        },
+        {
+          "kind": "anc_min",
+          "polarity": "exclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "hemoglobin_min",
+          "polarity": "exclusion",
+          "value": "n:9"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "exclusion",
+          "value": "n:3"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "exclusion",
+          "value": "n:3"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "exclusion",
+          "value": "n:1.5"
+        }
+      ],
+      "normalizerTypedCount": 0
+    }
+  },
+  "runA": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 4,
+    "attempts": 2,
+    "ms": 13733
+  },
+  "runB": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 4426
+  },
+  "ms": 26196,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07189871",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07189871-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants ≥ 18 years of age.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07189871-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07189871-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Participants with previously treated brain metastases are eligible to participate if: they are neurologically and radiologically stable for at least 28 days prior to the first dose of 177Lu-BetaBart; and have no history of leptomeningeal disease or spinal cord compression.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT07189871-egfr",
+        "kind": "egfr_min",
+        "polarity": "exclusion",
+        "sourceText": "Estimated glomerular filtration rate (eGFR) < 50 mL/min",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT07189871-platelets",
+        "kind": "platelets_min",
+        "polarity": "exclusion",
+        "sourceText": "Platelet count of < 100 x 109/L",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT07189871-anc",
+        "kind": "anc_min",
+        "polarity": "exclusion",
+        "sourceText": "Absolute neutrophil count (ANC) < 1.5 x 109/L",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT07189871-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "exclusion",
+        "sourceText": "Hemoglobin < 9 g/dL",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT07189871-ast",
+        "kind": "ast_max",
+        "polarity": "exclusion",
+        "sourceText": "Alanine aminotransferase (ALT) or aspartate aminotransferase (AST) > 3 x upper limit of normal (ULN), or > 5 x ULN for participants with known liver metastases",
+        "numberValue": 3,
+        "stages": [],
+        "stringValue": "3 x ULN"
+      },
+      {
+        "id": "NCT07189871-alt",
+        "kind": "alt_max",
+        "polarity": "exclusion",
+        "sourceText": "Alanine aminotransferase (ALT) or aspartate aminotransferase (AST) > 3 x upper limit of normal (ULN), or > 5 x ULN for participants with known liver metastases",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT07189871-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "exclusion",
+        "sourceText": "Total bilirubin > 1.5 x ULN",
+        "numberValue": 1.5
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07189871-histology",
+        "polarity": "inclusion",
+        "sourceText": "Participants with a documented history of histopathologically confirmed CRPC*, CRC, NSCLC, SCLC, HNSCC, ovarian cancer, cervical cancer, endometrial cancer, TNBC, or ESCC.",
+        "reasonFuzzy": "Multi-tumor trial covering solid tumors and NSCLC without explicit single-stage list."
+      },
+      {
+        "id": "NCT07189871-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Must have at least 1 measurable target lesion according to RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease per RECIST is subjective."
+      },
+      {
+        "id": "NCT07189871-life",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a life expectancy of ≥ 4 months in the opinion of the Investigator.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT07189871-investigator",
+        "polarity": "exclusion",
+        "sourceText": "Have any medical condition that would, in the Investigator's judgment, prevent the participant's full participation...",
+        "reasonFuzzy": "Investigator judgment-based exclusion."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07189871",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07189871-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants ≥ 18 years of age.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07189871-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07189871-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Participants with previously treated brain metastases are eligible to participate if: they are neurologically and radiologically stable for at least 28 days prior to the first dose of 177Lu-BetaBart; and have no history of leptomeningeal disease or spinal cord compression.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT07189871-egfr",
+        "kind": "egfr_min",
+        "polarity": "exclusion",
+        "sourceText": "Estimated glomerular filtration rate (eGFR) < 50 mL/min",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT07189871-platelets",
+        "kind": "platelets_min",
+        "polarity": "exclusion",
+        "sourceText": "Platelet count of < 100 x 109/L",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT07189871-anc",
+        "kind": "anc_min",
+        "polarity": "exclusion",
+        "sourceText": "Absolute neutrophil count (ANC) < 1.5 x 109/L",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT07189871-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "exclusion",
+        "sourceText": "Hemoglobin < 9 g/dL",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT07189871-ast",
+        "kind": "ast_max",
+        "polarity": "exclusion",
+        "sourceText": "Alanine aminotransferase (ALT) or aspartate aminotransferase (AST) > 3 x upper limit of normal (ULN), or > 5 x ULN for participants with known liver metastases",
+        "numberValue": 3,
+        "stages": [],
+        "stringValue": "3 x ULN"
+      },
+      {
+        "id": "NCT07189871-alt",
+        "kind": "alt_max",
+        "polarity": "exclusion",
+        "sourceText": "Alanine aminotransferase (ALT) or aspartate aminotransferase (AST) > 3 x upper limit of normal (ULN), or > 5 x ULN for participants with known liver metastases",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT07189871-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "exclusion",
+        "sourceText": "Total bilirubin > 1.5 x ULN",
+        "numberValue": 1.5
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07189871-history",
+        "polarity": "inclusion",
+        "sourceText": "Participants with a documented history of histopathologically confirmed CRPC*, CRC, NSCLC, SCLC, HNSCC, ovarian cancer, cervical cancer, endometrial cancer, TNBC, or ESCC.",
+        "reasonFuzzy": "The trial is a basket trial enrolling multiple distinct solid tumors without specific stage rules listed for NSCLC, so stage and tumor-specific details are left fuzzy."
+      },
+      {
+        "id": "NCT07189871-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Must have at least 1 measurable target lesion according to RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07189871-life",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a life expectancy of ≥ 4 months in the opinion of the Investigator.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      }
+    ]
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05885698",
+  "briefTitle": "MYLUNG Consortium Part 3: Observational Study",
+  "parsedAt": "2026-11-12T06:19:36.392Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05885698-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Adult subjects (18 years and older) with newly diagnosed early stage, locally advanced or metastatic non-small cell lung cancer",
+      "numberValue": 18,
+      "evidence_quote": "Adult subjects (18 years and older) with newly diagnosed early stage, locally advanced or metastatic non-small cell lung cancer",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05885698-eligibility",
+      "polarity": "inclusion",
+      "sourceText": "Must be eligible for systemic therapy based on the treating provider's assessment.",
+      "reasonFuzzy": "Investigator discretion regarding systemic therapy eligibility is subjective and not a typed kind."
+    },
+    {
+      "id": "NCT05885698-adjuvant",
+      "polarity": "inclusion",
+      "sourceText": "Subjects who developed locally advanced or metastatic disease after receiving adjuvant or neoadjuvant therapy are eligible if the adjuvant/neoadjuvant therapy was completed at least 12 months prior to the development of locally advanced or metastatic disease",
+      "reasonFuzzy": "This rule involves a specific washout/completion window relative to the development of advanced disease, which cannot be expressed using a single typed check."
+    },
+    {
+      "id": "NCT05885698-enrollment",
+      "polarity": "inclusion",
+      "sourceText": "Subjects must be enrolled within 30 days of initiation of systemic therapy",
+      "reasonFuzzy": "Enrollment timing relative to treatment start is a study logistics rule, not an eligibility check kind."
+    },
+    {
+      "id": "NCT05885698-sclc",
+      "polarity": "exclusion",
+      "sourceText": "Subjects with small cell lung cancer",
+      "reasonFuzzy": "Small cell lung cancer is a histologic exclusion outside of the allowed histologies list."
+    },
+    {
+      "id": "NCT05885698-primary",
+      "polarity": "exclusion",
+      "sourceText": "Subjects with Unknown primary tumor origin",
+      "reasonFuzzy": "Unknown primary tumor origin is a diagnostic criterion, not a typed NSCLC histology or stage check."
+    },
+    {
+      "id": "NCT05885698-therapy-eligibility",
+      "polarity": "inclusion",
+      "sourceText": "Must be eligible for systemic therapy based on the treating provider's assessment.",
+      "reasonFuzzy": "Treating provider's assessment of systemic therapy eligibility is subjective and clinician-dependent."
+    },
+    {
+      "id": "NCT05885698-adjuvant-washout",
+      "polarity": "inclusion",
+      "sourceText": "Subjects who developed locally advanced or metastatic disease after receiving adjuvant or neoadjuvant therapy are eligible if the adjuvant/neoadjuvant therapy was completed at least 12 months prior to the development of locally advanced or metastatic disease",
+      "reasonFuzzy": "This rule involves a complex conditional washout window relative to the development of advanced disease rather than a simple prior therapy exclusion list."
+    },
+    {
+      "id": "NCT05885698-enrollment-window",
+      "polarity": "inclusion",
+      "sourceText": "Subjects must be enrolled within 30 days of initiation of systemic therapy",
+      "reasonFuzzy": "Enrollment timing relative to treatment start is a study logistics rule rather than a typed medical eligibility check."
+    },
+    {
+      "id": "NCT05885698-histology-excl",
+      "polarity": "exclusion",
+      "sourceText": "Subjects with small cell lung cancer",
+      "reasonFuzzy": "Exclusion of small cell lung cancer is a diagnosis exclusion rather than a typed NSCLC histology or stage check."
+    },
+    {
+      "id": "NCT05885698-primary-excl",
+      "polarity": "exclusion",
+      "sourceText": "Subjects with Unknown primary tumor origin",
+      "reasonFuzzy": "Unknown primary origin is a clinical tumor origin criterion, not a typed NSCLC variant or stage check."
+    },
+    {
+      "id": "NCT05885698-stage-excl",
+      "polarity": "exclusion",
+      "sourceText": "Stage IA at the time of enrollment",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "exclusion",
+          "value": "st:IA"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3250
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 2354
+  },
+  "ms": 13591,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05885698",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05885698-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adult subjects (18 years and older) with newly diagnosed early stage, locally advanced or metastatic non-small cell lung cancer",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05885698-stage-excl",
+        "kind": "stage_in",
+        "polarity": "exclusion",
+        "sourceText": "Stage IA at the time of enrollment",
+        "stages": [
+          "IA"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05885698-eligibility",
+        "polarity": "inclusion",
+        "sourceText": "Must be eligible for systemic therapy based on the treating provider's assessment.",
+        "reasonFuzzy": "Investigator discretion regarding systemic therapy eligibility is subjective and not a typed kind."
+      },
+      {
+        "id": "NCT05885698-adjuvant",
+        "polarity": "inclusion",
+        "sourceText": "Subjects who developed locally advanced or metastatic disease after receiving adjuvant or neoadjuvant therapy are eligible if the adjuvant/neoadjuvant therapy was completed at least 12 months prior to the development of locally advanced or metastatic disease",
+        "reasonFuzzy": "This rule involves a specific washout/completion window relative to the development of advanced disease, which cannot be expressed using a single typed check."
+      },
+      {
+        "id": "NCT05885698-enrollment",
+        "polarity": "inclusion",
+        "sourceText": "Subjects must be enrolled within 30 days of initiation of systemic therapy",
+        "reasonFuzzy": "Enrollment timing relative to treatment start is a study logistics rule, not an eligibility check kind."
+      },
+      {
+        "id": "NCT05885698-sclc",
+        "polarity": "exclusion",
+        "sourceText": "Subjects with small cell lung cancer",
+        "reasonFuzzy": "Small cell lung cancer is a histologic exclusion outside of the allowed histologies list."
+      },
+      {
+        "id": "NCT05885698-primary",
+        "polarity": "exclusion",
+        "sourceText": "Subjects with Unknown primary tumor origin",
+        "reasonFuzzy": "Unknown primary tumor origin is a diagnostic criterion, not a typed NSCLC histology or stage check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05885698",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05885698-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adult subjects (18 years and older) with newly diagnosed early stage, locally advanced or metastatic non-small cell lung cancer",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05885698-stage-excl",
+        "kind": "stage_in",
+        "polarity": "exclusion",
+        "sourceText": "Stage IA at the time of enrollment",
+        "stages": [
+          "IA"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05885698-therapy-eligibility",
+        "polarity": "inclusion",
+        "sourceText": "Must be eligible for systemic therapy based on the treating provider's assessment.",
+        "reasonFuzzy": "Treating provider's assessment of systemic therapy eligibility is subjective and clinician-dependent."
+      },
+      {
+        "id": "NCT05885698-adjuvant-washout",
+        "polarity": "inclusion",
+        "sourceText": "Subjects who developed locally advanced or metastatic disease after receiving adjuvant or neoadjuvant therapy are eligible if the adjuvant/neoadjuvant therapy was completed at least 12 months prior to the development of locally advanced or metastatic disease",
+        "reasonFuzzy": "This rule involves a complex conditional washout window relative to the development of advanced disease rather than a simple prior therapy exclusion list."
+      },
+      {
+        "id": "NCT05885698-enrollment-window",
+        "polarity": "inclusion",
+        "sourceText": "Subjects must be enrolled within 30 days of initiation of systemic therapy",
+        "reasonFuzzy": "Enrollment timing relative to treatment start is a study logistics rule rather than a typed medical eligibility check."
+      },
+      {
+        "id": "NCT05885698-histology-excl",
+        "polarity": "exclusion",
+        "sourceText": "Subjects with small cell lung cancer",
+        "reasonFuzzy": "Exclusion of small cell lung cancer is a diagnosis exclusion rather than a typed NSCLC histology or stage check."
+      },
+      {
+        "id": "NCT05885698-primary-excl",
+        "polarity": "exclusion",
+        "sourceText": "Subjects with Unknown primary tumor origin",
+        "reasonFuzzy": "Unknown primary origin is a clinical tumor origin criterion, not a typed NSCLC variant or stage check."
+      }
+    ]
+  }
+}

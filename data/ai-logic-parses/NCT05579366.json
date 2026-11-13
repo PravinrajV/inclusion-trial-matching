@@ -1,0 +1,206 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05579366",
+  "briefTitle": "Rinatabart Sesutecan (Rina-S, PRO1184, GEN1184) for Advanced Solid Tumors (GCT1184-01/ PRO1184-001)",
+  "parsedAt": "2026-11-12T06:14:15.370Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05579366-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "An Eastern Cooperative Oncology Group (ECOG) Performance Status score of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "An Eastern Cooperative Oncology Group (ECOG) Performance Status score of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05579366-parts",
+      "polarity": "inclusion",
+      "sourceText": "Part A and B: * Histologically or cytologically confirmed metastatic or unresectable solid malignancy including ovarian cancer...",
+      "reasonFuzzy": "Eligibility rules are heavily partitioned into multiple parts, cohorts, and tumor types, making it impossible to express as a single global typed check."
+    },
+    {
+      "id": "NCT05579366-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1 for all tumor types other than pleural mesothelioma which will use mRECIST v1.1 at baseline.",
+      "reasonFuzzy": "Measurable disease by RECIST or mRECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05579366-indication",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed metastatic or unresectable solid malignancy including ovarian cancer...",
+      "reasonFuzzy": "Multi-cohort study with different inclusion criteria for various solid tumors including NSCLC and ovarian cancer."
+    },
+    {
+      "id": "NCT05579366-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1 for all tumor types other than pleural mesothelioma...",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05579366-prior-adc",
+      "polarity": "exclusion",
+      "sourceText": "Prior therapy with a topoisomerase 1 inhibitor-based antibody drug conjugate.",
+      "reasonFuzzy": "Topoisomerase 1 inhibitor-based antibody drug conjugate is a broad drug class rather than a specific listed drug name."
+    },
+    {
+      "id": "NCT05579366-age",
+      "polarity": "inclusion",
+      "sourceText": "Age 18 to 65 years (inclusive).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05579366-age-max",
+      "polarity": "inclusion",
+      "sourceText": "Age 18 to 65 years (inclusive).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:18"
+        },
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "value": "n:65"
+        }
+      ],
+      "normalizerTypedCount": 7
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2348
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2507
+  },
+  "ms": 12869,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05579366",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05579366-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 to 65 years (inclusive).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05579366-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 to 65 years (inclusive).",
+        "numberValue": 65
+      },
+      {
+        "id": "NCT05579366-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "An Eastern Cooperative Oncology Group (ECOG) Performance Status score of 0 or 1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05579366-parts",
+        "polarity": "inclusion",
+        "sourceText": "Part A and B: * Histologically or cytologically confirmed metastatic or unresectable solid malignancy including ovarian cancer...",
+        "reasonFuzzy": "Eligibility rules are heavily partitioned into multiple parts, cohorts, and tumor types, making it impossible to express as a single global typed check."
+      },
+      {
+        "id": "NCT05579366-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1 for all tumor types other than pleural mesothelioma which will use mRECIST v1.1 at baseline.",
+        "reasonFuzzy": "Measurable disease by RECIST or mRECIST is a subjective imaging judgment, not a typed kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05579366",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05579366-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 to 65 years (inclusive).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05579366-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 to 65 years (inclusive).",
+        "numberValue": 65
+      },
+      {
+        "id": "NCT05579366-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "An Eastern Cooperative Oncology Group (ECOG) Performance Status score of 0 or 1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05579366-indication",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed metastatic or unresectable solid malignancy including ovarian cancer...",
+        "reasonFuzzy": "Multi-cohort study with different inclusion criteria for various solid tumors including NSCLC and ovarian cancer."
+      },
+      {
+        "id": "NCT05579366-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1 for all tumor types other than pleural mesothelioma...",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05579366-prior-adc",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy with a topoisomerase 1 inhibitor-based antibody drug conjugate.",
+        "reasonFuzzy": "Topoisomerase 1 inhibitor-based antibody drug conjugate is a broad drug class rather than a specific listed drug name."
+      }
+    ]
+  }
+}

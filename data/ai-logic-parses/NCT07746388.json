@@ -1,0 +1,618 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07746388",
+  "briefTitle": "Adaptive Chemotherapy for Pd-l1 High REsEctablE NSCLC: A Chemo-PHREE Trial",
+  "parsedAt": "2026-11-12T05:59:34.682Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07746388-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age 18 years or older at time of study entry",
+      "numberValue": 18,
+      "evidence_quote": "Age 18 years or older at time of study entry",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07746388-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern cooperative oncology group (ECOG) performance status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern cooperative oncology group (ECOG) performance status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07746388-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Participants with histologically confirmed stage II-IIIB(N2) NSCLC (per the 9th International Association for the Study of Lung Cancer) with disease that is considered resectable prior to initiation of systemic therapy.",
+      "stages": [
+        "IIA",
+        "IIB",
+        "IIIA",
+        "IIIB"
+      ],
+      "evidence_quote": "Participants with histologically confirmed stage II-IIIB(N2) NSCLC (per the 9th International Association for the Study of Lung Cancer) with disease that is considered resectable prior to initiation of systemic therapy.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07746388-platelets",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count > or equal to 100,000/mm3",
+      "numberValue": 100000,
+      "evidence_quote": "Platelet count > or equal to 100,000/mm3",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07746388-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin > or equal to 8 g/dL",
+      "numberValue": 8,
+      "evidence_quote": "Hemoglobin > or equal to 8 g/dL",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07746388-anc",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) > or equal to 1000/mm3",
+      "numberValue": 1000,
+      "evidence_quote": "Absolute neutrophil count (ANC) > or equal to 1000/mm3",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07746388-creatinine",
+      "kind": "creatinine_max",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine ≤ 1.5 x ULN or creatinine clearance (CrCl) > or equal to 40 mL/min",
+      "numberValue": 1.5,
+      "stages": [],
+      "stringValue": "ULN or creatinine clearance (CrCl) ≥ 40 mL/min",
+      "evidence_quote": "Creatinine ≤ 1.5 x ULN or creatinine clearance (CrCl) > or equal to 40 mL/min",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07746388-ast",
+      "kind": "ast_max",
+      "polarity": "inclusion",
+      "sourceText": "AST, ALT, Alkaline phosphatase ≤ 3 x ULN per local testing",
+      "numberValue": 3,
+      "stringValue": "ULN",
+      "evidence_quote": "AST, ALT, Alkaline phosphatase ≤ 3 x ULN per local testing",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07746388-alt",
+      "kind": "alt_max",
+      "polarity": "inclusion",
+      "sourceText": "AST, ALT, Alkaline phosphatase ≤ 3 x ULN per local testing",
+      "numberValue": 3,
+      "stringValue": "ULN",
+      "evidence_quote": "AST, ALT, Alkaline phosphatase ≤ 3 x ULN per local testing",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07746388-board",
+      "polarity": "inclusion",
+      "sourceText": "Subject cases must be reviewed in a multidisciplinary thoracic tumor board setting prior to enrollment to allow for adequate discussion regarding the appropriateness for resection.",
+      "reasonFuzzy": "Tumor board review is a clinical judgment/procedure, not a typed check."
+    },
+    {
+      "id": "NCT07746388-surgery",
+      "polarity": "inclusion",
+      "sourceText": "Absence of major associated pathologies that increase the surgery risk to an unacceptable level",
+      "reasonFuzzy": "Surgical risk assessment is subjective and physician-dependent."
+    },
+    {
+      "id": "NCT07746388-pft",
+      "polarity": "inclusion",
+      "sourceText": "Pulmonary function capacity (eg. FVC, FEV1, TLC, and DLCO) capable of tolerating proposed lung resection according to surgeon.",
+      "reasonFuzzy": "Pulmonary function tolerance is determined by the surgeon's discretion rather than a single cutoff value."
+    },
+    {
+      "id": "NCT07746388-other-mutations",
+      "polarity": "exclusion",
+      "sourceText": "For patients in whom more comprehensive testing is performed, those with identified targetable alterations in ROS1, NTRK, RET, METex14, HER2 genes will also be excluded. Screening for these specific alterations (ROS1/NTRK/RET/METex14/HER2), however, are not required for enrollment.",
+      "reasonFuzzy": "Exclusions apply only if comprehensive testing is performed and includes multiple alternate genes not covered by standard single-gene typed checks."
+    },
+    {
+      "id": "NCT07746388-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Active prior malignancy within the previous 3 years, except for locally curable cancers that have been apparently cured, such as basal or squamous cell skin cancer, superficial bladder cancer or carcinoma in situ of the prostate, cervix or breast.",
+      "reasonFuzzy": "Prior malignancy history with multiple disease-specific exceptions is not a standard typed check."
+    },
+    {
+      "id": "NCT07746388-board",
+      "polarity": "inclusion",
+      "sourceText": "Subject cases must be reviewed in a multidisciplinary thoracic tumor board setting prior to enrollment to allow for adequate discussion regarding the appropriateness for resection.",
+      "reasonFuzzy": "Review in a multidisciplinary tumor board is a process requirement, not a typed clinical check."
+    },
+    {
+      "id": "NCT07746388-surgery",
+      "polarity": "inclusion",
+      "sourceText": "Absence of major associated pathologies that increase the surgery risk to an unacceptable level",
+      "reasonFuzzy": "Surgical risk assessment is subjective and judgment-based."
+    },
+    {
+      "id": "NCT07746388-pulmonary",
+      "polarity": "inclusion",
+      "sourceText": "Pulmonary function capacity (eg. FVC, FEV1, TLC, and DLCO) capable of tolerating proposed lung resection according to surgeon.",
+      "reasonFuzzy": "Surgeon discretion on pulmonary function capacity tolerability is subjective."
+    },
+    {
+      "id": "NCT07746388-histology",
+      "polarity": "exclusion",
+      "sourceText": "Participants with large-cell neuroendocrine carcinoma tumor or small cell carcinoma histology, including those with presence of mixed histology.",
+      "reasonFuzzy": "Histology exclusion lists types outside of standard typed choices like adenocarcinoma or squamous."
+    },
+    {
+      "id": "NCT07746388-other-mutations",
+      "polarity": "exclusion",
+      "sourceText": "For patients in whom more comprehensive testing is performed, those with identified targetable alterations in ROS1, NTRK, RET, METex14, HER2 genes will also be excluded. Screening for these specific alterations (ROS1/NTRK/RET/METex14/HER2), however, are not required for enrollment.",
+      "reasonFuzzy": "Conditional exclusion for multiple other biomarker alterations is not a single typed status check."
+    },
+    {
+      "id": "NCT07746388-histology",
+      "polarity": "exclusion",
+      "sourceText": "Participants with large-cell neuroendocrine carcinoma tumor or small cell carcinoma histology, including those with presence of mixed histology.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07746388-pdl1-prior",
+      "polarity": "exclusion",
+      "sourceText": "Prior therapy with an anti-PD-(L)1, anti-CTLA-4 antibody or any other antibody targeting t-cell co-regulatory pathways.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07746388-prior",
+      "polarity": "exclusion",
+      "sourceText": "Prior therapy with an anti-PD-(L)1, anti-CTLA-4 antibody or any other antibody targeting t-cell co-regulatory pathways.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07746388-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have established PD-L1 Tumor Proportion Score (TPS) expression > or equal to 50%, assessed locally through a CLIA approved laboratory testing method.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07746388-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin ≤ 1.5 x ULN (except subjects with Gilbert Syndrome who can have total bilirubin < 3.0 mg/dL)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07746388-egfr",
+      "polarity": "exclusion",
+      "sourceText": "Participants with known sensitizing EGFR mutations (L858R, Exon 19 deletion, Exon 20 insertion, atypical mutations including G719X L861Q, S768I) or ALK translocation via local CLIA approved testing methods.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07746388-alk",
+      "polarity": "exclusion",
+      "sourceText": "Participants with known sensitizing EGFR mutations (L858R, Exon 19 deletion, Exon 20 insertion, atypical mutations including G719X L861Q, S768I) or ALK translocation via local CLIA approved testing methods.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07746388-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants with brain metastases are excluded from this study. All patients should have pre-study MRI brain or CT head with contrast to confirm the absence of intracranial disease, per standard of care staging procedures.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 16,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 15,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 14,
+      "disagreements": 3,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "histology_in",
+          "polarity": "exclusion",
+          "value": "h:large_cell"
+        },
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-pd-(l)1"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_required",
+          "polarity": "exclusion",
+          "value": "s:anti-pd-(l)1"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 9,
+      "rejected": 5,
+      "rejectedItems": [
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:50"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none"
+        }
+      ],
+      "normalizerTypedCount": 11
+    }
+  },
+  "runA": {
+    "typedEmitted": 16,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 5635
+  },
+  "runB": {
+    "typedEmitted": 15,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 4975
+  },
+  "ms": 18646,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07746388",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07746388-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 years or older at time of study entry",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07746388-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern cooperative oncology group (ECOG) performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07746388-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants with histologically confirmed stage II-IIIB(N2) NSCLC (per the 9th International Association for the Study of Lung Cancer) with disease that is considered resectable prior to initiation of systemic therapy.",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT07746388-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have established PD-L1 Tumor Proportion Score (TPS) expression > or equal to 50%, assessed locally through a CLIA approved laboratory testing method.",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT07746388-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count > or equal to 100,000/mm3",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT07746388-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin > or equal to 8 g/dL",
+        "numberValue": 8
+      },
+      {
+        "id": "NCT07746388-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) > or equal to 1000/mm3",
+        "numberValue": 1000
+      },
+      {
+        "id": "NCT07746388-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine ≤ 1.5 x ULN or creatinine clearance (CrCl) > or equal to 40 mL/min",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "ULN or creatinine clearance (CrCl) ≥ 40 mL/min"
+      },
+      {
+        "id": "NCT07746388-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 x ULN (except subjects with Gilbert Syndrome who can have total bilirubin < 3.0 mg/dL)",
+        "numberValue": 1.5,
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT07746388-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AST, ALT, Alkaline phosphatase ≤ 3 x ULN per local testing",
+        "numberValue": 3,
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT07746388-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AST, ALT, Alkaline phosphatase ≤ 3 x ULN per local testing",
+        "numberValue": 3,
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT07746388-histology",
+        "kind": "histology_in",
+        "polarity": "exclusion",
+        "sourceText": "Participants with large-cell neuroendocrine carcinoma tumor or small cell carcinoma histology, including those with presence of mixed histology.",
+        "histologies": [
+          "large_cell"
+        ]
+      },
+      {
+        "id": "NCT07746388-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known sensitizing EGFR mutations (L858R, Exon 19 deletion, Exon 20 insertion, atypical mutations including G719X L861Q, S768I) or ALK translocation via local CLIA approved testing methods.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07746388-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known sensitizing EGFR mutations (L858R, Exon 19 deletion, Exon 20 insertion, atypical mutations including G719X L861Q, S768I) or ALK translocation via local CLIA approved testing methods.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07746388-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participants with brain metastases are excluded from this study. All patients should have pre-study MRI brain or CT head with contrast to confirm the absence of intracranial disease, per standard of care staging procedures.",
+        "allowedBrainMets": [
+          "none"
+        ]
+      },
+      {
+        "id": "NCT07746388-pdl1-prior",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy with an anti-PD-(L)1, anti-CTLA-4 antibody or any other antibody targeting t-cell co-regulatory pathways.",
+        "stringValue": "anti-PD-(L)1"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07746388-board",
+        "polarity": "inclusion",
+        "sourceText": "Subject cases must be reviewed in a multidisciplinary thoracic tumor board setting prior to enrollment to allow for adequate discussion regarding the appropriateness for resection.",
+        "reasonFuzzy": "Tumor board review is a clinical judgment/procedure, not a typed check."
+      },
+      {
+        "id": "NCT07746388-surgery",
+        "polarity": "inclusion",
+        "sourceText": "Absence of major associated pathologies that increase the surgery risk to an unacceptable level",
+        "reasonFuzzy": "Surgical risk assessment is subjective and physician-dependent."
+      },
+      {
+        "id": "NCT07746388-pft",
+        "polarity": "inclusion",
+        "sourceText": "Pulmonary function capacity (eg. FVC, FEV1, TLC, and DLCO) capable of tolerating proposed lung resection according to surgeon.",
+        "reasonFuzzy": "Pulmonary function tolerance is determined by the surgeon's discretion rather than a single cutoff value."
+      },
+      {
+        "id": "NCT07746388-other-mutations",
+        "polarity": "exclusion",
+        "sourceText": "For patients in whom more comprehensive testing is performed, those with identified targetable alterations in ROS1, NTRK, RET, METex14, HER2 genes will also be excluded. Screening for these specific alterations (ROS1/NTRK/RET/METex14/HER2), however, are not required for enrollment.",
+        "reasonFuzzy": "Exclusions apply only if comprehensive testing is performed and includes multiple alternate genes not covered by standard single-gene typed checks."
+      },
+      {
+        "id": "NCT07746388-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Active prior malignancy within the previous 3 years, except for locally curable cancers that have been apparently cured, such as basal or squamous cell skin cancer, superficial bladder cancer or carcinoma in situ of the prostate, cervix or breast.",
+        "reasonFuzzy": "Prior malignancy history with multiple disease-specific exceptions is not a standard typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07746388",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07746388-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 years or older at time of study entry",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07746388-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern cooperative oncology group (ECOG) performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07746388-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants with histologically confirmed stage II-IIIB(N2) NSCLC (per the 9th International Association for the Study of Lung Cancer) with disease that is considered resectable prior to initiation of systemic therapy.",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT07746388-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have established PD-L1 Tumor Proportion Score (TPS) expression > or equal to 50%, assessed locally through a CLIA approved laboratory testing method.",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT07746388-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count > or equal to 100,000/mm3",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT07746388-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin > or equal to 8 g/dL",
+        "numberValue": 8
+      },
+      {
+        "id": "NCT07746388-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) > or equal to 1000/mm3",
+        "numberValue": 1000
+      },
+      {
+        "id": "NCT07746388-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine ≤ 1.5 x ULN or creatinine clearance (CrCl) > or equal to 40 mL/min",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT07746388-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 x ULN (except subjects with Gilbert Syndrome who can have total bilirubin < 3.0 mg/dL)",
+        "numberValue": 1.5,
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT07746388-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AST, ALT, Alkaline phosphatase ≤ 3 x ULN per local testing",
+        "numberValue": 3,
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT07746388-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AST, ALT, Alkaline phosphatase ≤ 3 x ULN per local testing",
+        "numberValue": 3,
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT07746388-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known sensitizing EGFR mutations (L858R, Exon 19 deletion, Exon 20 insertion, atypical mutations including G719X L861Q, S768I) or ALK translocation via local CLIA approved testing methods.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07746388-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known sensitizing EGFR mutations (L858R, Exon 19 deletion, Exon 20 insertion, atypical mutations including G719X L861Q, S768I) or ALK translocation via local CLIA approved testing methods.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07746388-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participants with brain metastases are excluded from this study. All patients should have pre-study MRI brain or CT head with contrast to confirm the absence of intracranial disease, per standard of care staging procedures.",
+        "allowedBrainMets": [
+          "none"
+        ]
+      },
+      {
+        "id": "NCT07746388-prior",
+        "kind": "prior_therapy_required",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy with an anti-PD-(L)1, anti-CTLA-4 antibody or any other antibody targeting t-cell co-regulatory pathways.",
+        "stringValue": "anti-PD-(L)1"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07746388-board",
+        "polarity": "inclusion",
+        "sourceText": "Subject cases must be reviewed in a multidisciplinary thoracic tumor board setting prior to enrollment to allow for adequate discussion regarding the appropriateness for resection.",
+        "reasonFuzzy": "Review in a multidisciplinary tumor board is a process requirement, not a typed clinical check."
+      },
+      {
+        "id": "NCT07746388-surgery",
+        "polarity": "inclusion",
+        "sourceText": "Absence of major associated pathologies that increase the surgery risk to an unacceptable level",
+        "reasonFuzzy": "Surgical risk assessment is subjective and judgment-based."
+      },
+      {
+        "id": "NCT07746388-pulmonary",
+        "polarity": "inclusion",
+        "sourceText": "Pulmonary function capacity (eg. FVC, FEV1, TLC, and DLCO) capable of tolerating proposed lung resection according to surgeon.",
+        "reasonFuzzy": "Surgeon discretion on pulmonary function capacity tolerability is subjective."
+      },
+      {
+        "id": "NCT07746388-histology",
+        "polarity": "exclusion",
+        "sourceText": "Participants with large-cell neuroendocrine carcinoma tumor or small cell carcinoma histology, including those with presence of mixed histology.",
+        "reasonFuzzy": "Histology exclusion lists types outside of standard typed choices like adenocarcinoma or squamous."
+      },
+      {
+        "id": "NCT07746388-other-mutations",
+        "polarity": "exclusion",
+        "sourceText": "For patients in whom more comprehensive testing is performed, those with identified targetable alterations in ROS1, NTRK, RET, METex14, HER2 genes will also be excluded. Screening for these specific alterations (ROS1/NTRK/RET/METex14/HER2), however, are not required for enrollment.",
+        "reasonFuzzy": "Conditional exclusion for multiple other biomarker alterations is not a single typed status check."
+      }
+    ]
+  }
+}

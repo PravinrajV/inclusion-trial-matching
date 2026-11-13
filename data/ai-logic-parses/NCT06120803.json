@@ -1,0 +1,642 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06120803",
+  "briefTitle": "Esomeprazole and Radiation Induced Esophagitis",
+  "parsedAt": "2026-11-12T06:24:38.696Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06120803-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Patient is ≥ 18 years of age.",
+      "numberValue": 18,
+      "evidence_quote": "Patient is ≥ 18 years of age.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06120803-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Patient has histopathologically confirmed diagnosis of NSCLC clinical stage III (as per the 8th edition of American Joint Committee on Cancer Staging).",
+      "stages": [
+        "IIIA",
+        "IIIB",
+        "IIIC"
+      ],
+      "evidence_quote": "Patient has histopathologically confirmed diagnosis of NSCLC clinical stage III (as per the 8th edition of American Joint Committee on Cancer Staging).",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06120803-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Patient has Eastern Cooperative Oncology Group (ECOG) performance status score of 0 to 2.",
+      "numberValue": 2,
+      "evidence_quote": "Patient has Eastern Cooperative Oncology Group (ECOG) performance status score of 0 to 2.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06120803-consent",
+      "polarity": "inclusion",
+      "sourceText": "Patient or patient's legal representative is willing and able to provide written informed consent and HIPAA authorization prior to performance of any study related activity.",
+      "reasonFuzzy": "Willingness to provide consent is a subjective procedure and not a typed check."
+    },
+    {
+      "id": "NCT06120803-compliance",
+      "polarity": "inclusion",
+      "sourceText": "Patient is willing and able to comply with scheduled visits and treatment schedules.",
+      "reasonFuzzy": "Compliance is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06120803-treatment",
+      "polarity": "inclusion",
+      "sourceText": "Patients will receive thoracic radiation with estimated maximum dose to esophagus of at least 30 Gy (EQD2) in combination with concomitant chemotherapy.",
+      "reasonFuzzy": "Treatment plan specifics are not patient eligibility traits."
+    },
+    {
+      "id": "NCT06120803-pregnancy",
+      "polarity": "inclusion",
+      "sourceText": "Women of childbearing potential (WOCBP) must have a negative pregnancy test (serum or urine HCG) within 2 weeks of enrollment).",
+      "reasonFuzzy": "Pregnancy test requirement is not a typed check."
+    },
+    {
+      "id": "NCT06120803-double",
+      "polarity": "inclusion",
+      "sourceText": "Double inclusion in any ongoing trial (if the other trial permits) will be allowed.",
+      "reasonFuzzy": "Trial concurrency policy is not a typed check."
+    },
+    {
+      "id": "NCT06120803-excl-stomach",
+      "polarity": "exclusion",
+      "sourceText": "Patient has history of gastroesophageal junction or stomach cancer.",
+      "reasonFuzzy": "Prior cancer history other than NSCLC is not represented by a typed kind."
+    },
+    {
+      "id": "NCT06120803-excl-dysphagia",
+      "polarity": "exclusion",
+      "sourceText": "Patient has history of pre-existing severe or very severe dysphagia.",
+      "reasonFuzzy": "Dysphagia history is not a typed check."
+    },
+    {
+      "id": "NCT06120803-excl-liver",
+      "polarity": "exclusion",
+      "sourceText": "Patient has history of severe liver disease, acute or subacute systemic lupus erythematosus.",
+      "reasonFuzzy": "Liver disease and lupus histories are subjective/complex exclusions."
+    },
+    {
+      "id": "NCT06120803-excl-nephritis",
+      "polarity": "exclusion",
+      "sourceText": "Patient has interstitial nephritis.",
+      "reasonFuzzy": "Interstitial nephritis is not a typed check."
+    },
+    {
+      "id": "NCT06120803-excl-ulcer",
+      "polarity": "exclusion",
+      "sourceText": "Patient has history of peptic ulcer disease.",
+      "reasonFuzzy": "Peptic ulcer disease history is not a typed check."
+    },
+    {
+      "id": "NCT06120803-excl-bleeding",
+      "polarity": "exclusion",
+      "sourceText": "Patient has prior history of upper gastrointestinal bleeding.",
+      "reasonFuzzy": "Upper GI bleeding history is not a typed check."
+    },
+    {
+      "id": "NCT06120803-excl-rad",
+      "polarity": "exclusion",
+      "sourceText": "Patient has a history of thoracic radiotherapy within 2 years of enrollment.",
+      "reasonFuzzy": "Prior radiation timeframe is not a typed check."
+    },
+    {
+      "id": "NCT06120803-excl-ppi",
+      "polarity": "exclusion",
+      "sourceText": "Patient has known or suspected allergic response and prior adverse drug reaction with proton pump inhibitors.",
+      "reasonFuzzy": "Allergy to proton pump inhibitors is not a standard typed drug exclusion."
+    },
+    {
+      "id": "NCT06120803-excl-meds",
+      "polarity": "exclusion",
+      "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+      "reasonFuzzy": "Multiple specific concomitant medications are not represented by a typed prior_therapy_excluded kind."
+    },
+    {
+      "id": "NCT06120803-excl-rt",
+      "polarity": "exclusion",
+      "sourceText": "Patients without concomitant chemoradiotherapy and with estimated maximum dose to esophagus of less than 30 Gy (EQD2).",
+      "reasonFuzzy": "Treatment parameters are not patient eligibility criteria."
+    },
+    {
+      "id": "NCT06120803-consent",
+      "polarity": "inclusion",
+      "sourceText": "Patient or patient's legal representative is willing and able to provide written informed consent and HIPAA authorization prior to performance of any study related activity.",
+      "reasonFuzzy": "Willingness to sign informed consent is a procedural requirement, not a typed check."
+    },
+    {
+      "id": "NCT06120803-compliance",
+      "polarity": "inclusion",
+      "sourceText": "Patient is willing and able to comply with scheduled visits and treatment schedules.",
+      "reasonFuzzy": "Study compliance is a subjective judgment, not a typed check."
+    },
+    {
+      "id": "NCT06120803-trt",
+      "polarity": "inclusion",
+      "sourceText": "Patients will receive thoracic radiation with estimated maximum dose to esophagus of at least 30 Gy (EQD2) in combination with concomitant chemotherapy.",
+      "reasonFuzzy": "Treatment delivery parameters are protocol interventions rather than eligibility criteria checks."
+    },
+    {
+      "id": "NCT06120803-pregnancy",
+      "polarity": "inclusion",
+      "sourceText": "Women of childbearing potential (WOCBP) must have a negative pregnancy test (serum or urine HCG) within 2 weeks of enrollment).",
+      "reasonFuzzy": "Negative pregnancy test is a screening procedure and lab test without a standard typed cutoff representation."
+    },
+    {
+      "id": "NCT06120803-history-cancer",
+      "polarity": "exclusion",
+      "sourceText": "Patient has history of gastroesophageal junction or stomach cancer.",
+      "reasonFuzzy": "Prior history of specific other cancers is not a standard typed exclusion kind."
+    },
+    {
+      "id": "NCT06120803-dysphagia",
+      "polarity": "exclusion",
+      "sourceText": "Patient has history of pre-existing severe or very severe dysphagia.",
+      "reasonFuzzy": "Dysphagia severity is a clinical judgment, not a typed check."
+    },
+    {
+      "id": "NCT06120803-liver",
+      "polarity": "exclusion",
+      "sourceText": "Patient has history of severe liver disease, acute or subacute systemic lupus erythematosus.",
+      "reasonFuzzy": "Disease severity is an investigator judgment and not a structured lab cutoff."
+    },
+    {
+      "id": "NCT06120803-nephritis",
+      "polarity": "exclusion",
+      "sourceText": "Patient has interstitial nephritis.",
+      "reasonFuzzy": "Interstitial nephritis is not a standard typed medical condition exclusion kind."
+    },
+    {
+      "id": "NCT06120803-peptic",
+      "polarity": "exclusion",
+      "sourceText": "Patient has history of peptic ulcer disease.",
+      "reasonFuzzy": "Peptic ulcer disease history is not a standard typed exclusion kind."
+    },
+    {
+      "id": "NCT06120803-bleeding",
+      "polarity": "exclusion",
+      "sourceText": "Patient has prior history of upper gastrointestinal bleeding.",
+      "reasonFuzzy": "Upper GI bleeding history is not a standard typed exclusion kind."
+    },
+    {
+      "id": "NCT06120803-radiotherapy",
+      "polarity": "exclusion",
+      "sourceText": "Patient has a history of thoracic radiotherapy within 2 years of enrollment.",
+      "reasonFuzzy": "Prior radiation washout window is not a standard typed prior_therapy_excluded kind."
+    },
+    {
+      "id": "NCT06120803-allergy",
+      "polarity": "exclusion",
+      "sourceText": "Patient has known or suspected allergic response and prior adverse drug reaction with proton pump inhibitors.",
+      "reasonFuzzy": "Drug allergy or adverse reaction history is a clinical judgment, not a typed check."
+    },
+    {
+      "id": "NCT06120803-trt-excl",
+      "polarity": "exclusion",
+      "sourceText": "Patients without concomitant chemoradiotherapy and with estimated maximum dose to esophagus of less than 30 Gy (EQD2).",
+      "reasonFuzzy": "Treatment specifications are protocol parameters, not standard eligibility checks."
+    },
+    {
+      "id": "NCT06120803-drug-excl-1",
+      "polarity": "exclusion",
+      "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06120803-drug-excl-2",
+      "polarity": "exclusion",
+      "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06120803-drug-excl-3",
+      "polarity": "exclusion",
+      "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06120803-drug-excl-4",
+      "polarity": "exclusion",
+      "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06120803-drug-excl-5",
+      "polarity": "exclusion",
+      "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06120803-drug-excl-6",
+      "polarity": "exclusion",
+      "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06120803-drug-excl-7",
+      "polarity": "exclusion",
+      "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06120803-drug-excl-8",
+      "polarity": "exclusion",
+      "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 11,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 8,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:clopidogrel"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:nelfinavir"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:rilpivirine"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:methotrexate"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:rifampin"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:digoxin"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:tacrolimus"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:phenytoin"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 15,
+    "attempts": 1,
+    "ms": 10998
+  },
+  "runB": {
+    "typedEmitted": 11,
+    "fuzzyEmitted": 13,
+    "attempts": 1,
+    "ms": 8552
+  },
+  "ms": 27527,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06120803",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06120803-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patient is ≥ 18 years of age.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06120803-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Patient has histopathologically confirmed diagnosis of NSCLC clinical stage III (as per the 8th edition of American Joint Committee on Cancer Staging).",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT06120803-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Patient has Eastern Cooperative Oncology Group (ECOG) performance status score of 0 to 2.",
+        "numberValue": 2
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06120803-consent",
+        "polarity": "inclusion",
+        "sourceText": "Patient or patient's legal representative is willing and able to provide written informed consent and HIPAA authorization prior to performance of any study related activity.",
+        "reasonFuzzy": "Willingness to provide consent is a subjective procedure and not a typed check."
+      },
+      {
+        "id": "NCT06120803-compliance",
+        "polarity": "inclusion",
+        "sourceText": "Patient is willing and able to comply with scheduled visits and treatment schedules.",
+        "reasonFuzzy": "Compliance is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06120803-treatment",
+        "polarity": "inclusion",
+        "sourceText": "Patients will receive thoracic radiation with estimated maximum dose to esophagus of at least 30 Gy (EQD2) in combination with concomitant chemotherapy.",
+        "reasonFuzzy": "Treatment plan specifics are not patient eligibility traits."
+      },
+      {
+        "id": "NCT06120803-pregnancy",
+        "polarity": "inclusion",
+        "sourceText": "Women of childbearing potential (WOCBP) must have a negative pregnancy test (serum or urine HCG) within 2 weeks of enrollment).",
+        "reasonFuzzy": "Pregnancy test requirement is not a typed check."
+      },
+      {
+        "id": "NCT06120803-double",
+        "polarity": "inclusion",
+        "sourceText": "Double inclusion in any ongoing trial (if the other trial permits) will be allowed.",
+        "reasonFuzzy": "Trial concurrency policy is not a typed check."
+      },
+      {
+        "id": "NCT06120803-excl-stomach",
+        "polarity": "exclusion",
+        "sourceText": "Patient has history of gastroesophageal junction or stomach cancer.",
+        "reasonFuzzy": "Prior cancer history other than NSCLC is not represented by a typed kind."
+      },
+      {
+        "id": "NCT06120803-excl-dysphagia",
+        "polarity": "exclusion",
+        "sourceText": "Patient has history of pre-existing severe or very severe dysphagia.",
+        "reasonFuzzy": "Dysphagia history is not a typed check."
+      },
+      {
+        "id": "NCT06120803-excl-liver",
+        "polarity": "exclusion",
+        "sourceText": "Patient has history of severe liver disease, acute or subacute systemic lupus erythematosus.",
+        "reasonFuzzy": "Liver disease and lupus histories are subjective/complex exclusions."
+      },
+      {
+        "id": "NCT06120803-excl-nephritis",
+        "polarity": "exclusion",
+        "sourceText": "Patient has interstitial nephritis.",
+        "reasonFuzzy": "Interstitial nephritis is not a typed check."
+      },
+      {
+        "id": "NCT06120803-excl-ulcer",
+        "polarity": "exclusion",
+        "sourceText": "Patient has history of peptic ulcer disease.",
+        "reasonFuzzy": "Peptic ulcer disease history is not a typed check."
+      },
+      {
+        "id": "NCT06120803-excl-bleeding",
+        "polarity": "exclusion",
+        "sourceText": "Patient has prior history of upper gastrointestinal bleeding.",
+        "reasonFuzzy": "Upper GI bleeding history is not a typed check."
+      },
+      {
+        "id": "NCT06120803-excl-rad",
+        "polarity": "exclusion",
+        "sourceText": "Patient has a history of thoracic radiotherapy within 2 years of enrollment.",
+        "reasonFuzzy": "Prior radiation timeframe is not a typed check."
+      },
+      {
+        "id": "NCT06120803-excl-ppi",
+        "polarity": "exclusion",
+        "sourceText": "Patient has known or suspected allergic response and prior adverse drug reaction with proton pump inhibitors.",
+        "reasonFuzzy": "Allergy to proton pump inhibitors is not a standard typed drug exclusion."
+      },
+      {
+        "id": "NCT06120803-excl-meds",
+        "polarity": "exclusion",
+        "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+        "reasonFuzzy": "Multiple specific concomitant medications are not represented by a typed prior_therapy_excluded kind."
+      },
+      {
+        "id": "NCT06120803-excl-rt",
+        "polarity": "exclusion",
+        "sourceText": "Patients without concomitant chemoradiotherapy and with estimated maximum dose to esophagus of less than 30 Gy (EQD2).",
+        "reasonFuzzy": "Treatment parameters are not patient eligibility criteria."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06120803",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06120803-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patient is ≥ 18 years of age.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06120803-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Patient has histopathologically confirmed diagnosis of NSCLC clinical stage III (as per the 8th edition of American Joint Committee on Cancer Staging).",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT06120803-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Patient has Eastern Cooperative Oncology Group (ECOG) performance status score of 0 to 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06120803-drug-excl-1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+        "stringValue": "clopidogrel"
+      },
+      {
+        "id": "NCT06120803-drug-excl-2",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+        "stringValue": "nelfinavir"
+      },
+      {
+        "id": "NCT06120803-drug-excl-3",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+        "stringValue": "rilpivirine"
+      },
+      {
+        "id": "NCT06120803-drug-excl-4",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+        "stringValue": "methotrexate"
+      },
+      {
+        "id": "NCT06120803-drug-excl-5",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+        "stringValue": "rifampin"
+      },
+      {
+        "id": "NCT06120803-drug-excl-6",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+        "stringValue": "digoxin"
+      },
+      {
+        "id": "NCT06120803-drug-excl-7",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+        "stringValue": "tacrolimus"
+      },
+      {
+        "id": "NCT06120803-drug-excl-8",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Patient is currently on clopidogrel, nelfinavir, rilpivirine, methotrexate, rifampin, digoxin, tacrolimus, or phenytoin as these may have major drug interaction with esomeprazole.",
+        "stringValue": "phenytoin"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06120803-consent",
+        "polarity": "inclusion",
+        "sourceText": "Patient or patient's legal representative is willing and able to provide written informed consent and HIPAA authorization prior to performance of any study related activity.",
+        "reasonFuzzy": "Willingness to sign informed consent is a procedural requirement, not a typed check."
+      },
+      {
+        "id": "NCT06120803-compliance",
+        "polarity": "inclusion",
+        "sourceText": "Patient is willing and able to comply with scheduled visits and treatment schedules.",
+        "reasonFuzzy": "Study compliance is a subjective judgment, not a typed check."
+      },
+      {
+        "id": "NCT06120803-trt",
+        "polarity": "inclusion",
+        "sourceText": "Patients will receive thoracic radiation with estimated maximum dose to esophagus of at least 30 Gy (EQD2) in combination with concomitant chemotherapy.",
+        "reasonFuzzy": "Treatment delivery parameters are protocol interventions rather than eligibility criteria checks."
+      },
+      {
+        "id": "NCT06120803-pregnancy",
+        "polarity": "inclusion",
+        "sourceText": "Women of childbearing potential (WOCBP) must have a negative pregnancy test (serum or urine HCG) within 2 weeks of enrollment).",
+        "reasonFuzzy": "Negative pregnancy test is a screening procedure and lab test without a standard typed cutoff representation."
+      },
+      {
+        "id": "NCT06120803-history-cancer",
+        "polarity": "exclusion",
+        "sourceText": "Patient has history of gastroesophageal junction or stomach cancer.",
+        "reasonFuzzy": "Prior history of specific other cancers is not a standard typed exclusion kind."
+      },
+      {
+        "id": "NCT06120803-dysphagia",
+        "polarity": "exclusion",
+        "sourceText": "Patient has history of pre-existing severe or very severe dysphagia.",
+        "reasonFuzzy": "Dysphagia severity is a clinical judgment, not a typed check."
+      },
+      {
+        "id": "NCT06120803-liver",
+        "polarity": "exclusion",
+        "sourceText": "Patient has history of severe liver disease, acute or subacute systemic lupus erythematosus.",
+        "reasonFuzzy": "Disease severity is an investigator judgment and not a structured lab cutoff."
+      },
+      {
+        "id": "NCT06120803-nephritis",
+        "polarity": "exclusion",
+        "sourceText": "Patient has interstitial nephritis.",
+        "reasonFuzzy": "Interstitial nephritis is not a standard typed medical condition exclusion kind."
+      },
+      {
+        "id": "NCT06120803-peptic",
+        "polarity": "exclusion",
+        "sourceText": "Patient has history of peptic ulcer disease.",
+        "reasonFuzzy": "Peptic ulcer disease history is not a standard typed exclusion kind."
+      },
+      {
+        "id": "NCT06120803-bleeding",
+        "polarity": "exclusion",
+        "sourceText": "Patient has prior history of upper gastrointestinal bleeding.",
+        "reasonFuzzy": "Upper GI bleeding history is not a standard typed exclusion kind."
+      },
+      {
+        "id": "NCT06120803-radiotherapy",
+        "polarity": "exclusion",
+        "sourceText": "Patient has a history of thoracic radiotherapy within 2 years of enrollment.",
+        "reasonFuzzy": "Prior radiation washout window is not a standard typed prior_therapy_excluded kind."
+      },
+      {
+        "id": "NCT06120803-allergy",
+        "polarity": "exclusion",
+        "sourceText": "Patient has known or suspected allergic response and prior adverse drug reaction with proton pump inhibitors.",
+        "reasonFuzzy": "Drug allergy or adverse reaction history is a clinical judgment, not a typed check."
+      },
+      {
+        "id": "NCT06120803-trt-excl",
+        "polarity": "exclusion",
+        "sourceText": "Patients without concomitant chemoradiotherapy and with estimated maximum dose to esophagus of less than 30 Gy (EQD2).",
+        "reasonFuzzy": "Treatment specifications are protocol parameters, not standard eligibility checks."
+      }
+    ]
+  }
+}

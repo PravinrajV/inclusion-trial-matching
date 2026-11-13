@@ -1,0 +1,353 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06562192",
+  "briefTitle": "Phase I Study of [177Lu]Lu-NNS309 in Patients With Pancreatic, Lung, Breast and Colorectal Cancers",
+  "parsedAt": "2026-11-12T10:08:10.068Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06562192-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years old",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years old",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06562192-nsclc-indication",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced unresectable or metastatic NSCLC without any actionable genomic alterations with disease progression following, or intolerance to chemotherapy and immunotherapy, unless patient was ineligible to receive such therapy, or locally advanced unresectable or metastatic NSCLC with an actionable genomic alteration with disease progression following, or intolerance to targeted therapy, unless patient was ineligible to receive such therapy",
+      "reasonFuzzy": "Complex prior line and actionable genomic alteration criteria for NSCLC cannot be captured in simple typed checks."
+    },
+    {
+      "id": "NCT06562192-uptake",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have lesions showing 68Ga-NNS309 uptake",
+      "reasonFuzzy": "Imaging uptake requirement is not a standard typed biomarker or stage check."
+    },
+    {
+      "id": "NCT06562192-qtcf",
+      "polarity": "exclusion",
+      "sourceText": "QT interval corrected by Fridericia's formula (QTcF) ≥ 470 msec",
+      "reasonFuzzy": "QTcF is not one of the allowed typed kinds."
+    },
+    {
+      "id": "NCT06562192-anc",
+      "polarity": "exclusion",
+      "sourceText": "Absolute neutrophil count (ANC) < 1.5 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 100 x 10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06562192-hemoglobin",
+      "polarity": "exclusion",
+      "sourceText": "Absolute neutrophil count (ANC) < 1.5 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 100 x 10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06562192-platelets",
+      "polarity": "exclusion",
+      "sourceText": "Absolute neutrophil count (ANC) < 1.5 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 100 x 10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06562192-nsclc-lines",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced unresectable or metastatic NSCLC without any actionable genomic alterations with disease progression following, or intolerance to chemotherapy and immunotherapy, unless patient was ineligible to receive such therapy, or locally advanced unresectable or metastatic NSCLC with an actionable genomic alteration with disease progression following, or intolerance to targeted therapy, unless patient was ineligible to receive such therapy",
+      "reasonFuzzy": "Prior therapy requirements differ based on actionable genomic alteration status and eligibility, making it too complex for a single typed prior_therapy rule."
+    },
+    {
+      "id": "NCT06562192-uptake",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have lesions showing 68Ga-NNS309 uptake",
+      "reasonFuzzy": "Special imaging uptake assessment is not a typed biomarker or lab check."
+    },
+    {
+      "id": "NCT06562192-qtcf",
+      "polarity": "exclusion",
+      "sourceText": "QT interval corrected by Fridericia's formula (QTcF) ≥ 470 msec",
+      "reasonFuzzy": "QTcF is not one of the allowed typed lab kinds."
+    },
+    {
+      "id": "NCT06562192-obstruction",
+      "polarity": "exclusion",
+      "sourceText": "Unmanageable urinary tract obstruction or urinary incontinence",
+      "reasonFuzzy": "Urinary symptoms and manageability are clinical judgments."
+    },
+    {
+      "id": "NCT06562192-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Radiation therapy within 4 weeks prior to the first dose of [177Lu]Lu-NNS309",
+      "reasonFuzzy": "Washout window for radiation therapy is not a typed lab or simple prior therapy exclusion kind."
+    },
+    {
+      "id": "NCT06562192-age-max",
+      "polarity": "inclusion",
+      "sourceText": "MaximumAge: 100 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06562192-anc",
+      "polarity": "exclusion",
+      "sourceText": "Absolute neutrophil count (ANC) < 1.5 x 10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06562192-platelets",
+      "polarity": "exclusion",
+      "sourceText": "platelet count < 100 x 10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06562192-hemoglobin",
+      "polarity": "exclusion",
+      "sourceText": "hemoglobin < 9 g/dL",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06562192-egfr",
+      "polarity": "exclusion",
+      "sourceText": "Calculated estimated glomerular filtration rate < 60 mL/min/1.73m2",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) < 1.5 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 100 x 10^9/L"
+        },
+        {
+          "kind": "hemoglobin_min",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) < 1.5 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 100 x 10^9/L"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) < 1.5 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 100 x 10^9/L"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "MaximumAge: 100 Years"
+        },
+        {
+          "kind": "anc_min",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) < 1.5 x 10^9/L"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "platelet count < 100 x 10^9/L"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "hemoglobin_min",
+          "polarity": "exclusion",
+          "value": "n:9"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "egfr_min",
+          "polarity": "exclusion",
+          "value": "n:60"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2614
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3168
+  },
+  "ms": 13763,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06562192",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06562192-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years old",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06562192-anc",
+        "kind": "anc_min",
+        "polarity": "exclusion",
+        "sourceText": "Absolute neutrophil count (ANC) < 1.5 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 100 x 10^9/L",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT06562192-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "exclusion",
+        "sourceText": "Absolute neutrophil count (ANC) < 1.5 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 100 x 10^9/L",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT06562192-platelets",
+        "kind": "platelets_min",
+        "polarity": "exclusion",
+        "sourceText": "Absolute neutrophil count (ANC) < 1.5 x 10^9/L, hemoglobin < 9 g/dL, or platelet count < 100 x 10^9/L",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT06562192-egfr",
+        "kind": "egfr_min",
+        "polarity": "exclusion",
+        "sourceText": "Calculated estimated glomerular filtration rate < 60 mL/min/1.73m2",
+        "numberValue": 60
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06562192-nsclc-indication",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced unresectable or metastatic NSCLC without any actionable genomic alterations with disease progression following, or intolerance to chemotherapy and immunotherapy, unless patient was ineligible to receive such therapy, or locally advanced unresectable or metastatic NSCLC with an actionable genomic alteration with disease progression following, or intolerance to targeted therapy, unless patient was ineligible to receive such therapy",
+        "reasonFuzzy": "Complex prior line and actionable genomic alteration criteria for NSCLC cannot be captured in simple typed checks."
+      },
+      {
+        "id": "NCT06562192-uptake",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have lesions showing 68Ga-NNS309 uptake",
+        "reasonFuzzy": "Imaging uptake requirement is not a standard typed biomarker or stage check."
+      },
+      {
+        "id": "NCT06562192-qtcf",
+        "polarity": "exclusion",
+        "sourceText": "QT interval corrected by Fridericia's formula (QTcF) ≥ 470 msec",
+        "reasonFuzzy": "QTcF is not one of the allowed typed kinds."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06562192",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06562192-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years old",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06562192-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "MaximumAge: 100 Years",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT06562192-anc",
+        "kind": "anc_min",
+        "polarity": "exclusion",
+        "sourceText": "Absolute neutrophil count (ANC) < 1.5 x 10^9/L",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT06562192-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "exclusion",
+        "sourceText": "hemoglobin < 9 g/dL",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT06562192-platelets",
+        "kind": "platelets_min",
+        "polarity": "exclusion",
+        "sourceText": "platelet count < 100 x 10^9/L",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT06562192-egfr",
+        "kind": "egfr_min",
+        "polarity": "exclusion",
+        "sourceText": "Calculated estimated glomerular filtration rate < 60 mL/min/1.73m2",
+        "numberValue": 60
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06562192-nsclc-lines",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced unresectable or metastatic NSCLC without any actionable genomic alterations with disease progression following, or intolerance to chemotherapy and immunotherapy, unless patient was ineligible to receive such therapy, or locally advanced unresectable or metastatic NSCLC with an actionable genomic alteration with disease progression following, or intolerance to targeted therapy, unless patient was ineligible to receive such therapy",
+        "reasonFuzzy": "Prior therapy requirements differ based on actionable genomic alteration status and eligibility, making it too complex for a single typed prior_therapy rule."
+      },
+      {
+        "id": "NCT06562192-uptake",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have lesions showing 68Ga-NNS309 uptake",
+        "reasonFuzzy": "Special imaging uptake assessment is not a typed biomarker or lab check."
+      },
+      {
+        "id": "NCT06562192-qtcf",
+        "polarity": "exclusion",
+        "sourceText": "QT interval corrected by Fridericia's formula (QTcF) ≥ 470 msec",
+        "reasonFuzzy": "QTcF is not one of the allowed typed lab kinds."
+      },
+      {
+        "id": "NCT06562192-obstruction",
+        "polarity": "exclusion",
+        "sourceText": "Unmanageable urinary tract obstruction or urinary incontinence",
+        "reasonFuzzy": "Urinary symptoms and manageability are clinical judgments."
+      },
+      {
+        "id": "NCT06562192-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Radiation therapy within 4 weeks prior to the first dose of [177Lu]Lu-NNS309",
+        "reasonFuzzy": "Washout window for radiation therapy is not a typed lab or simple prior therapy exclusion kind."
+      }
+    ]
+  }
+}

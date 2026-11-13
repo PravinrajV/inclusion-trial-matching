@@ -1,0 +1,295 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05061550",
+  "briefTitle": "Neoadjuvant and Adjuvant Treatment in Resectable Non-small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T06:09:35.158Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05061550-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "WHO or Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "WHO or Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05061550-pdl1",
+      "polarity": "exclusion",
+      "sourceText": "Participants with baseline PD-L1 expression status <1% (Arms 6 and 7 only).",
+      "reasonFuzzy": "PD-L1 threshold applies only to specific study arms (Arms 6 and 7)."
+    },
+    {
+      "id": "NCT05061550-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Prior exposure to approved or investigational immune-mediated therapy including, but not limited to, other anti-CTLA-4, anti-TIGIT (T cell immunoreceptor with Ig and ITIM domains), anti-PD-1, anti-PD-L1, and anti-PD-L2 antibodies. Participants who received agents targeting the adenosine pathway, anti-NKG2A, anti-HLA-E agents, and anti-LIF agents are also excluded. Participants who have received previous treatment with a TROP2 targeting ADC or with another ADC containing a chemotherapy agent that inhibits TOP1 activity are also excluded.",
+      "reasonFuzzy": "Multiple classes and individual agents are listed under a broad exclusion rule with open-ended categories."
+    },
+    {
+      "id": "NCT05061550-age-min",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05061550-age-max",
+      "polarity": "inclusion",
+      "sourceText": "Maximum Age: 95 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05061550-pdl1",
+      "polarity": "exclusion",
+      "sourceText": "Participants with baseline PD-L1 expression status <1% (Arms 6 and 7 only).",
+      "reasonFuzzy": "PD-L1 expression threshold applies only to specific study arms."
+    },
+    {
+      "id": "NCT05061550-age-min",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05061550-age-max",
+      "polarity": "inclusion",
+      "sourceText": "Maximum Age: 95 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05061550-stage",
+      "polarity": "inclusion",
+      "sourceText": "Newly diagnosed NSCLC patients with resectable disease (Stage IIA to Stage IIIB).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05061550-egfr-exc",
+      "polarity": "exclusion",
+      "sourceText": "Participants with sensitising EGFR mutations or ALK translocations.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05061550-alk-exc",
+      "polarity": "exclusion",
+      "sourceText": "Participants with sensitising EGFR mutations or ALK translocations.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        },
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Maximum Age: 95 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        },
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Maximum Age: 95 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIA,IIB,IIIA,IIIB"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2810
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 2223
+  },
+  "ms": 13024,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05061550",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05061550-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Newly diagnosed NSCLC patients with resectable disease (Stage IIA to Stage IIIB).",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT05061550-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05061550-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "Maximum Age: 95 Years",
+        "numberValue": 95
+      },
+      {
+        "id": "NCT05061550-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "WHO or Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05061550-egfr-exc",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with sensitising EGFR mutations or ALK translocations.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05061550-alk-exc",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with sensitising EGFR mutations or ALK translocations.",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05061550-pdl1",
+        "polarity": "exclusion",
+        "sourceText": "Participants with baseline PD-L1 expression status <1% (Arms 6 and 7 only).",
+        "reasonFuzzy": "PD-L1 threshold applies only to specific study arms (Arms 6 and 7)."
+      },
+      {
+        "id": "NCT05061550-prior-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Prior exposure to approved or investigational immune-mediated therapy including, but not limited to, other anti-CTLA-4, anti-TIGIT (T cell immunoreceptor with Ig and ITIM domains), anti-PD-1, anti-PD-L1, and anti-PD-L2 antibodies. Participants who received agents targeting the adenosine pathway, anti-NKG2A, anti-HLA-E agents, and anti-LIF agents are also excluded. Participants who have received previous treatment with a TROP2 targeting ADC or with another ADC containing a chemotherapy agent that inhibits TOP1 activity are also excluded.",
+        "reasonFuzzy": "Multiple classes and individual agents are listed under a broad exclusion rule with open-ended categories."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05061550",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05061550-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Newly diagnosed NSCLC patients with resectable disease (Stage IIA to Stage IIIB).",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT05061550-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "WHO or Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05061550-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with sensitising EGFR mutations or ALK translocations.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05061550-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with sensitising EGFR mutations or ALK translocations.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05061550-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05061550-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "Maximum Age: 95 Years",
+        "numberValue": 95
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05061550-pdl1",
+        "polarity": "exclusion",
+        "sourceText": "Participants with baseline PD-L1 expression status <1% (Arms 6 and 7 only).",
+        "reasonFuzzy": "PD-L1 expression threshold applies only to specific study arms."
+      }
+    ]
+  }
+}

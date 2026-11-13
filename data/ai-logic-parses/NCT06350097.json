@@ -1,0 +1,363 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06350097",
+  "briefTitle": "Phase III, Open-label Study of First-line Osimertinib With or Without Datopotamab Deruxtecan for EGFRm Locally Advanced or Metastatic Non-small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:52:05.260Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06350097-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Participant must be ≥ 18 years.",
+      "numberValue": 18,
+      "evidence_quote": "Participant must be ≥ 18 years.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06350097-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Stage IIIB or IIIC or Stage IV metastatic NSCLC or recurrent NSCLC (based on the American Joint Committee on Cancer Edition 8) not amenable to curative surgery or definitive chemoradiation at the time of randomisation.",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Stage IIIB or IIIC or Stage IV metastatic NSCLC or recurrent NSCLC (based on the American Joint Committee on Cancer Edition 8) not amenable to curative surgery or definitive chemoradiation at the time of randomisation.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06350097-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "mandatory provision of an unstained, archival tumour tissue sample in a quantity sufficient to allow for central confirmation of the EGFR mutation status.",
+      "reasonFuzzy": "Willingness or ability to provide a tissue sample is a procedure requirement, not a typed check."
+    },
+    {
+      "id": "NCT06350097-who",
+      "polarity": "inclusion",
+      "sourceText": "WHO performance status of 0 or 1.",
+      "reasonFuzzy": "WHO performance status uses a different scale than ECOG, so no typed ecog_max check is emitted."
+    },
+    {
+      "id": "NCT06350097-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 TL at baseline and can be accurately measured at baseline as ≥10 mm in the longest diameter (except lymph nodes, which must have short axis ≥15 mm) with CT or MRI and is suitable for accurate repeated measurements.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06350097-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate bone marrow reserve and organ function before the first dose of study intervention.",
+      "reasonFuzzy": "Adequate organ function without explicit lab cutoffs is a general rule."
+    },
+    {
+      "id": "NCT06350097-brain",
+      "polarity": "exclusion",
+      "sourceText": "Spinal cord compression and/or unstable brain metastases.",
+      "reasonFuzzy": "Unstable CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT06350097-who",
+      "polarity": "inclusion",
+      "sourceText": "WHO performance status of 0 or 1.",
+      "reasonFuzzy": "ECOG/WHO performance status is typically ecog_max, but source states WHO performance status which lacks a direct enum representation in some rigid schemas, though usually compatible; kept as fuzzy due to WHO wording."
+    },
+    {
+      "id": "NCT06350097-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 TL at baseline and can be accurately measured at baseline as ≥10 mm in the longest diameter (except lymph nodes, which must have short axis ≥15 mm) with CT or MRI and is suitable for accurate repeated measurements.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06350097-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "For participants enrolled in randomisation period, mandatory provision of an unstained, archival tumour tissue sample in a quantity sufficient to allow for central confirmation of the EGFR mutation status.",
+      "reasonFuzzy": "Willingness or requirement to provide a tissue biopsy is a procedure requirement, not a typed check."
+    },
+    {
+      "id": "NCT06350097-brain",
+      "polarity": "exclusion",
+      "sourceText": "Spinal cord compression and/or unstable brain metastases.",
+      "reasonFuzzy": "Unstable brain metastases is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT06350097-egfr-variant",
+      "polarity": "inclusion",
+      "sourceText": "Ex19del or L858R",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06350097-egfr-variant",
+      "polarity": "inclusion",
+      "sourceText": "The tumour harbors at least 1 of the 2 common EGFR mutations known to be associated with EGFR-TKI sensitivity (Ex19del or L858R)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06350097-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically documented nonsquamous NSCLC. NSCLC of mixed histology is allowed if adenocarcinoma is the predominant histology.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06350097-prior-tkis",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have received prior EGFR TKIs or other systemic therapy for Stage IIIB, IIIC or IV NSCLC.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06350097-egfr",
+      "polarity": "inclusion",
+      "sourceText": "The tumour harbors at least 1 of the 2 common EGFR mutations known to be associated with EGFR-TKI sensitivity (Ex19del or L858R)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:ex19del or l858r"
+        },
+        {
+          "side": "b-only",
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:ex19del, l858r"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:egfr tkis"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 4519
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 3508
+  },
+  "ms": 16014,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06350097",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06350097-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant must be ≥ 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06350097-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically documented nonsquamous NSCLC. NSCLC of mixed histology is allowed if adenocarcinoma is the predominant histology.",
+        "histologies": [
+          "adenocarcinoma"
+        ]
+      },
+      {
+        "id": "NCT06350097-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage IIIB or IIIC or Stage IV metastatic NSCLC or recurrent NSCLC (based on the American Joint Committee on Cancer Edition 8) not amenable to curative surgery or definitive chemoradiation at the time of randomisation.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06350097-prior-tkis",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have received prior EGFR TKIs or other systemic therapy for Stage IIIB, IIIC or IV NSCLC.",
+        "stringValue": "EGFR TKIs"
+      },
+      {
+        "id": "NCT06350097-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "The tumour harbors at least 1 of the 2 common EGFR mutations known to be associated with EGFR-TKI sensitivity (Ex19del or L858R)",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06350097-egfr-variant",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Ex19del or L858R",
+        "stringValue": "Ex19del or L858R"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06350097-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "mandatory provision of an unstained, archival tumour tissue sample in a quantity sufficient to allow for central confirmation of the EGFR mutation status.",
+        "reasonFuzzy": "Willingness or ability to provide a tissue sample is a procedure requirement, not a typed check."
+      },
+      {
+        "id": "NCT06350097-who",
+        "polarity": "inclusion",
+        "sourceText": "WHO performance status of 0 or 1.",
+        "reasonFuzzy": "WHO performance status uses a different scale than ECOG, so no typed ecog_max check is emitted."
+      },
+      {
+        "id": "NCT06350097-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 TL at baseline and can be accurately measured at baseline as ≥10 mm in the longest diameter (except lymph nodes, which must have short axis ≥15 mm) with CT or MRI and is suitable for accurate repeated measurements.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06350097-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate bone marrow reserve and organ function before the first dose of study intervention.",
+        "reasonFuzzy": "Adequate organ function without explicit lab cutoffs is a general rule."
+      },
+      {
+        "id": "NCT06350097-brain",
+        "polarity": "exclusion",
+        "sourceText": "Spinal cord compression and/or unstable brain metastases.",
+        "reasonFuzzy": "Unstable CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06350097",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06350097-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant must be ≥ 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06350097-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically documented nonsquamous NSCLC. NSCLC of mixed histology is allowed if adenocarcinoma is the predominant histology.",
+        "histologies": [
+          "adenocarcinoma"
+        ]
+      },
+      {
+        "id": "NCT06350097-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage IIIB or IIIC or Stage IV metastatic NSCLC or recurrent NSCLC (based on the American Joint Committee on Cancer Edition 8) not amenable to curative surgery or definitive chemoradiation at the time of randomisation.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06350097-prior-tki",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have received prior EGFR TKIs or other systemic therapy for Stage IIIB, IIIC or IV NSCLC.",
+        "stringValue": "EGFR TKI"
+      },
+      {
+        "id": "NCT06350097-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "The tumour harbors at least 1 of the 2 common EGFR mutations known to be associated with EGFR-TKI sensitivity (Ex19del or L858R)",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06350097-egfr-variant",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "The tumour harbors at least 1 of the 2 common EGFR mutations known to be associated with EGFR-TKI sensitivity (Ex19del or L858R)",
+        "stringValue": "Ex19del, L858R"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06350097-who",
+        "polarity": "inclusion",
+        "sourceText": "WHO performance status of 0 or 1.",
+        "reasonFuzzy": "ECOG/WHO performance status is typically ecog_max, but source states WHO performance status which lacks a direct enum representation in some rigid schemas, though usually compatible; kept as fuzzy due to WHO wording."
+      },
+      {
+        "id": "NCT06350097-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 TL at baseline and can be accurately measured at baseline as ≥10 mm in the longest diameter (except lymph nodes, which must have short axis ≥15 mm) with CT or MRI and is suitable for accurate repeated measurements.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06350097-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "For participants enrolled in randomisation period, mandatory provision of an unstained, archival tumour tissue sample in a quantity sufficient to allow for central confirmation of the EGFR mutation status.",
+        "reasonFuzzy": "Willingness or requirement to provide a tissue biopsy is a procedure requirement, not a typed check."
+      },
+      {
+        "id": "NCT06350097-brain",
+        "polarity": "exclusion",
+        "sourceText": "Spinal cord compression and/or unstable brain metastases.",
+        "reasonFuzzy": "Unstable brain metastases is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      }
+    ]
+  }
+}

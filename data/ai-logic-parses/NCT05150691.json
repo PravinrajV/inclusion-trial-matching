@@ -1,0 +1,230 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05150691",
+  "briefTitle": "A Phase 1/2a Study of DB-1303/BNT323 in Advanced/Metastatic Solid Tumors",
+  "parsedAt": "2026-11-12T06:10:45.350Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05150691-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status (PS) of 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status (PS) of 0-1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05150691-her2",
+      "polarity": "inclusion",
+      "sourceText": "Has a pathologically documented HER2-positive or HER2-expressing (except for cohort 2h where the requirement is HER2-null), advanced/unresectable, recurrent, or metastatic malignant solid tumor that is refractory to or intolerable with standard treatment, or for which no standard treatment is available.",
+      "reasonFuzzy": "Solid tumor trial not limited to non-small cell lung cancer, though trial eligibility is broadly general solid tumors."
+    },
+    {
+      "id": "NCT05150691-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least 1 measurable lesion (per RECIST 1.1)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05150691-lvef",
+      "polarity": "inclusion",
+      "sourceText": "LVEF ≥ 50% by ECHO or MUGA",
+      "reasonFuzzy": "LVEF is cardiac function and does not map to any allowed typed checks."
+    },
+    {
+      "id": "NCT05150691-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of ≥ 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05150691-group9",
+      "polarity": "inclusion",
+      "sourceText": "Has pathologically documented advanced/unresectable, recurrent, or metastatic EC (including UCS and USPC) and has progressed on or after at least 1 line of systemic treatment including platinum-based therapy and exposure to ICI but no more than prior 3 lines of therapy for advanced/unresectable, or metastatic disease.",
+      "reasonFuzzy": "Cohort-specific criteria for endometrial cancer, not general NSCLC."
+    },
+    {
+      "id": "NCT05150691-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05150691-scope",
+      "polarity": "inclusion",
+      "sourceText": "Has a pathologically documented HER2-positive or HER2-expressing (except for cohort 2h where the requirement is HER2-null), advanced/unresectable, recurrent, or metastatic malignant solid tumor that is refractory to or intolerable with standard treatment, or for which no standard treatment is available.",
+      "reasonFuzzy": "The trial is for advanced or metastatic solid tumors in general, not specifically limited to non-small cell lung cancer."
+    },
+    {
+      "id": "NCT05150691-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05150691-brain",
+      "polarity": "exclusion",
+      "sourceText": "Clinically active brain metastases",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 2709
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 1794
+  },
+  "ms": 12477,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05150691",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05150691-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05150691-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status (PS) of 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05150691-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Clinically active brain metastases",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05150691-her2",
+        "polarity": "inclusion",
+        "sourceText": "Has a pathologically documented HER2-positive or HER2-expressing (except for cohort 2h where the requirement is HER2-null), advanced/unresectable, recurrent, or metastatic malignant solid tumor that is refractory to or intolerable with standard treatment, or for which no standard treatment is available.",
+        "reasonFuzzy": "Solid tumor trial not limited to non-small cell lung cancer, though trial eligibility is broadly general solid tumors."
+      },
+      {
+        "id": "NCT05150691-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least 1 measurable lesion (per RECIST 1.1)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05150691-lvef",
+        "polarity": "inclusion",
+        "sourceText": "LVEF ≥ 50% by ECHO or MUGA",
+        "reasonFuzzy": "LVEF is cardiac function and does not map to any allowed typed checks."
+      },
+      {
+        "id": "NCT05150691-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of ≥ 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05150691-group9",
+        "polarity": "inclusion",
+        "sourceText": "Has pathologically documented advanced/unresectable, recurrent, or metastatic EC (including UCS and USPC) and has progressed on or after at least 1 line of systemic treatment including platinum-based therapy and exposure to ICI but no more than prior 3 lines of therapy for advanced/unresectable, or metastatic disease.",
+        "reasonFuzzy": "Cohort-specific criteria for endometrial cancer, not general NSCLC."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05150691",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05150691-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05150691-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status (PS) of 0-1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05150691-scope",
+        "polarity": "inclusion",
+        "sourceText": "Has a pathologically documented HER2-positive or HER2-expressing (except for cohort 2h where the requirement is HER2-null), advanced/unresectable, recurrent, or metastatic malignant solid tumor that is refractory to or intolerable with standard treatment, or for which no standard treatment is available.",
+        "reasonFuzzy": "The trial is for advanced or metastatic solid tumors in general, not specifically limited to non-small cell lung cancer."
+      }
+    ]
+  }
+}

@@ -1,0 +1,559 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04486833",
+  "briefTitle": "Quaratusugene Ozeplasmid (Reqorsa) and Osimertinib in Patients With Advanced Lung Cancer Who Progressed on Osimertinib",
+  "parsedAt": "2026-11-12T05:43:24.007Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04486833-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥18 years.",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥18 years.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04486833-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Stage III or IV NSCLC or recurrent NSCLC that is not potentially curable by radiotherapy or surgery.",
+      "stages": [
+        "IIIA",
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Stage III or IV NSCLC or recurrent NSCLC that is not potentially curable by radiotherapy or surgery.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04486833-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group performance status (ECOG PS) score from 0 to 1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group performance status (ECOG PS) score from 0 to 1.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04486833-anc",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) >1500/mm3, platelet count >100,000/mm3 within ≤28 days.",
+      "numberValue": 1500,
+      "evidence_quote": "Absolute neutrophil count (ANC) >1500/mm3, platelet count >100,000/mm3 within ≤28 days.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04486833-platelets",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) >1500/mm3, platelet count >100,000/mm3 within ≤28 days.",
+      "numberValue": 100000,
+      "evidence_quote": "Absolute neutrophil count (ANC) >1500/mm3, platelet count >100,000/mm3 within ≤28 days.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04486833-creatinine",
+      "kind": "creatinine_max",
+      "polarity": "inclusion",
+      "sourceText": "Adequate renal function documented by serum creatinine of ≤1.5 mg/dL or calculated creatinine clearance >50 ml/min within ≤28 days.",
+      "numberValue": 1.5,
+      "stringValue": "mg/dL",
+      "evidence_quote": "Adequate renal function documented by serum creatinine of ≤1.5 mg/dL or calculated creatinine clearance >50 ml/min within ≤28 days.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04486833-bilirubin",
+      "kind": "bilirubin_max",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hepatic function as documented by serum bilirubin <1.5 mg/dL and aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤2.5 X upper limit of normal (ULN) within ≤28 days.",
+      "numberValue": 1.5,
+      "stringValue": "mg/dL",
+      "evidence_quote": "Adequate hepatic function as documented by serum bilirubin <1.5 mg/dL and aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤2.5 X upper limit of normal (ULN) within ≤28 days.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04486833-washout",
+      "polarity": "inclusion",
+      "sourceText": "Must have a minimum of a 10-day osimertinib washout completed at the time of enrollment.",
+      "reasonFuzzy": "Washout window is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT04486833-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Must have measurable disease per RECIST 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT04486833-surgery",
+      "polarity": "inclusion",
+      "sourceText": "Must be ≥28 days beyond major surgical procedures such as thoracotomy, laparotomy, or joint replacement and must not have evidence of wound dehiscence, active wound infection, or comparable major residual complications of the surgery per Investigator assessment.",
+      "reasonFuzzy": "Includes investigator assessment and clinical wound evaluations."
+    },
+    {
+      "id": "NCT04486833-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Must have and be willing to submit a prior tumor biopsy or undergo a biopsy during Screening to obtain tumor tissue for submission to a central laboratory for IHC analysis and FISH or qPCR testing.",
+      "reasonFuzzy": "Willingness to undergo a biopsy is a subjective protocol requirement."
+    },
+    {
+      "id": "NCT04486833-cardiac",
+      "polarity": "inclusion",
+      "sourceText": "Stable cardiac condition with a left ventricular ejection fraction ≥40% within ≤28 days.",
+      "reasonFuzzy": "Stable cardiac condition is a judgment, and LVEF has no dedicated typed check."
+    },
+    {
+      "id": "NCT04486833-investigator-discretion",
+      "polarity": "exclusion",
+      "sourceText": "Serious concurrent illness or psychological, familial, sociological, geographical, or other concomitant conditions that, in the opinion of the Investigator, would not permit adequate follow-up and compliance with the study protocol.",
+      "reasonFuzzy": "Relies entirely on investigator opinion."
+    },
+    {
+      "id": "NCT04486833-washout",
+      "polarity": "inclusion",
+      "sourceText": "Must have a minimum of a 10-day osimertinib washout completed at the time of enrollment.",
+      "reasonFuzzy": "Washout windows that involve specific drug-free intervals for prior treatments are not a simple lab cutoff."
+    },
+    {
+      "id": "NCT04486833-progression",
+      "polarity": "inclusion",
+      "sourceText": "Must have radiological progression on osimertinib treatment and can have either asymptomatic disease or symptomatic disease.",
+      "reasonFuzzy": "Progression status and symptomatic disease details are clinical assessments."
+    },
+    {
+      "id": "NCT04486833-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Must have measurable disease per RECIST 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04486833-surgery-recovery",
+      "polarity": "inclusion",
+      "sourceText": "Must be ≥28 days beyond major surgical procedures such as thoracotomy, laparotomy, or joint replacement and must not have evidence of wound dehiscence, active wound infection, or comparable major residual complications of the surgery per Investigator assessment.",
+      "reasonFuzzy": "Includes investigator assessment and surgical recovery criteria."
+    },
+    {
+      "id": "NCT04486833-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Must have and be willing to submit a prior tumor biopsy or undergo a biopsy during Screening to obtain tumor tissue for submission to a central laboratory for IHC analysis and FISH or qPCR testing.",
+      "reasonFuzzy": "Willingness to undergo a biopsy or procedure is a judgment-based item."
+    },
+    {
+      "id": "NCT04486833-cardiac",
+      "polarity": "inclusion",
+      "sourceText": "Stable cardiac condition with a left ventricular ejection fraction ≥40% within ≤28 days.",
+      "reasonFuzzy": "Includes a stable cardiac condition clinical judgment alongside an LVEF threshold."
+    },
+    {
+      "id": "NCT04486833-egfr-clearance",
+      "polarity": "inclusion",
+      "sourceText": "Adequate renal function documented by serum creatinine of ≤1.5 mg/dL or calculated creatinine clearance >50 ml/min within ≤28 days.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT04486833-egfr",
+      "polarity": "inclusion",
+      "sourceText": "The NSCLC must be epidermal growth factor receptor (EGFR) mutation positive-positive based on results from most recent tissue biopsy or most recent evaluation of circulating tumor DNA.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04486833-prior-osimertinib",
+      "polarity": "inclusion",
+      "sourceText": "Achieved clinical response to osimertinib for ≥4 months, which can be a response of stable disease. Must have a minimum of a 10-day osimertinib washout completed at the time of enrollment.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04486833-brain",
+      "polarity": "inclusion",
+      "sourceText": "Asymptomatic brain metastases must meet ALL criteria of the following (a-d):",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04486833-ast",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hepatic function as documented by serum bilirubin <1.5 mg/dL and aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤2.5 X upper limit of normal (ULN) within ≤28 days.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04486833-alt",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hepatic function as documented by serum bilirubin <1.5 mg/dL and aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤2.5 X upper limit of normal (ULN) within ≤28 days.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 13,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 12,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 12,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "value": "n:50"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 7,
+      "rejected": 5,
+      "rejectedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:osimertinib"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        }
+      ],
+      "normalizerTypedCount": 8
+    }
+  },
+  "runA": {
+    "typedEmitted": 13,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 5019
+  },
+  "runB": {
+    "typedEmitted": 12,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 5001
+  },
+  "ms": 14120,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04486833",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04486833-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04486833-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage III or IV NSCLC or recurrent NSCLC that is not potentially curable by radiotherapy or surgery.",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT04486833-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "The NSCLC must be epidermal growth factor receptor (EGFR) mutation positive-positive based on results from most recent tissue biopsy or most recent evaluation of circulating tumor DNA.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04486833-prior-osimertinib",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Achieved clinical response to osimertinib for ≥4 months, which can be a response of stable disease. Must have a minimum of a 10-day osimertinib washout completed at the time of enrollment.",
+        "stringValue": "osimertinib"
+      },
+      {
+        "id": "NCT04486833-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group performance status (ECOG PS) score from 0 to 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04486833-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Asymptomatic brain metastases must meet ALL criteria of the following (a-d):",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT04486833-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) >1500/mm3, platelet count >100,000/mm3 within ≤28 days.",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT04486833-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) >1500/mm3, platelet count >100,000/mm3 within ≤28 days.",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT04486833-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Adequate renal function documented by serum creatinine of ≤1.5 mg/dL or calculated creatinine clearance >50 ml/min within ≤28 days.",
+        "numberValue": 1.5,
+        "stringValue": "mg/dL"
+      },
+      {
+        "id": "NCT04486833-egfr-clearance",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Adequate renal function documented by serum creatinine of ≤1.5 mg/dL or calculated creatinine clearance >50 ml/min within ≤28 days.",
+        "numberValue": 50,
+        "stringValue": "ml/min"
+      },
+      {
+        "id": "NCT04486833-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hepatic function as documented by serum bilirubin <1.5 mg/dL and aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤2.5 X upper limit of normal (ULN) within ≤28 days.",
+        "numberValue": 1.5,
+        "stringValue": "mg/dL"
+      },
+      {
+        "id": "NCT04486833-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hepatic function as documented by serum bilirubin <1.5 mg/dL and aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤2.5 X upper limit of normal (ULN) within ≤28 days.",
+        "numberValue": 2.5,
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT04486833-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hepatic function as documented by serum bilirubin <1.5 mg/dL and aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤2.5 X upper limit of normal (ULN) within ≤28 days.",
+        "numberValue": 2.5,
+        "stringValue": "ULN"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04486833-washout",
+        "polarity": "inclusion",
+        "sourceText": "Must have a minimum of a 10-day osimertinib washout completed at the time of enrollment.",
+        "reasonFuzzy": "Washout window is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT04486833-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Must have measurable disease per RECIST 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT04486833-surgery",
+        "polarity": "inclusion",
+        "sourceText": "Must be ≥28 days beyond major surgical procedures such as thoracotomy, laparotomy, or joint replacement and must not have evidence of wound dehiscence, active wound infection, or comparable major residual complications of the surgery per Investigator assessment.",
+        "reasonFuzzy": "Includes investigator assessment and clinical wound evaluations."
+      },
+      {
+        "id": "NCT04486833-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Must have and be willing to submit a prior tumor biopsy or undergo a biopsy during Screening to obtain tumor tissue for submission to a central laboratory for IHC analysis and FISH or qPCR testing.",
+        "reasonFuzzy": "Willingness to undergo a biopsy is a subjective protocol requirement."
+      },
+      {
+        "id": "NCT04486833-cardiac",
+        "polarity": "inclusion",
+        "sourceText": "Stable cardiac condition with a left ventricular ejection fraction ≥40% within ≤28 days.",
+        "reasonFuzzy": "Stable cardiac condition is a judgment, and LVEF has no dedicated typed check."
+      },
+      {
+        "id": "NCT04486833-investigator-discretion",
+        "polarity": "exclusion",
+        "sourceText": "Serious concurrent illness or psychological, familial, sociological, geographical, or other concomitant conditions that, in the opinion of the Investigator, would not permit adequate follow-up and compliance with the study protocol.",
+        "reasonFuzzy": "Relies entirely on investigator opinion."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04486833",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04486833-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04486833-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage III or IV NSCLC or recurrent NSCLC that is not potentially curable by radiotherapy or surgery.",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT04486833-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "The NSCLC must be epidermal growth factor receptor (EGFR) mutation positive-positive based on results from most recent tissue biopsy or most recent evaluation of circulating tumor DNA.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04486833-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group performance status (ECOG PS) score from 0 to 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04486833-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Asymptomatic brain metastases must meet ALL criteria of the following (a-d):",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT04486833-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) >1500/mm3, platelet count >100,000/mm3 within ≤28 days.",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT04486833-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) >1500/mm3, platelet count >100,000/mm3 within ≤28 days.",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT04486833-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Adequate renal function documented by serum creatinine of ≤1.5 mg/dL or calculated creatinine clearance >50 ml/min within ≤28 days.",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "calculated creatinine clearance >50 ml/min"
+      },
+      {
+        "id": "NCT04486833-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hepatic function as documented by serum bilirubin <1.5 mg/dL and aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤2.5 X upper limit of normal (ULN) within ≤28 days.",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT04486833-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hepatic function as documented by serum bilirubin <1.5 mg/dL and aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤2.5 X upper limit of normal (ULN) within ≤28 days.",
+        "numberValue": 2.5,
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT04486833-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hepatic function as documented by serum bilirubin <1.5 mg/dL and aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤2.5 X upper limit of normal (ULN) within ≤28 days.",
+        "numberValue": 2.5,
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT04486833-prior-osimertinib",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Achieved clinical response to osimertinib for ≥4 months, which can be a response of stable disease. Must have a minimum of a 10-day osimertinib washout completed at the time of enrollment.",
+        "stringValue": "osimertinib"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04486833-washout",
+        "polarity": "inclusion",
+        "sourceText": "Must have a minimum of a 10-day osimertinib washout completed at the time of enrollment.",
+        "reasonFuzzy": "Washout windows that involve specific drug-free intervals for prior treatments are not a simple lab cutoff."
+      },
+      {
+        "id": "NCT04486833-progression",
+        "polarity": "inclusion",
+        "sourceText": "Must have radiological progression on osimertinib treatment and can have either asymptomatic disease or symptomatic disease.",
+        "reasonFuzzy": "Progression status and symptomatic disease details are clinical assessments."
+      },
+      {
+        "id": "NCT04486833-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Must have measurable disease per RECIST 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT04486833-surgery-recovery",
+        "polarity": "inclusion",
+        "sourceText": "Must be ≥28 days beyond major surgical procedures such as thoracotomy, laparotomy, or joint replacement and must not have evidence of wound dehiscence, active wound infection, or comparable major residual complications of the surgery per Investigator assessment.",
+        "reasonFuzzy": "Includes investigator assessment and surgical recovery criteria."
+      },
+      {
+        "id": "NCT04486833-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Must have and be willing to submit a prior tumor biopsy or undergo a biopsy during Screening to obtain tumor tissue for submission to a central laboratory for IHC analysis and FISH or qPCR testing.",
+        "reasonFuzzy": "Willingness to undergo a biopsy or procedure is a judgment-based item."
+      },
+      {
+        "id": "NCT04486833-cardiac",
+        "polarity": "inclusion",
+        "sourceText": "Stable cardiac condition with a left ventricular ejection fraction ≥40% within ≤28 days.",
+        "reasonFuzzy": "Includes a stable cardiac condition clinical judgment alongside an LVEF threshold."
+      }
+    ]
+  }
+}

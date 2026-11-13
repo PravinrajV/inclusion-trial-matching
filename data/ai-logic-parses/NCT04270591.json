@@ -1,0 +1,735 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04270591",
+  "briefTitle": "Assessment of Anti-tumor and Safety in Glumetinib in Patients With c-MET-positive Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T06:04:33.672Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04270591-age-min",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male and female patients ≥ 18 years of age (or having reached the age of majority according to local laws and regulations, if the age is > 18 years).",
+      "numberValue": 18,
+      "evidence_quote": "Male and female patients ≥ 18 years of age (or having reached the age of majority according to local laws and regulations, if the age is > 18 years).",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04270591-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Patients with stage IIIb or IIIc NSCLC who are not candidates for definitive surgical resection or concurrent chemoradiation or patients with stage IV NSCLC (AJCC version 8).",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Patients with stage IIIb or IIIc NSCLC who are not candidates for definitive surgical resection or concurrent chemoradiation or patients with stage IV NSCLC (AJCC version 8).",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04270591-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin ≥ 9 g/dL;",
+      "numberValue": 9,
+      "evidence_quote": "Hemoglobin ≥ 9 g/dL;",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04270591-alt",
+      "kind": "alt_max",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 2.5 × ULN (≤ 5.0 × ULN for patients with hepatic metastasis);",
+      "numberValue": 2.5,
+      "stringValue": "ULN",
+      "evidence_quote": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 2.5 × ULN (≤ 5.0 × ULN for patients with hepatic metastasis);",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04270591-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of NSCLC including PSC.",
+      "reasonFuzzy": "Includes PSC which is not a standard category in the available histology enum."
+    },
+    {
+      "id": "NCT04270591-phase-rules",
+      "polarity": "inclusion",
+      "sourceText": "For Phase Ib study, patients should carry at least one of the following MET alterations... For Phase II study, patients with METex14 skipping mutation... For Phase II study, patients are not eligible for chemotherapy or refuse chemotherapy... or have failed one or two prior lines...",
+      "reasonFuzzy": "Eligibility rules are complex, multi-tiered and differ between Phase Ib and Phase II study parts."
+    },
+    {
+      "id": "NCT04270591-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Availability of tumor tissue sample (either fresh tumor biopsy or archival tumor tissue sample);",
+      "reasonFuzzy": "Requirement for tissue sample availability is a procedural condition, not a typed check."
+    },
+    {
+      "id": "NCT04270591-measurable",
+      "polarity": "inclusion",
+      "sourceText": "For Phase II study, at least one measurable lesion as per RECIST 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT04270591-biomarkers-excl",
+      "polarity": "exclusion",
+      "sourceText": "Patients with targetable activating EGFR mutation, ALK rearrangement, ROS1 rearrangement, BRAF mutation or NTRK fusion that have available standard of care therapies.",
+      "reasonFuzzy": "Excludes multiple specific mutations based on availability of standard of care therapies, not a simple single biomarker exclusion check."
+    },
+    {
+      "id": "NCT04270591-met-directed-excl",
+      "polarity": "exclusion",
+      "sourceText": "Prior exposure to MET-directed therapy (except patients harboring METex14 skipping in Phase Ib study).",
+      "reasonFuzzy": "Conditional prior therapy exclusion dependent on study part and specific mutation."
+    },
+    {
+      "id": "NCT04270591-malignancy-excl",
+      "polarity": "exclusion",
+      "sourceText": "Evidence of past or current primary malignancies other than NSCLC (except for non-melanoma skin cancer, in situ breast cancer or in situ cervical carcinoma and superficial bladder cancer, or other cancer curatively treated and with no evidence of disease for at least 5 years).",
+      "reasonFuzzy": "Complex exclusion of other malignancies with multiple exceptions and timeframes."
+    },
+    {
+      "id": "NCT04270591-cardiac-excl",
+      "polarity": "exclusion",
+      "sourceText": "Subjects with clinically significant cardiovascular disease, including: NYHA Class III or higher... LVEF < 50%; QTcF > 460 ms...",
+      "reasonFuzzy": "Composite cardiovascular exclusion criteria involving multiple independent clinical parameters."
+    },
+    {
+      "id": "NCT04270591-tox-excl",
+      "polarity": "exclusion",
+      "sourceText": "Any unresolved toxicities from prior therapy greater than CTCAE grade 1 at the time of starting study treatment with the exception of alopecia and grade 2 prior neuropathy.",
+      "reasonFuzzy": "General toxicity resolution rule with exceptions."
+    },
+    {
+      "id": "NCT04270591-inf-excl",
+      "polarity": "exclusion",
+      "sourceText": "Known HIV infection with a history of acquired immunodeficiency syndrome (AIDS)-defining opportunity infection within the past 12 months; active hepatitis B and hepatitis C...",
+      "reasonFuzzy": "Infectious disease criteria are region-specific and involve multiple conditional laboratory thresholds."
+    },
+    {
+      "id": "NCT04270591-prior-therapy-excl",
+      "polarity": "exclusion",
+      "sourceText": "Anticancer therapy (including chemotherapy, targeted therapy, biotherapy, hormone therapy or other investigational agents) within 4 weeks or 5 times of half-lives...",
+      "reasonFuzzy": "Washout window and prior therapy restrictions are multifaceted."
+    },
+    {
+      "id": "NCT04270591-radiation-excl",
+      "polarity": "exclusion",
+      "sourceText": "Radical radiation therapy (including radiation therapy for over 25% bone marrow) within 4 weeks prior to the first dose... or local palliative radiation therapy within 2 weeks.",
+      "reasonFuzzy": "Radiation washout rules depend on the type and location of radiation."
+    },
+    {
+      "id": "NCT04270591-surgery-excl",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery or had significant traumatic injury within 28 days prior to the first dose...",
+      "reasonFuzzy": "Surgical washout window is not a simple standard typed lab or age check."
+    },
+    {
+      "id": "NCT04270591-meds-excl",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have to receive treatment (definite strong CYP3A4 inhibitor or inducer...)",
+      "reasonFuzzy": "Prohibited medication lists are extensive and require investigator discretion."
+    },
+    {
+      "id": "NCT04270591-investigator-excl",
+      "polarity": "exclusion",
+      "sourceText": "Any diseases or medical conditions, at the investigator's discretion, that may be unstable or influence their safety or study compliance...",
+      "reasonFuzzy": "Investigator discretion-based rule."
+    },
+    {
+      "id": "NCT04270591-ild-excl",
+      "polarity": "exclusion",
+      "sourceText": "Patients with a history of interstitial lung disease (ILD), drug-induced ILD, radiation pneumonitis which required steroid treatment or any evidence of clinically active ILD.",
+      "reasonFuzzy": "Specific medical history exclusion with steroid treatment qualifiers."
+    },
+    {
+      "id": "NCT04270591-pregnancy-excl",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant or breast-feeding patients. Pregnancy refers to the state of a woman between fertilization and the end of pregnancy confirmed by positive laboratory hCG test (> 5 mIU/mL).",
+      "reasonFuzzy": "Pregnancy and contraception criteria."
+    },
+    {
+      "id": "NCT04270591-age-max",
+      "polarity": "inclusion",
+      "sourceText": "maximumAge: 80 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04270591-egfr-min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine clearance (calculated* or measured value**) ≥ 50 mL/min",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04270591-met-alterations",
+      "polarity": "inclusion",
+      "sourceText": "For Phase Ib study, patients should carry at least one of the following MET alterations (by local or Sponsor-designated central laboratory screening): METex14 skipping mutation who had previously treated by other MET inhibitor(s) or METex14 skipping mutation who had received 3 or more lines prior systemic therapies without MET inhibitor for the advanced NSCLC or MET amplification GCN ≥ 4 or MET/CEP7 ratio ≥ 2) or MET over-expression (IHC2+).",
+      "reasonFuzzy": "Complex multibranch inclusion criteria involving multiple MET alterations and different criteria for Phase Ib vs Phase II."
+    },
+    {
+      "id": "NCT04270591-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "For Phase II study, patients are not eligible for chemotherapy or refuse chemotherapy after well-informed or have failed one or two prior lines of systemic therapies for the advanced NSCLC.",
+      "reasonFuzzy": "Study part-dependent and conditional prior lines requirement."
+    },
+    {
+      "id": "NCT04270591-measurable",
+      "polarity": "inclusion",
+      "sourceText": "For Phase II study, at least one measurable lesion as per RECIST 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT04270591-egfr-mut",
+      "polarity": "exclusion",
+      "sourceText": "Patients with targetable activating EGFR mutation, ALK rearrangement, ROS1 rearrangement, BRAF mutation or NTRK fusion that have available standard of care therapies.",
+      "reasonFuzzy": "Multiple gene mutations and fusions combined with standard of care availability condition."
+    },
+    {
+      "id": "NCT04270591-other-malignancies",
+      "polarity": "exclusion",
+      "sourceText": "Evidence of past or current primary malignancies other than NSCLC (except for non-melanoma skin cancer, in situ breast cancer or in situ cervical carcinoma and superficial bladder cancer, or other cancer curatively treated and with no evidence of disease for at least 5 years).",
+      "reasonFuzzy": "Complex prior malignancy history with multiple exceptions and timeframes."
+    },
+    {
+      "id": "NCT04270591-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Subjects with clinically significant cardiovascular disease, including: NYHA Class III or higher congestive heart failure; History or current evidence of serious uncontrolled ventricular arrhythmias requiring drug therapy; Acute myocardial infarction, severe or unstable angina pectoris, coronary artery or peripheral artery bypass graft received within 6 months prior to the first dose; Left ventricular ejection fraction (LVEF) < 50%; Fridericia's corrected QT interval (QTcF) > 460 ms on ECG conducted during screening; Congenital long QT syndrome, or any known history of torsade de pointes (TdP), or family history of unexplained sudden death; Clinically uncontrolled hypertension...",
+      "reasonFuzzy": "Comprehensive cardiovascular exclusions spanning multiple conditions, thresholds, and NYHA classes."
+    },
+    {
+      "id": "NCT04270591-infections",
+      "polarity": "exclusion",
+      "sourceText": "Known HIV infection with a history of acquired immunodeficiency syndrome (AIDS)-defining opportunity infection within the past 12 months; active hepatitis B and hepatitis C. Patients whose test results meet one of the following will not be enrolled...",
+      "reasonFuzzy": "Multi-regional and complex viral hepatitis and HIV criteria with specific regional cutoffs."
+    },
+    {
+      "id": "NCT04270591-age-max",
+      "polarity": "inclusion",
+      "sourceText": "maximumAge: 80 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04270591-egfr-min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine clearance (calculated* or measured value**) ≥ 50 mL/min",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04270591-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of NSCLC including PSC.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT04270591-ecog",
+      "polarity": "inclusion",
+      "sourceText": "ECOG Performance Status (PS): 0-1.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04270591-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count ≥ 1.5 × 109/L;",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04270591-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count ≥ 75 × 109/L;",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04270591-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Serum total bilirubin ≤ ULN (≤ 3 × ULN for patients with Gilbert's syndrome);",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04270591-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 2.5 × ULN (≤ 5.0 × ULN for patients with hepatic metastasis);",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04270591-brain-mets",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have symptomatic CNS metastasis which is neurologically unstable or those who have CNS disease requiring increase in the dose of steroid.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 10,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "maximumAge: 80 Years"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Creatinine clearance (calculated* or measured value**) ≥ 50 mL/min"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 11,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "maximumAge: 80 Years"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Creatinine clearance (calculated* or measured value**) ≥ 50 mL/min"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 10,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos,squamous"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 6,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "value": "n:75"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 6
+    }
+  },
+  "runA": {
+    "typedEmitted": 12,
+    "fuzzyEmitted": 17,
+    "attempts": 1,
+    "ms": 15864
+  },
+  "runB": {
+    "typedEmitted": 13,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 5162
+  },
+  "ms": 29052,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04270591",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04270591-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male and female patients ≥ 18 years of age (or having reached the age of majority according to local laws and regulations, if the age is > 18 years).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04270591-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "maximumAge: 80 Years",
+        "numberValue": 80
+      },
+      {
+        "id": "NCT04270591-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Patients with stage IIIb or IIIc NSCLC who are not candidates for definitive surgical resection or concurrent chemoradiation or patients with stage IV NSCLC (AJCC version 8).",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT04270591-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance Status (PS): 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04270591-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count ≥ 1.5 × 109/L;",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT04270591-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 9 g/dL;",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT04270591-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count ≥ 75 × 109/L;",
+        "numberValue": 75
+      },
+      {
+        "id": "NCT04270591-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Serum total bilirubin ≤ ULN (≤ 3 × ULN for patients with Gilbert's syndrome);",
+        "numberValue": 1,
+        "stages": [],
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT04270591-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 2.5 × ULN (≤ 5.0 × ULN for patients with hepatic metastasis);",
+        "numberValue": 2.5,
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT04270591-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 2.5 × ULN (≤ 5.0 × ULN for patients with hepatic metastasis);",
+        "numberValue": 2.5,
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT04270591-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine clearance (calculated* or measured value**) ≥ 50 mL/min",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT04270591-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have symptomatic CNS metastasis which is neurologically unstable or those who have CNS disease requiring increase in the dose of steroid.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04270591-histology",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of NSCLC including PSC.",
+        "reasonFuzzy": "Includes PSC which is not a standard category in the available histology enum."
+      },
+      {
+        "id": "NCT04270591-phase-rules",
+        "polarity": "inclusion",
+        "sourceText": "For Phase Ib study, patients should carry at least one of the following MET alterations... For Phase II study, patients with METex14 skipping mutation... For Phase II study, patients are not eligible for chemotherapy or refuse chemotherapy... or have failed one or two prior lines...",
+        "reasonFuzzy": "Eligibility rules are complex, multi-tiered and differ between Phase Ib and Phase II study parts."
+      },
+      {
+        "id": "NCT04270591-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Availability of tumor tissue sample (either fresh tumor biopsy or archival tumor tissue sample);",
+        "reasonFuzzy": "Requirement for tissue sample availability is a procedural condition, not a typed check."
+      },
+      {
+        "id": "NCT04270591-measurable",
+        "polarity": "inclusion",
+        "sourceText": "For Phase II study, at least one measurable lesion as per RECIST 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT04270591-biomarkers-excl",
+        "polarity": "exclusion",
+        "sourceText": "Patients with targetable activating EGFR mutation, ALK rearrangement, ROS1 rearrangement, BRAF mutation or NTRK fusion that have available standard of care therapies.",
+        "reasonFuzzy": "Excludes multiple specific mutations based on availability of standard of care therapies, not a simple single biomarker exclusion check."
+      },
+      {
+        "id": "NCT04270591-met-directed-excl",
+        "polarity": "exclusion",
+        "sourceText": "Prior exposure to MET-directed therapy (except patients harboring METex14 skipping in Phase Ib study).",
+        "reasonFuzzy": "Conditional prior therapy exclusion dependent on study part and specific mutation."
+      },
+      {
+        "id": "NCT04270591-malignancy-excl",
+        "polarity": "exclusion",
+        "sourceText": "Evidence of past or current primary malignancies other than NSCLC (except for non-melanoma skin cancer, in situ breast cancer or in situ cervical carcinoma and superficial bladder cancer, or other cancer curatively treated and with no evidence of disease for at least 5 years).",
+        "reasonFuzzy": "Complex exclusion of other malignancies with multiple exceptions and timeframes."
+      },
+      {
+        "id": "NCT04270591-cardiac-excl",
+        "polarity": "exclusion",
+        "sourceText": "Subjects with clinically significant cardiovascular disease, including: NYHA Class III or higher... LVEF < 50%; QTcF > 460 ms...",
+        "reasonFuzzy": "Composite cardiovascular exclusion criteria involving multiple independent clinical parameters."
+      },
+      {
+        "id": "NCT04270591-tox-excl",
+        "polarity": "exclusion",
+        "sourceText": "Any unresolved toxicities from prior therapy greater than CTCAE grade 1 at the time of starting study treatment with the exception of alopecia and grade 2 prior neuropathy.",
+        "reasonFuzzy": "General toxicity resolution rule with exceptions."
+      },
+      {
+        "id": "NCT04270591-inf-excl",
+        "polarity": "exclusion",
+        "sourceText": "Known HIV infection with a history of acquired immunodeficiency syndrome (AIDS)-defining opportunity infection within the past 12 months; active hepatitis B and hepatitis C...",
+        "reasonFuzzy": "Infectious disease criteria are region-specific and involve multiple conditional laboratory thresholds."
+      },
+      {
+        "id": "NCT04270591-prior-therapy-excl",
+        "polarity": "exclusion",
+        "sourceText": "Anticancer therapy (including chemotherapy, targeted therapy, biotherapy, hormone therapy or other investigational agents) within 4 weeks or 5 times of half-lives...",
+        "reasonFuzzy": "Washout window and prior therapy restrictions are multifaceted."
+      },
+      {
+        "id": "NCT04270591-radiation-excl",
+        "polarity": "exclusion",
+        "sourceText": "Radical radiation therapy (including radiation therapy for over 25% bone marrow) within 4 weeks prior to the first dose... or local palliative radiation therapy within 2 weeks.",
+        "reasonFuzzy": "Radiation washout rules depend on the type and location of radiation."
+      },
+      {
+        "id": "NCT04270591-surgery-excl",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery or had significant traumatic injury within 28 days prior to the first dose...",
+        "reasonFuzzy": "Surgical washout window is not a simple standard typed lab or age check."
+      },
+      {
+        "id": "NCT04270591-meds-excl",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have to receive treatment (definite strong CYP3A4 inhibitor or inducer...)",
+        "reasonFuzzy": "Prohibited medication lists are extensive and require investigator discretion."
+      },
+      {
+        "id": "NCT04270591-investigator-excl",
+        "polarity": "exclusion",
+        "sourceText": "Any diseases or medical conditions, at the investigator's discretion, that may be unstable or influence their safety or study compliance...",
+        "reasonFuzzy": "Investigator discretion-based rule."
+      },
+      {
+        "id": "NCT04270591-ild-excl",
+        "polarity": "exclusion",
+        "sourceText": "Patients with a history of interstitial lung disease (ILD), drug-induced ILD, radiation pneumonitis which required steroid treatment or any evidence of clinically active ILD.",
+        "reasonFuzzy": "Specific medical history exclusion with steroid treatment qualifiers."
+      },
+      {
+        "id": "NCT04270591-pregnancy-excl",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant or breast-feeding patients. Pregnancy refers to the state of a woman between fertilization and the end of pregnancy confirmed by positive laboratory hCG test (> 5 mIU/mL).",
+        "reasonFuzzy": "Pregnancy and contraception criteria."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04270591",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04270591-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male and female patients ≥ 18 years of age (or having reached the age of majority according to local laws and regulations, if the age is > 18 years).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04270591-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "maximumAge: 80 Years",
+        "numberValue": 80
+      },
+      {
+        "id": "NCT04270591-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of NSCLC including PSC.",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT04270591-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Patients with stage IIIb or IIIc NSCLC who are not candidates for definitive surgical resection or concurrent chemoradiation or patients with stage IV NSCLC (AJCC version 8).",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT04270591-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance Status (PS): 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04270591-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count ≥ 1.5 × 109/L;",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT04270591-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 9 g/dL;",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT04270591-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count ≥ 75 × 109/L;",
+        "numberValue": 75
+      },
+      {
+        "id": "NCT04270591-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Serum total bilirubin ≤ ULN (≤ 3 × ULN for patients with Gilbert's syndrome);",
+        "numberValue": 1,
+        "stages": [],
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT04270591-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 2.5 × ULN (≤ 5.0 × ULN for patients with hepatic metastasis);",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT04270591-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 2.5 × ULN (≤ 5.0 × ULN for patients with hepatic metastasis);",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT04270591-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine clearance (calculated* or measured value**) ≥ 50 mL/min",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT04270591-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have symptomatic CNS metastasis which is neurologically unstable or those who have CNS disease requiring increase in the dose of steroid.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04270591-met-alterations",
+        "polarity": "inclusion",
+        "sourceText": "For Phase Ib study, patients should carry at least one of the following MET alterations (by local or Sponsor-designated central laboratory screening): METex14 skipping mutation who had previously treated by other MET inhibitor(s) or METex14 skipping mutation who had received 3 or more lines prior systemic therapies without MET inhibitor for the advanced NSCLC or MET amplification GCN ≥ 4 or MET/CEP7 ratio ≥ 2) or MET over-expression (IHC2+).",
+        "reasonFuzzy": "Complex multibranch inclusion criteria involving multiple MET alterations and different criteria for Phase Ib vs Phase II."
+      },
+      {
+        "id": "NCT04270591-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "For Phase II study, patients are not eligible for chemotherapy or refuse chemotherapy after well-informed or have failed one or two prior lines of systemic therapies for the advanced NSCLC.",
+        "reasonFuzzy": "Study part-dependent and conditional prior lines requirement."
+      },
+      {
+        "id": "NCT04270591-measurable",
+        "polarity": "inclusion",
+        "sourceText": "For Phase II study, at least one measurable lesion as per RECIST 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT04270591-egfr-mut",
+        "polarity": "exclusion",
+        "sourceText": "Patients with targetable activating EGFR mutation, ALK rearrangement, ROS1 rearrangement, BRAF mutation or NTRK fusion that have available standard of care therapies.",
+        "reasonFuzzy": "Multiple gene mutations and fusions combined with standard of care availability condition."
+      },
+      {
+        "id": "NCT04270591-other-malignancies",
+        "polarity": "exclusion",
+        "sourceText": "Evidence of past or current primary malignancies other than NSCLC (except for non-melanoma skin cancer, in situ breast cancer or in situ cervical carcinoma and superficial bladder cancer, or other cancer curatively treated and with no evidence of disease for at least 5 years).",
+        "reasonFuzzy": "Complex prior malignancy history with multiple exceptions and timeframes."
+      },
+      {
+        "id": "NCT04270591-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Subjects with clinically significant cardiovascular disease, including: NYHA Class III or higher congestive heart failure; History or current evidence of serious uncontrolled ventricular arrhythmias requiring drug therapy; Acute myocardial infarction, severe or unstable angina pectoris, coronary artery or peripheral artery bypass graft received within 6 months prior to the first dose; Left ventricular ejection fraction (LVEF) < 50%; Fridericia's corrected QT interval (QTcF) > 460 ms on ECG conducted during screening; Congenital long QT syndrome, or any known history of torsade de pointes (TdP), or family history of unexplained sudden death; Clinically uncontrolled hypertension...",
+        "reasonFuzzy": "Comprehensive cardiovascular exclusions spanning multiple conditions, thresholds, and NYHA classes."
+      },
+      {
+        "id": "NCT04270591-infections",
+        "polarity": "exclusion",
+        "sourceText": "Known HIV infection with a history of acquired immunodeficiency syndrome (AIDS)-defining opportunity infection within the past 12 months; active hepatitis B and hepatitis C. Patients whose test results meet one of the following will not be enrolled...",
+        "reasonFuzzy": "Multi-regional and complex viral hepatitis and HIV criteria with specific regional cutoffs."
+      }
+    ]
+  }
+}

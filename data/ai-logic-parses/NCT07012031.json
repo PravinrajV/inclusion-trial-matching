@@ -1,0 +1,608 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07012031",
+  "briefTitle": "Sotorasib in Combination With Trastuzumab Deruxtecan for the Treatment of Locally Advanced and Metastatic Non-small Cell Lung Cancer With a KRAS G12C Mutation",
+  "parsedAt": "2026-11-12T05:56:07.483Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07012031-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years at date of informed consent form signature",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years at date of informed consent form signature",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07012031-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2 (Karnofsky ≥ 60%)",
+      "numberValue": 2,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2 (Karnofsky ≥ 60%)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07012031-hgb",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin ≥ 9 g/dL (within 14 days of enrollment)",
+      "numberValue": 9,
+      "evidence_quote": "Hemoglobin ≥ 9 g/dL (within 14 days of enrollment)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07012031-anc",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count ≥ 1,500/mcL (within 14 days of enrollment)",
+      "numberValue": 1500,
+      "evidence_quote": "Absolute neutrophil count ≥ 1,500/mcL (within 14 days of enrollment)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07012031-plt",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets ≥ 100,000/mcL (within 14 days of enrollment)",
+      "numberValue": 100000,
+      "evidence_quote": "Platelets ≥ 100,000/mcL (within 14 days of enrollment)",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07012031-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have measurable disease, as defined by RECIST v1.1 using computed tomography (CT) or magnetic resonance imaging (MRI).",
+      "reasonFuzzy": "Measurable disease per RECIST v1.1 is an imaging-based assessment and subjective clinical judgment."
+    },
+    {
+      "id": "NCT07012031-life",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have a life expectancy of ≥ 12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07012031-prior-adc",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have had prior treatment with an antibody drug conjugate with a topoisomerase 1 inhibitor payload (i.e., sacituzumab govitecan, datopotomab deruxtecan, or trastuzumab deruxtecan) or with a topoisomerase inhibitor",
+      "reasonFuzzy": "Lists multiple specific prior therapies/classes making it complex for a single standard prior_therapy_excluded rule."
+    },
+    {
+      "id": "NCT07012031-kras",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have histologically or cytologically documented locally advanced or metastatic KRAS^G12C-mutant NSCLC",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07012031-prior-kras",
+      "polarity": "inclusion",
+      "sourceText": "that has previously been treated with a KRAS^G12C inhibitor AND an immune checkpoint inhibitor (ICI) AND chemotherapy, either given concurrently or sequentially",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07012031-prior-ici",
+      "polarity": "inclusion",
+      "sourceText": "that has previously been treated with a KRAS^G12C inhibitor AND an immune checkpoint inhibitor (ICI) AND chemotherapy, either given concurrently or sequentially",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07012031-prior-chemo",
+      "polarity": "inclusion",
+      "sourceText": "that has previously been treated with a KRAS^G12C inhibitor AND an immune checkpoint inhibitor (ICI) AND chemotherapy, either given concurrently or sequentially",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07012031-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST)(serum glutamic oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT)(serum glutamic pyruvic transaminase [SGPT]) ≤ 3 x institutional ULN (within 14 days of enrollment)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07012031-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST)(serum glutamic oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT)(serum glutamic pyruvic transaminase [SGPT]) ≤ 3 x institutional ULN (within 14 days of enrollment)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07012031-prior",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have histologically or cytologically documented locally advanced or metastatic KRAS^G12C-mutant NSCLC that has previously been treated with a KRAS^G12C inhibitor AND an immune checkpoint inhibitor (ICI) AND chemotherapy, either given concurrently or sequentially, UNLESS they have any contra-indications to any drug class described above",
+      "reasonFuzzy": "Multiple prior therapies required with complex exception rules for contraindications."
+    },
+    {
+      "id": "NCT07012031-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have measurable disease, as defined by RECIST v1.1 using computed tomography (CT) or magnetic resonance imaging (MRI). Previously irradiated lesions cannot be counted as target lesions unless there has been demonstrated progression in the lesions since radiotherapy and no other lesions are available for selection as target lesions",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07012031-active-brain",
+      "polarity": "inclusion",
+      "sourceText": "Patients with new or progressive brain metastases (active brain metastases) are eligible if the treating physician determines that immediate central nervous system (CNS) specific treatment is not required and is unlikely to be required during the first cycle of therapy",
+      "reasonFuzzy": "Involves active brain metastases under specific investigator discretion and treatment requirements, not a simple typed category."
+    },
+    {
+      "id": "NCT07012031-life",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have a life expectancy of ≥ 12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07012031-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Patients must be willing to undergo a mandatory pre-treatment biopsy (28 days before treatment starts on cycle 1 day 1 [C1D1]) for patients enrolled into the expansion phase (phase II). The pre-treatment biopsy is optional for patients enrolled into the dose escalation phase (phase I)",
+      "reasonFuzzy": "Willingness to undergo a biopsy is a procedure requirement, not a typed check."
+    },
+    {
+      "id": "NCT07012031-adc-excl",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have had prior treatment with an antibody drug conjugate with a topoisomerase 1 inhibitor payload (i.e., sacituzumab govitecan, datopotomab deruxtecan, or trastuzumab deruxtecan) or with a topoisomerase inhibitor",
+      "reasonFuzzy": "Prior therapy exclusions involving multiple named ADCs and drug classes are best left to fuzzy criteria."
+    },
+    {
+      "id": "NCT07012031-spinal",
+      "polarity": "exclusion",
+      "sourceText": "Patients with spinal cord compression, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms",
+      "reasonFuzzy": "Spinal cord compression is a complex condition not covered by typed checks."
+    },
+    {
+      "id": "NCT07012031-kras",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have histologically or cytologically documented locally advanced or metastatic KRAS^G12C-mutant NSCLC that has previously been treated with a KRAS^G12C inhibitor AND an immune checkpoint inhibitor (ICI) AND chemotherapy, either given concurrently or sequentially, UNLESS they have any contra-indications to any drug class described above",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07012031-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST)(serum glutamic oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT)(serum glutamic pyruvic transaminase [SGPT]) ≤ 3 x institutional ULN (within 14 days of enrollment) (< 5 x ULN in participants with liver metastases)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07012031-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST)(serum glutamic oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT)(serum glutamic pyruvic transaminase [SGPT]) ≤ 3 x institutional ULN (within 14 days of enrollment) (< 5 x ULN in participants with liver metastases)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07012031-brain",
+      "polarity": "inclusion",
+      "sourceText": "Patients with treated brain metastases are eligible with 1 day washout for stereotactic radiosurgery (SRS) and 2 weeks washout for whole brain radiation (WBRT)",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07012031-egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine ≤ 1.5 x institutional ULN OR creatinine clearance (CrCL) ≥ 30 mL/min/ as determined by (using actual body weight) (within 14 days of enrollment)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07012031-brain",
+      "polarity": "inclusion",
+      "sourceText": "Patients with treated brain metastases are eligible with 1 day washout for stereotactic radiosurgery (SRS) and 2 weeks washout for whole brain radiation (WBRT)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07012031-bili",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin ≤ 1.5 x institutional upper limit of normal (ULN) (within 14 days of enrollment), (< 3 x ULN in the presence of documented Gilbert's syndrome or liver metastases at baseline)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07012031-creat",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine ≤ 1.5 x institutional ULN OR creatinine clearance (CrCL) ≥ 30 mL/min/ as determined by (using actual body weight) (within 14 days of enrollment)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 8,
+      "unquoted": 6,
+      "unquotedItems": [
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Patients must have histologically or cytologically documented locally advanced or metastatic KRAS^G12C-mutant NSCLC"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "that has previously been treated with a KRAS^G12C inhibitor AND an immune checkpoint inhibitor (ICI) AND chemotherapy, either given concurrently or sequentially"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "that has previously been treated with a KRAS^G12C inhibitor AND an immune checkpoint inhibitor (ICI) AND chemotherapy, either given concurrently or sequentially"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "that has previously been treated with a KRAS^G12C inhibitor AND an immune checkpoint inhibitor (ICI) AND chemotherapy, either given concurrently or sequentially"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST)(serum glutamic oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT)(serum glutamic pyruvic transaminase [SGPT]) ≤ 3 "
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST)(serum glutamic oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT)(serum glutamic pyruvic transaminase [SGPT]) ≤ 3 "
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 9,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Patients must have histologically or cytologically documented locally advanced or metastatic KRAS^G12C-mutant NSCLC that has previously been treated with a KRAS"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST)(serum glutamic oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT)(serum glutamic pyruvic transaminase [SGPT]) ≤ 3 "
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST)(serum glutamic oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT)(serum glutamic pyruvic transaminase [SGPT]) ≤ 3 "
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 7,
+      "disagreements": 3,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable,untreated"
+        },
+        {
+          "side": "b-only",
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "value": "n:30"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 5,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "creatinine_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        }
+      ],
+      "normalizerTypedCount": 7
+    }
+  },
+  "runA": {
+    "typedEmitted": 14,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 4598
+  },
+  "runB": {
+    "typedEmitted": 12,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 5377
+  },
+  "ms": 18049,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07012031",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07012031-kras",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have histologically or cytologically documented locally advanced or metastatic KRAS^G12C-mutant NSCLC",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT07012031-prior-kras",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "that has previously been treated with a KRAS^G12C inhibitor AND an immune checkpoint inhibitor (ICI) AND chemotherapy, either given concurrently or sequentially",
+        "stringValue": "KRAS^G12C inhibitor"
+      },
+      {
+        "id": "NCT07012031-prior-ici",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "that has previously been treated with a KRAS^G12C inhibitor AND an immune checkpoint inhibitor (ICI) AND chemotherapy, either given concurrently or sequentially",
+        "stringValue": "immune checkpoint inhibitor"
+      },
+      {
+        "id": "NCT07012031-prior-chemo",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "that has previously been treated with a KRAS^G12C inhibitor AND an immune checkpoint inhibitor (ICI) AND chemotherapy, either given concurrently or sequentially",
+        "stringValue": "chemotherapy"
+      },
+      {
+        "id": "NCT07012031-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years at date of informed consent form signature",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07012031-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07012031-hgb",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 9 g/dL (within 14 days of enrollment)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT07012031-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count ≥ 1,500/mcL (within 14 days of enrollment)",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT07012031-plt",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 100,000/mcL (within 14 days of enrollment)",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT07012031-bili",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 x institutional upper limit of normal (ULN) (within 14 days of enrollment)",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "< 3 x ULN in the presence of documented Gilbert's syndrome or liver metastases at baseline"
+      },
+      {
+        "id": "NCT07012031-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST)(serum glutamic oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT)(serum glutamic pyruvic transaminase [SGPT]) ≤ 3 x institutional ULN (within 14 days of enrollment)",
+        "numberValue": 3,
+        "stages": [],
+        "stringValue": "< 5 x ULN in participants with liver metastases"
+      },
+      {
+        "id": "NCT07012031-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST)(serum glutamic oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT)(serum glutamic pyruvic transaminase [SGPT]) ≤ 3 x institutional ULN (within 14 days of enrollment)",
+        "numberValue": 3,
+        "stages": [],
+        "stringValue": "< 5 x ULN in participants with liver metastases"
+      },
+      {
+        "id": "NCT07012031-creat",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine ≤ 1.5 x institutional ULN OR creatinine clearance (CrCL) ≥ 30 mL/min/ as determined by (using actual body weight) (within 14 days of enrollment)",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "OR creatinine clearance (CrCL) >= 30 mL/min"
+      },
+      {
+        "id": "NCT07012031-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Patients with treated brain metastases are eligible with 1 day washout for stereotactic radiosurgery (SRS) and 2 weeks washout for whole brain radiation (WBRT)",
+        "allowedBrainMets": [
+          "treated_stable",
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07012031-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have measurable disease, as defined by RECIST v1.1 using computed tomography (CT) or magnetic resonance imaging (MRI).",
+        "reasonFuzzy": "Measurable disease per RECIST v1.1 is an imaging-based assessment and subjective clinical judgment."
+      },
+      {
+        "id": "NCT07012031-life",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have a life expectancy of ≥ 12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT07012031-prior-adc",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have had prior treatment with an antibody drug conjugate with a topoisomerase 1 inhibitor payload (i.e., sacituzumab govitecan, datopotomab deruxtecan, or trastuzumab deruxtecan) or with a topoisomerase inhibitor",
+        "reasonFuzzy": "Lists multiple specific prior therapies/classes making it complex for a single standard prior_therapy_excluded rule."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07012031",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07012031-kras",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have histologically or cytologically documented locally advanced or metastatic KRAS^G12C-mutant NSCLC that has previously been treated with a KRAS^G12C inhibitor AND an immune checkpoint inhibitor (ICI) AND chemotherapy, either given concurrently or sequentially, UNLESS they have any contra-indications to any drug class described above",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT07012031-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years at date of informed consent form signature",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07012031-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2 (Karnofsky ≥ 60%)",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07012031-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 9 g/dL (within 14 days of enrollment)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT07012031-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count ≥ 1,500/mcL (within 14 days of enrollment)",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT07012031-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 100,000/mcL (within 14 days of enrollment)",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT07012031-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 x institutional upper limit of normal (ULN) (within 14 days of enrollment), (< 3 x ULN in the presence of documented Gilbert's syndrome or liver metastases at baseline)",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "1.5 x ULN"
+      },
+      {
+        "id": "NCT07012031-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST)(serum glutamic oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT)(serum glutamic pyruvic transaminase [SGPT]) ≤ 3 x institutional ULN (within 14 days of enrollment) (< 5 x ULN in participants with liver metastases)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT07012031-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST)(serum glutamic oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT)(serum glutamic pyruvic transaminase [SGPT]) ≤ 3 x institutional ULN (within 14 days of enrollment) (< 5 x ULN in participants with liver metastases)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT07012031-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine ≤ 1.5 x institutional ULN OR creatinine clearance (CrCL) ≥ 30 mL/min/ as determined by (using actual body weight) (within 14 days of enrollment)",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "1.5 x ULN"
+      },
+      {
+        "id": "NCT07012031-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine ≤ 1.5 x institutional ULN OR creatinine clearance (CrCL) ≥ 30 mL/min/ as determined by (using actual body weight) (within 14 days of enrollment)",
+        "numberValue": 30,
+        "stages": [],
+        "stringValue": "30 mL/min"
+      },
+      {
+        "id": "NCT07012031-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Patients with treated brain metastases are eligible with 1 day washout for stereotactic radiosurgery (SRS) and 2 weeks washout for whole brain radiation (WBRT)",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07012031-prior",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have histologically or cytologically documented locally advanced or metastatic KRAS^G12C-mutant NSCLC that has previously been treated with a KRAS^G12C inhibitor AND an immune checkpoint inhibitor (ICI) AND chemotherapy, either given concurrently or sequentially, UNLESS they have any contra-indications to any drug class described above",
+        "reasonFuzzy": "Multiple prior therapies required with complex exception rules for contraindications."
+      },
+      {
+        "id": "NCT07012031-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have measurable disease, as defined by RECIST v1.1 using computed tomography (CT) or magnetic resonance imaging (MRI). Previously irradiated lesions cannot be counted as target lesions unless there has been demonstrated progression in the lesions since radiotherapy and no other lesions are available for selection as target lesions",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07012031-active-brain",
+        "polarity": "inclusion",
+        "sourceText": "Patients with new or progressive brain metastases (active brain metastases) are eligible if the treating physician determines that immediate central nervous system (CNS) specific treatment is not required and is unlikely to be required during the first cycle of therapy",
+        "reasonFuzzy": "Involves active brain metastases under specific investigator discretion and treatment requirements, not a simple typed category."
+      },
+      {
+        "id": "NCT07012031-life",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have a life expectancy of ≥ 12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT07012031-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Patients must be willing to undergo a mandatory pre-treatment biopsy (28 days before treatment starts on cycle 1 day 1 [C1D1]) for patients enrolled into the expansion phase (phase II). The pre-treatment biopsy is optional for patients enrolled into the dose escalation phase (phase I)",
+        "reasonFuzzy": "Willingness to undergo a biopsy is a procedure requirement, not a typed check."
+      },
+      {
+        "id": "NCT07012031-adc-excl",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have had prior treatment with an antibody drug conjugate with a topoisomerase 1 inhibitor payload (i.e., sacituzumab govitecan, datopotomab deruxtecan, or trastuzumab deruxtecan) or with a topoisomerase inhibitor",
+        "reasonFuzzy": "Prior therapy exclusions involving multiple named ADCs and drug classes are best left to fuzzy criteria."
+      },
+      {
+        "id": "NCT07012031-spinal",
+        "polarity": "exclusion",
+        "sourceText": "Patients with spinal cord compression, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms",
+        "reasonFuzzy": "Spinal cord compression is a complex condition not covered by typed checks."
+      }
+    ]
+  }
+}

@@ -1,0 +1,359 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06890598",
+  "briefTitle": "Study of Olomorasib (LY3537982) in Combination With Standard of Care in Participants With Resected or Unresectable KRAS G12C-mutant Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:55:49.428Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06890598-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Must have an ECOG performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Must have an ECOG performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06890598-lab",
+      "polarity": "inclusion",
+      "sourceText": "Must have adequate laboratory parameters.",
+      "reasonFuzzy": "Adequate laboratory parameters is a general statement without explicit cutoffs."
+    },
+    {
+      "id": "NCT06890598-pdl1-known",
+      "polarity": "inclusion",
+      "sourceText": "Must have known programmed death-ligand 1 (PD-L1) expression",
+      "reasonFuzzy": "Requires expression status to be known, but does not specify a minimum or maximum percentage cutoff."
+    },
+    {
+      "id": "NCT06890598-stage",
+      "polarity": "inclusion",
+      "sourceText": "Clinical Stage II-IIIB (N0, N1, N2) treated with presurgical chemoimmunotherapy, with residual tumor present at time of surgery. Patients with a pathologic complete response are not eligible. Pathologic Stage II-IIIB (N0, N1, N2) NSCLC treated with initial upfront resection. Part B - Clinical Stage III, unresectable NSCLC, without progression on concurrent platinum-based chemoradiotherapy.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06890598-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06890598-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Must have known programmed death-ligand 1 (PD-L1) expression",
+      "reasonFuzzy": "The trial requires PD-L1 expression to be known, but does not provide a specific numerical minimum or maximum cutoff."
+    },
+    {
+      "id": "NCT06890598-labs",
+      "polarity": "inclusion",
+      "sourceText": "Must have adequate laboratory parameters.",
+      "reasonFuzzy": "Adequate laboratory parameters lack specific numeric cutoffs in the text."
+    },
+    {
+      "id": "NCT06890598-stage",
+      "polarity": "inclusion",
+      "sourceText": "Clinical Stage II-IIIB (N0, N1, N2) treated with presurgical chemoimmunotherapy, with residual tumor present at time of surgery. Patients with a pathologic complete response are not eligible. Pathologic Stage II-IIIB (N0, N1, N2) NSCLC treated with initial upfront resection. Part B - Clinical Stage III, unresectable NSCLC, without progression on concurrent platinum-based chemoradiotherapy.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06890598-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Must have known programmed death-ligand 1 (PD-L1) expression",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06890598-egfr-excl",
+      "polarity": "exclusion",
+      "sourceText": "Have known, actionable changes in the EGFR or ALK genes.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06890598-alk-excl",
+      "polarity": "exclusion",
+      "sourceText": "Have known, actionable changes in the EGFR or ALK genes.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06890598-egfr",
+      "polarity": "exclusion",
+      "sourceText": "Have known, actionable changes in the EGFR or ALK genes.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06890598-alk",
+      "polarity": "exclusion",
+      "sourceText": "Have known, actionable changes in the EGFR or ALK genes.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06890598-kras",
+      "polarity": "inclusion",
+      "sourceText": "Must have disease with evidence of KRAS G12C mutation.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06890598-kras-variant",
+      "polarity": "inclusion",
+      "sourceText": "Must have disease with evidence of KRAS G12C mutation.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Clinical Stage II-IIIB (N0, N1, N2) treated with presurgical chemoimmunotherapy, with residual tumor present at time of surgery. Patients with a pathologic comp"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Clinical Stage II-IIIB (N0, N1, N2) treated with presurgical chemoimmunotherapy, with residual tumor present at time of surgery. Patients with a pathologic comp"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 5,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:0"
+        },
+        {
+          "side": "a-only",
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "a-only",
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "b-only",
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        },
+        {
+          "side": "b-only",
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12c"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 8,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2974
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2573
+  },
+  "ms": 13543,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06890598",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06890598-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Clinical Stage II-IIIB (N0, N1, N2) treated with presurgical chemoimmunotherapy, with residual tumor present at time of surgery. Patients with a pathologic complete response are not eligible. Pathologic Stage II-IIIB (N0, N1, N2) NSCLC treated with initial upfront resection. Part B - Clinical Stage III, unresectable NSCLC, without progression on concurrent platinum-based chemoradiotherapy.",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT06890598-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Must have disease with evidence of KRAS G12C mutation.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06890598-kras-variant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Must have disease with evidence of KRAS G12C mutation.",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT06890598-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Must have known programmed death-ligand 1 (PD-L1) expression",
+        "numberValue": 0
+      },
+      {
+        "id": "NCT06890598-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Must have an ECOG performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06890598-egfr-excl",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Have known, actionable changes in the EGFR or ALK genes.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06890598-alk-excl",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Have known, actionable changes in the EGFR or ALK genes.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06890598-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06890598-lab",
+        "polarity": "inclusion",
+        "sourceText": "Must have adequate laboratory parameters.",
+        "reasonFuzzy": "Adequate laboratory parameters is a general statement without explicit cutoffs."
+      },
+      {
+        "id": "NCT06890598-pdl1-known",
+        "polarity": "inclusion",
+        "sourceText": "Must have known programmed death-ligand 1 (PD-L1) expression",
+        "reasonFuzzy": "Requires expression status to be known, but does not specify a minimum or maximum percentage cutoff."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06890598",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06890598-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Clinical Stage II-IIIB (N0, N1, N2) treated with presurgical chemoimmunotherapy, with residual tumor present at time of surgery. Patients with a pathologic complete response are not eligible. Pathologic Stage II-IIIB (N0, N1, N2) NSCLC treated with initial upfront resection. Part B - Clinical Stage III, unresectable NSCLC, without progression on concurrent platinum-based chemoradiotherapy.",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT06890598-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Must have disease with evidence of KRAS G12C mutation.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06890598-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Must have disease with evidence of KRAS G12C mutation.",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT06890598-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Must have an ECOG performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06890598-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Have known, actionable changes in the EGFR or ALK genes.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06890598-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Have known, actionable changes in the EGFR or ALK genes.",
+        "presence": "absent"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06890598-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "Must have known programmed death-ligand 1 (PD-L1) expression",
+        "reasonFuzzy": "The trial requires PD-L1 expression to be known, but does not provide a specific numerical minimum or maximum cutoff."
+      },
+      {
+        "id": "NCT06890598-labs",
+        "polarity": "inclusion",
+        "sourceText": "Must have adequate laboratory parameters.",
+        "reasonFuzzy": "Adequate laboratory parameters lack specific numeric cutoffs in the text."
+      }
+    ]
+  }
+}

@@ -1,0 +1,398 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06242470",
+  "briefTitle": "A Study of MGC026 in Participants With Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T06:29:20.233Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06242470-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Adults ≥ 18 years old, able to provide informed consent",
+      "numberValue": 18,
+      "evidence_quote": "Adults ≥ 18 years old, able to provide informed consent",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06242470-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Availability of archival or formalin-fixed paraffin-embedded tumor tissue sample. Participants may undergo a fresh tumor biopsy to obtain a specimen for testing if an archival tumor sample is not available. Participants with no available archival tissue sample who cannot safely undergo a fresh biopsy as determined by consultation between the sponsor and investigator are eligible",
+      "reasonFuzzy": "Willingness or ability to undergo a biopsy or provide tissue is a subjective and procedural judgment."
+    },
+    {
+      "id": "NCT06242470-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1. Participants with metastatic CRPC without measurable disease are eligible.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06242470-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Must be willing to use highly effective methods of birth control from the time of consent through 7 months after discontinuation of MGC026.",
+      "reasonFuzzy": "Birth control compliance is a behavioral requirement, not a typed clinical check."
+    },
+    {
+      "id": "NCT06242470-pregnancy",
+      "polarity": "inclusion",
+      "sourceText": "Not pregnant or breastfeeding.",
+      "reasonFuzzy": "Pregnancy status is not a typed check in the allowed kinds list."
+    },
+    {
+      "id": "NCT06242470-psychiatric",
+      "polarity": "exclusion",
+      "sourceText": "Any underlying medical or psychiatric condition impairing participant's ability to receive, tolerate, or comply with the planned treatment or study procedures.",
+      "reasonFuzzy": "Investigator judgment regarding medical or psychiatric conditions is not a typed check."
+    },
+    {
+      "id": "NCT06242470-prior-other-cancer",
+      "polarity": "exclusion",
+      "sourceText": "Another cancer that required treatment within the past 2 years, with the exception of those with low risk of cancer spreading or death such as adequately treated non melanomatous skin cancer, localized prostate cancer (Gleason Score < 6), or carcinoma in situ.",
+      "reasonFuzzy": "Prior cancer history with complex timeframe and exception rules is not a simple typed prior therapy check."
+    },
+    {
+      "id": "NCT06242470-washout",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with surgery, systemic cancer therapy, immunotherapy, chimeric antigen receptor-T therapy, or anti-hormonal within protocol specified intervals.",
+      "reasonFuzzy": "Washout windows tied to protocol-specified intervals cannot be expressed as a single typed prior therapy check."
+    },
+    {
+      "id": "NCT06242470-lab-perf",
+      "polarity": "inclusion",
+      "sourceText": "Adequate performance and laboratory parameters",
+      "reasonFuzzy": "Laboratory parameters and performance status do not specify cutoffs or scales."
+    },
+    {
+      "id": "NCT06242470-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Availability of archival or formalin-fixed paraffin-embedded tumor tissue sample. Participants may undergo a fresh tumor biopsy to obtain a specimen for testing if an archival tumor sample is not available. Participants with no available archival tissue sample who cannot safely undergo a fresh biopsy as determined by consultation between the sponsor and investigator are eligible",
+      "reasonFuzzy": "Willingness or ability to undergo a biopsy or provide tissue is a subjective procedural requirement."
+    },
+    {
+      "id": "NCT06242470-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1. Participants with metastatic CRPC without measurable disease are eligible.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06242470-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Must be willing to use highly effective methods of birth control from the time of consent through 7 months after discontinuation of MGC026.",
+      "reasonFuzzy": "Birth control compliance is a subjective willingness criterion."
+    },
+    {
+      "id": "NCT06242470-pregnancy",
+      "polarity": "inclusion",
+      "sourceText": "Not pregnant or breastfeeding.",
+      "reasonFuzzy": "Pregnancy status is not a typed lab or genetic check."
+    },
+    {
+      "id": "NCT06242470-psych",
+      "polarity": "exclusion",
+      "sourceText": "Any underlying medical or psychiatric condition impairing participant's ability to receive, tolerate, or comply with the planned treatment or study procedures.",
+      "reasonFuzzy": "Underlying medical or psychiatric condition is investigator discretion."
+    },
+    {
+      "id": "NCT06242470-other-cancer",
+      "polarity": "exclusion",
+      "sourceText": "Another cancer that required treatment within the past 2 years, with the exception of those with low risk of cancer spreading or death such as adequately treated non melanomatous skin cancer, localized prostate cancer (Gleason Score < 6), or carcinoma in situ.",
+      "reasonFuzzy": "Prior other cancer history with exception clauses is complex and not a standard typed prior therapy check."
+    },
+    {
+      "id": "NCT06242470-intervals",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with surgery, systemic cancer therapy, immunotherapy, chimeric antigen receptor-T therapy, or anti-hormonal within protocol specified intervals.",
+      "reasonFuzzy": "Protocol-specified washout intervals are not standard typed cutoffs."
+    },
+    {
+      "id": "NCT06242470-brain",
+      "polarity": "inclusion",
+      "sourceText": "Patients with history of prior central nervous system (CNS) metastasis must have been treated, be asymptomatic, and not have concurrent treatment for CNS disease, progression of CNS metastases on magnetic resonance imaging, computed tomography or positron emission tomography, or history of leptomeningeal disease or cord compression at the time of enrollment.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06242470-prior-adc",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with any B7-H3 targeted agent for cancer or any ADC with a topoisomerase payload.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06242470-brain",
+      "polarity": "exclusion",
+      "sourceText": "Patients with history of prior central nervous system (CNS) metastasis must have been treated, be asymptomatic, and not have concurrent treatment for CNS disease, progression of CNS metastases on magnetic resonance imaging, computed tomography or positron emission tomography, or history of leptomeningeal disease or cord compression at the time of enrollment.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06242470-histology",
+      "polarity": "inclusion",
+      "sourceText": "Unresectable, locally advanced or metastatic solid tumors including: squamous cell cancer (SCC) of the head and neck, esophageal SCC, squamous and non-squamous non-small cell lung cancer, small cell lung cancer, bladder cancer, sarcoma, endometrial cancer, melanoma, castration resistant prostate cancer, breast cancer, ovarian cancer, cervical cancer, colorectal cancer gastric or gastroesophageal cancer, pancreatic carcinoma, clear cell renal cell cancer or hepatocellular cancer.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06242470-prior-b7h3",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with any B7-H3 targeted agent for cancer or any ADC with a topoisomerase payload.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 3,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:adc with a topoisomerase payload"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos,squamous"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:b7-h3 targeted agent"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 7694
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 10907
+  },
+  "ms": 26595,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06242470",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06242470-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adults ≥ 18 years old, able to provide informed consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06242470-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Unresectable, locally advanced or metastatic solid tumors including: squamous cell cancer (SCC) of the head and neck, esophageal SCC, squamous and non-squamous non-small cell lung cancer, small cell lung cancer, bladder cancer, sarcoma, endometrial cancer, melanoma, castration resistant prostate cancer, breast cancer, ovarian cancer, cervical cancer, colorectal cancer gastric or gastroesophageal cancer, pancreatic carcinoma, clear cell renal cell cancer or hepatocellular cancer.",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06242470-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Patients with history of prior central nervous system (CNS) metastasis must have been treated, be asymptomatic, and not have concurrent treatment for CNS disease, progression of CNS metastases on magnetic resonance imaging, computed tomography or positron emission tomography, or history of leptomeningeal disease or cord compression at the time of enrollment.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06242470-prior-b7h3",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with any B7-H3 targeted agent for cancer or any ADC with a topoisomerase payload.",
+        "stringValue": "B7-H3 targeted agent"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06242470-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Availability of archival or formalin-fixed paraffin-embedded tumor tissue sample. Participants may undergo a fresh tumor biopsy to obtain a specimen for testing if an archival tumor sample is not available. Participants with no available archival tissue sample who cannot safely undergo a fresh biopsy as determined by consultation between the sponsor and investigator are eligible",
+        "reasonFuzzy": "Willingness or ability to undergo a biopsy or provide tissue is a subjective and procedural judgment."
+      },
+      {
+        "id": "NCT06242470-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1. Participants with metastatic CRPC without measurable disease are eligible.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06242470-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Must be willing to use highly effective methods of birth control from the time of consent through 7 months after discontinuation of MGC026.",
+        "reasonFuzzy": "Birth control compliance is a behavioral requirement, not a typed clinical check."
+      },
+      {
+        "id": "NCT06242470-pregnancy",
+        "polarity": "inclusion",
+        "sourceText": "Not pregnant or breastfeeding.",
+        "reasonFuzzy": "Pregnancy status is not a typed check in the allowed kinds list."
+      },
+      {
+        "id": "NCT06242470-psychiatric",
+        "polarity": "exclusion",
+        "sourceText": "Any underlying medical or psychiatric condition impairing participant's ability to receive, tolerate, or comply with the planned treatment or study procedures.",
+        "reasonFuzzy": "Investigator judgment regarding medical or psychiatric conditions is not a typed check."
+      },
+      {
+        "id": "NCT06242470-prior-other-cancer",
+        "polarity": "exclusion",
+        "sourceText": "Another cancer that required treatment within the past 2 years, with the exception of those with low risk of cancer spreading or death such as adequately treated non melanomatous skin cancer, localized prostate cancer (Gleason Score < 6), or carcinoma in situ.",
+        "reasonFuzzy": "Prior cancer history with complex timeframe and exception rules is not a simple typed prior therapy check."
+      },
+      {
+        "id": "NCT06242470-washout",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with surgery, systemic cancer therapy, immunotherapy, chimeric antigen receptor-T therapy, or anti-hormonal within protocol specified intervals.",
+        "reasonFuzzy": "Washout windows tied to protocol-specified intervals cannot be expressed as a single typed prior therapy check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06242470",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06242470-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adults ≥ 18 years old, able to provide informed consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06242470-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Unresectable, locally advanced or metastatic solid tumors including: squamous cell cancer (SCC) of the head and neck, esophageal SCC, squamous and non-squamous non-small cell lung cancer, small cell lung cancer, bladder cancer, sarcoma, endometrial cancer, melanoma, castration resistant prostate cancer, breast cancer, ovarian cancer, cervical cancer, colorectal cancer gastric or gastroesophageal cancer, pancreatic carcinoma, clear cell renal cell cancer or hepatocellular cancer.",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06242470-prior-b7h3",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with any B7-H3 targeted agent for cancer or any ADC with a topoisomerase payload.",
+        "stringValue": "B7-H3 targeted agent"
+      },
+      {
+        "id": "NCT06242470-prior-adc",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with any B7-H3 targeted agent for cancer or any ADC with a topoisomerase payload.",
+        "stringValue": "ADC with a topoisomerase payload"
+      },
+      {
+        "id": "NCT06242470-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Patients with history of prior central nervous system (CNS) metastasis must have been treated, be asymptomatic, and not have concurrent treatment for CNS disease, progression of CNS metastases on magnetic resonance imaging, computed tomography or positron emission tomography, or history of leptomeningeal disease or cord compression at the time of enrollment.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06242470-lab-perf",
+        "polarity": "inclusion",
+        "sourceText": "Adequate performance and laboratory parameters",
+        "reasonFuzzy": "Laboratory parameters and performance status do not specify cutoffs or scales."
+      },
+      {
+        "id": "NCT06242470-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Availability of archival or formalin-fixed paraffin-embedded tumor tissue sample. Participants may undergo a fresh tumor biopsy to obtain a specimen for testing if an archival tumor sample is not available. Participants with no available archival tissue sample who cannot safely undergo a fresh biopsy as determined by consultation between the sponsor and investigator are eligible",
+        "reasonFuzzy": "Willingness or ability to undergo a biopsy or provide tissue is a subjective procedural requirement."
+      },
+      {
+        "id": "NCT06242470-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1. Participants with metastatic CRPC without measurable disease are eligible.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06242470-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Must be willing to use highly effective methods of birth control from the time of consent through 7 months after discontinuation of MGC026.",
+        "reasonFuzzy": "Birth control compliance is a subjective willingness criterion."
+      },
+      {
+        "id": "NCT06242470-pregnancy",
+        "polarity": "inclusion",
+        "sourceText": "Not pregnant or breastfeeding.",
+        "reasonFuzzy": "Pregnancy status is not a typed lab or genetic check."
+      },
+      {
+        "id": "NCT06242470-psych",
+        "polarity": "exclusion",
+        "sourceText": "Any underlying medical or psychiatric condition impairing participant's ability to receive, tolerate, or comply with the planned treatment or study procedures.",
+        "reasonFuzzy": "Underlying medical or psychiatric condition is investigator discretion."
+      },
+      {
+        "id": "NCT06242470-other-cancer",
+        "polarity": "exclusion",
+        "sourceText": "Another cancer that required treatment within the past 2 years, with the exception of those with low risk of cancer spreading or death such as adequately treated non melanomatous skin cancer, localized prostate cancer (Gleason Score < 6), or carcinoma in situ.",
+        "reasonFuzzy": "Prior other cancer history with exception clauses is complex and not a standard typed prior therapy check."
+      },
+      {
+        "id": "NCT06242470-intervals",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with surgery, systemic cancer therapy, immunotherapy, chimeric antigen receptor-T therapy, or anti-hormonal within protocol specified intervals.",
+        "reasonFuzzy": "Protocol-specified washout intervals are not standard typed cutoffs."
+      }
+    ]
+  }
+}

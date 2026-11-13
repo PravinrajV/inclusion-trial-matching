@@ -1,0 +1,574 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05669430",
+  "briefTitle": "A Study of GV20-0251 Monotherapy and GV20-0251 in Combination With Pembrolizumab in Participants With Solid Tumor Malignancies",
+  "parsedAt": "2026-11-12T06:15:22.942Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05669430-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Participants ≥18 years of age",
+      "numberValue": 18,
+      "evidence_quote": "Participants ≥18 years of age",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05669430-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05669430-solid",
+      "polarity": "inclusion",
+      "sourceText": "Previously treated, histologically-confirmed advanced solid malignancy with progressive disease requiring therapy",
+      "reasonFuzzy": "General solid tumor inclusion rule without a specific NSCLC stage list."
+    },
+    {
+      "id": "NCT05669430-refractory",
+      "polarity": "inclusion",
+      "sourceText": "Refractory or intolerant to standard therapy(ies)",
+      "reasonFuzzy": "Refractory/intolerance is a general prior treatment status."
+    },
+    {
+      "id": "NCT05669430-std-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Must have received, be not eligible or decline standard of care therapy",
+      "reasonFuzzy": "Subjective trial eligibility condition regarding standard of care."
+    },
+    {
+      "id": "NCT05669430-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST version 1.1)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05669430-checkpoint",
+      "polarity": "inclusion",
+      "sourceText": "For participants who have received prior treatment with a checkpoint inhibitor there must be documented disease progression",
+      "reasonFuzzy": "Conditional prior treatment rule for checkpoint inhibitors."
+    },
+    {
+      "id": "NCT05669430-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of ≥ 12 weeks in Parts A and C and ≥ 24 weeks in Parts B and D",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05669430-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Participants must be willing to provide fresh tumor biopsy (core biopsy) both pre-treatment (Parts A, B, C and D) and on-treatment (Parts A and B), if clinically feasible",
+      "reasonFuzzy": "Willingness to undergo a biopsy procedure is subjective."
+    },
+    {
+      "id": "NCT05669430-second-malignancy",
+      "polarity": "inclusion",
+      "sourceText": "Disease-free of active second/secondary or prior malignancies for ≥ 2 years",
+      "reasonFuzzy": "History of prior malignancies is not a standard typed cancer-specific check."
+    },
+    {
+      "id": "NCT05669430-labs",
+      "polarity": "inclusion",
+      "sourceText": "Laboratory test results within the required parameters",
+      "reasonFuzzy": "General laboratory parameter requirement without specific cutoffs listed."
+    },
+    {
+      "id": "NCT05669430-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Women of child bearing potential (WOCBP) and men must agree to use adequate contraception",
+      "reasonFuzzy": "Contraception compliance requirement."
+    },
+    {
+      "id": "NCT05669430-tumor-types",
+      "polarity": "inclusion",
+      "sourceText": "Parts B, C and D may include the following tumor types: Endometrial carcinoma, Squamous head and neck carcinoma, Cutaneous melanoma, Non-small cell lung cancer, Proficient MMR (pMMR)/MSS adenocarcinoma of the colon or rectum (Parts C and D only)",
+      "reasonFuzzy": "Lists specific tumor types for specific study parts rather than a primary histology check."
+    },
+    {
+      "id": "NCT05669430-leukemia",
+      "polarity": "exclusion",
+      "sourceText": "Participant with acute leukemia or CLL (Parts A and B only)",
+      "reasonFuzzy": "Exclusion of acute leukemia or CLL."
+    },
+    {
+      "id": "NCT05669430-heart",
+      "polarity": "exclusion",
+      "sourceText": "Participant with heart disease or unstable arrhythmia",
+      "reasonFuzzy": "Heart disease or arrhythmia is a clinical exclusion."
+    },
+    {
+      "id": "NCT05669430-infection",
+      "polarity": "exclusion",
+      "sourceText": "Active, uncontrolled bacterial, viral, or fungal infections requiring systemic therapy",
+      "reasonFuzzy": "Active infection exclusion."
+    },
+    {
+      "id": "NCT05669430-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Participant has active autoimmune disease or other medical conditions requiring chronic systemic steroid or immunosuppressive therapy",
+      "reasonFuzzy": "Autoimmune disease or chronic steroid/immunosuppressive therapy exclusion."
+    },
+    {
+      "id": "NCT05669430-transplant",
+      "polarity": "exclusion",
+      "sourceText": "History of major organ transplant",
+      "reasonFuzzy": "Organ transplant history exclusion."
+    },
+    {
+      "id": "NCT05669430-bm-transplant",
+      "polarity": "exclusion",
+      "sourceText": "History of a bone marrow transplant",
+      "reasonFuzzy": "Bone marrow transplant history exclusion."
+    },
+    {
+      "id": "NCT05669430-brain-mets",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic central nervous system (CNS) malignancy or metastasis",
+      "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT05669430-serious-disease",
+      "polarity": "exclusion",
+      "sourceText": "Serious nonmalignant disease",
+      "reasonFuzzy": "General exclusion for serious nonmalignant disease."
+    },
+    {
+      "id": "NCT05669430-pregnant",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant or nursing women",
+      "reasonFuzzy": "Pregnancy or nursing exclusion."
+    },
+    {
+      "id": "NCT05669430-prior-treatments",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with PD-1 and equivalent immune modulators or major surgery prior to the first dose of study medication",
+      "reasonFuzzy": "Washout window or prior therapy restriction for PD-1/surgery without specific cutoff."
+    },
+    {
+      "id": "NCT05669430-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Participants who are currently receiving any other investigational agent or have received an investigational agent within 4 weeks prior to the first dose of study medication",
+      "reasonFuzzy": "Investigational agent washout window."
+    },
+    {
+      "id": "NCT05669430-anticancer",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with any anticancer treatments with 2-weeks prior to the first dose of study medication",
+      "reasonFuzzy": "Anticancer treatment washout window."
+    },
+    {
+      "id": "NCT05669430-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Radiation for symptomatic lesions must have been completed prior to the first dose of study medication",
+      "reasonFuzzy": "Radiation completion requirement prior to dosing."
+    },
+    {
+      "id": "NCT05669430-liver-mets",
+      "polarity": "exclusion",
+      "sourceText": "Participants with liver metastases unless approved by the Sponsor",
+      "reasonFuzzy": "Liver metastases exclusion with sponsor approval exception."
+    },
+    {
+      "id": "NCT05669430-ae",
+      "polarity": "exclusion",
+      "sourceText": "Any history of an immune related ≥ Grade 3 AE attributed to prior cancer immunotherapy",
+      "reasonFuzzy": "Prior immune-related adverse events exclusion."
+    },
+    {
+      "id": "NCT05669430-malignancy-history",
+      "polarity": "exclusion",
+      "sourceText": "Has a known additional malignancy that is progressing or has required active treatment within the past 2 years from C1D1",
+      "reasonFuzzy": "Additional malignancy history exclusion."
+    },
+    {
+      "id": "NCT05669430-lung-rad",
+      "polarity": "exclusion",
+      "sourceText": "Has received radiation therapy to the lung that is higher than 30 Gy within 6 months prior to C1D1 for NSCLC (Parts C and D only)",
+      "reasonFuzzy": "Lung radiation dose and time threshold exclusion specific to NSCLC."
+    },
+    {
+      "id": "NCT05669430-malignancy-history-2",
+      "polarity": "exclusion",
+      "sourceText": "Has a known additional malignancy that is progressing or has required active treatment within the past 2 years from C1D1 (Parts C and D only)",
+      "reasonFuzzy": "Duplicate additional malignancy history exclusion for specific parts."
+    },
+    {
+      "id": "NCT05669430-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Has severe hypersensitivity ( ≥ Grade 3) to Pembrolizumab and/or any of its excipients (Parts C and D only)",
+      "reasonFuzzy": "Hypersensitivity to study drug exclusion."
+    },
+    {
+      "id": "NCT05669430-pneumonitis",
+      "polarity": "exclusion",
+      "sourceText": "Has a history of (non-infectious) pneumonitis / interstitial lung disease that required steroids or has current pneumonitis / interstitial lung disease (Parts C and D only)",
+      "reasonFuzzy": "Pneumonitis or interstitial lung disease history exclusion."
+    },
+    {
+      "id": "NCT05669430-investigator-discretion",
+      "polarity": "exclusion",
+      "sourceText": "Has a condition, therapy, laboratory abnormality, or circumstance that could confound study results or interfere with full participation, making it unsuitable for the participant, as determined by the treating Investigator (Parts C and D only)",
+      "reasonFuzzy": "Investigator discretion-based exclusion."
+    },
+    {
+      "id": "NCT05669430-substance-abuse",
+      "polarity": "exclusion",
+      "sourceText": "Active substance abuse",
+      "reasonFuzzy": "Active substance abuse exclusion."
+    },
+    {
+      "id": "NCT05669430-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST version 1.1)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05669430-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of ≥ 12 weeks in Parts A and C and ≥ 24 weeks in Parts B and D",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05669430-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Participants must be willing to provide fresh tumor biopsy (core biopsy) both pre-treatment (Parts A, B, C and D) and on-treatment (Parts A and B), if clinically feasible",
+      "reasonFuzzy": "Willingness to undergo a biopsy procedure is a judgment-based item."
+    },
+    {
+      "id": "NCT05669430-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic central nervous system (CNS) malignancy or metastasis",
+      "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT05669430-investigator",
+      "polarity": "exclusion",
+      "sourceText": "Has a condition, therapy, laboratory abnormality, or circumstance that could confound study results or interfere with full participation, making it unsuitable for the participant, as determined by the treating Investigator (Parts C and D only)",
+      "reasonFuzzy": "Investigator discretion and opinion are subjective and cannot be expressed as a typed check."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 33,
+    "attempts": 1,
+    "ms": 7551
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3271
+  },
+  "ms": 18729,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05669430",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05669430-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants ≥18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05669430-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05669430-solid",
+        "polarity": "inclusion",
+        "sourceText": "Previously treated, histologically-confirmed advanced solid malignancy with progressive disease requiring therapy",
+        "reasonFuzzy": "General solid tumor inclusion rule without a specific NSCLC stage list."
+      },
+      {
+        "id": "NCT05669430-refractory",
+        "polarity": "inclusion",
+        "sourceText": "Refractory or intolerant to standard therapy(ies)",
+        "reasonFuzzy": "Refractory/intolerance is a general prior treatment status."
+      },
+      {
+        "id": "NCT05669430-std-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Must have received, be not eligible or decline standard of care therapy",
+        "reasonFuzzy": "Subjective trial eligibility condition regarding standard of care."
+      },
+      {
+        "id": "NCT05669430-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST version 1.1)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05669430-checkpoint",
+        "polarity": "inclusion",
+        "sourceText": "For participants who have received prior treatment with a checkpoint inhibitor there must be documented disease progression",
+        "reasonFuzzy": "Conditional prior treatment rule for checkpoint inhibitors."
+      },
+      {
+        "id": "NCT05669430-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of ≥ 12 weeks in Parts A and C and ≥ 24 weeks in Parts B and D",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05669430-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Participants must be willing to provide fresh tumor biopsy (core biopsy) both pre-treatment (Parts A, B, C and D) and on-treatment (Parts A and B), if clinically feasible",
+        "reasonFuzzy": "Willingness to undergo a biopsy procedure is subjective."
+      },
+      {
+        "id": "NCT05669430-second-malignancy",
+        "polarity": "inclusion",
+        "sourceText": "Disease-free of active second/secondary or prior malignancies for ≥ 2 years",
+        "reasonFuzzy": "History of prior malignancies is not a standard typed cancer-specific check."
+      },
+      {
+        "id": "NCT05669430-labs",
+        "polarity": "inclusion",
+        "sourceText": "Laboratory test results within the required parameters",
+        "reasonFuzzy": "General laboratory parameter requirement without specific cutoffs listed."
+      },
+      {
+        "id": "NCT05669430-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Women of child bearing potential (WOCBP) and men must agree to use adequate contraception",
+        "reasonFuzzy": "Contraception compliance requirement."
+      },
+      {
+        "id": "NCT05669430-tumor-types",
+        "polarity": "inclusion",
+        "sourceText": "Parts B, C and D may include the following tumor types: Endometrial carcinoma, Squamous head and neck carcinoma, Cutaneous melanoma, Non-small cell lung cancer, Proficient MMR (pMMR)/MSS adenocarcinoma of the colon or rectum (Parts C and D only)",
+        "reasonFuzzy": "Lists specific tumor types for specific study parts rather than a primary histology check."
+      },
+      {
+        "id": "NCT05669430-leukemia",
+        "polarity": "exclusion",
+        "sourceText": "Participant with acute leukemia or CLL (Parts A and B only)",
+        "reasonFuzzy": "Exclusion of acute leukemia or CLL."
+      },
+      {
+        "id": "NCT05669430-heart",
+        "polarity": "exclusion",
+        "sourceText": "Participant with heart disease or unstable arrhythmia",
+        "reasonFuzzy": "Heart disease or arrhythmia is a clinical exclusion."
+      },
+      {
+        "id": "NCT05669430-infection",
+        "polarity": "exclusion",
+        "sourceText": "Active, uncontrolled bacterial, viral, or fungal infections requiring systemic therapy",
+        "reasonFuzzy": "Active infection exclusion."
+      },
+      {
+        "id": "NCT05669430-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Participant has active autoimmune disease or other medical conditions requiring chronic systemic steroid or immunosuppressive therapy",
+        "reasonFuzzy": "Autoimmune disease or chronic steroid/immunosuppressive therapy exclusion."
+      },
+      {
+        "id": "NCT05669430-transplant",
+        "polarity": "exclusion",
+        "sourceText": "History of major organ transplant",
+        "reasonFuzzy": "Organ transplant history exclusion."
+      },
+      {
+        "id": "NCT05669430-bm-transplant",
+        "polarity": "exclusion",
+        "sourceText": "History of a bone marrow transplant",
+        "reasonFuzzy": "Bone marrow transplant history exclusion."
+      },
+      {
+        "id": "NCT05669430-brain-mets",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic central nervous system (CNS) malignancy or metastasis",
+        "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      },
+      {
+        "id": "NCT05669430-serious-disease",
+        "polarity": "exclusion",
+        "sourceText": "Serious nonmalignant disease",
+        "reasonFuzzy": "General exclusion for serious nonmalignant disease."
+      },
+      {
+        "id": "NCT05669430-pregnant",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant or nursing women",
+        "reasonFuzzy": "Pregnancy or nursing exclusion."
+      },
+      {
+        "id": "NCT05669430-prior-treatments",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with PD-1 and equivalent immune modulators or major surgery prior to the first dose of study medication",
+        "reasonFuzzy": "Washout window or prior therapy restriction for PD-1/surgery without specific cutoff."
+      },
+      {
+        "id": "NCT05669430-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Participants who are currently receiving any other investigational agent or have received an investigational agent within 4 weeks prior to the first dose of study medication",
+        "reasonFuzzy": "Investigational agent washout window."
+      },
+      {
+        "id": "NCT05669430-anticancer",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with any anticancer treatments with 2-weeks prior to the first dose of study medication",
+        "reasonFuzzy": "Anticancer treatment washout window."
+      },
+      {
+        "id": "NCT05669430-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Radiation for symptomatic lesions must have been completed prior to the first dose of study medication",
+        "reasonFuzzy": "Radiation completion requirement prior to dosing."
+      },
+      {
+        "id": "NCT05669430-liver-mets",
+        "polarity": "exclusion",
+        "sourceText": "Participants with liver metastases unless approved by the Sponsor",
+        "reasonFuzzy": "Liver metastases exclusion with sponsor approval exception."
+      },
+      {
+        "id": "NCT05669430-ae",
+        "polarity": "exclusion",
+        "sourceText": "Any history of an immune related ≥ Grade 3 AE attributed to prior cancer immunotherapy",
+        "reasonFuzzy": "Prior immune-related adverse events exclusion."
+      },
+      {
+        "id": "NCT05669430-malignancy-history",
+        "polarity": "exclusion",
+        "sourceText": "Has a known additional malignancy that is progressing or has required active treatment within the past 2 years from C1D1",
+        "reasonFuzzy": "Additional malignancy history exclusion."
+      },
+      {
+        "id": "NCT05669430-lung-rad",
+        "polarity": "exclusion",
+        "sourceText": "Has received radiation therapy to the lung that is higher than 30 Gy within 6 months prior to C1D1 for NSCLC (Parts C and D only)",
+        "reasonFuzzy": "Lung radiation dose and time threshold exclusion specific to NSCLC."
+      },
+      {
+        "id": "NCT05669430-malignancy-history-2",
+        "polarity": "exclusion",
+        "sourceText": "Has a known additional malignancy that is progressing or has required active treatment within the past 2 years from C1D1 (Parts C and D only)",
+        "reasonFuzzy": "Duplicate additional malignancy history exclusion for specific parts."
+      },
+      {
+        "id": "NCT05669430-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Has severe hypersensitivity ( ≥ Grade 3) to Pembrolizumab and/or any of its excipients (Parts C and D only)",
+        "reasonFuzzy": "Hypersensitivity to study drug exclusion."
+      },
+      {
+        "id": "NCT05669430-pneumonitis",
+        "polarity": "exclusion",
+        "sourceText": "Has a history of (non-infectious) pneumonitis / interstitial lung disease that required steroids or has current pneumonitis / interstitial lung disease (Parts C and D only)",
+        "reasonFuzzy": "Pneumonitis or interstitial lung disease history exclusion."
+      },
+      {
+        "id": "NCT05669430-investigator-discretion",
+        "polarity": "exclusion",
+        "sourceText": "Has a condition, therapy, laboratory abnormality, or circumstance that could confound study results or interfere with full participation, making it unsuitable for the participant, as determined by the treating Investigator (Parts C and D only)",
+        "reasonFuzzy": "Investigator discretion-based exclusion."
+      },
+      {
+        "id": "NCT05669430-substance-abuse",
+        "polarity": "exclusion",
+        "sourceText": "Active substance abuse",
+        "reasonFuzzy": "Active substance abuse exclusion."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05669430",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05669430-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants ≥18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05669430-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05669430-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST version 1.1)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05669430-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of ≥ 12 weeks in Parts A and C and ≥ 24 weeks in Parts B and D",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05669430-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Participants must be willing to provide fresh tumor biopsy (core biopsy) both pre-treatment (Parts A, B, C and D) and on-treatment (Parts A and B), if clinically feasible",
+        "reasonFuzzy": "Willingness to undergo a biopsy procedure is a judgment-based item."
+      },
+      {
+        "id": "NCT05669430-brain",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic central nervous system (CNS) malignancy or metastasis",
+        "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      },
+      {
+        "id": "NCT05669430-investigator",
+        "polarity": "exclusion",
+        "sourceText": "Has a condition, therapy, laboratory abnormality, or circumstance that could confound study results or interfere with full participation, making it unsuitable for the participant, as determined by the treating Investigator (Parts C and D only)",
+        "reasonFuzzy": "Investigator discretion and opinion are subjective and cannot be expressed as a typed check."
+      }
+    ]
+  }
+}

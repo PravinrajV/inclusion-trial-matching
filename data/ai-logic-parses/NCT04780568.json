@@ -1,0 +1,582 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04780568",
+  "briefTitle": "Osimertinib and Tegavivint as First-Line Therapy for the Treatment of Metastatic EGFR-Mutant Non-small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:44:01.370Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04780568-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age >= 18 years. Children are excluded from this study because neither dosing nor safety data are currently available for AZD9291 or BC2059 in patients < 18 years of age",
+      "numberValue": 18,
+      "evidence_quote": "Age >= 18 years. Children are excluded from this study because neither dosing nor safety data are currently available for AZD9291 or BC2059 in patients < 18 years of age",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04780568-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Pathology-confirmed metastatic NSCLC",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Pathology-confirmed metastatic NSCLC",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04780568-anc",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count >= 1,500/mcL",
+      "numberValue": 1500,
+      "evidence_quote": "Absolute neutrophil count >= 1,500/mcL",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04780568-platelets",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets >= 100,000/mcL",
+      "numberValue": 100000,
+      "evidence_quote": "Platelets >= 100,000/mcL",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04780568-prior_therapy",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with an EGFR TKI in any setting",
+      "stringValue": "EGFR TKI",
+      "evidence_quote": "Prior treatment with an EGFR TKI in any setting",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04780568-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease as defined by Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1 criteria",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04780568-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy > 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT04780568-brain_active",
+      "polarity": "inclusion",
+      "sourceText": "Patients with new or progressive brain metastases (active brain metastases) or leptomeningeal disease are eligible if the treating physician determines that immediate central nervous system (CNS)-specific treatment is not required",
+      "reasonFuzzy": "Includes investigator discretion and complex conditions for active brain metastases that cannot be captured in a standard typed check."
+    },
+    {
+      "id": "NCT04780568-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase ALT (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN and =< 5 x institutional ULN for patients with liver metastases",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04780568-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase ALT (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN and =< 5 x institutional ULN for patients with liver metastases",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04780568-egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine within 1.5 x ULN OR glomerular filtration rate (GFR) >= 50 mL/min/1.73 m^2 (measured or calculated by Cockcroft and Gault equation) -confirmation of creatinine clearance is only required for patients with creatinine levels above institutional upper limit of normal",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04780568-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease as defined by Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1 criteria",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04780568-pill",
+      "polarity": "inclusion",
+      "sourceText": "The patient must be able to swallow pills",
+      "reasonFuzzy": "Ability to swallow pills is a functional assessment."
+    },
+    {
+      "id": "NCT04780568-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy > 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT04780568-brain",
+      "polarity": "inclusion",
+      "sourceText": "Patients with new or progressive brain metastases (active brain metastases) or leptomeningeal disease are eligible if the treating physician determines that immediate central nervous system (CNS)-specific treatment is not required and is unlikely to be required during the first cycle of therapy. Clinical stability on a stable dose of decadron is permitted",
+      "reasonFuzzy": "Complex investigator discretion and conditions for brain metastases."
+    },
+    {
+      "id": "NCT04780568-investigator",
+      "polarity": "exclusion",
+      "sourceText": "Judgment by the investigator that the patient should not participate in the study if the patient is unlikely to comply with study procedures, restrictions, or requirements",
+      "reasonFuzzy": "Investigator discretion is not a typed check."
+    },
+    {
+      "id": "NCT04780568-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase ALT (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN and =< 5 x institutional ULN for patients with liver metastases",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04780568-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase ALT (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN and =< 5 x institutional ULN for patients with liver metastases",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04780568-egfr-min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine within 1.5 x ULN OR glomerular filtration rate (GFR) >= 50 mL/min/1.73 m^2 (measured or calculated by Cockcroft and Gault equation) -confirmation of creatinine clearance is only required for patients with creatinine levels above institutional upper limit of normal",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04780568-egfrvar",
+      "polarity": "inclusion",
+      "sourceText": "A common activating mutation must be present in the EGFR gene, i.e., exon 19 deletion or L858R.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT04780568-brain",
+      "polarity": "inclusion",
+      "sourceText": "Patients with treated brain metastases are asymptomatic and not requiring ongoing treatment",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT04780568-egfr-var",
+      "polarity": "inclusion",
+      "sourceText": "A common activating mutation must be present in the EGFR gene, i.e., exon 19 deletion or L858R.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT04780568-egfr",
+      "polarity": "inclusion",
+      "sourceText": "A common activating mutation must be present in the EGFR gene, i.e., exon 19 deletion or L858R.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04780568-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status =< 2 (Karnofsky >= 60%)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04780568-hemoglobin",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin >= 90 g/L",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04780568-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin =< 1.5 x institutional upper limit normal (ULN) and up to 3 mg/dL for patients with Gilbert's",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 11,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase ALT (serum glutamate pyruvate transaminase [SGPT]) =<"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase ALT (serum glutamate pyruvate transaminase [SGPT]) =<"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Creatinine within 1.5 x ULN OR glomerular filtration rate (GFR) >= 50 mL/min/1.73 m^2 (measured or calculated by Cockcroft and Gault equation) -confirmation of "
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 10,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase ALT (serum glutamate pyruvate transaminase [SGPT]) =<"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase ALT (serum glutamate pyruvate transaminase [SGPT]) =<"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Creatinine within 1.5 x ULN OR glomerular filtration rate (GFR) >= 50 mL/min/1.73 m^2 (measured or calculated by Cockcroft and Gault equation) -confirmation of "
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 9,
+      "disagreements": 3,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:exon 19 deletion or l858r"
+        },
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable,untreated"
+        },
+        {
+          "side": "b-only",
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:exon 19 deletion, l858r"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 5,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:2"
+        },
+        {
+          "kind": "hemoglobin_min",
+          "polarity": "inclusion",
+          "value": "n:90"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        }
+      ],
+      "normalizerTypedCount": 6
+    }
+  },
+  "runA": {
+    "typedEmitted": 14,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 4167
+  },
+  "runB": {
+    "typedEmitted": 13,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 4331
+  },
+  "ms": 16529,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04780568",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04780568-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age >= 18 years. Children are excluded from this study because neither dosing nor safety data are currently available for AZD9291 or BC2059 in patients < 18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04780568-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathology-confirmed metastatic NSCLC",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT04780568-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "A common activating mutation must be present in the EGFR gene, i.e., exon 19 deletion or L858R.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04780568-egfrvar",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "A common activating mutation must be present in the EGFR gene, i.e., exon 19 deletion or L858R.",
+        "stringValue": "exon 19 deletion or L858R"
+      },
+      {
+        "id": "NCT04780568-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status =< 2 (Karnofsky >= 60%)",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT04780568-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count >= 1,500/mcL",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT04780568-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets >= 100,000/mcL",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT04780568-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin >= 90 g/L",
+        "numberValue": 90
+      },
+      {
+        "id": "NCT04780568-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin =< 1.5 x institutional upper limit normal (ULN) and up to 3 mg/dL for patients with Gilbert's",
+        "numberValue": 1.5,
+        "stringValue": "x ULN"
+      },
+      {
+        "id": "NCT04780568-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase ALT (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN and =< 5 x institutional ULN for patients with liver metastases",
+        "numberValue": 2.5,
+        "stringValue": "x ULN"
+      },
+      {
+        "id": "NCT04780568-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase ALT (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN and =< 5 x institutional ULN for patients with liver metastases",
+        "numberValue": 2.5,
+        "stringValue": "x ULN"
+      },
+      {
+        "id": "NCT04780568-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine within 1.5 x ULN OR glomerular filtration rate (GFR) >= 50 mL/min/1.73 m^2 (measured or calculated by Cockcroft and Gault equation) -confirmation of creatinine clearance is only required for patients with creatinine levels above institutional upper limit of normal",
+        "numberValue": 50,
+        "stringValue": "mL/min/1.73 m^2"
+      },
+      {
+        "id": "NCT04780568-prior_therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with an EGFR TKI in any setting",
+        "stringValue": "EGFR TKI"
+      },
+      {
+        "id": "NCT04780568-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Patients with treated brain metastases are asymptomatic and not requiring ongoing treatment",
+        "allowedBrainMets": [
+          "treated_stable",
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04780568-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease as defined by Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1 criteria",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT04780568-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy > 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT04780568-brain_active",
+        "polarity": "inclusion",
+        "sourceText": "Patients with new or progressive brain metastases (active brain metastases) or leptomeningeal disease are eligible if the treating physician determines that immediate central nervous system (CNS)-specific treatment is not required",
+        "reasonFuzzy": "Includes investigator discretion and complex conditions for active brain metastases that cannot be captured in a standard typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04780568",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04780568-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age >= 18 years. Children are excluded from this study because neither dosing nor safety data are currently available for AZD9291 or BC2059 in patients < 18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04780568-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathology-confirmed metastatic NSCLC",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT04780568-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "A common activating mutation must be present in the EGFR gene, i.e., exon 19 deletion or L858R.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04780568-egfr-var",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "A common activating mutation must be present in the EGFR gene, i.e., exon 19 deletion or L858R.",
+        "stringValue": "exon 19 deletion, L858R"
+      },
+      {
+        "id": "NCT04780568-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status =< 2 (Karnofsky >= 60%)",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT04780568-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count >= 1,500/mcL",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT04780568-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets >= 100,000/mcL",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT04780568-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin >= 90 g/L",
+        "numberValue": 90
+      },
+      {
+        "id": "NCT04780568-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin =< 1.5 x institutional upper limit normal (ULN) and up to 3 mg/dL for patients with Gilbert's",
+        "numberValue": 1.5,
+        "presence": "present",
+        "stringValue": "x ULN"
+      },
+      {
+        "id": "NCT04780568-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase ALT (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN and =< 5 x institutional ULN for patients with liver metastases",
+        "numberValue": 2.5,
+        "stringValue": "x ULN"
+      },
+      {
+        "id": "NCT04780568-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase ALT (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN and =< 5 x institutional ULN for patients with liver metastases",
+        "numberValue": 2.5,
+        "stringValue": "x ULN"
+      },
+      {
+        "id": "NCT04780568-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine within 1.5 x ULN OR glomerular filtration rate (GFR) >= 50 mL/min/1.73 m^2 (measured or calculated by Cockcroft and Gault equation) -confirmation of creatinine clearance is only required for patients with creatinine levels above institutional upper limit of normal",
+        "numberValue": 50,
+        "stringValue": "mL/min/1.73 m^2"
+      },
+      {
+        "id": "NCT04780568-prior-tki",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with an EGFR TKI in any setting",
+        "stringValue": "EGFR TKI"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04780568-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease as defined by Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1 criteria",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT04780568-pill",
+        "polarity": "inclusion",
+        "sourceText": "The patient must be able to swallow pills",
+        "reasonFuzzy": "Ability to swallow pills is a functional assessment."
+      },
+      {
+        "id": "NCT04780568-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy > 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT04780568-brain",
+        "polarity": "inclusion",
+        "sourceText": "Patients with new or progressive brain metastases (active brain metastases) or leptomeningeal disease are eligible if the treating physician determines that immediate central nervous system (CNS)-specific treatment is not required and is unlikely to be required during the first cycle of therapy. Clinical stability on a stable dose of decadron is permitted",
+        "reasonFuzzy": "Complex investigator discretion and conditions for brain metastases."
+      },
+      {
+        "id": "NCT04780568-investigator",
+        "polarity": "exclusion",
+        "sourceText": "Judgment by the investigator that the patient should not participate in the study if the patient is unlikely to comply with study procedures, restrictions, or requirements",
+        "reasonFuzzy": "Investigator discretion is not a typed check."
+      }
+    ]
+  }
+}

@@ -1,0 +1,514 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05136846",
+  "briefTitle": "Papaverine in Combination With Chemoradiation for the Treatment of Stage II-III Non-small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:45:24.730Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05136846-hgb",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin >= 9 g/dL",
+      "numberValue": 9,
+      "evidence_quote": "Hemoglobin >= 9 g/dL",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05136846-bili",
+      "kind": "bilirubin_max",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin =< 1.5 x upper limit of normal (ULN)",
+      "numberValue": 1.5,
+      "evidence_quote": "Total bilirubin =< 1.5 x upper limit of normal (ULN)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05136846-alt",
+      "kind": "alt_max",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) =< 2.5 x ULN",
+      "numberValue": 2.5,
+      "evidence_quote": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) =< 2.5 x ULN",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05136846-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": ">= 18 years old",
+      "numberValue": 18,
+      "evidence_quote": ">= 18 years old",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05136846-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Patient has an Eastern Cooperative Oncology Group (ECOG) performance status of 0-2",
+      "numberValue": 2,
+      "evidence_quote": "Patient has an Eastern Cooperative Oncology Group (ECOG) performance status of 0-2",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05136846-oligometastatic",
+      "polarity": "inclusion",
+      "sourceText": "For patients with oligometastatic disease (up to 5 total sites of disease) for whom definitive CRT or RT to the primary and regional lymph nodes is recommended by the multidisciplinary team, each individual metastatic tumor would be considered an additional site of disease with the exception of brain metastases. Up to 10 brain metastases would be considered as 1 site.",
+      "reasonFuzzy": "Oligometastatic site count and multidisciplinary team recommendations are complex subjective judgments not captured by a simple typed check."
+    },
+    {
+      "id": "NCT05136846-medical_opinion",
+      "polarity": "inclusion",
+      "sourceText": "Patients must be considered unresectable or medically-inoperable if stage II-III NSCLC",
+      "reasonFuzzy": "Resectability and medical inoperability are clinical judgments."
+    },
+    {
+      "id": "NCT05136846-prior_treatment_tox",
+      "polarity": "inclusion",
+      "sourceText": "All prior treatment-related toxicities must be Common Terminology Criteria for Adverse Events (CTCAE) (version 5.0) =< grade 1 (except alopecia) at the time of enrollment",
+      "reasonFuzzy": "General prior toxicity resolution across all systems is not mapped to a specific typed check."
+    },
+    {
+      "id": "NCT05136846-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count >=1.5 x 10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05136846-plt",
+      "polarity": "inclusion",
+      "sourceText": "Platelets >= 100 x 10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05136846-creat",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine < 1.5 mg/dL or calculated creatinine clearance* >= 50 mL/min or 24-hour urine creatinine clearance >= 50 mL/min",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05136846-egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine < 1.5 mg/dL or calculated creatinine clearance* >= 50 mL/min or 24-hour urine creatinine clearance >= 50 mL/min",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05136846-toxicity",
+      "polarity": "inclusion",
+      "sourceText": "All prior treatment-related toxicities must be Common Terminology Criteria for Adverse Events (CTCAE) (version 5.0) =< grade 1 (except alopecia) at the time of enrollment",
+      "reasonFuzzy": "General prior treatment toxicity resolution is not a single specific typed check."
+    },
+    {
+      "id": "NCT05136846-oligometastatic",
+      "polarity": "inclusion",
+      "sourceText": "For patients with oligometastatic disease (up to 5 total sites of disease) for whom definitive CRT or RT to the primary and regional lymph nodes is recommended by the multidisciplinary team, each individual metastatic tumor would be considered an additional site of disease with the exception of brain metastases. Up to 10 brain metastases would be considered as 1 site.",
+      "reasonFuzzy": "Oligometastatic site counting and multidisciplinary recommendations are complex and subjective rules."
+    },
+    {
+      "id": "NCT05136846-resection",
+      "polarity": "inclusion",
+      "sourceText": "Patients must be considered unresectable or medically-inoperable if stage II-III NSCLC",
+      "reasonFuzzy": "Resectability and medical inoperability are clinical judgments by the care team."
+    },
+    {
+      "id": "NCT05136846-medical",
+      "polarity": "exclusion",
+      "sourceText": "Any serious and/or unstable pre-existing medical disorder (aside from malignancy exception above), psychiatric disorder, or other conditions that could interfere with subject's safety, obtaining informed consent or compliance to the study procedures, in the opinion of the treating physicians.",
+      "reasonFuzzy": "Investigator opinion and general medical stability are subjective criteria."
+    },
+    {
+      "id": "NCT05136846-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count >=1.5 x 10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05136846-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelets >= 100 x 10^9/L",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05136846-creatinine",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine < 1.5 mg/dL or calculated creatinine clearance* >= 50 mL/min or 24-hour urine creatinine clearance >= 50 mL/min",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05136846-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine < 1.5 mg/dL or calculated creatinine clearance* >= 50 mL/min or 24-hour urine creatinine clearance >= 50 mL/min",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05136846-stage",
+      "polarity": "inclusion",
+      "sourceText": "Clinical American Joint Committee on Cancer (AJCC) stage II-III NSCLC (T1-4N0-3M0) and select patients with stage IV oligometastatic disease.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05136846-stage",
+      "polarity": "inclusion",
+      "sourceText": "Clinical American Joint Committee on Cancer (AJCC) stage II-III NSCLC (T1-4N0-3M0) and select patients with stage IV oligometastatic disease.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT05136846-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) =< 2.5 x ULN",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 7,
+      "unquoted": 4,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count >=1.5 x 10^9/L"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelets >= 100 x 10^9/L"
+        },
+        {
+          "kind": "creatinine_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Creatinine < 1.5 mg/dL or calculated creatinine clearance* >= 50 mL/min or 24-hour urine creatinine clearance >= 50 mL/min"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Creatinine < 1.5 mg/dL or calculated creatinine clearance* >= 50 mL/min or 24-hour urine creatinine clearance >= 50 mL/min"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 7,
+      "unquoted": 4,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count >=1.5 x 10^9/L"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelets >= 100 x 10^9/L"
+        },
+        {
+          "kind": "creatinine_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Creatinine < 1.5 mg/dL or calculated creatinine clearance* >= 50 mL/min or 24-hour urine creatinine clearance >= 50 mL/min"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Creatinine < 1.5 mg/dL or calculated creatinine clearance* >= 50 mL/min or 24-hour urine creatinine clearance >= 50 mL/min"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 6,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIA,IIB,IIIA,IIIB,IIIC,IV"
+        },
+        {
+          "side": "b-only",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIA,IIB,IIIA,IIIB,IIIC,IV,IVA,IVB"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 5,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        }
+      ],
+      "normalizerTypedCount": 8
+    }
+  },
+  "runA": {
+    "typedEmitted": 11,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3967
+  },
+  "runB": {
+    "typedEmitted": 11,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 3745
+  },
+  "ms": 15713,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05136846",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05136846-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count >=1.5 x 10^9/L",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05136846-hgb",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin >= 9 g/dL",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT05136846-plt",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets >= 100 x 10^9/L",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT05136846-bili",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin =< 1.5 x upper limit of normal (ULN)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05136846-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) =< 2.5 x ULN",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT05136846-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) =< 2.5 x ULN",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT05136846-creat",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine < 1.5 mg/dL or calculated creatinine clearance* >= 50 mL/min or 24-hour urine creatinine clearance >= 50 mL/min",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "Creatinine < 1.5 mg/dL or calculated creatinine clearance* >= 50 mL/min or 24-hour urine creatinine clearance >= 50 mL/min"
+      },
+      {
+        "id": "NCT05136846-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine < 1.5 mg/dL or calculated creatinine clearance* >= 50 mL/min or 24-hour urine creatinine clearance >= 50 mL/min",
+        "numberValue": 50,
+        "stages": [],
+        "stringValue": "Creatinine < 1.5 mg/dL or calculated creatinine clearance* >= 50 mL/min or 24-hour urine creatinine clearance >= 50 mL/min"
+      },
+      {
+        "id": "NCT05136846-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": ">= 18 years old",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05136846-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Clinical American Joint Committee on Cancer (AJCC) stage II-III NSCLC (T1-4N0-3M0) and select patients with stage IV oligometastatic disease.",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV"
+        ]
+      },
+      {
+        "id": "NCT05136846-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Patient has an Eastern Cooperative Oncology Group (ECOG) performance status of 0-2",
+        "numberValue": 2
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05136846-oligometastatic",
+        "polarity": "inclusion",
+        "sourceText": "For patients with oligometastatic disease (up to 5 total sites of disease) for whom definitive CRT or RT to the primary and regional lymph nodes is recommended by the multidisciplinary team, each individual metastatic tumor would be considered an additional site of disease with the exception of brain metastases. Up to 10 brain metastases would be considered as 1 site.",
+        "reasonFuzzy": "Oligometastatic site count and multidisciplinary team recommendations are complex subjective judgments not captured by a simple typed check."
+      },
+      {
+        "id": "NCT05136846-medical_opinion",
+        "polarity": "inclusion",
+        "sourceText": "Patients must be considered unresectable or medically-inoperable if stage II-III NSCLC",
+        "reasonFuzzy": "Resectability and medical inoperability are clinical judgments."
+      },
+      {
+        "id": "NCT05136846-prior_treatment_tox",
+        "polarity": "inclusion",
+        "sourceText": "All prior treatment-related toxicities must be Common Terminology Criteria for Adverse Events (CTCAE) (version 5.0) =< grade 1 (except alopecia) at the time of enrollment",
+        "reasonFuzzy": "General prior toxicity resolution across all systems is not mapped to a specific typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05136846",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05136846-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count >=1.5 x 10^9/L",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05136846-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin >= 9 g/dL",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT05136846-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets >= 100 x 10^9/L",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT05136846-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin =< 1.5 x upper limit of normal (ULN)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05136846-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) =< 2.5 x ULN",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT05136846-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) =< 2.5 x ULN",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT05136846-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine < 1.5 mg/dL or calculated creatinine clearance* >= 50 mL/min or 24-hour urine creatinine clearance >= 50 mL/min",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT05136846-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine < 1.5 mg/dL or calculated creatinine clearance* >= 50 mL/min or 24-hour urine creatinine clearance >= 50 mL/min",
+        "numberValue": 50,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT05136846-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": ">= 18 years old",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05136846-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Clinical American Joint Committee on Cancer (AJCC) stage II-III NSCLC (T1-4N0-3M0) and select patients with stage IV oligometastatic disease.",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05136846-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Patient has an Eastern Cooperative Oncology Group (ECOG) performance status of 0-2",
+        "numberValue": 2
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05136846-toxicity",
+        "polarity": "inclusion",
+        "sourceText": "All prior treatment-related toxicities must be Common Terminology Criteria for Adverse Events (CTCAE) (version 5.0) =< grade 1 (except alopecia) at the time of enrollment",
+        "reasonFuzzy": "General prior treatment toxicity resolution is not a single specific typed check."
+      },
+      {
+        "id": "NCT05136846-oligometastatic",
+        "polarity": "inclusion",
+        "sourceText": "For patients with oligometastatic disease (up to 5 total sites of disease) for whom definitive CRT or RT to the primary and regional lymph nodes is recommended by the multidisciplinary team, each individual metastatic tumor would be considered an additional site of disease with the exception of brain metastases. Up to 10 brain metastases would be considered as 1 site.",
+        "reasonFuzzy": "Oligometastatic site counting and multidisciplinary recommendations are complex and subjective rules."
+      },
+      {
+        "id": "NCT05136846-resection",
+        "polarity": "inclusion",
+        "sourceText": "Patients must be considered unresectable or medically-inoperable if stage II-III NSCLC",
+        "reasonFuzzy": "Resectability and medical inoperability are clinical judgments by the care team."
+      },
+      {
+        "id": "NCT05136846-medical",
+        "polarity": "exclusion",
+        "sourceText": "Any serious and/or unstable pre-existing medical disorder (aside from malignancy exception above), psychiatric disorder, or other conditions that could interfere with subject's safety, obtaining informed consent or compliance to the study procedures, in the opinion of the treating physicians.",
+        "reasonFuzzy": "Investigator opinion and general medical stability are subjective criteria."
+      }
+    ]
+  }
+}

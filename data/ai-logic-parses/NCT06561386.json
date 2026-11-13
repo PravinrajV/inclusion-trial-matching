@@ -1,0 +1,380 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06561386",
+  "briefTitle": "A Study to Compare the Efficacy of Nivolumab and Relatlimab Plus Chemotherapy vs Pembrolizumab Plus Chemotherapy for Stage IV/Recurrent Non-squamous Non-small Cell Lung Cancer With PD-L1 Expression ≥ 1%",
+  "parsedAt": "2026-11-12T10:07:56.288Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06561386-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have histologically confirmed Stage IV or recurrent Non-small Cell Lung Cancer (NSCLC) of non-squamous (NSQ) histology with no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Participants must have histologically confirmed Stage IV or recurrent Non-small Cell Lung Cancer (NSCLC) of non-squamous (NSQ) histology with no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06561386-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have an Easter Cooperative Oncology Group (ECOG) performance status of ≤ 1 at screening.",
+      "numberValue": 1,
+      "evidence_quote": "Participants must have an Easter Cooperative Oncology Group (ECOG) performance status of ≤ 1 at screening.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06561386-egfr",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.",
+      "presence": "present",
+      "evidence_quote": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06561386-alk",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.",
+      "presence": "present",
+      "evidence_quote": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06561386-ros1",
+      "kind": "ros1_status",
+      "polarity": "exclusion",
+      "sourceText": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.",
+      "presence": "present",
+      "evidence_quote": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06561386-brain",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have untreated central nervous system (CNS) metastases.",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Participants must not have untreated central nervous system (CNS) metastases.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06561386-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have measurable disease by computed tomography (CT) or magnetic resonance imaging (MRI) per RECIST v1.1 criteria.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06561386-life",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a life expectancy of at least 3 months at the time of randomization.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06561386-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have measurable disease by computed tomography (CT) or magnetic resonance imaging (MRI) per RECIST v1.1 criteria.",
+      "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06561386-life",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a life expectancy of at least 3 months at the time of randomization.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06561386-checkpoint",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with an anti-PD-1, anti-PD-L1, anti-PD-L2, or anti-CTLA-4 antibody, or any other antibody or drug specifically targeting T-cell co-stimulation or checkpoint pathways. Note: Anti-PD-1, anti-PD-L1 or anti-CTLA-4 therapy given in an adjuvant, neoadjuvant or perioperative setting with at least 6 months between the last dose and date of recurrence are allowed.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06561386-histology",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have histologically confirmed Stage IV or recurrent Non-small Cell Lung Cancer (NSCLC) of non-squamous (NSQ) histology with no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06561386-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have measurable PD-L1 ≥ 1% Tumor Cell (TC) score by the investigational PD-L1 immunohistochemistry (IHC) assay VENTANA PD-L1 (SP263) CDx Assay conducted by central laboratory during the screening period prior to randomization.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06561386-braf",
+      "polarity": "exclusion",
+      "sourceText": "Participants with known BRAFV600E mutations, that are sensitive to available targeted inhibitor therapy; participants with known activating rearranged during transfection (RET) mutations or neurotrophic tyrosine receptor kinase (NTRK) fusion gene alterations are excluded. Participants with unknown or indeterminate BRAF mutation, activating RET mutations or NTRK fusion gene alterations are eligible.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 10,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 9,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 9,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-pd-1, anti-pd-l1, anti-pd-l2, or anti-ctla-4 antibody"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 6,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        },
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "braf_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 8
+    }
+  },
+  "runA": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 6670
+  },
+  "runB": {
+    "typedEmitted": 9,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 9518
+  },
+  "ms": 24179,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06561386",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06561386-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically confirmed Stage IV or recurrent Non-small Cell Lung Cancer (NSCLC) of non-squamous (NSQ) histology with no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06561386-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically confirmed Stage IV or recurrent Non-small Cell Lung Cancer (NSCLC) of non-squamous (NSQ) histology with no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06561386-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have measurable PD-L1 ≥ 1% Tumor Cell (TC) score by the investigational PD-L1 immunohistochemistry (IHC) assay VENTANA PD-L1 (SP263) CDx Assay conducted by central laboratory during the screening period prior to randomization.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06561386-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Easter Cooperative Oncology Group (ECOG) performance status of ≤ 1 at screening.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06561386-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06561386-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06561386-ros1",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06561386-braf",
+        "kind": "braf_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known BRAFV600E mutations, that are sensitive to available targeted inhibitor therapy; participants with known activating rearranged during transfection (RET) mutations or neurotrophic tyrosine receptor kinase (NTRK) fusion gene alterations are excluded. Participants with unknown or indeterminate BRAF mutation, activating RET mutations or NTRK fusion gene alterations are eligible.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06561386-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have untreated central nervous system (CNS) metastases.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      },
+      {
+        "id": "NCT06561386-checkpoint",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with an anti-PD-1, anti-PD-L1, anti-PD-L2, or anti-CTLA-4 antibody, or any other antibody or drug specifically targeting T-cell co-stimulation or checkpoint pathways. Note: Anti-PD-1, anti-PD-L1 or anti-CTLA-4 therapy given in an adjuvant, neoadjuvant or perioperative setting with at least 6 months between the last dose and date of recurrence are allowed.",
+        "stringValue": "anti-PD-1, anti-PD-L1, anti-PD-L2, or anti-CTLA-4 antibody"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06561386-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have measurable disease by computed tomography (CT) or magnetic resonance imaging (MRI) per RECIST v1.1 criteria.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06561386-life",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a life expectancy of at least 3 months at the time of randomization.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06561386",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06561386-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically confirmed Stage IV or recurrent Non-small Cell Lung Cancer (NSCLC) of non-squamous (NSQ) histology with no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06561386-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically confirmed Stage IV or recurrent Non-small Cell Lung Cancer (NSCLC) of non-squamous (NSQ) histology with no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06561386-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have measurable PD-L1 ≥ 1% Tumor Cell (TC) score by the investigational PD-L1 immunohistochemistry (IHC) assay VENTANA PD-L1 (SP263) CDx Assay conducted by central laboratory during the screening period prior to randomization.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06561386-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Easter Cooperative Oncology Group (ECOG) performance status of ≤ 1 at screening.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06561386-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06561386-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06561386-ros1",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06561386-braf",
+        "kind": "braf_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known BRAFV600E mutations, that are sensitive to available targeted inhibitor therapy; participants with known activating rearranged during transfection (RET) mutations or neurotrophic tyrosine receptor kinase (NTRK) fusion gene alterations are excluded. Participants with unknown or indeterminate BRAF mutation, activating RET mutations or NTRK fusion gene alterations are eligible.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06561386-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have untreated central nervous system (CNS) metastases.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06561386-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have measurable disease by computed tomography (CT) or magnetic resonance imaging (MRI) per RECIST v1.1 criteria.",
+        "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06561386-life",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a life expectancy of at least 3 months at the time of randomization.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      }
+    ]
+  }
+}

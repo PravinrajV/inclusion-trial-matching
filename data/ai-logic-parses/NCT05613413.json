@@ -1,0 +1,528 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05613413",
+  "briefTitle": "A Pilot Phase II Study of Maintenance Cabozantinib Plus Pembrolizumab for Patients With Metastatic Squamous Non-Small Cell Lung Cancer (sqNSCLC)",
+  "parsedAt": "2026-11-12T06:15:04.200Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05613413-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years at the time of consent.",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years at the time of consent.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05613413-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG Performance Status of 0, 1, or 2 within 28 days prior to registration",
+      "numberValue": 2,
+      "evidence_quote": "ECOG Performance Status of 0, 1, or 2 within 28 days prior to registration",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05613413-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Subjects with stage IV NSCLC as defined by American Joint Committee on Cancer (AJCC) 8th Edition who have not received prior therapy for stage IV NSCLC. Patients with locally advanced or recurrent disease who are candidates for first-line induction systemic therapies for stage IV NSCLC are also allowed.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Subjects with stage IV NSCLC as defined by American Joint Committee on Cancer (AJCC) 8th Edition who have not received prior therapy for stage IV NSCLC. Patients with locally advanced or recurrent disease who are candidates for first-line induction systemic therapies for stage IV NSCLC are also allowed.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05613413-anc",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute Neutrophil Count (ANC): ≥ 1,500/uL without the support of Filgrastim or ≥ 1,000/L in subjects with constitutional neutropenia",
+      "numberValue": 1500,
+      "stages": [],
+      "stringValue": "without the support of Filgrastim or ≥ 1,000/L in subjects with constitutional neutropenia",
+      "evidence_quote": "Absolute Neutrophil Count (ANC): ≥ 1,500/uL without the support of Filgrastim or ≥ 1,000/L in subjects with constitutional neutropenia",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05613413-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin (Hgb): ≥ 9 g/dL",
+      "numberValue": 9,
+      "evidence_quote": "Hemoglobin (Hgb): ≥ 9 g/dL",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05613413-platelets",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets (Plt): ≥ 100,000/µL without transfusion.",
+      "numberValue": 100000,
+      "evidence_quote": "Platelets (Plt): ≥ 100,000/µL without transfusion.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05613413-creatinine",
+      "kind": "creatinine_max",
+      "polarity": "inclusion",
+      "sourceText": "Serum creatinine: ≤ 1.5 mg/dL",
+      "numberValue": 1.5,
+      "evidence_quote": "Serum creatinine: ≤ 1.5 mg/dL",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05613413-ast",
+      "kind": "ast_max",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST): ≤ 3 × ULN or ≤ 5 x ULN for subjects with known hepatic metastasis",
+      "numberValue": 3,
+      "evidence_quote": "Aspartate aminotransferase (AST): ≤ 3 × ULN or ≤ 5 x ULN for subjects with known hepatic metastasis",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05613413-alt",
+      "kind": "alt_max",
+      "polarity": "inclusion",
+      "sourceText": "Alanine aminotransferase (ALT): ≤ 3 × ULN or ≤ 5 x ULN for subjects with known hepatic metastasis",
+      "numberValue": 3,
+      "evidence_quote": "Alanine aminotransferase (ALT): ≤ 3 × ULN or ≤ 5 x ULN for subjects with known hepatic metastasis",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05613413-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of 6 months or greater as determined by the site investigator.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05613413-induction",
+      "polarity": "inclusion",
+      "sourceText": "Only patients with disease control, defined as complete response (CR), partial response (PR), or stable disease (SD) to induction therapy will be allowed to receive maintenance cabozantinib plus pembrolizumab arm of trial.",
+      "reasonFuzzy": "Disease control response to prior induction therapy is a clinical trial phase-specific rule and not a standard baseline check."
+    },
+    {
+      "id": "NCT05613413-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of 6 months or greater as determined by the site investigator.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05613413-induction",
+      "polarity": "inclusion",
+      "sourceText": "Only patients with disease control, defined as complete response (CR), partial response (PR), or stable disease (SD) to induction therapy will be allowed to receive maintenance cabozantinib plus pembrolizumab arm of trial.",
+      "reasonFuzzy": "Disease response to induction therapy is a clinical/radiological assessment, not a standard typed check."
+    },
+    {
+      "id": "NCT05613413-washout-small",
+      "polarity": "exclusion",
+      "sourceText": "Receipt of any type of small molecule kinase inhibitor (including investigational kinase inhibitor) within 2 weeks before first dose of study treatment.",
+      "reasonFuzzy": "Washout windows for small molecule kinase inhibitors are not mapped to standard typed checks."
+    },
+    {
+      "id": "NCT05613413-washout-systemic",
+      "polarity": "exclusion",
+      "sourceText": "Receipt of any type of cytotoxic, biologic or other systemic anticancer therapy (including investigational) within 4 weeks before first dose of study treatment.",
+      "reasonFuzzy": "Washout windows for systemic anticancer therapy are not mapped to standard typed checks."
+    },
+    {
+      "id": "NCT05613413-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known brain metastases or cranial epidural disease unless adequately treated with radiotherapy and/or surgery (including radiosurgery) and stable for at least 4 weeks prior to first dose of study treatment after radiotherapy or at least 4 weeks prior to first dose of study treatment after major surgery (e.g., removal or biopsy of brain metastasis).",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05613413-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known brain metastases or cranial epidural disease unless adequately treated with radiotherapy and/or surgery (including radiosurgery) and stable for at least 4 weeks prior to first dose of study treatment after radiotherapy or at least 4 weeks prior to first dose of study treatment after major surgery (e.g., removal or biopsy of brain metastasis).",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT05613413-histology",
+      "polarity": "inclusion",
+      "sourceText": "Subjects with histologically or cytologically confirmed squamous non-small cell lung cancer (sqNSCLC).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05613413-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Calculated creatine clearance: ≥ 40 mL/min; for subjects with serum creatinine > 1.5 mg/dL",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05613413-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Total Bilirubin or Direct Bilirubin: ≤ 1.5 × upper limit of normal (ULN) or ≤ 3 × ULN for subjects with Gilbert's disease, ≤ ULN for subjects with total bilirubin levels > 1.5 x ULN",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05613413-prior-cabo",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with cabozantinib.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 14,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 14,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 13,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 9,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:squamous"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "value": "n:40"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:cabozantinib"
+        }
+      ],
+      "normalizerTypedCount": 10
+    }
+  },
+  "runA": {
+    "typedEmitted": 14,
+    "fuzzyEmitted": 2,
+    "attempts": 2,
+    "ms": 15778
+  },
+  "runB": {
+    "typedEmitted": 14,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 4686
+  },
+  "ms": 28540,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05613413",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05613413-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years at the time of consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05613413-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance Status of 0, 1, or 2 within 28 days prior to registration",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT05613413-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Subjects with histologically or cytologically confirmed squamous non-small cell lung cancer (sqNSCLC).",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT05613413-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Subjects with stage IV NSCLC as defined by American Joint Committee on Cancer (AJCC) 8th Edition who have not received prior therapy for stage IV NSCLC. Patients with locally advanced or recurrent disease who are candidates for first-line induction systemic therapies for stage IV NSCLC are also allowed.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05613413-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute Neutrophil Count (ANC): ≥ 1,500/uL without the support of Filgrastim or ≥ 1,000/L in subjects with constitutional neutropenia",
+        "numberValue": 1500,
+        "stages": [],
+        "stringValue": "without the support of Filgrastim or ≥ 1,000/L in subjects with constitutional neutropenia"
+      },
+      {
+        "id": "NCT05613413-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin (Hgb): ≥ 9 g/dL",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT05613413-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets (Plt): ≥ 100,000/µL without transfusion.",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT05613413-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Serum creatinine: ≤ 1.5 mg/dL",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05613413-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Calculated creatine clearance: ≥ 40 mL/min; for subjects with serum creatinine > 1.5 mg/dL",
+        "numberValue": 40,
+        "stages": [],
+        "stringValue": "for subjects with serum creatinine > 1.5 mg/dL"
+      },
+      {
+        "id": "NCT05613413-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total Bilirubin or Direct Bilirubin: ≤ 1.5 × upper limit of normal (ULN) or ≤ 3 × ULN for subjects with Gilbert's disease, ≤ ULN for subjects with total bilirubin levels > 1.5 x ULN",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05613413-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST): ≤ 3 × ULN or ≤ 5 x ULN for subjects with known hepatic metastasis",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT05613413-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT): ≤ 3 × ULN or ≤ 5 x ULN for subjects with known hepatic metastasis",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT05613413-prior-cabo",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with cabozantinib.",
+        "stringValue": "cabozantinib"
+      },
+      {
+        "id": "NCT05613413-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known brain metastases or cranial epidural disease unless adequately treated with radiotherapy and/or surgery (including radiosurgery) and stable for at least 4 weeks prior to first dose of study treatment after radiotherapy or at least 4 weeks prior to first dose of study treatment after major surgery (e.g., removal or biopsy of brain metastasis).",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05613413-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of 6 months or greater as determined by the site investigator.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05613413-induction",
+        "polarity": "inclusion",
+        "sourceText": "Only patients with disease control, defined as complete response (CR), partial response (PR), or stable disease (SD) to induction therapy will be allowed to receive maintenance cabozantinib plus pembrolizumab arm of trial.",
+        "reasonFuzzy": "Disease control response to prior induction therapy is a clinical trial phase-specific rule and not a standard baseline check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05613413",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05613413-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years at the time of consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05613413-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance Status of 0, 1, or 2 within 28 days prior to registration",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT05613413-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Subjects with histologically or cytologically confirmed squamous non-small cell lung cancer (sqNSCLC).",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT05613413-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Subjects with stage IV NSCLC as defined by American Joint Committee on Cancer (AJCC) 8th Edition who have not received prior therapy for stage IV NSCLC. Patients with locally advanced or recurrent disease who are candidates for first-line induction systemic therapies for stage IV NSCLC are also allowed.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05613413-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute Neutrophil Count (ANC): ≥ 1,500/uL without the support of Filgrastim or ≥ 1,000/L in subjects with constitutional neutropenia",
+        "numberValue": 1500,
+        "stages": [],
+        "stringValue": "without the support of Filgrastim or ≥ 1,000/L in subjects with constitutional neutropenia"
+      },
+      {
+        "id": "NCT05613413-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin (Hgb): ≥ 9 g/dL",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT05613413-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets (Plt): ≥ 100,000/µL without transfusion.",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT05613413-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Serum creatinine: ≤ 1.5 mg/dL",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05613413-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Calculated creatine clearance: ≥ 40 mL/min; for subjects with serum creatinine > 1.5 mg/dL",
+        "numberValue": 40,
+        "stages": [],
+        "stringValue": "for subjects with serum creatinine > 1.5 mg/dL"
+      },
+      {
+        "id": "NCT05613413-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total Bilirubin or Direct Bilirubin: ≤ 1.5 × upper limit of normal (ULN) or ≤ 3 × ULN for subjects with Gilbert's disease, ≤ ULN for subjects with total bilirubin levels > 1.5 x ULN",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "≤ 3 × ULN for subjects with Gilbert's disease, ≤ ULN for subjects with total bilirubin levels > 1.5 x ULN"
+      },
+      {
+        "id": "NCT05613413-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST): ≤ 3 × ULN or ≤ 5 x ULN for subjects with known hepatic metastasis",
+        "numberValue": 3,
+        "stages": [],
+        "stringValue": "≤ 5 x ULN for subjects with known hepatic metastasis"
+      },
+      {
+        "id": "NCT05613413-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT): ≤ 3 × ULN or ≤ 5 x ULN for subjects with known hepatic metastasis",
+        "numberValue": 3,
+        "stages": [],
+        "stringValue": "≤ 5 x ULN for subjects with known hepatic metastasis"
+      },
+      {
+        "id": "NCT05613413-prior-cabozantinib",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with cabozantinib.",
+        "stringValue": "cabozantinib"
+      },
+      {
+        "id": "NCT05613413-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known brain metastases or cranial epidural disease unless adequately treated with radiotherapy and/or surgery (including radiosurgery) and stable for at least 4 weeks prior to first dose of study treatment after radiotherapy or at least 4 weeks prior to first dose of study treatment after major surgery (e.g., removal or biopsy of brain metastasis).",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05613413-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of 6 months or greater as determined by the site investigator.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05613413-induction",
+        "polarity": "inclusion",
+        "sourceText": "Only patients with disease control, defined as complete response (CR), partial response (PR), or stable disease (SD) to induction therapy will be allowed to receive maintenance cabozantinib plus pembrolizumab arm of trial.",
+        "reasonFuzzy": "Disease response to induction therapy is a clinical/radiological assessment, not a standard typed check."
+      },
+      {
+        "id": "NCT05613413-washout-small",
+        "polarity": "exclusion",
+        "sourceText": "Receipt of any type of small molecule kinase inhibitor (including investigational kinase inhibitor) within 2 weeks before first dose of study treatment.",
+        "reasonFuzzy": "Washout windows for small molecule kinase inhibitors are not mapped to standard typed checks."
+      },
+      {
+        "id": "NCT05613413-washout-systemic",
+        "polarity": "exclusion",
+        "sourceText": "Receipt of any type of cytotoxic, biologic or other systemic anticancer therapy (including investigational) within 4 weeks before first dose of study treatment.",
+        "reasonFuzzy": "Washout windows for systemic anticancer therapy are not mapped to standard typed checks."
+      }
+    ]
+  }
+}

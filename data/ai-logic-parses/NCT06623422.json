@@ -1,0 +1,369 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06623422",
+  "briefTitle": "A Study of Pembrolizumab (MK-3475) With or Without Intismeran Autogene (V940) in Participants With Non-small Cell Lung Cancer (V940-009/INTerpath-009)",
+  "parsedAt": "2026-11-12T10:28:54.071Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06623422-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 within 7 days before the first dose of study intervention",
+      "numberValue": 1,
+      "evidence_quote": "Has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 within 7 days before the first dose of study intervention",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06623422-pcr",
+      "polarity": "inclusion",
+      "sourceText": "Participants who have not achieved a pathological complete response (pCR) following completion of neoadjuvant chemotherapy and pembrolizumab followed by surgery will be eligible",
+      "reasonFuzzy": "Requires a specific pathological response status after a specific neoadjuvant therapy regimen, which cannot be expressed via typed checks."
+    },
+    {
+      "id": "NCT06623422-histology-exc",
+      "polarity": "exclusion",
+      "sourceText": "Diagnosis of small cell lung cancer (SCLC) or, for mixed tumors, presence of small cell elements, or has a neuroendocrine tumor with large-cell components, or a sarcomatoid carcinoma, or a pancoast tumor",
+      "reasonFuzzy": "Excludes specific mixed and rare tumor variants that go beyond standard histology lists."
+    },
+    {
+      "id": "NCT06623422-stage",
+      "polarity": "inclusion",
+      "sourceText": "Has histologically/cytologically confirmed diagnosis of previously untreated and pathologically confirmed resectable clinical Stage II, IIIA, or IIIB (N2) non-small cell lung cancer (NSCLC) [American Joint Committee on Cancer (AJCC) 8th Edition]",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06623422-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06623422-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Confirmation that epidermal growth factor receptor (EGFR)-directed therapy is not indicated as primary therapy (documentation of absence of tumor-activating EGFR mutations [eg, DEL19 or L858R])",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06623422-egfr-var",
+      "polarity": "inclusion",
+      "sourceText": "documentation of absence of tumor-activating EGFR mutations [eg, DEL19 or L858R]",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06623422-prior-pd1",
+      "polarity": "exclusion",
+      "sourceText": "Received prior therapy with an anti-programmed cell death 1 (PD-1), anti-programmed cell death ligand 1 (PD-L1), or anti-programmed cell-death ligand 2 (PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor (eg, cytotoxic T-lymphocyte-associated protein [CTLA-4], OX-40, CD137)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06623422-pcr",
+      "polarity": "inclusion",
+      "sourceText": "Participants who have not achieved a pathological complete response (pCR) following completion of neoadjuvant chemotherapy and pembrolizumab followed by surgery will be eligible",
+      "reasonFuzzy": "Pathological complete response evaluation following specific neoadjuvant therapy sequence is a judgment-based protocol condition."
+    },
+    {
+      "id": "NCT06623422-histology-excl",
+      "polarity": "exclusion",
+      "sourceText": "Diagnosis of small cell lung cancer (SCLC) or, for mixed tumors, presence of small cell elements, or has a neuroendocrine tumor with large-cell components, or a sarcomatoid carcinoma, or a pancoast tumor",
+      "reasonFuzzy": "Exclusion covers mixed tumors, neuroendocrine variants, sarcomatoid, and pancoast tumors which do not map cleanly to standard typed histology items."
+    },
+    {
+      "id": "NCT06623422-stage",
+      "polarity": "inclusion",
+      "sourceText": "Has histologically/cytologically confirmed diagnosis of previously untreated and pathologically confirmed resectable clinical Stage II, IIIA, or IIIB (N2) non-small cell lung cancer (NSCLC) [American Joint Committee on Cancer (AJCC) 8th Edition]",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06623422-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06623422-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Confirmation that epidermal growth factor receptor (EGFR)-directed therapy is not indicated as primary therapy (documentation of absence of tumor-activating EGFR mutations [eg, DEL19 or L858R])",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06623422-egfr-variant",
+      "polarity": "exclusion",
+      "sourceText": "documentation of absence of tumor-activating EGFR mutations [eg, DEL19 or L858R]",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06623422-prior-pd1",
+      "polarity": "exclusion",
+      "sourceText": "Received prior therapy with an anti-programmed cell death 1 (PD-1), anti-programmed cell death ligand 1 (PD-L1), or anti-programmed cell-death ligand 2 (PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor (eg, cytotoxic T-lymphocyte-associated protein [CTLA-4], OX-40, CD137)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06623422-alk",
+      "polarity": "exclusion",
+      "sourceText": "Documentation by local test report indicating presence of anaplastic lymphoma kinase (ALK) gene rearrangements",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 5,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Has histologically/cytologically confirmed diagnosis of previously untreated and pathologically confirmed resectable clinical Stage II, IIIA, or IIIB (N2) non-s"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Confirmation that epidermal growth factor receptor (EGFR)-directed therapy is not indicated as primary therapy (documentation of absence of tumor-activating EGF"
+        },
+        {
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "documentation of absence of tumor-activating EGFR mutations [eg, DEL19 or L858R]"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Received prior therapy with an anti-programmed cell death 1 (PD-1), anti-programmed cell death ligand 1 (PD-L1), or anti-programmed cell-death ligand 2 (PD-L2) "
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 5,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Has histologically/cytologically confirmed diagnosis of previously untreated and pathologically confirmed resectable clinical Stage II, IIIA, or IIIB (N2) non-s"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Confirmation that epidermal growth factor receptor (EGFR)-directed therapy is not indicated as primary therapy (documentation of absence of tumor-activating EGF"
+        },
+        {
+          "kind": "egfr_variant_in",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "documentation of absence of tumor-activating EGFR mutations [eg, DEL19 or L858R]"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Received prior therapy with an anti-programmed cell death 1 (PD-1), anti-programmed cell death ligand 1 (PD-L1), or anti-programmed cell-death ligand 2 (PD-L2) "
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 3336
+  },
+  "runB": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 2,
+    "attempts": 3,
+    "ms": 29108
+  },
+  "ms": 1191865,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06623422",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06623422-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Has histologically/cytologically confirmed diagnosis of previously untreated and pathologically confirmed resectable clinical Stage II, IIIA, or IIIB (N2) non-small cell lung cancer (NSCLC) [American Joint Committee on Cancer (AJCC) 8th Edition]",
+        "stages": [
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT06623422-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06623422-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 within 7 days before the first dose of study intervention",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06623422-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Confirmation that epidermal growth factor receptor (EGFR)-directed therapy is not indicated as primary therapy (documentation of absence of tumor-activating EGFR mutations [eg, DEL19 or L858R])",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06623422-egfr-var",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "documentation of absence of tumor-activating EGFR mutations [eg, DEL19 or L858R]",
+        "stringValue": "DEL19 or L858R"
+      },
+      {
+        "id": "NCT06623422-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Documentation by local test report indicating presence of anaplastic lymphoma kinase (ALK) gene rearrangements",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06623422-prior-pd1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Received prior therapy with an anti-programmed cell death 1 (PD-1), anti-programmed cell death ligand 1 (PD-L1), or anti-programmed cell-death ligand 2 (PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor (eg, cytotoxic T-lymphocyte-associated protein [CTLA-4], OX-40, CD137)",
+        "stringValue": "anti-programmed cell death 1 (PD-1)"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06623422-pcr",
+        "polarity": "inclusion",
+        "sourceText": "Participants who have not achieved a pathological complete response (pCR) following completion of neoadjuvant chemotherapy and pembrolizumab followed by surgery will be eligible",
+        "reasonFuzzy": "Requires a specific pathological response status after a specific neoadjuvant therapy regimen, which cannot be expressed via typed checks."
+      },
+      {
+        "id": "NCT06623422-histology-exc",
+        "polarity": "exclusion",
+        "sourceText": "Diagnosis of small cell lung cancer (SCLC) or, for mixed tumors, presence of small cell elements, or has a neuroendocrine tumor with large-cell components, or a sarcomatoid carcinoma, or a pancoast tumor",
+        "reasonFuzzy": "Excludes specific mixed and rare tumor variants that go beyond standard histology lists."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06623422",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06623422-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Has histologically/cytologically confirmed diagnosis of previously untreated and pathologically confirmed resectable clinical Stage II, IIIA, or IIIB (N2) non-small cell lung cancer (NSCLC) [American Joint Committee on Cancer (AJCC) 8th Edition]",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT06623422-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06623422-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 within 7 days before the first dose of study intervention",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06623422-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Confirmation that epidermal growth factor receptor (EGFR)-directed therapy is not indicated as primary therapy (documentation of absence of tumor-activating EGFR mutations [eg, DEL19 or L858R])",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06623422-egfr-variant",
+        "kind": "egfr_variant_in",
+        "polarity": "exclusion",
+        "sourceText": "documentation of absence of tumor-activating EGFR mutations [eg, DEL19 or L858R]",
+        "stringValue": "DEL19, L858R"
+      },
+      {
+        "id": "NCT06623422-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Documentation by local test report indicating presence of anaplastic lymphoma kinase (ALK) gene rearrangements",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06623422-prior-pd1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Received prior therapy with an anti-programmed cell death 1 (PD-1), anti-programmed cell death ligand 1 (PD-L1), or anti-programmed cell-death ligand 2 (PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor (eg, cytotoxic T-lymphocyte-associated protein [CTLA-4], OX-40, CD137)",
+        "stringValue": "anti-PD-1"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06623422-pcr",
+        "polarity": "inclusion",
+        "sourceText": "Participants who have not achieved a pathological complete response (pCR) following completion of neoadjuvant chemotherapy and pembrolizumab followed by surgery will be eligible",
+        "reasonFuzzy": "Pathological complete response evaluation following specific neoadjuvant therapy sequence is a judgment-based protocol condition."
+      },
+      {
+        "id": "NCT06623422-histology-excl",
+        "polarity": "exclusion",
+        "sourceText": "Diagnosis of small cell lung cancer (SCLC) or, for mixed tumors, presence of small cell elements, or has a neuroendocrine tumor with large-cell components, or a sarcomatoid carcinoma, or a pancoast tumor",
+        "reasonFuzzy": "Exclusion covers mixed tumors, neuroendocrine variants, sarcomatoid, and pancoast tumors which do not map cleanly to standard typed histology items."
+      }
+    ]
+  }
+}

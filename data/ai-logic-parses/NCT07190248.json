@@ -1,0 +1,237 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07190248",
+  "briefTitle": "A Clinical Study of Calderasib (MK-1084) and Other Treatments for Participants With Non-Small Cell Lung Cancer (MK-1084-007/KANDLELIT-007)",
+  "parsedAt": "2026-11-12T11:03:46.186Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07190248-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Has nonsquamous NSCLC (Stage IIIB, Stage IIIC) not eligible for curative resection or chemoradiation or Stage IV: M1a, M1b, or M1c",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Has nonsquamous NSCLC (Stage IIIB, Stage IIIC) not eligible for curative resection or chemoradiation or Stage IV: M1a, M1b, or M1c",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07190248-brain",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07190248-hiv",
+      "polarity": "inclusion",
+      "sourceText": "If human immunodeficiency virus (HIV) positive, must have well controlled HIV on antiretroviral therapy (ART)",
+      "reasonFuzzy": "HIV status and control condition is not a typed check."
+    },
+    {
+      "id": "NCT07190248-sclc",
+      "polarity": "exclusion",
+      "sourceText": "Has diagnosis of small cell lung cancer or, for mixed tumors, presence of small cell elements",
+      "reasonFuzzy": "Small cell exclusion for mixed tumors is not a simple histology_in check."
+    },
+    {
+      "id": "NCT07190248-hiv",
+      "polarity": "inclusion",
+      "sourceText": "If human immunodeficiency virus (HIV) positive, must have well controlled HIV on antiretroviral therapy (ART)",
+      "reasonFuzzy": "HIV status and control condition are not standard typed checks."
+    },
+    {
+      "id": "NCT07190248-histology",
+      "polarity": "inclusion",
+      "sourceText": "Has nonsquamous NSCLC (Stage IIIB, Stage IIIC) not eligible for curative resection or chemoradiation or Stage IV: M1a, M1b, or M1c",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07190248-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior systemic anticancer therapy for their advanced or metastatic NSCLC",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:prior systemic anticancer therapy"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 8177
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 4960
+  },
+  "ms": 21038,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07190248",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07190248-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Has nonsquamous NSCLC (Stage IIIB, Stage IIIC) not eligible for curative resection or chemoradiation or Stage IV: M1a, M1b, or M1c",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07190248-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Has nonsquamous NSCLC",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07190248-prior-therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior systemic anticancer therapy for their advanced or metastatic NSCLC",
+        "stringValue": "prior systemic anticancer therapy"
+      },
+      {
+        "id": "NCT07190248-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07190248-hiv",
+        "polarity": "inclusion",
+        "sourceText": "If human immunodeficiency virus (HIV) positive, must have well controlled HIV on antiretroviral therapy (ART)",
+        "reasonFuzzy": "HIV status and control condition is not a typed check."
+      },
+      {
+        "id": "NCT07190248-sclc",
+        "polarity": "exclusion",
+        "sourceText": "Has diagnosis of small cell lung cancer or, for mixed tumors, presence of small cell elements",
+        "reasonFuzzy": "Small cell exclusion for mixed tumors is not a simple histology_in check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07190248",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07190248-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Has nonsquamous NSCLC (Stage IIIB, Stage IIIC) not eligible for curative resection or chemoradiation or Stage IV: M1a, M1b, or M1c",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07190248-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Has nonsquamous NSCLC (Stage IIIB, Stage IIIC) not eligible for curative resection or chemoradiation or Stage IV: M1a, M1b, or M1c",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07190248-prior-therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior systemic anticancer therapy for their advanced or metastatic NSCLC",
+        "stringValue": "prior systemic anticancer therapy"
+      },
+      {
+        "id": "NCT07190248-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07190248-hiv",
+        "polarity": "inclusion",
+        "sourceText": "If human immunodeficiency virus (HIV) positive, must have well controlled HIV on antiretroviral therapy (ART)",
+        "reasonFuzzy": "HIV status and control condition are not standard typed checks."
+      }
+    ]
+  }
+}

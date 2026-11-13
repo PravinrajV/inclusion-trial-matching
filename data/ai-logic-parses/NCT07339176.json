@@ -1,0 +1,772 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07339176",
+  "briefTitle": "Intratumoral N17350 in Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T11:09:02.921Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07339176-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥18 years (or legal age of consent in the study jurisdiction).",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥18 years (or legal age of consent in the study jurisdiction).",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07339176-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status 0-1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07339176-consent",
+      "polarity": "inclusion",
+      "sourceText": "Able to provide written informed consent and willing/able to comply with study procedures, visits, and follow-up.",
+      "reasonFuzzy": "Willingness to comply with procedures and provide consent is subjective."
+    },
+    {
+      "id": "NCT07339176-tumor",
+      "polarity": "inclusion",
+      "sourceText": "Advanced solid tumor malignancy (excluding lymphoma and other hematologic malignancies), with disease that has progressed on, is intolerant of, or is ineligible for standard therapies known to provide clinical benefit, or for whom no standard therapy is available.",
+      "reasonFuzzy": "The trial is an advanced solid tumor basket study mentioning NSCLC among other tumors, without a numbered stage list or specific NSCLC restriction."
+    },
+    {
+      "id": "NCT07339176-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per IT-RECIST (Parts A1/A2) and RECIST v1.1 (Part A3), as applicable.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07339176-injectable",
+      "polarity": "inclusion",
+      "sourceText": "At least one injectable tumor lesion, meeting superficial or visceral criteria and deemed safe/accessible for injection",
+      "reasonFuzzy": "Injectable lesion accessibility is a procedural and judgment-based criterion."
+    },
+    {
+      "id": "NCT07339176-recovery",
+      "polarity": "inclusion",
+      "sourceText": "Adequate recovery from prior therapy: toxicities from prior anticancer treatment resolved to Grade ≤1 or baseline (except alopecia, controlled endocrine toxicities, or other stable toxicities as allowed per protocol/sponsor).",
+      "reasonFuzzy": "Recovery from prior therapy with protocol exceptions is not a simple typed lab or status check."
+    },
+    {
+      "id": "NCT07339176-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function, including hepatic, renal, and coagulation parameters per protocol-defined thresholds.",
+      "reasonFuzzy": "Refers generally to protocol-defined thresholds rather than explicitly stated cutoffs in the text."
+    },
+    {
+      "id": "NCT07339176-marrow",
+      "polarity": "inclusion",
+      "sourceText": "Adequate bone marrow function without transfusion support within 7 days prior to enrollment, per protocol-defined thresholds.",
+      "reasonFuzzy": "Refers to protocol-defined thresholds without explicit numerical cutoffs."
+    },
+    {
+      "id": "NCT07339176-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Tumor tissue requirements: willingness to provide a pre-treatment tumor biopsy and on-study post-treatment biopsy, if an accessible lesion is available and safe for biopsy, and biopsy does not interfere with injection/response assessment; and/or availability of archival tumor tissue (obtained within 2 years prior to treatment), per protocol.",
+      "reasonFuzzy": "Willingness to undergo a biopsy is subjective and procedural."
+    },
+    {
+      "id": "NCT07339176-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Contraception requirements: participants of reproductive potential agree to use effective contraception and avoid pregnancy/fathering children from screening through 30 days after last dose; women of childbearing potential must have a negative pregnancy test within 14 days prior to first dose, per protocol.",
+      "reasonFuzzy": "Contraception and pregnancy test rules are not typed check kinds."
+    },
+    {
+      "id": "NCT07339176-psych",
+      "polarity": "exclusion",
+      "sourceText": "Serious psychiatric, medical, or other condition that would interfere with study participation or protocol procedures, in the investigator's judgment.",
+      "reasonFuzzy": "Investigator judgment-based exclusion."
+    },
+    {
+      "id": "NCT07339176-transplant",
+      "polarity": "exclusion",
+      "sourceText": "History of solid organ transplant.",
+      "reasonFuzzy": "Solid organ transplant history is not a typed check kind."
+    },
+    {
+      "id": "NCT07339176-alpha1",
+      "polarity": "exclusion",
+      "sourceText": "Alpha-1 antitrypsin deficiency.",
+      "reasonFuzzy": "Alpha-1 antitrypsin deficiency is not a typed check kind."
+    },
+    {
+      "id": "NCT07339176-bleeding",
+      "polarity": "exclusion",
+      "sourceText": "Hereditary or acquired bleeding disorder/coagulation factor deficiency.",
+      "reasonFuzzy": "Bleeding disorder is not a typed check kind."
+    },
+    {
+      "id": "NCT07339176-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Active autoimmune disease requiring systemic treatment within the past 6 months, except clinically stable autoimmune conditions in remission not requiring systemic therapy (per protocol).",
+      "reasonFuzzy": "Autoimmune disease history with protocol exceptions is not a typed check kind."
+    },
+    {
+      "id": "NCT07339176-qtcf",
+      "polarity": "exclusion",
+      "sourceText": "Baseline QTcF >480 ms.",
+      "reasonFuzzy": "QTcF threshold is not among the allowed typed kinds."
+    },
+    {
+      "id": "NCT07339176-pregnant",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant or breastfeeding.",
+      "reasonFuzzy": "Pregnancy/breastfeeding status is not a typed check kind."
+    },
+    {
+      "id": "NCT07339176-imae",
+      "polarity": "exclusion",
+      "sourceText": "Prior severe immune-mediated adverse event (imAE) from immunotherapy: ≥Grade 3 imAE within the past 16 weeks, any Grade 4 life-threatening imAE, or any neurologic/ocular AE of any grade (except controlled endocrine AEs on stable replacement therapy per protocol).",
+      "reasonFuzzy": "Prior immune-mediated adverse events are not a typed check kind."
+    },
+    {
+      "id": "NCT07339176-othermalignancy",
+      "polarity": "exclusion",
+      "sourceText": "Another active malignancy (current or within the past 2 years) other than the disease under study, except specified low-risk cancers treated with curative intent or under active surveillance (per protocol).",
+      "reasonFuzzy": "Prior malignancy history is not a typed check kind."
+    },
+    {
+      "id": "NCT07339176-recenttherapy",
+      "polarity": "exclusion",
+      "sourceText": "Recent anticancer therapy: receipt of systemic anticancer therapy (including investigational agents) within 2 weeks prior to first dose (or 4 weeks for monoclonal antibodies/ADCs/other long half-life biologics), or within 5 half-lives, whichever is shorter.",
+      "reasonFuzzy": "Washout window involving variable half-lives is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT07339176-radiotherapy",
+      "polarity": "exclusion",
+      "sourceText": "Recent radiotherapy within 2 weeks prior to first dose.",
+      "reasonFuzzy": "Radiotherapy washout window is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT07339176-unresolved",
+      "polarity": "exclusion",
+      "sourceText": "Unresolved toxicity from prior anticancer therapy to >Grade 1 or not at baseline (except Grade ≤2 neuropathy and other allowed exceptions per protocol).",
+      "reasonFuzzy": "Unresolved toxicity criteria are not a typed check kind."
+    },
+    {
+      "id": "NCT07339176-infection",
+      "polarity": "exclusion",
+      "sourceText": "Active infection requiring systemic antibacterial, antifungal, or antiviral therapy within 14 days prior to first dose.",
+      "reasonFuzzy": "Active infection washout is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT07339176-chronicviral",
+      "polarity": "exclusion",
+      "sourceText": "Chronic viral infections not meeting protocol criteria: HBV with detectable DNA unless on appropriate antiviral therapy Active HCV with detectable HCV RNA (treated HCV permitted if RNA undetectable) HIV infection with CD4+ count <300/μL, detectable viral load, or HIV-related illness within 6 months",
+      "reasonFuzzy": "Chronic viral infection criteria involve multi-part rules and conditions."
+    },
+    {
+      "id": "NCT07339176-anticoagulants",
+      "polarity": "exclusion",
+      "sourceText": "Use of systemic anticoagulants (e.g., warfarin, LMWH, DOACs) within 14 days prior to first dose.",
+      "reasonFuzzy": "Anticoagulant washout is not a typed check kind."
+    },
+    {
+      "id": "NCT07339176-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Chronic systemic corticosteroids >10 mg/day prednisone equivalent, or systemic immunosuppressive/anti-inflammatory medications within 4 weeks prior to first dose, except permitted topical/inhaled/local formulations or short courses for premedication per protocol.",
+      "reasonFuzzy": "Corticosteroid and immunosuppressive washout rules are complex and not a single typed check."
+    },
+    {
+      "id": "NCT07339176-allergy",
+      "polarity": "exclusion",
+      "sourceText": "Known allergy/hypersensitivity to N17350 or any excipients.",
+      "reasonFuzzy": "Hypersensitivity to study drug is not a typed check kind."
+    },
+    {
+      "id": "NCT07339176-consent",
+      "polarity": "inclusion",
+      "sourceText": "Able to provide written informed consent and willing/able to comply with study procedures, visits, and follow-up.",
+      "reasonFuzzy": "Willingness to comply with study procedures is a subjective judgment."
+    },
+    {
+      "id": "NCT07339176-disease",
+      "polarity": "inclusion",
+      "sourceText": "Advanced solid tumor malignancy (excluding lymphoma and other hematologic malignancies), with disease that has progressed on, is intolerant of, or is ineligible for standard therapies known to provide clinical benefit, or for whom no standard therapy is available.",
+      "reasonFuzzy": "This is a broad solid tumor basket trial with a non-specific NSCLC mention and no stage_in list."
+    },
+    {
+      "id": "NCT07339176-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per IT-RECIST (Parts A1/A2) and RECIST v1.1 (Part A3), as applicable.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07339176-injectable",
+      "polarity": "inclusion",
+      "sourceText": "At least one injectable tumor lesion, meeting superficial or visceral criteria and deemed safe/accessible for injection:",
+      "reasonFuzzy": "Injectable lesion access and safety is an investigator judgment."
+    },
+    {
+      "id": "NCT07339176-recovery",
+      "polarity": "inclusion",
+      "sourceText": "Adequate recovery from prior therapy: toxicities from prior anticancer treatment resolved to Grade ≤1 or baseline (except alopecia, controlled endocrine toxicities, or other stable toxicities as allowed per protocol/sponsor).",
+      "reasonFuzzy": "Recovery from prior therapy with protocol exceptions is not a simple typed check."
+    },
+    {
+      "id": "NCT07339176-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function, including hepatic, renal, and coagulation parameters per protocol-defined thresholds.",
+      "reasonFuzzy": "Organ function thresholds are described generally per protocol without explicit cutoffs in the text."
+    },
+    {
+      "id": "NCT07339176-marrow",
+      "polarity": "inclusion",
+      "sourceText": "Adequate bone marrow function without transfusion support within 7 days prior to enrollment, per protocol-defined thresholds.",
+      "reasonFuzzy": "Bone marrow function uses protocol-defined thresholds without explicit typed lab cutoffs."
+    },
+    {
+      "id": "NCT07339176-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Tumor tissue requirements: willingness to provide a pre-treatment tumor biopsy and on-study post-treatment biopsy, if an accessible lesion is available and safe for biopsy, and biopsy does not interfere with injection/response assessment; and/or availability of archival tumor tissue (obtained within 2 years prior to treatment), per protocol.",
+      "reasonFuzzy": "Willingness to undergo a biopsy is a subjective participant requirement."
+    },
+    {
+      "id": "NCT07339176-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Contraception requirements: participants of reproductive potential agree to use effective contraception and avoid pregnancy/fathering children from screening through 30 days after last dose; women of childbearing potential must have a negative pregnancy test within 14 days prior to first dose, per protocol.",
+      "reasonFuzzy": "Contraception and pregnancy test requirements are not typed clinical eligibility checks."
+    },
+    {
+      "id": "NCT07339176-psych",
+      "polarity": "exclusion",
+      "sourceText": "Serious psychiatric, medical, or other condition that would interfere with study participation or protocol procedures, in the investigator's judgment.",
+      "reasonFuzzy": "Investigator judgment based exclusion."
+    },
+    {
+      "id": "NCT07339176-transplant",
+      "polarity": "exclusion",
+      "sourceText": "History of solid organ transplant.",
+      "reasonFuzzy": "Solid organ transplant history is not a typed kind."
+    },
+    {
+      "id": "NCT07339176-alpha1",
+      "polarity": "exclusion",
+      "sourceText": "Alpha-1 antitrypsin deficiency.",
+      "reasonFuzzy": "Alpha-1 antitrypsin deficiency is not a supported typed check kind."
+    },
+    {
+      "id": "NCT07339176-bleeding",
+      "polarity": "exclusion",
+      "sourceText": "Hereditary or acquired bleeding disorder/coagulation factor deficiency.",
+      "reasonFuzzy": "Bleeding disorder exclusion is not a typed check."
+    },
+    {
+      "id": "NCT07339176-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Active autoimmune disease requiring systemic treatment within the past 6 months, except clinically stable autoimmune conditions in remission not requiring systemic therapy (per protocol).",
+      "reasonFuzzy": "Active autoimmune disease exclusion is not a typed check."
+    },
+    {
+      "id": "NCT07339176-qtcf",
+      "polarity": "exclusion",
+      "sourceText": "Baseline QTcF >480 ms.",
+      "reasonFuzzy": "QTcF threshold is not among the allowed kinds."
+    },
+    {
+      "id": "NCT07339176-pregnant",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant or breastfeeding.",
+      "reasonFuzzy": "Pregnancy exclusion is not a typed kind."
+    },
+    {
+      "id": "NCT07339176-imae",
+      "polarity": "exclusion",
+      "sourceText": "Prior severe immune-mediated adverse event (imAE) from immunotherapy: ≥Grade 3 imAE within the past 16 weeks, any Grade 4 life-threatening imAE, or any neurologic/ocular AE of any grade (except controlled endocrine AEs on stable replacement therapy per protocol).",
+      "reasonFuzzy": "Prior immune-mediated adverse event criteria are not a typed check."
+    },
+    {
+      "id": "NCT07339176-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Another active malignancy (current or within the past 2 years) other than the disease under study, except specified low-risk cancers treated with curative intent or under active surveillance (per protocol).",
+      "reasonFuzzy": "Another active malignancy exclusion is not a typed check."
+    },
+    {
+      "id": "NCT07339176-washout",
+      "polarity": "exclusion",
+      "sourceText": "Recent anticancer therapy: receipt of systemic anticancer therapy (including investigational agents) within 2 weeks prior to first dose (or 4 weeks for monoclonal antibodies/ADCs/other long half-life biologics), or within 5 half-lives, whichever is shorter.",
+      "reasonFuzzy": "Washout windows with variable half-life conditions are left as fuzzy criteria."
+    },
+    {
+      "id": "NCT07339176-rad",
+      "polarity": "exclusion",
+      "sourceText": "Recent radiotherapy within 2 weeks prior to first dose.",
+      "reasonFuzzy": "Radiotherapy washout is not a typed check kind."
+    },
+    {
+      "id": "NCT07339176-tox",
+      "polarity": "exclusion",
+      "sourceText": "Unresolved toxicity from prior anticancer therapy to >Grade 1 or not at baseline (except Grade ≤2 neuropathy and other allowed exceptions per protocol).",
+      "reasonFuzzy": "Unresolved toxicity rule is not a typed check."
+    },
+    {
+      "id": "NCT07339176-infection",
+      "polarity": "exclusion",
+      "sourceText": "Active infection requiring systemic antibacterial, antifungal, or antiviral therapy within 14 days prior to first dose.",
+      "reasonFuzzy": "Active infection exclusion is not a typed check."
+    },
+    {
+      "id": "NCT07339176-chronic",
+      "polarity": "exclusion",
+      "sourceText": "Chronic viral infections not meeting protocol criteria: HBV with detectable DNA unless on appropriate antiviral therapy Active HCV with detectable HCV RNA (treated HCV permitted if RNA undetectable) HIV infection with CD4+ count <300/μL, detectable viral load, or HIV-related illness within 6 months",
+      "reasonFuzzy": "Chronic viral infection criteria are not typed checks."
+    },
+    {
+      "id": "NCT07339176-anticoag",
+      "polarity": "exclusion",
+      "sourceText": "Use of systemic anticoagulants (e.g., warfarin, LMWH, DOACs) within 14 days prior to first dose.",
+      "reasonFuzzy": "Systemic anticoagulant exclusion is not a typed check."
+    },
+    {
+      "id": "NCT07339176-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Chronic systemic corticosteroids >10 mg/day prednisone equivalent, or systemic immunosuppressive/anti-inflammatory medications within 4 weeks prior to first dose, except permitted topical/inhaled/local formulations or short courses for premedication per protocol.",
+      "reasonFuzzy": "Systemic corticosteroid exclusion is not a typed check."
+    },
+    {
+      "id": "NCT07339176-allergy",
+      "polarity": "exclusion",
+      "sourceText": "Known allergy/hypersensitivity to N17350 or any excipients.",
+      "reasonFuzzy": "Allergy or hypersensitivity exclusion is not a typed check."
+    },
+    {
+      "id": "NCT07339176-brain",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled or unstable brain metastases (eligible only if neurologically stable for ≥4 weeks, and off steroids or on stable/decreasing steroids ≤10 mg/day prednisone equivalent; carcinomatous meningitis excluded).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 26,
+    "attempts": 1,
+    "ms": 6654
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 26,
+    "attempts": 1,
+    "ms": 6270
+  },
+  "ms": 20918,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07339176",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07339176-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥18 years (or legal age of consent in the study jurisdiction).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07339176-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07339176-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled or unstable brain metastases (eligible only if neurologically stable for ≥4 weeks, and off steroids or on stable/decreasing steroids ≤10 mg/day prednisone equivalent; carcinomatous meningitis excluded).",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07339176-consent",
+        "polarity": "inclusion",
+        "sourceText": "Able to provide written informed consent and willing/able to comply with study procedures, visits, and follow-up.",
+        "reasonFuzzy": "Willingness to comply with procedures and provide consent is subjective."
+      },
+      {
+        "id": "NCT07339176-tumor",
+        "polarity": "inclusion",
+        "sourceText": "Advanced solid tumor malignancy (excluding lymphoma and other hematologic malignancies), with disease that has progressed on, is intolerant of, or is ineligible for standard therapies known to provide clinical benefit, or for whom no standard therapy is available.",
+        "reasonFuzzy": "The trial is an advanced solid tumor basket study mentioning NSCLC among other tumors, without a numbered stage list or specific NSCLC restriction."
+      },
+      {
+        "id": "NCT07339176-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per IT-RECIST (Parts A1/A2) and RECIST v1.1 (Part A3), as applicable.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07339176-injectable",
+        "polarity": "inclusion",
+        "sourceText": "At least one injectable tumor lesion, meeting superficial or visceral criteria and deemed safe/accessible for injection",
+        "reasonFuzzy": "Injectable lesion accessibility is a procedural and judgment-based criterion."
+      },
+      {
+        "id": "NCT07339176-recovery",
+        "polarity": "inclusion",
+        "sourceText": "Adequate recovery from prior therapy: toxicities from prior anticancer treatment resolved to Grade ≤1 or baseline (except alopecia, controlled endocrine toxicities, or other stable toxicities as allowed per protocol/sponsor).",
+        "reasonFuzzy": "Recovery from prior therapy with protocol exceptions is not a simple typed lab or status check."
+      },
+      {
+        "id": "NCT07339176-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function, including hepatic, renal, and coagulation parameters per protocol-defined thresholds.",
+        "reasonFuzzy": "Refers generally to protocol-defined thresholds rather than explicitly stated cutoffs in the text."
+      },
+      {
+        "id": "NCT07339176-marrow",
+        "polarity": "inclusion",
+        "sourceText": "Adequate bone marrow function without transfusion support within 7 days prior to enrollment, per protocol-defined thresholds.",
+        "reasonFuzzy": "Refers to protocol-defined thresholds without explicit numerical cutoffs."
+      },
+      {
+        "id": "NCT07339176-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Tumor tissue requirements: willingness to provide a pre-treatment tumor biopsy and on-study post-treatment biopsy, if an accessible lesion is available and safe for biopsy, and biopsy does not interfere with injection/response assessment; and/or availability of archival tumor tissue (obtained within 2 years prior to treatment), per protocol.",
+        "reasonFuzzy": "Willingness to undergo a biopsy is subjective and procedural."
+      },
+      {
+        "id": "NCT07339176-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Contraception requirements: participants of reproductive potential agree to use effective contraception and avoid pregnancy/fathering children from screening through 30 days after last dose; women of childbearing potential must have a negative pregnancy test within 14 days prior to first dose, per protocol.",
+        "reasonFuzzy": "Contraception and pregnancy test rules are not typed check kinds."
+      },
+      {
+        "id": "NCT07339176-psych",
+        "polarity": "exclusion",
+        "sourceText": "Serious psychiatric, medical, or other condition that would interfere with study participation or protocol procedures, in the investigator's judgment.",
+        "reasonFuzzy": "Investigator judgment-based exclusion."
+      },
+      {
+        "id": "NCT07339176-transplant",
+        "polarity": "exclusion",
+        "sourceText": "History of solid organ transplant.",
+        "reasonFuzzy": "Solid organ transplant history is not a typed check kind."
+      },
+      {
+        "id": "NCT07339176-alpha1",
+        "polarity": "exclusion",
+        "sourceText": "Alpha-1 antitrypsin deficiency.",
+        "reasonFuzzy": "Alpha-1 antitrypsin deficiency is not a typed check kind."
+      },
+      {
+        "id": "NCT07339176-bleeding",
+        "polarity": "exclusion",
+        "sourceText": "Hereditary or acquired bleeding disorder/coagulation factor deficiency.",
+        "reasonFuzzy": "Bleeding disorder is not a typed check kind."
+      },
+      {
+        "id": "NCT07339176-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Active autoimmune disease requiring systemic treatment within the past 6 months, except clinically stable autoimmune conditions in remission not requiring systemic therapy (per protocol).",
+        "reasonFuzzy": "Autoimmune disease history with protocol exceptions is not a typed check kind."
+      },
+      {
+        "id": "NCT07339176-qtcf",
+        "polarity": "exclusion",
+        "sourceText": "Baseline QTcF >480 ms.",
+        "reasonFuzzy": "QTcF threshold is not among the allowed typed kinds."
+      },
+      {
+        "id": "NCT07339176-pregnant",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant or breastfeeding.",
+        "reasonFuzzy": "Pregnancy/breastfeeding status is not a typed check kind."
+      },
+      {
+        "id": "NCT07339176-imae",
+        "polarity": "exclusion",
+        "sourceText": "Prior severe immune-mediated adverse event (imAE) from immunotherapy: ≥Grade 3 imAE within the past 16 weeks, any Grade 4 life-threatening imAE, or any neurologic/ocular AE of any grade (except controlled endocrine AEs on stable replacement therapy per protocol).",
+        "reasonFuzzy": "Prior immune-mediated adverse events are not a typed check kind."
+      },
+      {
+        "id": "NCT07339176-othermalignancy",
+        "polarity": "exclusion",
+        "sourceText": "Another active malignancy (current or within the past 2 years) other than the disease under study, except specified low-risk cancers treated with curative intent or under active surveillance (per protocol).",
+        "reasonFuzzy": "Prior malignancy history is not a typed check kind."
+      },
+      {
+        "id": "NCT07339176-recenttherapy",
+        "polarity": "exclusion",
+        "sourceText": "Recent anticancer therapy: receipt of systemic anticancer therapy (including investigational agents) within 2 weeks prior to first dose (or 4 weeks for monoclonal antibodies/ADCs/other long half-life biologics), or within 5 half-lives, whichever is shorter.",
+        "reasonFuzzy": "Washout window involving variable half-lives is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT07339176-radiotherapy",
+        "polarity": "exclusion",
+        "sourceText": "Recent radiotherapy within 2 weeks prior to first dose.",
+        "reasonFuzzy": "Radiotherapy washout window is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT07339176-unresolved",
+        "polarity": "exclusion",
+        "sourceText": "Unresolved toxicity from prior anticancer therapy to >Grade 1 or not at baseline (except Grade ≤2 neuropathy and other allowed exceptions per protocol).",
+        "reasonFuzzy": "Unresolved toxicity criteria are not a typed check kind."
+      },
+      {
+        "id": "NCT07339176-infection",
+        "polarity": "exclusion",
+        "sourceText": "Active infection requiring systemic antibacterial, antifungal, or antiviral therapy within 14 days prior to first dose.",
+        "reasonFuzzy": "Active infection washout is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT07339176-chronicviral",
+        "polarity": "exclusion",
+        "sourceText": "Chronic viral infections not meeting protocol criteria: HBV with detectable DNA unless on appropriate antiviral therapy Active HCV with detectable HCV RNA (treated HCV permitted if RNA undetectable) HIV infection with CD4+ count <300/μL, detectable viral load, or HIV-related illness within 6 months",
+        "reasonFuzzy": "Chronic viral infection criteria involve multi-part rules and conditions."
+      },
+      {
+        "id": "NCT07339176-anticoagulants",
+        "polarity": "exclusion",
+        "sourceText": "Use of systemic anticoagulants (e.g., warfarin, LMWH, DOACs) within 14 days prior to first dose.",
+        "reasonFuzzy": "Anticoagulant washout is not a typed check kind."
+      },
+      {
+        "id": "NCT07339176-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Chronic systemic corticosteroids >10 mg/day prednisone equivalent, or systemic immunosuppressive/anti-inflammatory medications within 4 weeks prior to first dose, except permitted topical/inhaled/local formulations or short courses for premedication per protocol.",
+        "reasonFuzzy": "Corticosteroid and immunosuppressive washout rules are complex and not a single typed check."
+      },
+      {
+        "id": "NCT07339176-allergy",
+        "polarity": "exclusion",
+        "sourceText": "Known allergy/hypersensitivity to N17350 or any excipients.",
+        "reasonFuzzy": "Hypersensitivity to study drug is not a typed check kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07339176",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07339176-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥18 years (or legal age of consent in the study jurisdiction).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07339176-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07339176-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled or unstable brain metastases (eligible only if neurologically stable for ≥4 weeks, and off steroids or on stable/decreasing steroids ≤10 mg/day prednisone equivalent; carcinomatous meningitis excluded).",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07339176-consent",
+        "polarity": "inclusion",
+        "sourceText": "Able to provide written informed consent and willing/able to comply with study procedures, visits, and follow-up.",
+        "reasonFuzzy": "Willingness to comply with study procedures is a subjective judgment."
+      },
+      {
+        "id": "NCT07339176-disease",
+        "polarity": "inclusion",
+        "sourceText": "Advanced solid tumor malignancy (excluding lymphoma and other hematologic malignancies), with disease that has progressed on, is intolerant of, or is ineligible for standard therapies known to provide clinical benefit, or for whom no standard therapy is available.",
+        "reasonFuzzy": "This is a broad solid tumor basket trial with a non-specific NSCLC mention and no stage_in list."
+      },
+      {
+        "id": "NCT07339176-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per IT-RECIST (Parts A1/A2) and RECIST v1.1 (Part A3), as applicable.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07339176-injectable",
+        "polarity": "inclusion",
+        "sourceText": "At least one injectable tumor lesion, meeting superficial or visceral criteria and deemed safe/accessible for injection:",
+        "reasonFuzzy": "Injectable lesion access and safety is an investigator judgment."
+      },
+      {
+        "id": "NCT07339176-recovery",
+        "polarity": "inclusion",
+        "sourceText": "Adequate recovery from prior therapy: toxicities from prior anticancer treatment resolved to Grade ≤1 or baseline (except alopecia, controlled endocrine toxicities, or other stable toxicities as allowed per protocol/sponsor).",
+        "reasonFuzzy": "Recovery from prior therapy with protocol exceptions is not a simple typed check."
+      },
+      {
+        "id": "NCT07339176-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function, including hepatic, renal, and coagulation parameters per protocol-defined thresholds.",
+        "reasonFuzzy": "Organ function thresholds are described generally per protocol without explicit cutoffs in the text."
+      },
+      {
+        "id": "NCT07339176-marrow",
+        "polarity": "inclusion",
+        "sourceText": "Adequate bone marrow function without transfusion support within 7 days prior to enrollment, per protocol-defined thresholds.",
+        "reasonFuzzy": "Bone marrow function uses protocol-defined thresholds without explicit typed lab cutoffs."
+      },
+      {
+        "id": "NCT07339176-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Tumor tissue requirements: willingness to provide a pre-treatment tumor biopsy and on-study post-treatment biopsy, if an accessible lesion is available and safe for biopsy, and biopsy does not interfere with injection/response assessment; and/or availability of archival tumor tissue (obtained within 2 years prior to treatment), per protocol.",
+        "reasonFuzzy": "Willingness to undergo a biopsy is a subjective participant requirement."
+      },
+      {
+        "id": "NCT07339176-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Contraception requirements: participants of reproductive potential agree to use effective contraception and avoid pregnancy/fathering children from screening through 30 days after last dose; women of childbearing potential must have a negative pregnancy test within 14 days prior to first dose, per protocol.",
+        "reasonFuzzy": "Contraception and pregnancy test requirements are not typed clinical eligibility checks."
+      },
+      {
+        "id": "NCT07339176-psych",
+        "polarity": "exclusion",
+        "sourceText": "Serious psychiatric, medical, or other condition that would interfere with study participation or protocol procedures, in the investigator's judgment.",
+        "reasonFuzzy": "Investigator judgment based exclusion."
+      },
+      {
+        "id": "NCT07339176-transplant",
+        "polarity": "exclusion",
+        "sourceText": "History of solid organ transplant.",
+        "reasonFuzzy": "Solid organ transplant history is not a typed kind."
+      },
+      {
+        "id": "NCT07339176-alpha1",
+        "polarity": "exclusion",
+        "sourceText": "Alpha-1 antitrypsin deficiency.",
+        "reasonFuzzy": "Alpha-1 antitrypsin deficiency is not a supported typed check kind."
+      },
+      {
+        "id": "NCT07339176-bleeding",
+        "polarity": "exclusion",
+        "sourceText": "Hereditary or acquired bleeding disorder/coagulation factor deficiency.",
+        "reasonFuzzy": "Bleeding disorder exclusion is not a typed check."
+      },
+      {
+        "id": "NCT07339176-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Active autoimmune disease requiring systemic treatment within the past 6 months, except clinically stable autoimmune conditions in remission not requiring systemic therapy (per protocol).",
+        "reasonFuzzy": "Active autoimmune disease exclusion is not a typed check."
+      },
+      {
+        "id": "NCT07339176-qtcf",
+        "polarity": "exclusion",
+        "sourceText": "Baseline QTcF >480 ms.",
+        "reasonFuzzy": "QTcF threshold is not among the allowed kinds."
+      },
+      {
+        "id": "NCT07339176-pregnant",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant or breastfeeding.",
+        "reasonFuzzy": "Pregnancy exclusion is not a typed kind."
+      },
+      {
+        "id": "NCT07339176-imae",
+        "polarity": "exclusion",
+        "sourceText": "Prior severe immune-mediated adverse event (imAE) from immunotherapy: ≥Grade 3 imAE within the past 16 weeks, any Grade 4 life-threatening imAE, or any neurologic/ocular AE of any grade (except controlled endocrine AEs on stable replacement therapy per protocol).",
+        "reasonFuzzy": "Prior immune-mediated adverse event criteria are not a typed check."
+      },
+      {
+        "id": "NCT07339176-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Another active malignancy (current or within the past 2 years) other than the disease under study, except specified low-risk cancers treated with curative intent or under active surveillance (per protocol).",
+        "reasonFuzzy": "Another active malignancy exclusion is not a typed check."
+      },
+      {
+        "id": "NCT07339176-washout",
+        "polarity": "exclusion",
+        "sourceText": "Recent anticancer therapy: receipt of systemic anticancer therapy (including investigational agents) within 2 weeks prior to first dose (or 4 weeks for monoclonal antibodies/ADCs/other long half-life biologics), or within 5 half-lives, whichever is shorter.",
+        "reasonFuzzy": "Washout windows with variable half-life conditions are left as fuzzy criteria."
+      },
+      {
+        "id": "NCT07339176-rad",
+        "polarity": "exclusion",
+        "sourceText": "Recent radiotherapy within 2 weeks prior to first dose.",
+        "reasonFuzzy": "Radiotherapy washout is not a typed check kind."
+      },
+      {
+        "id": "NCT07339176-tox",
+        "polarity": "exclusion",
+        "sourceText": "Unresolved toxicity from prior anticancer therapy to >Grade 1 or not at baseline (except Grade ≤2 neuropathy and other allowed exceptions per protocol).",
+        "reasonFuzzy": "Unresolved toxicity rule is not a typed check."
+      },
+      {
+        "id": "NCT07339176-infection",
+        "polarity": "exclusion",
+        "sourceText": "Active infection requiring systemic antibacterial, antifungal, or antiviral therapy within 14 days prior to first dose.",
+        "reasonFuzzy": "Active infection exclusion is not a typed check."
+      },
+      {
+        "id": "NCT07339176-chronic",
+        "polarity": "exclusion",
+        "sourceText": "Chronic viral infections not meeting protocol criteria: HBV with detectable DNA unless on appropriate antiviral therapy Active HCV with detectable HCV RNA (treated HCV permitted if RNA undetectable) HIV infection with CD4+ count <300/μL, detectable viral load, or HIV-related illness within 6 months",
+        "reasonFuzzy": "Chronic viral infection criteria are not typed checks."
+      },
+      {
+        "id": "NCT07339176-anticoag",
+        "polarity": "exclusion",
+        "sourceText": "Use of systemic anticoagulants (e.g., warfarin, LMWH, DOACs) within 14 days prior to first dose.",
+        "reasonFuzzy": "Systemic anticoagulant exclusion is not a typed check."
+      },
+      {
+        "id": "NCT07339176-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Chronic systemic corticosteroids >10 mg/day prednisone equivalent, or systemic immunosuppressive/anti-inflammatory medications within 4 weeks prior to first dose, except permitted topical/inhaled/local formulations or short courses for premedication per protocol.",
+        "reasonFuzzy": "Systemic corticosteroid exclusion is not a typed check."
+      },
+      {
+        "id": "NCT07339176-allergy",
+        "polarity": "exclusion",
+        "sourceText": "Known allergy/hypersensitivity to N17350 or any excipients.",
+        "reasonFuzzy": "Allergy or hypersensitivity exclusion is not a typed check."
+      }
+    ]
+  }
+}

@@ -1,0 +1,682 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07017829",
+  "briefTitle": "GT103 in Combination With Pembrolizumab for the Treatment of Advanced or Metastatic STK11 Mutant Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:56:30.519Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07017829-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years.",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07017829-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of ≤ 1 at the time of study treatment initiation.",
+      "numberValue": 1,
+      "evidence_quote": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of ≤ 1 at the time of study treatment initiation.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07017829-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin ≥ 9 g/dL.",
+      "numberValue": 9,
+      "evidence_quote": "Hemoglobin ≥ 9 g/dL.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07017829-bilirubin",
+      "kind": "bilirubin_max",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin ≤ 1.5 x ULN. For patients with well documented Gilbert's syndrome, total bilirubin ≤ 3 x ULN with direct bilirubin within normal range.",
+      "numberValue": 1.5,
+      "stringValue": "1.5 x ULN",
+      "evidence_quote": "Total bilirubin ≤ 1.5 x ULN. For patients with well documented Gilbert's syndrome, total bilirubin ≤ 3 x ULN with direct bilirubin within normal range.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07017829-stk11",
+      "polarity": "inclusion",
+      "sourceText": "Have pathologically confirmed diagnosis of STK11 mutant NSCLC. STK11 mutation will be based on subject's local clinically accredited laboratory testing (Clinical Laboratory Improvement Amendments [CLIA]-certified) using deoxyribonucleic acid (DNA) sequencing test.",
+      "reasonFuzzy": "There is no typed kind for STK11 mutation."
+    },
+    {
+      "id": "NCT07017829-pembrolizumab",
+      "polarity": "inclusion",
+      "sourceText": "Must have progressed on a pembrolizumab containing regimen and eligible for continuing pembrolizumab post-progression as determined by treating physician. Other anti-PD-1 or anti-PD-L1 checkpoint inhibitors may also be used in place of pembrolizumab",
+      "reasonFuzzy": "Prior therapy requirement involves progression and physician discretion on post-progression continuation."
+    },
+    {
+      "id": "NCT07017829-lvef",
+      "polarity": "inclusion",
+      "sourceText": "Left ventricular ejection fraction (LVEF) ≥ lower limit of normal (LLN) (institutional limit).",
+      "reasonFuzzy": "LVEF is not an allowed typed check kind."
+    },
+    {
+      "id": "NCT07017829-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have measurable disease as defined in Response Evaluation Criteria in Solid Tumors (RECIST) 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07017829-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Participants of child-bearing potential must agree to use adequate contraceptive methods (e.g., hormonal or barrier method of birth control; abstinence) prior to study entry.",
+      "reasonFuzzy": "Contraception requirements are not a typed check kind."
+    },
+    {
+      "id": "NCT07017829-consent",
+      "polarity": "inclusion",
+      "sourceText": "Participant must understand the investigational nature of this study and sign an Independent Ethics Committee/Institutional Review Board approved written informed consent form prior to receiving any study related procedure.",
+      "reasonFuzzy": "Informed consent is not a typed check kind."
+    },
+    {
+      "id": "NCT07017829-biospecimens",
+      "polarity": "inclusion",
+      "sourceText": "Participant agrees to provide blood samples at the start of treatment and at multiple times during the study. Participant agrees to provide tumor biopsy tissue or have adequate archival formalin-fixed paraffin-embedded (FFPE) tissue available.",
+      "reasonFuzzy": "Willingness to undergo biopsy or provide samples is not a typed check kind."
+    },
+    {
+      "id": "NCT07017829-chemo-washout",
+      "polarity": "exclusion",
+      "sourceText": "Receipt of anticancer chemotherapy within 4 weeks before the first administration of study drug.",
+      "reasonFuzzy": "Washout windows for chemotherapy are not simple lab cutoffs and are kept in fuzzy criteria."
+    },
+    {
+      "id": "NCT07017829-radiotherapy",
+      "polarity": "exclusion",
+      "sourceText": "Prior radiotherapy or gamma knife within 2 weeks of study treatment for non-brain metastasis. Subjects must have recovered from all radiation related toxicities.",
+      "reasonFuzzy": "Radiotherapy washout is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT07017829-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "Leptomeningeal involvement regardless of treatment status.",
+      "reasonFuzzy": "Leptomeningeal disease is not a standard brain_mets category check."
+    },
+    {
+      "id": "NCT07017829-oncogenic-mutations",
+      "polarity": "exclusion",
+      "sourceText": "Tumor with oncogenic mutation based on standard of care broad genomic profiling in EGFR, ALK, ROS1, RET, MET, or NTRK genes.",
+      "reasonFuzzy": "Exclusion of multiple specific genes (RET, MET, NTRK) and general oncogenic mutations is not a single typed variant check."
+    },
+    {
+      "id": "NCT07017829-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "History of autoimmune disorder, with exception of patients with vitiligo or endocrine-related autoimmune conditions receiving appropriate hormonal supplementation who are eligible. Systemic use of immunosuppressant drugs such as steroids (except as hormone replacement therapy or short-course supportive medication such as chemotherapy or drug allergy, etc.), azathioprine, tacrolimus, cyclosporine, etc. within 4 weeks before the first administration of study drug.",
+      "reasonFuzzy": "Autoimmune history and immunosuppressant use are not typed check kinds."
+    },
+    {
+      "id": "NCT07017829-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Currently receiving or has received systemic corticosteroids within 4 weeks prior to starting study drug for management of brain metastases, or who have not fully recovered from side effects of such treatment. Steroids for endocrine replacement or receipt of short-course of steroids during the preceding 4 week period as supportive medication such as for drug allergy, anti-emetic, etc. is allowed.",
+      "reasonFuzzy": "Systemic corticosteroid use is not a typed check kind."
+    },
+    {
+      "id": "NCT07017829-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Had major surgery within 14 days prior to starting study drug or has not recovered from major side effects (tumor biopsy is not considered major surgery) resulting from a prior surgery.",
+      "reasonFuzzy": "Major surgery washout is not a typed check kind."
+    },
+    {
+      "id": "NCT07017829-immunosuppressive",
+      "polarity": "exclusion",
+      "sourceText": "Has known immunosuppressive disease (e.g., HIV, AIDS or other immune depressing disease). Testing is not mandatory.",
+      "reasonFuzzy": "Immunosuppressive diseases are not typed check kinds."
+    },
+    {
+      "id": "NCT07017829-infections",
+      "polarity": "exclusion",
+      "sourceText": "Active, clinically serious infections or other serious uncontrolled medical conditions.",
+      "reasonFuzzy": "Active infections and uncontrolled medical conditions are subjective clinical judgments."
+    },
+    {
+      "id": "NCT07017829-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Patient has known hypersensitivity to the components of the study drugs or any analogs.",
+      "reasonFuzzy": "Hypersensitivity is not a typed check kind."
+    },
+    {
+      "id": "NCT07017829-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "History or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the patient's participation for the full duration of the study, or is not in the best interest of the patient to participate, in the opinion of the treating Investigator, including, but not limited to: Myocardial infarction or arterial thromboembolic events within 6 months prior to baseline or severe or unstable angina, New York Heart Association (NYHA) Class III or IV disease. History of documented congestive heart failure (New York Heart Association functional classification III or IV) within 6 months prior to baseline. Uncontrolled hypertension (systolic blood pressure [SBP] > 160/diastolic blood pressure [DBP] > 100 despite medical intervention). History of myocarditis of any etiology. History of ventricular arrhythmias.",
+      "reasonFuzzy": "Cardiovascular history and investigator discretion are subjective or complex clinical exclusions."
+    },
+    {
+      "id": "NCT07017829-invasive-cancer",
+      "polarity": "exclusion",
+      "sourceText": "Patients diagnosed with an invasive cancer within 2 years prior to starting protocol therapy with the following exceptions: non-melanoma skin cancers, in-situ cancers, and prostate cancer Gleason ≤ 6 (under surveillance or treated), early-stage node-negative estrogen receptor positive (ER+)/progesterone receptor positive (PR+) breast cancer with Oncotype Dx score < 25 not taking adjuvant hormonal therapy.",
+      "reasonFuzzy": "Prior invasive cancer history is not a typed check kind."
+    },
+    {
+      "id": "NCT07017829-pregnant",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant or nursing female participants.",
+      "reasonFuzzy": "Pregnancy is not a typed check kind."
+    },
+    {
+      "id": "NCT07017829-investigator",
+      "polarity": "exclusion",
+      "sourceText": "Any condition which in the investigator's opinion deems the participant an unsuitable candidate to receive study drug.",
+      "reasonFuzzy": "Investigator opinion is a subjective judgment."
+    },
+    {
+      "id": "NCT07017829-compliance",
+      "polarity": "exclusion",
+      "sourceText": "Unwilling or unable to follow protocol requirements.",
+      "reasonFuzzy": "Willingness to follow protocol is a subjective judgment."
+    },
+    {
+      "id": "NCT07017829-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥ 1.5 x 10^9/L.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07017829-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelets ≥ 100 x 10^9/L.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07017829-stk11",
+      "polarity": "inclusion",
+      "sourceText": "Have pathologically confirmed diagnosis of STK11 mutant NSCLC. STK11 mutation will be based on subject's local clinically accredited laboratory testing (Clinical Laboratory Improvement Amendments [CLIA]-certified) using deoxyribonucleic acid (DNA) sequencing test.",
+      "reasonFuzzy": "STK11 status is not among the allowed biomarker kinds (egfr_status, alk_status, kras_status, ros1_status, braf_status)."
+    },
+    {
+      "id": "NCT07017829-prior_therapy",
+      "polarity": "inclusion",
+      "sourceText": "Must have progressed on a pembrolizumab containing regimen and eligible for continuing pembrolizumab post-progression as determined by treating physician. Other anti-PD-1 or anti-PD-L1 checkpoint inhibitors may also be used in place of pembrolizumab",
+      "reasonFuzzy": "Prior therapy requirement involves progression on specific immunotherapy with investigator discretion on continuation, which cannot be captured in a simple prior_therapy_required check."
+    },
+    {
+      "id": "NCT07017829-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have measurable disease as defined in Response Evaluation Criteria in Solid Tumors (RECIST) 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07017829-oncogenic",
+      "polarity": "exclusion",
+      "sourceText": "Tumor with oncogenic mutation based on standard of care broad genomic profiling in EGFR, ALK, ROS1, RET, MET, or NTRK genes.",
+      "reasonFuzzy": "Excludes multiple genes simultaneously, some of which are not standard typed kinds."
+    },
+    {
+      "id": "NCT07017829-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥ 1.5 x 10^9/L.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07017829-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelets ≥ 100 x 10^9/L.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07017829-brain",
+      "polarity": "exclusion",
+      "sourceText": "Active/untreated brain metastasis. Whole brain radiation or gamma knife radiosurgery performed less than 4 weeks prior to first administration of study drug. Previously treated brain metastasis allowed as long as not requiring steroids and stable on imaging at least 4 weeks after completing radiation therapy.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07017829-brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Active/untreated brain metastasis. Whole brain radiation or gamma knife radiosurgery performed less than 4 weeks prior to first administration of study drug. Previously treated brain metastasis allowed as long as not requiring steroids and stable on imaging at least 4 weeks after completing radiation therapy.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07017829-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Estimated glomerular filtration rate (GFR) (measured or calculated with Cockroft and Gault formula) > 45mL/min.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07017829-alt",
+      "polarity": "inclusion",
+      "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤ 3 x upper limit of normal (ULN) (ALT and AST ≤ 5 x ULN is acceptable if liver metastases are present).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07017829-ast",
+      "polarity": "inclusion",
+      "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤ 3 x upper limit of normal (ULN) (ALT and AST ≤ 5 x ULN is acceptable if liver metastases are present).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 8,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) ≥ 1.5 x 10^9/L."
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelets ≥ 100 x 10^9/L."
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 8,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) ≥ 1.5 x 10^9/L."
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelets ≥ 100 x 10^9/L."
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 7,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "value": "n:45"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        }
+      ],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 22,
+    "attempts": 1,
+    "ms": 11240
+  },
+  "runB": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 3853
+  },
+  "ms": 23030,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07017829",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07017829-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07017829-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of ≤ 1 at the time of study treatment initiation.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07017829-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥ 1.5 x 10^9/L.",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT07017829-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 100 x 10^9/L.",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT07017829-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 9 g/dL.",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT07017829-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Estimated glomerular filtration rate (GFR) (measured or calculated with Cockroft and Gault formula) > 45mL/min.",
+        "numberValue": 45
+      },
+      {
+        "id": "NCT07017829-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤ 3 x upper limit of normal (ULN) (ALT and AST ≤ 5 x ULN is acceptable if liver metastases are present).",
+        "numberValue": 3,
+        "stages": [],
+        "stringValue": "3 x ULN"
+      },
+      {
+        "id": "NCT07017829-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤ 3 x upper limit of normal (ULN) (ALT and AST ≤ 5 x ULN is acceptable if liver metastases are present).",
+        "numberValue": 3,
+        "stringValue": "3 x ULN"
+      },
+      {
+        "id": "NCT07017829-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 x ULN. For patients with well documented Gilbert's syndrome, total bilirubin ≤ 3 x ULN with direct bilirubin within normal range.",
+        "numberValue": 1.5,
+        "stringValue": "1.5 x ULN"
+      },
+      {
+        "id": "NCT07017829-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active/untreated brain metastasis. Whole brain radiation or gamma knife radiosurgery performed less than 4 weeks prior to first administration of study drug. Previously treated brain metastasis allowed as long as not requiring steroids and stable on imaging at least 4 weeks after completing radiation therapy.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07017829-stk11",
+        "polarity": "inclusion",
+        "sourceText": "Have pathologically confirmed diagnosis of STK11 mutant NSCLC. STK11 mutation will be based on subject's local clinically accredited laboratory testing (Clinical Laboratory Improvement Amendments [CLIA]-certified) using deoxyribonucleic acid (DNA) sequencing test.",
+        "reasonFuzzy": "There is no typed kind for STK11 mutation."
+      },
+      {
+        "id": "NCT07017829-pembrolizumab",
+        "polarity": "inclusion",
+        "sourceText": "Must have progressed on a pembrolizumab containing regimen and eligible for continuing pembrolizumab post-progression as determined by treating physician. Other anti-PD-1 or anti-PD-L1 checkpoint inhibitors may also be used in place of pembrolizumab",
+        "reasonFuzzy": "Prior therapy requirement involves progression and physician discretion on post-progression continuation."
+      },
+      {
+        "id": "NCT07017829-lvef",
+        "polarity": "inclusion",
+        "sourceText": "Left ventricular ejection fraction (LVEF) ≥ lower limit of normal (LLN) (institutional limit).",
+        "reasonFuzzy": "LVEF is not an allowed typed check kind."
+      },
+      {
+        "id": "NCT07017829-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have measurable disease as defined in Response Evaluation Criteria in Solid Tumors (RECIST) 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07017829-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Participants of child-bearing potential must agree to use adequate contraceptive methods (e.g., hormonal or barrier method of birth control; abstinence) prior to study entry.",
+        "reasonFuzzy": "Contraception requirements are not a typed check kind."
+      },
+      {
+        "id": "NCT07017829-consent",
+        "polarity": "inclusion",
+        "sourceText": "Participant must understand the investigational nature of this study and sign an Independent Ethics Committee/Institutional Review Board approved written informed consent form prior to receiving any study related procedure.",
+        "reasonFuzzy": "Informed consent is not a typed check kind."
+      },
+      {
+        "id": "NCT07017829-biospecimens",
+        "polarity": "inclusion",
+        "sourceText": "Participant agrees to provide blood samples at the start of treatment and at multiple times during the study. Participant agrees to provide tumor biopsy tissue or have adequate archival formalin-fixed paraffin-embedded (FFPE) tissue available.",
+        "reasonFuzzy": "Willingness to undergo biopsy or provide samples is not a typed check kind."
+      },
+      {
+        "id": "NCT07017829-chemo-washout",
+        "polarity": "exclusion",
+        "sourceText": "Receipt of anticancer chemotherapy within 4 weeks before the first administration of study drug.",
+        "reasonFuzzy": "Washout windows for chemotherapy are not simple lab cutoffs and are kept in fuzzy criteria."
+      },
+      {
+        "id": "NCT07017829-radiotherapy",
+        "polarity": "exclusion",
+        "sourceText": "Prior radiotherapy or gamma knife within 2 weeks of study treatment for non-brain metastasis. Subjects must have recovered from all radiation related toxicities.",
+        "reasonFuzzy": "Radiotherapy washout is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT07017829-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "Leptomeningeal involvement regardless of treatment status.",
+        "reasonFuzzy": "Leptomeningeal disease is not a standard brain_mets category check."
+      },
+      {
+        "id": "NCT07017829-oncogenic-mutations",
+        "polarity": "exclusion",
+        "sourceText": "Tumor with oncogenic mutation based on standard of care broad genomic profiling in EGFR, ALK, ROS1, RET, MET, or NTRK genes.",
+        "reasonFuzzy": "Exclusion of multiple specific genes (RET, MET, NTRK) and general oncogenic mutations is not a single typed variant check."
+      },
+      {
+        "id": "NCT07017829-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "History of autoimmune disorder, with exception of patients with vitiligo or endocrine-related autoimmune conditions receiving appropriate hormonal supplementation who are eligible. Systemic use of immunosuppressant drugs such as steroids (except as hormone replacement therapy or short-course supportive medication such as chemotherapy or drug allergy, etc.), azathioprine, tacrolimus, cyclosporine, etc. within 4 weeks before the first administration of study drug.",
+        "reasonFuzzy": "Autoimmune history and immunosuppressant use are not typed check kinds."
+      },
+      {
+        "id": "NCT07017829-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Currently receiving or has received systemic corticosteroids within 4 weeks prior to starting study drug for management of brain metastases, or who have not fully recovered from side effects of such treatment. Steroids for endocrine replacement or receipt of short-course of steroids during the preceding 4 week period as supportive medication such as for drug allergy, anti-emetic, etc. is allowed.",
+        "reasonFuzzy": "Systemic corticosteroid use is not a typed check kind."
+      },
+      {
+        "id": "NCT07017829-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Had major surgery within 14 days prior to starting study drug or has not recovered from major side effects (tumor biopsy is not considered major surgery) resulting from a prior surgery.",
+        "reasonFuzzy": "Major surgery washout is not a typed check kind."
+      },
+      {
+        "id": "NCT07017829-immunosuppressive",
+        "polarity": "exclusion",
+        "sourceText": "Has known immunosuppressive disease (e.g., HIV, AIDS or other immune depressing disease). Testing is not mandatory.",
+        "reasonFuzzy": "Immunosuppressive diseases are not typed check kinds."
+      },
+      {
+        "id": "NCT07017829-infections",
+        "polarity": "exclusion",
+        "sourceText": "Active, clinically serious infections or other serious uncontrolled medical conditions.",
+        "reasonFuzzy": "Active infections and uncontrolled medical conditions are subjective clinical judgments."
+      },
+      {
+        "id": "NCT07017829-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Patient has known hypersensitivity to the components of the study drugs or any analogs.",
+        "reasonFuzzy": "Hypersensitivity is not a typed check kind."
+      },
+      {
+        "id": "NCT07017829-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "History or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the patient's participation for the full duration of the study, or is not in the best interest of the patient to participate, in the opinion of the treating Investigator, including, but not limited to: Myocardial infarction or arterial thromboembolic events within 6 months prior to baseline or severe or unstable angina, New York Heart Association (NYHA) Class III or IV disease. History of documented congestive heart failure (New York Heart Association functional classification III or IV) within 6 months prior to baseline. Uncontrolled hypertension (systolic blood pressure [SBP] > 160/diastolic blood pressure [DBP] > 100 despite medical intervention). History of myocarditis of any etiology. History of ventricular arrhythmias.",
+        "reasonFuzzy": "Cardiovascular history and investigator discretion are subjective or complex clinical exclusions."
+      },
+      {
+        "id": "NCT07017829-invasive-cancer",
+        "polarity": "exclusion",
+        "sourceText": "Patients diagnosed with an invasive cancer within 2 years prior to starting protocol therapy with the following exceptions: non-melanoma skin cancers, in-situ cancers, and prostate cancer Gleason ≤ 6 (under surveillance or treated), early-stage node-negative estrogen receptor positive (ER+)/progesterone receptor positive (PR+) breast cancer with Oncotype Dx score < 25 not taking adjuvant hormonal therapy.",
+        "reasonFuzzy": "Prior invasive cancer history is not a typed check kind."
+      },
+      {
+        "id": "NCT07017829-pregnant",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant or nursing female participants.",
+        "reasonFuzzy": "Pregnancy is not a typed check kind."
+      },
+      {
+        "id": "NCT07017829-investigator",
+        "polarity": "exclusion",
+        "sourceText": "Any condition which in the investigator's opinion deems the participant an unsuitable candidate to receive study drug.",
+        "reasonFuzzy": "Investigator opinion is a subjective judgment."
+      },
+      {
+        "id": "NCT07017829-compliance",
+        "polarity": "exclusion",
+        "sourceText": "Unwilling or unable to follow protocol requirements.",
+        "reasonFuzzy": "Willingness to follow protocol is a subjective judgment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07017829",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07017829-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07017829-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of ≤ 1 at the time of study treatment initiation.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07017829-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥ 1.5 x 10^9/L.",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT07017829-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 100 x 10^9/L.",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT07017829-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 9 g/dL.",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT07017829-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Estimated glomerular filtration rate (GFR) (measured or calculated with Cockroft and Gault formula) > 45mL/min.",
+        "numberValue": 45
+      },
+      {
+        "id": "NCT07017829-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤ 3 x upper limit of normal (ULN) (ALT and AST ≤ 5 x ULN is acceptable if liver metastases are present).",
+        "numberValue": 3,
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT07017829-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤ 3 x upper limit of normal (ULN) (ALT and AST ≤ 5 x ULN is acceptable if liver metastases are present).",
+        "numberValue": 3,
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT07017829-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 x ULN. For patients with well documented Gilbert's syndrome, total bilirubin ≤ 3 x ULN with direct bilirubin within normal range.",
+        "numberValue": 1.5,
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT07017829-brain_mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active/untreated brain metastasis. Whole brain radiation or gamma knife radiosurgery performed less than 4 weeks prior to first administration of study drug. Previously treated brain metastasis allowed as long as not requiring steroids and stable on imaging at least 4 weeks after completing radiation therapy.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07017829-stk11",
+        "polarity": "inclusion",
+        "sourceText": "Have pathologically confirmed diagnosis of STK11 mutant NSCLC. STK11 mutation will be based on subject's local clinically accredited laboratory testing (Clinical Laboratory Improvement Amendments [CLIA]-certified) using deoxyribonucleic acid (DNA) sequencing test.",
+        "reasonFuzzy": "STK11 status is not among the allowed biomarker kinds (egfr_status, alk_status, kras_status, ros1_status, braf_status)."
+      },
+      {
+        "id": "NCT07017829-prior_therapy",
+        "polarity": "inclusion",
+        "sourceText": "Must have progressed on a pembrolizumab containing regimen and eligible for continuing pembrolizumab post-progression as determined by treating physician. Other anti-PD-1 or anti-PD-L1 checkpoint inhibitors may also be used in place of pembrolizumab",
+        "reasonFuzzy": "Prior therapy requirement involves progression on specific immunotherapy with investigator discretion on continuation, which cannot be captured in a simple prior_therapy_required check."
+      },
+      {
+        "id": "NCT07017829-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have measurable disease as defined in Response Evaluation Criteria in Solid Tumors (RECIST) 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07017829-oncogenic",
+        "polarity": "exclusion",
+        "sourceText": "Tumor with oncogenic mutation based on standard of care broad genomic profiling in EGFR, ALK, ROS1, RET, MET, or NTRK genes.",
+        "reasonFuzzy": "Excludes multiple genes simultaneously, some of which are not standard typed kinds."
+      }
+    ]
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06139627",
+  "briefTitle": "Evaluation of Geriatric Assessment and Management for Older Adults With Non-small Cell Lung Cancer Receiving Chemotherapy Radiation Therapy",
+  "parsedAt": "2026-11-12T06:25:36.404Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06139627-treatment",
+      "polarity": "inclusion",
+      "sourceText": "Plan to start a new cancer treatment regimen within 4-6 weeks from time of baseline study visit. The treatment regimen is up to the discretion of the treating oncology physician.",
+      "reasonFuzzy": "Treatment regimen is up to investigator discretion and involves complex scheduling and agent definitions."
+    },
+    {
+      "id": "NCT06139627-brain",
+      "polarity": "exclusion",
+      "sourceText": "Presence of symptomatic brain metastases (if more than one) at time of study consent process. Patients with history of treated brain metastases or small indeterminate lesions (< 1cm) are eligible if they are not symptomatic at the time of study enrollment",
+      "reasonFuzzy": "Brain metastases rules involve symptomatic status and multiple lesions rather than a simple clean allowedBrainMets category."
+    },
+    {
+      "id": "NCT06139627-metastatic",
+      "polarity": "exclusion",
+      "sourceText": "More than one metastatic site: Examples: brain and adrenal, adrenal and liver",
+      "reasonFuzzy": "Metastatic site counts and combinations require clinical judgment to assess."
+    },
+    {
+      "id": "NCT06139627-stage",
+      "polarity": "inclusion",
+      "sourceText": "Stage III Lung Cancer AJCC v8",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06139627-treatment",
+      "polarity": "inclusion",
+      "sourceText": "Plan to start a new cancer treatment regimen within 4-6 weeks from time of baseline study visit. The treatment regimen is up to the discretion of the treating oncology physician.",
+      "reasonFuzzy": "Treatment regimen is subject to investigator discretion and involves complex scheduling and agent definitions."
+    },
+    {
+      "id": "NCT06139627-oligometastatic",
+      "polarity": "inclusion",
+      "sourceText": "Those patients with oligometastatic disease having only one site and one lesion outside of the radiation field will be eligible. Examples include a solitary brain metastasis (met), contralateral lung nodule or an adrenal metastatic site",
+      "reasonFuzzy": "Oligometastatic disease criteria involve clinical judgment about lesion location, radiation fields, and specific sites."
+    },
+    {
+      "id": "NCT06139627-consent",
+      "polarity": "inclusion",
+      "sourceText": "Able to provide informed consent, or if the oncology physician determines the patient to not have decision-making capacity, a patient-designated health care proxy (or authorized representative per institutional policies) must sign consent by the baseline visit",
+      "reasonFuzzy": "Informed consent capacity assessment is subjective and depends on physician determination."
+    },
+    {
+      "id": "NCT06139627-language",
+      "polarity": "inclusion",
+      "sourceText": "Participant or healthcare proxy has adequate understanding of the English language (preferred) because not all GA measures have been validated in other languages.",
+      "reasonFuzzy": "Language preference and translation availability are operational criteria rather than standardized clinical biomarker or stage filters."
+    },
+    {
+      "id": "NCT06139627-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Have surgery planned within 3 months of approach date. Patients who have previously received surgery are eligible",
+      "reasonFuzzy": "Planned future surgical procedures are subject to clinical scheduling and judgment."
+    },
+    {
+      "id": "NCT06139627-brain",
+      "polarity": "exclusion",
+      "sourceText": "Presence of symptomatic brain metastases (if more than one) at time of study consent process. Patients with history of treated brain metastases or small indeterminate lesions (< 1cm) are eligible if they are not symptomatic at the time of study enrollment",
+      "reasonFuzzy": "Symptomatic brain metastases wording involves clinical assessment of symptoms, lesion size, and treatment history."
+    },
+    {
+      "id": "NCT06139627-mets",
+      "polarity": "exclusion",
+      "sourceText": "More than one metastatic site: Examples: brain and adrenal, adrenal and liver",
+      "reasonFuzzy": "Evaluation of multiple metastatic sites requires clinical imaging interpretation."
+    },
+    {
+      "id": "NCT06139627-stage",
+      "polarity": "inclusion",
+      "sourceText": "Stage III Lung Cancer AJCC v8",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06139627-age",
+      "polarity": "inclusion",
+      "sourceText": "Any patient with unresectable non-small cell lung cancer diagnosis who is 60 years of age or older and must be treated at the participating site",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Stage III Lung Cancer AJCC v8"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Stage III Lung Cancer AJCC v8"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:60"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 3,
+    "attempts": 2,
+    "ms": 11222
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 2979
+  },
+  "ms": 22178,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06139627",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06139627-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Any patient with unresectable non-small cell lung cancer diagnosis who is 60 years of age or older and must be treated at the participating site",
+        "numberValue": 60
+      },
+      {
+        "id": "NCT06139627-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage III Lung Cancer AJCC v8",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06139627-treatment",
+        "polarity": "inclusion",
+        "sourceText": "Plan to start a new cancer treatment regimen within 4-6 weeks from time of baseline study visit. The treatment regimen is up to the discretion of the treating oncology physician.",
+        "reasonFuzzy": "Treatment regimen is up to investigator discretion and involves complex scheduling and agent definitions."
+      },
+      {
+        "id": "NCT06139627-brain",
+        "polarity": "exclusion",
+        "sourceText": "Presence of symptomatic brain metastases (if more than one) at time of study consent process. Patients with history of treated brain metastases or small indeterminate lesions (< 1cm) are eligible if they are not symptomatic at the time of study enrollment",
+        "reasonFuzzy": "Brain metastases rules involve symptomatic status and multiple lesions rather than a simple clean allowedBrainMets category."
+      },
+      {
+        "id": "NCT06139627-metastatic",
+        "polarity": "exclusion",
+        "sourceText": "More than one metastatic site: Examples: brain and adrenal, adrenal and liver",
+        "reasonFuzzy": "Metastatic site counts and combinations require clinical judgment to assess."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06139627",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06139627-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Any patient with unresectable non-small cell lung cancer diagnosis who is 60 years of age or older and must be treated at the participating site",
+        "numberValue": 60
+      },
+      {
+        "id": "NCT06139627-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage III Lung Cancer AJCC v8",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06139627-treatment",
+        "polarity": "inclusion",
+        "sourceText": "Plan to start a new cancer treatment regimen within 4-6 weeks from time of baseline study visit. The treatment regimen is up to the discretion of the treating oncology physician.",
+        "reasonFuzzy": "Treatment regimen is subject to investigator discretion and involves complex scheduling and agent definitions."
+      },
+      {
+        "id": "NCT06139627-oligometastatic",
+        "polarity": "inclusion",
+        "sourceText": "Those patients with oligometastatic disease having only one site and one lesion outside of the radiation field will be eligible. Examples include a solitary brain metastasis (met), contralateral lung nodule or an adrenal metastatic site",
+        "reasonFuzzy": "Oligometastatic disease criteria involve clinical judgment about lesion location, radiation fields, and specific sites."
+      },
+      {
+        "id": "NCT06139627-consent",
+        "polarity": "inclusion",
+        "sourceText": "Able to provide informed consent, or if the oncology physician determines the patient to not have decision-making capacity, a patient-designated health care proxy (or authorized representative per institutional policies) must sign consent by the baseline visit",
+        "reasonFuzzy": "Informed consent capacity assessment is subjective and depends on physician determination."
+      },
+      {
+        "id": "NCT06139627-language",
+        "polarity": "inclusion",
+        "sourceText": "Participant or healthcare proxy has adequate understanding of the English language (preferred) because not all GA measures have been validated in other languages.",
+        "reasonFuzzy": "Language preference and translation availability are operational criteria rather than standardized clinical biomarker or stage filters."
+      },
+      {
+        "id": "NCT06139627-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Have surgery planned within 3 months of approach date. Patients who have previously received surgery are eligible",
+        "reasonFuzzy": "Planned future surgical procedures are subject to clinical scheduling and judgment."
+      },
+      {
+        "id": "NCT06139627-brain",
+        "polarity": "exclusion",
+        "sourceText": "Presence of symptomatic brain metastases (if more than one) at time of study consent process. Patients with history of treated brain metastases or small indeterminate lesions (< 1cm) are eligible if they are not symptomatic at the time of study enrollment",
+        "reasonFuzzy": "Symptomatic brain metastases wording involves clinical assessment of symptoms, lesion size, and treatment history."
+      },
+      {
+        "id": "NCT06139627-mets",
+        "polarity": "exclusion",
+        "sourceText": "More than one metastatic site: Examples: brain and adrenal, adrenal and liver",
+        "reasonFuzzy": "Evaluation of multiple metastatic sites requires clinical imaging interpretation."
+      }
+    ]
+  }
+}

@@ -1,0 +1,554 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06463665",
+  "briefTitle": "Efficacy & Safety of Olvimulogene Nanivacirepvec & Platinum-doublet + Physician's Choice of Immune Checkpoint Inhibitor Compared to Docetaxel in NSCL Cancer",
+  "parsedAt": "2026-11-12T09:23:10.290Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06463665-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male or female 18 years or older.",
+      "numberValue": 18,
+      "evidence_quote": "Male or female 18 years or older.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06463665-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG (Eastern Cooperative Oncology Group) performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "ECOG (Eastern Cooperative Oncology Group) performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06463665-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Received at least 2 cycles and maximum of 6 cycles of front-line platinum-based chemotherapy with ICI-based therapy, regardless of PD-L1 expression.",
+      "reasonFuzzy": "Prior treatment specifies cycle counts rather than prior line counts."
+    },
+    {
+      "id": "NCT06463665-progression",
+      "polarity": "inclusion",
+      "sourceText": "Reached first disease progression by radiological assessment while receiving front-line or maintenance ICI.",
+      "reasonFuzzy": "Disease progression status is a clinical assessment event rather than a typed biomarker or stage check."
+    },
+    {
+      "id": "NCT06463665-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one measurable target tumor lesion anywhere except the brain per RECIST 1.1 by Computed Tomography (CT) or Magnetic Resonance Imaging (MRI) scan.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06463665-organ-function",
+      "polarity": "inclusion",
+      "sourceText": "Have adequate renal, hepatic, bone marrow function as well as adequate coagulation tests [International Normalized Ratio (INR)] and adequate immune function by lymphocyte count.",
+      "reasonFuzzy": "Organ function lacks explicit numeric laboratory cutoffs in the source text."
+    },
+    {
+      "id": "NCT06463665-compliance",
+      "polarity": "inclusion",
+      "sourceText": "Be willing and able to comply with scheduled visits, the treatment plan, imaging and laboratory tests.",
+      "reasonFuzzy": "Willingness to comply is a subjective criterion."
+    },
+    {
+      "id": "NCT06463665-brain",
+      "polarity": "exclusion",
+      "sourceText": "Current symptomatic central nervous system (CNS) metastasis.",
+      "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT06463665-investigator",
+      "polarity": "exclusion",
+      "sourceText": "Any uncontrolled systemic disease, condition or comorbidity that, in the opinion of the Investigator, would interfere with evaluation of study treatment or interpretation of patient safety or study results.",
+      "reasonFuzzy": "Investigator discretion is subjective."
+    },
+    {
+      "id": "NCT06463665-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed Stage III or IV squamous or nonsquamous [American Joint Committee on Cancer (AJCC) 8th edition].",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06463665-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed Stage III or IV squamous or nonsquamous [American Joint Committee on Cancer (AJCC) 8th edition].",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06463665-nsclc",
+      "polarity": "inclusion",
+      "sourceText": "Have histologically or cytologically confirmed advanced or metastatic NSCLC.",
+      "reasonFuzzy": "Advanced or metastatic NSCLC is covered by the stage criterion."
+    },
+    {
+      "id": "NCT06463665-progression",
+      "polarity": "inclusion",
+      "sourceText": "Reached first disease progression by radiological assessment while receiving front-line or maintenance ICI.",
+      "reasonFuzzy": "Disease progression status is an event-based rule, not a typed check."
+    },
+    {
+      "id": "NCT06463665-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one measurable target tumor lesion anywhere except the brain per RECIST 1.1 by Computed Tomography (CT) or Magnetic Resonance Imaging (MRI) scan.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06463665-organ",
+      "polarity": "inclusion",
+      "sourceText": "Have adequate renal, hepatic, bone marrow function as well as adequate coagulation tests [International Normalized Ratio (INR)] and adequate immune function by lymphocyte count.",
+      "reasonFuzzy": "Broad organ function without specific numeric cutoffs cannot be mapped to typed lab checks."
+    },
+    {
+      "id": "NCT06463665-pregnancy",
+      "polarity": "inclusion",
+      "sourceText": "Women of child-bearing potential must have a negative serum pregnancy test prior to initiating study dosing.",
+      "reasonFuzzy": "Pregnancy test requirement is not a standard eligibility kind."
+    },
+    {
+      "id": "NCT06463665-compliance",
+      "polarity": "inclusion",
+      "sourceText": "Be willing and able to comply with scheduled visits, the treatment plan, imaging and laboratory tests.",
+      "reasonFuzzy": "Willingness to comply is a subjective judgment."
+    },
+    {
+      "id": "NCT06463665-infection",
+      "polarity": "exclusion",
+      "sourceText": "Active and untreated urinary tract infection, pneumonia, or other systemic infections.",
+      "reasonFuzzy": "Infection status is not a typed check."
+    },
+    {
+      "id": "NCT06463665-brain",
+      "polarity": "exclusion",
+      "sourceText": "Current symptomatic central nervous system (CNS) metastasis.",
+      "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT06463665-comorbidity",
+      "polarity": "exclusion",
+      "sourceText": "Any uncontrolled systemic disease, condition or comorbidity that, in the opinion of the Investigator, would interfere with evaluation of study treatment or interpretation of patient safety or study results.",
+      "reasonFuzzy": "Investigator discretion-based exclusions are fuzzy."
+    },
+    {
+      "id": "NCT06463665-toxicities",
+      "polarity": "exclusion",
+      "sourceText": "Persistent toxicities [Common Terminology Criteria for Adverse Events (CTCAE) Grade ≥ 3] caused by previous anticancer therapy; alopecia and vitiligo are excluded toxicities.",
+      "reasonFuzzy": "Unresolved prior toxicity grade is not a standard typed lab or therapy exclusion."
+    },
+    {
+      "id": "NCT06463665-immunosuppression",
+      "polarity": "exclusion",
+      "sourceText": "Required the use of additional immunosuppression other than corticosteroids for the management of an adverse event or have experienced recurrence of an adverse event if re-challenged, or currently require maintenance doses of >10 mg prednisone or equivalent per day.",
+      "reasonFuzzy": "Corticosteroid and immunosuppressive medication rules are not standard typed exclusions."
+    },
+    {
+      "id": "NCT06463665-antiviral",
+      "polarity": "exclusion",
+      "sourceText": "Receiving concurrent antiviral agent active against vaccinia virus (e.g., cidofovir, vaccinia immunoglobulin, imatinib, tecovirimat, or other agents with known anti-vaccinia activities).",
+      "reasonFuzzy": "Concurrent medication restrictions for antiviral agents are not standard typed exclusions."
+    },
+    {
+      "id": "NCT06463665-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Underwent major surgery within 4 weeks, or have insufficient recovery from surgical-related trauma or wound healing, prior to the planned first dose of treatment in either Arm.",
+      "reasonFuzzy": "Washout window for major surgery is not a standard typed laboratory check."
+    },
+    {
+      "id": "NCT06463665-vaccines",
+      "polarity": "exclusion",
+      "sourceText": "Vaccination against smallpox or monkeypox within 1 year of study therapy. Any non-oncology vaccine therapy used for prevention of infectious diseases, such as seasonal (influenza) vaccinations, corona virus disease (COVID) vaccination or other vaccines, within 2 weeks of the planned first dose of study drug.",
+      "reasonFuzzy": "Vaccine history restrictions are not standard typed checks."
+    },
+    {
+      "id": "NCT06463665-skin",
+      "polarity": "exclusion",
+      "sourceText": "Clinically significant skin disease as assessed by the Investigator (e.g., severe eczema, psoriasis, or any unresolved skin injury or ulcer).",
+      "reasonFuzzy": "Skin disease assessment by the investigator is subjective."
+    },
+    {
+      "id": "NCT06463665-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Known hypersensitivity to carboplatin, cisplatin, paclitaxel or nab-paclitaxel, docetaxel, or any of the constituents of Olvi-Vec (i.e., gentamicin). Had severe hypersensitivity (CTCAE Grade ≥ 3) to ICI and/or any of its excipients previously.",
+      "reasonFuzzy": "Hypersensitivity to specific multiple drugs is not a simple prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT06463665-mental",
+      "polarity": "exclusion",
+      "sourceText": "Dementia or altered mental status that would prohibit informed consent, and/or psychiatric illness/social situations that might interfere or limit compliance with study requirements.",
+      "reasonFuzzy": "Cognitive and psychiatric status limitations are subjective judgments."
+    },
+    {
+      "id": "NCT06463665-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed Stage III or IV squamous or nonsquamous [American Joint Committee on Cancer (AJCC) 8th edition].",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06463665-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed Stage III or IV squamous or nonsquamous [American Joint Committee on Cancer (AJCC) 8th edition].",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06463665-prior-therapy-excluded",
+      "polarity": "exclusion",
+      "sourceText": "Have received prior virus-based gene therapy or therapy with cytolytic virus of any type.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06463665-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Received at least 2 cycles and maximum of 6 cycles of front-line platinum-based chemotherapy with ICI-based therapy, regardless of PD-L1 expression.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Histologically confirmed Stage III or IV squamous or nonsquamous [American Joint Committee on Cancer (AJCC) 8th edition]."
+        },
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Histologically confirmed Stage III or IV squamous or nonsquamous [American Joint Committee on Cancer (AJCC) 8th edition]."
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Histologically confirmed Stage III or IV squamous or nonsquamous [American Joint Committee on Cancer (AJCC) 8th edition]."
+        },
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Histologically confirmed Stage III or IV squamous or nonsquamous [American Joint Committee on Cancer (AJCC) 8th edition]."
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:virus-based gene therapy"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:platinum-based chemotherapy"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 3769
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 17,
+    "attempts": 1,
+    "ms": 5065
+  },
+  "ms": 16823,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06463665",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06463665-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female 18 years or older.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06463665-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG (Eastern Cooperative Oncology Group) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06463665-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed Stage III or IV squamous or nonsquamous [American Joint Committee on Cancer (AJCC) 8th edition].",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06463665-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed Stage III or IV squamous or nonsquamous [American Joint Committee on Cancer (AJCC) 8th edition].",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06463665-prior-therapy",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Received at least 2 cycles and maximum of 6 cycles of front-line platinum-based chemotherapy with ICI-based therapy, regardless of PD-L1 expression.",
+        "stringValue": "platinum-based chemotherapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06463665-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "Received at least 2 cycles and maximum of 6 cycles of front-line platinum-based chemotherapy with ICI-based therapy, regardless of PD-L1 expression.",
+        "reasonFuzzy": "Prior treatment specifies cycle counts rather than prior line counts."
+      },
+      {
+        "id": "NCT06463665-progression",
+        "polarity": "inclusion",
+        "sourceText": "Reached first disease progression by radiological assessment while receiving front-line or maintenance ICI.",
+        "reasonFuzzy": "Disease progression status is a clinical assessment event rather than a typed biomarker or stage check."
+      },
+      {
+        "id": "NCT06463665-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one measurable target tumor lesion anywhere except the brain per RECIST 1.1 by Computed Tomography (CT) or Magnetic Resonance Imaging (MRI) scan.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06463665-organ-function",
+        "polarity": "inclusion",
+        "sourceText": "Have adequate renal, hepatic, bone marrow function as well as adequate coagulation tests [International Normalized Ratio (INR)] and adequate immune function by lymphocyte count.",
+        "reasonFuzzy": "Organ function lacks explicit numeric laboratory cutoffs in the source text."
+      },
+      {
+        "id": "NCT06463665-compliance",
+        "polarity": "inclusion",
+        "sourceText": "Be willing and able to comply with scheduled visits, the treatment plan, imaging and laboratory tests.",
+        "reasonFuzzy": "Willingness to comply is a subjective criterion."
+      },
+      {
+        "id": "NCT06463665-brain",
+        "polarity": "exclusion",
+        "sourceText": "Current symptomatic central nervous system (CNS) metastasis.",
+        "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      },
+      {
+        "id": "NCT06463665-investigator",
+        "polarity": "exclusion",
+        "sourceText": "Any uncontrolled systemic disease, condition or comorbidity that, in the opinion of the Investigator, would interfere with evaluation of study treatment or interpretation of patient safety or study results.",
+        "reasonFuzzy": "Investigator discretion is subjective."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06463665",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06463665-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female 18 years or older.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06463665-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG (Eastern Cooperative Oncology Group) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06463665-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed Stage III or IV squamous or nonsquamous [American Joint Committee on Cancer (AJCC) 8th edition].",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06463665-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed Stage III or IV squamous or nonsquamous [American Joint Committee on Cancer (AJCC) 8th edition].",
+        "histologies": [
+          "squamous",
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06463665-prior-therapy",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Received at least 2 cycles and maximum of 6 cycles of front-line platinum-based chemotherapy with ICI-based therapy, regardless of PD-L1 expression.",
+        "stringValue": "platinum-based chemotherapy"
+      },
+      {
+        "id": "NCT06463665-prior-therapy-excluded",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Have received prior virus-based gene therapy or therapy with cytolytic virus of any type.",
+        "stringValue": "virus-based gene therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06463665-nsclc",
+        "polarity": "inclusion",
+        "sourceText": "Have histologically or cytologically confirmed advanced or metastatic NSCLC.",
+        "reasonFuzzy": "Advanced or metastatic NSCLC is covered by the stage criterion."
+      },
+      {
+        "id": "NCT06463665-progression",
+        "polarity": "inclusion",
+        "sourceText": "Reached first disease progression by radiological assessment while receiving front-line or maintenance ICI.",
+        "reasonFuzzy": "Disease progression status is an event-based rule, not a typed check."
+      },
+      {
+        "id": "NCT06463665-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one measurable target tumor lesion anywhere except the brain per RECIST 1.1 by Computed Tomography (CT) or Magnetic Resonance Imaging (MRI) scan.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06463665-organ",
+        "polarity": "inclusion",
+        "sourceText": "Have adequate renal, hepatic, bone marrow function as well as adequate coagulation tests [International Normalized Ratio (INR)] and adequate immune function by lymphocyte count.",
+        "reasonFuzzy": "Broad organ function without specific numeric cutoffs cannot be mapped to typed lab checks."
+      },
+      {
+        "id": "NCT06463665-pregnancy",
+        "polarity": "inclusion",
+        "sourceText": "Women of child-bearing potential must have a negative serum pregnancy test prior to initiating study dosing.",
+        "reasonFuzzy": "Pregnancy test requirement is not a standard eligibility kind."
+      },
+      {
+        "id": "NCT06463665-compliance",
+        "polarity": "inclusion",
+        "sourceText": "Be willing and able to comply with scheduled visits, the treatment plan, imaging and laboratory tests.",
+        "reasonFuzzy": "Willingness to comply is a subjective judgment."
+      },
+      {
+        "id": "NCT06463665-infection",
+        "polarity": "exclusion",
+        "sourceText": "Active and untreated urinary tract infection, pneumonia, or other systemic infections.",
+        "reasonFuzzy": "Infection status is not a typed check."
+      },
+      {
+        "id": "NCT06463665-brain",
+        "polarity": "exclusion",
+        "sourceText": "Current symptomatic central nervous system (CNS) metastasis.",
+        "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      },
+      {
+        "id": "NCT06463665-comorbidity",
+        "polarity": "exclusion",
+        "sourceText": "Any uncontrolled systemic disease, condition or comorbidity that, in the opinion of the Investigator, would interfere with evaluation of study treatment or interpretation of patient safety or study results.",
+        "reasonFuzzy": "Investigator discretion-based exclusions are fuzzy."
+      },
+      {
+        "id": "NCT06463665-toxicities",
+        "polarity": "exclusion",
+        "sourceText": "Persistent toxicities [Common Terminology Criteria for Adverse Events (CTCAE) Grade ≥ 3] caused by previous anticancer therapy; alopecia and vitiligo are excluded toxicities.",
+        "reasonFuzzy": "Unresolved prior toxicity grade is not a standard typed lab or therapy exclusion."
+      },
+      {
+        "id": "NCT06463665-immunosuppression",
+        "polarity": "exclusion",
+        "sourceText": "Required the use of additional immunosuppression other than corticosteroids for the management of an adverse event or have experienced recurrence of an adverse event if re-challenged, or currently require maintenance doses of >10 mg prednisone or equivalent per day.",
+        "reasonFuzzy": "Corticosteroid and immunosuppressive medication rules are not standard typed exclusions."
+      },
+      {
+        "id": "NCT06463665-antiviral",
+        "polarity": "exclusion",
+        "sourceText": "Receiving concurrent antiviral agent active against vaccinia virus (e.g., cidofovir, vaccinia immunoglobulin, imatinib, tecovirimat, or other agents with known anti-vaccinia activities).",
+        "reasonFuzzy": "Concurrent medication restrictions for antiviral agents are not standard typed exclusions."
+      },
+      {
+        "id": "NCT06463665-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Underwent major surgery within 4 weeks, or have insufficient recovery from surgical-related trauma or wound healing, prior to the planned first dose of treatment in either Arm.",
+        "reasonFuzzy": "Washout window for major surgery is not a standard typed laboratory check."
+      },
+      {
+        "id": "NCT06463665-vaccines",
+        "polarity": "exclusion",
+        "sourceText": "Vaccination against smallpox or monkeypox within 1 year of study therapy. Any non-oncology vaccine therapy used for prevention of infectious diseases, such as seasonal (influenza) vaccinations, corona virus disease (COVID) vaccination or other vaccines, within 2 weeks of the planned first dose of study drug.",
+        "reasonFuzzy": "Vaccine history restrictions are not standard typed checks."
+      },
+      {
+        "id": "NCT06463665-skin",
+        "polarity": "exclusion",
+        "sourceText": "Clinically significant skin disease as assessed by the Investigator (e.g., severe eczema, psoriasis, or any unresolved skin injury or ulcer).",
+        "reasonFuzzy": "Skin disease assessment by the investigator is subjective."
+      },
+      {
+        "id": "NCT06463665-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Known hypersensitivity to carboplatin, cisplatin, paclitaxel or nab-paclitaxel, docetaxel, or any of the constituents of Olvi-Vec (i.e., gentamicin). Had severe hypersensitivity (CTCAE Grade ≥ 3) to ICI and/or any of its excipients previously.",
+        "reasonFuzzy": "Hypersensitivity to specific multiple drugs is not a simple prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT06463665-mental",
+        "polarity": "exclusion",
+        "sourceText": "Dementia or altered mental status that would prohibit informed consent, and/or psychiatric illness/social situations that might interfere or limit compliance with study requirements.",
+        "reasonFuzzy": "Cognitive and psychiatric status limitations are subjective judgments."
+      }
+    ]
+  }
+}

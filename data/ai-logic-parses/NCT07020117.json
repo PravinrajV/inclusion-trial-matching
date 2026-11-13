@@ -1,0 +1,371 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07020117",
+  "briefTitle": "A Study of [225Ac]Ac-AKY-1189 in Patients With Solid Tumors",
+  "parsedAt": "2026-11-12T10:42:48.423Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07020117-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG Performance Status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG Performance Status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07020117-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Radiologic confirmation on CT of at least one measurable tumor lesion per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07020117-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate end-organ function",
+      "reasonFuzzy": "General end-organ function without specific lab cutoffs is subjective."
+    },
+    {
+      "id": "NCT07020117-nectin4",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with a Nectin-4 targeted therapy, except enfortumab vedotin",
+      "reasonFuzzy": "Exclusion with an exception for a specific named drug is not a simple typed prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT07020117-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Received an investigational agent within the previous 28days",
+      "reasonFuzzy": "Washout window for investigational agents is not a standard lab cutoff."
+    },
+    {
+      "id": "NCT07020117-anticancer",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with a cytotoxic chemotherapy, targeted therapy, biologic agent, immunotherapy or external-beam radiotherapy in the 3 weeks prior to study treatment",
+      "reasonFuzzy": "Broad class washout windows are not standard typed prior therapy exclusions."
+    },
+    {
+      "id": "NCT07020117-concurrent",
+      "polarity": "exclusion",
+      "sourceText": "Concurrent serious medical condition that would impair study participation or impact the assessment of treatment related toxicity",
+      "reasonFuzzy": "Investigator discretion and subjective medical conditions cannot be expressed as a typed check."
+    },
+    {
+      "id": "NCT07020117-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histologic or cytologic confirmation of locally advance or metastatic disease",
+      "reasonFuzzy": "Locally advanced or metastatic disease is in scope for NSCLC, but does not state a specific numbered stage list for a typed stage_in check."
+    },
+    {
+      "id": "NCT07020117-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Radiologic confirmation on CT of at least one measurable tumor lesion per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07020117-consent",
+      "polarity": "inclusion",
+      "sourceText": "Ability to give informed consent and comply with study requirements",
+      "reasonFuzzy": "Informed consent and compliance are subjective clinical judgments, not typed checks."
+    },
+    {
+      "id": "NCT07020117-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate end-organ function",
+      "reasonFuzzy": "General end-organ function without specific lab cutoffs cannot be represented as a typed lab check."
+    },
+    {
+      "id": "NCT07020117-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Received an investigational agent within the previous 28days",
+      "reasonFuzzy": "Investigational agent washout is not a simple named drug prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT07020117-anticancer",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with a cytotoxic chemotherapy, targeted therapy, biologic agent, immunotherapy or external-beam radiotherapy in the 3 weeks prior to study treatment",
+      "reasonFuzzy": "Broad class washout windows covering multiple systemic and radiation therapies are not single-drug or simple typed exclusions."
+    },
+    {
+      "id": "NCT07020117-medical",
+      "polarity": "exclusion",
+      "sourceText": "Concurrent serious medical condition that would impair study participation or impact the assessment of treatment related toxicity",
+      "reasonFuzzy": "Investigator discretion regarding serious medical conditions is subjective."
+    },
+    {
+      "id": "NCT07020117-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07020117-nectin",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with a Nectin-4 targeted therapy, except enfortumab vedotin",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07020117-brain",
+      "polarity": "inclusion",
+      "sourceText": "Patients with CNS metastases are eligible if they have received therapy and are neurologically stable, asymptomatic and not receiving corticosteroids",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07020117-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Documented disease progression on prior line of therapy for metastatic disease",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07020117-prior-radio",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with a therapeutic radiopharmaceutical",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:nectin-4 targeted therapy"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "kind": "prior_lines_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:therapeutic radiopharmaceutical"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 9422
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 24050
+  },
+  "ms": 41446,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07020117",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07020117-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance Status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07020117-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Patients with CNS metastases are eligible if they have received therapy and are neurologically stable, asymptomatic and not receiving corticosteroids",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT07020117-prior-lines",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Documented disease progression on prior line of therapy for metastatic disease",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07020117-prior-radio",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a therapeutic radiopharmaceutical",
+        "stringValue": "therapeutic radiopharmaceutical"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07020117-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Radiologic confirmation on CT of at least one measurable tumor lesion per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07020117-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate end-organ function",
+        "reasonFuzzy": "General end-organ function without specific lab cutoffs is subjective."
+      },
+      {
+        "id": "NCT07020117-nectin4",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a Nectin-4 targeted therapy, except enfortumab vedotin",
+        "reasonFuzzy": "Exclusion with an exception for a specific named drug is not a simple typed prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT07020117-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Received an investigational agent within the previous 28days",
+        "reasonFuzzy": "Washout window for investigational agents is not a standard lab cutoff."
+      },
+      {
+        "id": "NCT07020117-anticancer",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a cytotoxic chemotherapy, targeted therapy, biologic agent, immunotherapy or external-beam radiotherapy in the 3 weeks prior to study treatment",
+        "reasonFuzzy": "Broad class washout windows are not standard typed prior therapy exclusions."
+      },
+      {
+        "id": "NCT07020117-concurrent",
+        "polarity": "exclusion",
+        "sourceText": "Concurrent serious medical condition that would impair study participation or impact the assessment of treatment related toxicity",
+        "reasonFuzzy": "Investigator discretion and subjective medical conditions cannot be expressed as a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07020117",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07020117-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07020117-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance Status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07020117-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Patients with CNS metastases are eligible if they have received therapy and are neurologically stable, asymptomatic and not receiving corticosteroids",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT07020117-lines",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Documented disease progression on prior line of therapy for metastatic disease",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07020117-radio",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a therapeutic radiopharmaceutical",
+        "stringValue": "therapeutic radiopharmaceutical"
+      },
+      {
+        "id": "NCT07020117-nectin",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a Nectin-4 targeted therapy, except enfortumab vedotin",
+        "stringValue": "Nectin-4 targeted therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07020117-stage",
+        "polarity": "inclusion",
+        "sourceText": "Histologic or cytologic confirmation of locally advance or metastatic disease",
+        "reasonFuzzy": "Locally advanced or metastatic disease is in scope for NSCLC, but does not state a specific numbered stage list for a typed stage_in check."
+      },
+      {
+        "id": "NCT07020117-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Radiologic confirmation on CT of at least one measurable tumor lesion per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07020117-consent",
+        "polarity": "inclusion",
+        "sourceText": "Ability to give informed consent and comply with study requirements",
+        "reasonFuzzy": "Informed consent and compliance are subjective clinical judgments, not typed checks."
+      },
+      {
+        "id": "NCT07020117-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate end-organ function",
+        "reasonFuzzy": "General end-organ function without specific lab cutoffs cannot be represented as a typed lab check."
+      },
+      {
+        "id": "NCT07020117-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Received an investigational agent within the previous 28days",
+        "reasonFuzzy": "Investigational agent washout is not a simple named drug prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT07020117-anticancer",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a cytotoxic chemotherapy, targeted therapy, biologic agent, immunotherapy or external-beam radiotherapy in the 3 weeks prior to study treatment",
+        "reasonFuzzy": "Broad class washout windows covering multiple systemic and radiation therapies are not single-drug or simple typed exclusions."
+      },
+      {
+        "id": "NCT07020117-medical",
+        "polarity": "exclusion",
+        "sourceText": "Concurrent serious medical condition that would impair study participation or impact the assessment of treatment related toxicity",
+        "reasonFuzzy": "Investigator discretion regarding serious medical conditions is subjective."
+      }
+    ]
+  }
+}

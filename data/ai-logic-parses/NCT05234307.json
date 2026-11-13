@@ -1,0 +1,691 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05234307",
+  "briefTitle": "PBF-1129 and Nivolumab for the Treatment of Recurrent or Metastatic Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:46:03.986Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05234307-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age >= 18 years",
+      "numberValue": 18,
+      "evidence_quote": "Age >= 18 years",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05234307-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05234307-anc",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) >= 1,500 /mcL",
+      "numberValue": 1500,
+      "evidence_quote": "Absolute neutrophil count (ANC) >= 1,500 /mcL",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05234307-platelets",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets >= 100,000 / mcL",
+      "numberValue": 100000,
+      "evidence_quote": "Platelets >= 100,000 / mcL",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05234307-bilirubin",
+      "kind": "bilirubin_max",
+      "polarity": "inclusion",
+      "sourceText": "Serum total bilirubin =< 1.5 X ULN OR direct bilirubin =< ULN for subjects with total bilirubin levels > 1.5 ULN",
+      "numberValue": 1.5,
+      "evidence_quote": "Serum total bilirubin =< 1.5 X ULN OR direct bilirubin =< ULN for subjects with total bilirubin levels > 1.5 ULN",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05234307-histology",
+      "polarity": "inclusion",
+      "sourceText": "Confirmed recurrent or metastatic non-small cell carcinoma of the lung of any histology without curative options",
+      "reasonFuzzy": "Histology is 'any', which does not fit a standard typed histology subset."
+    },
+    {
+      "id": "NCT05234307-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease based on RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05234307-lines",
+      "polarity": "inclusion",
+      "sourceText": "Patients may have received no more than 3 prior lines of therapy in the metastatic setting (excluding targeted therapies)",
+      "reasonFuzzy": "Prior lines limits have exceptions for targeted therapies."
+    },
+    {
+      "id": "NCT05234307-life",
+      "polarity": "inclusion",
+      "sourceText": "Anticipated life expectancy of >= 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05234307-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic central nervous system (CNS) metastases. Patients with treated brain metastases are eligible if they are clinically stable with regard to neurologic function, on stable dose of steroids after cranial irradiation with maximum of 10 mg prednisone equivalent. Treatment (whole brain radiation therapy, focal radiation therapy, and stereotactic radiosurgery) must be completed at least 2 weeks prior to study entry, or after surgical resection performed at least 28 days prior to treatment initiation. Patients with asymptomatic lesions will be eligible if considered appropriate by the treating physician.",
+      "reasonFuzzy": "The rule combines symptomatic exclusions with specific treatment window conditions and investigator judgment for asymptomatic lesions."
+    },
+    {
+      "id": "NCT05234307-stage",
+      "polarity": "inclusion",
+      "sourceText": "Stage IV Lung Cancer AJCC v8, Stage IVA Lung Cancer AJCC v8, Stage IVB Lung Cancer AJCC v8",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05234307-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Serum creatinine OR measured or calculated creatinine clearance (glomerular filtration rate [GFR] can also be used in place of creatinine or creatinine clearance [CrCl]) =< 1.5 X upper limit of normal (ULN) OR >= 60 mL/min for subject with creatinine levels > 1.5 X institutional ULN",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05234307-ast",
+      "polarity": "inclusion",
+      "sourceText": "AAspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 X ULN OR =< 5 X ULN for subjects with liver metastases",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05234307-alt",
+      "polarity": "inclusion",
+      "sourceText": "AAspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 X ULN OR =< 5 X ULN for subjects with liver metastases",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05234307-histology",
+      "polarity": "inclusion",
+      "sourceText": "Confirmed recurrent or metastatic non-small cell carcinoma of the lung of any histology without curative options",
+      "reasonFuzzy": "Any histology is broad, but specific categories like adenocarcinoma or squamous are not individually listed."
+    },
+    {
+      "id": "NCT05234307-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease based on RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05234307-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Patients may have received no more than 3 prior lines of therapy in the metastatic setting (excluding targeted therapies)",
+      "reasonFuzzy": "This rule specifies a maximum prior lines limit excluding targeted therapies, which cannot be modeled with a simple prior_lines_max kind."
+    },
+    {
+      "id": "NCT05234307-actionable",
+      "polarity": "inclusion",
+      "sourceText": "Patients with known actionable mutations with Food and Drug Administration (FDA)-approved treatment options must have received all approved and standard of care treatment options (ie osimertinib for EGFR, alectinib for ALK, etc)",
+      "reasonFuzzy": "Condition-dependent prior therapy requirement for actionable mutations is complex and not a single typed check."
+    },
+    {
+      "id": "NCT05234307-albumin",
+      "polarity": "inclusion",
+      "sourceText": "Albumin >= 2.5 mg/dL",
+      "reasonFuzzy": "Albumin is not one of the allowed typed kinds."
+    },
+    {
+      "id": "NCT05234307-coagulation",
+      "polarity": "inclusion",
+      "sourceText": "International normalized ratio (INR) or prothrombin time (PT) or activated partial thromboplastin time (aPTT) =< 1.5 X ULN unless subject is receiving anticoagulant therapy as long as PT or PTT is within therapeutic range of intended use of anticoagulants",
+      "reasonFuzzy": "Coagulation parameters are not part of the allowed typed lab kinds."
+    },
+    {
+      "id": "NCT05234307-life",
+      "polarity": "inclusion",
+      "sourceText": "Anticipated life expectancy of >= 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05234307-procedures",
+      "polarity": "inclusion",
+      "sourceText": "Willing to comply with study procedures",
+      "reasonFuzzy": "Willingness to comply is a subjective judgment."
+    },
+    {
+      "id": "NCT05234307-pills",
+      "polarity": "inclusion",
+      "sourceText": "Must be able to swallow pills",
+      "reasonFuzzy": "Ability to swallow pills is a functional assessment."
+    },
+    {
+      "id": "NCT05234307-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Female subjects of childbearing potential must be willing to use an adequate method of contraception",
+      "reasonFuzzy": "Contraception requirement is not a typed clinical check."
+    },
+    {
+      "id": "NCT05234307-pregnancy",
+      "polarity": "inclusion",
+      "sourceText": "For female patients of childbearing potential, a negative serum pregnancy test within 7 days prior to first dose of protocol therapy is required",
+      "reasonFuzzy": "Pregnancy test timing requirement is not a typed check."
+    },
+    {
+      "id": "NCT05234307-consent",
+      "polarity": "inclusion",
+      "sourceText": "Be willing and able to understand and sign the written informed consent document",
+      "reasonFuzzy": "Informed consent is a standard administrative requirement."
+    },
+    {
+      "id": "NCT05234307-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Availability of a recent formalin-fixed, paraffin-embedded (FFPE) tumor tissue block...",
+      "reasonFuzzy": "Tissue availability is a logistical requirement, not a patient eligibility check kind."
+    },
+    {
+      "id": "NCT05234307-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Has active autoimmune disease, including myasthenic syndrome, which has required systemic treatment in the past 12 months...",
+      "reasonFuzzy": "Autoimmune disease history with exceptions is a clinical judgment criterion."
+    },
+    {
+      "id": "NCT05234307-immunodeficiency",
+      "polarity": "exclusion",
+      "sourceText": "Has a diagnosis of immunodeficiency or is receiving systemic steroid therapy (at a dose > 10 mg prednisone or equivalent) or any other form of immunosuppressive therapy within 7 days prior to the first dose of trial treatment",
+      "reasonFuzzy": "Immunodeficiency and steroid dose exclusions are complex clinical criteria."
+    },
+    {
+      "id": "NCT05234307-infections",
+      "polarity": "exclusion",
+      "sourceText": "Known active chronic infections - human immunodeficiency virus (HIV)/acquired immunodeficiency syndrome (AIDS), known active (ie with detectable polymerase chain reaction [PCR]) Hepatitis B or C",
+      "reasonFuzzy": "Infection exclusions are not standard typed lab items like hematology or chemistry."
+    },
+    {
+      "id": "NCT05234307-cirrhosis",
+      "polarity": "exclusion",
+      "sourceText": "Cirrhosis (Child-Pugh B or worse) or cirrhosis with history of hepatic encephalopathy or clinically meaningful ascites resulting from cirrhosis.",
+      "reasonFuzzy": "Cirrhosis and Child-Pugh grading are complex clinical exclusions."
+    },
+    {
+      "id": "NCT05234307-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic central nervous system (CNS) metastases. Patients with treated brain metastases are eligible if they are clinically stable with regard to neurologic function, on stable dose of steroids after cranial irradiation with maximum of 10 mg prednisone equivalent...",
+      "reasonFuzzy": "This wording involves symptomatic CNS disease alongside detailed treatment history and stability rules, which does not fit a simple typed brain_mets rule."
+    },
+    {
+      "id": "NCT05234307-confounding",
+      "polarity": "exclusion",
+      "sourceText": "Has a history or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the trial...",
+      "reasonFuzzy": "Investigator discretion clause."
+    },
+    {
+      "id": "NCT05234307-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Mean resting corrected QT interval (corrected QT [QTc] using Fredericia's formula [QTcF]) > 470 msec ... Any clinically important abnormalities in rhythm, conduction or morphology of resting electrocardiogram (ECG)",
+      "reasonFuzzy": "QTc and ECG findings are not among the allowed typed kinds."
+    },
+    {
+      "id": "NCT05234307-checkpoint-tox",
+      "polarity": "exclusion",
+      "sourceText": "Any patient who experience unacceptable toxicity on prior checkpoint inhibitor therapy: >= grade 3 adverse event...",
+      "reasonFuzzy": "Prior checkpoint inhibitor toxicity grading is a complex clinical evaluation criterion."
+    },
+    {
+      "id": "NCT05234307-stage",
+      "polarity": "inclusion",
+      "sourceText": "Stage IV Lung Cancer AJCC v8, Stage IVA Lung Cancer AJCC v8, Stage IVB Lung Cancer AJCC v8",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05234307-egfr-min",
+      "polarity": "inclusion",
+      "sourceText": "Serum creatinine OR measured or calculated creatinine clearance (glomerular filtration rate [GFR] can also be used in place of creatinine or creatinine clearance [CrCl]) =< 1.5 X upper limit of normal (ULN) OR >= 60 mL/min for subject with creatinine levels > 1.5 X institutional ULN",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05234307-ast",
+      "polarity": "inclusion",
+      "sourceText": "AAspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 X ULN OR =< 5 X ULN for subjects with liver metastases",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05234307-alt",
+      "polarity": "inclusion",
+      "sourceText": "AAspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 X ULN OR =< 5 X ULN for subjects with liver metastases",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05234307-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Prior PD-1 and/or PD-L1 directed therapies are required.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 4,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Stage IV Lung Cancer AJCC v8, Stage IVA Lung Cancer AJCC v8, Stage IVB Lung Cancer AJCC v8"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Serum creatinine OR measured or calculated creatinine clearance (glomerular filtration rate [GFR] can also be used in place of creatinine or creatinine clearanc"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "AAspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SG"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "AAspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SG"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 4,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Stage IV Lung Cancer AJCC v8, Stage IVA Lung Cancer AJCC v8, Stage IVB Lung Cancer AJCC v8"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Serum creatinine OR measured or calculated creatinine clearance (glomerular filtration rate [GFR] can also be used in place of creatinine or creatinine clearanc"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "AAspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SG"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "AAspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SG"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 6,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 5,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:pd-1 and/or pd-l1"
+        }
+      ],
+      "normalizerTypedCount": 7
+    }
+  },
+  "runA": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3981
+  },
+  "runB": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 21,
+    "attempts": 1,
+    "ms": 10788
+  },
+  "ms": 22780,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05234307",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05234307-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age >= 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05234307-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage IV Lung Cancer AJCC v8, Stage IVA Lung Cancer AJCC v8, Stage IVB Lung Cancer AJCC v8",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05234307-therapy",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Prior PD-1 and/or PD-L1 directed therapies are required.",
+        "stringValue": "PD-1 and/or PD-L1"
+      },
+      {
+        "id": "NCT05234307-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05234307-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) >= 1,500 /mcL",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT05234307-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets >= 100,000 / mcL",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT05234307-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Serum creatinine OR measured or calculated creatinine clearance (glomerular filtration rate [GFR] can also be used in place of creatinine or creatinine clearance [CrCl]) =< 1.5 X upper limit of normal (ULN) OR >= 60 mL/min for subject with creatinine levels > 1.5 X institutional ULN",
+        "numberValue": 60,
+        "stages": [],
+        "stringValue": "Serum creatinine <= 1.5 X ULN"
+      },
+      {
+        "id": "NCT05234307-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Serum total bilirubin =< 1.5 X ULN OR direct bilirubin =< ULN for subjects with total bilirubin levels > 1.5 ULN",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05234307-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AAspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 X ULN OR =< 5 X ULN for subjects with liver metastases",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT05234307-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AAspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 X ULN OR =< 5 X ULN for subjects with liver metastases",
+        "numberValue": 3
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05234307-histology",
+        "polarity": "inclusion",
+        "sourceText": "Confirmed recurrent or metastatic non-small cell carcinoma of the lung of any histology without curative options",
+        "reasonFuzzy": "Histology is 'any', which does not fit a standard typed histology subset."
+      },
+      {
+        "id": "NCT05234307-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease based on RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05234307-lines",
+        "polarity": "inclusion",
+        "sourceText": "Patients may have received no more than 3 prior lines of therapy in the metastatic setting (excluding targeted therapies)",
+        "reasonFuzzy": "Prior lines limits have exceptions for targeted therapies."
+      },
+      {
+        "id": "NCT05234307-life",
+        "polarity": "inclusion",
+        "sourceText": "Anticipated life expectancy of >= 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05234307-brain",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic central nervous system (CNS) metastases. Patients with treated brain metastases are eligible if they are clinically stable with regard to neurologic function, on stable dose of steroids after cranial irradiation with maximum of 10 mg prednisone equivalent. Treatment (whole brain radiation therapy, focal radiation therapy, and stereotactic radiosurgery) must be completed at least 2 weeks prior to study entry, or after surgical resection performed at least 28 days prior to treatment initiation. Patients with asymptomatic lesions will be eligible if considered appropriate by the treating physician.",
+        "reasonFuzzy": "The rule combines symptomatic exclusions with specific treatment window conditions and investigator judgment for asymptomatic lesions."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05234307",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05234307-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age >= 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05234307-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage IV Lung Cancer AJCC v8, Stage IVA Lung Cancer AJCC v8, Stage IVB Lung Cancer AJCC v8",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05234307-prior-pd1",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Prior PD-1 and/or PD-L1 directed therapies are required.",
+        "stringValue": "PD-1"
+      },
+      {
+        "id": "NCT05234307-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05234307-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) >= 1,500 /mcL",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT05234307-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets >= 100,000 / mcL",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT05234307-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Serum creatinine OR measured or calculated creatinine clearance (glomerular filtration rate [GFR] can also be used in place of creatinine or creatinine clearance [CrCl]) =< 1.5 X upper limit of normal (ULN) OR >= 60 mL/min for subject with creatinine levels > 1.5 X institutional ULN",
+        "numberValue": 60,
+        "stages": [],
+        "stringValue": "creatinine clearance"
+      },
+      {
+        "id": "NCT05234307-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Serum total bilirubin =< 1.5 X ULN OR direct bilirubin =< ULN for subjects with total bilirubin levels > 1.5 ULN",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05234307-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AAspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 X ULN OR =< 5 X ULN for subjects with liver metastases",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT05234307-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AAspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 X ULN OR =< 5 X ULN for subjects with liver metastases",
+        "numberValue": 3
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05234307-histology",
+        "polarity": "inclusion",
+        "sourceText": "Confirmed recurrent or metastatic non-small cell carcinoma of the lung of any histology without curative options",
+        "reasonFuzzy": "Any histology is broad, but specific categories like adenocarcinoma or squamous are not individually listed."
+      },
+      {
+        "id": "NCT05234307-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease based on RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05234307-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "Patients may have received no more than 3 prior lines of therapy in the metastatic setting (excluding targeted therapies)",
+        "reasonFuzzy": "This rule specifies a maximum prior lines limit excluding targeted therapies, which cannot be modeled with a simple prior_lines_max kind."
+      },
+      {
+        "id": "NCT05234307-actionable",
+        "polarity": "inclusion",
+        "sourceText": "Patients with known actionable mutations with Food and Drug Administration (FDA)-approved treatment options must have received all approved and standard of care treatment options (ie osimertinib for EGFR, alectinib for ALK, etc)",
+        "reasonFuzzy": "Condition-dependent prior therapy requirement for actionable mutations is complex and not a single typed check."
+      },
+      {
+        "id": "NCT05234307-albumin",
+        "polarity": "inclusion",
+        "sourceText": "Albumin >= 2.5 mg/dL",
+        "reasonFuzzy": "Albumin is not one of the allowed typed kinds."
+      },
+      {
+        "id": "NCT05234307-coagulation",
+        "polarity": "inclusion",
+        "sourceText": "International normalized ratio (INR) or prothrombin time (PT) or activated partial thromboplastin time (aPTT) =< 1.5 X ULN unless subject is receiving anticoagulant therapy as long as PT or PTT is within therapeutic range of intended use of anticoagulants",
+        "reasonFuzzy": "Coagulation parameters are not part of the allowed typed lab kinds."
+      },
+      {
+        "id": "NCT05234307-life",
+        "polarity": "inclusion",
+        "sourceText": "Anticipated life expectancy of >= 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05234307-procedures",
+        "polarity": "inclusion",
+        "sourceText": "Willing to comply with study procedures",
+        "reasonFuzzy": "Willingness to comply is a subjective judgment."
+      },
+      {
+        "id": "NCT05234307-pills",
+        "polarity": "inclusion",
+        "sourceText": "Must be able to swallow pills",
+        "reasonFuzzy": "Ability to swallow pills is a functional assessment."
+      },
+      {
+        "id": "NCT05234307-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Female subjects of childbearing potential must be willing to use an adequate method of contraception",
+        "reasonFuzzy": "Contraception requirement is not a typed clinical check."
+      },
+      {
+        "id": "NCT05234307-pregnancy",
+        "polarity": "inclusion",
+        "sourceText": "For female patients of childbearing potential, a negative serum pregnancy test within 7 days prior to first dose of protocol therapy is required",
+        "reasonFuzzy": "Pregnancy test timing requirement is not a typed check."
+      },
+      {
+        "id": "NCT05234307-consent",
+        "polarity": "inclusion",
+        "sourceText": "Be willing and able to understand and sign the written informed consent document",
+        "reasonFuzzy": "Informed consent is a standard administrative requirement."
+      },
+      {
+        "id": "NCT05234307-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Availability of a recent formalin-fixed, paraffin-embedded (FFPE) tumor tissue block...",
+        "reasonFuzzy": "Tissue availability is a logistical requirement, not a patient eligibility check kind."
+      },
+      {
+        "id": "NCT05234307-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Has active autoimmune disease, including myasthenic syndrome, which has required systemic treatment in the past 12 months...",
+        "reasonFuzzy": "Autoimmune disease history with exceptions is a clinical judgment criterion."
+      },
+      {
+        "id": "NCT05234307-immunodeficiency",
+        "polarity": "exclusion",
+        "sourceText": "Has a diagnosis of immunodeficiency or is receiving systemic steroid therapy (at a dose > 10 mg prednisone or equivalent) or any other form of immunosuppressive therapy within 7 days prior to the first dose of trial treatment",
+        "reasonFuzzy": "Immunodeficiency and steroid dose exclusions are complex clinical criteria."
+      },
+      {
+        "id": "NCT05234307-infections",
+        "polarity": "exclusion",
+        "sourceText": "Known active chronic infections - human immunodeficiency virus (HIV)/acquired immunodeficiency syndrome (AIDS), known active (ie with detectable polymerase chain reaction [PCR]) Hepatitis B or C",
+        "reasonFuzzy": "Infection exclusions are not standard typed lab items like hematology or chemistry."
+      },
+      {
+        "id": "NCT05234307-cirrhosis",
+        "polarity": "exclusion",
+        "sourceText": "Cirrhosis (Child-Pugh B or worse) or cirrhosis with history of hepatic encephalopathy or clinically meaningful ascites resulting from cirrhosis.",
+        "reasonFuzzy": "Cirrhosis and Child-Pugh grading are complex clinical exclusions."
+      },
+      {
+        "id": "NCT05234307-brain",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic central nervous system (CNS) metastases. Patients with treated brain metastases are eligible if they are clinically stable with regard to neurologic function, on stable dose of steroids after cranial irradiation with maximum of 10 mg prednisone equivalent...",
+        "reasonFuzzy": "This wording involves symptomatic CNS disease alongside detailed treatment history and stability rules, which does not fit a simple typed brain_mets rule."
+      },
+      {
+        "id": "NCT05234307-confounding",
+        "polarity": "exclusion",
+        "sourceText": "Has a history or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the trial...",
+        "reasonFuzzy": "Investigator discretion clause."
+      },
+      {
+        "id": "NCT05234307-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Mean resting corrected QT interval (corrected QT [QTc] using Fredericia's formula [QTcF]) > 470 msec ... Any clinically important abnormalities in rhythm, conduction or morphology of resting electrocardiogram (ECG)",
+        "reasonFuzzy": "QTc and ECG findings are not among the allowed typed kinds."
+      },
+      {
+        "id": "NCT05234307-checkpoint-tox",
+        "polarity": "exclusion",
+        "sourceText": "Any patient who experience unacceptable toxicity on prior checkpoint inhibitor therapy: >= grade 3 adverse event...",
+        "reasonFuzzy": "Prior checkpoint inhibitor toxicity grading is a complex clinical evaluation criterion."
+      }
+    ]
+  }
+}

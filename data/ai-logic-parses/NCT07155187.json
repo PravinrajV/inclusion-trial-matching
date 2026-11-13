@@ -1,0 +1,429 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07155187",
+  "briefTitle": "A Study to Assess Adverse Events and Change in Disease Activity of Intravenous (IV) Telisotuzumab Adizutecan, Monotherapy or in Combination With Osimertinib, Compared to Standard of Care in Adult Participants With Locally Advanced or Metastatic EGFR-Mutated Non-Squamous Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T10:58:54.008Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07155187-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07155187-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Provide recently obtained tumor tissue during Screening for c-Met immunohistochemistry (IHC) testing (and study stratification in Phase 2). If recently obtained tumor tissue is not available, archived tumor tissue is also acceptable.",
+      "reasonFuzzy": "Providing tumor tissue or undergoing a biopsy procedure is a clinical action, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07155187-lines",
+      "polarity": "inclusion",
+      "sourceText": "Received one prior third-generation epidermal growth factor receptor tyrosine kinase inhibitor (EGFR TKI) therapy in the adjuvant, locally advanced, or metastatic setting, either as monotherapy or in combination with other agents, and experienced documented radiographic disease progression on or after therapy for the most recent regimen administered prior to study entry. Participant who has received prior third-generation EGFR TKI therapy in the adjuvant setting must have progressed while on treatment.",
+      "reasonFuzzy": "Prior treatment rules involving adjuvant vs advanced settings with progression specifics cannot be captured by a simple typed check."
+    },
+    {
+      "id": "NCT07155187-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least 1 measurable lesion per Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1, that has not been previously irradiated.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07155187-histology-excl",
+      "polarity": "exclusion",
+      "sourceText": "Tumor(s) have adenosquamous or squamous histology or sarcomatoid features.",
+      "reasonFuzzy": "Exclusion of adenosquamous or sarcomatoid features cannot be fully expressed within standard inclusion-oriented histology enums."
+    },
+    {
+      "id": "NCT07155187-prior-lines-max",
+      "polarity": "exclusion",
+      "sourceText": "Received more than 1 line of systemic therapy in the locally advanced or metastatic setting.",
+      "reasonFuzzy": "The restriction on lines in the locally advanced or metastatic setting is distinct from an overall prior_lines_max check."
+    },
+    {
+      "id": "NCT07155187-ild",
+      "polarity": "exclusion",
+      "sourceText": "Evidence of active interstitial lung disease (ILD)/pneumonitis or history of ILD or pneumonitis that required steroids.",
+      "reasonFuzzy": "Interstitial lung disease history with steroid requirement is a specific medical history exclusion, not a typed check."
+    },
+    {
+      "id": "NCT07155187-investigator",
+      "polarity": "exclusion",
+      "sourceText": "Have any clinically significant medical conditions or any other reason that the investigator determines would interfere with the participant's participation.",
+      "reasonFuzzy": "Investigator discretion is subjective and cannot be expressed as a typed check."
+    },
+    {
+      "id": "NCT07155187-age",
+      "polarity": "inclusion",
+      "sourceText": "Adult Participants",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07155187-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Provide recently obtained tumor tissue during Screening for c-Met immunohistochemistry (IHC) testing (and study stratification in Phase 2). If recently obtained tumor tissue is not available, archived tumor tissue is also acceptable.",
+      "reasonFuzzy": "Tissue submission and willingness to undergo or provide a biopsy is a procedural requirement, not a typed check."
+    },
+    {
+      "id": "NCT07155187-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least 1 measurable lesion per Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1, that has not been previously irradiated.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07155187-squamous-excl",
+      "polarity": "exclusion",
+      "sourceText": "Tumor(s) have adenosquamous or squamous histology or sarcomatoid features.",
+      "reasonFuzzy": "Excludes adenosquamous and sarcomatoid features along with squamous, which cannot be captured entirely by standard histology kinds."
+    },
+    {
+      "id": "NCT07155187-lines-excl",
+      "polarity": "exclusion",
+      "sourceText": "Received more than 1 line of systemic therapy in the locally advanced or metastatic setting.",
+      "reasonFuzzy": "Prior line limit in specific settings is better captured as a fuzzy criterion alongside prior therapy rules."
+    },
+    {
+      "id": "NCT07155187-ild",
+      "polarity": "exclusion",
+      "sourceText": "Evidence of active interstitial lung disease (ILD)/pneumonitis or history of ILD or pneumonitis that required steroids.",
+      "reasonFuzzy": "ILD and steroid requirement history is a medical history and toxicity rule, not a typed check."
+    },
+    {
+      "id": "NCT07155187-investigator",
+      "polarity": "exclusion",
+      "sourceText": "Have any clinically significant medical conditions or any other reason that the investigator determines would interfere with the participant's participation.",
+      "reasonFuzzy": "Investigator discretion is a subjective judgment."
+    },
+    {
+      "id": "NCT07155187-age",
+      "polarity": "inclusion",
+      "sourceText": "Adult Participants",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07155187-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced or metastatic non-squamous non-small cell lung cancer (NSCLC) with documented EGFR Exon 19 deletion or Exon21 L858R mutation.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07155187-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced or metastatic non-squamous non-small cell lung cancer (NSCLC) with documented EGFR Exon 19 deletion or Exon21 L858R mutation.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07155187-egfr-variant",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced or metastatic non-squamous non-small cell lung cancer (NSCLC) with documented EGFR Exon 19 deletion or Exon21 L858R mutation.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07155187-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Received one prior third-generation epidermal growth factor receptor tyrosine kinase inhibitor (EGFR TKI) therapy in the adjuvant, locally advanced, or metastatic setting, either as monotherapy or in combination with other agents, and experienced documented radiographic disease progression on or after therapy for the most recent regimen administered prior to study entry. Participant who has received prior third-generation EGFR TKI therapy in the adjuvant setting must have progressed while on treatment.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07155187-brain-mets",
+      "polarity": "exclusion",
+      "sourceText": "Active/symptomatic central nervous system (CNS) metastases. Previously treated brain metastases may be included provided they are radiologically stable.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Adult Participants"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Adult Participants"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 6,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 5,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:exon 19 deletion or exon21 l858r mutation"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:third-generation epidermal growth factor receptor tyrosine kinase inhibitor (egfr tki)"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 4344
+  },
+  "runB": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 6,
+    "attempts": 2,
+    "ms": 14255
+  },
+  "ms": 36977,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07155187",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07155187-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced or metastatic non-squamous non-small cell lung cancer (NSCLC) with documented EGFR Exon 19 deletion or Exon21 L858R mutation.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07155187-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced or metastatic non-squamous non-small cell lung cancer (NSCLC) with documented EGFR Exon 19 deletion or Exon21 L858R mutation.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07155187-egfr-variant",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced or metastatic non-squamous non-small cell lung cancer (NSCLC) with documented EGFR Exon 19 deletion or Exon21 L858R mutation.",
+        "stringValue": "Exon 19 deletion or Exon21 L858R mutation"
+      },
+      {
+        "id": "NCT07155187-prior-therapy",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Received one prior third-generation epidermal growth factor receptor tyrosine kinase inhibitor (EGFR TKI) therapy in the adjuvant, locally advanced, or metastatic setting",
+        "stringValue": "third-generation epidermal growth factor receptor tyrosine kinase inhibitor (EGFR TKI)"
+      },
+      {
+        "id": "NCT07155187-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07155187-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adult Participants",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07155187-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active/symptomatic central nervous system (CNS) metastases. Previously treated brain metastases may be included provided they are radiologically stable.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07155187-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Provide recently obtained tumor tissue during Screening for c-Met immunohistochemistry (IHC) testing (and study stratification in Phase 2). If recently obtained tumor tissue is not available, archived tumor tissue is also acceptable.",
+        "reasonFuzzy": "Providing tumor tissue or undergoing a biopsy procedure is a clinical action, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT07155187-lines",
+        "polarity": "inclusion",
+        "sourceText": "Received one prior third-generation epidermal growth factor receptor tyrosine kinase inhibitor (EGFR TKI) therapy in the adjuvant, locally advanced, or metastatic setting, either as monotherapy or in combination with other agents, and experienced documented radiographic disease progression on or after therapy for the most recent regimen administered prior to study entry. Participant who has received prior third-generation EGFR TKI therapy in the adjuvant setting must have progressed while on treatment.",
+        "reasonFuzzy": "Prior treatment rules involving adjuvant vs advanced settings with progression specifics cannot be captured by a simple typed check."
+      },
+      {
+        "id": "NCT07155187-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least 1 measurable lesion per Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1, that has not been previously irradiated.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07155187-histology-excl",
+        "polarity": "exclusion",
+        "sourceText": "Tumor(s) have adenosquamous or squamous histology or sarcomatoid features.",
+        "reasonFuzzy": "Exclusion of adenosquamous or sarcomatoid features cannot be fully expressed within standard inclusion-oriented histology enums."
+      },
+      {
+        "id": "NCT07155187-prior-lines-max",
+        "polarity": "exclusion",
+        "sourceText": "Received more than 1 line of systemic therapy in the locally advanced or metastatic setting.",
+        "reasonFuzzy": "The restriction on lines in the locally advanced or metastatic setting is distinct from an overall prior_lines_max check."
+      },
+      {
+        "id": "NCT07155187-ild",
+        "polarity": "exclusion",
+        "sourceText": "Evidence of active interstitial lung disease (ILD)/pneumonitis or history of ILD or pneumonitis that required steroids.",
+        "reasonFuzzy": "Interstitial lung disease history with steroid requirement is a specific medical history exclusion, not a typed check."
+      },
+      {
+        "id": "NCT07155187-investigator",
+        "polarity": "exclusion",
+        "sourceText": "Have any clinically significant medical conditions or any other reason that the investigator determines would interfere with the participant's participation.",
+        "reasonFuzzy": "Investigator discretion is subjective and cannot be expressed as a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07155187",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07155187-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced or metastatic non-squamous non-small cell lung cancer (NSCLC) with documented EGFR Exon 19 deletion or Exon21 L858R mutation.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07155187-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced or metastatic non-squamous non-small cell lung cancer (NSCLC) with documented EGFR Exon 19 deletion or Exon21 L858R mutation.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07155187-egfr-variant",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of locally advanced or metastatic non-squamous non-small cell lung cancer (NSCLC) with documented EGFR Exon 19 deletion or Exon21 L858R mutation.",
+        "stringValue": "Exon 19 deletion or Exon21 L858R mutation"
+      },
+      {
+        "id": "NCT07155187-prior-therapy",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Received one prior third-generation epidermal growth factor receptor tyrosine kinase inhibitor (EGFR TKI) therapy in the adjuvant, locally advanced, or metastatic setting, either as monotherapy or in combination with other agents, and experienced documented radiographic disease progression on or after therapy for the most recent regimen administered prior to study entry. Participant who has received prior third-generation EGFR TKI therapy in the adjuvant setting must have progressed while on treatment.",
+        "stringValue": "third-generation epidermal growth factor receptor tyrosine kinase inhibitor (EGFR TKI)"
+      },
+      {
+        "id": "NCT07155187-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07155187-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adult Participants",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07155187-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active/symptomatic central nervous system (CNS) metastases. Previously treated brain metastases may be included provided they are radiologically stable.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07155187-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Provide recently obtained tumor tissue during Screening for c-Met immunohistochemistry (IHC) testing (and study stratification in Phase 2). If recently obtained tumor tissue is not available, archived tumor tissue is also acceptable.",
+        "reasonFuzzy": "Tissue submission and willingness to undergo or provide a biopsy is a procedural requirement, not a typed check."
+      },
+      {
+        "id": "NCT07155187-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least 1 measurable lesion per Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1, that has not been previously irradiated.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07155187-squamous-excl",
+        "polarity": "exclusion",
+        "sourceText": "Tumor(s) have adenosquamous or squamous histology or sarcomatoid features.",
+        "reasonFuzzy": "Excludes adenosquamous and sarcomatoid features along with squamous, which cannot be captured entirely by standard histology kinds."
+      },
+      {
+        "id": "NCT07155187-lines-excl",
+        "polarity": "exclusion",
+        "sourceText": "Received more than 1 line of systemic therapy in the locally advanced or metastatic setting.",
+        "reasonFuzzy": "Prior line limit in specific settings is better captured as a fuzzy criterion alongside prior therapy rules."
+      },
+      {
+        "id": "NCT07155187-ild",
+        "polarity": "exclusion",
+        "sourceText": "Evidence of active interstitial lung disease (ILD)/pneumonitis or history of ILD or pneumonitis that required steroids.",
+        "reasonFuzzy": "ILD and steroid requirement history is a medical history and toxicity rule, not a typed check."
+      },
+      {
+        "id": "NCT07155187-investigator",
+        "polarity": "exclusion",
+        "sourceText": "Have any clinically significant medical conditions or any other reason that the investigator determines would interfere with the participant's participation.",
+        "reasonFuzzy": "Investigator discretion is a subjective judgment."
+      }
+    ]
+  }
+}

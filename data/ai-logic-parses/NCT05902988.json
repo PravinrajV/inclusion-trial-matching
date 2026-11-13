@@ -1,0 +1,271 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05902988",
+  "briefTitle": "A Phase I/II Study of VLS-1488 in Subjects With Advanced Cancer",
+  "parsedAt": "2026-11-12T06:19:49.852Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05902988-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05902988-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG Performance Status ≤ 1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG Performance Status ≤ 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05902988-measurable",
+      "polarity": "inclusion",
+      "sourceText": "at least 1 site of measurable disease evaluable by CT scan or MRI per RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05902988-histology",
+      "polarity": "inclusion",
+      "sourceText": "Squamous Non-Small Cell Lung Cancer",
+      "reasonFuzzy": "The trial mentions squamous non-small-cell lung cancer among multiple tumor types across escalation and expansion cohorts with specific treatment histories, making it a conditional histology inclusion best captured as fuzzy."
+    },
+    {
+      "id": "NCT05902988-genomic",
+      "polarity": "exclusion",
+      "sourceText": "MSI-H, dMMR, POLE gene hotspot mutated, or known hypermutator phenotype",
+      "reasonFuzzy": "Complex genomic status exclusions not covered by standard single-gene biomarker kinds."
+    },
+    {
+      "id": "NCT05902988-measurable",
+      "polarity": "inclusion",
+      "sourceText": "at least 1 site of measurable disease evaluable by CT scan or MRI per RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05902988-options",
+      "polarity": "inclusion",
+      "sourceText": "No available therapeutic options to provide clinically meaningful benefits in the following tumor types: High Grade Serous Ovarian Cancer, Squamous Non -Small Cell Lung Cancer, Triple Negative Breast Cancer, Gastric Adenocarcinoma (not EBV+), Colorectal, Esophageal Squamous Cell Carcinoma, Esophageal Adenocarcinoma, Gastroesophageal Junction, Bladder (transitional cell), Head and Neck Squamous Cell Carcinomas (not nasopharynx, sinonasal or lip), Ovarian Carcinosarcoma, CN-high Endometrial/Uterine",
+      "reasonFuzzy": "Lack of available therapeutic options is an investigator judgment."
+    },
+    {
+      "id": "NCT05902988-expansion-lines",
+      "polarity": "inclusion",
+      "sourceText": "Must have been previously treated with several lines of standard of care treatment specified in the protocol in the following tumor types: High Grade Serous Ovarian Cancer, Squamous Non-Small Cell Lung Cancer, Triple Negative Breast Cancer, Gastric Adenocarcinoma (not EBV+), Colorectal, Esophageal Squamous Cell Carcinoma, Esophageal Adenocarcinoma, Head and Neck Squamous Cell Carcinomas (not nasopharynx, sinonasal or lip), CN-high Endometrial/Uterine",
+      "reasonFuzzy": "Prior lines requirement refers to 'several lines of standard of care treatment specified in the protocol' without a single fixed numeric cutoff across all cohorts."
+    },
+    {
+      "id": "NCT05902988-biomarkers-excl",
+      "polarity": "exclusion",
+      "sourceText": "MSI-H, dMMR, POLE gene hotspot mutated, or known hypermutator phenotype",
+      "reasonFuzzy": "Multiple distinct biomarker exclusions combined into a single rule that does not map to a single typed check."
+    },
+    {
+      "id": "NCT05902988-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Cardiac parameters: MI or stroke ≤ 1 year, unstable angina/PE/DVT/CABG ≤ 6 months, NYHA Class ≥ II, LVEF < 50%",
+      "reasonFuzzy": "Complex set of cardiac exclusionary conditions involving multiple different timeframes and parameters."
+    },
+    {
+      "id": "NCT05902988-prior-kif18a",
+      "polarity": "exclusion",
+      "sourceText": "Previously received KIF18A inhibitor",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05902988-brain",
+      "polarity": "exclusion",
+      "sourceText": "Current CNS metastases or leptomeningeal disease",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:kif18a inhibitor"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2219
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3237
+  },
+  "ms": 13448,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05902988",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05902988-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05902988-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance Status ≤ 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05902988-prior-kif18a",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Previously received KIF18A inhibitor",
+        "stringValue": "KIF18A inhibitor"
+      },
+      {
+        "id": "NCT05902988-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Current CNS metastases or leptomeningeal disease",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05902988-measurable",
+        "polarity": "inclusion",
+        "sourceText": "at least 1 site of measurable disease evaluable by CT scan or MRI per RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05902988-histology",
+        "polarity": "inclusion",
+        "sourceText": "Squamous Non-Small Cell Lung Cancer",
+        "reasonFuzzy": "The trial mentions squamous non-small-cell lung cancer among multiple tumor types across escalation and expansion cohorts with specific treatment histories, making it a conditional histology inclusion best captured as fuzzy."
+      },
+      {
+        "id": "NCT05902988-genomic",
+        "polarity": "exclusion",
+        "sourceText": "MSI-H, dMMR, POLE gene hotspot mutated, or known hypermutator phenotype",
+        "reasonFuzzy": "Complex genomic status exclusions not covered by standard single-gene biomarker kinds."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05902988",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05902988-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05902988-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance Status ≤ 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05902988-prior-kif18a",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Previously received KIF18A inhibitor",
+        "stringValue": "KIF18A inhibitor"
+      },
+      {
+        "id": "NCT05902988-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Current CNS metastases or leptomeningeal disease",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05902988-measurable",
+        "polarity": "inclusion",
+        "sourceText": "at least 1 site of measurable disease evaluable by CT scan or MRI per RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05902988-options",
+        "polarity": "inclusion",
+        "sourceText": "No available therapeutic options to provide clinically meaningful benefits in the following tumor types: High Grade Serous Ovarian Cancer, Squamous Non -Small Cell Lung Cancer, Triple Negative Breast Cancer, Gastric Adenocarcinoma (not EBV+), Colorectal, Esophageal Squamous Cell Carcinoma, Esophageal Adenocarcinoma, Gastroesophageal Junction, Bladder (transitional cell), Head and Neck Squamous Cell Carcinomas (not nasopharynx, sinonasal or lip), Ovarian Carcinosarcoma, CN-high Endometrial/Uterine",
+        "reasonFuzzy": "Lack of available therapeutic options is an investigator judgment."
+      },
+      {
+        "id": "NCT05902988-expansion-lines",
+        "polarity": "inclusion",
+        "sourceText": "Must have been previously treated with several lines of standard of care treatment specified in the protocol in the following tumor types: High Grade Serous Ovarian Cancer, Squamous Non-Small Cell Lung Cancer, Triple Negative Breast Cancer, Gastric Adenocarcinoma (not EBV+), Colorectal, Esophageal Squamous Cell Carcinoma, Esophageal Adenocarcinoma, Head and Neck Squamous Cell Carcinomas (not nasopharynx, sinonasal or lip), CN-high Endometrial/Uterine",
+        "reasonFuzzy": "Prior lines requirement refers to 'several lines of standard of care treatment specified in the protocol' without a single fixed numeric cutoff across all cohorts."
+      },
+      {
+        "id": "NCT05902988-biomarkers-excl",
+        "polarity": "exclusion",
+        "sourceText": "MSI-H, dMMR, POLE gene hotspot mutated, or known hypermutator phenotype",
+        "reasonFuzzy": "Multiple distinct biomarker exclusions combined into a single rule that does not map to a single typed check."
+      },
+      {
+        "id": "NCT05902988-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Cardiac parameters: MI or stroke ≤ 1 year, unstable angina/PE/DVT/CABG ≤ 6 months, NYHA Class ≥ II, LVEF < 50%",
+        "reasonFuzzy": "Complex set of cardiac exclusionary conditions involving multiple different timeframes and parameters."
+      }
+    ]
+  }
+}

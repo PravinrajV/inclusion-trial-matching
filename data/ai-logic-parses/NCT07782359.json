@@ -1,0 +1,326 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07782359",
+  "briefTitle": "Impact of Using a GLP1 on Treatment Related Side Effects of Lung Cancer Patients Receiving Lorlatinib",
+  "parsedAt": "2026-11-12T12:02:04.302Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07782359-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07782359-stage",
+      "polarity": "inclusion",
+      "sourceText": "advanced NSCLC ALK-positive",
+      "reasonFuzzy": "Advanced disease is described generally without an explicit numbered stage list."
+    },
+    {
+      "id": "NCT07782359-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Known hypersensitivity to GLP-1 agonists.",
+      "reasonFuzzy": "Hypersensitivity is a clinical assessment and not a typed prior therapy or lab check."
+    },
+    {
+      "id": "NCT07782359-psych",
+      "polarity": "exclusion",
+      "sourceText": "Active, unstable psychiatric illness; current suicidal ideation",
+      "reasonFuzzy": "Psychiatric status is a subjective clinical evaluation."
+    },
+    {
+      "id": "NCT07782359-organ",
+      "polarity": "exclusion",
+      "sourceText": "Severe organ dysfunction or systemic illness.",
+      "reasonFuzzy": "Severe organ dysfunction is not quantified with specific typed laboratory cutoffs."
+    },
+    {
+      "id": "NCT07782359-anorexia",
+      "polarity": "exclusion",
+      "sourceText": "Anorexia nervosa",
+      "reasonFuzzy": "Anorexia nervosa is a clinical diagnosis condition, not a typed check."
+    },
+    {
+      "id": "NCT07782359-pancreatitis",
+      "polarity": "exclusion",
+      "sourceText": "History of pancreatitis",
+      "reasonFuzzy": "History of pancreatitis is a medical history exclusion and not a typed check."
+    },
+    {
+      "id": "NCT07782359-men",
+      "polarity": "exclusion",
+      "sourceText": "Personal or family history of medullary thyroid carcinoma or multiple endocrine neoplasia syndrome type 2",
+      "reasonFuzzy": "Specific hereditary cancer syndrome history is not among the allowed typed kinds."
+    },
+    {
+      "id": "NCT07782359-glp1",
+      "polarity": "exclusion",
+      "sourceText": "Current use of Glucagon-Like Peptide-1 Receptor Agonists (GLP-1 RA) or glucose-dependent insulinotropic polypeptide (GIP) and glucagon-like peptide-1 (GLP-1) [GLP-1 RA/GIP] co-agonist use within the last 90 days prior to screening",
+      "reasonFuzzy": "The rule details washout and specific concurrent medication restrictions that cannot be represented as a simple prior_therapy_excluded kind."
+    },
+    {
+      "id": "NCT07782359-obesity",
+      "polarity": "exclusion",
+      "sourceText": "Current anti-obesity medication use (other than GLP-1 RA) or dipeptidyl peptidase-4 (DPP4) inhibitor use or use within the last 30 days prior to screening",
+      "reasonFuzzy": "Complex medication washout rules for anti-obesity or DPP4 inhibitors do not map cleanly to standard prior_therapy_excluded kinds."
+    },
+    {
+      "id": "NCT07782359-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant, breastfeeding or planning pregnancy",
+      "reasonFuzzy": "Pregnancy and lactation status are not handled by typed checks."
+    },
+    {
+      "id": "NCT07782359-glp1",
+      "polarity": "exclusion",
+      "sourceText": "Current use of Glucagon-Like Peptide-1 Receptor Agonists (GLP-1 RA) or glucose-dependent insulinotropic polypeptide (GIP) and glucagon-like peptide-1 (GLP-1) [GLP-1 RA/GIP] co-agonist use within the last 90 days prior to screening",
+      "reasonFuzzy": "Washout window and multiple drug classes combined cannot be expressed as a simple prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT07782359-obesity",
+      "polarity": "exclusion",
+      "sourceText": "Current anti-obesity medication use (other than GLP-1 RA) or dipeptidyl peptidase-4 (DPP4) inhibitor use or use within the last 30 days prior to screening",
+      "reasonFuzzy": "Washout window and grouped medication classes are not a simple typed prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT07782359-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Known hypersensitivity to GLP-1 agonists.",
+      "reasonFuzzy": "Hypersensitivity is a clinical history judgment, not a typed check."
+    },
+    {
+      "id": "NCT07782359-organ",
+      "polarity": "exclusion",
+      "sourceText": "Severe organ dysfunction or systemic illness.",
+      "reasonFuzzy": "Subjective clinical evaluation of organ dysfunction."
+    },
+    {
+      "id": "NCT07782359-psychiatric",
+      "polarity": "exclusion",
+      "sourceText": "Active, unstable psychiatric illness; current suicidal ideation",
+      "reasonFuzzy": "Subjective psychiatric evaluation."
+    },
+    {
+      "id": "NCT07782359-alk",
+      "polarity": "inclusion",
+      "sourceText": "Receiving lorlatinib as first-line treatment for advanced NSCLC ALK-positive, already prescribed and administered by the patient's treating oncologist as standard of care at the time of study enrollment. This study does not initiate lorlatinib therapy or assign lorlatinib dosing; participants must already be receiving lorlatinib prior to enrollment",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07782359-lorlatinib",
+      "polarity": "inclusion",
+      "sourceText": "Receiving lorlatinib as first-line treatment for advanced NSCLC ALK-positive, already prescribed and administered by the patient's treating oncologist as standard of care at the time of study enrollment. This study does not initiate lorlatinib therapy or assign lorlatinib dosing; participants must already be receiving lorlatinib prior to enrollment",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:lorlatinib"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 10,
+    "attempts": 1,
+    "ms": 13468
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 6920
+  },
+  "ms": 28344,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07782359",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07782359-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07782359-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Receiving lorlatinib as first-line treatment for advanced NSCLC ALK-positive, already prescribed and administered by the patient's treating oncologist as standard of care at the time of study enrollment. This study does not initiate lorlatinib therapy or assign lorlatinib dosing; participants must already be receiving lorlatinib prior to enrollment",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07782359-lorlatinib",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Receiving lorlatinib as first-line treatment for advanced NSCLC ALK-positive, already prescribed and administered by the patient's treating oncologist as standard of care at the time of study enrollment. This study does not initiate lorlatinib therapy or assign lorlatinib dosing; participants must already be receiving lorlatinib prior to enrollment",
+        "stringValue": "lorlatinib"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07782359-stage",
+        "polarity": "inclusion",
+        "sourceText": "advanced NSCLC ALK-positive",
+        "reasonFuzzy": "Advanced disease is described generally without an explicit numbered stage list."
+      },
+      {
+        "id": "NCT07782359-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Known hypersensitivity to GLP-1 agonists.",
+        "reasonFuzzy": "Hypersensitivity is a clinical assessment and not a typed prior therapy or lab check."
+      },
+      {
+        "id": "NCT07782359-psych",
+        "polarity": "exclusion",
+        "sourceText": "Active, unstable psychiatric illness; current suicidal ideation",
+        "reasonFuzzy": "Psychiatric status is a subjective clinical evaluation."
+      },
+      {
+        "id": "NCT07782359-organ",
+        "polarity": "exclusion",
+        "sourceText": "Severe organ dysfunction or systemic illness.",
+        "reasonFuzzy": "Severe organ dysfunction is not quantified with specific typed laboratory cutoffs."
+      },
+      {
+        "id": "NCT07782359-anorexia",
+        "polarity": "exclusion",
+        "sourceText": "Anorexia nervosa",
+        "reasonFuzzy": "Anorexia nervosa is a clinical diagnosis condition, not a typed check."
+      },
+      {
+        "id": "NCT07782359-pancreatitis",
+        "polarity": "exclusion",
+        "sourceText": "History of pancreatitis",
+        "reasonFuzzy": "History of pancreatitis is a medical history exclusion and not a typed check."
+      },
+      {
+        "id": "NCT07782359-men",
+        "polarity": "exclusion",
+        "sourceText": "Personal or family history of medullary thyroid carcinoma or multiple endocrine neoplasia syndrome type 2",
+        "reasonFuzzy": "Specific hereditary cancer syndrome history is not among the allowed typed kinds."
+      },
+      {
+        "id": "NCT07782359-glp1",
+        "polarity": "exclusion",
+        "sourceText": "Current use of Glucagon-Like Peptide-1 Receptor Agonists (GLP-1 RA) or glucose-dependent insulinotropic polypeptide (GIP) and glucagon-like peptide-1 (GLP-1) [GLP-1 RA/GIP] co-agonist use within the last 90 days prior to screening",
+        "reasonFuzzy": "The rule details washout and specific concurrent medication restrictions that cannot be represented as a simple prior_therapy_excluded kind."
+      },
+      {
+        "id": "NCT07782359-obesity",
+        "polarity": "exclusion",
+        "sourceText": "Current anti-obesity medication use (other than GLP-1 RA) or dipeptidyl peptidase-4 (DPP4) inhibitor use or use within the last 30 days prior to screening",
+        "reasonFuzzy": "Complex medication washout rules for anti-obesity or DPP4 inhibitors do not map cleanly to standard prior_therapy_excluded kinds."
+      },
+      {
+        "id": "NCT07782359-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant, breastfeeding or planning pregnancy",
+        "reasonFuzzy": "Pregnancy and lactation status are not handled by typed checks."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07782359",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07782359-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07782359-lorlatinib",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Receiving lorlatinib as first-line treatment for advanced NSCLC ALK-positive, already prescribed and administered by the patient's treating oncologist as standard of care at the time of study enrollment. This study does not initiate lorlatinib therapy or assign lorlatinib dosing; participants must already be receiving lorlatinib prior to enrollment",
+        "stringValue": "lorlatinib"
+      },
+      {
+        "id": "NCT07782359-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Receiving lorlatinib as first-line treatment for advanced NSCLC ALK-positive",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07782359-glp1",
+        "polarity": "exclusion",
+        "sourceText": "Current use of Glucagon-Like Peptide-1 Receptor Agonists (GLP-1 RA) or glucose-dependent insulinotropic polypeptide (GIP) and glucagon-like peptide-1 (GLP-1) [GLP-1 RA/GIP] co-agonist use within the last 90 days prior to screening",
+        "reasonFuzzy": "Washout window and multiple drug classes combined cannot be expressed as a simple prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT07782359-obesity",
+        "polarity": "exclusion",
+        "sourceText": "Current anti-obesity medication use (other than GLP-1 RA) or dipeptidyl peptidase-4 (DPP4) inhibitor use or use within the last 30 days prior to screening",
+        "reasonFuzzy": "Washout window and grouped medication classes are not a simple typed prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT07782359-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Known hypersensitivity to GLP-1 agonists.",
+        "reasonFuzzy": "Hypersensitivity is a clinical history judgment, not a typed check."
+      },
+      {
+        "id": "NCT07782359-organ",
+        "polarity": "exclusion",
+        "sourceText": "Severe organ dysfunction or systemic illness.",
+        "reasonFuzzy": "Subjective clinical evaluation of organ dysfunction."
+      },
+      {
+        "id": "NCT07782359-psychiatric",
+        "polarity": "exclusion",
+        "sourceText": "Active, unstable psychiatric illness; current suicidal ideation",
+        "reasonFuzzy": "Subjective psychiatric evaluation."
+      }
+    ]
+  }
+}

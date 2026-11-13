@@ -1,0 +1,327 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07223424",
+  "briefTitle": "Patient Preference for Subcutaneous vs. Intravenous Immune Therapy",
+  "parsedAt": "2026-11-12T11:04:50.667Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07223424-consent",
+      "polarity": "inclusion",
+      "sourceText": "Able to understand and willing to sign a written informed consent document.",
+      "reasonFuzzy": "Willingness to sign consent is a subjective judgment."
+    },
+    {
+      "id": "NCT07223424-english",
+      "polarity": "inclusion",
+      "sourceText": "Able to read and write in English.",
+      "reasonFuzzy": "Language proficiency is not a typed check."
+    },
+    {
+      "id": "NCT07223424-soc",
+      "polarity": "inclusion",
+      "sourceText": "Must be eligible to receive nivolumab (Cohorts A-1, B-1) or pembrolizumab (Cohorts A-2, B-2) singly or in combination with other FDA-approved agents (TKIs or chemotherapy) according to standard of care practices, as determined by the clinical judgment of the investigator.",
+      "reasonFuzzy": "Investigator judgment of standard of care eligibility is subjective."
+    },
+    {
+      "id": "NCT07223424-prior",
+      "polarity": "inclusion",
+      "sourceText": "Patients should either be ICI-naïve (Cohorts A-1, A-2) or be currently receiving adjuvant or front-line PD-(L)1 based therapy singly or in combination with FDA-approved agents (TKIs or chemotherapy) (Cohorts B-1, B-2).",
+      "reasonFuzzy": "Complex prior-therapy criteria varying across cohorts cannot be represented as a single typed check."
+    },
+    {
+      "id": "NCT07223424-stage",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced or advanced/metastatic solid tumor for which nivolumab OR pembrolizumab is on-label.",
+      "reasonFuzzy": "Refers to broad advanced solid tumors with on-label indications rather than a specific numeric NSCLC stage list."
+    },
+    {
+      "id": "NCT07223424-cohorts",
+      "polarity": "inclusion",
+      "sourceText": "Cohort-specific criteria. Cohort A-1: Patients who are treatment-naive... Cohort B-1... Cohort A-2... Cohort B-2...",
+      "reasonFuzzy": "Multi-cohort nuanced enrollment rules are too complex for a single typed condition."
+    },
+    {
+      "id": "NCT07223424-allergy",
+      "polarity": "exclusion",
+      "sourceText": "Participant unable to receive nivolumab (or pembrolizumab) due to prior allergic reactions to nivolumab (or pembrolizumab) or any of its ingredients.",
+      "reasonFuzzy": "Allergy or hypersensitivity exclusions are generally fuzzy unless mapped to a specific typed exclusion."
+    },
+    {
+      "id": "NCT07223424-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Has severe hypersensitivity (≥Grade 3) to nivolumab (or pembrolizumab) and/or any of its excipients.",
+      "reasonFuzzy": "Hypersensitivity grade to specific agents is a subjective toxicity assessment."
+    },
+    {
+      "id": "NCT07223424-transplant",
+      "polarity": "exclusion",
+      "sourceText": "Has had an allogenic tissue/solid organ transplant.",
+      "reasonFuzzy": "Organ transplant exclusion is not covered by the allowed typed kinds."
+    },
+    {
+      "id": "NCT07223424-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07223424-consent",
+      "polarity": "inclusion",
+      "sourceText": "Able to understand and willing to sign a written informed consent document.",
+      "reasonFuzzy": "Willingness to sign consent is a subjective compliance item."
+    },
+    {
+      "id": "NCT07223424-english",
+      "polarity": "inclusion",
+      "sourceText": "Able to read and write in English.",
+      "reasonFuzzy": "Language fluency is not a typed clinical check."
+    },
+    {
+      "id": "NCT07223424-soc",
+      "polarity": "inclusion",
+      "sourceText": "Must be eligible to receive nivolumab (Cohorts A-1, B-1) or pembrolizumab (Cohorts A-2, B-2) singly or in combination with other FDA-approved agents (TKIs or chemotherapy) according to standard of care practices, as determined by the clinical judgment of the investigator.",
+      "reasonFuzzy": "Investigator judgment of standard of care eligibility is a subjective evaluation."
+    },
+    {
+      "id": "NCT07223424-prior",
+      "polarity": "inclusion",
+      "sourceText": "Patients should either be ICI-naïve (Cohorts A-1, A-2) or be currently receiving adjuvant or front-line PD-(L)1 based therapy singly or in combination with FDA-approved agents (TKIs or chemotherapy) (Cohorts B-1, B-2).",
+      "reasonFuzzy": "Cohort-specific prior therapy rules are complex and depend on treatment history tracks."
+    },
+    {
+      "id": "NCT07223424-solid-tumor",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced or advanced/metastatic solid tumor for which nivolumab OR pembrolizumab is on-label.",
+      "reasonFuzzy": "Disease status is broad across multiple solid tumors without a numbered stage list."
+    },
+    {
+      "id": "NCT07223424-cohorts",
+      "polarity": "inclusion",
+      "sourceText": "Cohort-specific criteria. Cohort A-1: Patients who are treatment-naive... Cohort B-1: Patients who are already receiving treatment with nivolumab... Cohort A-2: Patients who are treatment-naive... Cohort B-2: Patients who are already receiving treatment with pembrolizumab...",
+      "reasonFuzzy": "Cohort-based assignment rules are complex and multi-branched."
+    },
+    {
+      "id": "NCT07223424-allergy",
+      "polarity": "exclusion",
+      "sourceText": "Participant unable to receive nivolumab (or pembrolizumab) due to prior allergic reactions to nivolumab (or pembrolizumab) or any of its ingredients.",
+      "reasonFuzzy": "Prior allergic reaction is not a standard typed laboratory or baseline exclusion kind."
+    },
+    {
+      "id": "NCT07223424-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Has severe hypersensitivity (≥Grade 3) to nivolumab (or pembrolizumab) and/or any of its excipients.",
+      "reasonFuzzy": "Severe drug hypersensitivity is not a typed exclusion kind."
+    },
+    {
+      "id": "NCT07223424-transplant",
+      "polarity": "exclusion",
+      "sourceText": "Has had an allogenic tissue/solid organ transplant.",
+      "reasonFuzzy": "History of organ transplant is not a standard typed exclusion kind."
+    },
+    {
+      "id": "NCT07223424-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 0,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 0,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 0,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 3733
+  },
+  "runB": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 3805
+  },
+  "ms": 15518,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07223424",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07223424-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07223424-consent",
+        "polarity": "inclusion",
+        "sourceText": "Able to understand and willing to sign a written informed consent document.",
+        "reasonFuzzy": "Willingness to sign consent is a subjective judgment."
+      },
+      {
+        "id": "NCT07223424-english",
+        "polarity": "inclusion",
+        "sourceText": "Able to read and write in English.",
+        "reasonFuzzy": "Language proficiency is not a typed check."
+      },
+      {
+        "id": "NCT07223424-soc",
+        "polarity": "inclusion",
+        "sourceText": "Must be eligible to receive nivolumab (Cohorts A-1, B-1) or pembrolizumab (Cohorts A-2, B-2) singly or in combination with other FDA-approved agents (TKIs or chemotherapy) according to standard of care practices, as determined by the clinical judgment of the investigator.",
+        "reasonFuzzy": "Investigator judgment of standard of care eligibility is subjective."
+      },
+      {
+        "id": "NCT07223424-prior",
+        "polarity": "inclusion",
+        "sourceText": "Patients should either be ICI-naïve (Cohorts A-1, A-2) or be currently receiving adjuvant or front-line PD-(L)1 based therapy singly or in combination with FDA-approved agents (TKIs or chemotherapy) (Cohorts B-1, B-2).",
+        "reasonFuzzy": "Complex prior-therapy criteria varying across cohorts cannot be represented as a single typed check."
+      },
+      {
+        "id": "NCT07223424-stage",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced or advanced/metastatic solid tumor for which nivolumab OR pembrolizumab is on-label.",
+        "reasonFuzzy": "Refers to broad advanced solid tumors with on-label indications rather than a specific numeric NSCLC stage list."
+      },
+      {
+        "id": "NCT07223424-cohorts",
+        "polarity": "inclusion",
+        "sourceText": "Cohort-specific criteria. Cohort A-1: Patients who are treatment-naive... Cohort B-1... Cohort A-2... Cohort B-2...",
+        "reasonFuzzy": "Multi-cohort nuanced enrollment rules are too complex for a single typed condition."
+      },
+      {
+        "id": "NCT07223424-allergy",
+        "polarity": "exclusion",
+        "sourceText": "Participant unable to receive nivolumab (or pembrolizumab) due to prior allergic reactions to nivolumab (or pembrolizumab) or any of its ingredients.",
+        "reasonFuzzy": "Allergy or hypersensitivity exclusions are generally fuzzy unless mapped to a specific typed exclusion."
+      },
+      {
+        "id": "NCT07223424-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Has severe hypersensitivity (≥Grade 3) to nivolumab (or pembrolizumab) and/or any of its excipients.",
+        "reasonFuzzy": "Hypersensitivity grade to specific agents is a subjective toxicity assessment."
+      },
+      {
+        "id": "NCT07223424-transplant",
+        "polarity": "exclusion",
+        "sourceText": "Has had an allogenic tissue/solid organ transplant.",
+        "reasonFuzzy": "Organ transplant exclusion is not covered by the allowed typed kinds."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07223424",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07223424-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07223424-consent",
+        "polarity": "inclusion",
+        "sourceText": "Able to understand and willing to sign a written informed consent document.",
+        "reasonFuzzy": "Willingness to sign consent is a subjective compliance item."
+      },
+      {
+        "id": "NCT07223424-english",
+        "polarity": "inclusion",
+        "sourceText": "Able to read and write in English.",
+        "reasonFuzzy": "Language fluency is not a typed clinical check."
+      },
+      {
+        "id": "NCT07223424-soc",
+        "polarity": "inclusion",
+        "sourceText": "Must be eligible to receive nivolumab (Cohorts A-1, B-1) or pembrolizumab (Cohorts A-2, B-2) singly or in combination with other FDA-approved agents (TKIs or chemotherapy) according to standard of care practices, as determined by the clinical judgment of the investigator.",
+        "reasonFuzzy": "Investigator judgment of standard of care eligibility is a subjective evaluation."
+      },
+      {
+        "id": "NCT07223424-prior",
+        "polarity": "inclusion",
+        "sourceText": "Patients should either be ICI-naïve (Cohorts A-1, A-2) or be currently receiving adjuvant or front-line PD-(L)1 based therapy singly or in combination with FDA-approved agents (TKIs or chemotherapy) (Cohorts B-1, B-2).",
+        "reasonFuzzy": "Cohort-specific prior therapy rules are complex and depend on treatment history tracks."
+      },
+      {
+        "id": "NCT07223424-solid-tumor",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced or advanced/metastatic solid tumor for which nivolumab OR pembrolizumab is on-label.",
+        "reasonFuzzy": "Disease status is broad across multiple solid tumors without a numbered stage list."
+      },
+      {
+        "id": "NCT07223424-cohorts",
+        "polarity": "inclusion",
+        "sourceText": "Cohort-specific criteria. Cohort A-1: Patients who are treatment-naive... Cohort B-1: Patients who are already receiving treatment with nivolumab... Cohort A-2: Patients who are treatment-naive... Cohort B-2: Patients who are already receiving treatment with pembrolizumab...",
+        "reasonFuzzy": "Cohort-based assignment rules are complex and multi-branched."
+      },
+      {
+        "id": "NCT07223424-allergy",
+        "polarity": "exclusion",
+        "sourceText": "Participant unable to receive nivolumab (or pembrolizumab) due to prior allergic reactions to nivolumab (or pembrolizumab) or any of its ingredients.",
+        "reasonFuzzy": "Prior allergic reaction is not a standard typed laboratory or baseline exclusion kind."
+      },
+      {
+        "id": "NCT07223424-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Has severe hypersensitivity (≥Grade 3) to nivolumab (or pembrolizumab) and/or any of its excipients.",
+        "reasonFuzzy": "Severe drug hypersensitivity is not a typed exclusion kind."
+      },
+      {
+        "id": "NCT07223424-transplant",
+        "polarity": "exclusion",
+        "sourceText": "Has had an allogenic tissue/solid organ transplant.",
+        "reasonFuzzy": "History of organ transplant is not a standard typed exclusion kind."
+      }
+    ]
+  }
+}

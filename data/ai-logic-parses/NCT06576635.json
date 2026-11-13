@@ -1,0 +1,278 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06576635",
+  "briefTitle": "LUNG-05: Investigating Chemotherapy Effectiveness for Non-Small Cell Lung Cancer (NSCLC) Metastatic Patients",
+  "parsedAt": "2026-11-12T10:08:23.010Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06576635-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years of age at time of consent",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years of age at time of consent",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06576635-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Advanced non-small cell lung cancer to meet histologically confirmed Stage IV NSCLC documented by biopsy.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "stringValue": "Stage III NSCLC who have received at least 1 line of systemic therapy may be considered eligible, pending principal investigator approval.",
+      "evidence_quote": "Advanced non-small cell lung cancer to meet histologically confirmed Stage IV NSCLC documented by biopsy.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06576635-prior",
+      "kind": "prior_lines_min",
+      "polarity": "inclusion",
+      "sourceText": "Patients have received at least 1 prior line of systemic therapy for Stage IV NSCLC, including but not limited to targeted therapy, and are currently candidates for 2L or later SOC chemotherapy.",
+      "numberValue": 1,
+      "evidence_quote": "Patients have received at least 1 prior line of systemic therapy for Stage IV NSCLC, including but not limited to targeted therapy, and are currently candidates for 2L or later SOC chemotherapy.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06576635-organ",
+      "polarity": "inclusion",
+      "sourceText": "Demonstrates adequate organ function; labs must be within treatment parameters for the individual institutional treatment plans for specific therapeutic agents.",
+      "reasonFuzzy": "Lab values depend on individual institutional treatment plans rather than fixed study cutoffs."
+    },
+    {
+      "id": "NCT06576635-life",
+      "polarity": "exclusion",
+      "sourceText": "Life expectancy <12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06576635-stage-exception",
+      "polarity": "inclusion",
+      "sourceText": "Exceptionally, patients with Stage III NSCLC who have received at least 1 line of systemic therapy may be considered eligible, pending principal investigator approval.",
+      "reasonFuzzy": "Stage III eligibility is subject to investigator approval and depends on prior line history."
+    },
+    {
+      "id": "NCT06576635-organ",
+      "polarity": "inclusion",
+      "sourceText": "Demonstrates adequate organ function; labs must be within treatment parameters for the individual institutional treatment plans for specific therapeutic agents.",
+      "reasonFuzzy": "Lab cutoffs depend on individual institutional plans for specific therapeutic agents rather than a fixed study-wide threshold."
+    },
+    {
+      "id": "NCT06576635-washout",
+      "polarity": "inclusion",
+      "sourceText": "Must have not received any cancer treatment for at least 2 weeks.",
+      "reasonFuzzy": "Washout window is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT06576635-smallmolecule",
+      "polarity": "inclusion",
+      "sourceText": "Must be a candidate for small molecule drug treatment.",
+      "reasonFuzzy": "Candidate for small molecule drug treatment is an investigator judgment."
+    },
+    {
+      "id": "NCT06576635-lifeexpectancy",
+      "polarity": "exclusion",
+      "sourceText": "Life expectancy <12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06576635-ecog-excl",
+      "polarity": "exclusion",
+      "sourceText": "ECOG performance status score >2",
+      "reasonFuzzy": "Redundant with inclusion ECOG max criteria."
+    },
+    {
+      "id": "NCT06576635-ecog",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status score of ≤2",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:2"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2170
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2768
+  },
+  "ms": 12931,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06576635",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06576635-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years of age at time of consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06576635-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status score of ≤2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06576635-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Advanced non-small cell lung cancer to meet histologically confirmed Stage IV NSCLC documented by biopsy.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ],
+        "stringValue": "Stage III NSCLC who have received at least 1 line of systemic therapy may be considered eligible, pending principal investigator approval."
+      },
+      {
+        "id": "NCT06576635-prior",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients have received at least 1 prior line of systemic therapy for Stage IV NSCLC, including but not limited to targeted therapy, and are currently candidates for 2L or later SOC chemotherapy.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06576635-organ",
+        "polarity": "inclusion",
+        "sourceText": "Demonstrates adequate organ function; labs must be within treatment parameters for the individual institutional treatment plans for specific therapeutic agents.",
+        "reasonFuzzy": "Lab values depend on individual institutional treatment plans rather than fixed study cutoffs."
+      },
+      {
+        "id": "NCT06576635-life",
+        "polarity": "exclusion",
+        "sourceText": "Life expectancy <12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06576635",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06576635-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years of age at time of consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06576635-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status score of ≤2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06576635-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Advanced non-small cell lung cancer to meet histologically confirmed Stage IV NSCLC documented by biopsy.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ],
+        "stringValue": "Stage III NSCLC who have received at least 1 line of systemic therapy may be considered eligible"
+      },
+      {
+        "id": "NCT06576635-priorlines",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients have received at least 1 prior line of systemic therapy for Stage IV NSCLC, including but not limited to targeted therapy, and are currently candidates for 2L or later SOC chemotherapy.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06576635-stage-exception",
+        "polarity": "inclusion",
+        "sourceText": "Exceptionally, patients with Stage III NSCLC who have received at least 1 line of systemic therapy may be considered eligible, pending principal investigator approval.",
+        "reasonFuzzy": "Stage III eligibility is subject to investigator approval and depends on prior line history."
+      },
+      {
+        "id": "NCT06576635-organ",
+        "polarity": "inclusion",
+        "sourceText": "Demonstrates adequate organ function; labs must be within treatment parameters for the individual institutional treatment plans for specific therapeutic agents.",
+        "reasonFuzzy": "Lab cutoffs depend on individual institutional plans for specific therapeutic agents rather than a fixed study-wide threshold."
+      },
+      {
+        "id": "NCT06576635-washout",
+        "polarity": "inclusion",
+        "sourceText": "Must have not received any cancer treatment for at least 2 weeks.",
+        "reasonFuzzy": "Washout window is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT06576635-smallmolecule",
+        "polarity": "inclusion",
+        "sourceText": "Must be a candidate for small molecule drug treatment.",
+        "reasonFuzzy": "Candidate for small molecule drug treatment is an investigator judgment."
+      },
+      {
+        "id": "NCT06576635-lifeexpectancy",
+        "polarity": "exclusion",
+        "sourceText": "Life expectancy <12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06576635-ecog-excl",
+        "polarity": "exclusion",
+        "sourceText": "ECOG performance status score >2",
+        "reasonFuzzy": "Redundant with inclusion ECOG max criteria."
+      }
+    ]
+  }
+}

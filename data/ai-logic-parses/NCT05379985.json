@@ -1,0 +1,236 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05379985",
+  "briefTitle": "Study of RMC-6236 in Patients With Advanced Solid Tumors Harboring Specific Mutations in RAS",
+  "parsedAt": "2026-11-12T06:13:47.841Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05379985-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Have Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Have Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05379985-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "Age minimum of 18 years is given in the metadata but omitted from the textual criteria."
+    },
+    {
+      "id": "NCT05379985-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed advanced solid tumor",
+      "reasonFuzzy": "Advanced solid tumors include NSCLC but lack a numbered stage list for stage_in."
+    },
+    {
+      "id": "NCT05379985-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "Age minimum of 18 years is in the protocol summary metadata but not explicitly written in the provided eligibility criteria text block."
+    },
+    {
+      "id": "NCT05379985-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function",
+      "reasonFuzzy": "Adequate organ function is stated broadly without specific lab value cutoffs."
+    },
+    {
+      "id": "NCT05379985-cns",
+      "polarity": "exclusion",
+      "sourceText": "Primary central nervous system (CNS) tumors",
+      "reasonFuzzy": "Primary CNS tumors refer to tumor origin rather than brain metastases."
+    },
+    {
+      "id": "NCT05379985-gi",
+      "polarity": "exclusion",
+      "sourceText": "Known or suspected impairment of gastrointestinal function that may prohibit ability to swallow or absorb an oral medication",
+      "reasonFuzzy": "Subjective assessment of gastrointestinal absorption function."
+    },
+    {
+      "id": "NCT05379985-medical",
+      "polarity": "exclusion",
+      "sourceText": "History of any other unstable or clinically significant concurrent medical condition that would, in the opinion of the investigator, jeopardize the safety of a participant, impact their expected survival through the end of the study participation, and/or impact their ability to comply with the protocol prior/concomitant therapy",
+      "reasonFuzzy": "Investigator discretion and life expectancy judgments."
+    },
+    {
+      "id": "NCT05379985-kras",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed advanced solid tumor with specific KRAS G12 mutations (dose escalation) or RAS mutations (dose optimization/expansion) identified through deoxyribonucleic acid (DNA) sequencing. PDAC with wild-type RAS (expansion).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05379985-brain",
+      "polarity": "exclusion",
+      "sourceText": "Active, untreated brain metastases",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2166
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3829
+  },
+  "ms": 13991,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05379985",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05379985-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed advanced solid tumor with specific KRAS G12 mutations (dose escalation) or RAS mutations (dose optimization/expansion) identified through deoxyribonucleic acid (DNA) sequencing. PDAC with wild-type RAS (expansion).",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05379985-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05379985-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active, untreated brain metastases",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05379985-age",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "reasonFuzzy": "Age minimum of 18 years is given in the metadata but omitted from the textual criteria."
+      },
+      {
+        "id": "NCT05379985-stage",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed advanced solid tumor",
+        "reasonFuzzy": "Advanced solid tumors include NSCLC but lack a numbered stage list for stage_in."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05379985",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05379985-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed advanced solid tumor with specific KRAS G12 mutations (dose escalation) or RAS mutations (dose optimization/expansion) identified through deoxyribonucleic acid (DNA) sequencing. PDAC with wild-type RAS (expansion).",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05379985-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05379985-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active, untreated brain metastases",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05379985-age",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "reasonFuzzy": "Age minimum of 18 years is in the protocol summary metadata but not explicitly written in the provided eligibility criteria text block."
+      },
+      {
+        "id": "NCT05379985-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function",
+        "reasonFuzzy": "Adequate organ function is stated broadly without specific lab value cutoffs."
+      },
+      {
+        "id": "NCT05379985-cns",
+        "polarity": "exclusion",
+        "sourceText": "Primary central nervous system (CNS) tumors",
+        "reasonFuzzy": "Primary CNS tumors refer to tumor origin rather than brain metastases."
+      },
+      {
+        "id": "NCT05379985-gi",
+        "polarity": "exclusion",
+        "sourceText": "Known or suspected impairment of gastrointestinal function that may prohibit ability to swallow or absorb an oral medication",
+        "reasonFuzzy": "Subjective assessment of gastrointestinal absorption function."
+      },
+      {
+        "id": "NCT05379985-medical",
+        "polarity": "exclusion",
+        "sourceText": "History of any other unstable or clinically significant concurrent medical condition that would, in the opinion of the investigator, jeopardize the safety of a participant, impact their expected survival through the end of the study participation, and/or impact their ability to comply with the protocol prior/concomitant therapy",
+        "reasonFuzzy": "Investigator discretion and life expectancy judgments."
+      }
+    ]
+  }
+}

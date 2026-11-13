@@ -1,0 +1,297 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06073431",
+  "briefTitle": "LOTUS-CC: An Observational Research Study to Uncover Subtypes of Cancer Cachexia",
+  "parsedAt": "2026-11-12T06:24:11.143Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06073431-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Have a primary diagnosis of unresectable or stage IV 1) non-small cell lung cancer (NSCLC), 2) pancreatic adenocarcinoma, or 3) colorectal cancer",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Have a primary diagnosis of unresectable or stage IV 1) non-small cell lung cancer (NSCLC), 2) pancreatic adenocarcinoma, or 3) colorectal cancer",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06073431-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0, 1 or 2",
+      "numberValue": 2,
+      "evidence_quote": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0, 1 or 2",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06073431-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Be 18 years of age or older",
+      "numberValue": 18,
+      "evidence_quote": "Be 18 years of age or older",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06073431-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Plan to start first-line systemic anti-cancer therapy (chemotherapy, immunotherapy, targeted therapy, interventional clinical trial) in the next 6 weeks or has started first-line systemic therapy in the previous 6 weeks.",
+      "reasonFuzzy": "Prior and concurrent therapy windows and maintenance exclusions are complex and cannot be expressed as a simple typed check."
+    },
+    {
+      "id": "NCT06073431-language",
+      "polarity": "inclusion",
+      "sourceText": "Be able to understand, speak and read English",
+      "reasonFuzzy": "Language ability is not a standard typed clinical trial eligibility criterion."
+    },
+    {
+      "id": "NCT06073431-assessments",
+      "polarity": "exclusion",
+      "sourceText": "Have contraindications to physical function assessments (30-second arm curl, Timed-Up-And-Go test, or 30-second chair-stand test) per the treating provider or their designee",
+      "reasonFuzzy": "Contraindications to physical function assessments depend on investigator judgment."
+    },
+    {
+      "id": "NCT06073431-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Have any planned major surgeries within the next 3 months",
+      "reasonFuzzy": "Planned major surgery is a subjective future event exclusion."
+    },
+    {
+      "id": "NCT06073431-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Have received chemotherapy or surgery for separate primary cancer within the past 3 years other than early local staged non-melanoma skin cancer",
+      "reasonFuzzy": "Prior separate primary cancer history is a complex clinical history rule not covered by simple typed checks."
+    },
+    {
+      "id": "NCT06073431-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Be pregnant",
+      "reasonFuzzy": "Pregnancy is not represented by an allowed typed kind."
+    },
+    {
+      "id": "NCT06073431-prior",
+      "polarity": "inclusion",
+      "sourceText": "Plan to start first-line systemic anti-cancer therapy (chemotherapy, immunotherapy, targeted therapy, interventional clinical trial) in the next 6 weeks or has started first-line systemic therapy in the previous 6 weeks.",
+      "reasonFuzzy": "Prior therapy timing and treatment lines involve complex timing and maintenance rules that cannot be expressed as a simple typed check."
+    },
+    {
+      "id": "NCT06073431-language",
+      "polarity": "inclusion",
+      "sourceText": "Be able to understand, speak and read English",
+      "reasonFuzzy": "Language fluency is not a typed clinical check."
+    },
+    {
+      "id": "NCT06073431-assessments",
+      "polarity": "exclusion",
+      "sourceText": "Have contraindications to physical function assessments (30-second arm curl, Timed-Up-And-Go test, or 30-second chair-stand test) per the treating provider or their designee",
+      "reasonFuzzy": "Contraindications to physical assessments are investigator and provider judgments."
+    },
+    {
+      "id": "NCT06073431-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Have any planned major surgeries within the next 3 months",
+      "reasonFuzzy": "Planned surgeries are prospective clinical events and not a typed medical history or laboratory condition."
+    },
+    {
+      "id": "NCT06073431-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Have received chemotherapy or surgery for separate primary cancer within the past 3 years other than early local staged non-melanoma skin cancer",
+      "reasonFuzzy": "Prior separate primary cancer history with multiple time windows and exceptions is not a simple typed prior therapy check."
+    },
+    {
+      "id": "NCT06073431-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Be pregnant",
+      "reasonFuzzy": "Pregnancy is not in the allowed kinds list."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2728
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2763
+  },
+  "ms": 13478,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06073431",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06073431-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Have a primary diagnosis of unresectable or stage IV 1) non-small cell lung cancer (NSCLC), 2) pancreatic adenocarcinoma, or 3) colorectal cancer",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06073431-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0, 1 or 2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06073431-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Be 18 years of age or older",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06073431-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Plan to start first-line systemic anti-cancer therapy (chemotherapy, immunotherapy, targeted therapy, interventional clinical trial) in the next 6 weeks or has started first-line systemic therapy in the previous 6 weeks.",
+        "reasonFuzzy": "Prior and concurrent therapy windows and maintenance exclusions are complex and cannot be expressed as a simple typed check."
+      },
+      {
+        "id": "NCT06073431-language",
+        "polarity": "inclusion",
+        "sourceText": "Be able to understand, speak and read English",
+        "reasonFuzzy": "Language ability is not a standard typed clinical trial eligibility criterion."
+      },
+      {
+        "id": "NCT06073431-assessments",
+        "polarity": "exclusion",
+        "sourceText": "Have contraindications to physical function assessments (30-second arm curl, Timed-Up-And-Go test, or 30-second chair-stand test) per the treating provider or their designee",
+        "reasonFuzzy": "Contraindications to physical function assessments depend on investigator judgment."
+      },
+      {
+        "id": "NCT06073431-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Have any planned major surgeries within the next 3 months",
+        "reasonFuzzy": "Planned major surgery is a subjective future event exclusion."
+      },
+      {
+        "id": "NCT06073431-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Have received chemotherapy or surgery for separate primary cancer within the past 3 years other than early local staged non-melanoma skin cancer",
+        "reasonFuzzy": "Prior separate primary cancer history is a complex clinical history rule not covered by simple typed checks."
+      },
+      {
+        "id": "NCT06073431-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Be pregnant",
+        "reasonFuzzy": "Pregnancy is not represented by an allowed typed kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06073431",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06073431-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Have a primary diagnosis of unresectable or stage IV 1) non-small cell lung cancer (NSCLC), 2) pancreatic adenocarcinoma, or 3) colorectal cancer",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06073431-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0, 1 or 2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06073431-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Be 18 years of age or older",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06073431-prior",
+        "polarity": "inclusion",
+        "sourceText": "Plan to start first-line systemic anti-cancer therapy (chemotherapy, immunotherapy, targeted therapy, interventional clinical trial) in the next 6 weeks or has started first-line systemic therapy in the previous 6 weeks.",
+        "reasonFuzzy": "Prior therapy timing and treatment lines involve complex timing and maintenance rules that cannot be expressed as a simple typed check."
+      },
+      {
+        "id": "NCT06073431-language",
+        "polarity": "inclusion",
+        "sourceText": "Be able to understand, speak and read English",
+        "reasonFuzzy": "Language fluency is not a typed clinical check."
+      },
+      {
+        "id": "NCT06073431-assessments",
+        "polarity": "exclusion",
+        "sourceText": "Have contraindications to physical function assessments (30-second arm curl, Timed-Up-And-Go test, or 30-second chair-stand test) per the treating provider or their designee",
+        "reasonFuzzy": "Contraindications to physical assessments are investigator and provider judgments."
+      },
+      {
+        "id": "NCT06073431-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Have any planned major surgeries within the next 3 months",
+        "reasonFuzzy": "Planned surgeries are prospective clinical events and not a typed medical history or laboratory condition."
+      },
+      {
+        "id": "NCT06073431-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Have received chemotherapy or surgery for separate primary cancer within the past 3 years other than early local staged non-melanoma skin cancer",
+        "reasonFuzzy": "Prior separate primary cancer history with multiple time windows and exceptions is not a simple typed prior therapy check."
+      },
+      {
+        "id": "NCT06073431-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Be pregnant",
+        "reasonFuzzy": "Pregnancy is not in the allowed kinds list."
+      }
+    ]
+  }
+}

@@ -1,0 +1,639 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04614103",
+  "briefTitle": "Autologous LN-145 in Patients With Metastatic Non-Small-Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:43:44.839Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04614103-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "stringValue": "",
+      "evidence_quote": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04614103-egfr",
+      "kind": "egfr_status",
+      "polarity": "inclusion",
+      "sourceText": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+      "presence": "absent",
+      "stages": [],
+      "stringValue": "",
+      "evidence_quote": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04614103-alk",
+      "kind": "alk_status",
+      "polarity": "inclusion",
+      "sourceText": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+      "presence": "absent",
+      "stages": [],
+      "stringValue": "",
+      "evidence_quote": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04614103-ros1",
+      "kind": "ros1_status",
+      "polarity": "inclusion",
+      "sourceText": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+      "presence": "absent",
+      "stages": [],
+      "stringValue": "",
+      "evidence_quote": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04614103-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status of 0 or 1",
+      "numberValue": 1,
+      "stages": [],
+      "stringValue": "",
+      "evidence_quote": "ECOG performance status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04614103-targeted",
+      "polarity": "inclusion",
+      "sourceText": "For patients who have actionable mutations (other than EGFR, ALK, or ROS1 genomic alterations), 1 additional line of therapy with the appropriate health authority approved targeted therapy is required.",
+      "reasonFuzzy": "Condition-dependent prior therapy requirement for non-specified actionable mutations cannot be modeled with a single typed prior therapy check."
+    },
+    {
+      "id": "NCT04614103-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have documented radiographic disease progression on or after the first-line therapy, including concurrent or sequential ICI and platinum-based chemotherapy ± bevacizumab. No more than 1 prior line is allowed if ICI and platinum-based chemotherapy were administered concurrently and no more than 2 prior lines are allowed for sequential administration of platinum-based chemotherapy and ICI as 2 separate lines.",
+      "reasonFuzzy": "Prior lines criteria depend on concurrent versus sequential administration pathways, which cannot be expressed as a single prior lines limit."
+    },
+    {
+      "id": "NCT04614103-manufacture",
+      "polarity": "inclusion",
+      "sourceText": "LN-145 manufacture is allowed for patients who have residual resectable disease after completion of the platinum-based chemotherapy component of the front-line ICI and platinum-based chemotherapy combination and meet all eligibility criteria except documented disease progression. These patients must intend to receive TIL therapy after disease progression",
+      "reasonFuzzy": "Complex conditional pathway for early tissue manufacture before disease progression is subjective and protocol-specific."
+    },
+    {
+      "id": "NCT04614103-adjuvant-counting",
+      "polarity": "inclusion",
+      "sourceText": "Prior systemic therapy in the adjuvant or neoadjuvant setting, or as part of definitive chemoradiotherapy, will count as a line of therapy if the patient had disease progression during or within 12 months after the completion of such therapy.",
+      "reasonFuzzy": "Rules for counting adjuvant or neoadjuvant therapies toward prior line totals are conditional on progression timing."
+    },
+    {
+      "id": "NCT04614103-resectable-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least 1 resectable lesion for TIL production and at least one remaining measurable lesion, as defined by RECIST v1.1",
+      "reasonFuzzy": "Requires resectable lesion for TIL production and measurable disease per RECIST, which is an imaging and surgical judgment."
+    },
+    {
+      "id": "NCT04614103-organ-pulmonary",
+      "polarity": "inclusion",
+      "sourceText": "Have adequate organ function / Have adequate pulmonary function",
+      "reasonFuzzy": "General statements of adequate organ and pulmonary function without specific numerical laboratory or functional thresholds."
+    },
+    {
+      "id": "NCT04614103-lvef",
+      "polarity": "inclusion",
+      "sourceText": "LVEF > 45%, NYHA Class 1",
+      "reasonFuzzy": "Includes a cardiac ejection fraction cutoff combined with NYHA heart failure class, which requires clinical judgment."
+    },
+    {
+      "id": "NCT04614103-birth-control",
+      "polarity": "inclusion",
+      "sourceText": "Patients of childbearing potential or those with partners of childbearing potential must be willing to practice an approved method of highly effective birth control during treatment and up to 12 months after all protocol-related therapy",
+      "reasonFuzzy": "Contraception compliance and childbearing potential are behavioral and subjective criteria."
+    },
+    {
+      "id": "NCT04614103-brain-mets",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have symptomatic, untreated brain metastases.",
+      "reasonFuzzy": "Wording combines symptomatic and untreated features, which is not a simple categorical brain_mets rule."
+    },
+    {
+      "id": "NCT04614103-transplant-cell",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have had allogeneic organ transplant or prior cell therapy within the past 20 years",
+      "reasonFuzzy": "Complex exclusion regarding history of allogeneic transplant or cell therapy over a 20-year window."
+    },
+    {
+      "id": "NCT04614103-immunodeficiency",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have any form of primary immunodeficiency",
+      "reasonFuzzy": "Clinical judgment regarding primary immunodeficiency history."
+    },
+    {
+      "id": "NCT04614103-steroid",
+      "polarity": "exclusion",
+      "sourceText": "Patients who are on systemic steroid therapy ≥ 10 mg/day of prednisone or equivalent.",
+      "reasonFuzzy": "Steroid exclusion with daily dose cutoff and equivalents is not a standard typed drug or lab check."
+    },
+    {
+      "id": "NCT04614103-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have received a live or attenuated vaccination within 28 days prior to the start of treatment",
+      "reasonFuzzy": "Washout window for live or attenuated vaccination."
+    },
+    {
+      "id": "NCT04614103-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have had another primary malignancy within the previous 3 years",
+      "reasonFuzzy": "Prior malignancy history with a multi-year lookback window."
+    },
+    {
+      "id": "NCT04614103-trial-part",
+      "polarity": "exclusion",
+      "sourceText": "Participation in another interventional clinical study within 21 days",
+      "reasonFuzzy": "Concurrent or recent interventional study participation washout window."
+    },
+    {
+      "id": "NCT04614103-age-max",
+      "polarity": "inclusion",
+      "sourceText": "maximumAge: 70 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04614103-targeted",
+      "polarity": "inclusion",
+      "sourceText": "For patients who have actionable mutations (other than EGFR, ALK, or ROS1 genomic alterations), 1 additional line of therapy with the appropriate health authority approved targeted therapy is required.",
+      "reasonFuzzy": "Condition-dependent prior therapy requirement is too complex for a single typed prior_therapy_required check."
+    },
+    {
+      "id": "NCT04614103-lines",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have documented radiographic disease progression on or after the first-line therapy, including concurrent or sequential ICI and platinum-based chemotherapy ± bevacizumab. No more than 1 prior line is allowed if ICI and platinum-based chemotherapy were administered concurrently and no more than 2 prior lines are allowed for sequential administration of platinum-based chemotherapy and ICI as 2 separate lines.",
+      "reasonFuzzy": "Prior lines limits depend on concurrent versus sequential administration and cannot be expressed as a single typed prior_lines limit."
+    },
+    {
+      "id": "NCT04614103-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least 1 resectable lesion for TIL production and at least one remaining measurable lesion, as defined by RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04614103-organ",
+      "polarity": "inclusion",
+      "sourceText": "Have adequate organ function",
+      "reasonFuzzy": "Adequate organ function without specific numeric cutoffs is subjective."
+    },
+    {
+      "id": "NCT04614103-lvef",
+      "polarity": "inclusion",
+      "sourceText": "LVEF > 45%, NYHA Class 1",
+      "reasonFuzzy": "Includes NYHA Class 1 functional assessment alongside LVEF."
+    },
+    {
+      "id": "NCT04614103-pulmonary",
+      "polarity": "inclusion",
+      "sourceText": "Have adequate pulmonary function",
+      "reasonFuzzy": "Adequate pulmonary function without specific lab cutoffs is subjective."
+    },
+    {
+      "id": "NCT04614103-steroid",
+      "polarity": "exclusion",
+      "sourceText": "Patients who are on systemic steroid therapy ≥ 10 mg/day of prednisone or equivalent.",
+      "reasonFuzzy": "Dose threshold with prednisone equivalents is not a standard typed cutoff kind."
+    },
+    {
+      "id": "NCT04614103-egfr-excl",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have EGFR, ALK or ROS1 driver mutations",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT04614103-alk-excl",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have EGFR, ALK or ROS1 driver mutations",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT04614103-ros1-excl",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have EGFR, ALK or ROS1 driver mutations",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT04614103-age-max",
+      "polarity": "inclusion",
+      "sourceText": "Patients who are over 70 years of age may be allowed to enroll after discussion with the Medical Monitor.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT04614103-brain",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have symptomatic, untreated brain metastases.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT04614103-age-min",
+      "polarity": "inclusion",
+      "sourceText": "Patients who are over 70 years of age may be allowed to enroll after discussion with the Medical Monitor.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 9,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "maximumAge: 70 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 8,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 6,
+      "disagreements": 5,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "a-only",
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "a-only",
+          "kind": "ros1_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "b-only",
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "value": "n:70"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:untreated"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 5,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:18"
+        }
+      ],
+      "normalizerTypedCount": 6
+    }
+  },
+  "runA": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 15,
+    "attempts": 1,
+    "ms": 6058
+  },
+  "runB": {
+    "typedEmitted": 8,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 6854
+  },
+  "ms": 20831,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04614103",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04614103-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients who are over 70 years of age may be allowed to enroll after discussion with the Medical Monitor.",
+        "numberValue": 18,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT04614103-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "maximumAge: 70 Years",
+        "numberValue": 70,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT04614103-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT04614103-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+        "presence": "absent",
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT04614103-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+        "presence": "absent",
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT04614103-ros1",
+        "kind": "ros1_status",
+        "polarity": "inclusion",
+        "sourceText": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+        "presence": "absent",
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT04614103-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0 or 1",
+        "numberValue": 1,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT04614103-egfr-excl",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have EGFR, ALK or ROS1 driver mutations",
+        "presence": "present",
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT04614103-alk-excl",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have EGFR, ALK or ROS1 driver mutations",
+        "presence": "present",
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT04614103-ros1-excl",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have EGFR, ALK or ROS1 driver mutations",
+        "presence": "present",
+        "stages": [],
+        "stringValue": ""
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04614103-targeted",
+        "polarity": "inclusion",
+        "sourceText": "For patients who have actionable mutations (other than EGFR, ALK, or ROS1 genomic alterations), 1 additional line of therapy with the appropriate health authority approved targeted therapy is required.",
+        "reasonFuzzy": "Condition-dependent prior therapy requirement for non-specified actionable mutations cannot be modeled with a single typed prior therapy check."
+      },
+      {
+        "id": "NCT04614103-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have documented radiographic disease progression on or after the first-line therapy, including concurrent or sequential ICI and platinum-based chemotherapy ± bevacizumab. No more than 1 prior line is allowed if ICI and platinum-based chemotherapy were administered concurrently and no more than 2 prior lines are allowed for sequential administration of platinum-based chemotherapy and ICI as 2 separate lines.",
+        "reasonFuzzy": "Prior lines criteria depend on concurrent versus sequential administration pathways, which cannot be expressed as a single prior lines limit."
+      },
+      {
+        "id": "NCT04614103-manufacture",
+        "polarity": "inclusion",
+        "sourceText": "LN-145 manufacture is allowed for patients who have residual resectable disease after completion of the platinum-based chemotherapy component of the front-line ICI and platinum-based chemotherapy combination and meet all eligibility criteria except documented disease progression. These patients must intend to receive TIL therapy after disease progression",
+        "reasonFuzzy": "Complex conditional pathway for early tissue manufacture before disease progression is subjective and protocol-specific."
+      },
+      {
+        "id": "NCT04614103-adjuvant-counting",
+        "polarity": "inclusion",
+        "sourceText": "Prior systemic therapy in the adjuvant or neoadjuvant setting, or as part of definitive chemoradiotherapy, will count as a line of therapy if the patient had disease progression during or within 12 months after the completion of such therapy.",
+        "reasonFuzzy": "Rules for counting adjuvant or neoadjuvant therapies toward prior line totals are conditional on progression timing."
+      },
+      {
+        "id": "NCT04614103-resectable-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least 1 resectable lesion for TIL production and at least one remaining measurable lesion, as defined by RECIST v1.1",
+        "reasonFuzzy": "Requires resectable lesion for TIL production and measurable disease per RECIST, which is an imaging and surgical judgment."
+      },
+      {
+        "id": "NCT04614103-organ-pulmonary",
+        "polarity": "inclusion",
+        "sourceText": "Have adequate organ function / Have adequate pulmonary function",
+        "reasonFuzzy": "General statements of adequate organ and pulmonary function without specific numerical laboratory or functional thresholds."
+      },
+      {
+        "id": "NCT04614103-lvef",
+        "polarity": "inclusion",
+        "sourceText": "LVEF > 45%, NYHA Class 1",
+        "reasonFuzzy": "Includes a cardiac ejection fraction cutoff combined with NYHA heart failure class, which requires clinical judgment."
+      },
+      {
+        "id": "NCT04614103-birth-control",
+        "polarity": "inclusion",
+        "sourceText": "Patients of childbearing potential or those with partners of childbearing potential must be willing to practice an approved method of highly effective birth control during treatment and up to 12 months after all protocol-related therapy",
+        "reasonFuzzy": "Contraception compliance and childbearing potential are behavioral and subjective criteria."
+      },
+      {
+        "id": "NCT04614103-brain-mets",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have symptomatic, untreated brain metastases.",
+        "reasonFuzzy": "Wording combines symptomatic and untreated features, which is not a simple categorical brain_mets rule."
+      },
+      {
+        "id": "NCT04614103-transplant-cell",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have had allogeneic organ transplant or prior cell therapy within the past 20 years",
+        "reasonFuzzy": "Complex exclusion regarding history of allogeneic transplant or cell therapy over a 20-year window."
+      },
+      {
+        "id": "NCT04614103-immunodeficiency",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have any form of primary immunodeficiency",
+        "reasonFuzzy": "Clinical judgment regarding primary immunodeficiency history."
+      },
+      {
+        "id": "NCT04614103-steroid",
+        "polarity": "exclusion",
+        "sourceText": "Patients who are on systemic steroid therapy ≥ 10 mg/day of prednisone or equivalent.",
+        "reasonFuzzy": "Steroid exclusion with daily dose cutoff and equivalents is not a standard typed drug or lab check."
+      },
+      {
+        "id": "NCT04614103-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have received a live or attenuated vaccination within 28 days prior to the start of treatment",
+        "reasonFuzzy": "Washout window for live or attenuated vaccination."
+      },
+      {
+        "id": "NCT04614103-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have had another primary malignancy within the previous 3 years",
+        "reasonFuzzy": "Prior malignancy history with a multi-year lookback window."
+      },
+      {
+        "id": "NCT04614103-trial-part",
+        "polarity": "exclusion",
+        "sourceText": "Participation in another interventional clinical study within 21 days",
+        "reasonFuzzy": "Concurrent or recent interventional study participation washout window."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04614103",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04614103-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients who are over 70 years of age may be allowed to enroll after discussion with the Medical Monitor.",
+        "numberValue": 18,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT04614103-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "Patients who are over 70 years of age may be allowed to enroll after discussion with the Medical Monitor.",
+        "numberValue": 70,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT04614103-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Have historically or pathologically confirmed diagnosis of metastatic Stage IV NSCLC without EGFR, ALK, or ROS1 genomic alterations.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT04614103-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have EGFR, ALK or ROS1 driver mutations",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04614103-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have EGFR, ALK or ROS1 driver mutations",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04614103-ros1",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have EGFR, ALK or ROS1 driver mutations",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04614103-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04614103-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have symptomatic, untreated brain metastases.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04614103-targeted",
+        "polarity": "inclusion",
+        "sourceText": "For patients who have actionable mutations (other than EGFR, ALK, or ROS1 genomic alterations), 1 additional line of therapy with the appropriate health authority approved targeted therapy is required.",
+        "reasonFuzzy": "Condition-dependent prior therapy requirement is too complex for a single typed prior_therapy_required check."
+      },
+      {
+        "id": "NCT04614103-lines",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have documented radiographic disease progression on or after the first-line therapy, including concurrent or sequential ICI and platinum-based chemotherapy ± bevacizumab. No more than 1 prior line is allowed if ICI and platinum-based chemotherapy were administered concurrently and no more than 2 prior lines are allowed for sequential administration of platinum-based chemotherapy and ICI as 2 separate lines.",
+        "reasonFuzzy": "Prior lines limits depend on concurrent versus sequential administration and cannot be expressed as a single typed prior_lines limit."
+      },
+      {
+        "id": "NCT04614103-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least 1 resectable lesion for TIL production and at least one remaining measurable lesion, as defined by RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT04614103-organ",
+        "polarity": "inclusion",
+        "sourceText": "Have adequate organ function",
+        "reasonFuzzy": "Adequate organ function without specific numeric cutoffs is subjective."
+      },
+      {
+        "id": "NCT04614103-lvef",
+        "polarity": "inclusion",
+        "sourceText": "LVEF > 45%, NYHA Class 1",
+        "reasonFuzzy": "Includes NYHA Class 1 functional assessment alongside LVEF."
+      },
+      {
+        "id": "NCT04614103-pulmonary",
+        "polarity": "inclusion",
+        "sourceText": "Have adequate pulmonary function",
+        "reasonFuzzy": "Adequate pulmonary function without specific lab cutoffs is subjective."
+      },
+      {
+        "id": "NCT04614103-steroid",
+        "polarity": "exclusion",
+        "sourceText": "Patients who are on systemic steroid therapy ≥ 10 mg/day of prednisone or equivalent.",
+        "reasonFuzzy": "Dose threshold with prednisone equivalents is not a standard typed cutoff kind."
+      }
+    ]
+  }
+}

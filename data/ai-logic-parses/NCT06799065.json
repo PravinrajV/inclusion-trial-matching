@@ -1,0 +1,319 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06799065",
+  "briefTitle": "First-in-Human Study of ATX-295, an Oral Inhibitor of KIF18A, as Monotherapy and in Combination With Anticancer Therapy in Patients With Advanced or Metastatic Solid Tumors, Including Ovarian Cancer",
+  "parsedAt": "2026-11-12T10:37:04.619Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06799065-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1",
+      "numberValue": 1,
+      "evidence_quote": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06799065-stage",
+      "polarity": "inclusion",
+      "sourceText": "locally recurrent or metastatic disease",
+      "reasonFuzzy": "Locally recurrent or metastatic disease indicates advanced stage but does not specify a numbered stage list for stage_in."
+    },
+    {
+      "id": "NCT06799065-refractory",
+      "polarity": "inclusion",
+      "sourceText": "Refractory to or relapsed after all standard therapies with proven clinical benefit, unless as deemed by the Investigator, the subject is not a candidate for standard treatment, there is no standard treatment, or the subject refuses standard treatment",
+      "reasonFuzzy": "Refractory status and investigator discretion regarding standard treatment is not a simple typed prior therapy count or name."
+    },
+    {
+      "id": "NCT06799065-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease; evaluable disease is acceptable during dose escalation",
+      "reasonFuzzy": "Measurable disease by RECIST or protocol definition is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06799065-brain",
+      "polarity": "exclusion",
+      "sourceText": "Clinically unstable central nervous system (CNS) tumors or brain metastasis",
+      "reasonFuzzy": "Clinically unstable CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT06799065-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Has undergone a major surgery within 3 weeks of starting study treatment",
+      "reasonFuzzy": "Washout window for major surgery is not a lab cutoff."
+    },
+    {
+      "id": "NCT06799065-stage",
+      "polarity": "inclusion",
+      "sourceText": "Patients with histologically confirmed solid tumors who have locally recurrent or metastatic disease, including HGSOC",
+      "reasonFuzzy": "Locally recurrent or metastatic disease is mentioned, but a specific numbered stage list is not given, so stage_in is omitted."
+    },
+    {
+      "id": "NCT06799065-refractory",
+      "polarity": "inclusion",
+      "sourceText": "Refractory to or relapsed after all standard therapies with proven clinical benefit, unless as deemed by the Investigator, the subject is not a candidate for standard treatment...",
+      "reasonFuzzy": "Prior therapy status depends on investigator discretion regarding standard treatment candidacy and exceptions."
+    },
+    {
+      "id": "NCT06799065-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease; evaluable disease is acceptable during dose escalation",
+      "reasonFuzzy": "Measurable disease is a subjective imaging judgment and varies by dose escalation phase."
+    },
+    {
+      "id": "NCT06799065-brain",
+      "polarity": "exclusion",
+      "sourceText": "Clinically unstable central nervous system (CNS) tumors or brain metastasis",
+      "reasonFuzzy": "Clinically unstable CNS disease is subjective and not a simple typed brain_mets rule."
+    },
+    {
+      "id": "NCT06799065-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06799065-age",
+      "polarity": "inclusion",
+      "sourceText": "Patients with histologically confirmed solid tumors who have locally recurrent or metastatic disease",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06799065-sqnsclc-platinum",
+      "polarity": "inclusion",
+      "sourceText": "Participants with sqNSCLC should have received prior treatment with a platinum, taxane, and checkpoint inhibitor",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06799065-sqnsclc-taxane",
+      "polarity": "inclusion",
+      "sourceText": "Participants with sqNSCLC should have received prior treatment with a platinum, taxane, and checkpoint inhibitor",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06799065-sqnsclc-checkpoint",
+      "polarity": "inclusion",
+      "sourceText": "Participants with sqNSCLC should have received prior treatment with a platinum, taxane, and checkpoint inhibitor",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:18"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:platinum"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:taxane"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:checkpoint inhibitor"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 2908
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 3019
+  },
+  "ms": 13914,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06799065",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06799065-sqnsclc-platinum",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Participants with sqNSCLC should have received prior treatment with a platinum, taxane, and checkpoint inhibitor",
+        "stringValue": "platinum"
+      },
+      {
+        "id": "NCT06799065-sqnsclc-taxane",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Participants with sqNSCLC should have received prior treatment with a platinum, taxane, and checkpoint inhibitor",
+        "stringValue": "taxane"
+      },
+      {
+        "id": "NCT06799065-sqnsclc-checkpoint",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Participants with sqNSCLC should have received prior treatment with a platinum, taxane, and checkpoint inhibitor",
+        "stringValue": "checkpoint inhibitor"
+      },
+      {
+        "id": "NCT06799065-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06799065-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients with histologically confirmed solid tumors who have locally recurrent or metastatic disease",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06799065-stage",
+        "polarity": "inclusion",
+        "sourceText": "locally recurrent or metastatic disease",
+        "reasonFuzzy": "Locally recurrent or metastatic disease indicates advanced stage but does not specify a numbered stage list for stage_in."
+      },
+      {
+        "id": "NCT06799065-refractory",
+        "polarity": "inclusion",
+        "sourceText": "Refractory to or relapsed after all standard therapies with proven clinical benefit, unless as deemed by the Investigator, the subject is not a candidate for standard treatment, there is no standard treatment, or the subject refuses standard treatment",
+        "reasonFuzzy": "Refractory status and investigator discretion regarding standard treatment is not a simple typed prior therapy count or name."
+      },
+      {
+        "id": "NCT06799065-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease; evaluable disease is acceptable during dose escalation",
+        "reasonFuzzy": "Measurable disease by RECIST or protocol definition is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06799065-brain",
+        "polarity": "exclusion",
+        "sourceText": "Clinically unstable central nervous system (CNS) tumors or brain metastasis",
+        "reasonFuzzy": "Clinically unstable CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      },
+      {
+        "id": "NCT06799065-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Has undergone a major surgery within 3 weeks of starting study treatment",
+        "reasonFuzzy": "Washout window for major surgery is not a lab cutoff."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06799065",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06799065-sqnsclc-platinum",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Participants with sqNSCLC should have received prior treatment with a platinum, taxane, and checkpoint inhibitor",
+        "stringValue": "platinum"
+      },
+      {
+        "id": "NCT06799065-sqnsclc-taxane",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Participants with sqNSCLC should have received prior treatment with a platinum, taxane, and checkpoint inhibitor",
+        "stringValue": "taxane"
+      },
+      {
+        "id": "NCT06799065-sqnsclc-checkpoint",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Participants with sqNSCLC should have received prior treatment with a platinum, taxane, and checkpoint inhibitor",
+        "stringValue": "checkpoint inhibitor"
+      },
+      {
+        "id": "NCT06799065-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06799065-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06799065-stage",
+        "polarity": "inclusion",
+        "sourceText": "Patients with histologically confirmed solid tumors who have locally recurrent or metastatic disease, including HGSOC",
+        "reasonFuzzy": "Locally recurrent or metastatic disease is mentioned, but a specific numbered stage list is not given, so stage_in is omitted."
+      },
+      {
+        "id": "NCT06799065-refractory",
+        "polarity": "inclusion",
+        "sourceText": "Refractory to or relapsed after all standard therapies with proven clinical benefit, unless as deemed by the Investigator, the subject is not a candidate for standard treatment...",
+        "reasonFuzzy": "Prior therapy status depends on investigator discretion regarding standard treatment candidacy and exceptions."
+      },
+      {
+        "id": "NCT06799065-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease; evaluable disease is acceptable during dose escalation",
+        "reasonFuzzy": "Measurable disease is a subjective imaging judgment and varies by dose escalation phase."
+      },
+      {
+        "id": "NCT06799065-brain",
+        "polarity": "exclusion",
+        "sourceText": "Clinically unstable central nervous system (CNS) tumors or brain metastasis",
+        "reasonFuzzy": "Clinically unstable CNS disease is subjective and not a simple typed brain_mets rule."
+      }
+    ]
+  }
+}

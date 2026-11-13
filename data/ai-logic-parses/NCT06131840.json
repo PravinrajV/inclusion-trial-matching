@@ -1,0 +1,262 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06131840",
+  "briefTitle": "A Study of SGN-CEACAM5C in Adults With Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T06:25:14.210Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06131840-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "An Eastern Cooperative Oncology Group (ECOG) Performance Status score of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "An Eastern Cooperative Oncology Group (ECOG) Performance Status score of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06131840-tumor-types",
+      "polarity": "inclusion",
+      "sourceText": "Participants in Part A must have one of the following tumor types: colorectal cancer (CRC); gastric carcinoma (GC) or gastroesophageal junction adenocarcinoma (GEJ); non-small cell lung cancer (NSCLC); or pancreatic ductal adenocarcinoma (PDAC).",
+      "reasonFuzzy": "Study enrolls multiple advanced solid tumors across parts with different specific prior treatment requirements."
+    },
+    {
+      "id": "NCT06131840-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Participants enrolled in the following study parts should have a tumor site that is accessible for biopsy(ies) and agree to biopsy(ies) and/or submission of archival tissue",
+      "reasonFuzzy": "Willingness to undergo a biopsy is a subjective clinical procedure requirement."
+    },
+    {
+      "id": "NCT06131840-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per Response Evaluation in Solid Tumors (RECIST) v1.1 at baseline.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06131840-tumor-types",
+      "polarity": "inclusion",
+      "sourceText": "Participants in Part A (dose escalation) and Part B (dose optimization) must have histologically- or cytologically-confirmed metastatic or unresectable solid tumor malignancy. Must have relapsed, refractory, or progressive disease, and should have no appropriate standard therapy available.",
+      "reasonFuzzy": "Tumor types and prior line requirements vary across different study parts (A, B, C, D, E) and cannot be captured as a single uniform criteria."
+    },
+    {
+      "id": "NCT06131840-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Participants enrolled in the following study parts should have a tumor site that is accessible for biopsy(ies) and agree to biopsy(ies) and/or submission of archival tissue",
+      "reasonFuzzy": "Willingness and accessibility for biopsy are judgment-based procedures."
+    },
+    {
+      "id": "NCT06131840-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per Response Evaluation in Solid Tumors (RECIST) v1.1 at baseline.",
+      "reasonFuzzy": "Measurable disease per RECIST v1.1 is a subjective imaging evaluation."
+    },
+    {
+      "id": "NCT06131840-brain",
+      "polarity": "exclusion",
+      "sourceText": "Active cerebral/meningeal disease related to the underlying malignancy. Participants with a history of cerebral/meningeal disease related to the underlying malignancy are allowed if prior central nervous system disease has been treated and the participant is clinically stable (defined as not having received steroid treatment for symptoms related to cerebral/meningeal disease for at least 2 weeks prior to enrollment and with no ongoing related AEs).",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06131840-brain",
+      "polarity": "inclusion",
+      "sourceText": "Active cerebral/meningeal disease related to the underlying malignancy. Participants with a history of cerebral/meningeal disease related to the underlying malignancy are allowed if prior central nervous system disease has been treated and the participant is clinically stable (defined as not having received steroid treatment for symptoms related to cerebral/meningeal disease for at least 2 weeks prior to enrollment and with no ongoing related AEs).",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06131840-ceacam5",
+      "polarity": "exclusion",
+      "sourceText": "Previous exposure to CEACAM5-targeted therapy.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06131840-topo1",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with a TOPO1-targeting ADC (CPT payload), such as Enhertu (trastuzumab deruxtecan) or Trodelvy (sacituzumab govitecan).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:ceacam5-targeted therapy"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:topo1-targeting adc"
+        }
+      ],
+      "normalizerTypedCount": 8
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2627
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3950
+  },
+  "ms": 14568,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06131840",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06131840-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "An Eastern Cooperative Oncology Group (ECOG) Performance Status score of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06131840-ceacam5",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Previous exposure to CEACAM5-targeted therapy.",
+        "stringValue": "CEACAM5-targeted therapy"
+      },
+      {
+        "id": "NCT06131840-topo1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a TOPO1-targeting ADC (CPT payload), such as Enhertu (trastuzumab deruxtecan) or Trodelvy (sacituzumab govitecan).",
+        "stringValue": "TOPO1-targeting ADC"
+      },
+      {
+        "id": "NCT06131840-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active cerebral/meningeal disease related to the underlying malignancy. Participants with a history of cerebral/meningeal disease related to the underlying malignancy are allowed if prior central nervous system disease has been treated and the participant is clinically stable (defined as not having received steroid treatment for symptoms related to cerebral/meningeal disease for at least 2 weeks prior to enrollment and with no ongoing related AEs).",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06131840-tumor-types",
+        "polarity": "inclusion",
+        "sourceText": "Participants in Part A must have one of the following tumor types: colorectal cancer (CRC); gastric carcinoma (GC) or gastroesophageal junction adenocarcinoma (GEJ); non-small cell lung cancer (NSCLC); or pancreatic ductal adenocarcinoma (PDAC).",
+        "reasonFuzzy": "Study enrolls multiple advanced solid tumors across parts with different specific prior treatment requirements."
+      },
+      {
+        "id": "NCT06131840-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Participants enrolled in the following study parts should have a tumor site that is accessible for biopsy(ies) and agree to biopsy(ies) and/or submission of archival tissue",
+        "reasonFuzzy": "Willingness to undergo a biopsy is a subjective clinical procedure requirement."
+      },
+      {
+        "id": "NCT06131840-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per Response Evaluation in Solid Tumors (RECIST) v1.1 at baseline.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06131840",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06131840-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "An Eastern Cooperative Oncology Group (ECOG) Performance Status score of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06131840-prior-ceacam5",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Previous exposure to CEACAM5-targeted therapy.",
+        "stringValue": "CEACAM5-targeted therapy"
+      },
+      {
+        "id": "NCT06131840-prior-topoisomerase",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a TOPO1-targeting ADC (CPT payload), such as Enhertu (trastuzumab deruxtecan) or Trodelvy (sacituzumab govitecan).",
+        "stringValue": "TOPO1-targeting ADC"
+      },
+      {
+        "id": "NCT06131840-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Active cerebral/meningeal disease related to the underlying malignancy. Participants with a history of cerebral/meningeal disease related to the underlying malignancy are allowed if prior central nervous system disease has been treated and the participant is clinically stable (defined as not having received steroid treatment for symptoms related to cerebral/meningeal disease for at least 2 weeks prior to enrollment and with no ongoing related AEs).",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06131840-tumor-types",
+        "polarity": "inclusion",
+        "sourceText": "Participants in Part A (dose escalation) and Part B (dose optimization) must have histologically- or cytologically-confirmed metastatic or unresectable solid tumor malignancy. Must have relapsed, refractory, or progressive disease, and should have no appropriate standard therapy available.",
+        "reasonFuzzy": "Tumor types and prior line requirements vary across different study parts (A, B, C, D, E) and cannot be captured as a single uniform criteria."
+      },
+      {
+        "id": "NCT06131840-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Participants enrolled in the following study parts should have a tumor site that is accessible for biopsy(ies) and agree to biopsy(ies) and/or submission of archival tissue",
+        "reasonFuzzy": "Willingness and accessibility for biopsy are judgment-based procedures."
+      },
+      {
+        "id": "NCT06131840-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per Response Evaluation in Solid Tumors (RECIST) v1.1 at baseline.",
+        "reasonFuzzy": "Measurable disease per RECIST v1.1 is a subjective imaging evaluation."
+      }
+    ]
+  }
+}

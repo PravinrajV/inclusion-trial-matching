@@ -1,0 +1,243 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04557449",
+  "briefTitle": "Study to Test the Safety and Tolerability of PF-07220060 in Participants With Advance Solid Tumors",
+  "parsedAt": "2026-11-12T06:05:30.723Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04557449-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status (PS) 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) Performance Status (PS) 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04557449-nsclc-indication",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC (Non-small Cell Lung Cancer)",
+      "reasonFuzzy": "The trial is a basket study for multiple advanced solid tumors including NSCLC, with specific criteria varying heavily by study part."
+    },
+    {
+      "id": "NCT04557449-prior-treatment",
+      "polarity": "inclusion",
+      "sourceText": "At least 1 line of SOC, including CD4/6 inhibitor therapy for advanced or metastatic disease, or if CDK4/6 inhibitors are not considered appropriate in the opinion of the investigator",
+      "reasonFuzzy": "Prior therapy and lines requirements differ completely depending on the specific study part and cancer type."
+    },
+    {
+      "id": "NCT04557449-organ-function",
+      "polarity": "inclusion",
+      "sourceText": "Adequate renal, liver, and bone marrow function",
+      "reasonFuzzy": "Organ function is qualitative without explicit numeric cutoff values in this section."
+    },
+    {
+      "id": "NCT04557449-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known active uncontrolled or symptomatic Central Nervous System (CNS) metastases carcinomatous meningitis, or leptomeningeal disease",
+      "reasonFuzzy": "Active, uncontrolled, and symptomatic CNS metastases are subjective modifiers and not a simple typed brain_mets rule."
+    },
+    {
+      "id": "NCT04557449-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Other active malignancy within 3 years prior to randomization, except for adequately treated basal cell or squamous cell skin cancer, or carcinoma in situ",
+      "reasonFuzzy": "Prior active malignancy exclusions are complex and not covered by typed criteria."
+    },
+    {
+      "id": "NCT04557449-washout",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery or radiation within 4 weeks prior to study intervention",
+      "reasonFuzzy": "Washout windows for surgery and radiation are not typed check kinds."
+    },
+    {
+      "id": "NCT04557449-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04557449-nsclc",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC (Non-small Cell Lung Cancer)",
+      "reasonFuzzy": "The trial admits multiple advanced solid tumors with cohort-specific rules rather than a single unified stage or histology list for NSCLC."
+    },
+    {
+      "id": "NCT04557449-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Tumors other than BC (Parts 1A/1D/1E/1F): tumor that is resistant to at least 2 lines of SOC for advanced or recurrent disease or for which no standard therapy is available",
+      "reasonFuzzy": "Prior-line and treatment requirements vary widely by study part and cohort."
+    },
+    {
+      "id": "NCT04557449-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known active uncontrolled or symptomatic Central Nervous System (CNS) metastases carcinomatous meningitis, or leptomeningeal disease",
+      "reasonFuzzy": "The wording covers active, uncontrolled, or symptomatic CNS disease, which is not a clean typed brain_mets status."
+    },
+    {
+      "id": "NCT04557449-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2717
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2181
+  },
+  "ms": 12880,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04557449",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04557449-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04557449-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status (PS) 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04557449-nsclc-indication",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC (Non-small Cell Lung Cancer)",
+        "reasonFuzzy": "The trial is a basket study for multiple advanced solid tumors including NSCLC, with specific criteria varying heavily by study part."
+      },
+      {
+        "id": "NCT04557449-prior-treatment",
+        "polarity": "inclusion",
+        "sourceText": "At least 1 line of SOC, including CD4/6 inhibitor therapy for advanced or metastatic disease, or if CDK4/6 inhibitors are not considered appropriate in the opinion of the investigator",
+        "reasonFuzzy": "Prior therapy and lines requirements differ completely depending on the specific study part and cancer type."
+      },
+      {
+        "id": "NCT04557449-organ-function",
+        "polarity": "inclusion",
+        "sourceText": "Adequate renal, liver, and bone marrow function",
+        "reasonFuzzy": "Organ function is qualitative without explicit numeric cutoff values in this section."
+      },
+      {
+        "id": "NCT04557449-brain",
+        "polarity": "exclusion",
+        "sourceText": "Known active uncontrolled or symptomatic Central Nervous System (CNS) metastases carcinomatous meningitis, or leptomeningeal disease",
+        "reasonFuzzy": "Active, uncontrolled, and symptomatic CNS metastases are subjective modifiers and not a simple typed brain_mets rule."
+      },
+      {
+        "id": "NCT04557449-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Other active malignancy within 3 years prior to randomization, except for adequately treated basal cell or squamous cell skin cancer, or carcinoma in situ",
+        "reasonFuzzy": "Prior active malignancy exclusions are complex and not covered by typed criteria."
+      },
+      {
+        "id": "NCT04557449-washout",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery or radiation within 4 weeks prior to study intervention",
+        "reasonFuzzy": "Washout windows for surgery and radiation are not typed check kinds."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04557449",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04557449-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04557449-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status (PS) 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04557449-nsclc",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC (Non-small Cell Lung Cancer)",
+        "reasonFuzzy": "The trial admits multiple advanced solid tumors with cohort-specific rules rather than a single unified stage or histology list for NSCLC."
+      },
+      {
+        "id": "NCT04557449-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Tumors other than BC (Parts 1A/1D/1E/1F): tumor that is resistant to at least 2 lines of SOC for advanced or recurrent disease or for which no standard therapy is available",
+        "reasonFuzzy": "Prior-line and treatment requirements vary widely by study part and cohort."
+      },
+      {
+        "id": "NCT04557449-brain",
+        "polarity": "exclusion",
+        "sourceText": "Known active uncontrolled or symptomatic Central Nervous System (CNS) metastases carcinomatous meningitis, or leptomeningeal disease",
+        "reasonFuzzy": "The wording covers active, uncontrolled, or symptomatic CNS disease, which is not a clean typed brain_mets status."
+      }
+    ]
+  }
+}

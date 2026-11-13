@@ -1,0 +1,408 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05283330",
+  "briefTitle": "Safety and Tolerability of ²¹²Pb-DOTAM-GRPR1 in Adult Subjects With Recurrent or Metastatic GRPR-expressing Tumors",
+  "parsedAt": "2026-11-12T06:12:14.261Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05283330-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Adult participants (age ≥ 18 years old) with any of the following advanced or metastatic solid tumors (documented history of histologically confirmed diagnosis):",
+      "numberValue": 18,
+      "evidence_quote": "Adult participants (age ≥ 18 years old) with any of the following advanced or metastatic solid tumors (documented history of histologically confirmed diagnosis):",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05283330-anc",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥1500/mm3 (≥1.5 x 109/L)",
+      "numberValue": 1500,
+      "evidence_quote": "Absolute neutrophil count (ANC) ≥1500/mm3 (≥1.5 x 109/L)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05283330-platelets",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets ≥100,000/mm3 (≥ 100 x 109/L)",
+      "numberValue": 100000,
+      "evidence_quote": "Platelets ≥100,000/mm3 (≥ 100 x 109/L)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05283330-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin (Hb) ≥9.0 g/dL",
+      "numberValue": 9,
+      "evidence_quote": "Hemoglobin (Hb) ≥9.0 g/dL",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05283330-egfr",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Adequate renal function defined by creatinine clearance (CLCR) ≥ 60 mL/min calculated as follows: CLCR = eGFR in ml/min/1.73 m2 calculated by the Modified Diet in Renal Disease (MDRD) x participant body surface area (BSA) in m2 ÷ 1.73",
+      "numberValue": 60,
+      "evidence_quote": "Adequate renal function defined by creatinine clearance (CLCR) ≥ 60 mL/min calculated as follows: CLCR = eGFR in ml/min/1.73 m2 calculated by the Modified Diet in Renal Disease (MDRD) x participant body surface area (BSA) in m2 ÷ 1.73",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05283330-lines",
+      "polarity": "inclusion",
+      "sourceText": "All participants must have progressed on at least 2 prior systemic therapies, except for recurrent GB",
+      "reasonFuzzy": "Prior-lines rule has exceptions for recurrent glioblastoma and cannot be represented as a single unconditional typed prior_lines_min check."
+    },
+    {
+      "id": "NCT05283330-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Presence of at least 1 measurable lesion per RECIST 1.1 as assessed by the Investigator (not applicable for GBM). At least 1 identified measurable lesion must show GRPR uptake in 203Pb-DOTAM-GRPR1 SPECT/CT (uptake greater than that of the background) as assessed by the Investigator.",
+      "reasonFuzzy": "Measurable disease by RECIST and nuclear medicine tracer uptake are subjective imaging assessments and not typed kinds."
+    },
+    {
+      "id": "NCT05283330-consent",
+      "polarity": "inclusion",
+      "sourceText": "Capable of giving signed informed consent",
+      "reasonFuzzy": "Informed consent capability is a subjective clinical evaluation, not a typed check."
+    },
+    {
+      "id": "NCT05283330-lines",
+      "polarity": "inclusion",
+      "sourceText": "All participants must have progressed on at least 2 prior systemic therapies, except for recurrent GB",
+      "reasonFuzzy": "Prior lines requirement has exceptions for specific cancer types, preventing a simple universal prior_lines_min check."
+    },
+    {
+      "id": "NCT05283330-mcrpc",
+      "polarity": "inclusion",
+      "sourceText": "For participants with mCRPC: Prior orchiectomy and/or ongoing androgen deprivation therapy and a castrate level of serum testosterone (<50 ng/dL or <1.7 nmol/L)",
+      "reasonFuzzy": "Subpopulation-specific rule with multiple hormonal and surgical alternatives."
+    },
+    {
+      "id": "NCT05283330-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Presence of at least 1 measurable lesion per RECIST 1.1 as assessed by the Investigator (not applicable for GBM). At least 1 identified measurable lesion must show GRPR uptake in 203Pb-DOTAM-GRPR1 SPECT/CT (uptake greater than that of the background) as assessed by the Investigator.",
+      "reasonFuzzy": "RECIST measurable disease and nuclear medicine uptake criteria are subjective imaging assessments."
+    },
+    {
+      "id": "NCT05283330-prostate-uptake",
+      "polarity": "inclusion",
+      "sourceText": "For participants with prostate cancer that do not have measurable soft tissue disease, 203Pb-DOTAM-GRPR1 uptake in bone lesions > uptake in background is acceptable for eligibility.",
+      "reasonFuzzy": "Alternative imaging uptake criteria for prostate cancer are subjective."
+    },
+    {
+      "id": "NCT05283330-contraception",
+      "polarity": "inclusion",
+      "sourceText": "For women of childbearing potential (WOCBP) and men with partners of childbearing potential: be willing to use highly effective methods of contraception or sexual abstinence, if part of participant's lifestyle, throughout the study and for 7 months for WOCBP, 4 months for men after the last [212Pb]Pb-DOTAM-GRPR1 administration or for 10 days following [203Pb]Pb-DOTAM-GRPR1 administration and participant is not proceeding to 212Pb-DOTAM-GRPR1 treatment, as outlined in protocol.",
+      "reasonFuzzy": "Contraception compliance and willingness to abstain are behavioral requirements."
+    },
+    {
+      "id": "NCT05283330-gbm-timing",
+      "polarity": "inclusion",
+      "sourceText": "Having first or second glioblastoma recurrence, after standard therapy that includes prior radiation therapy (RT) and at least 12 weeks from completion of RT prior to first administration of 212Pb-DOTAM-GRPR1. In case surgery has been performed for GBM recurrence, the surgery has to be completed at least 4 weeks prior to 212Pb-DOTAM-GRPR1 treatment start, with post-surgery recovery without any complications related to surgical procedure.",
+      "reasonFuzzy": "Complex disease-specific prior therapy timing and surgical recovery requirements for GBM."
+    },
+    {
+      "id": "NCT05283330-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) status 0-1. Participants with ECOG status of 2 may be approved on a case-by-case basis in discussion with the Sponsor.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05283330-ast",
+      "polarity": "inclusion",
+      "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤3x upper limit of normal (ULN) or ≤ 5 x ULN in the presence of liver metastases",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05283330-alt",
+      "polarity": "inclusion",
+      "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤3x upper limit of normal (ULN) or ≤ 5 x ULN in the presence of liver metastases",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05283330-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin: ≤1.5 x ULN, except if documented history of Gilbert's disease who are eligible if total bilirubin ≤ 3 x ULN",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 9,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 9,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 9,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 5,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        }
+      ],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 9,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 3347
+  },
+  "runB": {
+    "typedEmitted": 9,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 5139
+  },
+  "ms": 16475,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05283330",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05283330-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adult participants (age ≥ 18 years old) with any of the following advanced or metastatic solid tumors (documented history of histologically confirmed diagnosis)",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05283330-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) status 0-1. Participants with ECOG status of 2 may be approved on a case-by-case basis in discussion with the Sponsor.",
+        "exceptions": "Participants with ECOG status of 2 may be approved on a case-by-case basis in discussion with the Sponsor.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05283330-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥1500/mm3 (≥1.5 x 109/L)",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT05283330-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥100,000/mm3 (≥ 100 x 109/L)",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT05283330-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin (Hb) ≥9.0 g/dL",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT05283330-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤3x upper limit of normal (ULN) or ≤ 5 x ULN in the presence of liver metastases",
+        "exceptions": "≤ 5 x ULN in the presence of liver metastases",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT05283330-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤3x upper limit of normal (ULN) or ≤ 5 x ULN in the presence of liver metastases",
+        "exceptions": "≤ 5 x ULN in the presence of liver metastases",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT05283330-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin: ≤1.5 x ULN, except if documented history of Gilbert's disease who are eligible if total bilirubin ≤ 3 x ULN",
+        "exceptions": "except if documented history of Gilbert's disease who are eligible if total bilirubin ≤ 3 x ULN",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05283330-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Adequate renal function defined by creatinine clearance (CLCR) ≥ 60 mL/min calculated as follows: CLCR = eGFR in ml/min/1.73 m2 calculated by the Modified Diet in Renal Disease (MDRD) x participant body surface area (BSA) in m2 ÷ 1.73",
+        "numberValue": 60
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05283330-lines",
+        "polarity": "inclusion",
+        "sourceText": "All participants must have progressed on at least 2 prior systemic therapies, except for recurrent GB",
+        "reasonFuzzy": "Prior-lines rule has exceptions for recurrent glioblastoma and cannot be represented as a single unconditional typed prior_lines_min check."
+      },
+      {
+        "id": "NCT05283330-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Presence of at least 1 measurable lesion per RECIST 1.1 as assessed by the Investigator (not applicable for GBM). At least 1 identified measurable lesion must show GRPR uptake in 203Pb-DOTAM-GRPR1 SPECT/CT (uptake greater than that of the background) as assessed by the Investigator.",
+        "reasonFuzzy": "Measurable disease by RECIST and nuclear medicine tracer uptake are subjective imaging assessments and not typed kinds."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05283330",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05283330-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adult participants (age ≥ 18 years old) with any of the following advanced or metastatic solid tumors (documented history of histologically confirmed diagnosis):",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05283330-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥1500/mm3 (≥1.5 x 109/L)",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT05283330-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥100,000/mm3 (≥ 100 x 109/L)",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT05283330-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin (Hb) ≥9.0 g/dL",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT05283330-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤3x upper limit of normal (ULN) or ≤ 5 x ULN in the presence of liver metastases",
+        "numberValue": 3,
+        "stages": [],
+        "stringValue": "3x ULN or ≤ 5 x ULN in the presence of liver metastases"
+      },
+      {
+        "id": "NCT05283330-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤3x upper limit of normal (ULN) or ≤ 5 x ULN in the presence of liver metastases",
+        "numberValue": 3,
+        "stages": [],
+        "stringValue": "3x ULN or ≤ 5 x ULN in the presence of liver metastases"
+      },
+      {
+        "id": "NCT05283330-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin: ≤1.5 x ULN, except if documented history of Gilbert's disease who are eligible if total bilirubin ≤ 3 x ULN",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "≤1.5 x ULN, except if documented history of Gilbert's disease who are eligible if total bilirubin ≤ 3 x ULN"
+      },
+      {
+        "id": "NCT05283330-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Adequate renal function defined by creatinine clearance (CLCR) ≥ 60 mL/min calculated as follows: CLCR = eGFR in ml/min/1.73 m2 calculated by the Modified Diet in Renal Disease (MDRD) x participant body surface area (BSA) in m2 ÷ 1.73",
+        "numberValue": 60
+      },
+      {
+        "id": "NCT05283330-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) status 0-1. Participants with ECOG status of 2 may be approved on a case-by-case basis in discussion with the Sponsor.",
+        "numberValue": 1,
+        "stages": [],
+        "stringValue": "0-1"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05283330-consent",
+        "polarity": "inclusion",
+        "sourceText": "Capable of giving signed informed consent",
+        "reasonFuzzy": "Informed consent capability is a subjective clinical evaluation, not a typed check."
+      },
+      {
+        "id": "NCT05283330-lines",
+        "polarity": "inclusion",
+        "sourceText": "All participants must have progressed on at least 2 prior systemic therapies, except for recurrent GB",
+        "reasonFuzzy": "Prior lines requirement has exceptions for specific cancer types, preventing a simple universal prior_lines_min check."
+      },
+      {
+        "id": "NCT05283330-mcrpc",
+        "polarity": "inclusion",
+        "sourceText": "For participants with mCRPC: Prior orchiectomy and/or ongoing androgen deprivation therapy and a castrate level of serum testosterone (<50 ng/dL or <1.7 nmol/L)",
+        "reasonFuzzy": "Subpopulation-specific rule with multiple hormonal and surgical alternatives."
+      },
+      {
+        "id": "NCT05283330-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Presence of at least 1 measurable lesion per RECIST 1.1 as assessed by the Investigator (not applicable for GBM). At least 1 identified measurable lesion must show GRPR uptake in 203Pb-DOTAM-GRPR1 SPECT/CT (uptake greater than that of the background) as assessed by the Investigator.",
+        "reasonFuzzy": "RECIST measurable disease and nuclear medicine uptake criteria are subjective imaging assessments."
+      },
+      {
+        "id": "NCT05283330-prostate-uptake",
+        "polarity": "inclusion",
+        "sourceText": "For participants with prostate cancer that do not have measurable soft tissue disease, 203Pb-DOTAM-GRPR1 uptake in bone lesions > uptake in background is acceptable for eligibility.",
+        "reasonFuzzy": "Alternative imaging uptake criteria for prostate cancer are subjective."
+      },
+      {
+        "id": "NCT05283330-contraception",
+        "polarity": "inclusion",
+        "sourceText": "For women of childbearing potential (WOCBP) and men with partners of childbearing potential: be willing to use highly effective methods of contraception or sexual abstinence, if part of participant's lifestyle, throughout the study and for 7 months for WOCBP, 4 months for men after the last [212Pb]Pb-DOTAM-GRPR1 administration or for 10 days following [203Pb]Pb-DOTAM-GRPR1 administration and participant is not proceeding to 212Pb-DOTAM-GRPR1 treatment, as outlined in protocol.",
+        "reasonFuzzy": "Contraception compliance and willingness to abstain are behavioral requirements."
+      },
+      {
+        "id": "NCT05283330-gbm-timing",
+        "polarity": "inclusion",
+        "sourceText": "Having first or second glioblastoma recurrence, after standard therapy that includes prior radiation therapy (RT) and at least 12 weeks from completion of RT prior to first administration of 212Pb-DOTAM-GRPR1. In case surgery has been performed for GBM recurrence, the surgery has to be completed at least 4 weeks prior to 212Pb-DOTAM-GRPR1 treatment start, with post-surgery recovery without any complications related to surgical procedure.",
+        "reasonFuzzy": "Complex disease-specific prior therapy timing and surgical recovery requirements for GBM."
+      }
+    ]
+  }
+}

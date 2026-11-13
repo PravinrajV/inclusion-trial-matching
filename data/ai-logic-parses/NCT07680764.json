@@ -1,0 +1,360 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07680764",
+  "briefTitle": "A Study To Assess the Safety, Tolerability, and Efficacy of Imzokitug in Combination With Pumitamig and Platinum-Doublet Chemotherapy (PDCT) Versus Pumitamig and PDCT as First-line Treatment for Participants With Locally Advanced or Metastatic Non-Small Cell Lung Cancer (NSCLC)",
+  "parsedAt": "2026-11-12T11:59:37.334Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07680764-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have histologically confirmed diagnosis of stage IV non-small cell lung cancer (NSCLC) (squamous or non-squamous) or recurrent unresectable disease per the American joint committee on cancer (AJCC) Staging System 9th edition.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Participants must have histologically confirmed diagnosis of stage IV non-small cell lung cancer (NSCLC) (squamous or non-squamous) or recurrent unresectable disease per the American joint committee on cancer (AJCC) Staging System 9th edition.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07680764-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have an Eastern Cooperative Oncology Group Performance Status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Participants must have an Eastern Cooperative Oncology Group Performance Status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07680764-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.",
+      "reasonFuzzy": "Prior therapy status is described generally rather than matching a single typed prior_therapy_required or prior_therapy_excluded rule."
+    },
+    {
+      "id": "NCT07680764-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Tumor tissue (fresh or archival) obtained within 5 months of enrollment (signing of informed consent) for each participant must be submitted by the site.",
+      "reasonFuzzy": "Willingness or requirement to submit a tissue specimen is a procedural item, not a typed check."
+    },
+    {
+      "id": "NCT07680764-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07680764-aga",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have any documented actionable genomic alterations (AGAs) for which first line approved targeted therapies are indicated.",
+      "reasonFuzzy": "Actionable genomic alterations as a broad category cannot be represented as a single specific biomarker check."
+    },
+    {
+      "id": "NCT07680764-io",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have prior treatment with immuno-oncology therapies.",
+      "reasonFuzzy": "Immuno-oncology therapies is a broad class rather than a specific drug or class string."
+    },
+    {
+      "id": "NCT07680764-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07680764-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Tumor tissue (fresh or archival) obtained within 5 months of enrollment (signing of informed consent) for each participant must be submitted by the site.",
+      "reasonFuzzy": "Willingness or requirement to undergo/submit a biopsy is a procedure-based requirement, not a typed biomarker or clinical cutoff."
+    },
+    {
+      "id": "NCT07680764-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07680764-aga",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have any documented actionable genomic alterations (AGAs) for which first line approved targeted therapies are indicated.",
+      "reasonFuzzy": "Actionable genomic alterations broadly defined without specific single-gene biomarkers cannot be mapped to a single typed status check."
+    },
+    {
+      "id": "NCT07680764-histology",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have histologically confirmed diagnosis of stage IV non-small cell lung cancer (NSCLC) (squamous or non-squamous) or recurrent unresectable disease per the American joint committee on cancer (AJCC) Staging System 9th edition.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07680764-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07680764-age",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have an Eastern Cooperative Oncology Group Performance Status of 0 or 1.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07680764-immuno-exclusions",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have prior treatment with immuno-oncology therapies.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07680764-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have untreated central nervous system (CNS) metastases.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 7,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 4,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos,squamous"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "value": "n:0"
+        },
+        {
+          "side": "b-only",
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:18"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:immuno-oncology therapies"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 6351
+  },
+  "runB": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 4344
+  },
+  "ms": 18676,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07680764",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07680764-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically confirmed diagnosis of stage IV non-small cell lung cancer (NSCLC) (squamous or non-squamous) or recurrent unresectable disease per the American joint committee on cancer (AJCC) Staging System 9th edition.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07680764-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07680764-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group Performance Status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07680764-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have untreated central nervous system (CNS) metastases.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07680764-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.",
+        "reasonFuzzy": "Prior therapy status is described generally rather than matching a single typed prior_therapy_required or prior_therapy_excluded rule."
+      },
+      {
+        "id": "NCT07680764-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Tumor tissue (fresh or archival) obtained within 5 months of enrollment (signing of informed consent) for each participant must be submitted by the site.",
+        "reasonFuzzy": "Willingness or requirement to submit a tissue specimen is a procedural item, not a typed check."
+      },
+      {
+        "id": "NCT07680764-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07680764-aga",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have any documented actionable genomic alterations (AGAs) for which first line approved targeted therapies are indicated.",
+        "reasonFuzzy": "Actionable genomic alterations as a broad category cannot be represented as a single specific biomarker check."
+      },
+      {
+        "id": "NCT07680764-io",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have prior treatment with immuno-oncology therapies.",
+        "reasonFuzzy": "Immuno-oncology therapies is a broad class rather than a specific drug or class string."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07680764",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07680764-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically confirmed diagnosis of stage IV non-small cell lung cancer (NSCLC) (squamous or non-squamous) or recurrent unresectable disease per the American joint committee on cancer (AJCC) Staging System 9th edition.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07680764-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically confirmed diagnosis of stage IV non-small cell lung cancer (NSCLC) (squamous or non-squamous) or recurrent unresectable disease per the American joint committee on cancer (AJCC) Staging System 9th edition.",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07680764-prior-lines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.",
+        "numberValue": 0
+      },
+      {
+        "id": "NCT07680764-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group Performance Status of 0 or 1.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07680764-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group Performance Status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07680764-immuno-exclusions",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have prior treatment with immuno-oncology therapies.",
+        "stringValue": "immuno-oncology therapies"
+      },
+      {
+        "id": "NCT07680764-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have untreated central nervous system (CNS) metastases.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07680764-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Tumor tissue (fresh or archival) obtained within 5 months of enrollment (signing of informed consent) for each participant must be submitted by the site.",
+        "reasonFuzzy": "Willingness or requirement to undergo/submit a biopsy is a procedure-based requirement, not a typed biomarker or clinical cutoff."
+      },
+      {
+        "id": "NCT07680764-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07680764-aga",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have any documented actionable genomic alterations (AGAs) for which first line approved targeted therapies are indicated.",
+        "reasonFuzzy": "Actionable genomic alterations broadly defined without specific single-gene biomarkers cannot be mapped to a single typed status check."
+      }
+    ]
+  }
+}

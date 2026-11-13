@@ -1,0 +1,323 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06452277",
+  "briefTitle": "A Study to Learn More About How Well Sevabertinib Works and How Safe it is Compared With Standard Treatment, in Participants Who Have Advanced Non-small Cell Lung Cancer (NSCLC) With Mutations of the Human Epidermal Growth Factor Receptor 2 (HER2)",
+  "parsedAt": "2026-11-12T09:22:53.449Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06452277-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Participant must be ≥18 years of age or over the legal age of consent in countries where that is greater than 18 years at the time of signing the informed consent.",
+      "numberValue": 18,
+      "evidence_quote": "Participant must be ≥18 years of age or over the legal age of consent in countries where that is greater than 18 years at the time of signing the informed consent.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06452277-prior-lines",
+      "kind": "prior_lines_max",
+      "polarity": "inclusion",
+      "sourceText": "No prior systemic therapy for locally advanced or metastatic disease.",
+      "numberValue": 0,
+      "evidence_quote": "No prior systemic therapy for locally advanced or metastatic disease.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06452277-her2",
+      "polarity": "inclusion",
+      "sourceText": "Documented activating HER2 mutation in the tyrosine kinase domain (TKD) assessed by tissue molecular test",
+      "reasonFuzzy": "There is no typed kind for HER2 variants."
+    },
+    {
+      "id": "NCT06452277-prior-her2",
+      "polarity": "exclusion",
+      "sourceText": "No prior treatment with a HER2 ex20ins-targeted therapy (e.g. poziotinib, trastuzumab deruxtecan).",
+      "reasonFuzzy": "Prior therapy exclusion specifies a class of HER2 ex20ins-targeted therapies with specific examples, which does not match a single allowed string value format."
+    },
+    {
+      "id": "NCT06452277-her2",
+      "polarity": "inclusion",
+      "sourceText": "Documented activating HER2 mutation in the tyrosine kinase domain (TKD) assessed by tissue molecular test in a CLIA-certified (US sites) or an equally accredited (outside of the US) local laboratory. However, participants may be included at the discretion of the investigator if the laboratory performing the assay is not CLIA or similar certified but the laboratory is locally accredited.",
+      "reasonFuzzy": "There is no typed kind for HER2 mutations."
+    },
+    {
+      "id": "NCT06452277-priorher2",
+      "polarity": "exclusion",
+      "sourceText": "No prior treatment with a HER2 ex20ins-targeted therapy (e.g. poziotinib, trastuzumab deruxtecan).",
+      "reasonFuzzy": "Prior therapy exclusion specifies HER2 ex20ins-targeted therapies, which does not match a standard single drug prior_therapy_excluded kind cleanly."
+    },
+    {
+      "id": "NCT06452277-platinum",
+      "polarity": "inclusion",
+      "sourceText": "Eligible to receive treatment with the selected platinum-based doublet-chemotherapy (i.e. cisplatin/pemetrexed or carboplatin/pemetrexed) and pembrolizumab in accordance with the SmPC/Product Information.",
+      "reasonFuzzy": "Eligibility for specific doublet chemotherapy and pembrolizumab is a clinical judgment check."
+    },
+    {
+      "id": "NCT06452277-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Known history of prior malignancy except if the participant has undergone potentially curative therapy with no evidence of that disease recurrence for five years since initiation of that therapy. Exception: the following cancer types are acceptable within five years if curatively treated or under surveillance: a. in situ cancers of cervix, breast, or skin, b. superficial bladder cancer (Ta, Tis and T1), c. limited-stage prostate cancer, d. basal or squamous cancers of the skin.",
+      "reasonFuzzy": "Complex prior malignancy rule with multiple specific exceptions."
+    },
+    {
+      "id": "NCT06452277-targetable",
+      "polarity": "exclusion",
+      "sourceText": "Tumors with targetable alterations with approved available therapy, with the exception of HER2 mutation in the TKD.",
+      "reasonFuzzy": "Targetable alterations exclusion is broad and open-ended."
+    },
+    {
+      "id": "NCT06452277-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Inability to discontinue treatment with chronic systemic corticosteroids. Participants who require intermittent use of bronchodilators, inhaled steroids, or local steroid injections would not be excluded from the study. Replacement therapy (e.g., physiologic corticosteroid replacement therapy for adrenal or pituitary insufficiency) is acceptable, provided that the dose is stable for >4 weeks prior to planned start of study intervention.",
+      "reasonFuzzy": "Chronic corticosteroid management and stability rules are too complex for a typed check."
+    },
+    {
+      "id": "NCT06452277-neuropathy",
+      "polarity": "exclusion",
+      "sourceText": "Pre-existing peripheral neuropathy that is Grade ≥2 by CTCAE (v5.0).",
+      "reasonFuzzy": "Peripheral neuropathy grade is an investigator-assessed toxicity, not a typed lab or status check."
+    },
+    {
+      "id": "NCT06452277-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "History of severe hypersensitivity reaction to treatment with a monoclonal antibody.",
+      "reasonFuzzy": "Subjective history of hypersensitivity reaction."
+    },
+    {
+      "id": "NCT06452277-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Prior radiotherapy outside of the brain within 21 days before of planned start of study intervention. Participants must have recovered from all radiation-related toxicities and not require corticosteroids.",
+      "reasonFuzzy": "Prior radiotherapy washout and recovery window combined with exception rules."
+    },
+    {
+      "id": "NCT06452277-stage",
+      "polarity": "inclusion",
+      "sourceText": "Documented histologically or cytologically confirmed locally advanced non-squamous NSCLC, not suitable for definitive therapy or metastatic non-squamous NSCLC at screening (small cell or mixed histologies are excluded) (Stage III-IV NSCLC).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06452277-histology",
+      "polarity": "inclusion",
+      "sourceText": "Documented histologically or cytologically confirmed locally advanced non-squamous NSCLC, not suitable for definitive therapy or metastatic non-squamous NSCLC at screening (small cell or mixed histologies are excluded) (Stage III-IV NSCLC).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIIA,IIIB,IIIC,IV,IVA,IVB"
+        },
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2574
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 4470
+  },
+  "ms": 15038,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06452277",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06452277-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant must be ≥18 years of age or over the legal age of consent in countries where that is greater than 18 years at the time of signing the informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06452277-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Documented histologically or cytologically confirmed locally advanced non-squamous NSCLC, not suitable for definitive therapy or metastatic non-squamous NSCLC at screening (small cell or mixed histologies are excluded) (Stage III-IV NSCLC).",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06452277-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Documented histologically or cytologically confirmed locally advanced non-squamous NSCLC",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06452277-prior-lines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "No prior systemic therapy for locally advanced or metastatic disease.",
+        "numberValue": 0
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06452277-her2",
+        "polarity": "inclusion",
+        "sourceText": "Documented activating HER2 mutation in the tyrosine kinase domain (TKD) assessed by tissue molecular test",
+        "reasonFuzzy": "There is no typed kind for HER2 variants."
+      },
+      {
+        "id": "NCT06452277-prior-her2",
+        "polarity": "exclusion",
+        "sourceText": "No prior treatment with a HER2 ex20ins-targeted therapy (e.g. poziotinib, trastuzumab deruxtecan).",
+        "reasonFuzzy": "Prior therapy exclusion specifies a class of HER2 ex20ins-targeted therapies with specific examples, which does not match a single allowed string value format."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06452277",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06452277-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant must be ≥18 years of age or over the legal age of consent in countries where that is greater than 18 years at the time of signing the informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06452277-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Documented histologically or cytologically confirmed locally advanced non-squamous NSCLC, not suitable for definitive therapy or metastatic non-squamous NSCLC at screening (small cell or mixed histologies are excluded) (Stage III-IV NSCLC).",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06452277-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Documented histologically or cytologically confirmed locally advanced non-squamous NSCLC, not suitable for definitive therapy or metastatic non-squamous NSCLC at screening (small cell or mixed histologies are excluded) (Stage III-IV NSCLC).",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06452277-priorlines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "No prior systemic therapy for locally advanced or metastatic disease.",
+        "numberValue": 0
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06452277-her2",
+        "polarity": "inclusion",
+        "sourceText": "Documented activating HER2 mutation in the tyrosine kinase domain (TKD) assessed by tissue molecular test in a CLIA-certified (US sites) or an equally accredited (outside of the US) local laboratory. However, participants may be included at the discretion of the investigator if the laboratory performing the assay is not CLIA or similar certified but the laboratory is locally accredited.",
+        "reasonFuzzy": "There is no typed kind for HER2 mutations."
+      },
+      {
+        "id": "NCT06452277-priorher2",
+        "polarity": "exclusion",
+        "sourceText": "No prior treatment with a HER2 ex20ins-targeted therapy (e.g. poziotinib, trastuzumab deruxtecan).",
+        "reasonFuzzy": "Prior therapy exclusion specifies HER2 ex20ins-targeted therapies, which does not match a standard single drug prior_therapy_excluded kind cleanly."
+      },
+      {
+        "id": "NCT06452277-platinum",
+        "polarity": "inclusion",
+        "sourceText": "Eligible to receive treatment with the selected platinum-based doublet-chemotherapy (i.e. cisplatin/pemetrexed or carboplatin/pemetrexed) and pembrolizumab in accordance with the SmPC/Product Information.",
+        "reasonFuzzy": "Eligibility for specific doublet chemotherapy and pembrolizumab is a clinical judgment check."
+      },
+      {
+        "id": "NCT06452277-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Known history of prior malignancy except if the participant has undergone potentially curative therapy with no evidence of that disease recurrence for five years since initiation of that therapy. Exception: the following cancer types are acceptable within five years if curatively treated or under surveillance: a. in situ cancers of cervix, breast, or skin, b. superficial bladder cancer (Ta, Tis and T1), c. limited-stage prostate cancer, d. basal or squamous cancers of the skin.",
+        "reasonFuzzy": "Complex prior malignancy rule with multiple specific exceptions."
+      },
+      {
+        "id": "NCT06452277-targetable",
+        "polarity": "exclusion",
+        "sourceText": "Tumors with targetable alterations with approved available therapy, with the exception of HER2 mutation in the TKD.",
+        "reasonFuzzy": "Targetable alterations exclusion is broad and open-ended."
+      },
+      {
+        "id": "NCT06452277-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Inability to discontinue treatment with chronic systemic corticosteroids. Participants who require intermittent use of bronchodilators, inhaled steroids, or local steroid injections would not be excluded from the study. Replacement therapy (e.g., physiologic corticosteroid replacement therapy for adrenal or pituitary insufficiency) is acceptable, provided that the dose is stable for >4 weeks prior to planned start of study intervention.",
+        "reasonFuzzy": "Chronic corticosteroid management and stability rules are too complex for a typed check."
+      },
+      {
+        "id": "NCT06452277-neuropathy",
+        "polarity": "exclusion",
+        "sourceText": "Pre-existing peripheral neuropathy that is Grade ≥2 by CTCAE (v5.0).",
+        "reasonFuzzy": "Peripheral neuropathy grade is an investigator-assessed toxicity, not a typed lab or status check."
+      },
+      {
+        "id": "NCT06452277-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "History of severe hypersensitivity reaction to treatment with a monoclonal antibody.",
+        "reasonFuzzy": "Subjective history of hypersensitivity reaction."
+      },
+      {
+        "id": "NCT06452277-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Prior radiotherapy outside of the brain within 21 days before of planned start of study intervention. Participants must have recovered from all radiation-related toxicities and not require corticosteroids.",
+        "reasonFuzzy": "Prior radiotherapy washout and recovery window combined with exception rules."
+      }
+    ]
+  }
+}

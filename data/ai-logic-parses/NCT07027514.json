@@ -1,0 +1,640 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07027514",
+  "briefTitle": "A Study of Tolododekin Alfa (ANK-101) in Combination With an Anti-PD-1/PD-L1 Antibody in Participants With Advanced Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:56:47.636Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07027514-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group performance status (ECOG PS) 0 to 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group performance status (ECOG PS) 0 to 1",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07027514-brain",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Have known active central nervous system metastases",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Have known active central nervous system metastases",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07027514-stage",
+      "polarity": "inclusion",
+      "sourceText": "Have confirmed locally advanced or metastatic NSCLC",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no specific numbered stage list for a stage_in check."
+    },
+    {
+      "id": "NCT07027514-tsh",
+      "polarity": "inclusion",
+      "sourceText": "Thyroid-stimulating hormone (TSH) within normal limits",
+      "reasonFuzzy": "TSH is not a typed lab kind in the allowed list."
+    },
+    {
+      "id": "NCT07027514-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease per Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST v1.1)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07027514-life",
+      "polarity": "inclusion",
+      "sourceText": "Have a life expectancy > 12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07027514-ecg",
+      "polarity": "inclusion",
+      "sourceText": "Have baseline electrocardiogram (ECG) without evidence of acute ischemia or prolonged QT interval",
+      "reasonFuzzy": "ECG interpretation is a subjective clinical judgment, not a typed lab cutoff."
+    },
+    {
+      "id": "NCT07027514-contraception-f",
+      "polarity": "inclusion",
+      "sourceText": "Heterosexually active women of childbearing potential (WOCBP) must agree to use highly effective methods of contraception",
+      "reasonFuzzy": "Contraception compliance is a behavioral requirement, not a typed check."
+    },
+    {
+      "id": "NCT07027514-contraception-m",
+      "polarity": "inclusion",
+      "sourceText": "Male participants who are not sterile must commit to the use of a reliable method of birth control or abstinence",
+      "reasonFuzzy": "Contraception compliance is a behavioral requirement, not a typed check."
+    },
+    {
+      "id": "NCT07027514-hiv",
+      "polarity": "inclusion",
+      "sourceText": "Human immunodeficiency virus (HIV)-infected participants must be on anti-retroviral therapy (ART) and have well-controlled HIV infection/disease",
+      "reasonFuzzy": "HIV condition management requires clinical judgment."
+    },
+    {
+      "id": "NCT07027514-tox",
+      "polarity": "inclusion",
+      "sourceText": "Resolution of all prior anticancer therapy toxicities prior to C1D1.",
+      "reasonFuzzy": "Toxicity resolution is a clinical judgment, not a typed lab cutoff."
+    },
+    {
+      "id": "NCT07027514-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Willingness to provide fresh tumor biopsy specimens",
+      "reasonFuzzy": "Willingness to undergo a procedure is a subjective judgment."
+    },
+    {
+      "id": "NCT07027514-consent",
+      "polarity": "inclusion",
+      "sourceText": "Provides written informed consent for the study",
+      "reasonFuzzy": "Informed consent is an administrative requirement, not a typed check."
+    },
+    {
+      "id": "NCT07027514-cohort-a-tox",
+      "polarity": "exclusion",
+      "sourceText": "Cohort A only: Participants with toxic effects to manage adverse events from previous treatment with immunotherapy",
+      "reasonFuzzy": "Cohort-specific toxicity rules are conditional and subjective."
+    },
+    {
+      "id": "NCT07027514-cohort-b-ici",
+      "polarity": "exclusion",
+      "sourceText": "Cohort B only: Prior therapy with an immune checkpoint inhibitor.",
+      "reasonFuzzy": "Cohort-specific prior therapy exclusion is conditional."
+    },
+    {
+      "id": "NCT07027514-immunosuppressive",
+      "polarity": "exclusion",
+      "sourceText": "Have received short-term systemic therapy with immunosuppressive agents prior to C1D1",
+      "reasonFuzzy": "Immune suppressive therapy history is a complex clinical rule without a specific typed kind."
+    },
+    {
+      "id": "NCT07027514-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Have active autoimmune disease or medical conditions requiring chronic steroid or other immunosuppressive therapy prior to C1D1",
+      "reasonFuzzy": "Autoimmune disease and steroid requirements involve clinical judgment."
+    },
+    {
+      "id": "NCT07027514-vaccines",
+      "polarity": "exclusion",
+      "sourceText": "Have received live vaccines prior to C1D1",
+      "reasonFuzzy": "Live vaccine history is not a typed prior therapy check."
+    },
+    {
+      "id": "NCT07027514-immunodeficient",
+      "polarity": "exclusion",
+      "sourceText": "Have primary or acquired immunodeficient states",
+      "reasonFuzzy": "Immunodeficient state assessment is a clinical judgment."
+    },
+    {
+      "id": "NCT07027514-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Female participant who is pregnant or breastfeeding",
+      "reasonFuzzy": "Pregnancy/breastfeeding status is a clinical condition, not a typed check."
+    },
+    {
+      "id": "NCT07027514-transplant",
+      "polarity": "exclusion",
+      "sourceText": "Have a history of allogeneic tissue/solid organ transplant",
+      "reasonFuzzy": "Transplant history is not a typed prior therapy or medical condition check."
+    },
+    {
+      "id": "NCT07027514-hepatitis",
+      "polarity": "exclusion",
+      "sourceText": "Has active hepatitis B virus (HBV) or hepatitis C virus (HCV).",
+      "reasonFuzzy": "Active viral hepatitis is an infection status, not a typed lab cutoff."
+    },
+    {
+      "id": "NCT07027514-hiv-kaposi",
+      "polarity": "exclusion",
+      "sourceText": "HIV-infected participants with a history of Kaposi sarcoma and/or Multicentric Castleman Disease",
+      "reasonFuzzy": "Specific HIV complications are complex clinical exclusions."
+    },
+    {
+      "id": "NCT07027514-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Have congestive heart failure, active coronary artery disease, unevaluated new onset angina, unstable angina, or clinically significant cardiac arrhythmias.",
+      "reasonFuzzy": "Cardiac conditions require subjective investigator evaluation."
+    },
+    {
+      "id": "NCT07027514-bleeding",
+      "polarity": "exclusion",
+      "sourceText": "Have uncontrolled bleeding disorders prior to C1D1",
+      "reasonFuzzy": "Bleeding disorders assessment is a clinical judgment."
+    },
+    {
+      "id": "NCT07027514-warfarin",
+      "polarity": "exclusion",
+      "sourceText": "Participants on coumadin (warfarin), due to potential for increased bleeding risk associated with surgery",
+      "reasonFuzzy": "Medication exclusion for warfarin is not a typed prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT07027514-pneumonitis",
+      "polarity": "exclusion",
+      "sourceText": "History of noninfectious pneumonitis",
+      "reasonFuzzy": "Pneumonitis history is a specific pulmonary exclusion without a typed kind."
+    },
+    {
+      "id": "NCT07027514-allergy",
+      "polarity": "exclusion",
+      "sourceText": "Cohort A only: History of allergy to protein-based therapies, history of any significant drug allergy, or known allergies, hypersensitivity, or intolerance to cetrelimab excipients OR Cohort B only: Hypersensitivity to any component of the anti-PD-1/PD-L1 antibody selected as standard of care",
+      "reasonFuzzy": "Allergy and hypersensitivity rules are conditional and subjective."
+    },
+    {
+      "id": "NCT07027514-systemic",
+      "polarity": "exclusion",
+      "sourceText": "Have other systemic conditions or organ abnormalities that may interfere with the conduct of the study",
+      "reasonFuzzy": "Investigator discretion regarding interfering conditions."
+    },
+    {
+      "id": "NCT07027514-psych",
+      "polarity": "exclusion",
+      "sourceText": "Have any acute or chronic psychiatric problems or substance abuse disorder that make the participant unsuitable for participation",
+      "reasonFuzzy": "Psychiatric and substance abuse suitability is a subjective investigator evaluation."
+    },
+    {
+      "id": "NCT07027514-stage",
+      "polarity": "inclusion",
+      "sourceText": "Have confirmed locally advanced or metastatic NSCLC",
+      "reasonFuzzy": "Locally advanced or metastatic disease is in scope, but no specific numbered stage list is provided for stage_in."
+    },
+    {
+      "id": "NCT07027514-tsh",
+      "polarity": "inclusion",
+      "sourceText": "Thyroid-stimulating hormone (TSH) within normal limits",
+      "reasonFuzzy": "TSH is not among the allowed typed lab kinds."
+    },
+    {
+      "id": "NCT07027514-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease per Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST v1.1)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07027514-life",
+      "polarity": "inclusion",
+      "sourceText": "Have a life expectancy > 12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07027514-ecg",
+      "polarity": "inclusion",
+      "sourceText": "Have baseline electrocardiogram (ECG) without evidence of acute ischemia or prolonged QT interval",
+      "reasonFuzzy": "ECG interpretation is a subjective clinical assessment."
+    },
+    {
+      "id": "NCT07027514-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Willingness to provide fresh tumor biopsy specimens",
+      "reasonFuzzy": "Willingness to undergo a procedure is a subjective judgment."
+    },
+    {
+      "id": "NCT07027514-cohort-b-prior",
+      "polarity": "exclusion",
+      "sourceText": "Cohort B only: Prior therapy with an immune checkpoint inhibitor.",
+      "reasonFuzzy": "Prior therapy limitation applies only to a specific cohort (Cohort B) rather than all participants."
+    },
+    {
+      "id": "NCT07027514-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07027514-egfr",
+      "polarity": "exclusion",
+      "sourceText": "Have known EGFR or ALK mutations",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07027514-alk",
+      "polarity": "exclusion",
+      "sourceText": "Have known EGFR or ALK mutations",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07027514-prior-il12",
+      "polarity": "exclusion",
+      "sourceText": "Have had prior treatment with recombinant interleukin-12 (IL-12)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:recombinant interleukin-12 (il-12)"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 28,
+    "attempts": 1,
+    "ms": 6232
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 2892
+  },
+  "ms": 17112,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07027514",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07027514-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group performance status (ECOG PS) 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07027514-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Have known EGFR or ALK mutations",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07027514-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Have known EGFR or ALK mutations",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07027514-prior-il12",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Have had prior treatment with recombinant interleukin-12 (IL-12)",
+        "stringValue": "recombinant interleukin-12 (IL-12)"
+      },
+      {
+        "id": "NCT07027514-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Have known active central nervous system metastases",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07027514-stage",
+        "polarity": "inclusion",
+        "sourceText": "Have confirmed locally advanced or metastatic NSCLC",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no specific numbered stage list for a stage_in check."
+      },
+      {
+        "id": "NCT07027514-tsh",
+        "polarity": "inclusion",
+        "sourceText": "Thyroid-stimulating hormone (TSH) within normal limits",
+        "reasonFuzzy": "TSH is not a typed lab kind in the allowed list."
+      },
+      {
+        "id": "NCT07027514-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease per Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST v1.1)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07027514-life",
+        "polarity": "inclusion",
+        "sourceText": "Have a life expectancy > 12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT07027514-ecg",
+        "polarity": "inclusion",
+        "sourceText": "Have baseline electrocardiogram (ECG) without evidence of acute ischemia or prolonged QT interval",
+        "reasonFuzzy": "ECG interpretation is a subjective clinical judgment, not a typed lab cutoff."
+      },
+      {
+        "id": "NCT07027514-contraception-f",
+        "polarity": "inclusion",
+        "sourceText": "Heterosexually active women of childbearing potential (WOCBP) must agree to use highly effective methods of contraception",
+        "reasonFuzzy": "Contraception compliance is a behavioral requirement, not a typed check."
+      },
+      {
+        "id": "NCT07027514-contraception-m",
+        "polarity": "inclusion",
+        "sourceText": "Male participants who are not sterile must commit to the use of a reliable method of birth control or abstinence",
+        "reasonFuzzy": "Contraception compliance is a behavioral requirement, not a typed check."
+      },
+      {
+        "id": "NCT07027514-hiv",
+        "polarity": "inclusion",
+        "sourceText": "Human immunodeficiency virus (HIV)-infected participants must be on anti-retroviral therapy (ART) and have well-controlled HIV infection/disease",
+        "reasonFuzzy": "HIV condition management requires clinical judgment."
+      },
+      {
+        "id": "NCT07027514-tox",
+        "polarity": "inclusion",
+        "sourceText": "Resolution of all prior anticancer therapy toxicities prior to C1D1.",
+        "reasonFuzzy": "Toxicity resolution is a clinical judgment, not a typed lab cutoff."
+      },
+      {
+        "id": "NCT07027514-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Willingness to provide fresh tumor biopsy specimens",
+        "reasonFuzzy": "Willingness to undergo a procedure is a subjective judgment."
+      },
+      {
+        "id": "NCT07027514-consent",
+        "polarity": "inclusion",
+        "sourceText": "Provides written informed consent for the study",
+        "reasonFuzzy": "Informed consent is an administrative requirement, not a typed check."
+      },
+      {
+        "id": "NCT07027514-cohort-a-tox",
+        "polarity": "exclusion",
+        "sourceText": "Cohort A only: Participants with toxic effects to manage adverse events from previous treatment with immunotherapy",
+        "reasonFuzzy": "Cohort-specific toxicity rules are conditional and subjective."
+      },
+      {
+        "id": "NCT07027514-cohort-b-ici",
+        "polarity": "exclusion",
+        "sourceText": "Cohort B only: Prior therapy with an immune checkpoint inhibitor.",
+        "reasonFuzzy": "Cohort-specific prior therapy exclusion is conditional."
+      },
+      {
+        "id": "NCT07027514-immunosuppressive",
+        "polarity": "exclusion",
+        "sourceText": "Have received short-term systemic therapy with immunosuppressive agents prior to C1D1",
+        "reasonFuzzy": "Immune suppressive therapy history is a complex clinical rule without a specific typed kind."
+      },
+      {
+        "id": "NCT07027514-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Have active autoimmune disease or medical conditions requiring chronic steroid or other immunosuppressive therapy prior to C1D1",
+        "reasonFuzzy": "Autoimmune disease and steroid requirements involve clinical judgment."
+      },
+      {
+        "id": "NCT07027514-vaccines",
+        "polarity": "exclusion",
+        "sourceText": "Have received live vaccines prior to C1D1",
+        "reasonFuzzy": "Live vaccine history is not a typed prior therapy check."
+      },
+      {
+        "id": "NCT07027514-immunodeficient",
+        "polarity": "exclusion",
+        "sourceText": "Have primary or acquired immunodeficient states",
+        "reasonFuzzy": "Immunodeficient state assessment is a clinical judgment."
+      },
+      {
+        "id": "NCT07027514-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Female participant who is pregnant or breastfeeding",
+        "reasonFuzzy": "Pregnancy/breastfeeding status is a clinical condition, not a typed check."
+      },
+      {
+        "id": "NCT07027514-transplant",
+        "polarity": "exclusion",
+        "sourceText": "Have a history of allogeneic tissue/solid organ transplant",
+        "reasonFuzzy": "Transplant history is not a typed prior therapy or medical condition check."
+      },
+      {
+        "id": "NCT07027514-hepatitis",
+        "polarity": "exclusion",
+        "sourceText": "Has active hepatitis B virus (HBV) or hepatitis C virus (HCV).",
+        "reasonFuzzy": "Active viral hepatitis is an infection status, not a typed lab cutoff."
+      },
+      {
+        "id": "NCT07027514-hiv-kaposi",
+        "polarity": "exclusion",
+        "sourceText": "HIV-infected participants with a history of Kaposi sarcoma and/or Multicentric Castleman Disease",
+        "reasonFuzzy": "Specific HIV complications are complex clinical exclusions."
+      },
+      {
+        "id": "NCT07027514-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Have congestive heart failure, active coronary artery disease, unevaluated new onset angina, unstable angina, or clinically significant cardiac arrhythmias.",
+        "reasonFuzzy": "Cardiac conditions require subjective investigator evaluation."
+      },
+      {
+        "id": "NCT07027514-bleeding",
+        "polarity": "exclusion",
+        "sourceText": "Have uncontrolled bleeding disorders prior to C1D1",
+        "reasonFuzzy": "Bleeding disorders assessment is a clinical judgment."
+      },
+      {
+        "id": "NCT07027514-warfarin",
+        "polarity": "exclusion",
+        "sourceText": "Participants on coumadin (warfarin), due to potential for increased bleeding risk associated with surgery",
+        "reasonFuzzy": "Medication exclusion for warfarin is not a typed prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT07027514-pneumonitis",
+        "polarity": "exclusion",
+        "sourceText": "History of noninfectious pneumonitis",
+        "reasonFuzzy": "Pneumonitis history is a specific pulmonary exclusion without a typed kind."
+      },
+      {
+        "id": "NCT07027514-allergy",
+        "polarity": "exclusion",
+        "sourceText": "Cohort A only: History of allergy to protein-based therapies, history of any significant drug allergy, or known allergies, hypersensitivity, or intolerance to cetrelimab excipients OR Cohort B only: Hypersensitivity to any component of the anti-PD-1/PD-L1 antibody selected as standard of care",
+        "reasonFuzzy": "Allergy and hypersensitivity rules are conditional and subjective."
+      },
+      {
+        "id": "NCT07027514-systemic",
+        "polarity": "exclusion",
+        "sourceText": "Have other systemic conditions or organ abnormalities that may interfere with the conduct of the study",
+        "reasonFuzzy": "Investigator discretion regarding interfering conditions."
+      },
+      {
+        "id": "NCT07027514-psych",
+        "polarity": "exclusion",
+        "sourceText": "Have any acute or chronic psychiatric problems or substance abuse disorder that make the participant unsuitable for participation",
+        "reasonFuzzy": "Psychiatric and substance abuse suitability is a subjective investigator evaluation."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07027514",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07027514-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07027514-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group performance status (ECOG PS) 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07027514-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Have known EGFR or ALK mutations",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07027514-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Have known EGFR or ALK mutations",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07027514-prior-il12",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Have had prior treatment with recombinant interleukin-12 (IL-12)",
+        "stringValue": "recombinant interleukin-12 (IL-12)"
+      },
+      {
+        "id": "NCT07027514-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Have known active central nervous system metastases",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07027514-stage",
+        "polarity": "inclusion",
+        "sourceText": "Have confirmed locally advanced or metastatic NSCLC",
+        "reasonFuzzy": "Locally advanced or metastatic disease is in scope, but no specific numbered stage list is provided for stage_in."
+      },
+      {
+        "id": "NCT07027514-tsh",
+        "polarity": "inclusion",
+        "sourceText": "Thyroid-stimulating hormone (TSH) within normal limits",
+        "reasonFuzzy": "TSH is not among the allowed typed lab kinds."
+      },
+      {
+        "id": "NCT07027514-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease per Response Evaluation Criteria in Solid Tumors version 1.1 (RECIST v1.1)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07027514-life",
+        "polarity": "inclusion",
+        "sourceText": "Have a life expectancy > 12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT07027514-ecg",
+        "polarity": "inclusion",
+        "sourceText": "Have baseline electrocardiogram (ECG) without evidence of acute ischemia or prolonged QT interval",
+        "reasonFuzzy": "ECG interpretation is a subjective clinical assessment."
+      },
+      {
+        "id": "NCT07027514-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Willingness to provide fresh tumor biopsy specimens",
+        "reasonFuzzy": "Willingness to undergo a procedure is a subjective judgment."
+      },
+      {
+        "id": "NCT07027514-cohort-b-prior",
+        "polarity": "exclusion",
+        "sourceText": "Cohort B only: Prior therapy with an immune checkpoint inhibitor.",
+        "reasonFuzzy": "Prior therapy limitation applies only to a specific cohort (Cohort B) rather than all participants."
+      }
+    ]
+  }
+}

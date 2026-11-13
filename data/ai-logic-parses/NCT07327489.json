@@ -1,0 +1,239 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07327489",
+  "briefTitle": "Predicting Response to Immunotherapy From Analysis of Live Tumor Biopsies (ELEPHAS-05)",
+  "parsedAt": "2026-11-12T11:08:41.985Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07327489-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥18 years at time of consent.",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥18 years at time of consent.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07327489-consent",
+      "polarity": "inclusion",
+      "sourceText": "Able and willing to provide informed consent for participation",
+      "reasonFuzzy": "Willingness to provide informed consent is a subjective criterion, not a typed check."
+    },
+    {
+      "id": "NCT07327489-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Have a suspected or confirmed cancer diagnosis that is to be evaluated by means of a biopsy.",
+      "reasonFuzzy": "Willingness or requirement to undergo a biopsy is a procedure-based judgment, not a typed check."
+    },
+    {
+      "id": "NCT07327489-treatment",
+      "polarity": "inclusion",
+      "sourceText": "Subjects who are newly diagnosed or have suspected cancer must be treatment-naïve at the time of biopsy. All other subjects should have the biopsy performed before starting their next line of treatment.",
+      "reasonFuzzy": "Prior treatment timing relative to biopsy is complex and not a simple typed prior therapy check."
+    },
+    {
+      "id": "NCT07327489-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Have a known auto-immune disease or prior condition (prior organ transplant, chronic kidney or liver disease) that renders them ineligible for immunotherapy (IO) treatment.",
+      "reasonFuzzy": "Autoimmune disease and prior conditions rendering a patient ineligible are investigator judgment calls, not clean typed checks."
+    },
+    {
+      "id": "NCT07327489-immunocompromised",
+      "polarity": "exclusion",
+      "sourceText": "Severely immunocompromised person(s). Examples include patients on immunosuppressants, HIV positive patients on antiretrovirals, post transplantation patients.",
+      "reasonFuzzy": "Immunocompromised status and related medications are not structured typed checks."
+    },
+    {
+      "id": "NCT07327489-pregnant",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant person(s).",
+      "reasonFuzzy": "Pregnancy status is not represented among the allowed typed checks."
+    },
+    {
+      "id": "NCT07327489-consent",
+      "polarity": "inclusion",
+      "sourceText": "Able and willing to provide informed consent for participation",
+      "reasonFuzzy": "Willingness to provide informed consent is a subjective criterion, not a typed check."
+    },
+    {
+      "id": "NCT07327489-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Have a suspected or confirmed cancer diagnosis that is to be evaluated by means of a biopsy.",
+      "reasonFuzzy": "Willingness or requirement to undergo a biopsy procedure is subjective and not a typed kind."
+    },
+    {
+      "id": "NCT07327489-treatment",
+      "polarity": "inclusion",
+      "sourceText": "Subjects who are newly diagnosed or have suspected cancer must be treatment-naïve at the time of biopsy. All other subjects should have the biopsy performed before starting their next line of treatment.",
+      "reasonFuzzy": "Prior treatment status rules depending on diagnosis timing cannot be expressed with a single standard typed check."
+    },
+    {
+      "id": "NCT07327489-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Have a known auto-immune disease or prior condition (prior organ transplant, chronic kidney or liver disease) that renders them ineligible for immunotherapy (IO) treatment.",
+      "reasonFuzzy": "Autoimmune disease and prior conditions affecting immunotherapy eligibility are investigator judgments and not typed checks."
+    },
+    {
+      "id": "NCT07327489-immunocompromised",
+      "polarity": "exclusion",
+      "sourceText": "Severely immunocompromised person(s). Examples include patients on immunosuppressants, HIV positive patients on antiretrovirals, post transplantation patients.",
+      "reasonFuzzy": "Immunocompromised status is a subjective clinical judgment, not a typed lab or condition check."
+    },
+    {
+      "id": "NCT07327489-pregnant",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant person(s).",
+      "reasonFuzzy": "Pregnancy status is not among the allowed typed kinds."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 3108
+  },
+  "runB": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2488
+  },
+  "ms": 13568,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07327489",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07327489-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥18 years at time of consent.",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07327489-consent",
+        "polarity": "inclusion",
+        "sourceText": "Able and willing to provide informed consent for participation",
+        "reasonFuzzy": "Willingness to provide informed consent is a subjective criterion, not a typed check."
+      },
+      {
+        "id": "NCT07327489-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Have a suspected or confirmed cancer diagnosis that is to be evaluated by means of a biopsy.",
+        "reasonFuzzy": "Willingness or requirement to undergo a biopsy is a procedure-based judgment, not a typed check."
+      },
+      {
+        "id": "NCT07327489-treatment",
+        "polarity": "inclusion",
+        "sourceText": "Subjects who are newly diagnosed or have suspected cancer must be treatment-naïve at the time of biopsy. All other subjects should have the biopsy performed before starting their next line of treatment.",
+        "reasonFuzzy": "Prior treatment timing relative to biopsy is complex and not a simple typed prior therapy check."
+      },
+      {
+        "id": "NCT07327489-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Have a known auto-immune disease or prior condition (prior organ transplant, chronic kidney or liver disease) that renders them ineligible for immunotherapy (IO) treatment.",
+        "reasonFuzzy": "Autoimmune disease and prior conditions rendering a patient ineligible are investigator judgment calls, not clean typed checks."
+      },
+      {
+        "id": "NCT07327489-immunocompromised",
+        "polarity": "exclusion",
+        "sourceText": "Severely immunocompromised person(s). Examples include patients on immunosuppressants, HIV positive patients on antiretrovirals, post transplantation patients.",
+        "reasonFuzzy": "Immunocompromised status and related medications are not structured typed checks."
+      },
+      {
+        "id": "NCT07327489-pregnant",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant person(s).",
+        "reasonFuzzy": "Pregnancy status is not represented among the allowed typed checks."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07327489",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07327489-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥18 years at time of consent.",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07327489-consent",
+        "polarity": "inclusion",
+        "sourceText": "Able and willing to provide informed consent for participation",
+        "reasonFuzzy": "Willingness to provide informed consent is a subjective criterion, not a typed check."
+      },
+      {
+        "id": "NCT07327489-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Have a suspected or confirmed cancer diagnosis that is to be evaluated by means of a biopsy.",
+        "reasonFuzzy": "Willingness or requirement to undergo a biopsy procedure is subjective and not a typed kind."
+      },
+      {
+        "id": "NCT07327489-treatment",
+        "polarity": "inclusion",
+        "sourceText": "Subjects who are newly diagnosed or have suspected cancer must be treatment-naïve at the time of biopsy. All other subjects should have the biopsy performed before starting their next line of treatment.",
+        "reasonFuzzy": "Prior treatment status rules depending on diagnosis timing cannot be expressed with a single standard typed check."
+      },
+      {
+        "id": "NCT07327489-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Have a known auto-immune disease or prior condition (prior organ transplant, chronic kidney or liver disease) that renders them ineligible for immunotherapy (IO) treatment.",
+        "reasonFuzzy": "Autoimmune disease and prior conditions affecting immunotherapy eligibility are investigator judgments and not typed checks."
+      },
+      {
+        "id": "NCT07327489-immunocompromised",
+        "polarity": "exclusion",
+        "sourceText": "Severely immunocompromised person(s). Examples include patients on immunosuppressants, HIV positive patients on antiretrovirals, post transplantation patients.",
+        "reasonFuzzy": "Immunocompromised status is a subjective clinical judgment, not a typed lab or condition check."
+      },
+      {
+        "id": "NCT07327489-pregnant",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant person(s).",
+        "reasonFuzzy": "Pregnancy status is not among the allowed typed kinds."
+      }
+    ]
+  }
+}

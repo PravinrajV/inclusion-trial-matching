@@ -1,0 +1,24 @@
+{
+  "patient_name": "Alex Rivera",
+  "patient_age": 62,
+  "smoking_history": "never-smoker",
+  "diagnosis": "stage IV lung adenocarcinoma",
+  "tumor_genetics": {
+    "EGFR_exon_19_deletion": "detected on tumor NGS",
+    "ALK_rearrangement": "not detected",
+    "KRAS_mutation": "not detected"
+  },
+  "pdL1_tps_percent": 30,
+  "pdL1_assay": "22C3",
+  "prior_therapies": ["osimertinib"],
+  "stage": "IV",
+  "performance_status": 1,
+  "metastases": {"brain_metastases": "without evidence of metastases (MRI brain)"},
+  "labs": {"creatinine": "0.9 mg/dL","egfr": "85 mL/min","ast": "28","alt": "22","total_bilirubin": "0.6 mg/dL","anc": "3200/uL","platelets": "210000/uL","hemoglobin": "12.4 g/dL"},
+  "imaging": {"CT": "Measurable lung and mediastinal disease"},
+  "home": {"city": "Columbus","state": "Ohio"},
+  "ageYears": 62,
+  "ecog": 1,
+  "priorTherapies": ["osimertinib"],
+  "organFunction": {"creatinine": "0.9 mg/dL","egfr": "85 mL/min","ast": "28","alt": "22","total_bilirubin": "0.6 mg/dL","anc": "3200/uL","platelets": "210000/uL","hemoglobin": "12.4 g/dL"}
+}

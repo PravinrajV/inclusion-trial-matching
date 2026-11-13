@@ -1,0 +1,870 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05107674",
+  "briefTitle": "A Study of NX-1607 in Adults With Advanced Malignancies",
+  "parsedAt": "2026-11-12T06:10:00.731Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05107674-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years.",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05107674-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05107674-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per disease-specific response criteria.",
+      "reasonFuzzy": "Measurable disease by response criteria is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05107674-prior-treatment",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have disease that is metastatic or unresectable and have received standard treatment options, are not candidates for standard treatment options, or will otherwise be prevented from receiving any standard treatment options.",
+      "reasonFuzzy": "Prior treatment options and candidacy requirements are complex and subjective, not a single typed prior therapy check."
+    },
+    {
+      "id": "NCT05107674-washout",
+      "polarity": "inclusion",
+      "sourceText": "Minimum of 3 weeks or 5 half-lives (whichever is shorter) since last dose of systemic cancer therapy (unless otherwise specified) or minimum of 2 weeks since last radiotherapy, or minimum of 6 weeks since last systemic therapy with nitrosoureas, antibody-drug conjugate, or radio immuno-conjugate therapy.",
+      "reasonFuzzy": "Washout windows with multiple conditional timeframes are not a simple typed lab cutoff or prior therapy check."
+    },
+    {
+      "id": "NCT05107674-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ and bone marrow function, in the absence of growth factors (with limited exception for DLBCL), as defined by laboratory parameters.",
+      "reasonFuzzy": "Organ and bone marrow function references unspecified laboratory parameters rather than specific numerical cutoffs."
+    },
+    {
+      "id": "NCT05107674-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Patients of child-bearing potential must use adequate contraceptive measures to avoid pregnancy for the duration of the study as defined in the protocol.",
+      "reasonFuzzy": "Contraception requirements are not part of the allowed typed checks."
+    },
+    {
+      "id": "NCT05107674-adherence",
+      "polarity": "inclusion",
+      "sourceText": "Patient must be willing and able to adhere to the prohibitions and restrictions specified in the protocol.",
+      "reasonFuzzy": "Willingness to adhere to protocol is a subjective judgment."
+    },
+    {
+      "id": "NCT05107674-icf",
+      "polarity": "inclusion",
+      "sourceText": "Each patient must sign an informed consent form (ICF).",
+      "reasonFuzzy": "Informed consent requirement is administrative and not a typed clinical check."
+    },
+    {
+      "id": "NCT05107674-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histological or cytological diagnosis of platinum-resistant EOC, including primary peritoneal and fallopian tube carcinoma; gastric/GEJ cancer; HNSCC; recurrent and either metastatic or unresectable melanoma; NSCLC; mCRPC; MPM; TNBC; locally advanced or metastatic urothelial cancer; cervical cancer; MSS CRC; or DLBCL (including DLBCL-RT)",
+      "reasonFuzzy": "The trial enrolls multiple different tumor types including NSCLC, and histology_in only accepts specific NSCLC subtypes."
+    },
+    {
+      "id": "NCT05107674-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Accessible tumor (for all cohorts) or lymph node (DLBCL only) for biopsy (Phase 1b only).",
+      "reasonFuzzy": "Willingness or availability for a biopsy is a subjective criterion, not a typed kind."
+    },
+    {
+      "id": "NCT05107674-uncontrolled",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled intercurrent illness including, but not limited to, poorly controlled hypertension or diabetes, or ongoing active infection requiring systemic therapy.",
+      "reasonFuzzy": "Uncontrolled intercurrent illness is a clinical judgment, not a typed check."
+    },
+    {
+      "id": "NCT05107674-refractory-eoc",
+      "polarity": "exclusion",
+      "sourceText": "Patients with primary refractory EOC defined as patients who do not respond to their first platinum-containing regimen or who relapse less than 6 months after completion of that first platinum-containing regimen",
+      "reasonFuzzy": "Primary refractory status for EOC is a specific disease condition, not a typed prior therapy check."
+    },
+    {
+      "id": "NCT05107674-psychiatric",
+      "polarity": "exclusion",
+      "sourceText": "Psychiatric illness that would limit compliance with study requirements.",
+      "reasonFuzzy": "Psychiatric illness evaluation is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT05107674-prior-tx-excl",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with any of the following prior to the first dose of NX-1607: CPI (anti-PD-1, PD-L1, cytotoxic T-lymphocyte-associated protein 4, etc) within 3 weeks; autologous or allogeneic stem cell transplant within 100 days; prior systemic cancer therapy within 3 weeks or 5 half-lives (whichever is shorter) (unless otherwise specified) (including hormonal therapy except for hormonal prophylaxis for a prior malignancy); prior radiotherapy within 2 weeks; prior systemic therapy with nitrosoureas, antibody-drug conjugate, or radio-immuno-conjugate therapy within 6 weeks; use of strong or moderate CYP3A4 inducers or inhibitors within 14 days or 7 days, respectively, or 5 half-lives (whichever is longer)",
+      "reasonFuzzy": "Complex exclusion rules with multiple washout periods for various prior therapies cannot be expressed as a single typed prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT05107674-cart",
+      "polarity": "exclusion",
+      "sourceText": "History of CAR-T therapy within 30 days prior to the first dose of NX-1607.",
+      "reasonFuzzy": "CAR-T history with a time window is not a simple prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT05107674-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Toxicities from previous anti-cancer therapies that have not resolved to baseline levels or to Grade 1 or less except for Grade 2 alopecia and Grade 2 peripheral neuropathy or patients receiving endocrine replacement therapy",
+      "reasonFuzzy": "Resolution of previous treatment toxicities is a clinical judgment."
+    },
+    {
+      "id": "NCT05107674-iraes",
+      "polarity": "exclusion",
+      "sourceText": "Patients who experienced Grade 3 or higher irAEs with prior immunotherapy.",
+      "reasonFuzzy": "Immune-related adverse events grading is a clinical judgment, not a typed check."
+    },
+    {
+      "id": "NCT05107674-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "History of uveitis, or an active autoimmune disease that has required systemic treatment in the past 2 years (i.e., with use of disease modifying agents, corticosteroids, or immunosuppressive drugs). Replacement therapy (e.g., thyroxine, insulin, or physiologic corticosteroid replacement therapy for adrenal or pituitary insufficiency) is not considered a form of systemic treatment and is allowed.",
+      "reasonFuzzy": "Autoimmune disease history and systemic treatment requirements are complex clinical judgments."
+    },
+    {
+      "id": "NCT05107674-gi",
+      "polarity": "exclusion",
+      "sourceText": "Unable to swallow capsules or has malabsorption syndrome, disease significantly affecting gastrointestinal function, or resection of the stomach or small bowel or ulcerative colitis, symptomatic inflammatory bowel disease, or partial or complete bowel obstruction likely to interfere with the delivery, absorption, or metabolism of NX-1607.",
+      "reasonFuzzy": "Gastrointestinal absorption and swallowing abilities are clinical judgments."
+    },
+    {
+      "id": "NCT05107674-allergy",
+      "polarity": "exclusion",
+      "sourceText": "Known allergies, hypersensitivity, or intolerance to components of NX-1607.",
+      "reasonFuzzy": "Allergies and hypersensitivities are specific clinical histories not covered by typed checks."
+    },
+    {
+      "id": "NCT05107674-preg-excl",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant, breastfeeding, or planning to become pregnant while enrolled in this study or within 6 months after the last dose of NX-1607.",
+      "reasonFuzzy": "Pregnancy and breastfeeding status are not typed lab or clinical checks."
+    },
+    {
+      "id": "NCT05107674-father",
+      "polarity": "exclusion",
+      "sourceText": "Patient is a man who plans to father a child while enrolled in this study or within 3 months after the last dose of NX-1607 and, as applicable, within 6 months after the last dose of paclitaxel.",
+      "reasonFuzzy": "Reproductive plans are not typed checks."
+    },
+    {
+      "id": "NCT05107674-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Patient has had major surgery (e.g., requiring general anesthesia) within 4 weeks before the planned first dose of NX-1607, or will not have fully recovered from surgery, or has surgery planned during the time the patient is expected to participate in the study or within 4 weeks after the last dose of NX-1607. Note: Patients with minor planned surgical procedures to be conducted under local anesthesia may participate.",
+      "reasonFuzzy": "Major surgery washout and recovery are clinical evaluations."
+    },
+    {
+      "id": "NCT05107674-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Vaccinated with a live vaccine within 28 days (with the exception of the annual inactivated influenza vaccine) or COVID-19 vaccination within 14 days prior to the first dose of NX-1607.",
+      "reasonFuzzy": "Vaccination history and timeframes are not a typed check."
+    },
+    {
+      "id": "NCT05107674-second-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Active known second malignancy with the exception of any of the following: Adequately treated basal cell carcinoma, squamous cell carcinoma of the skin, or in situ cervical cancer. Adequately treated Stage I cancer from which the patient is currently in remission and has been in remission for ≥ 2 years. Low-risk prostate cancer with Gleason score < 7 and PSA < 10 ng/mL. Any other cancer from which the patient has been disease-free for ≥ 2 years.",
+      "reasonFuzzy": "Second malignancy rules and remission durations involve complex clinical exceptions."
+    },
+    {
+      "id": "NCT05107674-hiv",
+      "polarity": "exclusion",
+      "sourceText": "Infection with human immunodeficiency virus (HIV)-1 or HIV-2. Exception: Patients with well controlled HIV (e.g., CD4 > 350/mm3 and undetectable viral load) are eligible.",
+      "reasonFuzzy": "HIV infection status with multi-parameter exceptions is not a simple typed check."
+    },
+    {
+      "id": "NCT05107674-hepatitis",
+      "polarity": "exclusion",
+      "sourceText": "Current active hepatitis, including hepatitis A (hepatitis A virus immunoglobulin M [IgM] positive), hepatitis B (hepatitis B virus [HBV] surface antigen positive), or hepatitis C (hepatitis C virus [HCV] antibody positive, confirmed by HCV RNA). Patients with HCV with undetectable virus after treatment are eligible. Patients with prior exposure to HBV may be entered if quantitative PCR is negative.",
+      "reasonFuzzy": "Hepatitis serology and PCR exceptions are complex virological criteria."
+    },
+    {
+      "id": "NCT05107674-corticosteroids",
+      "polarity": "exclusion",
+      "sourceText": "Use of systemic corticosteroids (> 20 mg prednisone or equivalent) within 15 days (except for prophylaxis for radio diagnostic contrast reactions and/or prophylaxis for patients receiving paclitaxel), or other immunosuppressive drugs within 30 days, prior to the first dose of NX-1607.",
+      "reasonFuzzy": "Systemic corticosteroid dose and timing exceptions are complex immunosuppressive criteria."
+    },
+    {
+      "id": "NCT05107674-biotin",
+      "polarity": "exclusion",
+      "sourceText": "Use of biotin (i.e., Vitamin B7) or supplements containing biotin higher than the daily adequate intake of 30 µg [NIH 2020] (Note: Patients who switch from a high dose to a dose of 30 µg/day or less at least 1 day prior to Screening assessments are eligible for study entry).",
+      "reasonFuzzy": "Biotin supplement intake limits are not part of the allowed typed checks."
+    },
+    {
+      "id": "NCT05107674-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Receipt of an IP or has been treated with an investigational device within 3 weeks or 5 half-lives (whichever is shorter) prior to the first dose of NX-1607.",
+      "reasonFuzzy": "Investigational product or device washout is not a typed check."
+    },
+    {
+      "id": "NCT05107674-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Any of the following within 6 months prior to the first dose of NX-1607 or ongoing: Myocardial infarction, Unstable angina, Unstable symptomatic ischemic heart disease, New York Heart Association Class III or IV heart failure, Thromboembolic events (e.g., deep vein thrombosis, pulmonary embolism, or symptomatic cerebrovascular events), Any other significant cardiac condition (e.g., pericardial effusion, restrictive cardiomyopathy, severe untreated valvular stenosis, or severe congenital heart disease), Has a history or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the participant's participation for the full duration of the study, or is not in the best interest of the participant to participate, in the opinion of the treating Investigator in consultation with the Medical Monitor.",
+      "reasonFuzzy": "Comprehensive cardiac conditions and investigator discretion are subjective clinical judgments."
+    },
+    {
+      "id": "NCT05107674-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per disease-specific response criteria.",
+      "reasonFuzzy": "Measurable disease is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT05107674-status",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have disease that is metastatic or unresectable and have received standard treatment options, are not candidates for standard treatment options, or will otherwise be prevented from receiving any standard treatment options.",
+      "reasonFuzzy": "This describes broad disease state and prior standard treatment history without a specific stage list or typed line count."
+    },
+    {
+      "id": "NCT05107674-washout",
+      "polarity": "inclusion",
+      "sourceText": "Minimum of 3 weeks or 5 half-lives (whichever is shorter) since last dose of systemic cancer therapy (unless otherwise specified) or minimum of 2 weeks since last radiotherapy, or minimum of 6 weeks since last systemic therapy with nitrosoureas, antibody-drug conjugate, or radio immuno-conjugate therapy.",
+      "reasonFuzzy": "Complex therapy washout schedules are not expressed as a simple typed cutoff."
+    },
+    {
+      "id": "NCT05107674-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ and bone marrow function, in the absence of growth factors (with limited exception for DLBCL), as defined by laboratory parameters.",
+      "reasonFuzzy": "Organ and bone marrow function references unspecified laboratory parameters."
+    },
+    {
+      "id": "NCT05107674-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Patients of child-bearing potential must use adequate contraceptive measures to avoid pregnancy for the duration of the study as defined in the protocol.",
+      "reasonFuzzy": "Contraception requirements are not typed checks."
+    },
+    {
+      "id": "NCT05107674-willingness",
+      "polarity": "inclusion",
+      "sourceText": "Patient must be willing and able to adhere to the prohibitions and restrictions specified in the protocol.",
+      "reasonFuzzy": "Willingness and adherence are subjective judgment criteria."
+    },
+    {
+      "id": "NCT05107674-icf",
+      "polarity": "inclusion",
+      "sourceText": "Each patient must sign an informed consent form (ICF).",
+      "reasonFuzzy": "Informed consent administration is administrative rather than a clinical trial eligibility filter."
+    },
+    {
+      "id": "NCT05107674-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histological or cytological diagnosis of platinum-resistant EOC, including primary peritoneal and fallopian tube carcinoma; gastric/GEJ cancer; HNSCC; recurrent and either metastatic or unresectable melanoma; NSCLC; mCRPC; MPM; TNBC; locally advanced or metastatic urothelial cancer; cervical cancer; MSS CRC; or DLBCL (including DLBCL-RT)",
+      "reasonFuzzy": "Includes multiple diverse tumor types and conditional resistance states not fully captured by the standard histology enumeration."
+    },
+    {
+      "id": "NCT05107674-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Accessible tumor (for all cohorts) or lymph node (DLBCL only) for biopsy (Phase 1b only).",
+      "reasonFuzzy": "Willingness or accessibility for biopsy is a procedural judgment."
+    },
+    {
+      "id": "NCT05107674-uncontrolled",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled intercurrent illness including, but not limited to, poorly controlled hypertension or diabetes, or ongoing active infection requiring systemic therapy.",
+      "reasonFuzzy": "General uncontrolled illness and infection are subjective clinical judgments."
+    },
+    {
+      "id": "NCT05107674-refractory",
+      "polarity": "exclusion",
+      "sourceText": "Patients with primary refractory EOC defined as patients who do not respond to their first platinum-containing regimen or who relapse less than 6 months after completion of that first platinum-containing regimen",
+      "reasonFuzzy": "Specific disease-refractory condition for EOC is not a standard typed check."
+    },
+    {
+      "id": "NCT05107674-psych",
+      "polarity": "exclusion",
+      "sourceText": "Psychiatric illness that would limit compliance with study requirements.",
+      "reasonFuzzy": "Psychiatric compliance assessment is subjective."
+    },
+    {
+      "id": "NCT05107674-priortx",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with any of the following prior to the first dose of NX-1607: CPI (anti-PD-1, PD-L1, cytotoxic T-lymphocyte-associated protein 4, etc) within 3 weeks; autologous or allogeneic stem cell transplant within 100 days; prior systemic cancer therapy within 3 weeks or 5 half-lives (whichever is shorter) (unless otherwise specified) (including hormonal therapy except for hormonal prophylaxis for a prior malignancy); prior radiotherapy within 2 weeks; prior systemic therapy with nitrosoureas, antibody-drug conjugate, or radio-immuno-conjugate therapy within 6 weeks; use of strong or moderate CYP3A4 inducers or inhibitors within 14 days or 7 days, respectively, or 5 half-lives (whichever is longer)",
+      "reasonFuzzy": "Complex prior therapy and medication washout rules cannot be mapped to a single simple prior therapy exclusion."
+    },
+    {
+      "id": "NCT05107674-cart",
+      "polarity": "exclusion",
+      "sourceText": "History of CAR-T therapy within 30 days prior to the first dose of NX-1607.",
+      "reasonFuzzy": "Specific CAR-T window does not map to a standard drug or class prior therapy exclusion."
+    },
+    {
+      "id": "NCT05107674-tox",
+      "polarity": "exclusion",
+      "sourceText": "Toxicities from previous anti-cancer therapies that have not resolved to baseline levels or to Grade 1 or less except for Grade 2 alopecia and Grade 2 peripheral neuropathy or patients receiving endocrine replacement therapy",
+      "reasonFuzzy": "Unresolved prior toxicity grading exceptions are a complex clinical judgment."
+    },
+    {
+      "id": "NCT05107674-irae",
+      "polarity": "exclusion",
+      "sourceText": "Patients who experienced Grade 3 or higher irAEs with prior immunotherapy.",
+      "reasonFuzzy": "Immune-related adverse event grade is a historical clinical assessment."
+    },
+    {
+      "id": "NCT05107674-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "History of uveitis, or an active autoimmune disease that has required systemic treatment in the past 2 years (i.e., with use of disease modifying agents, corticosteroids, or immunosuppressive drugs). Replacement therapy (e.g., thyroxine, insulin, or physiologic corticosteroid replacement therapy for adrenal or pituitary insufficiency) is not considered a form of systemic treatment and is allowed.",
+      "reasonFuzzy": "Active autoimmune disease and systemic treatment history requires clinical evaluation."
+    },
+    {
+      "id": "NCT05107674-gi",
+      "polarity": "exclusion",
+      "sourceText": "Unable to swallow capsules or has malabsorption syndrome, disease significantly affecting gastrointestinal function, or resection of the stomach or small bowel or ulcerative colitis, symptomatic inflammatory bowel disease, or partial or complete bowel obstruction likely to interfere with the delivery, absorption, or metabolism of NX-1607.",
+      "reasonFuzzy": "Gastrointestinal absorption issues and resections are clinical determinations."
+    },
+    {
+      "id": "NCT05107674-allergy",
+      "polarity": "exclusion",
+      "sourceText": "Known allergies, hypersensitivity, or intolerance to components of NX-1607.",
+      "reasonFuzzy": "Allergy or hypersensitivity to study drug is a standard exclusion without a typed kind."
+    },
+    {
+      "id": "NCT05107674-preg",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant, breastfeeding, or planning to become pregnant while enrolled in this study or within 6 months after the last dose of NX-1607.",
+      "reasonFuzzy": "Pregnancy and breastfeeding status are clinical exclusions."
+    },
+    {
+      "id": "NCT05107674-father",
+      "polarity": "exclusion",
+      "sourceText": "Patient is a man who plans to father a child while enrolled in this study or within 3 months after the last dose of NX-1607 and, as applicable, within 6 months after the last dose of paclitaxel.",
+      "reasonFuzzy": "Reproductive plans are not typed checks."
+    },
+    {
+      "id": "NCT05107674-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Patient has had major surgery (e.g., requiring general anesthesia) within 4 weeks before the planned first dose of NX-1607, or will not have fully recovered from surgery, or has surgery planned during the time the patient is expected to participate in the study or within 4 weeks after the last dose of NX-1607. Note: Patients with minor planned surgical procedures to be conducted under local anesthesia may participate.",
+      "reasonFuzzy": "Major surgery washout and recovery criteria are not typed checks."
+    },
+    {
+      "id": "NCT05107674-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Vaccinated with a live vaccine within 28 days (with the exception of the annual inactivated influenza vaccine) or COVID-19 vaccination within 14 days prior to the first dose of NX-1607.",
+      "reasonFuzzy": "Vaccine timing rules are not typed checks."
+    },
+    {
+      "id": "NCT05107674-secondmalig",
+      "polarity": "exclusion",
+      "sourceText": "Active known second malignancy with the exception of any of the following: Adequately treated basal cell carcinoma, squamous cell carcinoma of the skin, or in situ cervical cancer. Adequately treated Stage I cancer from which the patient is currently in remission and has been in remission for ≥ 2 years. Low-risk prostate cancer with Gleason score < 7 and PSA < 10 ng/mL. Any other cancer from which the patient has been disease-free for ≥ 2 years.",
+      "reasonFuzzy": "Second malignancy exceptions involve complex conditional cancer history."
+    },
+    {
+      "id": "NCT05107674-hiv",
+      "polarity": "exclusion",
+      "sourceText": "Infection with human immunodeficiency virus (HIV)-1 or HIV-2. Exception: Patients with well controlled HIV (e.g., CD4 > 350/mm3 and undetectable viral load) are eligible.",
+      "reasonFuzzy": "HIV infection and well-controlled exception criteria are not typed lab checks."
+    },
+    {
+      "id": "NCT05107674-hepatitis",
+      "polarity": "exclusion",
+      "sourceText": "Current active hepatitis, including hepatitis A (hepatitis A virus immunoglobulin M [IgM] positive), hepatitis B (hepatitis B virus [HBV] surface antigen positive), or hepatitis C (hepatitis C virus [HCV] antibody positive, confirmed by HCV RNA). Patients with HCV with undetectable virus after treatment are eligible. Patients with prior exposure to HBV may be entered if quantitative PCR is negative.",
+      "reasonFuzzy": "Hepatitis serology and PCR exceptions are complex virologic evaluations."
+    },
+    {
+      "id": "NCT05107674-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Use of systemic corticosteroids (> 20 mg prednisone or equivalent) within 15 days (except for prophylaxis for radio diagnostic contrast reactions and/or prophylaxis for patients receiving paclitaxel), or other immunosuppressive drugs within 30 days, prior to the first dose of NX-1607.",
+      "reasonFuzzy": "Systemic corticosteroid dose and timing exceptions are complex medication restrictions."
+    },
+    {
+      "id": "NCT05107674-biotin",
+      "polarity": "exclusion",
+      "sourceText": "Use of biotin (i.e., Vitamin B7) or supplements containing biotin higher than the daily adequate intake of 30 µg [NIH 2020] (Note: Patients who switch from a high dose to a dose of 30 µg/day or less at least 1 day prior to Screening assessments are eligible for study entry).",
+      "reasonFuzzy": "Biotin supplement restriction is not a typed check."
+    },
+    {
+      "id": "NCT05107674-ip",
+      "polarity": "exclusion",
+      "sourceText": "Receipt of an IP or has been treated with an investigational device within 3 weeks or 5 half-lives (whichever is shorter) prior to the first dose of NX-1607.",
+      "reasonFuzzy": "Prior investigational product or device washout is not a typed prior therapy exclusion."
+    },
+    {
+      "id": "NCT05107674-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Any of the following within 6 months prior to the first dose of NX-1607 or ongoing: Myocardial infarction, Unstable angina, Unstable symptomatic ischemic heart disease, New York Heart Association Class III or IV heart failure, Thromboembolic events (e.g., deep vein thrombosis, pulmonary embolism, or symptomatic cerebrovascular events), Any other significant cardiac condition (e.g., pericardial effusion, restrictive cardiomyopathy, severe untreated valvular stenosis, or severe congenital heart disease), Has a history or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the participant's participation for the full duration of the study, or is not in the best interest of the participant to participate, in the opinion of the treating Investigator in consultation with the Medical Monitor.",
+      "reasonFuzzy": "Comprehensive cardiac conditions and investigator discretion are subjective clinical exclusions."
+    },
+    {
+      "id": "NCT05107674-brain",
+      "polarity": "exclusion",
+      "sourceText": "Active untreated brain metastases.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 30,
+    "attempts": 1,
+    "ms": 8914
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 30,
+    "attempts": 1,
+    "ms": 8629
+  },
+  "ms": 25565,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05107674",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05107674-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05107674-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05107674-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active untreated brain metastases.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05107674-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per disease-specific response criteria.",
+        "reasonFuzzy": "Measurable disease by response criteria is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05107674-prior-treatment",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have disease that is metastatic or unresectable and have received standard treatment options, are not candidates for standard treatment options, or will otherwise be prevented from receiving any standard treatment options.",
+        "reasonFuzzy": "Prior treatment options and candidacy requirements are complex and subjective, not a single typed prior therapy check."
+      },
+      {
+        "id": "NCT05107674-washout",
+        "polarity": "inclusion",
+        "sourceText": "Minimum of 3 weeks or 5 half-lives (whichever is shorter) since last dose of systemic cancer therapy (unless otherwise specified) or minimum of 2 weeks since last radiotherapy, or minimum of 6 weeks since last systemic therapy with nitrosoureas, antibody-drug conjugate, or radio immuno-conjugate therapy.",
+        "reasonFuzzy": "Washout windows with multiple conditional timeframes are not a simple typed lab cutoff or prior therapy check."
+      },
+      {
+        "id": "NCT05107674-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ and bone marrow function, in the absence of growth factors (with limited exception for DLBCL), as defined by laboratory parameters.",
+        "reasonFuzzy": "Organ and bone marrow function references unspecified laboratory parameters rather than specific numerical cutoffs."
+      },
+      {
+        "id": "NCT05107674-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Patients of child-bearing potential must use adequate contraceptive measures to avoid pregnancy for the duration of the study as defined in the protocol.",
+        "reasonFuzzy": "Contraception requirements are not part of the allowed typed checks."
+      },
+      {
+        "id": "NCT05107674-adherence",
+        "polarity": "inclusion",
+        "sourceText": "Patient must be willing and able to adhere to the prohibitions and restrictions specified in the protocol.",
+        "reasonFuzzy": "Willingness to adhere to protocol is a subjective judgment."
+      },
+      {
+        "id": "NCT05107674-icf",
+        "polarity": "inclusion",
+        "sourceText": "Each patient must sign an informed consent form (ICF).",
+        "reasonFuzzy": "Informed consent requirement is administrative and not a typed clinical check."
+      },
+      {
+        "id": "NCT05107674-histology",
+        "polarity": "inclusion",
+        "sourceText": "Histological or cytological diagnosis of platinum-resistant EOC, including primary peritoneal and fallopian tube carcinoma; gastric/GEJ cancer; HNSCC; recurrent and either metastatic or unresectable melanoma; NSCLC; mCRPC; MPM; TNBC; locally advanced or metastatic urothelial cancer; cervical cancer; MSS CRC; or DLBCL (including DLBCL-RT)",
+        "reasonFuzzy": "The trial enrolls multiple different tumor types including NSCLC, and histology_in only accepts specific NSCLC subtypes."
+      },
+      {
+        "id": "NCT05107674-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Accessible tumor (for all cohorts) or lymph node (DLBCL only) for biopsy (Phase 1b only).",
+        "reasonFuzzy": "Willingness or availability for a biopsy is a subjective criterion, not a typed kind."
+      },
+      {
+        "id": "NCT05107674-uncontrolled",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled intercurrent illness including, but not limited to, poorly controlled hypertension or diabetes, or ongoing active infection requiring systemic therapy.",
+        "reasonFuzzy": "Uncontrolled intercurrent illness is a clinical judgment, not a typed check."
+      },
+      {
+        "id": "NCT05107674-refractory-eoc",
+        "polarity": "exclusion",
+        "sourceText": "Patients with primary refractory EOC defined as patients who do not respond to their first platinum-containing regimen or who relapse less than 6 months after completion of that first platinum-containing regimen",
+        "reasonFuzzy": "Primary refractory status for EOC is a specific disease condition, not a typed prior therapy check."
+      },
+      {
+        "id": "NCT05107674-psychiatric",
+        "polarity": "exclusion",
+        "sourceText": "Psychiatric illness that would limit compliance with study requirements.",
+        "reasonFuzzy": "Psychiatric illness evaluation is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT05107674-prior-tx-excl",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with any of the following prior to the first dose of NX-1607: CPI (anti-PD-1, PD-L1, cytotoxic T-lymphocyte-associated protein 4, etc) within 3 weeks; autologous or allogeneic stem cell transplant within 100 days; prior systemic cancer therapy within 3 weeks or 5 half-lives (whichever is shorter) (unless otherwise specified) (including hormonal therapy except for hormonal prophylaxis for a prior malignancy); prior radiotherapy within 2 weeks; prior systemic therapy with nitrosoureas, antibody-drug conjugate, or radio-immuno-conjugate therapy within 6 weeks; use of strong or moderate CYP3A4 inducers or inhibitors within 14 days or 7 days, respectively, or 5 half-lives (whichever is longer)",
+        "reasonFuzzy": "Complex exclusion rules with multiple washout periods for various prior therapies cannot be expressed as a single typed prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT05107674-cart",
+        "polarity": "exclusion",
+        "sourceText": "History of CAR-T therapy within 30 days prior to the first dose of NX-1607.",
+        "reasonFuzzy": "CAR-T history with a time window is not a simple prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT05107674-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Toxicities from previous anti-cancer therapies that have not resolved to baseline levels or to Grade 1 or less except for Grade 2 alopecia and Grade 2 peripheral neuropathy or patients receiving endocrine replacement therapy",
+        "reasonFuzzy": "Resolution of previous treatment toxicities is a clinical judgment."
+      },
+      {
+        "id": "NCT05107674-iraes",
+        "polarity": "exclusion",
+        "sourceText": "Patients who experienced Grade 3 or higher irAEs with prior immunotherapy.",
+        "reasonFuzzy": "Immune-related adverse events grading is a clinical judgment, not a typed check."
+      },
+      {
+        "id": "NCT05107674-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "History of uveitis, or an active autoimmune disease that has required systemic treatment in the past 2 years (i.e., with use of disease modifying agents, corticosteroids, or immunosuppressive drugs). Replacement therapy (e.g., thyroxine, insulin, or physiologic corticosteroid replacement therapy for adrenal or pituitary insufficiency) is not considered a form of systemic treatment and is allowed.",
+        "reasonFuzzy": "Autoimmune disease history and systemic treatment requirements are complex clinical judgments."
+      },
+      {
+        "id": "NCT05107674-gi",
+        "polarity": "exclusion",
+        "sourceText": "Unable to swallow capsules or has malabsorption syndrome, disease significantly affecting gastrointestinal function, or resection of the stomach or small bowel or ulcerative colitis, symptomatic inflammatory bowel disease, or partial or complete bowel obstruction likely to interfere with the delivery, absorption, or metabolism of NX-1607.",
+        "reasonFuzzy": "Gastrointestinal absorption and swallowing abilities are clinical judgments."
+      },
+      {
+        "id": "NCT05107674-allergy",
+        "polarity": "exclusion",
+        "sourceText": "Known allergies, hypersensitivity, or intolerance to components of NX-1607.",
+        "reasonFuzzy": "Allergies and hypersensitivities are specific clinical histories not covered by typed checks."
+      },
+      {
+        "id": "NCT05107674-preg-excl",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant, breastfeeding, or planning to become pregnant while enrolled in this study or within 6 months after the last dose of NX-1607.",
+        "reasonFuzzy": "Pregnancy and breastfeeding status are not typed lab or clinical checks."
+      },
+      {
+        "id": "NCT05107674-father",
+        "polarity": "exclusion",
+        "sourceText": "Patient is a man who plans to father a child while enrolled in this study or within 3 months after the last dose of NX-1607 and, as applicable, within 6 months after the last dose of paclitaxel.",
+        "reasonFuzzy": "Reproductive plans are not typed checks."
+      },
+      {
+        "id": "NCT05107674-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Patient has had major surgery (e.g., requiring general anesthesia) within 4 weeks before the planned first dose of NX-1607, or will not have fully recovered from surgery, or has surgery planned during the time the patient is expected to participate in the study or within 4 weeks after the last dose of NX-1607. Note: Patients with minor planned surgical procedures to be conducted under local anesthesia may participate.",
+        "reasonFuzzy": "Major surgery washout and recovery are clinical evaluations."
+      },
+      {
+        "id": "NCT05107674-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Vaccinated with a live vaccine within 28 days (with the exception of the annual inactivated influenza vaccine) or COVID-19 vaccination within 14 days prior to the first dose of NX-1607.",
+        "reasonFuzzy": "Vaccination history and timeframes are not a typed check."
+      },
+      {
+        "id": "NCT05107674-second-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Active known second malignancy with the exception of any of the following: Adequately treated basal cell carcinoma, squamous cell carcinoma of the skin, or in situ cervical cancer. Adequately treated Stage I cancer from which the patient is currently in remission and has been in remission for ≥ 2 years. Low-risk prostate cancer with Gleason score < 7 and PSA < 10 ng/mL. Any other cancer from which the patient has been disease-free for ≥ 2 years.",
+        "reasonFuzzy": "Second malignancy rules and remission durations involve complex clinical exceptions."
+      },
+      {
+        "id": "NCT05107674-hiv",
+        "polarity": "exclusion",
+        "sourceText": "Infection with human immunodeficiency virus (HIV)-1 or HIV-2. Exception: Patients with well controlled HIV (e.g., CD4 > 350/mm3 and undetectable viral load) are eligible.",
+        "reasonFuzzy": "HIV infection status with multi-parameter exceptions is not a simple typed check."
+      },
+      {
+        "id": "NCT05107674-hepatitis",
+        "polarity": "exclusion",
+        "sourceText": "Current active hepatitis, including hepatitis A (hepatitis A virus immunoglobulin M [IgM] positive), hepatitis B (hepatitis B virus [HBV] surface antigen positive), or hepatitis C (hepatitis C virus [HCV] antibody positive, confirmed by HCV RNA). Patients with HCV with undetectable virus after treatment are eligible. Patients with prior exposure to HBV may be entered if quantitative PCR is negative.",
+        "reasonFuzzy": "Hepatitis serology and PCR exceptions are complex virological criteria."
+      },
+      {
+        "id": "NCT05107674-corticosteroids",
+        "polarity": "exclusion",
+        "sourceText": "Use of systemic corticosteroids (> 20 mg prednisone or equivalent) within 15 days (except for prophylaxis for radio diagnostic contrast reactions and/or prophylaxis for patients receiving paclitaxel), or other immunosuppressive drugs within 30 days, prior to the first dose of NX-1607.",
+        "reasonFuzzy": "Systemic corticosteroid dose and timing exceptions are complex immunosuppressive criteria."
+      },
+      {
+        "id": "NCT05107674-biotin",
+        "polarity": "exclusion",
+        "sourceText": "Use of biotin (i.e., Vitamin B7) or supplements containing biotin higher than the daily adequate intake of 30 µg [NIH 2020] (Note: Patients who switch from a high dose to a dose of 30 µg/day or less at least 1 day prior to Screening assessments are eligible for study entry).",
+        "reasonFuzzy": "Biotin supplement intake limits are not part of the allowed typed checks."
+      },
+      {
+        "id": "NCT05107674-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Receipt of an IP or has been treated with an investigational device within 3 weeks or 5 half-lives (whichever is shorter) prior to the first dose of NX-1607.",
+        "reasonFuzzy": "Investigational product or device washout is not a typed check."
+      },
+      {
+        "id": "NCT05107674-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Any of the following within 6 months prior to the first dose of NX-1607 or ongoing: Myocardial infarction, Unstable angina, Unstable symptomatic ischemic heart disease, New York Heart Association Class III or IV heart failure, Thromboembolic events (e.g., deep vein thrombosis, pulmonary embolism, or symptomatic cerebrovascular events), Any other significant cardiac condition (e.g., pericardial effusion, restrictive cardiomyopathy, severe untreated valvular stenosis, or severe congenital heart disease), Has a history or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the participant's participation for the full duration of the study, or is not in the best interest of the participant to participate, in the opinion of the treating Investigator in consultation with the Medical Monitor.",
+        "reasonFuzzy": "Comprehensive cardiac conditions and investigator discretion are subjective clinical judgments."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05107674",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05107674-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05107674-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05107674-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active untreated brain metastases.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05107674-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per disease-specific response criteria.",
+        "reasonFuzzy": "Measurable disease is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT05107674-status",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have disease that is metastatic or unresectable and have received standard treatment options, are not candidates for standard treatment options, or will otherwise be prevented from receiving any standard treatment options.",
+        "reasonFuzzy": "This describes broad disease state and prior standard treatment history without a specific stage list or typed line count."
+      },
+      {
+        "id": "NCT05107674-washout",
+        "polarity": "inclusion",
+        "sourceText": "Minimum of 3 weeks or 5 half-lives (whichever is shorter) since last dose of systemic cancer therapy (unless otherwise specified) or minimum of 2 weeks since last radiotherapy, or minimum of 6 weeks since last systemic therapy with nitrosoureas, antibody-drug conjugate, or radio immuno-conjugate therapy.",
+        "reasonFuzzy": "Complex therapy washout schedules are not expressed as a simple typed cutoff."
+      },
+      {
+        "id": "NCT05107674-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ and bone marrow function, in the absence of growth factors (with limited exception for DLBCL), as defined by laboratory parameters.",
+        "reasonFuzzy": "Organ and bone marrow function references unspecified laboratory parameters."
+      },
+      {
+        "id": "NCT05107674-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Patients of child-bearing potential must use adequate contraceptive measures to avoid pregnancy for the duration of the study as defined in the protocol.",
+        "reasonFuzzy": "Contraception requirements are not typed checks."
+      },
+      {
+        "id": "NCT05107674-willingness",
+        "polarity": "inclusion",
+        "sourceText": "Patient must be willing and able to adhere to the prohibitions and restrictions specified in the protocol.",
+        "reasonFuzzy": "Willingness and adherence are subjective judgment criteria."
+      },
+      {
+        "id": "NCT05107674-icf",
+        "polarity": "inclusion",
+        "sourceText": "Each patient must sign an informed consent form (ICF).",
+        "reasonFuzzy": "Informed consent administration is administrative rather than a clinical trial eligibility filter."
+      },
+      {
+        "id": "NCT05107674-histology",
+        "polarity": "inclusion",
+        "sourceText": "Histological or cytological diagnosis of platinum-resistant EOC, including primary peritoneal and fallopian tube carcinoma; gastric/GEJ cancer; HNSCC; recurrent and either metastatic or unresectable melanoma; NSCLC; mCRPC; MPM; TNBC; locally advanced or metastatic urothelial cancer; cervical cancer; MSS CRC; or DLBCL (including DLBCL-RT)",
+        "reasonFuzzy": "Includes multiple diverse tumor types and conditional resistance states not fully captured by the standard histology enumeration."
+      },
+      {
+        "id": "NCT05107674-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Accessible tumor (for all cohorts) or lymph node (DLBCL only) for biopsy (Phase 1b only).",
+        "reasonFuzzy": "Willingness or accessibility for biopsy is a procedural judgment."
+      },
+      {
+        "id": "NCT05107674-uncontrolled",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled intercurrent illness including, but not limited to, poorly controlled hypertension or diabetes, or ongoing active infection requiring systemic therapy.",
+        "reasonFuzzy": "General uncontrolled illness and infection are subjective clinical judgments."
+      },
+      {
+        "id": "NCT05107674-refractory",
+        "polarity": "exclusion",
+        "sourceText": "Patients with primary refractory EOC defined as patients who do not respond to their first platinum-containing regimen or who relapse less than 6 months after completion of that first platinum-containing regimen",
+        "reasonFuzzy": "Specific disease-refractory condition for EOC is not a standard typed check."
+      },
+      {
+        "id": "NCT05107674-psych",
+        "polarity": "exclusion",
+        "sourceText": "Psychiatric illness that would limit compliance with study requirements.",
+        "reasonFuzzy": "Psychiatric compliance assessment is subjective."
+      },
+      {
+        "id": "NCT05107674-priortx",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with any of the following prior to the first dose of NX-1607: CPI (anti-PD-1, PD-L1, cytotoxic T-lymphocyte-associated protein 4, etc) within 3 weeks; autologous or allogeneic stem cell transplant within 100 days; prior systemic cancer therapy within 3 weeks or 5 half-lives (whichever is shorter) (unless otherwise specified) (including hormonal therapy except for hormonal prophylaxis for a prior malignancy); prior radiotherapy within 2 weeks; prior systemic therapy with nitrosoureas, antibody-drug conjugate, or radio-immuno-conjugate therapy within 6 weeks; use of strong or moderate CYP3A4 inducers or inhibitors within 14 days or 7 days, respectively, or 5 half-lives (whichever is longer)",
+        "reasonFuzzy": "Complex prior therapy and medication washout rules cannot be mapped to a single simple prior therapy exclusion."
+      },
+      {
+        "id": "NCT05107674-cart",
+        "polarity": "exclusion",
+        "sourceText": "History of CAR-T therapy within 30 days prior to the first dose of NX-1607.",
+        "reasonFuzzy": "Specific CAR-T window does not map to a standard drug or class prior therapy exclusion."
+      },
+      {
+        "id": "NCT05107674-tox",
+        "polarity": "exclusion",
+        "sourceText": "Toxicities from previous anti-cancer therapies that have not resolved to baseline levels or to Grade 1 or less except for Grade 2 alopecia and Grade 2 peripheral neuropathy or patients receiving endocrine replacement therapy",
+        "reasonFuzzy": "Unresolved prior toxicity grading exceptions are a complex clinical judgment."
+      },
+      {
+        "id": "NCT05107674-irae",
+        "polarity": "exclusion",
+        "sourceText": "Patients who experienced Grade 3 or higher irAEs with prior immunotherapy.",
+        "reasonFuzzy": "Immune-related adverse event grade is a historical clinical assessment."
+      },
+      {
+        "id": "NCT05107674-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "History of uveitis, or an active autoimmune disease that has required systemic treatment in the past 2 years (i.e., with use of disease modifying agents, corticosteroids, or immunosuppressive drugs). Replacement therapy (e.g., thyroxine, insulin, or physiologic corticosteroid replacement therapy for adrenal or pituitary insufficiency) is not considered a form of systemic treatment and is allowed.",
+        "reasonFuzzy": "Active autoimmune disease and systemic treatment history requires clinical evaluation."
+      },
+      {
+        "id": "NCT05107674-gi",
+        "polarity": "exclusion",
+        "sourceText": "Unable to swallow capsules or has malabsorption syndrome, disease significantly affecting gastrointestinal function, or resection of the stomach or small bowel or ulcerative colitis, symptomatic inflammatory bowel disease, or partial or complete bowel obstruction likely to interfere with the delivery, absorption, or metabolism of NX-1607.",
+        "reasonFuzzy": "Gastrointestinal absorption issues and resections are clinical determinations."
+      },
+      {
+        "id": "NCT05107674-allergy",
+        "polarity": "exclusion",
+        "sourceText": "Known allergies, hypersensitivity, or intolerance to components of NX-1607.",
+        "reasonFuzzy": "Allergy or hypersensitivity to study drug is a standard exclusion without a typed kind."
+      },
+      {
+        "id": "NCT05107674-preg",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant, breastfeeding, or planning to become pregnant while enrolled in this study or within 6 months after the last dose of NX-1607.",
+        "reasonFuzzy": "Pregnancy and breastfeeding status are clinical exclusions."
+      },
+      {
+        "id": "NCT05107674-father",
+        "polarity": "exclusion",
+        "sourceText": "Patient is a man who plans to father a child while enrolled in this study or within 3 months after the last dose of NX-1607 and, as applicable, within 6 months after the last dose of paclitaxel.",
+        "reasonFuzzy": "Reproductive plans are not typed checks."
+      },
+      {
+        "id": "NCT05107674-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Patient has had major surgery (e.g., requiring general anesthesia) within 4 weeks before the planned first dose of NX-1607, or will not have fully recovered from surgery, or has surgery planned during the time the patient is expected to participate in the study or within 4 weeks after the last dose of NX-1607. Note: Patients with minor planned surgical procedures to be conducted under local anesthesia may participate.",
+        "reasonFuzzy": "Major surgery washout and recovery criteria are not typed checks."
+      },
+      {
+        "id": "NCT05107674-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Vaccinated with a live vaccine within 28 days (with the exception of the annual inactivated influenza vaccine) or COVID-19 vaccination within 14 days prior to the first dose of NX-1607.",
+        "reasonFuzzy": "Vaccine timing rules are not typed checks."
+      },
+      {
+        "id": "NCT05107674-secondmalig",
+        "polarity": "exclusion",
+        "sourceText": "Active known second malignancy with the exception of any of the following: Adequately treated basal cell carcinoma, squamous cell carcinoma of the skin, or in situ cervical cancer. Adequately treated Stage I cancer from which the patient is currently in remission and has been in remission for ≥ 2 years. Low-risk prostate cancer with Gleason score < 7 and PSA < 10 ng/mL. Any other cancer from which the patient has been disease-free for ≥ 2 years.",
+        "reasonFuzzy": "Second malignancy exceptions involve complex conditional cancer history."
+      },
+      {
+        "id": "NCT05107674-hiv",
+        "polarity": "exclusion",
+        "sourceText": "Infection with human immunodeficiency virus (HIV)-1 or HIV-2. Exception: Patients with well controlled HIV (e.g., CD4 > 350/mm3 and undetectable viral load) are eligible.",
+        "reasonFuzzy": "HIV infection and well-controlled exception criteria are not typed lab checks."
+      },
+      {
+        "id": "NCT05107674-hepatitis",
+        "polarity": "exclusion",
+        "sourceText": "Current active hepatitis, including hepatitis A (hepatitis A virus immunoglobulin M [IgM] positive), hepatitis B (hepatitis B virus [HBV] surface antigen positive), or hepatitis C (hepatitis C virus [HCV] antibody positive, confirmed by HCV RNA). Patients with HCV with undetectable virus after treatment are eligible. Patients with prior exposure to HBV may be entered if quantitative PCR is negative.",
+        "reasonFuzzy": "Hepatitis serology and PCR exceptions are complex virologic evaluations."
+      },
+      {
+        "id": "NCT05107674-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Use of systemic corticosteroids (> 20 mg prednisone or equivalent) within 15 days (except for prophylaxis for radio diagnostic contrast reactions and/or prophylaxis for patients receiving paclitaxel), or other immunosuppressive drugs within 30 days, prior to the first dose of NX-1607.",
+        "reasonFuzzy": "Systemic corticosteroid dose and timing exceptions are complex medication restrictions."
+      },
+      {
+        "id": "NCT05107674-biotin",
+        "polarity": "exclusion",
+        "sourceText": "Use of biotin (i.e., Vitamin B7) or supplements containing biotin higher than the daily adequate intake of 30 µg [NIH 2020] (Note: Patients who switch from a high dose to a dose of 30 µg/day or less at least 1 day prior to Screening assessments are eligible for study entry).",
+        "reasonFuzzy": "Biotin supplement restriction is not a typed check."
+      },
+      {
+        "id": "NCT05107674-ip",
+        "polarity": "exclusion",
+        "sourceText": "Receipt of an IP or has been treated with an investigational device within 3 weeks or 5 half-lives (whichever is shorter) prior to the first dose of NX-1607.",
+        "reasonFuzzy": "Prior investigational product or device washout is not a typed prior therapy exclusion."
+      },
+      {
+        "id": "NCT05107674-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Any of the following within 6 months prior to the first dose of NX-1607 or ongoing: Myocardial infarction, Unstable angina, Unstable symptomatic ischemic heart disease, New York Heart Association Class III or IV heart failure, Thromboembolic events (e.g., deep vein thrombosis, pulmonary embolism, or symptomatic cerebrovascular events), Any other significant cardiac condition (e.g., pericardial effusion, restrictive cardiomyopathy, severe untreated valvular stenosis, or severe congenital heart disease), Has a history or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the participant's participation for the full duration of the study, or is not in the best interest of the participant to participate, in the opinion of the treating Investigator in consultation with the Medical Monitor.",
+        "reasonFuzzy": "Comprehensive cardiac conditions and investigator discretion are subjective clinical exclusions."
+      }
+    ]
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07085091",
+  "briefTitle": "A First in Human Study of ALX2004 With Advanced or Metastatic Selected Solid Tumors",
+  "parsedAt": "2026-11-12T10:44:37.407Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07085091-lines",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC - For participants with a targetable molecular alteration: received appropriate standard targeted therapy and no more than 2 prior lines of systemic chemotherapy in the advanced/metastatic setting. For participants without a targetable molecular alteration: received platinum-based chemotherapy and CPI (in combination or separately), and have received no more than 2 prior lines of systemic chemotherapy in the advanced/metastatic setting",
+      "reasonFuzzy": "Prior line requirements and prior therapies differ based on tumor subtype and molecular alteration status, preventing a simple universal typed check."
+    },
+    {
+      "id": "NCT07085091-bone-marrow",
+      "polarity": "inclusion",
+      "sourceText": "Adequate Bone Marrow Function",
+      "reasonFuzzy": "Qualitative bone marrow function without specific numeric cutoffs is subjective."
+    },
+    {
+      "id": "NCT07085091-renal-liver",
+      "polarity": "inclusion",
+      "sourceText": "Adequate Renal & Liver Function",
+      "reasonFuzzy": "Qualitative renal and liver function without specific lab cutoffs is subjective."
+    },
+    {
+      "id": "NCT07085091-performance-status",
+      "polarity": "inclusion",
+      "sourceText": "Adequate Performance Status",
+      "reasonFuzzy": "General adequate performance status without a specific scale or numeric threshold cannot be expressed as a typed ECOG check."
+    },
+    {
+      "id": "NCT07085091-life-expectancy",
+      "polarity": "exclusion",
+      "sourceText": "Has a life expectancy of less than 3 months and/or has rapidly progressing disease (e.g., tumor bleeding, uncontrolled tumor pain) in the opinion of the treating investigator",
+      "reasonFuzzy": "Life expectancy and rapidly progressing disease are subjective investigator assessments."
+    },
+    {
+      "id": "NCT07085091-age",
+      "polarity": "inclusion",
+      "sourceText": "18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07085091-stage",
+      "polarity": "inclusion",
+      "sourceText": "Participants with locally advanced, recurrent or metastatic histologically confirmed HNSCC, NSCLC, ESCC, CRC; locally advanced or recurrent disease must not be amenable to resection with curative intent",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no explicit numbered stage list."
+    },
+    {
+      "id": "NCT07085091-lines",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC - For participants with a targetable molecular alteration: received appropriate standard targeted therapy and no more than 2 prior lines of systemic chemotherapy in the advanced/metastatic setting. For participants without a targetable molecular alteration: received platinum-based chemotherapy and CPI (in combination or separately), and have received no more than 2 prior lines of systemic chemotherapy in the advanced/metastatic setting",
+      "reasonFuzzy": "Prior-line and prior therapy requirements depend on mutation status and study cohort subsets, which cannot be expressed as a single typed prior_lines or prior_therapy check."
+    },
+    {
+      "id": "NCT07085091-bone-marrow",
+      "polarity": "inclusion",
+      "sourceText": "Adequate Bone Marrow Function",
+      "reasonFuzzy": "General statement for bone marrow function without explicit lab cutoffs."
+    },
+    {
+      "id": "NCT07085091-renal-liver",
+      "polarity": "inclusion",
+      "sourceText": "Adequate Renal & Liver Function",
+      "reasonFuzzy": "General statement for renal and liver function without explicit lab cutoffs."
+    },
+    {
+      "id": "NCT07085091-performance",
+      "polarity": "inclusion",
+      "sourceText": "Adequate Performance Status",
+      "reasonFuzzy": "General performance status statement without an explicit ECOG or Karnofsky score."
+    },
+    {
+      "id": "NCT07085091-life-expectancy",
+      "polarity": "exclusion",
+      "sourceText": "Has a life expectancy of less than 3 months and/or has rapidly progressing disease (e.g., tumor bleeding, uncontrolled tumor pain) in the opinion of the treating investigator",
+      "reasonFuzzy": "Life expectancy and investigator opinion are subjective clinical assessments."
+    },
+    {
+      "id": "NCT07085091-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07085091-adc",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with any ADCs that have an active TOP1 inhibitor-based component",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:adcs that have an active top1 inhibitor-based component"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3887
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 5040
+  },
+  "ms": 16869,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07085091",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07085091-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07085091-adc",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with any ADCs that have an active TOP1 inhibitor-based component",
+        "stringValue": "ADCs that have an active TOP1 inhibitor-based component"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07085091-lines",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC - For participants with a targetable molecular alteration: received appropriate standard targeted therapy and no more than 2 prior lines of systemic chemotherapy in the advanced/metastatic setting. For participants without a targetable molecular alteration: received platinum-based chemotherapy and CPI (in combination or separately), and have received no more than 2 prior lines of systemic chemotherapy in the advanced/metastatic setting",
+        "reasonFuzzy": "Prior line requirements and prior therapies differ based on tumor subtype and molecular alteration status, preventing a simple universal typed check."
+      },
+      {
+        "id": "NCT07085091-bone-marrow",
+        "polarity": "inclusion",
+        "sourceText": "Adequate Bone Marrow Function",
+        "reasonFuzzy": "Qualitative bone marrow function without specific numeric cutoffs is subjective."
+      },
+      {
+        "id": "NCT07085091-renal-liver",
+        "polarity": "inclusion",
+        "sourceText": "Adequate Renal & Liver Function",
+        "reasonFuzzy": "Qualitative renal and liver function without specific lab cutoffs is subjective."
+      },
+      {
+        "id": "NCT07085091-performance-status",
+        "polarity": "inclusion",
+        "sourceText": "Adequate Performance Status",
+        "reasonFuzzy": "General adequate performance status without a specific scale or numeric threshold cannot be expressed as a typed ECOG check."
+      },
+      {
+        "id": "NCT07085091-life-expectancy",
+        "polarity": "exclusion",
+        "sourceText": "Has a life expectancy of less than 3 months and/or has rapidly progressing disease (e.g., tumor bleeding, uncontrolled tumor pain) in the opinion of the treating investigator",
+        "reasonFuzzy": "Life expectancy and rapidly progressing disease are subjective investigator assessments."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07085091",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07085091-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07085091-prior-adc",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with any ADCs that have an active TOP1 inhibitor-based component",
+        "stringValue": "ADCs that have an active TOP1 inhibitor-based component"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07085091-stage",
+        "polarity": "inclusion",
+        "sourceText": "Participants with locally advanced, recurrent or metastatic histologically confirmed HNSCC, NSCLC, ESCC, CRC; locally advanced or recurrent disease must not be amenable to resection with curative intent",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no explicit numbered stage list."
+      },
+      {
+        "id": "NCT07085091-lines",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC - For participants with a targetable molecular alteration: received appropriate standard targeted therapy and no more than 2 prior lines of systemic chemotherapy in the advanced/metastatic setting. For participants without a targetable molecular alteration: received platinum-based chemotherapy and CPI (in combination or separately), and have received no more than 2 prior lines of systemic chemotherapy in the advanced/metastatic setting",
+        "reasonFuzzy": "Prior-line and prior therapy requirements depend on mutation status and study cohort subsets, which cannot be expressed as a single typed prior_lines or prior_therapy check."
+      },
+      {
+        "id": "NCT07085091-bone-marrow",
+        "polarity": "inclusion",
+        "sourceText": "Adequate Bone Marrow Function",
+        "reasonFuzzy": "General statement for bone marrow function without explicit lab cutoffs."
+      },
+      {
+        "id": "NCT07085091-renal-liver",
+        "polarity": "inclusion",
+        "sourceText": "Adequate Renal & Liver Function",
+        "reasonFuzzy": "General statement for renal and liver function without explicit lab cutoffs."
+      },
+      {
+        "id": "NCT07085091-performance",
+        "polarity": "inclusion",
+        "sourceText": "Adequate Performance Status",
+        "reasonFuzzy": "General performance status statement without an explicit ECOG or Karnofsky score."
+      },
+      {
+        "id": "NCT07085091-life-expectancy",
+        "polarity": "exclusion",
+        "sourceText": "Has a life expectancy of less than 3 months and/or has rapidly progressing disease (e.g., tumor bleeding, uncontrolled tumor pain) in the opinion of the treating investigator",
+        "reasonFuzzy": "Life expectancy and investigator opinion are subjective clinical assessments."
+      }
+    ]
+  }
+}

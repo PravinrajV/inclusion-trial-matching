@@ -1,0 +1,313 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07169734",
+  "briefTitle": "A Study to Investigate ALE.P03 as Monotherapy in Adult Patients With Selected Advanced or Metastatic CLDN1+ Solid Tumors",
+  "parsedAt": "2026-11-12T10:59:22.234Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07169734-age",
+      "polarity": "inclusion",
+      "sourceText": "Adult Patients With Selected Advanced or Metastatic CLDN1+ Solid Tumors",
+      "reasonFuzzy": "Age is listed in the trial metadata as minimum 18 Years, but the text phrasing refers generally to adult patients."
+    },
+    {
+      "id": "NCT07169734-lines",
+      "polarity": "inclusion",
+      "sourceText": "Received 1-2 available systemic SOC regimens (based on local institutional guidelines) for advanced disease and being refractory or intolerant to treatment.",
+      "reasonFuzzy": "Prior line requirements differ by phase (Dose Escalation vs RDE/Phase II), so they cannot be expressed as a single universal prior_lines check."
+    },
+    {
+      "id": "NCT07169734-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST 1.1, as determined by the site.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07169734-washout",
+      "polarity": "exclusion",
+      "sourceText": "Has received antineoplastic therapies prior to study intervention within specified time frame.",
+      "reasonFuzzy": "The specified time frame washout window is not a simple lab cutoff and cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT07169734-age",
+      "polarity": "inclusion",
+      "sourceText": "Adult Patients",
+      "reasonFuzzy": "Adult age is not explicitly defined with a numeric cutoff in the eligibility text provided, though minimumAge is 18 years."
+    },
+    {
+      "id": "NCT07169734-stage",
+      "polarity": "inclusion",
+      "sourceText": "metastatic confirmed advanced or metastatic colorectal cancer, intrahepatic cholangiocarcinoma, squamous non-small cell lung cancer, urothelial carcinoma, and cervical squamous cell carcinoma.",
+      "reasonFuzzy": "Advanced or metastatic phrasing without specific stage lists."
+    },
+    {
+      "id": "NCT07169734-lines",
+      "polarity": "inclusion",
+      "sourceText": "Phase I RDE and Phase II: Received 1-2 available systemic SOC regimens (based on local institutional guidelines) for advanced disease and being refractory or intolerant to treatment.",
+      "reasonFuzzy": "Prior lines limits vary by trial phase, not applicable uniformly as a single typed check."
+    },
+    {
+      "id": "NCT07169734-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST 1.1, as determined by the site.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07169734-organ",
+      "polarity": "inclusion",
+      "sourceText": "Demonstrate adequate bone marrow and organ function as per the protocol.",
+      "reasonFuzzy": "Adequate organ function without explicit lab cutoffs is a fuzzy criterion."
+    },
+    {
+      "id": "NCT07169734-histology-excl",
+      "polarity": "exclusion",
+      "sourceText": "SqNSCLC and CSCC: diagnosed with a tumor of predominantly non-squamous histology result or adenocarcinoma.",
+      "reasonFuzzy": "Exclusion of non-squamous histology for squamous lung cancer matches the inclusion criteria."
+    },
+    {
+      "id": "NCT07169734-washout",
+      "polarity": "exclusion",
+      "sourceText": "Has received antineoplastic therapies prior to study intervention within specified time frame.",
+      "reasonFuzzy": "Washout window is unspecified in text."
+    },
+    {
+      "id": "NCT07169734-histology-excl",
+      "polarity": "exclusion",
+      "sourceText": "SqNSCLC and CSCC: diagnosed with a tumor of predominantly non-squamous histology result or adenocarcinoma.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07169734-histology",
+      "polarity": "inclusion",
+      "sourceText": "squamous non-small cell lung cancer",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07169734-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Have a performance status of 0 or 1 on the Eastern Cooperative Oncology Groups Performance Status.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07169734-brain",
+      "polarity": "exclusion",
+      "sourceText": "Has known active central nervous system metastases and/or carcinomatous meningitis.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "histology_in",
+          "polarity": "exclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:squamous"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 3173
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 4055
+  },
+  "ms": 15218,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07169734",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07169734-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "squamous non-small cell lung cancer",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT07169734-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have a performance status of 0 or 1 on the Eastern Cooperative Oncology Groups Performance Status.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07169734-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active central nervous system metastases and/or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT07169734-histology-excl",
+        "kind": "histology_in",
+        "polarity": "exclusion",
+        "sourceText": "SqNSCLC and CSCC: diagnosed with a tumor of predominantly non-squamous histology result or adenocarcinoma.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07169734-age",
+        "polarity": "inclusion",
+        "sourceText": "Adult Patients With Selected Advanced or Metastatic CLDN1+ Solid Tumors",
+        "reasonFuzzy": "Age is listed in the trial metadata as minimum 18 Years, but the text phrasing refers generally to adult patients."
+      },
+      {
+        "id": "NCT07169734-lines",
+        "polarity": "inclusion",
+        "sourceText": "Received 1-2 available systemic SOC regimens (based on local institutional guidelines) for advanced disease and being refractory or intolerant to treatment.",
+        "reasonFuzzy": "Prior line requirements differ by phase (Dose Escalation vs RDE/Phase II), so they cannot be expressed as a single universal prior_lines check."
+      },
+      {
+        "id": "NCT07169734-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST 1.1, as determined by the site.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07169734-washout",
+        "polarity": "exclusion",
+        "sourceText": "Has received antineoplastic therapies prior to study intervention within specified time frame.",
+        "reasonFuzzy": "The specified time frame washout window is not a simple lab cutoff and cannot be expressed as a single typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07169734",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07169734-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "squamous non-small cell lung cancer",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT07169734-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have a performance status of 0 or 1 on the Eastern Cooperative Oncology Groups Performance Status.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07169734-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active central nervous system metastases and/or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07169734-age",
+        "polarity": "inclusion",
+        "sourceText": "Adult Patients",
+        "reasonFuzzy": "Adult age is not explicitly defined with a numeric cutoff in the eligibility text provided, though minimumAge is 18 years."
+      },
+      {
+        "id": "NCT07169734-stage",
+        "polarity": "inclusion",
+        "sourceText": "metastatic confirmed advanced or metastatic colorectal cancer, intrahepatic cholangiocarcinoma, squamous non-small cell lung cancer, urothelial carcinoma, and cervical squamous cell carcinoma.",
+        "reasonFuzzy": "Advanced or metastatic phrasing without specific stage lists."
+      },
+      {
+        "id": "NCT07169734-lines",
+        "polarity": "inclusion",
+        "sourceText": "Phase I RDE and Phase II: Received 1-2 available systemic SOC regimens (based on local institutional guidelines) for advanced disease and being refractory or intolerant to treatment.",
+        "reasonFuzzy": "Prior lines limits vary by trial phase, not applicable uniformly as a single typed check."
+      },
+      {
+        "id": "NCT07169734-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST 1.1, as determined by the site.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07169734-organ",
+        "polarity": "inclusion",
+        "sourceText": "Demonstrate adequate bone marrow and organ function as per the protocol.",
+        "reasonFuzzy": "Adequate organ function without explicit lab cutoffs is a fuzzy criterion."
+      },
+      {
+        "id": "NCT07169734-histology-excl",
+        "polarity": "exclusion",
+        "sourceText": "SqNSCLC and CSCC: diagnosed with a tumor of predominantly non-squamous histology result or adenocarcinoma.",
+        "reasonFuzzy": "Exclusion of non-squamous histology for squamous lung cancer matches the inclusion criteria."
+      },
+      {
+        "id": "NCT07169734-washout",
+        "polarity": "exclusion",
+        "sourceText": "Has received antineoplastic therapies prior to study intervention within specified time frame.",
+        "reasonFuzzy": "Washout window is unspecified in text."
+      }
+    ]
+  }
+}

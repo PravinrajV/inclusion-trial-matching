@@ -1,0 +1,252 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07063745",
+  "briefTitle": "A Study to Compare the Combination of Navlimetostat (BMS-986504) With Pembrolizumab and Chemotherapy Versus Placebo Plus Pembrolizumab and Chemotherapy in First-line Metastatic Non-small Cell Lung Cancer Participants With Homozygous MTAP Deletion",
+  "parsedAt": "2026-11-12T10:44:05.252Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07063745-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have Metastatic (Stage IV or recurrent) non-small cell lung cancer (NSCLC) (as defined by the American Joint Committee on Cancer, Ninth Edition) with no prior systemic anti-cancer therapy for metastatic disease.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Participants must have Metastatic (Stage IV or recurrent) non-small cell lung cancer (NSCLC) (as defined by the American Joint Committee on Cancer, Ninth Edition) with no prior systemic anti-cancer therapy for metastatic disease.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07063745-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have an Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "Participants must have an Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07063745-mtap",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have histologically confirmed diagnosis of NSCLC and homozygous methylthioadenosine phosphorylase (MTAP) deletion or MTAP loss.",
+      "reasonFuzzy": "There is no typed check for MTAP deletion or loss."
+    },
+    {
+      "id": "NCT07063745-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have at least 1 measurable lesion as per RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07063745-aga",
+      "polarity": "exclusion",
+      "sourceText": "Nonsquamous participants must not have documented targetable oncogenic mutation or actionable genetic alterations (AGAs) for which there is a standard of care (SoC) available as first-line (1L) therapy.",
+      "reasonFuzzy": "This rule specifies actionable genetic alterations generally and is not restricted to specific typed biomarkers such as EGFR or ALK."
+    },
+    {
+      "id": "NCT07063745-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have symptomatic brain metastases or spinal cord compression.",
+      "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT07063745-mtap",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have histologically confirmed diagnosis of NSCLC and homozygous methylthioadenosine phosphorylase (MTAP) deletion or MTAP loss.",
+      "reasonFuzzy": "Homozygous MTAP deletion is not a standard typed biomarker kind in the schema."
+    },
+    {
+      "id": "NCT07063745-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have at least 1 measurable lesion as per RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07063745-targetable",
+      "polarity": "exclusion",
+      "sourceText": "Nonsquamous participants must not have documented targetable oncogenic mutation or actionable genetic alterations (AGAs) for which there is a standard of care (SoC) available as first-line (1L) therapy.",
+      "reasonFuzzy": "This exclusion covers general targetable oncogenic mutations for nonsquamous histology, which is not a single typed variant or gene status kind."
+    },
+    {
+      "id": "NCT07063745-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have symptomatic brain metastases or spinal cord compression.",
+      "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT07063745-prior-systemic",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have Metastatic (Stage IV or recurrent) non-small cell lung cancer (NSCLC) (as defined by the American Joint Committee on Cancer, Ninth Edition) with no prior systemic anti-cancer therapy for metastatic disease.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "value": "n:0"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 8370
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 4,
+    "attempts": 2,
+    "ms": 11491
+  },
+  "ms": 27840,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07063745",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07063745-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have Metastatic (Stage IV or recurrent) non-small cell lung cancer (NSCLC) (as defined by the American Joint Committee on Cancer, Ninth Edition) with no prior systemic anti-cancer therapy for metastatic disease.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07063745-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07063745-prior-systemic",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have Metastatic (Stage IV or recurrent) non-small cell lung cancer (NSCLC) (as defined by the American Joint Committee on Cancer, Ninth Edition) with no prior systemic anti-cancer therapy for metastatic disease.",
+        "numberValue": 0
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07063745-mtap",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically confirmed diagnosis of NSCLC and homozygous methylthioadenosine phosphorylase (MTAP) deletion or MTAP loss.",
+        "reasonFuzzy": "There is no typed check for MTAP deletion or loss."
+      },
+      {
+        "id": "NCT07063745-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have at least 1 measurable lesion as per RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07063745-aga",
+        "polarity": "exclusion",
+        "sourceText": "Nonsquamous participants must not have documented targetable oncogenic mutation or actionable genetic alterations (AGAs) for which there is a standard of care (SoC) available as first-line (1L) therapy.",
+        "reasonFuzzy": "This rule specifies actionable genetic alterations generally and is not restricted to specific typed biomarkers such as EGFR or ALK."
+      },
+      {
+        "id": "NCT07063745-brain",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have symptomatic brain metastases or spinal cord compression.",
+        "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07063745",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07063745-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have Metastatic (Stage IV or recurrent) non-small cell lung cancer (NSCLC) (as defined by the American Joint Committee on Cancer, Ninth Edition) with no prior systemic anti-cancer therapy for metastatic disease.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07063745-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07063745-prior-systemic",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have Metastatic (Stage IV or recurrent) non-small cell lung cancer (NSCLC) (as defined by the American Joint Committee on Cancer, Ninth Edition) with no prior systemic anti-cancer therapy for metastatic disease.",
+        "numberValue": 0
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07063745-mtap",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically confirmed diagnosis of NSCLC and homozygous methylthioadenosine phosphorylase (MTAP) deletion or MTAP loss.",
+        "reasonFuzzy": "Homozygous MTAP deletion is not a standard typed biomarker kind in the schema."
+      },
+      {
+        "id": "NCT07063745-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have at least 1 measurable lesion as per RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07063745-targetable",
+        "polarity": "exclusion",
+        "sourceText": "Nonsquamous participants must not have documented targetable oncogenic mutation or actionable genetic alterations (AGAs) for which there is a standard of care (SoC) available as first-line (1L) therapy.",
+        "reasonFuzzy": "This exclusion covers general targetable oncogenic mutations for nonsquamous histology, which is not a single typed variant or gene status kind."
+      },
+      {
+        "id": "NCT07063745-brain",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have symptomatic brain metastases or spinal cord compression.",
+        "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      }
+    ]
+  }
+}

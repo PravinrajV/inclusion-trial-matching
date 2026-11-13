@@ -1,0 +1,251 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06270706",
+  "briefTitle": "A Phase 1 Study of PLN-101095 in Adults With Advanced or Metastatic Solid Tumors",
+  "parsedAt": "2026-11-12T06:30:52.557Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06270706-brain",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Has known active CNS metastases (brain and/or leptomeningeal metastases)",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Has known active CNS metastases (brain and/or leptomeningeal metastases)",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06270706-scope",
+      "polarity": "inclusion",
+      "sourceText": "Has histologically or cytologically confirmed advanced or metastatic solid tumor",
+      "reasonFuzzy": "The study enrolls advanced or metastatic solid tumors in general and is not restricted to non-small cell lung cancer."
+    },
+    {
+      "id": "NCT06270706-age",
+      "polarity": "inclusion",
+      "sourceText": "A Phase 1 Study of PLN-101095 in Adults With Advanced or Metastatic Solid Tumors",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06270706-solidtumor",
+      "polarity": "inclusion",
+      "sourceText": "Has histologically or cytologically confirmed advanced or metastatic solid tumor",
+      "reasonFuzzy": "This trial is for general advanced or metastatic solid tumors, not specifically limited to non-small cell lung cancer, though solid tumors are in scope generally."
+    },
+    {
+      "id": "NCT06270706-benefit",
+      "polarity": "inclusion",
+      "sourceText": "Have demonstrated documented prior clinical benefit, defined as CR or PR at any time during treatment, or SD lasting ≥6 months (Part 2 only)",
+      "reasonFuzzy": "Clinical benefit definitions and part-specific rules are complex and subjective imaging assessments."
+    },
+    {
+      "id": "NCT06270706-progression",
+      "polarity": "inclusion",
+      "sourceText": "Must have subsequently developed radiographic disease progression while receiving anti-PD-1 or anti-PD-L1 treatment or within ≤12 weeks after the last dose of such treatment",
+      "reasonFuzzy": "Radiographic disease progression timing rules are clinical judgments."
+    },
+    {
+      "id": "NCT06270706-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least 1 measurable lesion, as defined by RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06270706-survival",
+      "polarity": "inclusion",
+      "sourceText": "Estimated survival of ≥3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06270706-organs",
+      "polarity": "inclusion",
+      "sourceText": "Have adequate bone marrow and organ function.",
+      "reasonFuzzy": "Adequate organ function without explicit lab cutoffs is qualitative."
+    },
+    {
+      "id": "NCT06270706-age",
+      "polarity": "inclusion",
+      "sourceText": "Adults With Advanced or Metastatic Solid Tumors",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06270706-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Have received ≥12 weeks of continuous anti-PD-1 or anti-PD-L1 treatment administered as monotherapy or in combination with other anticancer therapies",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "A Phase 1 Study of PLN-101095 in Adults With Advanced or Metastatic Solid Tumors"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Adults With Advanced or Metastatic Solid Tumors"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:anti-pd-1 or anti-pd-l1"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 13989
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 6751
+  },
+  "ms": 28733,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06270706",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06270706-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "A Phase 1 Study of PLN-101095 in Adults With Advanced or Metastatic Solid Tumors",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06270706-pdl1",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Have received ≥12 weeks of continuous anti-PD-1 or anti-PD-L1 treatment administered as monotherapy or in combination with other anticancer therapies",
+        "stringValue": "anti-PD-1 or anti-PD-L1"
+      },
+      {
+        "id": "NCT06270706-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active CNS metastases (brain and/or leptomeningeal metastases)",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06270706-scope",
+        "polarity": "inclusion",
+        "sourceText": "Has histologically or cytologically confirmed advanced or metastatic solid tumor",
+        "reasonFuzzy": "The study enrolls advanced or metastatic solid tumors in general and is not restricted to non-small cell lung cancer."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06270706",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06270706-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adults With Advanced or Metastatic Solid Tumors",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06270706-pdl1",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Have received ≥12 weeks of continuous anti-PD-1 or anti-PD-L1 treatment administered as monotherapy or in combination with other anticancer therapies",
+        "stringValue": "anti-PD-1 or anti-PD-L1"
+      },
+      {
+        "id": "NCT06270706-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active CNS metastases (brain and/or leptomeningeal metastases)",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06270706-solidtumor",
+        "polarity": "inclusion",
+        "sourceText": "Has histologically or cytologically confirmed advanced or metastatic solid tumor",
+        "reasonFuzzy": "This trial is for general advanced or metastatic solid tumors, not specifically limited to non-small cell lung cancer, though solid tumors are in scope generally."
+      },
+      {
+        "id": "NCT06270706-benefit",
+        "polarity": "inclusion",
+        "sourceText": "Have demonstrated documented prior clinical benefit, defined as CR or PR at any time during treatment, or SD lasting ≥6 months (Part 2 only)",
+        "reasonFuzzy": "Clinical benefit definitions and part-specific rules are complex and subjective imaging assessments."
+      },
+      {
+        "id": "NCT06270706-progression",
+        "polarity": "inclusion",
+        "sourceText": "Must have subsequently developed radiographic disease progression while receiving anti-PD-1 or anti-PD-L1 treatment or within ≤12 weeks after the last dose of such treatment",
+        "reasonFuzzy": "Radiographic disease progression timing rules are clinical judgments."
+      },
+      {
+        "id": "NCT06270706-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least 1 measurable lesion, as defined by RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06270706-survival",
+        "polarity": "inclusion",
+        "sourceText": "Estimated survival of ≥3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06270706-organs",
+        "polarity": "inclusion",
+        "sourceText": "Have adequate bone marrow and organ function.",
+        "reasonFuzzy": "Adequate organ function without explicit lab cutoffs is qualitative."
+      }
+    ]
+  }
+}

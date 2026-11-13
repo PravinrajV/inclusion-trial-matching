@@ -1,0 +1,663 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07393555",
+  "briefTitle": "Treatment for Advanced Non-small Cell Lung Cancer With Actionable Genomic Alterations After Targeted Treatment and Chemotherapy (An Expanded Lung-MAP Treatment Trial)",
+  "parsedAt": "2026-11-12T11:52:56.011Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07393555-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have previously received platinum-based chemotherapy for stage IV or recurrent disease.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Participants must have previously received platinum-based chemotherapy for stage IV or recurrent disease.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07393555-prior-platinum",
+      "kind": "prior_therapy_required",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have previously received platinum-based chemotherapy for stage IV or recurrent disease.",
+      "stringValue": "platinum-based chemotherapy",
+      "evidence_quote": "Participants must have previously received platinum-based chemotherapy for stage IV or recurrent disease.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07393555-hgb",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin >= 10.0 g/dL (within 28 days prior to randomization)",
+      "numberValue": 10,
+      "evidence_quote": "Hemoglobin >= 10.0 g/dL (within 28 days prior to randomization)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07393555-egfr-min",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have calculated creatinine clearance ≥ 50 mL/min using the following Cockcroft-Gault Formula. This specimen must have been drawn and processed within 28 days prior to randomization.",
+      "numberValue": 50,
+      "evidence_quote": "Participants must have calculated creatinine clearance ≥ 50 mL/min using the following Cockcroft-Gault Formula. This specimen must have been drawn and processed within 28 days prior to randomization.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07393555-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have measurable disease documented by CT or MRI...",
+      "reasonFuzzy": "Measurable disease by RECIST/imaging is a subjective assessment, not a typed kind."
+    },
+    {
+      "id": "NCT07393555-brain",
+      "polarity": "inclusion",
+      "sourceText": "Participants with spinal cord compression or brain metastases must not have residual neurological dysfunction... Participants with spinal cord compression or brain metastases that require local treatment must have received local treatment...",
+      "reasonFuzzy": "Brain metastases are mentioned in the context of neurological function and prior local therapy timelines rather than a simple allowed status check."
+    },
+    {
+      "id": "NCT07393555-aga",
+      "polarity": "inclusion",
+      "sourceText": "Assignment to S1900N is determined by submission of documentation of NSCLC harboring an actionable genomic alteration (AGA)...",
+      "reasonFuzzy": "Actionable genomic alteration covers multiple specific genes (ALK, EGFR, HER2, MET, NTRK, RET, ROS1) which are best handled via fuzzy or multiple specific checks, but the rule requires multi-gene tracking beyond single typed status kinds."
+    },
+    {
+      "id": "NCT07393555-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07393555-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count ≥ 1.5 x 10^3/uL (within 28 days prior to randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07393555-plt",
+      "polarity": "inclusion",
+      "sourceText": "Platelets ≥ 100 x 10^3/uL (within 28 days prior to randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07393555-aga",
+      "polarity": "inclusion",
+      "sourceText": "Assignment to S1900N is determined by submission of documentation of NSCLC harboring an actionable genomic alteration (AGA) in the LUNGMAP protocol. AGA is defined in this protocol as an activating driver alteration with an approved targeted therapy for lung cancer in one of the following genes: ALK, EGFR, HER2 (ERBB2), MET, NTRK, RET, and ROS1.",
+      "reasonFuzzy": "Multiple specific genes and alterations are listed which require complex evaluation beyond a single standard gene status check."
+    },
+    {
+      "id": "NCT07393555-measurable-disease",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have measurable disease documented by CT or MRI. The CT from a combined positron emission tomography (PET)/CT may be used to document only non-measurable disease unless it is of diagnostic quality. Measurable disease must be assessed within 28 days prior to randomization. Pleural effusions, ascites and laboratory parameters are not acceptable as the only evidence of disease. Non-measurable disease must be assessed within 42 days prior to randomization. All disease must be assessed and documented on the Baseline Tumor Assessment Form. Participants whose only measurable disease is within a previous radiation therapy port must demonstrate clearly progressive disease (in the opinion of the treating investigator) prior to randomization.",
+      "reasonFuzzy": "Measurable disease assessment via RECIST/imaging and investigator opinion are subjective judgment criteria."
+    },
+    {
+      "id": "NCT07393555-brain-mets",
+      "polarity": "inclusion",
+      "sourceText": "Participants with spinal cord compression or brain metastases must not have residual neurological dysfunction, unless no further recovery is expected, and the participant has been stable on weaning doses of corticosteroids (<= 10 mg daily prednisone or equivalent) prior to randomization. Participants with spinal cord compression or brain metastases that require local treatment must have received local treatment to these metastases and remained clinically controlled and asymptomatic for at least 7 days following stereotactic radiation and/or 14 days following whole brain radiation, and prior to randomization.",
+      "reasonFuzzy": "Complex stability rules involving neurological status, corticosteroid dosage, and local treatments for brain metastases cannot be cleanly captured by a simple allowedBrainMets kind."
+    },
+    {
+      "id": "NCT07393555-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have leptomeningeal disease that requires CNS-specific treatment prior to randomization and must not be planning to receive the CNS-specific treatment while on study.",
+      "reasonFuzzy": "Leptomeningeal disease and treatment planning requirements are subjective/complex rules."
+    },
+    {
+      "id": "NCT07393555-progression",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have progressed (in the opinion of the treating physician) during or following the most recent line of systemic therapy.",
+      "reasonFuzzy": "Disease progression relies on treating physician opinion."
+    },
+    {
+      "id": "NCT07393555-washout",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have received any systemic lung cancer therapy (except orally administered drugs) within 21 days prior to randomization. Orally administered lung cancer therapies must not have been administered within 10 days prior to randomization.",
+      "reasonFuzzy": "Multiple variable washout windows depending on therapy administration route."
+    },
+    {
+      "id": "NCT07393555-radiation",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have completed any prior radiation therapy within 7 days prior to randomization.",
+      "reasonFuzzy": "Radiation completion timeline and recovery are not standard lab or typed checks."
+    },
+    {
+      "id": "NCT07393555-recovery",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have recovered (<= Grade 1) from any side effects of prior therapy (except for alopecia) prior to randomization.",
+      "reasonFuzzy": "Adverse event toxicity recovery is an investigator judgment-based criterion."
+    },
+    {
+      "id": "NCT07393555-performance",
+      "polarity": "inclusion",
+      "sourceText": "Participants' most recent Zubrod performance status must be 0-1 and be documented within 28 days prior to randomization.",
+      "reasonFuzzy": "Zubrod performance status is similar to ECOG but uses a different scale not explicitly covered by ecog_max."
+    },
+    {
+      "id": "NCT07393555-cardiac",
+      "polarity": "inclusion",
+      "sourceText": "Participants with known history or current symptoms of cardiac disease, or history of treatment with cardiotoxic agents, must have a clinical risk assessment of cardiac function using the New York Heart Association Functional Classification. To be eligible for this trial, participants must be class 2B or better.",
+      "reasonFuzzy": "NYHA functional classification requires clinical risk assessment and judgment."
+    },
+    {
+      "id": "NCT07393555-thrombotic",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have experienced an arterial or venous thrombotic event or hemoptysis within 28 days prior to randomization.",
+      "reasonFuzzy": "Complex exclusion of specific thrombotic events and hemoptysis within a timeframe."
+    },
+    {
+      "id": "NCT07393555-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have a prior or concurrent malignancy whose natural history or treatment (in the opinion of the treating physician) has the potential to interfere with the safety or efficacy assessment of the investigational regimen.",
+      "reasonFuzzy": "Relies on treating physician opinion regarding potential interference of prior/concurrent malignancies."
+    },
+    {
+      "id": "NCT07393555-hiv-hep",
+      "polarity": "inclusion",
+      "sourceText": "Participants with known human immunodeficiency virus (HIV)-infection must be on effective anti-retroviral therapy and have undetectable viral load test on the most recent test results obtained within 6 months prior to randomization. Participants with evidence of chronic hepatitis B virus (HBV) infection must have undetectable HBV viral load while on suppressive therapy on the most recent test results obtained within 6 months prior to randomization. Participants with a history of hepatitis C virus (HCV) infection must have been treated and cured. Participants currently being treated for HCV infection must have undetectable HCV viral load test on the most recent test results obtained within 6 months prior to randomization.",
+      "reasonFuzzy": "Complex infectious disease status and viral load testing rules."
+    },
+    {
+      "id": "NCT07393555-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07393555-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count ≥ 1.5 x 10^3/uL (within 28 days prior to randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07393555-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelets ≥ 100 x 10^3/uL (within 28 days prior to randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07393555-prior-therapy-1",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have previously received an appropriate targeted therapy for the lung cancer AGA (ALK, EGFR, HER2 (ERBB2), MET, NTRK, RET, and ROS1).",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07393555-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have received no more than (<=) 3 lines of prior cytotoxic therapy (including chemotherapy, antibody-drug conjugates) for NSCLC.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07393555-excl-trop2",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have received prior TROP2-targeted antibody-drug conjugate or a systemic therapy containing sacituzumab govitecan/SN-38.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07393555-excl-pd1",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have received prior anti-PD-1 or anti-PD-L1 antibody therapy.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07393555-bili",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin ≤ 1.5 x institutional upper limit of normal (ULN) unless history of Gilbert's disease (within 28 days prior to randomization). Participants with history of Gilbert's disease must have total bilirubin ≤ 5 x institutional ULN.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07393555-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 3 × institutional ULN (within 28 days prior to randomization). Participants with history of liver metastasis must have AST and ALT ≤ 5 x ULN",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07393555-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 3 × institutional ULN (within 28 days prior to randomization). Participants with history of liver metastasis must have AST and ALT ≤ 5 x ULN",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 10,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        },
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count ≥ 1.5 x 10^3/uL (within 28 days prior to randomization)"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelets ≥ 100 x 10^3/uL (within 28 days prior to randomization)"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 11,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        },
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count ≥ 1.5 x 10^3/uL (within 28 days prior to randomization)"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelets ≥ 100 x 10^3/uL (within 28 days prior to randomization)"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 10,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:targeted therapy"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 6,
+      "rejectedItems": [
+        {
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:trop2-targeted antibody-drug conjugate"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-pd-1"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        }
+      ],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 13,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 10180
+  },
+  "runB": {
+    "typedEmitted": 14,
+    "fuzzyEmitted": 13,
+    "attempts": 1,
+    "ms": 12855
+  },
+  "ms": 31019,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07393555",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07393555-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07393555-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have previously received platinum-based chemotherapy for stage IV or recurrent disease.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07393555-prior-platinum",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have previously received platinum-based chemotherapy for stage IV or recurrent disease.",
+        "stringValue": "platinum-based chemotherapy"
+      },
+      {
+        "id": "NCT07393555-prior-lines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have received no more than (<=) 3 lines of prior cytotoxic therapy (including chemotherapy, antibody-drug conjugates) for NSCLC.",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT07393555-excl-trop2",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have received prior TROP2-targeted antibody-drug conjugate or a systemic therapy containing sacituzumab govitecan/SN-38.",
+        "stringValue": "TROP2-targeted antibody-drug conjugate"
+      },
+      {
+        "id": "NCT07393555-excl-pd1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have received prior anti-PD-1 or anti-PD-L1 antibody therapy.",
+        "stringValue": "anti-PD-1"
+      },
+      {
+        "id": "NCT07393555-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count ≥ 1.5 x 10^3/uL (within 28 days prior to randomization)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT07393555-hgb",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin >= 10.0 g/dL (within 28 days prior to randomization)",
+        "numberValue": 10
+      },
+      {
+        "id": "NCT07393555-plt",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 100 x 10^3/uL (within 28 days prior to randomization)",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT07393555-bili",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 x institutional upper limit of normal (ULN) unless history of Gilbert's disease (within 28 days prior to randomization). Participants with history of Gilbert's disease must have total bilirubin ≤ 5 x institutional ULN.",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "1.5 x institutional ULN (unless history of Gilbert's disease: 5 x ULN)"
+      },
+      {
+        "id": "NCT07393555-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 3 × institutional ULN (within 28 days prior to randomization). Participants with history of liver metastasis must have AST and ALT ≤ 5 x ULN",
+        "numberValue": 3,
+        "stringValue": "3 x institutional ULN (unless history of liver metastasis: 5 x ULN)"
+      },
+      {
+        "id": "NCT07393555-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 3 × institutional ULN (within 28 days prior to randomization). Participants with history of liver metastasis must have AST and ALT ≤ 5 x ULN",
+        "numberValue": 3,
+        "stringValue": "3 x institutional ULN (unless history of liver metastasis: 5 x ULN)"
+      },
+      {
+        "id": "NCT07393555-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have calculated creatinine clearance ≥ 50 mL/min using the following Cockcroft-Gault Formula. This specimen must have been drawn and processed within 28 days prior to randomization.",
+        "numberValue": 50
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07393555-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have measurable disease documented by CT or MRI...",
+        "reasonFuzzy": "Measurable disease by RECIST/imaging is a subjective assessment, not a typed kind."
+      },
+      {
+        "id": "NCT07393555-brain",
+        "polarity": "inclusion",
+        "sourceText": "Participants with spinal cord compression or brain metastases must not have residual neurological dysfunction... Participants with spinal cord compression or brain metastases that require local treatment must have received local treatment...",
+        "reasonFuzzy": "Brain metastases are mentioned in the context of neurological function and prior local therapy timelines rather than a simple allowed status check."
+      },
+      {
+        "id": "NCT07393555-aga",
+        "polarity": "inclusion",
+        "sourceText": "Assignment to S1900N is determined by submission of documentation of NSCLC harboring an actionable genomic alteration (AGA)...",
+        "reasonFuzzy": "Actionable genomic alteration covers multiple specific genes (ALK, EGFR, HER2, MET, NTRK, RET, ROS1) which are best handled via fuzzy or multiple specific checks, but the rule requires multi-gene tracking beyond single typed status kinds."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07393555",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07393555-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07393555-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have previously received platinum-based chemotherapy for stage IV or recurrent disease.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07393555-prior-therapy-1",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have previously received an appropriate targeted therapy for the lung cancer AGA (ALK, EGFR, HER2 (ERBB2), MET, NTRK, RET, and ROS1).",
+        "stringValue": "targeted therapy"
+      },
+      {
+        "id": "NCT07393555-prior-therapy-2",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have previously received platinum-based chemotherapy for stage IV or recurrent disease.",
+        "stringValue": "platinum-based chemotherapy"
+      },
+      {
+        "id": "NCT07393555-prior-lines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have received no more than (<=) 3 lines of prior cytotoxic therapy (including chemotherapy, antibody-drug conjugates) for NSCLC.",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT07393555-prior-therapy-ex-1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have received prior TROP2-targeted antibody-drug conjugate or a systemic therapy containing sacituzumab govitecan/SN-38.",
+        "stringValue": "TROP2-targeted antibody-drug conjugate"
+      },
+      {
+        "id": "NCT07393555-prior-therapy-ex-2",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have received prior anti-PD-1 or anti-PD-L1 antibody therapy.",
+        "stringValue": "anti-PD-1 or anti-PD-L1 antibody therapy"
+      },
+      {
+        "id": "NCT07393555-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count ≥ 1.5 x 10^3/uL (within 28 days prior to randomization)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT07393555-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin >= 10.0 g/dL (within 28 days prior to randomization)",
+        "numberValue": 10
+      },
+      {
+        "id": "NCT07393555-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 100 x 10^3/uL (within 28 days prior to randomization)",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT07393555-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 x institutional upper limit of normal (ULN) unless history of Gilbert's disease (within 28 days prior to randomization). Participants with history of Gilbert's disease must have total bilirubin ≤ 5 x institutional ULN.",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "1.5 x ULN (5 x ULN if history of Gilbert's disease)"
+      },
+      {
+        "id": "NCT07393555-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 3 × institutional ULN (within 28 days prior to randomization). Participants with history of liver metastasis must have AST and ALT ≤ 5 x ULN",
+        "numberValue": 3,
+        "stringValue": "3 x ULN (5 x ULN if history of liver metastasis)"
+      },
+      {
+        "id": "NCT07393555-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 3 × institutional ULN (within 28 days prior to randomization). Participants with history of liver metastasis must have AST and ALT ≤ 5 x ULN",
+        "numberValue": 3,
+        "stringValue": "3 x ULN (5 x ULN if history of liver metastasis)"
+      },
+      {
+        "id": "NCT07393555-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have calculated creatinine clearance ≥ 50 mL/min using the following Cockcroft-Gault Formula. This specimen must have been drawn and processed within 28 days prior to randomization.",
+        "numberValue": 50
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07393555-aga",
+        "polarity": "inclusion",
+        "sourceText": "Assignment to S1900N is determined by submission of documentation of NSCLC harboring an actionable genomic alteration (AGA) in the LUNGMAP protocol. AGA is defined in this protocol as an activating driver alteration with an approved targeted therapy for lung cancer in one of the following genes: ALK, EGFR, HER2 (ERBB2), MET, NTRK, RET, and ROS1.",
+        "reasonFuzzy": "Multiple specific genes and alterations are listed which require complex evaluation beyond a single standard gene status check."
+      },
+      {
+        "id": "NCT07393555-measurable-disease",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have measurable disease documented by CT or MRI. The CT from a combined positron emission tomography (PET)/CT may be used to document only non-measurable disease unless it is of diagnostic quality. Measurable disease must be assessed within 28 days prior to randomization. Pleural effusions, ascites and laboratory parameters are not acceptable as the only evidence of disease. Non-measurable disease must be assessed within 42 days prior to randomization. All disease must be assessed and documented on the Baseline Tumor Assessment Form. Participants whose only measurable disease is within a previous radiation therapy port must demonstrate clearly progressive disease (in the opinion of the treating investigator) prior to randomization.",
+        "reasonFuzzy": "Measurable disease assessment via RECIST/imaging and investigator opinion are subjective judgment criteria."
+      },
+      {
+        "id": "NCT07393555-brain-mets",
+        "polarity": "inclusion",
+        "sourceText": "Participants with spinal cord compression or brain metastases must not have residual neurological dysfunction, unless no further recovery is expected, and the participant has been stable on weaning doses of corticosteroids (<= 10 mg daily prednisone or equivalent) prior to randomization. Participants with spinal cord compression or brain metastases that require local treatment must have received local treatment to these metastases and remained clinically controlled and asymptomatic for at least 7 days following stereotactic radiation and/or 14 days following whole brain radiation, and prior to randomization.",
+        "reasonFuzzy": "Complex stability rules involving neurological status, corticosteroid dosage, and local treatments for brain metastases cannot be cleanly captured by a simple allowedBrainMets kind."
+      },
+      {
+        "id": "NCT07393555-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have leptomeningeal disease that requires CNS-specific treatment prior to randomization and must not be planning to receive the CNS-specific treatment while on study.",
+        "reasonFuzzy": "Leptomeningeal disease and treatment planning requirements are subjective/complex rules."
+      },
+      {
+        "id": "NCT07393555-progression",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have progressed (in the opinion of the treating physician) during or following the most recent line of systemic therapy.",
+        "reasonFuzzy": "Disease progression relies on treating physician opinion."
+      },
+      {
+        "id": "NCT07393555-washout",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have received any systemic lung cancer therapy (except orally administered drugs) within 21 days prior to randomization. Orally administered lung cancer therapies must not have been administered within 10 days prior to randomization.",
+        "reasonFuzzy": "Multiple variable washout windows depending on therapy administration route."
+      },
+      {
+        "id": "NCT07393555-radiation",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have completed any prior radiation therapy within 7 days prior to randomization.",
+        "reasonFuzzy": "Radiation completion timeline and recovery are not standard lab or typed checks."
+      },
+      {
+        "id": "NCT07393555-recovery",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have recovered (<= Grade 1) from any side effects of prior therapy (except for alopecia) prior to randomization.",
+        "reasonFuzzy": "Adverse event toxicity recovery is an investigator judgment-based criterion."
+      },
+      {
+        "id": "NCT07393555-performance",
+        "polarity": "inclusion",
+        "sourceText": "Participants' most recent Zubrod performance status must be 0-1 and be documented within 28 days prior to randomization.",
+        "reasonFuzzy": "Zubrod performance status is similar to ECOG but uses a different scale not explicitly covered by ecog_max."
+      },
+      {
+        "id": "NCT07393555-cardiac",
+        "polarity": "inclusion",
+        "sourceText": "Participants with known history or current symptoms of cardiac disease, or history of treatment with cardiotoxic agents, must have a clinical risk assessment of cardiac function using the New York Heart Association Functional Classification. To be eligible for this trial, participants must be class 2B or better.",
+        "reasonFuzzy": "NYHA functional classification requires clinical risk assessment and judgment."
+      },
+      {
+        "id": "NCT07393555-thrombotic",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have experienced an arterial or venous thrombotic event or hemoptysis within 28 days prior to randomization.",
+        "reasonFuzzy": "Complex exclusion of specific thrombotic events and hemoptysis within a timeframe."
+      },
+      {
+        "id": "NCT07393555-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have a prior or concurrent malignancy whose natural history or treatment (in the opinion of the treating physician) has the potential to interfere with the safety or efficacy assessment of the investigational regimen.",
+        "reasonFuzzy": "Relies on treating physician opinion regarding potential interference of prior/concurrent malignancies."
+      },
+      {
+        "id": "NCT07393555-hiv-hep",
+        "polarity": "inclusion",
+        "sourceText": "Participants with known human immunodeficiency virus (HIV)-infection must be on effective anti-retroviral therapy and have undetectable viral load test on the most recent test results obtained within 6 months prior to randomization. Participants with evidence of chronic hepatitis B virus (HBV) infection must have undetectable HBV viral load while on suppressive therapy on the most recent test results obtained within 6 months prior to randomization. Participants with a history of hepatitis C virus (HCV) infection must have been treated and cured. Participants currently being treated for HCV infection must have undetectable HCV viral load test on the most recent test results obtained within 6 months prior to randomization.",
+        "reasonFuzzy": "Complex infectious disease status and viral load testing rules."
+      }
+    ]
+  }
+}

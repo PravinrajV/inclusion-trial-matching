@@ -1,0 +1,372 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06667076",
+  "briefTitle": "A Study of Amivantamab in Combination With Lazertinib, or Amivantamab in Combination With Platinum-Based Chemotherapy, for Common Epidermal Growth Factor Receptor (EGFR)-Mutated Locally Advanced or Metastatic Non-Small Cell Lung Cancer (NSCLC)",
+  "parsedAt": "2026-11-12T10:29:46.313Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06667076-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Have an eastern cooperative oncology group (ECOG) performance status of 0 to 1",
+      "numberValue": 1,
+      "evidence_quote": "Have an eastern cooperative oncology group (ECOG) performance status of 0 to 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06667076-stage",
+      "polarity": "inclusion",
+      "sourceText": "Have histologically or cytologically confirmed advanced or metastatic non-small cell lung cancer (NSCLC) that is not amenable to curative intent therapy",
+      "reasonFuzzy": "Advanced or metastatic NSCLC is in scope, but the record does not provide a specific numbered stage list."
+    },
+    {
+      "id": "NCT06667076-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have at least 1 measurable lesion, according to RECIST version (v)1.1, that has not been previously irradiated",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06667076-toxicities",
+      "polarity": "inclusion",
+      "sourceText": "Any toxicities from prior systemic anticancer therapy must have resolved to national cancer institute common terminology criteria for adverse events (NCI-CTCAE) version 5.0 grade 1 or baseline level (except for alopecia [any grade], grade <=2 peripheral neuropathy, or grade <=2 hypothyroidism stable on hormone replacement)",
+      "reasonFuzzy": "Resolution of prior toxicities with multiple specific exceptions is not a typed lab cutoff or standard rule."
+    },
+    {
+      "id": "NCT06667076-ild",
+      "polarity": "exclusion",
+      "sourceText": "Medical history of active interstitial lung disease (ILD), including drug-induced ILD or radiation pneumonitis. Participants with medical history of radiation pneumonitis, including radiation pneumonitis which required steroid treatment, should consult with the medical monitor and eligibility be assessed on a case-by-case basis",
+      "reasonFuzzy": "History of ILD with case-by-case medical monitor assessment for radiation pneumonitis is not a simple typed exclusion."
+    },
+    {
+      "id": "NCT06667076-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Had major surgery excluding placement of vascular access or tumor biopsy or had significant traumatic injury within 4 weeks before the first dose of anticancer treatments or will not have fully recovered from surgery, or has surgery planned during the time the participant is expected to participate in the study",
+      "reasonFuzzy": "Washout window for major surgery and recovery status is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT06667076-pain",
+      "polarity": "exclusion",
+      "sourceText": "Participant has uncontrolled tumor-related pain (symptomatic lesions amenable to palliative radiotherapy should be treated prior to first dosing)",
+      "reasonFuzzy": "Uncontrolled tumor-related pain is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06667076-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Received an investigational treatment that has not been cleared (based on at least 5 half lives of any pharmaceutical treatment) before the planned first dose of study treatment or is currently enrolled in an investigational study",
+      "reasonFuzzy": "Half-life-based washout for investigational treatments is not a standard typed check."
+    },
+    {
+      "id": "NCT06667076-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Has a prior or concurrent second malignancy (other than the disease under study) which natural history or treatment could likely interfere with any study endpoints of safety or the efficacy of the study treatment(s)",
+      "reasonFuzzy": "Second malignancy assessment based on interference with study endpoints is a judgment-based rule."
+    },
+    {
+      "id": "NCT06667076-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06667076-stage",
+      "polarity": "inclusion",
+      "sourceText": "Have histologically or cytologically confirmed advanced or metastatic non-small cell lung cancer (NSCLC) that is not amenable to curative intent therapy",
+      "reasonFuzzy": "The record mentions advanced or metastatic NSCLC without giving a specific numbered stage list, so stage_in is omitted."
+    },
+    {
+      "id": "NCT06667076-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have at least 1 measurable lesion, according to RECIST version (v)1.1, that has not been previously irradiated",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06667076-toxicity",
+      "polarity": "inclusion",
+      "sourceText": "Any toxicities from prior systemic anticancer therapy must have resolved to national cancer institute common terminology criteria for adverse events (NCI-CTCAE) version 5.0 grade 1 or baseline level (except for alopecia \\[any grade\\], grade \\<=2 peripheral neuropathy, or grade \\<=2 hypothyroidism stable on hormone replacement)",
+      "reasonFuzzy": "Resolution of prior toxicities to grade 1 or baseline is an investigator-assessed safety criterion, not a typed lab or condition check."
+    },
+    {
+      "id": "NCT06667076-ild",
+      "polarity": "exclusion",
+      "sourceText": "Medical history of active interstitial lung disease (ILD), including drug-induced ILD or radiation pneumonitis. Participants with medical history of radiation pneumonitis, including radiation pneumonitis which required steroid treatment, should consult with the medical monitor and eligibility be assessed on a case-by-case basis",
+      "reasonFuzzy": "Active interstitial lung disease and case-by-case medical monitor consultation for pneumonitis are subjective clinical judgments."
+    },
+    {
+      "id": "NCT06667076-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Had major surgery excluding placement of vascular access or tumor biopsy or had significant traumatic injury within 4 weeks before the first dose of anticancer treatments or will not have fully recovered from surgery, or has surgery planned during the time the participant is expected to participate in the study",
+      "reasonFuzzy": "Major surgery washout and recovery status are not standard typed lab or clinical cutoffs."
+    },
+    {
+      "id": "NCT06667076-pain",
+      "polarity": "exclusion",
+      "sourceText": "Participant has uncontrolled tumor-related pain (symptomatic lesions amenable to palliative radiotherapy should be treated prior to first dosing)",
+      "reasonFuzzy": "Uncontrolled tumor-related pain is a subjective clinical evaluation."
+    },
+    {
+      "id": "NCT06667076-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Received an investigational treatment that has not been cleared (based on at least 5 half lives of any pharmaceutical treatment) before the planned first dose of study treatment or is currently enrolled in an investigational study",
+      "reasonFuzzy": "Prior investigational treatment washout based on half-lives is not a typed prior therapy check."
+    },
+    {
+      "id": "NCT06667076-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Has a prior or concurrent second malignancy (other than the disease under study) which natural history or treatment could likely interfere with any study endpoints of safety or the efficacy of the study treatment(s)",
+      "reasonFuzzy": "Interference of a prior or concurrent second malignancy with endpoints is a judgment-based exclusion."
+    },
+    {
+      "id": "NCT06667076-egfrvar",
+      "polarity": "inclusion",
+      "sourceText": "Epidermal growth factor resistance-mutation (EGFRm) must be an Ex19del or Ex21 L858R substitution",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06667076-egfrvar",
+      "polarity": "inclusion",
+      "sourceText": "Epidermal growth factor resistance-mutation (EGFRm) must be an Ex19del or Ex21 L858R substitution",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06667076-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Epidermal growth factor resistance-mutation (EGFRm) must be an Ex19del or Ex21 L858R substitution, as detected by food and drug administration (FDA)-approved or other validated test in a clinical laboratory improvement amendments (CLIA)-certified laboratory (sites in the US), or an accredited local laboratory (sites outside of the US) in accordance with site standard of care. In the European union (EU), the local test must be Conformité Européenne (CE)-marked or an in-house laboratory-developed test from health institutions in the EU in accordance with Article 5(5) of the in vitro diagnostic regulations (IVDR ) 2071/746, as amended",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:ex19del, l858r"
+        },
+        {
+          "side": "b-only",
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:ex19del or ex21 l858r substitution"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 5252
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 12335
+  },
+  "ms": 25595,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06667076",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06667076-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Epidermal growth factor resistance-mutation (EGFRm) must be an Ex19del or Ex21 L858R substitution, as detected by food and drug administration (FDA)-approved or other validated test in a clinical laboratory improvement amendments (CLIA)-certified laboratory (sites in the US), or an accredited local laboratory (sites outside of the US) in accordance with site standard of care. In the European union (EU), the local test must be Conformité Européenne (CE)-marked or an in-house laboratory-developed test from health institutions in the EU in accordance with Article 5(5) of the in vitro diagnostic regulations (IVDR ) 2071/746, as amended",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06667076-egfrvar",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Epidermal growth factor resistance-mutation (EGFRm) must be an Ex19del or Ex21 L858R substitution",
+        "stringValue": "Ex19del, L858R"
+      },
+      {
+        "id": "NCT06667076-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an eastern cooperative oncology group (ECOG) performance status of 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06667076-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06667076-stage",
+        "polarity": "inclusion",
+        "sourceText": "Have histologically or cytologically confirmed advanced or metastatic non-small cell lung cancer (NSCLC) that is not amenable to curative intent therapy",
+        "reasonFuzzy": "Advanced or metastatic NSCLC is in scope, but the record does not provide a specific numbered stage list."
+      },
+      {
+        "id": "NCT06667076-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have at least 1 measurable lesion, according to RECIST version (v)1.1, that has not been previously irradiated",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06667076-toxicities",
+        "polarity": "inclusion",
+        "sourceText": "Any toxicities from prior systemic anticancer therapy must have resolved to national cancer institute common terminology criteria for adverse events (NCI-CTCAE) version 5.0 grade 1 or baseline level (except for alopecia [any grade], grade <=2 peripheral neuropathy, or grade <=2 hypothyroidism stable on hormone replacement)",
+        "reasonFuzzy": "Resolution of prior toxicities with multiple specific exceptions is not a typed lab cutoff or standard rule."
+      },
+      {
+        "id": "NCT06667076-ild",
+        "polarity": "exclusion",
+        "sourceText": "Medical history of active interstitial lung disease (ILD), including drug-induced ILD or radiation pneumonitis. Participants with medical history of radiation pneumonitis, including radiation pneumonitis which required steroid treatment, should consult with the medical monitor and eligibility be assessed on a case-by-case basis",
+        "reasonFuzzy": "History of ILD with case-by-case medical monitor assessment for radiation pneumonitis is not a simple typed exclusion."
+      },
+      {
+        "id": "NCT06667076-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Had major surgery excluding placement of vascular access or tumor biopsy or had significant traumatic injury within 4 weeks before the first dose of anticancer treatments or will not have fully recovered from surgery, or has surgery planned during the time the participant is expected to participate in the study",
+        "reasonFuzzy": "Washout window for major surgery and recovery status is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT06667076-pain",
+        "polarity": "exclusion",
+        "sourceText": "Participant has uncontrolled tumor-related pain (symptomatic lesions amenable to palliative radiotherapy should be treated prior to first dosing)",
+        "reasonFuzzy": "Uncontrolled tumor-related pain is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06667076-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Received an investigational treatment that has not been cleared (based on at least 5 half lives of any pharmaceutical treatment) before the planned first dose of study treatment or is currently enrolled in an investigational study",
+        "reasonFuzzy": "Half-life-based washout for investigational treatments is not a standard typed check."
+      },
+      {
+        "id": "NCT06667076-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Has a prior or concurrent second malignancy (other than the disease under study) which natural history or treatment could likely interfere with any study endpoints of safety or the efficacy of the study treatment(s)",
+        "reasonFuzzy": "Second malignancy assessment based on interference with study endpoints is a judgment-based rule."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06667076",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06667076-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Epidermal growth factor resistance-mutation (EGFRm) must be an Ex19del or Ex21 L858R substitution",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06667076-egfrvar",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Epidermal growth factor resistance-mutation (EGFRm) must be an Ex19del or Ex21 L858R substitution",
+        "stringValue": "Ex19del or Ex21 L858R substitution"
+      },
+      {
+        "id": "NCT06667076-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an eastern cooperative oncology group (ECOG) performance status of 0 to 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06667076-stage",
+        "polarity": "inclusion",
+        "sourceText": "Have histologically or cytologically confirmed advanced or metastatic non-small cell lung cancer (NSCLC) that is not amenable to curative intent therapy",
+        "reasonFuzzy": "The record mentions advanced or metastatic NSCLC without giving a specific numbered stage list, so stage_in is omitted."
+      },
+      {
+        "id": "NCT06667076-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have at least 1 measurable lesion, according to RECIST version (v)1.1, that has not been previously irradiated",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06667076-toxicity",
+        "polarity": "inclusion",
+        "sourceText": "Any toxicities from prior systemic anticancer therapy must have resolved to national cancer institute common terminology criteria for adverse events (NCI-CTCAE) version 5.0 grade 1 or baseline level (except for alopecia \\[any grade\\], grade \\<=2 peripheral neuropathy, or grade \\<=2 hypothyroidism stable on hormone replacement)",
+        "reasonFuzzy": "Resolution of prior toxicities to grade 1 or baseline is an investigator-assessed safety criterion, not a typed lab or condition check."
+      },
+      {
+        "id": "NCT06667076-ild",
+        "polarity": "exclusion",
+        "sourceText": "Medical history of active interstitial lung disease (ILD), including drug-induced ILD or radiation pneumonitis. Participants with medical history of radiation pneumonitis, including radiation pneumonitis which required steroid treatment, should consult with the medical monitor and eligibility be assessed on a case-by-case basis",
+        "reasonFuzzy": "Active interstitial lung disease and case-by-case medical monitor consultation for pneumonitis are subjective clinical judgments."
+      },
+      {
+        "id": "NCT06667076-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Had major surgery excluding placement of vascular access or tumor biopsy or had significant traumatic injury within 4 weeks before the first dose of anticancer treatments or will not have fully recovered from surgery, or has surgery planned during the time the participant is expected to participate in the study",
+        "reasonFuzzy": "Major surgery washout and recovery status are not standard typed lab or clinical cutoffs."
+      },
+      {
+        "id": "NCT06667076-pain",
+        "polarity": "exclusion",
+        "sourceText": "Participant has uncontrolled tumor-related pain (symptomatic lesions amenable to palliative radiotherapy should be treated prior to first dosing)",
+        "reasonFuzzy": "Uncontrolled tumor-related pain is a subjective clinical evaluation."
+      },
+      {
+        "id": "NCT06667076-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Received an investigational treatment that has not been cleared (based on at least 5 half lives of any pharmaceutical treatment) before the planned first dose of study treatment or is currently enrolled in an investigational study",
+        "reasonFuzzy": "Prior investigational treatment washout based on half-lives is not a typed prior therapy check."
+      },
+      {
+        "id": "NCT06667076-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Has a prior or concurrent second malignancy (other than the disease under study) which natural history or treatment could likely interfere with any study endpoints of safety or the efficacy of the study treatment(s)",
+        "reasonFuzzy": "Interference of a prior or concurrent second malignancy with endpoints is a judgment-based exclusion."
+      }
+    ]
+  }
+}

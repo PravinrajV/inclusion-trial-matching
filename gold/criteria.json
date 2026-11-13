@@ -1,0 +1,364 @@
+{
+  "disclaimer": "sourceText is from public ClinicalTrials.gov eligibility language. Attribute those records to ClinicalTrials.gov. Patient judgments use the synthetic personas only.",
+  "schemaVersion": "1",
+  "pulledDataTimestampFromApi": "2026-11-10T10:00:05",
+  "criteria": [
+    {
+      "id": "C01",
+      "nctId": "NCT03093116",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age \u226518 (or age \u2265 20 of age as required by local regulation).",
+      "numberValue": 18,
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C02",
+      "nctId": "NCT03093116",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG PS 0-1.",
+      "numberValue": 1,
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "not_met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C03",
+      "nctId": "NCT04181060",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2",
+      "numberValue": 2,
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C04",
+      "nctId": "NCT04181060",
+      "kind": "histology_in",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have a pathologically-confirmed diagnosis of non-squamous, non-small cell lung cancer (NSCLC)",
+      "histologies": [
+        "adenocarcinoma",
+        "large_cell",
+        "nsclc_nos"
+      ],
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "not_met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C05",
+      "nctId": "NCT03191149",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have advanced disease - either stage IV disease, stage IIIB disease not amenable to definitive multi-modality therapy,",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C06",
+      "nctId": "NCT03851445",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Disease must be Stage IV as defined in Section 4.0, or recurrent.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "not_met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C07",
+      "nctId": "NCT04181060",
+      "kind": "egfr_variant_in",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have somatic activating sensitizing mutation in EGFR (e.g. but not limited to Exon 19 deletion, L858R, E709X, G719X, exon 19 insertions, L861Q, S768I).",
+      "stringValue": "exon 19 deletion",
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "not_met",
+        "sam-okonkwo": "not_met"
+      }
+    },
+    {
+      "id": "C08",
+      "nctId": "NCT03191149",
+      "kind": "egfr_variant_in",
+      "polarity": "inclusion",
+      "sourceText": "An EGFR exon 20 insertion mutation must be detected in the tumor tissue.",
+      "stringValue": "exon 20 insertion",
+      "expected": {
+        "alex-rivera": "not_met",
+        "jordan-blake": "not_met",
+        "sam-okonkwo": "not_met"
+      }
+    },
+    {
+      "id": "C09",
+      "nctId": "NCT04198766",
+      "kind": "egfr_status",
+      "polarity": "inclusion",
+      "sourceText": "All subjects with non-squamous NSCLC must have documentation of absence of tumor activating EGFR mutations and absence of ALK gene rearrangements.",
+      "presence": "absent",
+      "expected": {
+        "alex-rivera": "not_met",
+        "jordan-blake": "met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C10",
+      "nctId": "NCT04198766",
+      "kind": "alk_status",
+      "polarity": "inclusion",
+      "sourceText": "All subjects with non-squamous NSCLC must have documentation of absence of tumor activating EGFR mutations and absence of ALK gene rearrangements.",
+      "presence": "absent",
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "met",
+        "sam-okonkwo": "not_met"
+      }
+    },
+    {
+      "id": "C11",
+      "nctId": "NCT03851445",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Patients with known EGFR sensitizing mutations, EGFR T790M mutation, ALK gene fusion, ROS 1 gene rearrangement, or BRAF V600E mutation are not eligible",
+      "presence": "present",
+      "expected": {
+        "alex-rivera": "not_met",
+        "jordan-blake": "met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C12",
+      "nctId": "NCT03851445",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Patients with known EGFR sensitizing mutations, EGFR T790M mutation, ALK gene fusion, ROS 1 gene rearrangement, or BRAF V600E mutation are not eligible",
+      "presence": "present",
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "met",
+        "sam-okonkwo": "not_met"
+      }
+    },
+    {
+      "id": "C13",
+      "nctId": "NCT04613596",
+      "kind": "kras_variant_in",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed diagnosis of unresectable or metastatic NSCLC with KRAS G12C mutation and any PD-L1 TPS",
+      "stringValue": "G12C",
+      "expected": {
+        "alex-rivera": "not_met",
+        "jordan-blake": "not_met",
+        "sam-okonkwo": "not_met"
+      }
+    },
+    {
+      "id": "C14",
+      "nctId": "NCT03093116",
+      "kind": "alk_status",
+      "polarity": "inclusion",
+      "sourceText": "locally advanced, or metastatic solid tumor ... that harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement by protocol specified tests.",
+      "presence": "present",
+      "expected": {
+        "alex-rivera": "not_met",
+        "jordan-blake": "not_met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C15",
+      "nctId": "NCT04181060",
+      "kind": "prior_lines_max",
+      "polarity": "inclusion",
+      "sourceText": "Patient must not have had any prior systemic treatment for metastatic disease",
+      "numberValue": 0,
+      "expected": {
+        "alex-rivera": "not_met",
+        "jordan-blake": "met",
+        "sam-okonkwo": "not_met"
+      }
+    },
+    {
+      "id": "C16",
+      "nctId": "NCT04181060",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "NOTE: Prior treatment with an EGFR TKI is not allowed, however if a candidate for this study has already started osimertinib within 21 days prior to randomization...",
+      "stringValue": "osimertinib",
+      "expected": {
+        "alex-rivera": "not_met",
+        "jordan-blake": "unknown",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C17",
+      "nctId": "NCT03851445",
+      "kind": "prior_lines_min",
+      "polarity": "inclusion",
+      "sourceText": "To be eligible for screening at progression, patients must have received at least one line of systemic therapy for any stage of disease (Stages I-IV) and must have progressed during or following their most recent line of therapy.",
+      "numberValue": 1,
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "not_met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C18",
+      "nctId": "NCT04165070",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C19",
+      "nctId": "NCT06561386",
+      "kind": "brain_mets",
+      "polarity": "inclusion",
+      "sourceText": "Participants must not have untreated central nervous system (CNS) metastases.",
+      "allowedBrainMets": [
+        "none",
+        "treated_stable"
+      ],
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C20",
+      "nctId": "NCT01720836",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine within normal institutional limits OR Creatinine clearance > 60 mL/min/1.73",
+      "numberValue": 60,
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "not_met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C21",
+      "nctId": "NCT03093116",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Serum creatinine or creatinine clearance Within normal limits or > 40 mL/min",
+      "numberValue": 40,
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C22",
+      "nctId": "NCT03093116",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin \u2265 9.0 g/dL transfusions are allowed",
+      "numberValue": 9,
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C23",
+      "nctId": "NCT01720836",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets > 100,000/\u00b5L",
+      "numberValue": 100000,
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C24",
+      "nctId": "NCT01720836",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "absolute neutrophil count (ANC) at least 1500/m",
+      "numberValue": 1500,
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "met",
+        "sam-okonkwo": "met"
+      }
+    },
+    {
+      "id": "C25",
+      "nctId": "NCT04181060",
+      "kind": "fuzzy",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have measurable disease. Baseline measurements of sites of disease must be obtained within 4 weeks prior to study randomization.",
+      "reasonFuzzy": "RECIST-style measurable disease is not a typed field on the fact sheet yet.",
+      "expected": {
+        "alex-rivera": "met",
+        "jordan-blake": "unknown",
+        "sam-okonkwo": "unknown"
+      }
+    },
+    {
+      "id": "C26",
+      "nctId": "NCT06561386",
+      "kind": "fuzzy",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a life expectancy of at least 3 months at the time of randomization.",
+      "reasonFuzzy": "Life expectancy is a clinical judgment, not a lab value we can check.",
+      "expected": {
+        "alex-rivera": "unknown",
+        "jordan-blake": "unknown",
+        "sam-okonkwo": "unknown"
+      }
+    }
+  ]
+}

@@ -1,0 +1,602 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06422143",
+  "briefTitle": "Pembrolizumab With or Without Maintenance Sacituzumab Tirumotecan (Sac-TMT; MK-2870) in Metastatic Squamous Non-small Cell Lung Cancer (NSCLC) [MK-2870-023]",
+  "parsedAt": "2026-11-12T05:52:37.039Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06422143-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Has Eastern Cooperative Oncology Group Performance Status (ECOG PS) score of 0 or 1 assessed within 7 days prior to allocation",
+      "numberValue": 1,
+      "evidence_quote": "Has Eastern Cooperative Oncology Group Performance Status (ECOG PS) score of 0 or 1 assessed within 7 days prior to allocation",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06422143-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per Response Evaluation Criteria in Solid Tumours (RECIST) 1.1 as assessed by the local site investigator/radiology",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06422143-life",
+      "polarity": "inclusion",
+      "sourceText": "Has life expectancy ≥3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06422143-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Archival tumor tissue sample or newly obtained core, incisional, or excisional biopsy of a tumor lesion not previously irradiated has been provided",
+      "reasonFuzzy": "Willingness or ability to undergo a biopsy is a subjective procedure-based criterion."
+    },
+    {
+      "id": "NCT06422143-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC) [Stage IV: M1a, M1b, M1c, American Joint Committee on Cancer Staging Manual, version 8]",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06422143-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06422143-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per Response Evaluation Criteria in Solid Tumours (RECIST) 1.1 as assessed by the local site investigator/radiology",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06422143-life",
+      "polarity": "inclusion",
+      "sourceText": "Has life expectancy ≥3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06422143-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Archival tumor tissue sample or newly obtained core, incisional, or excisional biopsy of a tumor lesion not previously irradiated has been provided",
+      "reasonFuzzy": "Willingness or ability to undergo a biopsy is a procedure-based criterion, not a typed check."
+    },
+    {
+      "id": "NCT06422143-organ",
+      "polarity": "inclusion",
+      "sourceText": "Has adequate organ function",
+      "reasonFuzzy": "Adequate organ function without specific numeric cutoffs is a subjective clinical assessment."
+    },
+    {
+      "id": "NCT06422143-maint-prog",
+      "polarity": "inclusion",
+      "sourceText": "For Maintenance only (prior to randomization): is without disease progression of their NSCLC, as determined by BICR using RECIST 1.1 after completion of study-specified Induction with an evaluable scan at Week 12 or most recent scan before randomization",
+      "reasonFuzzy": "RECIST disease progression assessment is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06422143-maint-ecog",
+      "polarity": "inclusion",
+      "sourceText": "For Maintenance only (prior to randomization): has ECOG PS of 0 or 1 as assessed at the Prerandomization Visit",
+      "reasonFuzzy": "Duplicate/conditional maintenance ECOG requirement."
+    },
+    {
+      "id": "NCT06422143-maint-ae",
+      "polarity": "inclusion",
+      "sourceText": "For Maintenance only (prior to randomization): all AEs (with the exception of alopecia, Grade ≤2 fatigue, Grade ≤2 peripheral neuropathy, and Grade ≤2 endocrine-related AEs requiring treatment or hormone replacement) have recovered",
+      "reasonFuzzy": "AE recovery status for maintenance phase is multi-faceted and complex."
+    },
+    {
+      "id": "NCT06422143-maint-pneumonitis",
+      "polarity": "inclusion",
+      "sourceText": "For Maintenance only (prior to randomization): has not experienced a pneumonitis/interstitial lung disease (ILD) event during the study-specified induction",
+      "reasonFuzzy": "Study-specific induction event monitoring criterion."
+    },
+    {
+      "id": "NCT06422143-sclc",
+      "polarity": "exclusion",
+      "sourceText": "Diagnosis of small cell lung cancer or, for mixed tumors, presence of small cell elements",
+      "reasonFuzzy": "Exclusion for small cell components is not covered by typed histology kinds."
+    },
+    {
+      "id": "NCT06422143-eye",
+      "polarity": "exclusion",
+      "sourceText": "History of documented severe dry eye syndrome, severe Meibomian gland disease and/or blepharitis, or severe corneal disease that prevents/delays corneal healing",
+      "reasonFuzzy": "Specific non-oncologic ophthalmologic conditions are not captured by typed checks."
+    },
+    {
+      "id": "NCT06422143-ibd",
+      "polarity": "exclusion",
+      "sourceText": "Active inflammatory bowel disease requiring immunosuppressive medication or previous history of inflammatory bowel disease (eg, Crohn's disease, ulcerative colitis, or chronic diarrhea)",
+      "reasonFuzzy": "Inflammatory bowel disease history is not a typed check."
+    },
+    {
+      "id": "NCT06422143-cvd",
+      "polarity": "exclusion",
+      "sourceText": "Has uncontrolled, significant cardiovascular disease or cerebrovascular disease including New York Heart Association Class III or IV congestive heart failure, unstable angina, myocardial infarction, uncontrolled symptomatic arrhythmia, prolongation of QTcF interval to >480 ms, and other serious cardiovascular and cerebrovascular diseases within 6 months before study intervention",
+      "reasonFuzzy": "Complex cardiovascular criteria with multiple conditions and thresholds."
+    },
+    {
+      "id": "NCT06422143-prior-chemo",
+      "polarity": "exclusion",
+      "sourceText": "Received prior systemic chemotherapy or other targeted or biological antineoplastic therapy for their metastatic NSCLC. Note: Prior treatment with chemotherapy and/or radiation as a part of neoadjuvant or adjuvant therapy or chemoradiation therapy for nonmetastatic NSCLC is allowed as long as therapy was completed at least 12 months before diagnosis of metastatic NSCLC",
+      "reasonFuzzy": "Prior systemic therapy limitations with conditional neoadjuvant/adjuvant exceptions are too complex for simple prior therapy excluded tags."
+    },
+    {
+      "id": "NCT06422143-prior-io",
+      "polarity": "exclusion",
+      "sourceText": "Received prior therapy with an anti-programmed cell death 1 protein (PD-1), anti-programmed cell death ligand 1 (PD-L1), or anti programmed cell death ligand 2 (PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor (eg, cytotoxic T lymphocyte-associated protein 4, OX-40, CD137). Note: Prior treatment with an anti-PD-1 or anti-PD-L1 agent for nonmetastatic NSCLC is allowed as long as therapy was completed at least 12 months before diagnosis of metastatic NSCLC",
+      "reasonFuzzy": "Prior immunotherapy limitations with complex conditional exceptions."
+    },
+    {
+      "id": "NCT06422143-prior-trop2",
+      "polarity": "exclusion",
+      "sourceText": "Received prior treatment with a trophoblast cell-surface antigen 2 (TROP2)-targeted antidrug conjugate (ADC)",
+      "reasonFuzzy": "Specific class of ADC exclusion not covered by standard typed prior therapy exclusions."
+    },
+    {
+      "id": "NCT06422143-rad-lung",
+      "polarity": "exclusion",
+      "sourceText": "Received radiation therapy to the lung that is >30 Gray within 6 months of start of study intervention",
+      "reasonFuzzy": "Radiation dose and anatomical location constraints cannot be captured by simple typed checks."
+    },
+    {
+      "id": "NCT06422143-prior-rad",
+      "polarity": "exclusion",
+      "sourceText": "Received prior radiotherapy within 2 weeks of start of study intervention, or radiation-related toxicities, requiring corticosteroids",
+      "reasonFuzzy": "Washout window and corticosteroid requirement for radiation toxicities."
+    },
+    {
+      "id": "NCT06422143-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Received a live or live-attenuated vaccine within 30 days before the first dose of study intervention",
+      "reasonFuzzy": "Live vaccine washout window is not a standard typed check."
+    },
+    {
+      "id": "NCT06422143-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Participants who have not adequately recovered from major surgery or have ongoing surgical complications",
+      "reasonFuzzy": "Surgical recovery status is a subjective clinical assessment."
+    },
+    {
+      "id": "NCT06422143-topoisomerase",
+      "polarity": "exclusion",
+      "sourceText": "Received prior treatment with a topoisomerase I inhibitor-containing ADC",
+      "reasonFuzzy": "Specific ADC class exclusion not covered by standard typed checks."
+    },
+    {
+      "id": "NCT06422143-cyp3a4",
+      "polarity": "exclusion",
+      "sourceText": "Is currently receiving a strong inducer/inhibitor of CYP3A4 that cannot be discontinued for the duration of the study (the required washout period before starting sac-TMT is 2 weeks)",
+      "reasonFuzzy": "Concomitant medication restriction with washout window."
+    },
+    {
+      "id": "NCT06422143-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Has a known additional malignancy that is progressing or has required active treatment within the past 3 years.",
+      "reasonFuzzy": "Prior malignancy history with time threshold."
+    },
+    {
+      "id": "NCT06422143-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Severe hypersensitivity (≥Grade 3) to study intervention and/or any of its excipients or to another biologic therapy",
+      "reasonFuzzy": "Hypersensitivity grade threshold is not a typed check."
+    },
+    {
+      "id": "NCT06422143-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Active autoimmune disease that has required systemic treatment in the past 2 years (replacement therapy [eg, thyroxine, insulin, or physiologic corticosteroid] is allowed)",
+      "reasonFuzzy": "Autoimmune disease history and treatment timeframe."
+    },
+    {
+      "id": "NCT06422143-pneumonitis",
+      "polarity": "exclusion",
+      "sourceText": "Has a history of (noninfectious)pneumonitis/ILD that required steroids, has current pneumonitis/ILD, or has suspected ILD or pneumonitis that cannot be ruled out by standard diagnostic assessments at Screening",
+      "reasonFuzzy": "Pneumonitis or ILD history is not a typed check."
+    },
+    {
+      "id": "NCT06422143-infection",
+      "polarity": "exclusion",
+      "sourceText": "Active infection requiring systemic therapy",
+      "reasonFuzzy": "Active infection status requiring systemic therapy is not a typed check."
+    },
+    {
+      "id": "NCT06422143-transplant",
+      "polarity": "exclusion",
+      "sourceText": "History of allogeneic tissue/solid organ transplant",
+      "reasonFuzzy": "Organ transplant history is not a typed check."
+    },
+    {
+      "id": "NCT06422143-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC) [Stage IV: M1a, M1b, M1c, American Joint Committee on Cancer Staging Manual, version 8]",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06422143-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06422143-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06422143-brain",
+      "polarity": "exclusion",
+      "sourceText": "Has known central nervous system (CNS) metastases/carcinomatous meningitis",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC) [Stage IV: M1a, M1b, M1c, American Joint Committee on Cancer "
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC) [Stage IV: M1a, M1b, M1c, American Joint Committee on Cancer "
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:squamous"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2626
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 27,
+    "attempts": 1,
+    "ms": 6394
+  },
+  "ms": 17031,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06422143",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06422143-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC) [Stage IV: M1a, M1b, M1c, American Joint Committee on Cancer Staging Manual, version 8]",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06422143-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC)",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT06422143-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06422143-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has Eastern Cooperative Oncology Group Performance Status (ECOG PS) score of 0 or 1 assessed within 7 days prior to allocation",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06422143-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known central nervous system (CNS) metastases/carcinomatous meningitis",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06422143-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per Response Evaluation Criteria in Solid Tumours (RECIST) 1.1 as assessed by the local site investigator/radiology",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06422143-life",
+        "polarity": "inclusion",
+        "sourceText": "Has life expectancy ≥3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06422143-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Archival tumor tissue sample or newly obtained core, incisional, or excisional biopsy of a tumor lesion not previously irradiated has been provided",
+        "reasonFuzzy": "Willingness or ability to undergo a biopsy is a subjective procedure-based criterion."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06422143",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06422143-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC) [Stage IV: M1a, M1b, M1c, American Joint Committee on Cancer Staging Manual, version 8]",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06422143-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC)",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT06422143-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06422143-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has Eastern Cooperative Oncology Group Performance Status (ECOG PS) score of 0 or 1 assessed within 7 days prior to allocation",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06422143-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known central nervous system (CNS) metastases/carcinomatous meningitis",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06422143-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per Response Evaluation Criteria in Solid Tumours (RECIST) 1.1 as assessed by the local site investigator/radiology",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06422143-life",
+        "polarity": "inclusion",
+        "sourceText": "Has life expectancy ≥3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06422143-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Archival tumor tissue sample or newly obtained core, incisional, or excisional biopsy of a tumor lesion not previously irradiated has been provided",
+        "reasonFuzzy": "Willingness or ability to undergo a biopsy is a procedure-based criterion, not a typed check."
+      },
+      {
+        "id": "NCT06422143-organ",
+        "polarity": "inclusion",
+        "sourceText": "Has adequate organ function",
+        "reasonFuzzy": "Adequate organ function without specific numeric cutoffs is a subjective clinical assessment."
+      },
+      {
+        "id": "NCT06422143-maint-prog",
+        "polarity": "inclusion",
+        "sourceText": "For Maintenance only (prior to randomization): is without disease progression of their NSCLC, as determined by BICR using RECIST 1.1 after completion of study-specified Induction with an evaluable scan at Week 12 or most recent scan before randomization",
+        "reasonFuzzy": "RECIST disease progression assessment is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06422143-maint-ecog",
+        "polarity": "inclusion",
+        "sourceText": "For Maintenance only (prior to randomization): has ECOG PS of 0 or 1 as assessed at the Prerandomization Visit",
+        "reasonFuzzy": "Duplicate/conditional maintenance ECOG requirement."
+      },
+      {
+        "id": "NCT06422143-maint-ae",
+        "polarity": "inclusion",
+        "sourceText": "For Maintenance only (prior to randomization): all AEs (with the exception of alopecia, Grade ≤2 fatigue, Grade ≤2 peripheral neuropathy, and Grade ≤2 endocrine-related AEs requiring treatment or hormone replacement) have recovered",
+        "reasonFuzzy": "AE recovery status for maintenance phase is multi-faceted and complex."
+      },
+      {
+        "id": "NCT06422143-maint-pneumonitis",
+        "polarity": "inclusion",
+        "sourceText": "For Maintenance only (prior to randomization): has not experienced a pneumonitis/interstitial lung disease (ILD) event during the study-specified induction",
+        "reasonFuzzy": "Study-specific induction event monitoring criterion."
+      },
+      {
+        "id": "NCT06422143-sclc",
+        "polarity": "exclusion",
+        "sourceText": "Diagnosis of small cell lung cancer or, for mixed tumors, presence of small cell elements",
+        "reasonFuzzy": "Exclusion for small cell components is not covered by typed histology kinds."
+      },
+      {
+        "id": "NCT06422143-eye",
+        "polarity": "exclusion",
+        "sourceText": "History of documented severe dry eye syndrome, severe Meibomian gland disease and/or blepharitis, or severe corneal disease that prevents/delays corneal healing",
+        "reasonFuzzy": "Specific non-oncologic ophthalmologic conditions are not captured by typed checks."
+      },
+      {
+        "id": "NCT06422143-ibd",
+        "polarity": "exclusion",
+        "sourceText": "Active inflammatory bowel disease requiring immunosuppressive medication or previous history of inflammatory bowel disease (eg, Crohn's disease, ulcerative colitis, or chronic diarrhea)",
+        "reasonFuzzy": "Inflammatory bowel disease history is not a typed check."
+      },
+      {
+        "id": "NCT06422143-cvd",
+        "polarity": "exclusion",
+        "sourceText": "Has uncontrolled, significant cardiovascular disease or cerebrovascular disease including New York Heart Association Class III or IV congestive heart failure, unstable angina, myocardial infarction, uncontrolled symptomatic arrhythmia, prolongation of QTcF interval to >480 ms, and other serious cardiovascular and cerebrovascular diseases within 6 months before study intervention",
+        "reasonFuzzy": "Complex cardiovascular criteria with multiple conditions and thresholds."
+      },
+      {
+        "id": "NCT06422143-prior-chemo",
+        "polarity": "exclusion",
+        "sourceText": "Received prior systemic chemotherapy or other targeted or biological antineoplastic therapy for their metastatic NSCLC. Note: Prior treatment with chemotherapy and/or radiation as a part of neoadjuvant or adjuvant therapy or chemoradiation therapy for nonmetastatic NSCLC is allowed as long as therapy was completed at least 12 months before diagnosis of metastatic NSCLC",
+        "reasonFuzzy": "Prior systemic therapy limitations with conditional neoadjuvant/adjuvant exceptions are too complex for simple prior therapy excluded tags."
+      },
+      {
+        "id": "NCT06422143-prior-io",
+        "polarity": "exclusion",
+        "sourceText": "Received prior therapy with an anti-programmed cell death 1 protein (PD-1), anti-programmed cell death ligand 1 (PD-L1), or anti programmed cell death ligand 2 (PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor (eg, cytotoxic T lymphocyte-associated protein 4, OX-40, CD137). Note: Prior treatment with an anti-PD-1 or anti-PD-L1 agent for nonmetastatic NSCLC is allowed as long as therapy was completed at least 12 months before diagnosis of metastatic NSCLC",
+        "reasonFuzzy": "Prior immunotherapy limitations with complex conditional exceptions."
+      },
+      {
+        "id": "NCT06422143-prior-trop2",
+        "polarity": "exclusion",
+        "sourceText": "Received prior treatment with a trophoblast cell-surface antigen 2 (TROP2)-targeted antidrug conjugate (ADC)",
+        "reasonFuzzy": "Specific class of ADC exclusion not covered by standard typed prior therapy exclusions."
+      },
+      {
+        "id": "NCT06422143-rad-lung",
+        "polarity": "exclusion",
+        "sourceText": "Received radiation therapy to the lung that is >30 Gray within 6 months of start of study intervention",
+        "reasonFuzzy": "Radiation dose and anatomical location constraints cannot be captured by simple typed checks."
+      },
+      {
+        "id": "NCT06422143-prior-rad",
+        "polarity": "exclusion",
+        "sourceText": "Received prior radiotherapy within 2 weeks of start of study intervention, or radiation-related toxicities, requiring corticosteroids",
+        "reasonFuzzy": "Washout window and corticosteroid requirement for radiation toxicities."
+      },
+      {
+        "id": "NCT06422143-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Received a live or live-attenuated vaccine within 30 days before the first dose of study intervention",
+        "reasonFuzzy": "Live vaccine washout window is not a standard typed check."
+      },
+      {
+        "id": "NCT06422143-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Participants who have not adequately recovered from major surgery or have ongoing surgical complications",
+        "reasonFuzzy": "Surgical recovery status is a subjective clinical assessment."
+      },
+      {
+        "id": "NCT06422143-topoisomerase",
+        "polarity": "exclusion",
+        "sourceText": "Received prior treatment with a topoisomerase I inhibitor-containing ADC",
+        "reasonFuzzy": "Specific ADC class exclusion not covered by standard typed checks."
+      },
+      {
+        "id": "NCT06422143-cyp3a4",
+        "polarity": "exclusion",
+        "sourceText": "Is currently receiving a strong inducer/inhibitor of CYP3A4 that cannot be discontinued for the duration of the study (the required washout period before starting sac-TMT is 2 weeks)",
+        "reasonFuzzy": "Concomitant medication restriction with washout window."
+      },
+      {
+        "id": "NCT06422143-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Has a known additional malignancy that is progressing or has required active treatment within the past 3 years.",
+        "reasonFuzzy": "Prior malignancy history with time threshold."
+      },
+      {
+        "id": "NCT06422143-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Severe hypersensitivity (≥Grade 3) to study intervention and/or any of its excipients or to another biologic therapy",
+        "reasonFuzzy": "Hypersensitivity grade threshold is not a typed check."
+      },
+      {
+        "id": "NCT06422143-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Active autoimmune disease that has required systemic treatment in the past 2 years (replacement therapy [eg, thyroxine, insulin, or physiologic corticosteroid] is allowed)",
+        "reasonFuzzy": "Autoimmune disease history and treatment timeframe."
+      },
+      {
+        "id": "NCT06422143-pneumonitis",
+        "polarity": "exclusion",
+        "sourceText": "Has a history of (noninfectious)pneumonitis/ILD that required steroids, has current pneumonitis/ILD, or has suspected ILD or pneumonitis that cannot be ruled out by standard diagnostic assessments at Screening",
+        "reasonFuzzy": "Pneumonitis or ILD history is not a typed check."
+      },
+      {
+        "id": "NCT06422143-infection",
+        "polarity": "exclusion",
+        "sourceText": "Active infection requiring systemic therapy",
+        "reasonFuzzy": "Active infection status requiring systemic therapy is not a typed check."
+      },
+      {
+        "id": "NCT06422143-transplant",
+        "polarity": "exclusion",
+        "sourceText": "History of allogeneic tissue/solid organ transplant",
+        "reasonFuzzy": "Organ transplant history is not a typed check."
+      }
+    ]
+  }
+}

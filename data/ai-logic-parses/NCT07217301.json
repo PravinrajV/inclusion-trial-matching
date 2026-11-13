@@ -1,0 +1,567 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07217301",
+  "briefTitle": "A Study Comparing TAK-928 With Docetaxel in Adults With Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:57:57.590Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07217301-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male or female participants must be at least 18 years old or the legal age of majority in their country, whichever is greater.",
+      "numberValue": 18,
+      "evidence_quote": "Male or female participants must be at least 18 years old or the legal age of majority in their country, whichever is greater.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07217301-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "(a) Squamous NSCLC: Have locally unresectable advanced or metastatic histologically or cytologically confirmed squamous NSCLC.",
+      "stages": [
+        "IIIA",
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "(a) Squamous NSCLC: Have locally unresectable advanced or metastatic histologically or cytologically confirmed squamous NSCLC.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07217301-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status (PS) score of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status (PS) score of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07217301-prior-tx",
+      "polarity": "inclusion",
+      "sourceText": "Have had radiographic disease progression on or after prior treatment with anti-PD-1/PD-L1 therapy and platinum-based doublet chemotherapy...",
+      "reasonFuzzy": "Complex prior line requirements with conditional exceptions across different study parts cannot be expressed as a single simple typed rule."
+    },
+    {
+      "id": "NCT07217301-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have at least 1 measurable lesion (target lesion) by CT or MRI according to RECIST V1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07217301-life",
+      "polarity": "inclusion",
+      "sourceText": "Expected survival time >=3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07217301-mutations-squamous",
+      "polarity": "exclusion",
+      "sourceText": "Squamous NSCLC: Known actionable genomic alteration, including any of the following driver gene mutations...",
+      "reasonFuzzy": "Excludes multiple specific gene alterations and rearrangements combined with histology-specific applicability notes."
+    },
+    {
+      "id": "NCT07217301-mutations-nonsquamous",
+      "polarity": "exclusion",
+      "sourceText": "Nonsquamous NSCLC: Must have documentation of prior testing demonstrating negative AGA status for any of the following driver gene mutations...",
+      "reasonFuzzy": "Requires documentation of negative status across a panel of multiple genes."
+    },
+    {
+      "id": "NCT07217301-liver",
+      "polarity": "exclusion",
+      "sourceText": "AST or ALT >2.5×ULN without concomitant alkaline phosphatase >2.5×ULN or AST or ALT >1.5×ULN with concomitant alkaline phosphatase >2.5×ULN. For participants with liver metastases, AST or ALT >5×ULN...",
+      "reasonFuzzy": "Complex transaminase and alkaline phosphatase interaction rules with conditional limits for liver metastases cannot be represented with a single simple threshold."
+    },
+    {
+      "id": "NCT07217301-brain",
+      "polarity": "inclusion",
+      "sourceText": "Participants who are neurologically, clinically and radiologically stable >=2 weeks after definitive treatment for brain metastases and/or participants with small (sum of all brain lesions: <=3 cm), asymptomatic, incidental, untreated brain metastases may participate in this trial as long as they meet certain criteria as defined in the protocol.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07217301-anc",
+      "polarity": "exclusion",
+      "sourceText": "Absolute neutrophil count (ANC) <1,500 mm^3.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07217301-plt",
+      "polarity": "exclusion",
+      "sourceText": "PLT count <100 x 10^3/mm^3.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07217301-prior-tx",
+      "polarity": "inclusion",
+      "sourceText": "Have had radiographic disease progression on or after prior treatment with anti-PD-1/PD-L1 therapy and platinum-based doublet chemotherapy...",
+      "reasonFuzzy": "Complex prior line requirements and alternative routes for Japan cohort cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT07217301-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have at least 1 measurable lesion (target lesion) by CT or MRI according to RECIST V1.1.",
+      "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07217301-survival",
+      "polarity": "inclusion",
+      "sourceText": "Expected survival time >=3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07217301-ast-alt",
+      "polarity": "exclusion",
+      "sourceText": "AST or ALT >2.5×ULN without concomitant alkaline phosphatase >2.5×ULN or AST or ALT >1.5×ULN with concomitant alkaline phosphatase >2.5×ULN.",
+      "reasonFuzzy": "Complex multi-parameter liver enzyme and alkaline phosphatase rules cannot be captured by a simple ast_max or alt_max kind."
+    },
+    {
+      "id": "NCT07217301-crcl",
+      "polarity": "exclusion",
+      "sourceText": "Creatinine clearance (CrCl) <30 milliliters per minute (mL/min)",
+      "reasonFuzzy": "Creatinine clearance uses a complex formula with ideal/actual body weight options, better captured as fuzzy or exceptions."
+    },
+    {
+      "id": "NCT07217301-anc",
+      "polarity": "exclusion",
+      "sourceText": "Absolute neutrophil count (ANC) <1,500 mm^3.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07217301-plt",
+      "polarity": "exclusion",
+      "sourceText": "PLT count <100 x 10^3/mm^3.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07217301-crcl",
+      "polarity": "exclusion",
+      "sourceText": "Creatinine clearance (CrCl) <30 milliliters per minute (mL/min); the Cockcroft-Gault formula is used to calculate CrCl (using ideal body weight for obese participants and actual body weight for non-obese participants).",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07217301-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants with enlarging or symptomatic brain metastases are excluded from the trial.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07217301-egfr_ex",
+      "polarity": "exclusion",
+      "sourceText": "EGFR: including exon 19 deletion, exon 21 L858R, exon 20 T790M, exon 20 S768I, exon 21 L861Q, exon 18 G719X, and exon 20 insertion mutations.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07217301-alk_ex",
+      "polarity": "exclusion",
+      "sourceText": "ALK rearrangement.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07217301-ros1_ex",
+      "polarity": "exclusion",
+      "sourceText": "ROS proto-oncogene 1, ROS1 rearrangement.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07217301-braf_ex",
+      "polarity": "exclusion",
+      "sourceText": "B-Raf proto-oncogene, serine/threonine kinase (BRAF) V600E mutation.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07217301-hgb",
+      "polarity": "exclusion",
+      "sourceText": "Hemoglobin <9 g/dL.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07217301-bili",
+      "polarity": "exclusion",
+      "sourceText": "Total bilirubin greater than (>) 1.0×ULN except for participants with Gilbert's syndrome with serum bilirubin <=3×ULN or if concurrent conjugated bilirubin <=ULN.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Participants who are neurologically, clinically and radiologically stable >=2 weeks after definitive treatment for brain metastases and/or participants with sma"
+        },
+        {
+          "kind": "anc_min",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) <1,500 mm^3."
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "PLT count <100 x 10^3/mm^3."
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 10,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) <1,500 mm^3."
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "PLT count <100 x 10^3/mm^3."
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 6,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "egfr_min",
+          "polarity": "exclusion",
+          "value": "n:30"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable,untreated"
+        },
+        {
+          "side": "b-only",
+          "kind": "egfr_variant_in",
+          "polarity": "exclusion",
+          "value": "s:exon 19 deletion, exon 21 l858r, exon 20 t790m, exon 20 s768i, exon 21 l861q, exon 18 g719x, and exon 20 insertion"
+        },
+        {
+          "side": "b-only",
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "b-only",
+          "kind": "ros1_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "b-only",
+          "kind": "braf_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "hemoglobin_min",
+          "polarity": "exclusion",
+          "value": "n:9"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "exclusion",
+          "value": "n:1"
+        }
+      ],
+      "normalizerTypedCount": 8
+    }
+  },
+  "runA": {
+    "typedEmitted": 9,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 5086
+  },
+  "runB": {
+    "typedEmitted": 12,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 4039
+  },
+  "ms": 17239,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07217301",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07217301-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female participants must be at least 18 years old or the legal age of majority in their country, whichever is greater.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07217301-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Have locally unresectable advanced or metastatic histologically or cytologically confirmed squamous NSCLC.",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07217301-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status (PS) score of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07217301-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Participants who are neurologically, clinically and radiologically stable >=2 weeks after definitive treatment for brain metastases and/or participants with small (sum of all brain lesions: <=3 cm), asymptomatic, incidental, untreated brain metastases may participate in this trial as long as they meet certain criteria as defined in the protocol.",
+        "allowedBrainMets": [
+          "treated_stable",
+          "untreated"
+        ]
+      },
+      {
+        "id": "NCT07217301-hgb",
+        "kind": "hemoglobin_min",
+        "polarity": "exclusion",
+        "sourceText": "Hemoglobin <9 g/dL.",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT07217301-anc",
+        "kind": "anc_min",
+        "polarity": "exclusion",
+        "sourceText": "Absolute neutrophil count (ANC) <1,500 mm^3.",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT07217301-plt",
+        "kind": "platelets_min",
+        "polarity": "exclusion",
+        "sourceText": "PLT count <100 x 10^3/mm^3.",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT07217301-bili",
+        "kind": "bilirubin_max",
+        "polarity": "exclusion",
+        "sourceText": "Total bilirubin greater than (>) 1.0×ULN except for participants with Gilbert's syndrome with serum bilirubin <=3×ULN or if concurrent conjugated bilirubin <=ULN.",
+        "numberValue": 1,
+        "stages": [],
+        "stringValue": "1.0×ULN"
+      },
+      {
+        "id": "NCT07217301-crcl",
+        "kind": "egfr_min",
+        "polarity": "exclusion",
+        "sourceText": "Creatinine clearance (CrCl) <30 milliliters per minute (mL/min); the Cockcroft-Gault formula is used to calculate CrCl (using ideal body weight for obese participants and actual body weight for non-obese participants).",
+        "numberValue": 30
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07217301-prior-tx",
+        "polarity": "inclusion",
+        "sourceText": "Have had radiographic disease progression on or after prior treatment with anti-PD-1/PD-L1 therapy and platinum-based doublet chemotherapy...",
+        "reasonFuzzy": "Complex prior line requirements with conditional exceptions across different study parts cannot be expressed as a single simple typed rule."
+      },
+      {
+        "id": "NCT07217301-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have at least 1 measurable lesion (target lesion) by CT or MRI according to RECIST V1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07217301-life",
+        "polarity": "inclusion",
+        "sourceText": "Expected survival time >=3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT07217301-mutations-squamous",
+        "polarity": "exclusion",
+        "sourceText": "Squamous NSCLC: Known actionable genomic alteration, including any of the following driver gene mutations...",
+        "reasonFuzzy": "Excludes multiple specific gene alterations and rearrangements combined with histology-specific applicability notes."
+      },
+      {
+        "id": "NCT07217301-mutations-nonsquamous",
+        "polarity": "exclusion",
+        "sourceText": "Nonsquamous NSCLC: Must have documentation of prior testing demonstrating negative AGA status for any of the following driver gene mutations...",
+        "reasonFuzzy": "Requires documentation of negative status across a panel of multiple genes."
+      },
+      {
+        "id": "NCT07217301-liver",
+        "polarity": "exclusion",
+        "sourceText": "AST or ALT >2.5×ULN without concomitant alkaline phosphatase >2.5×ULN or AST or ALT >1.5×ULN with concomitant alkaline phosphatase >2.5×ULN. For participants with liver metastases, AST or ALT >5×ULN...",
+        "reasonFuzzy": "Complex transaminase and alkaline phosphatase interaction rules with conditional limits for liver metastases cannot be represented with a single simple threshold."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07217301",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07217301-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female participants must be at least 18 years old or the legal age of majority in their country, whichever is greater.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07217301-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "(a) Squamous NSCLC: Have locally unresectable advanced or metastatic histologically or cytologically confirmed squamous NSCLC.",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07217301-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status (PS) score of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07217301-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participants with enlarging or symptomatic brain metastases are excluded from the trial.",
+        "allowedBrainMets": [
+          "treated_stable",
+          "untreated"
+        ]
+      },
+      {
+        "id": "NCT07217301-hgb",
+        "kind": "hemoglobin_min",
+        "polarity": "exclusion",
+        "sourceText": "Hemoglobin <9 g/dL.",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT07217301-anc",
+        "kind": "anc_min",
+        "polarity": "exclusion",
+        "sourceText": "Absolute neutrophil count (ANC) <1,500 mm^3.",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT07217301-plt",
+        "kind": "platelets_min",
+        "polarity": "exclusion",
+        "sourceText": "PLT count <100 x 10^3/mm^3.",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT07217301-bili",
+        "kind": "bilirubin_max",
+        "polarity": "exclusion",
+        "sourceText": "Total bilirubin greater than (>) 1.0×ULN except for participants with Gilbert's syndrome with serum bilirubin <=3×ULN or if concurrent conjugated bilirubin <=ULN.",
+        "numberValue": 1,
+        "stages": [],
+        "stringValue": "1.0×ULN"
+      },
+      {
+        "id": "NCT07217301-egfr_ex",
+        "kind": "egfr_variant_in",
+        "polarity": "exclusion",
+        "sourceText": "EGFR: including exon 19 deletion, exon 21 L858R, exon 20 T790M, exon 20 S768I, exon 21 L861Q, exon 18 G719X, and exon 20 insertion mutations.",
+        "stringValue": "exon 19 deletion, exon 21 L858R, exon 20 T790M, exon 20 S768I, exon 21 L861Q, exon 18 G719X, and exon 20 insertion"
+      },
+      {
+        "id": "NCT07217301-alk_ex",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "ALK rearrangement.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07217301-ros1_ex",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "ROS proto-oncogene 1, ROS1 rearrangement.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07217301-braf_ex",
+        "kind": "braf_status",
+        "polarity": "exclusion",
+        "sourceText": "B-Raf proto-oncogene, serine/threonine kinase (BRAF) V600E mutation.",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07217301-prior-tx",
+        "polarity": "inclusion",
+        "sourceText": "Have had radiographic disease progression on or after prior treatment with anti-PD-1/PD-L1 therapy and platinum-based doublet chemotherapy...",
+        "reasonFuzzy": "Complex prior line requirements and alternative routes for Japan cohort cannot be expressed as a single typed check."
+      },
+      {
+        "id": "NCT07217301-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have at least 1 measurable lesion (target lesion) by CT or MRI according to RECIST V1.1.",
+        "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07217301-survival",
+        "polarity": "inclusion",
+        "sourceText": "Expected survival time >=3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT07217301-ast-alt",
+        "polarity": "exclusion",
+        "sourceText": "AST or ALT >2.5×ULN without concomitant alkaline phosphatase >2.5×ULN or AST or ALT >1.5×ULN with concomitant alkaline phosphatase >2.5×ULN.",
+        "reasonFuzzy": "Complex multi-parameter liver enzyme and alkaline phosphatase rules cannot be captured by a simple ast_max or alt_max kind."
+      },
+      {
+        "id": "NCT07217301-crcl",
+        "polarity": "exclusion",
+        "sourceText": "Creatinine clearance (CrCl) <30 milliliters per minute (mL/min)",
+        "reasonFuzzy": "Creatinine clearance uses a complex formula with ideal/actual body weight options, better captured as fuzzy or exceptions."
+      }
+    ]
+  }
+}

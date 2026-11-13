@@ -1,0 +1,39 @@
+{
+  "source": "ClinicalTrials.gov Data API v2",
+  "attribution": "ClinicalTrials.gov, National Library of Medicine, National Institutes of Health",
+  "apiVersion": "2.0.5",
+  "dataTimestampFromApi": "2026-11-10T10:00:05",
+  "retrievedAtUtc": "2026-11-11T23:10:04.865Z",
+  "search": {
+    "query.cond": "non-small cell lung cancer",
+    "filter.overallStatus": "RECRUITING",
+    "query.locn": "United States",
+    "note": "Location in this admin search is the country string 'United States', not a patient city. The 300-mile / Ohio filter is applied on the pulled records, not by filter.geo."
+  },
+  "region": {
+    "center": {
+      "lat": 39.9612,
+      "lon": -82.9988,
+      "label": "Columbus, OH"
+    },
+    "radiusMiles": 300,
+    "rule": "A trial is in the region if it has at least one United States site in Ohio, or with a geoPoint within 300 miles of Columbus, OH (39.9612, -82.9988). Distance is a haversine in statute miles. Sites with no geoPoint are included only when the state is Ohio."
+  },
+  "apiTotalCountForSearch": 519,
+  "studiesPulled": 519,
+  "studiesWithAtLeastOneUsSite": 519,
+  "regionTrials": 277,
+  "withAtLeastOneOhioSite": 152,
+  "mentionsAdvancedOrStageIIIOrIV": 250,
+  "earlyStageLanguageWithoutAdvanced": 12,
+  "mentionsBothAdvancedAndEarlyLanguage": 85,
+  "noStageLanguageMatched": 15,
+  "medianRegionalSites": 2,
+  "maxRegionalSites": 286,
+  "modifications": [
+    "Restricted the field list to the FIELDS array in scripts/ctgov-pull.mjs (not the full study record).",
+    "Dropped trials with no regional site.",
+    "Kept only regional sites on each slim record, with a computed milesFromColumbus field.",
+    "Added heuristic stage flags from title, summary, conditions and eligibility text. These flags are not official ClinicalTrials.gov fields."
+  ]
+}

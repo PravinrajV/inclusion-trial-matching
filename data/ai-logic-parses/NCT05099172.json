@@ -1,0 +1,593 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05099172",
+  "briefTitle": "First in Human Study of BAY2927088 in Participants Who Have Advanced Non-small Cell Lung Cancer (NSCLC) With Mutations in the Genes of Epidermal Growth Factor Receptor (EGFR) and/or Human Epidermal Growth Factor Receptor 2 (HER2)",
+  "parsedAt": "2026-11-12T05:45:09.015Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05099172-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05099172-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin ≥ 9.0 g/dL. Criteria must be met without erythropoietin dependency and without packed red blood cell (pRBC) transfusion within 2 weeks prior to testing.",
+      "numberValue": 9,
+      "stages": [],
+      "stringValue": "",
+      "evidence_quote": "Hemoglobin ≥ 9.0 g/dL. Criteria must be met without erythropoietin dependency and without packed red blood cell (pRBC) transfusion within 2 weeks prior to testing.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05099172-histology",
+      "polarity": "exclusion",
+      "sourceText": "(small cell or mixed histologies are excluded)",
+      "reasonFuzzy": "Exclusion of mixed histologies goes beyond standard single histology checks."
+    },
+    {
+      "id": "NCT05099172-prior",
+      "polarity": "inclusion",
+      "sourceText": "Documented disease progression after treatment with at least one prior systemic therapy for advanced disease. Participants who do not have standard of care access due to any reason, are intolerant to, or are not eligible for standard treatments, may also be eligible. Note: Except for participants eligible for Group F, Group H and Group I (Expansion or Extension) who should have received no prior systemic treatment for locally advanced or metastatic disease.",
+      "reasonFuzzy": "Prior lines depend on study arms and specific exceptions, making a simple typed check insufficient."
+    },
+    {
+      "id": "NCT05099172-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Adequate archival tumor tissue (ideally taken after last targeted treatment and not older than 6 months) has to be available, either from primary or metastatic sites. If archival material is not available, a fresh tumor biopsy should be performed if feasible and if the procedure poses no significant risk for the participant.",
+      "reasonFuzzy": "Willingness or feasibility of undergoing a biopsy is subjective and procedural."
+    },
+    {
+      "id": "NCT05099172-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease by RECIST v1.1 (or by RANO-BM for participants in Expansion Groups G and H) with at least one lesion that can be accurately measured at baseline with computed tomography (CT) or magnetic resonance imaging (MRI) and that is suitable for accurate repeated measurements.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT05099172-life",
+      "polarity": "inclusion",
+      "sourceText": "Minimum life expectancy of 12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT05099172-washout",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with an EGFR tyrosine kinase inhibitor (TKI) ≤ 8 days or 5x the terminal phase, elimination half-lives, whichever is shorter, prior to the first dose of study drug.",
+      "reasonFuzzy": "Washout window depends on half-life calculations, not a simple static lab cutoff."
+    },
+    {
+      "id": "NCT05099172-hiv",
+      "polarity": "exclusion",
+      "sourceText": "Participants with: 1. Known human immunodeficiency virus (HIV), except as noted below: Participants with history of HIV infection are eligible at the Investigator's discretion provided that...",
+      "reasonFuzzy": "Complex investigator discretion and multiple immunologic conditions are not typed checks."
+    },
+    {
+      "id": "NCT05099172-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Documented activating EGFR and/or HER2 mutation assessed by a Clinical Laboratory Improvement Amendments (CLIA)-certified (United States [US] sites) or an equally accredited (outside of the US) local laboratory.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05099172-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelets ≥ 100 × 10^9 cells/L.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05099172-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count ≥ 1.5 ×10^9 cells/L. Criteria must be met without the use of hematopoietic growth factors (e.g., G-CSF) within 2 weeks prior to testing.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05099172-egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Estimated glomerular filtration rate (eGFR) > 50 mL/min per 1.73 m^2 according to the Modification of Diet in renal Disease Study Group (MDRD) formula.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05099172-histology",
+      "polarity": "inclusion",
+      "sourceText": "Documented histologically or cytologically confirmed locally advanced NSCLC, not suitable for definitive therapy or recurrent or metastatic NSCLC at screening (small cell or mixed histologies are excluded).",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but the exact numeric stages are not explicitly listed."
+    },
+    {
+      "id": "NCT05099172-priorlines",
+      "polarity": "inclusion",
+      "sourceText": "Documented disease progression after treatment with at least one prior systemic therapy for advanced disease. Participants who do not have standard of care access due to any reason, are intolerant to, or are not eligible for standard treatments, may also be eligible. Note: Except for participants eligible for Group F, Group H and Group I (Expansion or Extension) who should have received no prior systemic treatment for locally advanced or metastatic disease.",
+      "reasonFuzzy": "Prior therapy rules vary by study group (some require prior systemic therapy, while expansion groups require none), which cannot be captured in a single typed check."
+    },
+    {
+      "id": "NCT05099172-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Adequate archival tumor tissue (ideally taken after last targeted treatment and not older than 6 months) has to be available, either from primary or metastatic sites. If archival material is not available, a fresh tumor biopsy should be performed if feasible and if the procedure poses no significant risk for the participant.",
+      "reasonFuzzy": "Tissue biopsy requirements and feasibility are subjective and procedure-based criteria."
+    },
+    {
+      "id": "NCT05099172-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease by RECIST v1.1 (or by RANO-BM for participants in Expansion Groups G and H) with at least one lesion that can be accurately measured at baseline with computed tomography (CT) or magnetic resonance imaging (MRI) and that is suitable for accurate repeated measurements.",
+      "reasonFuzzy": "Measurable disease by RECIST/RANO-BM is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT05099172-life",
+      "polarity": "inclusion",
+      "sourceText": "Minimum life expectancy of 12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT05099172-washout",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with an EGFR tyrosine kinase inhibitor (TKI) ≤ 8 days or 5x the terminal phase, elimination half-lives, whichever is shorter, prior to the first dose of study drug.",
+      "reasonFuzzy": "Washout window is conditional based on half-lives and is not a fixed simple lab or calendar day cutoff."
+    },
+    {
+      "id": "NCT05099172-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Have any unresolved toxicity of Grade ≥ 2 from previous anti-cancer treatment, except for alopecia and skin pigmentation. Participants with chronic, but stable Grade 2 toxicities may be allowed to enroll after agreement between the Investigator and Sponsor.",
+      "reasonFuzzy": "Toxicity resolution and investigator/sponsor discretion are subjective."
+    },
+    {
+      "id": "NCT05099172-hiv",
+      "polarity": "exclusion",
+      "sourceText": "Participants with: 1. Known human immunodeficiency virus (HIV), except as noted below: Participants with history of HIV infection are eligible at the Investigator's discretion provided that: • CD4+ T-cell (CD4+) counts are ≥ 350 cells/uL • The participant has been on established antiretroviral therapy (ART) for at least 4 weeks prior to the start of study drug and has an HIV viral load less than 400 copies/mL prior to start of the study treatment...",
+      "reasonFuzzy": "HIV exception rules involve multiple complex criteria and investigator discretion."
+    },
+    {
+      "id": "NCT05099172-hepatitis",
+      "polarity": "exclusion",
+      "sourceText": "2. Active Hepatitis B infection (positive for Hepatitis B surface antigen [HbsAg] and Hepatitis B virus [HBV] DNA). 3. Active Hepatitis C infection (positive anti-HCV Antibody and quantitative HCV RNA results greater than the lower limits of detection of the assay). NOTE: Participants with history of chronic HBV or HCV infection are eligible at the Investigator's discretion provided that the disease is stable and sufficiently controlled under treatment.",
+      "reasonFuzzy": "Hepatitis criteria include conditional exceptions and investigator discretion."
+    },
+    {
+      "id": "NCT05099172-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Documented activating EGFR and/or HER2 mutation assessed by a Clinical Laboratory Improvement Amendments (CLIA)-certified (United States [US] sites) or an equally accredited (outside of the US) local laboratory.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05099172-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelets ≥ 100 × 10^9 cells/L.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05099172-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count ≥ 1.5 ×10^9 cells/L. Criteria must be met without the use of hematopoietic growth factors (e.g., G-CSF) within 2 weeks prior to testing.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05099172-egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Estimated glomerular filtration rate (eGFR) > 50 mL/min per 1.73 m^2 according to the Modification of Diet in renal Disease Study Group (MDRD) formula.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05099172-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin ≤ 1.5 × ULN (or ≤ 3 × ULN for participants with documented Gilbert-Meulengracht Syndrome, or for participants with hyperbilirubinemia considered due to liver metastasis).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05099172-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate transaminase and alanine transaminase ≤ 2.5 × ULN (or ≤ 5 × ULN if due to liver involvement by tumor).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05099172-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate transaminase and alanine transaminase ≤ 2.5 × ULN (or ≤ 5 × ULN if due to liver involvement by tumor).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05099172-brain",
+      "polarity": "exclusion",
+      "sourceText": "Any history of primary brain or leptomeningeal disease (symptomatic or asymptomatic), presence of symptomatic central nervous system (CNS) metastases, or CNS metastases that require local treatment (such as radiotherapy or surgery).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 4,
+      "unquotedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Documented activating EGFR and/or HER2 mutation assessed by a Clinical Laboratory Improvement Amendments (CLIA)-certified (United States [US] sites) or an equal"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelets ≥ 100 × 10^9 cells/L."
+        },
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count ≥ 1.5 ×10^9 cells/L. Criteria must be met without the use of hematopoietic growth factors (e.g., G-CSF) within 2 weeks prior to testin"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Estimated glomerular filtration rate (eGFR) > 50 mL/min per 1.73 m^2 according to the Modification of Diet in renal Disease Study Group (MDRD) formula."
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 4,
+      "unquotedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Documented activating EGFR and/or HER2 mutation assessed by a Clinical Laboratory Improvement Amendments (CLIA)-certified (United States [US] sites) or an equal"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelets ≥ 100 × 10^9 cells/L."
+        },
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count ≥ 1.5 ×10^9 cells/L. Criteria must be met without the use of hematopoietic growth factors (e.g., G-CSF) within 2 weeks prior to testin"
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Estimated glomerular filtration rate (eGFR) > 50 mL/min per 1.73 m^2 according to the Modification of Diet in renal Disease Study Group (MDRD) formula."
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 6,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 4699
+  },
+  "runB": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 5448
+  },
+  "ms": 18170,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05099172",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05099172-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Documented activating EGFR and/or HER2 mutation assessed by a Clinical Laboratory Improvement Amendments (CLIA)-certified (United States [US] sites) or an equally accredited (outside of the US) local laboratory.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05099172-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05099172-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 9.0 g/dL. Criteria must be met without erythropoietin dependency and without packed red blood cell (pRBC) transfusion within 2 weeks prior to testing.",
+        "numberValue": 9,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT05099172-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 100 × 10^9 cells/L.",
+        "numberValue": 100,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT05099172-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count ≥ 1.5 ×10^9 cells/L. Criteria must be met without the use of hematopoietic growth factors (e.g., G-CSF) within 2 weeks prior to testing.",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT05099172-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Estimated glomerular filtration rate (eGFR) > 50 mL/min per 1.73 m^2 according to the Modification of Diet in renal Disease Study Group (MDRD) formula.",
+        "numberValue": 50,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT05099172-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 × ULN (or ≤ 3 × ULN for participants with documented Gilbert-Meulengracht Syndrome, or for participants with hyperbilirubinemia considered due to liver metastasis).",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT05099172-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate transaminase and alanine transaminase ≤ 2.5 × ULN (or ≤ 5 × ULN if due to liver involvement by tumor).",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT05099172-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate transaminase and alanine transaminase ≤ 2.5 × ULN (or ≤ 5 × ULN if due to liver involvement by tumor).",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT05099172-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Any history of primary brain or leptomeningeal disease (symptomatic or asymptomatic), presence of symptomatic central nervous system (CNS) metastases, or CNS metastases that require local treatment (such as radiotherapy or surgery).",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05099172-histology",
+        "polarity": "exclusion",
+        "sourceText": "(small cell or mixed histologies are excluded)",
+        "reasonFuzzy": "Exclusion of mixed histologies goes beyond standard single histology checks."
+      },
+      {
+        "id": "NCT05099172-prior",
+        "polarity": "inclusion",
+        "sourceText": "Documented disease progression after treatment with at least one prior systemic therapy for advanced disease. Participants who do not have standard of care access due to any reason, are intolerant to, or are not eligible for standard treatments, may also be eligible. Note: Except for participants eligible for Group F, Group H and Group I (Expansion or Extension) who should have received no prior systemic treatment for locally advanced or metastatic disease.",
+        "reasonFuzzy": "Prior lines depend on study arms and specific exceptions, making a simple typed check insufficient."
+      },
+      {
+        "id": "NCT05099172-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Adequate archival tumor tissue (ideally taken after last targeted treatment and not older than 6 months) has to be available, either from primary or metastatic sites. If archival material is not available, a fresh tumor biopsy should be performed if feasible and if the procedure poses no significant risk for the participant.",
+        "reasonFuzzy": "Willingness or feasibility of undergoing a biopsy is subjective and procedural."
+      },
+      {
+        "id": "NCT05099172-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease by RECIST v1.1 (or by RANO-BM for participants in Expansion Groups G and H) with at least one lesion that can be accurately measured at baseline with computed tomography (CT) or magnetic resonance imaging (MRI) and that is suitable for accurate repeated measurements.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT05099172-life",
+        "polarity": "inclusion",
+        "sourceText": "Minimum life expectancy of 12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT05099172-washout",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with an EGFR tyrosine kinase inhibitor (TKI) ≤ 8 days or 5x the terminal phase, elimination half-lives, whichever is shorter, prior to the first dose of study drug.",
+        "reasonFuzzy": "Washout window depends on half-life calculations, not a simple static lab cutoff."
+      },
+      {
+        "id": "NCT05099172-hiv",
+        "polarity": "exclusion",
+        "sourceText": "Participants with: 1. Known human immunodeficiency virus (HIV), except as noted below: Participants with history of HIV infection are eligible at the Investigator's discretion provided that...",
+        "reasonFuzzy": "Complex investigator discretion and multiple immunologic conditions are not typed checks."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05099172",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05099172-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Documented activating EGFR and/or HER2 mutation assessed by a Clinical Laboratory Improvement Amendments (CLIA)-certified (United States [US] sites) or an equally accredited (outside of the US) local laboratory.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05099172-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05099172-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 9.0 g/dL. Criteria must be met without erythropoietin dependency and without packed red blood cell (pRBC) transfusion within 2 weeks prior to testing.",
+        "numberValue": 9,
+        "stages": [],
+        "stringValue": "9.0 g/dL"
+      },
+      {
+        "id": "NCT05099172-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 100 × 10^9 cells/L.",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT05099172-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count ≥ 1.5 ×10^9 cells/L. Criteria must be met without the use of hematopoietic growth factors (e.g., G-CSF) within 2 weeks prior to testing.",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05099172-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Estimated glomerular filtration rate (eGFR) > 50 mL/min per 1.73 m^2 according to the Modification of Diet in renal Disease Study Group (MDRD) formula.",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT05099172-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 × ULN (or ≤ 3 × ULN for participants with documented Gilbert-Meulengracht Syndrome, or for participants with hyperbilirubinemia considered due to liver metastasis).",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "1.5 x ULN"
+      },
+      {
+        "id": "NCT05099172-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate transaminase and alanine transaminase ≤ 2.5 × ULN (or ≤ 5 × ULN if due to liver involvement by tumor).",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "2.5 x ULN"
+      },
+      {
+        "id": "NCT05099172-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate transaminase and alanine transaminase ≤ 2.5 × ULN (or ≤ 5 × ULN if due to liver involvement by tumor).",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "2.5 x ULN"
+      },
+      {
+        "id": "NCT05099172-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Any history of primary brain or leptomeningeal disease (symptomatic or asymptomatic), presence of symptomatic central nervous system (CNS) metastases, or CNS metastases that require local treatment (such as radiotherapy or surgery).",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05099172-histology",
+        "polarity": "inclusion",
+        "sourceText": "Documented histologically or cytologically confirmed locally advanced NSCLC, not suitable for definitive therapy or recurrent or metastatic NSCLC at screening (small cell or mixed histologies are excluded).",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but the exact numeric stages are not explicitly listed."
+      },
+      {
+        "id": "NCT05099172-priorlines",
+        "polarity": "inclusion",
+        "sourceText": "Documented disease progression after treatment with at least one prior systemic therapy for advanced disease. Participants who do not have standard of care access due to any reason, are intolerant to, or are not eligible for standard treatments, may also be eligible. Note: Except for participants eligible for Group F, Group H and Group I (Expansion or Extension) who should have received no prior systemic treatment for locally advanced or metastatic disease.",
+        "reasonFuzzy": "Prior therapy rules vary by study group (some require prior systemic therapy, while expansion groups require none), which cannot be captured in a single typed check."
+      },
+      {
+        "id": "NCT05099172-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Adequate archival tumor tissue (ideally taken after last targeted treatment and not older than 6 months) has to be available, either from primary or metastatic sites. If archival material is not available, a fresh tumor biopsy should be performed if feasible and if the procedure poses no significant risk for the participant.",
+        "reasonFuzzy": "Tissue biopsy requirements and feasibility are subjective and procedure-based criteria."
+      },
+      {
+        "id": "NCT05099172-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease by RECIST v1.1 (or by RANO-BM for participants in Expansion Groups G and H) with at least one lesion that can be accurately measured at baseline with computed tomography (CT) or magnetic resonance imaging (MRI) and that is suitable for accurate repeated measurements.",
+        "reasonFuzzy": "Measurable disease by RECIST/RANO-BM is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT05099172-life",
+        "polarity": "inclusion",
+        "sourceText": "Minimum life expectancy of 12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT05099172-washout",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with an EGFR tyrosine kinase inhibitor (TKI) ≤ 8 days or 5x the terminal phase, elimination half-lives, whichever is shorter, prior to the first dose of study drug.",
+        "reasonFuzzy": "Washout window is conditional based on half-lives and is not a fixed simple lab or calendar day cutoff."
+      },
+      {
+        "id": "NCT05099172-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Have any unresolved toxicity of Grade ≥ 2 from previous anti-cancer treatment, except for alopecia and skin pigmentation. Participants with chronic, but stable Grade 2 toxicities may be allowed to enroll after agreement between the Investigator and Sponsor.",
+        "reasonFuzzy": "Toxicity resolution and investigator/sponsor discretion are subjective."
+      },
+      {
+        "id": "NCT05099172-hiv",
+        "polarity": "exclusion",
+        "sourceText": "Participants with: 1. Known human immunodeficiency virus (HIV), except as noted below: Participants with history of HIV infection are eligible at the Investigator's discretion provided that: • CD4+ T-cell (CD4+) counts are ≥ 350 cells/uL • The participant has been on established antiretroviral therapy (ART) for at least 4 weeks prior to the start of study drug and has an HIV viral load less than 400 copies/mL prior to start of the study treatment...",
+        "reasonFuzzy": "HIV exception rules involve multiple complex criteria and investigator discretion."
+      },
+      {
+        "id": "NCT05099172-hepatitis",
+        "polarity": "exclusion",
+        "sourceText": "2. Active Hepatitis B infection (positive for Hepatitis B surface antigen [HbsAg] and Hepatitis B virus [HBV] DNA). 3. Active Hepatitis C infection (positive anti-HCV Antibody and quantitative HCV RNA results greater than the lower limits of detection of the assay). NOTE: Participants with history of chronic HBV or HCV infection are eligible at the Investigator's discretion provided that the disease is stable and sufficiently controlled under treatment.",
+        "reasonFuzzy": "Hepatitis criteria include conditional exceptions and investigator discretion."
+      }
+    ]
+  }
+}

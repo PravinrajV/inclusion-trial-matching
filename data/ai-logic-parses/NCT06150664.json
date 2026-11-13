@@ -1,0 +1,425 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06150664",
+  "briefTitle": "A Phase 1 of CTX-8371 in Patients With Advanced Malignancies",
+  "parsedAt": "2026-11-12T06:26:28.115Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06150664-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age 18 years or older",
+      "numberValue": 18,
+      "evidence_quote": "Age 18 years or older",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06150664-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0-1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status 0-1",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06150664-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Adequate bone marrow function defined by absolute neutrophil (ANC) of ≥ 1.5×109/L, platelet count of ≥ 100.0×109/L, and hemoglobin of ≥ 9.0 g/dL (with or without transfusion)",
+      "numberValue": 9,
+      "evidence_quote": "Adequate bone marrow function defined by absolute neutrophil (ANC) of ≥ 1.5×109/L, platelet count of ≥ 100.0×109/L, and hemoglobin of ≥ 9.0 g/dL (with or without transfusion)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06150664-egfr-cl",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Adequate renal function defined as creatinine clearance ≥ 30mL/min by Cockcroft-Gault equation",
+      "numberValue": 30,
+      "evidence_quote": "Adequate renal function defined as creatinine clearance ≥ 30mL/min by Cockcroft-Gault equation",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06150664-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patients with NSCLC, MM, TNBC, and HNSCC must have measurable disease per RECIST 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06150664-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy ≥ 12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06150664-nsclc-prior",
+      "polarity": "inclusion",
+      "sourceText": "Patients with NSCLC ... Patients who have progressed after a minimum of 2 doses of a PD-1/PD-L1 treatment. Study enrollment (C1D1) must be within 12 weeks of the last dose of the anti-PD-1/PD-L1 blocking antibody and Patients must have received prior treatment with platinum-based chemotherapy",
+      "reasonFuzzy": "Multiple prior lines and specific combination criteria are best kept fuzzy as they span multiple conditions and specific timing windows."
+    },
+    {
+      "id": "NCT06150664-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patients with NSCLC, MM, TNBC, and HNSCC must have measurable disease per RECIST 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06150664-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy ≥ 12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06150664-prior-pd1-nsclc",
+      "polarity": "inclusion",
+      "sourceText": "Patients who have progressed after a minimum of 2 doses of a PD-1/PD-L1 treatment",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06150664-prior-platinum-nsclc",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have received prior treatment with platinum-based chemotherapy",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06150664-anc",
+      "polarity": "inclusion",
+      "sourceText": "Adequate bone marrow function defined by absolute neutrophil (ANC) of ≥ 1.5×109/L, platelet count of ≥ 100.0×109/L, and hemoglobin of ≥ 9.0 g/dL (with or without transfusion)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06150664-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Adequate bone marrow function defined by absolute neutrophil (ANC) of ≥ 1.5×109/L, platelet count of ≥ 100.0×109/L, and hemoglobin of ≥ 9.0 g/dL (with or without transfusion)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06150664-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hepatic function defined as serum total bilirubin ≤ 1.5 × ULN, AST/ALT ≤ 2.5 × ULN (or ≤ 5 × ULN in patients with liver metastases)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06150664-ast",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hepatic function defined as serum total bilirubin ≤ 1.5 × ULN, AST/ALT ≤ 2.5 × ULN (or ≤ 5 × ULN in patients with liver metastases)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06150664-alt",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hepatic function defined as serum total bilirubin ≤ 1.5 × ULN, AST/ALT ≤ 2.5 × ULN (or ≤ 5 × ULN in patients with liver metastases)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06150664-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic or uncontrolled central nervous system and brain metastasis or active leptomeningeal disease. Patients with equivocal findings or with confirmed brain metastases are eligible for the study provided that they are asymptomatic and radiologically and neurologically stable without the need for corticosteroid treatment or seizure prophylaxis for ≥4 weeks before the first dose of study drug.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 12,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 10,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 10,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:pd-1/pd-l1 treatment"
+        },
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:platinum-based chemotherapy"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 6,
+      "rejectedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "value": "n:100"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 8
+    }
+  },
+  "runA": {
+    "typedEmitted": 12,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 8985
+  },
+  "runB": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 3,
+    "attempts": 2,
+    "ms": 34698
+  },
+  "ms": 51691,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06150664",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06150664-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 years or older",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06150664-prior-pd1-nsclc",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Patients who have progressed after a minimum of 2 doses of a PD-1/PD-L1 treatment",
+        "stringValue": "PD-1/PD-L1 treatment"
+      },
+      {
+        "id": "NCT06150664-prior-platinum-nsclc",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have received prior treatment with platinum-based chemotherapy",
+        "stringValue": "platinum-based chemotherapy"
+      },
+      {
+        "id": "NCT06150664-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0-1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06150664-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Adequate bone marrow function defined by absolute neutrophil (ANC) of ≥ 1.5×109/L",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT06150664-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "platelet count of ≥ 100.0×109/L",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT06150664-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "hemoglobin of ≥ 9.0 g/dL (with or without transfusion)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT06150664-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hepatic function defined as serum total bilirubin ≤ 1.5 × ULN",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT06150664-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AST/ALT ≤ 2.5 × ULN (or ≤ 5 × ULN in patients with liver metastases)",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "or ≤ 5 × ULN in patients with liver metastases"
+      },
+      {
+        "id": "NCT06150664-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AST/ALT ≤ 2.5 × ULN (or ≤ 5 × ULN in patients with liver metastases)",
+        "numberValue": 2.5,
+        "stringValue": "or ≤ 5 × ULN in patients with liver metastases"
+      },
+      {
+        "id": "NCT06150664-egfr-cl",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Adequate renal function defined as creatinine clearance ≥ 30mL/min by Cockcroft-Gault equation",
+        "numberValue": 30
+      },
+      {
+        "id": "NCT06150664-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic or uncontrolled central nervous system and brain metastasis or active leptomeningeal disease. Patients with equivocal findings or with confirmed brain metastases are eligible for the study provided that they are asymptomatic and radiologically and neurologically stable without the need for corticosteroid treatment or seizure prophylaxis for ≥4 weeks before the first dose of study drug.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06150664-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patients with NSCLC, MM, TNBC, and HNSCC must have measurable disease per RECIST 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06150664-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy ≥ 12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06150664",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06150664-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 years or older",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06150664-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0-1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06150664-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Adequate bone marrow function defined by absolute neutrophil (ANC) of ≥ 1.5×109/L, platelet count of ≥ 100.0×109/L, and hemoglobin of ≥ 9.0 g/dL (with or without transfusion)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT06150664-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Adequate bone marrow function defined by absolute neutrophil (ANC) of ≥ 1.5×109/L, platelet count of ≥ 100.0×109/L, and hemoglobin of ≥ 9.0 g/dL (with or without transfusion)",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT06150664-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Adequate bone marrow function defined by absolute neutrophil (ANC) of ≥ 1.5×109/L, platelet count of ≥ 100.0×109/L, and hemoglobin of ≥ 9.0 g/dL (with or without transfusion)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT06150664-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hepatic function defined as serum total bilirubin ≤ 1.5 × ULN, AST/ALT ≤ 2.5 × ULN (or ≤ 5 × ULN in patients with liver metastases)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT06150664-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hepatic function defined as serum total bilirubin ≤ 1.5 × ULN, AST/ALT ≤ 2.5 × ULN (or ≤ 5 × ULN in patients with liver metastases)",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "2.5 * ULN (or <= 5 * ULN in patients with liver metastases)"
+      },
+      {
+        "id": "NCT06150664-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hepatic function defined as serum total bilirubin ≤ 1.5 × ULN, AST/ALT ≤ 2.5 × ULN (or ≤ 5 × ULN in patients with liver metastases)",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "2.5 * ULN (or <= 5 * ULN in patients with liver metastases)"
+      },
+      {
+        "id": "NCT06150664-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Adequate renal function defined as creatinine clearance ≥ 30mL/min by Cockcroft-Gault equation",
+        "numberValue": 30
+      },
+      {
+        "id": "NCT06150664-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic or uncontrolled central nervous system and brain metastasis or active leptomeningeal disease. Patients with equivocal findings or with confirmed brain metastases are eligible for the study provided that they are asymptomatic and radiologically and neurologically stable without the need for corticosteroid treatment or seizure prophylaxis for ≥4 weeks before the first dose of study drug.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06150664-nsclc-prior",
+        "polarity": "inclusion",
+        "sourceText": "Patients with NSCLC ... Patients who have progressed after a minimum of 2 doses of a PD-1/PD-L1 treatment. Study enrollment (C1D1) must be within 12 weeks of the last dose of the anti-PD-1/PD-L1 blocking antibody and Patients must have received prior treatment with platinum-based chemotherapy",
+        "reasonFuzzy": "Multiple prior lines and specific combination criteria are best kept fuzzy as they span multiple conditions and specific timing windows."
+      },
+      {
+        "id": "NCT06150664-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patients with NSCLC, MM, TNBC, and HNSCC must have measurable disease per RECIST 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06150664-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy ≥ 12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      }
+    ]
+  }
+}

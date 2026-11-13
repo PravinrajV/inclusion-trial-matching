@@ -1,0 +1,271 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06439914",
+  "briefTitle": "First-in-human Study of Interferon-y PET Imaging to Assess Response to Immunotherapy",
+  "parsedAt": "2026-11-12T09:22:23.940Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06439914-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "must be >18 years old.",
+      "numberValue": 18,
+      "evidence_quote": "must be >18 years old.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06439914-fdg",
+      "polarity": "inclusion",
+      "sourceText": "FDG PET done within 2 months of the baseline imaging, as part of standard-of-care.",
+      "reasonFuzzy": "Baseline imaging window and standard of care imaging requirement is not a typed check."
+    },
+    {
+      "id": "NCT06439914-measurable",
+      "polarity": "inclusion",
+      "sourceText": "measurable disease by RECIST 1.1 with at least one lesion of at least 2 cm in a region of the body that can be imaged by PET (e.g.,outside of the liver)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06439914-physical",
+      "polarity": "inclusion",
+      "sourceText": "must be able to lie still for the tests. Their girth and weight must be suitable to enter the gantry, which varies per tomograph.",
+      "reasonFuzzy": "Physical capability and scanner fit requirements are subjective and equipment-dependent, not typed checks."
+    },
+    {
+      "id": "NCT06439914-labs",
+      "polarity": "inclusion",
+      "sourceText": "Physical exam, CBC and Multiphasic (including electrolytes, BUN, creatinine, total bilirubin, AST, and ALT) must be done within 28 days prior to PET imaging",
+      "reasonFuzzy": "Listing required lab tests without explicit cutoff values is not a typed lab check."
+    },
+    {
+      "id": "NCT06439914-pregnant",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant or breast feeding individuals.",
+      "reasonFuzzy": "Pregnancy and breastfeeding status exclusion is not a typed check."
+    },
+    {
+      "id": "NCT06439914-diagnosis",
+      "polarity": "inclusion",
+      "sourceText": "Prior histologic or cytologic diagnosis of non-small cell lung cancer.",
+      "reasonFuzzy": "Histology is not specified beyond general NSCLC."
+    },
+    {
+      "id": "NCT06439914-fdg",
+      "polarity": "inclusion",
+      "sourceText": "FDG PET done within 2 months of the baseline imaging, as part of standard-of-care.",
+      "reasonFuzzy": "Imaging timing is not a typed clinical check."
+    },
+    {
+      "id": "NCT06439914-measurable",
+      "polarity": "inclusion",
+      "sourceText": "measurable disease by RECIST 1.1 with at least one lesion of at least 2 cm in a region of the body that can be imaged by PET (e.g.,outside of the liver)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06439914-physical",
+      "polarity": "inclusion",
+      "sourceText": "must be able to lie still for the tests. Their girth and weight must be suitable to enter the gantry, which varies per tomograph.",
+      "reasonFuzzy": "Physical and equipment accommodation requirements are subjective and not typed checks."
+    },
+    {
+      "id": "NCT06439914-consent",
+      "polarity": "inclusion",
+      "sourceText": "Patients must sign an informed consent indicating that they are aware of the investigational nature of this study, in keeping with the policies of the cancer center.",
+      "reasonFuzzy": "Informed consent is an administrative requirement, not a typed clinical check."
+    },
+    {
+      "id": "NCT06439914-labs",
+      "polarity": "inclusion",
+      "sourceText": "Physical exam, CBC and Multiphasic (including electrolytes, BUN, creatinine, total bilirubin, AST, and ALT) must be done within 28 days prior to PET imaging",
+      "reasonFuzzy": "Lab testing requirement without specific numerical cutoff values."
+    },
+    {
+      "id": "NCT06439914-immunotherapy",
+      "polarity": "exclusion",
+      "sourceText": "No prior immunotherapy for current stage of NSCLC (Non Small Cell Lung Cancer). Immunotherapy in neoadjuvant or adjuvant setting and have recurrence at least 12 months following completion of immunotherapy are eligible after discussion with the principle investigator.",
+      "reasonFuzzy": "Prior therapy exclusion includes complex exceptions and investigator discussion."
+    },
+    {
+      "id": "NCT06439914-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant or breast feeding individuals.",
+      "reasonFuzzy": "Pregnancy/breastfeeding is not a typed check kind."
+    },
+    {
+      "id": "NCT06439914-immunotherapy",
+      "polarity": "exclusion",
+      "sourceText": "No prior immunotherapy for current stage of NSCLC (Non Small Cell Lung Cancer). Immunotherapy in neoadjuvant or adjuvant setting and have recurrence at least 12 months following completion of immunotherapy are eligible after discussion with the principle investigator.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:immunotherapy"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 2335
+  },
+  "runB": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 2799
+  },
+  "ms": 13110,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06439914",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06439914-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "must be >18 years old.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06439914-immunotherapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "No prior immunotherapy for current stage of NSCLC (Non Small Cell Lung Cancer). Immunotherapy in neoadjuvant or adjuvant setting and have recurrence at least 12 months following completion of immunotherapy are eligible after discussion with the principle investigator.",
+        "stringValue": "immunotherapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06439914-fdg",
+        "polarity": "inclusion",
+        "sourceText": "FDG PET done within 2 months of the baseline imaging, as part of standard-of-care.",
+        "reasonFuzzy": "Baseline imaging window and standard of care imaging requirement is not a typed check."
+      },
+      {
+        "id": "NCT06439914-measurable",
+        "polarity": "inclusion",
+        "sourceText": "measurable disease by RECIST 1.1 with at least one lesion of at least 2 cm in a region of the body that can be imaged by PET (e.g.,outside of the liver)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06439914-physical",
+        "polarity": "inclusion",
+        "sourceText": "must be able to lie still for the tests. Their girth and weight must be suitable to enter the gantry, which varies per tomograph.",
+        "reasonFuzzy": "Physical capability and scanner fit requirements are subjective and equipment-dependent, not typed checks."
+      },
+      {
+        "id": "NCT06439914-labs",
+        "polarity": "inclusion",
+        "sourceText": "Physical exam, CBC and Multiphasic (including electrolytes, BUN, creatinine, total bilirubin, AST, and ALT) must be done within 28 days prior to PET imaging",
+        "reasonFuzzy": "Listing required lab tests without explicit cutoff values is not a typed lab check."
+      },
+      {
+        "id": "NCT06439914-pregnant",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant or breast feeding individuals.",
+        "reasonFuzzy": "Pregnancy and breastfeeding status exclusion is not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06439914",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06439914-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "must be >18 years old.",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06439914-diagnosis",
+        "polarity": "inclusion",
+        "sourceText": "Prior histologic or cytologic diagnosis of non-small cell lung cancer.",
+        "reasonFuzzy": "Histology is not specified beyond general NSCLC."
+      },
+      {
+        "id": "NCT06439914-fdg",
+        "polarity": "inclusion",
+        "sourceText": "FDG PET done within 2 months of the baseline imaging, as part of standard-of-care.",
+        "reasonFuzzy": "Imaging timing is not a typed clinical check."
+      },
+      {
+        "id": "NCT06439914-measurable",
+        "polarity": "inclusion",
+        "sourceText": "measurable disease by RECIST 1.1 with at least one lesion of at least 2 cm in a region of the body that can be imaged by PET (e.g.,outside of the liver)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06439914-physical",
+        "polarity": "inclusion",
+        "sourceText": "must be able to lie still for the tests. Their girth and weight must be suitable to enter the gantry, which varies per tomograph.",
+        "reasonFuzzy": "Physical and equipment accommodation requirements are subjective and not typed checks."
+      },
+      {
+        "id": "NCT06439914-consent",
+        "polarity": "inclusion",
+        "sourceText": "Patients must sign an informed consent indicating that they are aware of the investigational nature of this study, in keeping with the policies of the cancer center.",
+        "reasonFuzzy": "Informed consent is an administrative requirement, not a typed clinical check."
+      },
+      {
+        "id": "NCT06439914-labs",
+        "polarity": "inclusion",
+        "sourceText": "Physical exam, CBC and Multiphasic (including electrolytes, BUN, creatinine, total bilirubin, AST, and ALT) must be done within 28 days prior to PET imaging",
+        "reasonFuzzy": "Lab testing requirement without specific numerical cutoff values."
+      },
+      {
+        "id": "NCT06439914-immunotherapy",
+        "polarity": "exclusion",
+        "sourceText": "No prior immunotherapy for current stage of NSCLC (Non Small Cell Lung Cancer). Immunotherapy in neoadjuvant or adjuvant setting and have recurrence at least 12 months following completion of immunotherapy are eligible after discussion with the principle investigator.",
+        "reasonFuzzy": "Prior therapy exclusion includes complex exceptions and investigator discussion."
+      },
+      {
+        "id": "NCT06439914-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant or breast feeding individuals.",
+        "reasonFuzzy": "Pregnancy/breastfeeding is not a typed check kind."
+      }
+    ]
+  }
+}

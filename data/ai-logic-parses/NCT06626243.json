@@ -1,0 +1,154 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06626243",
+  "briefTitle": "Analysis of RATS, VATS and Open Lung Resections After Neoadjuvant Chemo-immunotherapy in Patients Performed in Five Referred Centers",
+  "parsedAt": "2026-11-12T10:29:20.705Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06626243-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age >= 18 years old at the moment of surgery",
+      "numberValue": 18,
+      "evidence_quote": "Age >= 18 years old at the moment of surgery",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06626243-stage",
+      "polarity": "inclusion",
+      "sourceText": "Diagnosis of clinical or pathological stage IIB (T1-2, hilar N1, M0) and III (any T, N1-2, M0) NSCLC surgically treated with robotic, VATS and open approach with radical intent from 1st of January 2016 to 31st of March 2024",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06626243-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Received neoadjuvant chemo-immunotherapy or immunotherapy alone",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIB,IIIA,IIIB,IIIC"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:chemo-immunotherapy or immunotherapy alone"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 0,
+    "attempts": 1,
+    "ms": 1878
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 0,
+    "attempts": 1,
+    "ms": 1550
+  },
+  "ms": 11402,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06626243",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06626243-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Diagnosis of clinical or pathological stage IIB (T1-2, hilar N1, M0) and III (any T, N1-2, M0) NSCLC surgically treated with robotic, VATS and open approach with radical intent from 1st of January 2016 to 31st of March 2024",
+        "stages": [
+          "IIB",
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT06626243-therapy",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Received neoadjuvant chemo-immunotherapy or immunotherapy alone",
+        "stringValue": "chemo-immunotherapy or immunotherapy alone"
+      },
+      {
+        "id": "NCT06626243-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age >= 18 years old at the moment of surgery",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": []
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06626243",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06626243-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Diagnosis of clinical or pathological stage IIB (T1-2, hilar N1, M0) and III (any T, N1-2, M0) NSCLC surgically treated with robotic, VATS and open approach with radical intent from 1st of January 2016 to 31st of March 2024",
+        "stages": [
+          "IIB",
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT06626243-therapy",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Received neoadjuvant chemo-immunotherapy or immunotherapy alone",
+        "stringValue": "neoadjuvant chemo-immunotherapy or immunotherapy alone"
+      },
+      {
+        "id": "NCT06626243-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age >= 18 years old at the moment of surgery",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": []
+  }
+}

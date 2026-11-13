@@ -1,0 +1,266 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07542704",
+  "briefTitle": "A Study to Investigate the Safety and Efficacy of KQB368 as Monotherapy in Participants With Advanced Solid Malignancies",
+  "parsedAt": "2026-11-12T11:56:53.391Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07542704-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed diagnosis of a solid tumor",
+      "reasonFuzzy": "Broad solid tumor inclusion is not specifically restricted to non-small cell lung cancer here."
+    },
+    {
+      "id": "NCT07542704-stage",
+      "polarity": "inclusion",
+      "sourceText": "Unresectable or metastatic disease",
+      "reasonFuzzy": "Metastatic disease is described generally without an explicit numbered stage list."
+    },
+    {
+      "id": "NCT07542704-curative",
+      "polarity": "inclusion",
+      "sourceText": "No available treatment with curative intent",
+      "reasonFuzzy": "Subjective judgment regarding availability of curative treatment options."
+    },
+    {
+      "id": "NCT07542704-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function",
+      "reasonFuzzy": "General organ function without specific lab cutoffs."
+    },
+    {
+      "id": "NCT07542704-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07542704-swallow",
+      "polarity": "inclusion",
+      "sourceText": "Must be able to swallow with no GI condition that prevents absorption",
+      "reasonFuzzy": "Clinical capability check, not a typed criteria."
+    },
+    {
+      "id": "NCT07542704-solidtumor",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed diagnosis of a solid tumor",
+      "reasonFuzzy": "This trial enrolls a basket of advanced solid malignancies, and while NSCLC is among them, it is not strictly limited to NSCLC."
+    },
+    {
+      "id": "NCT07542704-unresectable",
+      "polarity": "inclusion",
+      "sourceText": "Unresectable or metastatic disease",
+      "reasonFuzzy": "Unresectable or metastatic stage wording without a specific numbered stage list."
+    },
+    {
+      "id": "NCT07542704-curative",
+      "polarity": "inclusion",
+      "sourceText": "No available treatment with curative intent",
+      "reasonFuzzy": "Treatment availability judgment."
+    },
+    {
+      "id": "NCT07542704-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function",
+      "reasonFuzzy": "General organ function without specific numeric laboratory cutoffs."
+    },
+    {
+      "id": "NCT07542704-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07542704-swallow",
+      "polarity": "inclusion",
+      "sourceText": "Must be able to swallow with no GI condition that prevents absorption",
+      "reasonFuzzy": "Clinical capability judgment."
+    },
+    {
+      "id": "NCT07542704-kras",
+      "polarity": "inclusion",
+      "sourceText": "Malignancy with either a KRAS G12C or KRAS G12S mutation",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07542704-kras-variant",
+      "polarity": "inclusion",
+      "sourceText": "Malignancy with either a KRAS G12C or KRAS G12S mutation",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12c, g12s"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 8259
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 9051
+  },
+  "ms": 25291,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07542704",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07542704-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Malignancy with either a KRAS G12C or KRAS G12S mutation",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07542704-kras-variant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Malignancy with either a KRAS G12C or KRAS G12S mutation",
+        "stringValue": "G12C, G12S"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07542704-histology",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed diagnosis of a solid tumor",
+        "reasonFuzzy": "Broad solid tumor inclusion is not specifically restricted to non-small cell lung cancer here."
+      },
+      {
+        "id": "NCT07542704-stage",
+        "polarity": "inclusion",
+        "sourceText": "Unresectable or metastatic disease",
+        "reasonFuzzy": "Metastatic disease is described generally without an explicit numbered stage list."
+      },
+      {
+        "id": "NCT07542704-curative",
+        "polarity": "inclusion",
+        "sourceText": "No available treatment with curative intent",
+        "reasonFuzzy": "Subjective judgment regarding availability of curative treatment options."
+      },
+      {
+        "id": "NCT07542704-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function",
+        "reasonFuzzy": "General organ function without specific lab cutoffs."
+      },
+      {
+        "id": "NCT07542704-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07542704-swallow",
+        "polarity": "inclusion",
+        "sourceText": "Must be able to swallow with no GI condition that prevents absorption",
+        "reasonFuzzy": "Clinical capability check, not a typed criteria."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07542704",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07542704-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Malignancy with either a KRAS G12C or KRAS G12S mutation",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07542704-krasvariant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Malignancy with either a KRAS G12C or KRAS G12S mutation",
+        "stringValue": "G12C, G12S"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07542704-solidtumor",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed diagnosis of a solid tumor",
+        "reasonFuzzy": "This trial enrolls a basket of advanced solid malignancies, and while NSCLC is among them, it is not strictly limited to NSCLC."
+      },
+      {
+        "id": "NCT07542704-unresectable",
+        "polarity": "inclusion",
+        "sourceText": "Unresectable or metastatic disease",
+        "reasonFuzzy": "Unresectable or metastatic stage wording without a specific numbered stage list."
+      },
+      {
+        "id": "NCT07542704-curative",
+        "polarity": "inclusion",
+        "sourceText": "No available treatment with curative intent",
+        "reasonFuzzy": "Treatment availability judgment."
+      },
+      {
+        "id": "NCT07542704-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function",
+        "reasonFuzzy": "General organ function without specific numeric laboratory cutoffs."
+      },
+      {
+        "id": "NCT07542704-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07542704-swallow",
+        "polarity": "inclusion",
+        "sourceText": "Must be able to swallow with no GI condition that prevents absorption",
+        "reasonFuzzy": "Clinical capability judgment."
+      }
+    ]
+  }
+}

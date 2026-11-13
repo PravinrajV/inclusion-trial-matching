@@ -1,0 +1,564 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07388524",
+  "briefTitle": "Testing the Impact of an Anti-Cancer Drug, Atezolizumab, After Surgery to Prevent Early Stage Non-small Cell Lung Cancer From Returning, AASI-NSCLC Trial",
+  "parsedAt": "2026-11-12T11:52:24.969Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07388524-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07388524-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2 (or Karnofsky ≥ 60%)",
+      "numberValue": 2,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2 (or Karnofsky ≥ 60%)",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07388524-surgery",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have undergone complete surgical resection with negative margins (complete R0 resection). Surgical resection must be lobectomy or higher, unless the tumor measured no more than 2 cm based on clinical staging, where sub-lobar resection, e.g., wedge or segmentectomy, will be acceptable",
+      "reasonFuzzy": "Surgical resection type and margin status require specific procedural and imaging evaluation beyond a simple typed check."
+    },
+    {
+      "id": "NCT07388524-nodal",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have undergone adequate nodal sampling as defined by Commission on Cancer, 2020 Standard.",
+      "reasonFuzzy": "Nodal sampling adequacy is a procedural surgical requirement, not a typed biomarker or lab check."
+    },
+    {
+      "id": "NCT07388524-recovery",
+      "polarity": "inclusion",
+      "sourceText": "Recovered from surgical resection as determined by the treating provider or the investigator",
+      "reasonFuzzy": "Recovery from surgery is investigator-dependent and subjective."
+    },
+    {
+      "id": "NCT07388524-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥ 1,500/mm^3",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07388524-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count ≥ 100,000/mm^3",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07388524-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) ≤ 3 x upper limit of normal (ULN)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07388524-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) ≤ 3 x upper limit of normal (ULN)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07388524-egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine clearance ≥ 30 mL/min (using standard Cockcroft-Gault formula, unless measured creatinine clearance [CrCl] is available and meet the specified threshold)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07388524-histology",
+      "polarity": "inclusion",
+      "sourceText": "Tumors with any histology are allowed including both squamous and non-squamous subtypes, except those containing small-cell morphology. Non-squamous histology includes adenocarcinoma, large cell neuroendocrine, poorly differentiated tumors and adenosquamous, etc",
+      "reasonFuzzy": "Histology includes complex subtypes and exceptions (large cell neuroendocrine, poorly differentiated, etc.) that do not map directly to the standardized single-value histology enums."
+    },
+    {
+      "id": "NCT07388524-surgery",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have undergone complete surgical resection with negative margins (complete R0 resection). Surgical resection must be lobectomy or higher, unless the tumor measured no more than 2 cm based on clinical staging, where sub-lobar resection, e.g., wedge or segmentectomy, will be acceptable",
+      "reasonFuzzy": "Surgical resection criteria and sub-lobar options are complex procedural rules, not simple typed checks."
+    },
+    {
+      "id": "NCT07388524-nodal",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have undergone adequate nodal sampling as defined by Commission on Cancer, 2020 Standard. Adequate nodal sampling includes pathological evaluation of at least one (named and/or numbered) hilar station (level 10 or higher) and at least three distinct (named and or numbered) mediastinal stations (level 2-9)",
+      "reasonFuzzy": "Surgical nodal sampling requirements are procedural rules, not simple typed biomarker or lab checks."
+    },
+    {
+      "id": "NCT07388524-timing",
+      "polarity": "inclusion",
+      "sourceText": "Patient to be registered to A082302 no earlier than 21 days and no later than 77 days from surgical resection",
+      "reasonFuzzy": "Post-surgical registration timing window is a protocol-specific logistical timeline, not a typed clinical check."
+    },
+    {
+      "id": "NCT07388524-prior_therapy",
+      "polarity": "exclusion",
+      "sourceText": "No prior neoadjuvant or adjuvant therapy for current lung cancer diagnosis",
+      "reasonFuzzy": "Prior therapy exclusion specifies neoadjuvant or adjuvant treatment for the current diagnosis rather than a simple categorical prior therapy rule."
+    },
+    {
+      "id": "NCT07388524-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥ 1,500/mm^3",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07388524-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count ≥ 100,000/mm^3",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07388524-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) ≤ 3 x upper limit of normal (ULN)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07388524-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) ≤ 3 x upper limit of normal (ULN)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07388524-egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine clearance ≥ 30 mL/min (using standard Cockcroft-Gault formula, unless measured creatinine clearance [CrCl] is available and meet the specified threshold)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07388524-prior_therapy",
+      "polarity": "exclusion",
+      "sourceText": "No prior neoadjuvant or adjuvant therapy for current lung cancer diagnosis",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07388524-stage",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically stage IA3 or IB NSCLC per American Joint Committee on Cancer (AJCC) Cancer Staging Manual, 9th edition",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07388524-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "PD-L1 immunohistochemistry showing tumor proportion score (TPS) ≥ 50%, by an Food and Drug Administration (FDA)-approved assay including but not limited to SP263, SP142, 22C3, 28-8, performed either on surgical specimen or biopsy specimen",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07388524-egfr",
+      "polarity": "exclusion",
+      "sourceText": "No EGFR exon 19 deletion (del) or L858R mutation or ALK fusion; molecular testing may have been performed either on surgical specimen or biopsy specimen. Tumors with purely squamous histology are not required to undergo EGFR or ALK gene testing",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07388524-alk",
+      "polarity": "exclusion",
+      "sourceText": "No EGFR exon 19 deletion (del) or L858R mutation or ALK fusion; molecular testing may have been performed either on surgical specimen or biopsy specimen. Tumors with purely squamous histology are not required to undergo EGFR or ALK gene testing",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07388524-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin ≤ 1.5 x upper limit of normal (ULN), except patients with Gilbert syndrome who can have total bilirubin < 3.0 mg/dl",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 8,
+      "unquoted": 5,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) ≥ 1,500/mm^3"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelet count ≥ 100,000/mm^3"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) "
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) "
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Creatinine clearance ≥ 30 mL/min (using standard Cockcroft-Gault formula, unless measured creatinine clearance [CrCl] is available and meet the specified thresh"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 7,
+      "unquoted": 5,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) ≥ 1,500/mm^3"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelet count ≥ 100,000/mm^3"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) "
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) "
+        },
+        {
+          "kind": "egfr_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Creatinine clearance ≥ 30 mL/min (using standard Cockcroft-Gault formula, unless measured creatinine clearance [CrCl] is available and meet the specified thresh"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 7,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:neoadjuvant or adjuvant therapy"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 5,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IA,IB"
+        },
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:50"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 13,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 7318
+  },
+  "runB": {
+    "typedEmitted": 12,
+    "fuzzyEmitted": 5,
+    "attempts": 3,
+    "ms": 49415
+  },
+  "ms": 64717,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07388524",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07388524-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically stage IA3 or IB NSCLC per American Joint Committee on Cancer (AJCC) Cancer Staging Manual, 9th edition",
+        "stages": [
+          "IA",
+          "IB"
+        ]
+      },
+      {
+        "id": "NCT07388524-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "PD-L1 immunohistochemistry showing tumor proportion score (TPS) ≥ 50%, by an Food and Drug Administration (FDA)-approved assay including but not limited to SP263, SP142, 22C3, 28-8, performed either on surgical specimen or biopsy specimen",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT07388524-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "No EGFR exon 19 deletion (del) or L858R mutation or ALK fusion; molecular testing may have been performed either on surgical specimen or biopsy specimen. Tumors with purely squamous histology are not required to undergo EGFR or ALK gene testing",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT07388524-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "No EGFR exon 19 deletion (del) or L858R mutation or ALK fusion; molecular testing may have been performed either on surgical specimen or biopsy specimen. Tumors with purely squamous histology are not required to undergo EGFR or ALK gene testing",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT07388524-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07388524-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2 (or Karnofsky ≥ 60%)",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07388524-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥ 1,500/mm^3",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT07388524-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count ≥ 100,000/mm^3",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT07388524-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 x upper limit of normal (ULN), except patients with Gilbert syndrome who can have total bilirubin < 3.0 mg/dl",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT07388524-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) ≤ 3 x upper limit of normal (ULN)",
+        "numberValue": 3,
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT07388524-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) ≤ 3 x upper limit of normal (ULN)",
+        "numberValue": 3,
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT07388524-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine clearance ≥ 30 mL/min (using standard Cockcroft-Gault formula, unless measured creatinine clearance [CrCl] is available and meet the specified threshold)",
+        "numberValue": 30
+      },
+      {
+        "id": "NCT07388524-prior_therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "No prior neoadjuvant or adjuvant therapy for current lung cancer diagnosis",
+        "stringValue": "neoadjuvant or adjuvant therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07388524-surgery",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have undergone complete surgical resection with negative margins (complete R0 resection). Surgical resection must be lobectomy or higher, unless the tumor measured no more than 2 cm based on clinical staging, where sub-lobar resection, e.g., wedge or segmentectomy, will be acceptable",
+        "reasonFuzzy": "Surgical resection type and margin status require specific procedural and imaging evaluation beyond a simple typed check."
+      },
+      {
+        "id": "NCT07388524-nodal",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have undergone adequate nodal sampling as defined by Commission on Cancer, 2020 Standard.",
+        "reasonFuzzy": "Nodal sampling adequacy is a procedural surgical requirement, not a typed biomarker or lab check."
+      },
+      {
+        "id": "NCT07388524-recovery",
+        "polarity": "inclusion",
+        "sourceText": "Recovered from surgical resection as determined by the treating provider or the investigator",
+        "reasonFuzzy": "Recovery from surgery is investigator-dependent and subjective."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07388524",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07388524-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically stage IA3 or IB NSCLC per American Joint Committee on Cancer (AJCC) Cancer Staging Manual, 9th edition",
+        "stages": [
+          "IA",
+          "IB"
+        ]
+      },
+      {
+        "id": "NCT07388524-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "PD-L1 immunohistochemistry showing tumor proportion score (TPS) ≥ 50%, by an Food and Drug Administration (FDA)-approved assay including but not limited to SP263, SP142, 22C3, 28-8, performed either on surgical specimen or biopsy specimen",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT07388524-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "No EGFR exon 19 deletion (del) or L858R mutation or ALK fusion; molecular testing may have been performed either on surgical specimen or biopsy specimen. Tumors with purely squamous histology are not required to undergo EGFR or ALK gene testing",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT07388524-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "No EGFR exon 19 deletion (del) or L858R mutation or ALK fusion; molecular testing may have been performed either on surgical specimen or biopsy specimen. Tumors with purely squamous histology are not required to undergo EGFR or ALK gene testing",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT07388524-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07388524-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2 (or Karnofsky ≥ 60%)",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07388524-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥ 1,500/mm^3",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT07388524-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count ≥ 100,000/mm^3",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT07388524-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 x upper limit of normal (ULN), except patients with Gilbert syndrome who can have total bilirubin < 3.0 mg/dl",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT07388524-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) ≤ 3 x upper limit of normal (ULN)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT07388524-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) ≤ 3 x upper limit of normal (ULN)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT07388524-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine clearance ≥ 30 mL/min (using standard Cockcroft-Gault formula, unless measured creatinine clearance [CrCl] is available and meet the specified threshold)",
+        "numberValue": 30
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07388524-histology",
+        "polarity": "inclusion",
+        "sourceText": "Tumors with any histology are allowed including both squamous and non-squamous subtypes, except those containing small-cell morphology. Non-squamous histology includes adenocarcinoma, large cell neuroendocrine, poorly differentiated tumors and adenosquamous, etc",
+        "reasonFuzzy": "Histology includes complex subtypes and exceptions (large cell neuroendocrine, poorly differentiated, etc.) that do not map directly to the standardized single-value histology enums."
+      },
+      {
+        "id": "NCT07388524-surgery",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have undergone complete surgical resection with negative margins (complete R0 resection). Surgical resection must be lobectomy or higher, unless the tumor measured no more than 2 cm based on clinical staging, where sub-lobar resection, e.g., wedge or segmentectomy, will be acceptable",
+        "reasonFuzzy": "Surgical resection criteria and sub-lobar options are complex procedural rules, not simple typed checks."
+      },
+      {
+        "id": "NCT07388524-nodal",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have undergone adequate nodal sampling as defined by Commission on Cancer, 2020 Standard. Adequate nodal sampling includes pathological evaluation of at least one (named and/or numbered) hilar station (level 10 or higher) and at least three distinct (named and or numbered) mediastinal stations (level 2-9)",
+        "reasonFuzzy": "Surgical nodal sampling requirements are procedural rules, not simple typed biomarker or lab checks."
+      },
+      {
+        "id": "NCT07388524-timing",
+        "polarity": "inclusion",
+        "sourceText": "Patient to be registered to A082302 no earlier than 21 days and no later than 77 days from surgical resection",
+        "reasonFuzzy": "Post-surgical registration timing window is a protocol-specific logistical timeline, not a typed clinical check."
+      },
+      {
+        "id": "NCT07388524-prior_therapy",
+        "polarity": "exclusion",
+        "sourceText": "No prior neoadjuvant or adjuvant therapy for current lung cancer diagnosis",
+        "reasonFuzzy": "Prior therapy exclusion specifies neoadjuvant or adjuvant treatment for the current diagnosis rather than a simple categorical prior therapy rule."
+      }
+    ]
+  }
+}

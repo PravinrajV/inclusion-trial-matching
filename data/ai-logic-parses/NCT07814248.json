@@ -1,0 +1,377 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07814248",
+  "briefTitle": "A Phase 1, First-in-Human (FIH), Open-Label, Dose-Escalation and Dose Expansion Study of the Peptide Drug Conjugate (PDC), TS-104, as a Monotherapy in Subjects With Select Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T12:02:34.632Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07814248-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Males & females ≥18 years of age at the time of consent",
+      "numberValue": 18,
+      "evidence_quote": "Males & females ≥18 years of age at the time of consent",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07814248-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07814248-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin ≥9.0 g/dL without transfusion support within 14 days prior to study treatment",
+      "numberValue": 9,
+      "evidence_quote": "Hemoglobin ≥9.0 g/dL without transfusion support within 14 days prior to study treatment",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07814248-egfr_min",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Calculated creatinine clearance ≥60 mL/min by Cockcroft-Gault formula or Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI)",
+      "numberValue": 60,
+      "evidence_quote": "Calculated creatinine clearance ≥60 mL/min by Cockcroft-Gault formula or Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI)",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07814248-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Subjects must have measurable disease based on Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07814248-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Subjects must have measurable disease based on Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07814248-prior-tubulin",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with tubulin-inhibitor-based drug conjugates, including antibody-drug conjugates (ADCs) with tubulin inhibitor payloads, ie, Emrelis (MMAE payload) for c-Met-high NSCLC or Elahere (DM4 payload) for FRα-high ovarian cancer.",
+      "reasonFuzzy": "Specific excluded drug classes/ADCs are complex and do not fit a simple prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT07814248-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known active central nervous system metastases.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07814248-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known active central nervous system metastases.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07814248-ast",
+      "polarity": "inclusion",
+      "sourceText": "AST and ALT ≤2.5×ULN or ≤5×ULN for subjects with liver metastases",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07814248-alt",
+      "polarity": "inclusion",
+      "sourceText": "AST and ALT ≤2.5×ULN or ≤5×ULN for subjects with liver metastases",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07814248-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Total serum bilirubin ≤1.5×ULN except in the presence of Gilbert's Syndrome where direct bilirubin should be ≤ULN",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07814248-anc",
+      "polarity": "inclusion",
+      "sourceText": "ANC ≥1.5×109/L",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07814248-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelets ≥100×109/L without transfusion support within 14 days prior to study treatment",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 10,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 10,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 9,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:untreated"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 5,
+      "rejectedItems": [
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "value": "n:100"
+        }
+      ],
+      "normalizerTypedCount": 7
+    }
+  },
+  "runA": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 3157
+  },
+  "runB": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 3725
+  },
+  "ms": 14878,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07814248",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07814248-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Males & females ≥18 years of age at the time of consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07814248-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07814248-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT ≤2.5×ULN or ≤5×ULN for subjects with liver metastases",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "2.5xULN"
+      },
+      {
+        "id": "NCT07814248-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT ≤2.5×ULN or ≤5×ULN for subjects with liver metastases",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "2.5xULN"
+      },
+      {
+        "id": "NCT07814248-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total serum bilirubin ≤1.5×ULN except in the presence of Gilbert's Syndrome where direct bilirubin should be ≤ULN",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT07814248-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "ANC ≥1.5×109/L",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT07814248-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥100×109/L without transfusion support within 14 days prior to study treatment",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT07814248-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥9.0 g/dL without transfusion support within 14 days prior to study treatment",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT07814248-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Calculated creatinine clearance ≥60 mL/min by Cockcroft-Gault formula or Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI)",
+        "numberValue": 60
+      },
+      {
+        "id": "NCT07814248-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known active central nervous system metastases.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07814248-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Subjects must have measurable disease based on Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07814248",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07814248-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Males & females ≥18 years of age at the time of consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07814248-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07814248-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT ≤2.5×ULN or ≤5×ULN for subjects with liver metastases",
+        "numberValue": 2.5,
+        "stringValue": "2.5xULN or <=5xULN for subjects with liver metastases"
+      },
+      {
+        "id": "NCT07814248-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT ≤2.5×ULN or ≤5×ULN for subjects with liver metastases",
+        "numberValue": 2.5,
+        "stringValue": "2.5xULN or <=5xULN for subjects with liver metastases"
+      },
+      {
+        "id": "NCT07814248-bili",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total serum bilirubin ≤1.5×ULN except in the presence of Gilbert's Syndrome where direct bilirubin should be ≤ULN",
+        "numberValue": 1.5,
+        "stringValue": "1.5xULN except in the presence of Gilbert's Syndrome where direct bilirubin should be <=ULN"
+      },
+      {
+        "id": "NCT07814248-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "ANC ≥1.5×109/L",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT07814248-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥100×109/L without transfusion support within 14 days prior to study treatment",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT07814248-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥9.0 g/dL without transfusion support within 14 days prior to study treatment",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT07814248-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Calculated creatinine clearance ≥60 mL/min by Cockcroft-Gault formula or Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI)",
+        "numberValue": 60
+      },
+      {
+        "id": "NCT07814248-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known active central nervous system metastases.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07814248-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Subjects must have measurable disease based on Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07814248-prior-tubulin",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with tubulin-inhibitor-based drug conjugates, including antibody-drug conjugates (ADCs) with tubulin inhibitor payloads, ie, Emrelis (MMAE payload) for c-Met-high NSCLC or Elahere (DM4 payload) for FRα-high ovarian cancer.",
+        "reasonFuzzy": "Specific excluded drug classes/ADCs are complex and do not fit a simple prior_therapy_excluded check."
+      }
+    ]
+  }
+}

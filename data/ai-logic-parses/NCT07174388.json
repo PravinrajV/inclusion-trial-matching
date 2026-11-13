@@ -1,0 +1,289 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07174388",
+  "briefTitle": "An External Control Arm Study in Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T13:19:24.974Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07174388-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "> 18 years of age at the time of informed consent",
+      "numberValue": 18,
+      "evidence_quote": "> 18 years of age at the time of informed consent",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07174388-stage",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically confirmed locally advanced or metastatic NSCLC",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no explicit stage list to populate stage_in."
+    },
+    {
+      "id": "NCT07174388-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of more than 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07174388-consent",
+      "polarity": "inclusion",
+      "sourceText": "Able to understand and sign informed consent",
+      "reasonFuzzy": "Informed consent capability is a subjective clinical evaluation."
+    },
+    {
+      "id": "NCT07174388-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Evidence of measurable disease (as assessed by the Investigator) on available imaging (e.g CT, MRI, PET)",
+      "reasonFuzzy": "Measurable disease is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07174388-trial",
+      "polarity": "exclusion",
+      "sourceText": "Actively on a clinical trial of an investigational agent",
+      "reasonFuzzy": "Concurrent clinical trial participation is a protocol restriction, not a typed check."
+    },
+    {
+      "id": "NCT07174388-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Currently receiving active systemic therapy for another malignancy",
+      "reasonFuzzy": "Active systemic therapy for another malignancy is a complex clinical history exclusion."
+    },
+    {
+      "id": "NCT07174388-curative",
+      "polarity": "exclusion",
+      "sourceText": "Eligible for treatment with curative intent",
+      "reasonFuzzy": "Curative intent eligibility is an investigator judgment."
+    },
+    {
+      "id": "NCT07174388-stage",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically confirmed locally advanced or metastatic NSCLC",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no explicit stage list to populate stage_in."
+    },
+    {
+      "id": "NCT07174388-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of more than 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07174388-consent",
+      "polarity": "inclusion",
+      "sourceText": "Able to understand and sign informed consent",
+      "reasonFuzzy": "Informed consent capability is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07174388-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Evidence of measurable disease (as assessed by the Investigator) on available imaging (e.g CT, MRI, PET)",
+      "reasonFuzzy": "Measurable disease by investigator assessment is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07174388-trial",
+      "polarity": "exclusion",
+      "sourceText": "Actively on a clinical trial of an investigational agent",
+      "reasonFuzzy": "Concurrency on another clinical trial is not a standard prior therapy or lab exclusion."
+    },
+    {
+      "id": "NCT07174388-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Currently receiving active systemic therapy for another malignancy",
+      "reasonFuzzy": "Active systemic therapy for another malignancy is not a typed prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT07174388-curative",
+      "polarity": "exclusion",
+      "sourceText": "Eligible for treatment with curative intent",
+      "reasonFuzzy": "Eligibility for curative intent is a subjective investigator assessment."
+    },
+    {
+      "id": "NCT07174388-ecog",
+      "polarity": "inclusion",
+      "sourceText": "ECOG Performance of less than or equal to 1 within 4 weeks prior to starting index therapy.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 2484
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 3674
+  },
+  "ms": 14121,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07174388",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07174388-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "> 18 years of age at the time of informed consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07174388-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance of less than or equal to 1 within 4 weeks prior to starting index therapy.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07174388-stage",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed locally advanced or metastatic NSCLC",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no explicit stage list to populate stage_in."
+      },
+      {
+        "id": "NCT07174388-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of more than 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT07174388-consent",
+        "polarity": "inclusion",
+        "sourceText": "Able to understand and sign informed consent",
+        "reasonFuzzy": "Informed consent capability is a subjective clinical evaluation."
+      },
+      {
+        "id": "NCT07174388-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Evidence of measurable disease (as assessed by the Investigator) on available imaging (e.g CT, MRI, PET)",
+        "reasonFuzzy": "Measurable disease is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07174388-trial",
+        "polarity": "exclusion",
+        "sourceText": "Actively on a clinical trial of an investigational agent",
+        "reasonFuzzy": "Concurrent clinical trial participation is a protocol restriction, not a typed check."
+      },
+      {
+        "id": "NCT07174388-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Currently receiving active systemic therapy for another malignancy",
+        "reasonFuzzy": "Active systemic therapy for another malignancy is a complex clinical history exclusion."
+      },
+      {
+        "id": "NCT07174388-curative",
+        "polarity": "exclusion",
+        "sourceText": "Eligible for treatment with curative intent",
+        "reasonFuzzy": "Curative intent eligibility is an investigator judgment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07174388",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07174388-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "> 18 years of age at the time of informed consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07174388-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance of less than or equal to 1 within 4 weeks prior to starting index therapy.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07174388-stage",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed locally advanced or metastatic NSCLC",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no explicit stage list to populate stage_in."
+      },
+      {
+        "id": "NCT07174388-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of more than 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT07174388-consent",
+        "polarity": "inclusion",
+        "sourceText": "Able to understand and sign informed consent",
+        "reasonFuzzy": "Informed consent capability is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT07174388-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Evidence of measurable disease (as assessed by the Investigator) on available imaging (e.g CT, MRI, PET)",
+        "reasonFuzzy": "Measurable disease by investigator assessment is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07174388-trial",
+        "polarity": "exclusion",
+        "sourceText": "Actively on a clinical trial of an investigational agent",
+        "reasonFuzzy": "Concurrency on another clinical trial is not a standard prior therapy or lab exclusion."
+      },
+      {
+        "id": "NCT07174388-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Currently receiving active systemic therapy for another malignancy",
+        "reasonFuzzy": "Active systemic therapy for another malignancy is not a typed prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT07174388-curative",
+        "polarity": "exclusion",
+        "sourceText": "Eligible for treatment with curative intent",
+        "reasonFuzzy": "Eligibility for curative intent is a subjective investigator assessment."
+      }
+    ]
+  }
+}

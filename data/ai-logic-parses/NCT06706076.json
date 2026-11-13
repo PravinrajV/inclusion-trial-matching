@@ -1,0 +1,288 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06706076",
+  "briefTitle": "A Study of BH-30643 in Subjects With Locally Advanced or Metastatic NSCLC Harboring EGFR and/or HER2 Mutations",
+  "parsedAt": "2026-11-12T10:32:19.244Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06706076-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "≥ 18 years or legal adult.",
+      "numberValue": 18,
+      "evidence_quote": "≥ 18 years or legal adult.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06706076-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group Performance Status ≤ 1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group Performance Status ≤ 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06706076-stage",
+      "polarity": "inclusion",
+      "sourceText": "locally advanced or metastatic NSCLC",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but the trial does not give a specific numbered stage list."
+    },
+    {
+      "id": "NCT06706076-her2",
+      "polarity": "inclusion",
+      "sourceText": "EGFR or HER2 mutations",
+      "reasonFuzzy": "There is no typed check for HER2 mutations."
+    },
+    {
+      "id": "NCT06706076-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has at least 1 measurable target extracranial lesion according to RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06706076-life",
+      "polarity": "inclusion",
+      "sourceText": "Has a life expectancy of ≥ 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06706076-organs",
+      "polarity": "inclusion",
+      "sourceText": "Has adequate hematologic, hepatic, and renal function.",
+      "reasonFuzzy": "Adequate organ function without specific numeric laboratory cutoffs is not a typed check."
+    },
+    {
+      "id": "NCT06706076-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "History of any concurrent malignancy within the previous 2 years.",
+      "reasonFuzzy": "Concurrent malignancy history is not a typed clinical check."
+    },
+    {
+      "id": "NCT06706076-drivers",
+      "polarity": "exclusion",
+      "sourceText": "Known other oncogenic driver alterations (eg, moderate or high MET amplification) or histological transformation (eg, to small cell carcinoma, etc.).",
+      "reasonFuzzy": "Exclusion of other oncogenic driver alterations is not covered by a single typed check."
+    },
+    {
+      "id": "NCT06706076-her2",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically confirmed diagnosis of locally advanced or metastatic NSCLC with EGFR or HER2 mutations in the kinase domain of exons 18, 19, 20, or 21.",
+      "reasonFuzzy": "There is no typed kind for HER2 variants."
+    },
+    {
+      "id": "NCT06706076-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has at least 1 measurable target extracranial lesion according to RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06706076-life",
+      "polarity": "inclusion",
+      "sourceText": "Has a life expectancy of ≥ 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06706076-organs",
+      "polarity": "inclusion",
+      "sourceText": "Has adequate hematologic, hepatic, and renal function.",
+      "reasonFuzzy": "General organ function without specific numeric laboratory cutoffs cannot be represented as a typed check."
+    },
+    {
+      "id": "NCT06706076-drivers",
+      "polarity": "exclusion",
+      "sourceText": "Known other oncogenic driver alterations (eg, moderate or high MET amplification) or histological transformation (eg, to small cell carcinoma, etc.).",
+      "reasonFuzzy": "Exclusion of other specific driver alterations and histological transformations is complex and does not map to a single typed check."
+    },
+    {
+      "id": "NCT06706076-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically confirmed diagnosis of locally advanced or metastatic NSCLC with EGFR or HER2 mutations in the kinase domain of exons 18, 19, 20, or 21.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 3920
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 2608
+  },
+  "ms": 14483,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06706076",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06706076-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "≥ 18 years or legal adult.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06706076-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed diagnosis of locally advanced or metastatic NSCLC with EGFR or HER2 mutations in the kinase domain of exons 18, 19, 20, or 21.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06706076-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group Performance Status ≤ 1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06706076-stage",
+        "polarity": "inclusion",
+        "sourceText": "locally advanced or metastatic NSCLC",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but the trial does not give a specific numbered stage list."
+      },
+      {
+        "id": "NCT06706076-her2",
+        "polarity": "inclusion",
+        "sourceText": "EGFR or HER2 mutations",
+        "reasonFuzzy": "There is no typed check for HER2 mutations."
+      },
+      {
+        "id": "NCT06706076-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has at least 1 measurable target extracranial lesion according to RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06706076-life",
+        "polarity": "inclusion",
+        "sourceText": "Has a life expectancy of ≥ 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06706076-organs",
+        "polarity": "inclusion",
+        "sourceText": "Has adequate hematologic, hepatic, and renal function.",
+        "reasonFuzzy": "Adequate organ function without specific numeric laboratory cutoffs is not a typed check."
+      },
+      {
+        "id": "NCT06706076-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "History of any concurrent malignancy within the previous 2 years.",
+        "reasonFuzzy": "Concurrent malignancy history is not a typed clinical check."
+      },
+      {
+        "id": "NCT06706076-drivers",
+        "polarity": "exclusion",
+        "sourceText": "Known other oncogenic driver alterations (eg, moderate or high MET amplification) or histological transformation (eg, to small cell carcinoma, etc.).",
+        "reasonFuzzy": "Exclusion of other oncogenic driver alterations is not covered by a single typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06706076",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06706076-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "≥ 18 years or legal adult.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06706076-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed diagnosis of locally advanced or metastatic NSCLC with EGFR or HER2 mutations in the kinase domain of exons 18, 19, 20, or 21.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06706076-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group Performance Status ≤ 1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06706076-her2",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed diagnosis of locally advanced or metastatic NSCLC with EGFR or HER2 mutations in the kinase domain of exons 18, 19, 20, or 21.",
+        "reasonFuzzy": "There is no typed kind for HER2 variants."
+      },
+      {
+        "id": "NCT06706076-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has at least 1 measurable target extracranial lesion according to RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06706076-life",
+        "polarity": "inclusion",
+        "sourceText": "Has a life expectancy of ≥ 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06706076-organs",
+        "polarity": "inclusion",
+        "sourceText": "Has adequate hematologic, hepatic, and renal function.",
+        "reasonFuzzy": "General organ function without specific numeric laboratory cutoffs cannot be represented as a typed check."
+      },
+      {
+        "id": "NCT06706076-drivers",
+        "polarity": "exclusion",
+        "sourceText": "Known other oncogenic driver alterations (eg, moderate or high MET amplification) or histological transformation (eg, to small cell carcinoma, etc.).",
+        "reasonFuzzy": "Exclusion of other specific driver alterations and histological transformations is complex and does not map to a single typed check."
+      }
+    ]
+  }
+}

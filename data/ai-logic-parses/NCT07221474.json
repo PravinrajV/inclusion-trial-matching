@@ -1,0 +1,356 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07221474",
+  "briefTitle": "A Study of Intismeran Autogene (V940)/Placebo + Pembrolizumab and Chemotherapy in Metastatic Squamous Non-Small Cell Lung Cancer (V940-013)",
+  "parsedAt": "2026-11-12T11:04:35.131Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07221474-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Has a histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC) (Stage IV: M1a, M1b, M1c1, M1c2, AJCC Staging Manual, Version 9).",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Has a histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC) (Stage IV: M1a, M1b, M1c1, M1c2, AJCC Staging Manual, Version 9).",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07221474-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 assessed within 7 days before randomization",
+      "numberValue": 1,
+      "evidence_quote": "Has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 assessed within 7 days before randomization",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07221474-brain-mets",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07221474-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has measurable disease per Response Criteria in Solid Tumors Version 1.1 (RECIST 1.1) as assessed by the local site investigator/radiology",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07221474-life-expectancy",
+      "polarity": "inclusion",
+      "sourceText": "Has a life expectancy of at least 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07221474-organ-function",
+      "polarity": "inclusion",
+      "sourceText": "Has adequate organ function",
+      "reasonFuzzy": "Adequate organ function is a broad term without explicit numeric lab cutoffs in this clause."
+    },
+    {
+      "id": "NCT07221474-cancer-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior treatment with a cancer vaccine, including another personalized cancer vaccine (PCV)",
+      "reasonFuzzy": "Cancer vaccine is not a standard prior_therapy_excluded string list category."
+    },
+    {
+      "id": "NCT07221474-pd1",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior therapy with an anti-programmed cell death 1 protein (anti-PD-1), anti-programmed cell death ligand 1 (anti-PD-L1), or anti-programmed cell death ligand 2 (anti-PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor. NOTE: Prior treatment with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent in the neoadjuvant or adjuvant setting for nonmetastatic NSCLC is allowed as long as therapy was completed at least 12 months before diagnosis of metastatic NSCLC",
+      "reasonFuzzy": "Complex exclusion rule with neoadjuvant/adjuvant timing exception that cannot be captured as a simple prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT07221474-age",
+      "polarity": "inclusion",
+      "sourceText": "Inclusion Criteria include, but are not limited to:\\n\\n* Age ≥ 18 years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07221474-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has measurable disease per Response Criteria in Solid Tumors Version 1.1 (RECIST 1.1) as assessed by the local site investigator/radiology",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07221474-life",
+      "polarity": "inclusion",
+      "sourceText": "Has a life expectancy of at least 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07221474-pdl1-prior",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior therapy with an anti-programmed cell death 1 protein (anti-PD-1), anti-programmed cell death ligand 1 (anti-PD-L1), or anti-programmed cell death ligand 2 (anti-PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor. NOTE: Prior treatment with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent in the neoadjuvant or adjuvant setting for nonmetastatic NSCLC is allowed as long as therapy was completed at least 12 months before diagnosis of metastatic NSCLC",
+      "reasonFuzzy": "Prior therapy exclusion has a time-window exception for neoadjuvant/adjuvant settings that is too complex for a simple typed check."
+    },
+    {
+      "id": "NCT07221474-metastatic-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior systemic anticancer therapy for their metastatic NSCLC",
+      "reasonFuzzy": "Refers to systemic therapy for metastatic disease which is not a single named drug or class check."
+    },
+    {
+      "id": "NCT07221474-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior systemic anticancer therapy for their metastatic NSCLC",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07221474-vaccine-excl",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior treatment with a cancer vaccine, including another personalized cancer vaccine (PCV)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07221474-histology",
+      "polarity": "inclusion",
+      "sourceText": "Has a histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Inclusion Criteria include, but are not limited to:\\n\\n* Age ≥ 18 years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:systemic anticancer therapy"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:cancer vaccine"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:squamous"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3239
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 2807
+  },
+  "ms": 14021,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07221474",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07221474-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Has a histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC) (Stage IV: M1a, M1b, M1c1, M1c2, AJCC Staging Manual, Version 9).",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07221474-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Has a histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC)",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT07221474-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 assessed within 7 days before randomization",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07221474-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Inclusion Criteria include, but are not limited to:\\n\\n* Age ≥ 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07221474-prior-therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior systemic anticancer therapy for their metastatic NSCLC",
+        "stringValue": "systemic anticancer therapy"
+      },
+      {
+        "id": "NCT07221474-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07221474-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has measurable disease per Response Criteria in Solid Tumors Version 1.1 (RECIST 1.1) as assessed by the local site investigator/radiology",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07221474-life-expectancy",
+        "polarity": "inclusion",
+        "sourceText": "Has a life expectancy of at least 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT07221474-organ-function",
+        "polarity": "inclusion",
+        "sourceText": "Has adequate organ function",
+        "reasonFuzzy": "Adequate organ function is a broad term without explicit numeric lab cutoffs in this clause."
+      },
+      {
+        "id": "NCT07221474-cancer-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior treatment with a cancer vaccine, including another personalized cancer vaccine (PCV)",
+        "reasonFuzzy": "Cancer vaccine is not a standard prior_therapy_excluded string list category."
+      },
+      {
+        "id": "NCT07221474-pd1",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior therapy with an anti-programmed cell death 1 protein (anti-PD-1), anti-programmed cell death ligand 1 (anti-PD-L1), or anti-programmed cell death ligand 2 (anti-PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor. NOTE: Prior treatment with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent in the neoadjuvant or adjuvant setting for nonmetastatic NSCLC is allowed as long as therapy was completed at least 12 months before diagnosis of metastatic NSCLC",
+        "reasonFuzzy": "Complex exclusion rule with neoadjuvant/adjuvant timing exception that cannot be captured as a simple prior_therapy_excluded check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07221474",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07221474-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Has a histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC) (Stage IV: M1a, M1b, M1c1, M1c2, AJCC Staging Manual, Version 9).",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07221474-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Has a histologically or cytologically confirmed diagnosis of squamous non-small cell lung cancer (NSCLC)",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT07221474-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 assessed within 7 days before randomization",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07221474-vaccine-excl",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior treatment with a cancer vaccine, including another personalized cancer vaccine (PCV)",
+        "stringValue": "cancer vaccine"
+      },
+      {
+        "id": "NCT07221474-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07221474-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has measurable disease per Response Criteria in Solid Tumors Version 1.1 (RECIST 1.1) as assessed by the local site investigator/radiology",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07221474-life",
+        "polarity": "inclusion",
+        "sourceText": "Has a life expectancy of at least 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT07221474-pdl1-prior",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior therapy with an anti-programmed cell death 1 protein (anti-PD-1), anti-programmed cell death ligand 1 (anti-PD-L1), or anti-programmed cell death ligand 2 (anti-PD-L2) agent, or with an agent directed to another stimulatory or coinhibitory T-cell receptor. NOTE: Prior treatment with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent in the neoadjuvant or adjuvant setting for nonmetastatic NSCLC is allowed as long as therapy was completed at least 12 months before diagnosis of metastatic NSCLC",
+        "reasonFuzzy": "Prior therapy exclusion has a time-window exception for neoadjuvant/adjuvant settings that is too complex for a simple typed check."
+      },
+      {
+        "id": "NCT07221474-metastatic-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior systemic anticancer therapy for their metastatic NSCLC",
+        "reasonFuzzy": "Refers to systemic therapy for metastatic disease which is not a single named drug or class check."
+      }
+    ]
+  }
+}

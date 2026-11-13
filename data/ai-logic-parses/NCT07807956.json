@@ -1,0 +1,287 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07807956",
+  "briefTitle": "A Study to Assess Adverse Events, Change in Disease Activity and How Intravenous ABBV-253 Moves Through the Body in Adult Participants With Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T12:02:19.729Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07807956-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07807956-solidtumors",
+      "polarity": "inclusion",
+      "sourceText": "Part 1 monotherapy dose escalation only: Participants with a diagnosis of a malignant solid tumor by histology (WHO criteria), including, but not limited to non-small cell lung cancer (NSCLC), colorectal cancer (CRC), head and neck squamous cell carcinoma (HNSCC), PDAC, gastroesophageal adenocarcinoma (GEA), ovarian cancer (OC), and biliary tract cancer (BTC)",
+      "reasonFuzzy": "The trial is a basket study for advanced solid tumors without a specific numbered stage list, remaining in scope for NSCLC."
+    },
+    {
+      "id": "NCT07807956-evaluable",
+      "polarity": "inclusion",
+      "sourceText": "Participants with evaluable and measurable disease per RECIST Version 1.1.",
+      "reasonFuzzy": "Measurable and evaluable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07807956-malignancies",
+      "polarity": "exclusion",
+      "sourceText": "History of other malignancies, with the following exceptions: No known active disease present within 3 years prior to first dose of study treatment and felt to be at low risk of recurrence by the treating investigator.",
+      "reasonFuzzy": "Prior malignancy with investigator judgment of low risk is not a typed prior therapy or disease check."
+    },
+    {
+      "id": "NCT07807956-ovarian",
+      "polarity": "exclusion",
+      "sourceText": "Participants with ovarian cancer with histologies other than high grade serous ovarian cancer including endometrioid, low grade, clear cell, mucinous, or borderline ovarian tumor.",
+      "reasonFuzzy": "This exclusion targets non-NSCLC specific histologies for ovarian cancer."
+    },
+    {
+      "id": "NCT07807956-ild",
+      "polarity": "exclusion",
+      "sourceText": "History of interstitial lung disease (ILD) or pneumonitis that required treatment with systemic steroids or any evidence of ILD or pneumonitis on Screening chest CT scan.",
+      "reasonFuzzy": "History of ILD or pneumonitis and chest CT findings are not among the allowed typed kinds."
+    },
+    {
+      "id": "NCT07807956-age",
+      "polarity": "inclusion",
+      "sourceText": "Adult Participants With Advanced Solid Tumors",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07807956-solid-tumor",
+      "polarity": "inclusion",
+      "sourceText": "Part 1 monotherapy dose escalation only: Participants with a diagnosis of a malignant solid tumor by histology (WHO criteria), including, but not limited to non-small cell lung cancer (NSCLC), colorectal cancer (CRC), head and neck squamous cell carcinoma (HNSCC), PDAC, gastroesophageal adenocarcinoma (GEA), ovarian cancer (OC), and biliary tract cancer (BTC)",
+      "reasonFuzzy": "Broad solid tumor trial mentioning NSCLC among other indications, without a specific stage list."
+    },
+    {
+      "id": "NCT07807956-disease",
+      "polarity": "inclusion",
+      "sourceText": "Participants with evaluable and measurable disease per RECIST Version 1.1.",
+      "reasonFuzzy": "Measurable and evaluable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07807956-malignancies",
+      "polarity": "exclusion",
+      "sourceText": "History of other malignancies, with the following exceptions: No known active disease present within 3 years prior to first dose of study treatment and felt to be at low risk of recurrence by the treating investigator.",
+      "reasonFuzzy": "Investigator judgment regarding risk of recurrence for prior malignancies."
+    },
+    {
+      "id": "NCT07807956-ovarian",
+      "polarity": "exclusion",
+      "sourceText": "Participants with ovarian cancer with histologies other than high grade serous ovarian cancer including endometrioid, low grade, clear cell, mucinous, or borderline ovarian tumor.",
+      "reasonFuzzy": "Histology exclusions specifically for ovarian cancer, not typed NSCLC histologies."
+    },
+    {
+      "id": "NCT07807956-ild",
+      "polarity": "exclusion",
+      "sourceText": "History of interstitial lung disease (ILD) or pneumonitis that required treatment with systemic steroids or any evidence of ILD or pneumonitis on Screening chest CT scan.",
+      "reasonFuzzy": "Clinical history and imaging findings of ILD/pneumonitis are not typed lab cutoffs or standard biomarker checks."
+    },
+    {
+      "id": "NCT07807956-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07807956-brain",
+      "polarity": "inclusion",
+      "sourceText": "Untreated brain or meningeal metastases (i.e., subjects with history of metastases are eligible provided they do not require ongoing steroid treatment for cerebral edema and have shown clinical and radiographic stability for at least 14 days after definitive therapy).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Adult Participants With Advanced Solid Tumors"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3359
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 4061
+  },
+  "ms": 15403,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07807956",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07807956-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adult Participants With Advanced Solid Tumors",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07807956-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07807956-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Untreated brain or meningeal metastases (i.e., subjects with history of metastases are eligible provided they do not require ongoing steroid treatment for cerebral edema and have shown clinical and radiographic stability for at least 14 days after definitive therapy).",
+        "allowedBrainMets": [
+          "treated_stable"
+        ],
+        "exceptions": "must not require ongoing steroid treatment for cerebral edema and have shown clinical and radiographic stability for at least 14 days after definitive therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07807956-solidtumors",
+        "polarity": "inclusion",
+        "sourceText": "Part 1 monotherapy dose escalation only: Participants with a diagnosis of a malignant solid tumor by histology (WHO criteria), including, but not limited to non-small cell lung cancer (NSCLC), colorectal cancer (CRC), head and neck squamous cell carcinoma (HNSCC), PDAC, gastroesophageal adenocarcinoma (GEA), ovarian cancer (OC), and biliary tract cancer (BTC)",
+        "reasonFuzzy": "The trial is a basket study for advanced solid tumors without a specific numbered stage list, remaining in scope for NSCLC."
+      },
+      {
+        "id": "NCT07807956-evaluable",
+        "polarity": "inclusion",
+        "sourceText": "Participants with evaluable and measurable disease per RECIST Version 1.1.",
+        "reasonFuzzy": "Measurable and evaluable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07807956-malignancies",
+        "polarity": "exclusion",
+        "sourceText": "History of other malignancies, with the following exceptions: No known active disease present within 3 years prior to first dose of study treatment and felt to be at low risk of recurrence by the treating investigator.",
+        "reasonFuzzy": "Prior malignancy with investigator judgment of low risk is not a typed prior therapy or disease check."
+      },
+      {
+        "id": "NCT07807956-ovarian",
+        "polarity": "exclusion",
+        "sourceText": "Participants with ovarian cancer with histologies other than high grade serous ovarian cancer including endometrioid, low grade, clear cell, mucinous, or borderline ovarian tumor.",
+        "reasonFuzzy": "This exclusion targets non-NSCLC specific histologies for ovarian cancer."
+      },
+      {
+        "id": "NCT07807956-ild",
+        "polarity": "exclusion",
+        "sourceText": "History of interstitial lung disease (ILD) or pneumonitis that required treatment with systemic steroids or any evidence of ILD or pneumonitis on Screening chest CT scan.",
+        "reasonFuzzy": "History of ILD or pneumonitis and chest CT findings are not among the allowed typed kinds."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07807956",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07807956-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07807956-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07807956-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Untreated brain or meningeal metastases (i.e., subjects with history of metastases are eligible provided they do not require ongoing steroid treatment for cerebral edema and have shown clinical and radiographic stability for at least 14 days after definitive therapy).",
+        "allowedBrainMets": [
+          "treated_stable"
+        ],
+        "exceptions": "Subjects with history of metastases are eligible provided they do not require ongoing steroid treatment for cerebral edema and have shown clinical and radiographic stability for at least 14 days after definitive therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07807956-solid-tumor",
+        "polarity": "inclusion",
+        "sourceText": "Part 1 monotherapy dose escalation only: Participants with a diagnosis of a malignant solid tumor by histology (WHO criteria), including, but not limited to non-small cell lung cancer (NSCLC), colorectal cancer (CRC), head and neck squamous cell carcinoma (HNSCC), PDAC, gastroesophageal adenocarcinoma (GEA), ovarian cancer (OC), and biliary tract cancer (BTC)",
+        "reasonFuzzy": "Broad solid tumor trial mentioning NSCLC among other indications, without a specific stage list."
+      },
+      {
+        "id": "NCT07807956-disease",
+        "polarity": "inclusion",
+        "sourceText": "Participants with evaluable and measurable disease per RECIST Version 1.1.",
+        "reasonFuzzy": "Measurable and evaluable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07807956-malignancies",
+        "polarity": "exclusion",
+        "sourceText": "History of other malignancies, with the following exceptions: No known active disease present within 3 years prior to first dose of study treatment and felt to be at low risk of recurrence by the treating investigator.",
+        "reasonFuzzy": "Investigator judgment regarding risk of recurrence for prior malignancies."
+      },
+      {
+        "id": "NCT07807956-ovarian",
+        "polarity": "exclusion",
+        "sourceText": "Participants with ovarian cancer with histologies other than high grade serous ovarian cancer including endometrioid, low grade, clear cell, mucinous, or borderline ovarian tumor.",
+        "reasonFuzzy": "Histology exclusions specifically for ovarian cancer, not typed NSCLC histologies."
+      },
+      {
+        "id": "NCT07807956-ild",
+        "polarity": "exclusion",
+        "sourceText": "History of interstitial lung disease (ILD) or pneumonitis that required treatment with systemic steroids or any evidence of ILD or pneumonitis on Screening chest CT scan.",
+        "reasonFuzzy": "Clinical history and imaging findings of ILD/pneumonitis are not typed lab cutoffs or standard biomarker checks."
+      }
+    ]
+  }
+}

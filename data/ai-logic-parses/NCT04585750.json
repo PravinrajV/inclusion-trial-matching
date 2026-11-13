@@ -1,0 +1,772 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04585750",
+  "briefTitle": "The Evaluation of PC14586 in Patients With Advanced Solid Tumors Harboring a TP53 Y220C Mutation (PYNNACLE)",
+  "parsedAt": "2026-11-12T06:05:50.838Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04585750-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "At least 18 years of age or 12 to 17 years of age after Safety Review Committee approval.",
+      "numberValue": 18,
+      "stages": [],
+      "stringValue": "At least 18 years of age or 12 to 17 years of age after Safety Review Committee approval.",
+      "evidence_quote": "At least 18 years of age or 12 to 17 years of age after Safety Review Committee approval.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04585750-age-exception",
+      "polarity": "inclusion",
+      "sourceText": "12 to 17 years of age after Safety Review Committee approval",
+      "reasonFuzzy": "Age minimum has conditional allowance for 12 to 17 years requiring committee approval, which cannot be captured in a simple numeric age_min check alone."
+    },
+    {
+      "id": "NCT04585750-tp53",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced or metastatic solid malignancy with a TP53 Y220C mutation",
+      "reasonFuzzy": "TP53 mutation is not among the allowed typed gene mutation kinds (which are limited to egfr, alk, kras, ros1, braf)."
+    },
+    {
+      "id": "NCT04585750-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1 (Phase 2)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT04585750-washout-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Anti-cancer therapy within 21 days (or 5 half-lives) of receiving the study drug",
+      "reasonFuzzy": "Washout window based on half-lives is complex and not a simple lab cutoff."
+    },
+    {
+      "id": "NCT04585750-washout-radio",
+      "polarity": "exclusion",
+      "sourceText": "Radiotherapy within 14 days of receiving the study drug",
+      "reasonFuzzy": "Radiotherapy washout window is not a typed check."
+    },
+    {
+      "id": "NCT04585750-cns",
+      "polarity": "exclusion",
+      "sourceText": "Primary CNS tumor",
+      "reasonFuzzy": "Primary CNS tumor exclusion is not covered by typed brain_mets kinds."
+    },
+    {
+      "id": "NCT04585750-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "History of leptomeningeal disease or spinal cord compression",
+      "reasonFuzzy": "Leptomeningeal disease and spinal cord compression are specific CNS exclusions not captured by brain_mets."
+    },
+    {
+      "id": "NCT04585750-stroke",
+      "polarity": "exclusion",
+      "sourceText": "Stroke or transient ischemic attack within 6 months prior to screening",
+      "reasonFuzzy": "Cardiovascular and cerebrovascular timing exclusions are not typed checks."
+    },
+    {
+      "id": "NCT04585750-heart",
+      "polarity": "exclusion",
+      "sourceText": "Heart conditions such as unstable angina within 6 months prior to screening, uncontrolled hypertension, a heart attack within 6 months prior to screening, congestive heart failure, prolongation of QT interval, or other rhythm abnormalities",
+      "reasonFuzzy": "Cardiac condition exclusions are clinical judgment items."
+    },
+    {
+      "id": "NCT04585750-cyp",
+      "polarity": "exclusion",
+      "sourceText": "Strong CYP3A4 inducers and strong CYP2C9 inhibitors/inducers within 14 days of first dose of rezatapopt",
+      "reasonFuzzy": "Concomitant medication restrictions are not typed checks."
+    },
+    {
+      "id": "NCT04585750-gi",
+      "polarity": "exclusion",
+      "sourceText": "History of gastrointestinal (GI) disease that may interfere with absorption of study drug or patients unable to take oral medication",
+      "reasonFuzzy": "GI absorption interference and ability to swallow oral medications are subjective items."
+    },
+    {
+      "id": "NCT04585750-transplant",
+      "polarity": "exclusion",
+      "sourceText": "History of prior organ transplant",
+      "reasonFuzzy": "Organ transplant history is not a typed check."
+    },
+    {
+      "id": "NCT04585750-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Known, active malignancy, except for treated cervical intraepithelial neoplasia, or non-melanoma skin cancer",
+      "reasonFuzzy": "Active secondary malignancy exclusion with exceptions is not a typed check."
+    },
+    {
+      "id": "NCT04585750-hiv-hep",
+      "polarity": "exclusion",
+      "sourceText": "Known, active uncontrolled Hepatitis B, Hepatitis C, or human immunodeficiency virus infection",
+      "reasonFuzzy": "Infectious disease criteria are not typed checks."
+    },
+    {
+      "id": "NCT04585750-kras",
+      "polarity": "exclusion",
+      "sourceText": "Known KRAS mutation, defined as a single nucleotide variant (SNV) (Phase 2). Exception: Ovarian cancer patients with a known KRAS SNV are permitted.",
+      "reasonFuzzy": "KRAS variant exclusion with a cancer-specific exception cannot be expressed with a simple typed kras_status check."
+    },
+    {
+      "id": "NCT04585750-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Received a live or live-attenuated vaccine within 30 days prior to the first dose of study intervention",
+      "reasonFuzzy": "Vaccine washout is not a typed check."
+    },
+    {
+      "id": "NCT04585750-steroid",
+      "polarity": "exclusion",
+      "sourceText": "Diagnosis of immunodeficiency or receiving chronic systemic steroid therapy within 7 days prior to the first dose of study drug",
+      "reasonFuzzy": "Chronic steroid therapy and immunodeficiency are not typed checks."
+    },
+    {
+      "id": "NCT04585750-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Hypersensitivity (≥ Grade 3) to pembrolizumab and/or any of its excipients",
+      "reasonFuzzy": "Hypersensitivity exclusion is not a typed check."
+    },
+    {
+      "id": "NCT04585750-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Active autoimmune disease that has required systemic treatment in past 2 years",
+      "reasonFuzzy": "Autoimmune disease history is not a typed check."
+    },
+    {
+      "id": "NCT04585750-pneumonitis",
+      "polarity": "exclusion",
+      "sourceText": "History of radiation pneumonitis",
+      "reasonFuzzy": "Radiation pneumonitis history is not a typed check."
+    },
+    {
+      "id": "NCT04585750-ild",
+      "polarity": "exclusion",
+      "sourceText": "History of (non-infectious) or active pneumonitis / interstitial lung disease that required steroids",
+      "reasonFuzzy": "ILD and pneumonitis history are not typed checks."
+    },
+    {
+      "id": "NCT04585750-infection",
+      "polarity": "exclusion",
+      "sourceText": "Active infection requiring systemic therapy",
+      "reasonFuzzy": "Active infection requirement is not a typed check."
+    },
+    {
+      "id": "NCT04585750-age-exception",
+      "polarity": "inclusion",
+      "sourceText": "At least 18 years of age or 12 to 17 years of age after Safety Review Committee approval.",
+      "reasonFuzzy": "Age minimum has a conditional exception for 12 to 17 years with committee approval."
+    },
+    {
+      "id": "NCT04585750-tp53",
+      "polarity": "inclusion",
+      "sourceText": "Locally advanced or metastatic solid malignancy with a TP53 Y220C mutation",
+      "reasonFuzzy": "TP53 Y220C mutation does not have a dedicated typed kind in the allowed list."
+    },
+    {
+      "id": "NCT04585750-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1 (Phase 2)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT04585750-washout-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Anti-cancer therapy within 21 days (or 5 half-lives) of receiving the study drug",
+      "reasonFuzzy": "Washout window based on half-lives is not a simple lab cutoff."
+    },
+    {
+      "id": "NCT04585750-washout-radio",
+      "polarity": "exclusion",
+      "sourceText": "Radiotherapy within 14 days of receiving the study drug",
+      "reasonFuzzy": "Washout windows for radiotherapy are not typed lab cutoffs."
+    },
+    {
+      "id": "NCT04585750-cns",
+      "polarity": "exclusion",
+      "sourceText": "Primary CNS tumor",
+      "reasonFuzzy": "Primary CNS tumor is an exclusion category outside standard brain_mets typed checks."
+    },
+    {
+      "id": "NCT04585750-leptomeningeal",
+      "polarity": "exclusion",
+      "sourceText": "History of leptomeningeal disease or spinal cord compression",
+      "reasonFuzzy": "Leptomeningeal disease and spinal cord compression are specialized CNS conditions."
+    },
+    {
+      "id": "NCT04585750-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Stroke or transient ischemic attack within 6 months prior to screening",
+      "reasonFuzzy": "Cerebrovascular event history timeframe is not a typed check."
+    },
+    {
+      "id": "NCT04585750-heart",
+      "polarity": "exclusion",
+      "sourceText": "Heart conditions such as unstable angina within 6 months prior to screening, uncontrolled hypertension, a heart attack within 6 months prior to screening, congestive heart failure, prolongation of QT interval, or other rhythm abnormalities",
+      "reasonFuzzy": "Complex cardiovascular disease exclusions are judgment-based."
+    },
+    {
+      "id": "NCT04585750-cyp",
+      "polarity": "exclusion",
+      "sourceText": "Strong CYP3A4 inducers and strong CYP2C9 inhibitors/inducers within 14 days of first dose of rezatapopt",
+      "reasonFuzzy": "Concomitant medication restrictions are not typed checks."
+    },
+    {
+      "id": "NCT04585750-gi",
+      "polarity": "exclusion",
+      "sourceText": "History of gastrointestinal (GI) disease that may interfere with absorption of study drug or patients unable to take oral medication",
+      "reasonFuzzy": "GI absorption interference is a clinical judgment."
+    },
+    {
+      "id": "NCT04585750-transplant",
+      "polarity": "exclusion",
+      "sourceText": "History of prior organ transplant",
+      "reasonFuzzy": "Organ transplant history is not a typed check kind."
+    },
+    {
+      "id": "NCT04585750-other-malig",
+      "polarity": "exclusion",
+      "sourceText": "Known, active malignancy, except for treated cervical intraepithelial neoplasia, or non-melanoma skin cancer",
+      "reasonFuzzy": "Active secondary malignancy exclusion with exceptions is not a typed check."
+    },
+    {
+      "id": "NCT04585750-infxn",
+      "polarity": "exclusion",
+      "sourceText": "Known, active uncontrolled Hepatitis B, Hepatitis C, or human immunodeficiency virus infection",
+      "reasonFuzzy": "Infection control status is not a typed check."
+    },
+    {
+      "id": "NCT04585750-kras",
+      "polarity": "exclusion",
+      "sourceText": "Known KRAS mutation, defined as a single nucleotide variant (SNV) (Phase 2). Exception: Ovarian cancer patients with a known KRAS SNV are permitted.",
+      "reasonFuzzy": "KRAS mutation exclusion with specific cancer type exception cannot be expressed via single KRAS status kind cleanly."
+    },
+    {
+      "id": "NCT04585750-pdl1-prior",
+      "polarity": "exclusion",
+      "sourceText": "Received prior therapy with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent or with an agent directed to another stimulatory or co-inhibitory T-cell receptor and discontinued from that treatment due to a Grade 3 or higher immune-related AE (irAE)",
+      "reasonFuzzy": "Complex prior immunotherapy exclusion based on irAE severity is not a simple prior therapy check."
+    },
+    {
+      "id": "NCT04585750-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Received a live or live-attenuated vaccine within 30 days prior to the first dose of study intervention",
+      "reasonFuzzy": "Vaccine washout window is not a typed check."
+    },
+    {
+      "id": "NCT04585750-steroid",
+      "polarity": "exclusion",
+      "sourceText": "Diagnosis of immunodeficiency or receiving chronic systemic steroid therapy within 7 days prior to the first dose of study drug",
+      "reasonFuzzy": "Chronic systemic steroid therapy restriction is not a typed check."
+    },
+    {
+      "id": "NCT04585750-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Hypersensitivity (≥ Grade 3) to pembrolizumab and/or any of its excipients",
+      "reasonFuzzy": "Hypersensitivity reactions are not typed checks."
+    },
+    {
+      "id": "NCT04585750-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Active autoimmune disease that has required systemic treatment in past 2 years",
+      "reasonFuzzy": "Autoimmune disease history and treatment timeframe is not a typed check."
+    },
+    {
+      "id": "NCT04585750-pneumonitis",
+      "polarity": "exclusion",
+      "sourceText": "History of radiation pneumonitis",
+      "reasonFuzzy": "Radiation pneumonitis history is not a typed check."
+    },
+    {
+      "id": "NCT04585750-ild",
+      "polarity": "exclusion",
+      "sourceText": "History of (non-infectious) or active pneumonitis / interstitial lung disease that required steroids",
+      "reasonFuzzy": "Pneumonitis and interstitial lung disease history is not a typed check."
+    },
+    {
+      "id": "NCT04585750-active-infxn",
+      "polarity": "exclusion",
+      "sourceText": "Active infection requiring systemic therapy",
+      "reasonFuzzy": "Active infection requiring systemic therapy is a clinical judgment."
+    },
+    {
+      "id": "NCT04585750-prior-rezatapopt",
+      "polarity": "exclusion",
+      "sourceText": "Has previously received rezatapopt",
+      "reasonFuzzy": "Prior investigational drug exposure is not a standard typed prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT04585750-prior-pdl1",
+      "polarity": "exclusion",
+      "sourceText": "Received prior therapy with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent or with an agent directed to another stimulatory or co-inhibitory T-cell receptor and discontinued from that treatment due to a Grade 3 or higher immune-related AE (irAE)",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT04585750-prior-rezatapopt",
+      "polarity": "exclusion",
+      "sourceText": "Has previously received rezatapopt",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT04585750-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) status of 0 or 1",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04585750-lines",
+      "polarity": "inclusion",
+      "sourceText": "Previously treated with one or more lines of anticancer therapy and progressive disease",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04585750-brain",
+      "polarity": "exclusion",
+      "sourceText": "Brain metastases, unless neurologically stable and do not require steroids to treat associated neurological symptoms",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-pd-1, anti-pd-l1, or anti-pd-l2 agent"
+        },
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:rezatapopt"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "prior_lines_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 22,
+    "attempts": 1,
+    "ms": 5807
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 24,
+    "attempts": 1,
+    "ms": 6302
+  },
+  "ms": 20106,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04585750",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04585750-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "At least 18 years of age or 12 to 17 years of age after Safety Review Committee approval.",
+        "numberValue": 18,
+        "stages": [],
+        "stringValue": "At least 18 years of age or 12 to 17 years of age after Safety Review Committee approval."
+      },
+      {
+        "id": "NCT04585750-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04585750-lines",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Previously treated with one or more lines of anticancer therapy and progressive disease",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04585750-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Brain metastases, unless neurologically stable and do not require steroids to treat associated neurological symptoms",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT04585750-prior-pdl1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Received prior therapy with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent or with an agent directed to another stimulatory or co-inhibitory T-cell receptor and discontinued from that treatment due to a Grade 3 or higher immune-related AE (irAE)",
+        "stringValue": "anti-PD-1, anti-PD-L1, or anti-PD-L2 agent"
+      },
+      {
+        "id": "NCT04585750-prior-rezatapopt",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has previously received rezatapopt",
+        "stringValue": "rezatapopt"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04585750-age-exception",
+        "polarity": "inclusion",
+        "sourceText": "12 to 17 years of age after Safety Review Committee approval",
+        "reasonFuzzy": "Age minimum has conditional allowance for 12 to 17 years requiring committee approval, which cannot be captured in a simple numeric age_min check alone."
+      },
+      {
+        "id": "NCT04585750-tp53",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced or metastatic solid malignancy with a TP53 Y220C mutation",
+        "reasonFuzzy": "TP53 mutation is not among the allowed typed gene mutation kinds (which are limited to egfr, alk, kras, ros1, braf)."
+      },
+      {
+        "id": "NCT04585750-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1 (Phase 2)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT04585750-washout-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Anti-cancer therapy within 21 days (or 5 half-lives) of receiving the study drug",
+        "reasonFuzzy": "Washout window based on half-lives is complex and not a simple lab cutoff."
+      },
+      {
+        "id": "NCT04585750-washout-radio",
+        "polarity": "exclusion",
+        "sourceText": "Radiotherapy within 14 days of receiving the study drug",
+        "reasonFuzzy": "Radiotherapy washout window is not a typed check."
+      },
+      {
+        "id": "NCT04585750-cns",
+        "polarity": "exclusion",
+        "sourceText": "Primary CNS tumor",
+        "reasonFuzzy": "Primary CNS tumor exclusion is not covered by typed brain_mets kinds."
+      },
+      {
+        "id": "NCT04585750-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "History of leptomeningeal disease or spinal cord compression",
+        "reasonFuzzy": "Leptomeningeal disease and spinal cord compression are specific CNS exclusions not captured by brain_mets."
+      },
+      {
+        "id": "NCT04585750-stroke",
+        "polarity": "exclusion",
+        "sourceText": "Stroke or transient ischemic attack within 6 months prior to screening",
+        "reasonFuzzy": "Cardiovascular and cerebrovascular timing exclusions are not typed checks."
+      },
+      {
+        "id": "NCT04585750-heart",
+        "polarity": "exclusion",
+        "sourceText": "Heart conditions such as unstable angina within 6 months prior to screening, uncontrolled hypertension, a heart attack within 6 months prior to screening, congestive heart failure, prolongation of QT interval, or other rhythm abnormalities",
+        "reasonFuzzy": "Cardiac condition exclusions are clinical judgment items."
+      },
+      {
+        "id": "NCT04585750-cyp",
+        "polarity": "exclusion",
+        "sourceText": "Strong CYP3A4 inducers and strong CYP2C9 inhibitors/inducers within 14 days of first dose of rezatapopt",
+        "reasonFuzzy": "Concomitant medication restrictions are not typed checks."
+      },
+      {
+        "id": "NCT04585750-gi",
+        "polarity": "exclusion",
+        "sourceText": "History of gastrointestinal (GI) disease that may interfere with absorption of study drug or patients unable to take oral medication",
+        "reasonFuzzy": "GI absorption interference and ability to swallow oral medications are subjective items."
+      },
+      {
+        "id": "NCT04585750-transplant",
+        "polarity": "exclusion",
+        "sourceText": "History of prior organ transplant",
+        "reasonFuzzy": "Organ transplant history is not a typed check."
+      },
+      {
+        "id": "NCT04585750-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Known, active malignancy, except for treated cervical intraepithelial neoplasia, or non-melanoma skin cancer",
+        "reasonFuzzy": "Active secondary malignancy exclusion with exceptions is not a typed check."
+      },
+      {
+        "id": "NCT04585750-hiv-hep",
+        "polarity": "exclusion",
+        "sourceText": "Known, active uncontrolled Hepatitis B, Hepatitis C, or human immunodeficiency virus infection",
+        "reasonFuzzy": "Infectious disease criteria are not typed checks."
+      },
+      {
+        "id": "NCT04585750-kras",
+        "polarity": "exclusion",
+        "sourceText": "Known KRAS mutation, defined as a single nucleotide variant (SNV) (Phase 2). Exception: Ovarian cancer patients with a known KRAS SNV are permitted.",
+        "reasonFuzzy": "KRAS variant exclusion with a cancer-specific exception cannot be expressed with a simple typed kras_status check."
+      },
+      {
+        "id": "NCT04585750-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Received a live or live-attenuated vaccine within 30 days prior to the first dose of study intervention",
+        "reasonFuzzy": "Vaccine washout is not a typed check."
+      },
+      {
+        "id": "NCT04585750-steroid",
+        "polarity": "exclusion",
+        "sourceText": "Diagnosis of immunodeficiency or receiving chronic systemic steroid therapy within 7 days prior to the first dose of study drug",
+        "reasonFuzzy": "Chronic steroid therapy and immunodeficiency are not typed checks."
+      },
+      {
+        "id": "NCT04585750-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Hypersensitivity (≥ Grade 3) to pembrolizumab and/or any of its excipients",
+        "reasonFuzzy": "Hypersensitivity exclusion is not a typed check."
+      },
+      {
+        "id": "NCT04585750-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Active autoimmune disease that has required systemic treatment in past 2 years",
+        "reasonFuzzy": "Autoimmune disease history is not a typed check."
+      },
+      {
+        "id": "NCT04585750-pneumonitis",
+        "polarity": "exclusion",
+        "sourceText": "History of radiation pneumonitis",
+        "reasonFuzzy": "Radiation pneumonitis history is not a typed check."
+      },
+      {
+        "id": "NCT04585750-ild",
+        "polarity": "exclusion",
+        "sourceText": "History of (non-infectious) or active pneumonitis / interstitial lung disease that required steroids",
+        "reasonFuzzy": "ILD and pneumonitis history are not typed checks."
+      },
+      {
+        "id": "NCT04585750-infection",
+        "polarity": "exclusion",
+        "sourceText": "Active infection requiring systemic therapy",
+        "reasonFuzzy": "Active infection requirement is not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04585750",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04585750-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "At least 18 years of age or 12 to 17 years of age after Safety Review Committee approval.",
+        "numberValue": 18,
+        "stages": [],
+        "stringValue": "At least 18 years of age or 12 to 17 years of age after Safety Review Committee approval."
+      },
+      {
+        "id": "NCT04585750-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04585750-lines",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Previously treated with one or more lines of anticancer therapy and progressive disease",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04585750-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Brain metastases, unless neurologically stable and do not require steroids to treat associated neurological symptoms",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04585750-age-exception",
+        "polarity": "inclusion",
+        "sourceText": "At least 18 years of age or 12 to 17 years of age after Safety Review Committee approval.",
+        "reasonFuzzy": "Age minimum has a conditional exception for 12 to 17 years with committee approval."
+      },
+      {
+        "id": "NCT04585750-tp53",
+        "polarity": "inclusion",
+        "sourceText": "Locally advanced or metastatic solid malignancy with a TP53 Y220C mutation",
+        "reasonFuzzy": "TP53 Y220C mutation does not have a dedicated typed kind in the allowed list."
+      },
+      {
+        "id": "NCT04585750-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1 (Phase 2)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT04585750-washout-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Anti-cancer therapy within 21 days (or 5 half-lives) of receiving the study drug",
+        "reasonFuzzy": "Washout window based on half-lives is not a simple lab cutoff."
+      },
+      {
+        "id": "NCT04585750-washout-radio",
+        "polarity": "exclusion",
+        "sourceText": "Radiotherapy within 14 days of receiving the study drug",
+        "reasonFuzzy": "Washout windows for radiotherapy are not typed lab cutoffs."
+      },
+      {
+        "id": "NCT04585750-cns",
+        "polarity": "exclusion",
+        "sourceText": "Primary CNS tumor",
+        "reasonFuzzy": "Primary CNS tumor is an exclusion category outside standard brain_mets typed checks."
+      },
+      {
+        "id": "NCT04585750-leptomeningeal",
+        "polarity": "exclusion",
+        "sourceText": "History of leptomeningeal disease or spinal cord compression",
+        "reasonFuzzy": "Leptomeningeal disease and spinal cord compression are specialized CNS conditions."
+      },
+      {
+        "id": "NCT04585750-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Stroke or transient ischemic attack within 6 months prior to screening",
+        "reasonFuzzy": "Cerebrovascular event history timeframe is not a typed check."
+      },
+      {
+        "id": "NCT04585750-heart",
+        "polarity": "exclusion",
+        "sourceText": "Heart conditions such as unstable angina within 6 months prior to screening, uncontrolled hypertension, a heart attack within 6 months prior to screening, congestive heart failure, prolongation of QT interval, or other rhythm abnormalities",
+        "reasonFuzzy": "Complex cardiovascular disease exclusions are judgment-based."
+      },
+      {
+        "id": "NCT04585750-cyp",
+        "polarity": "exclusion",
+        "sourceText": "Strong CYP3A4 inducers and strong CYP2C9 inhibitors/inducers within 14 days of first dose of rezatapopt",
+        "reasonFuzzy": "Concomitant medication restrictions are not typed checks."
+      },
+      {
+        "id": "NCT04585750-gi",
+        "polarity": "exclusion",
+        "sourceText": "History of gastrointestinal (GI) disease that may interfere with absorption of study drug or patients unable to take oral medication",
+        "reasonFuzzy": "GI absorption interference is a clinical judgment."
+      },
+      {
+        "id": "NCT04585750-transplant",
+        "polarity": "exclusion",
+        "sourceText": "History of prior organ transplant",
+        "reasonFuzzy": "Organ transplant history is not a typed check kind."
+      },
+      {
+        "id": "NCT04585750-other-malig",
+        "polarity": "exclusion",
+        "sourceText": "Known, active malignancy, except for treated cervical intraepithelial neoplasia, or non-melanoma skin cancer",
+        "reasonFuzzy": "Active secondary malignancy exclusion with exceptions is not a typed check."
+      },
+      {
+        "id": "NCT04585750-infxn",
+        "polarity": "exclusion",
+        "sourceText": "Known, active uncontrolled Hepatitis B, Hepatitis C, or human immunodeficiency virus infection",
+        "reasonFuzzy": "Infection control status is not a typed check."
+      },
+      {
+        "id": "NCT04585750-kras",
+        "polarity": "exclusion",
+        "sourceText": "Known KRAS mutation, defined as a single nucleotide variant (SNV) (Phase 2). Exception: Ovarian cancer patients with a known KRAS SNV are permitted.",
+        "reasonFuzzy": "KRAS mutation exclusion with specific cancer type exception cannot be expressed via single KRAS status kind cleanly."
+      },
+      {
+        "id": "NCT04585750-pdl1-prior",
+        "polarity": "exclusion",
+        "sourceText": "Received prior therapy with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent or with an agent directed to another stimulatory or co-inhibitory T-cell receptor and discontinued from that treatment due to a Grade 3 or higher immune-related AE (irAE)",
+        "reasonFuzzy": "Complex prior immunotherapy exclusion based on irAE severity is not a simple prior therapy check."
+      },
+      {
+        "id": "NCT04585750-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Received a live or live-attenuated vaccine within 30 days prior to the first dose of study intervention",
+        "reasonFuzzy": "Vaccine washout window is not a typed check."
+      },
+      {
+        "id": "NCT04585750-steroid",
+        "polarity": "exclusion",
+        "sourceText": "Diagnosis of immunodeficiency or receiving chronic systemic steroid therapy within 7 days prior to the first dose of study drug",
+        "reasonFuzzy": "Chronic systemic steroid therapy restriction is not a typed check."
+      },
+      {
+        "id": "NCT04585750-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Hypersensitivity (≥ Grade 3) to pembrolizumab and/or any of its excipients",
+        "reasonFuzzy": "Hypersensitivity reactions are not typed checks."
+      },
+      {
+        "id": "NCT04585750-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Active autoimmune disease that has required systemic treatment in past 2 years",
+        "reasonFuzzy": "Autoimmune disease history and treatment timeframe is not a typed check."
+      },
+      {
+        "id": "NCT04585750-pneumonitis",
+        "polarity": "exclusion",
+        "sourceText": "History of radiation pneumonitis",
+        "reasonFuzzy": "Radiation pneumonitis history is not a typed check."
+      },
+      {
+        "id": "NCT04585750-ild",
+        "polarity": "exclusion",
+        "sourceText": "History of (non-infectious) or active pneumonitis / interstitial lung disease that required steroids",
+        "reasonFuzzy": "Pneumonitis and interstitial lung disease history is not a typed check."
+      },
+      {
+        "id": "NCT04585750-active-infxn",
+        "polarity": "exclusion",
+        "sourceText": "Active infection requiring systemic therapy",
+        "reasonFuzzy": "Active infection requiring systemic therapy is a clinical judgment."
+      },
+      {
+        "id": "NCT04585750-prior-rezatapopt",
+        "polarity": "exclusion",
+        "sourceText": "Has previously received rezatapopt",
+        "reasonFuzzy": "Prior investigational drug exposure is not a standard typed prior_therapy_excluded check."
+      }
+    ]
+  }
+}

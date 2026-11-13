@@ -1,0 +1,309 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04613596",
+  "briefTitle": "Phase 2 Trial of Adagrasib Monotherapy and in Combination With Pembrolizumab and a Phase 3 Trial of Adagrasib in Combination in Patients With a KRAS G12C Mutation KRYSTAL-7",
+  "parsedAt": "2026-11-12T06:06:18.915Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04613596-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "Age minimum from metadata not explicitly listed in text snippets, but matches study parameters."
+    },
+    {
+      "id": "NCT04613596-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Phase 3: Presence of measurable disease per RECIST1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT04613596-active-brain",
+      "polarity": "exclusion",
+      "sourceText": "Phase 2: Active brain metastases",
+      "reasonFuzzy": "Active metastases wording is subjective and not a strict standalone category."
+    },
+    {
+      "id": "NCT04613596-phase3-brain",
+      "polarity": "exclusion",
+      "sourceText": "Phase 3: Patients with known central nervous system (CNS) lesions must not have any of the following: 1. Any untreated brain lesions > 2.0 cm in size 2. Any brainstem lesions 3. Ongoing use of systemic corticosteroids for control of symptoms of brain lesions at a total daily dose of > 10 mg of prednisone (or equivalent) prior to randomization. 4. Have poorly controlled (> 1/week) generalized or complex partial seizures, or manifest neurologic progression due to brain lesions notwithstanding CNS-directed therapy",
+      "reasonFuzzy": "Complex multivariable exclusion criteria for brain lesions including size limits, locations, corticosteroid doses, and seizures."
+    },
+    {
+      "id": "NCT04613596-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Phase 3: Radiation to the lung > 30 Gy within 6 months prior to the first dose of study treatment",
+      "reasonFuzzy": "Radiation dose and window exclusion rule is not covered by standard typed kinds."
+    },
+    {
+      "id": "NCT04613596-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Phase 3: Presence of measurable disease per RECIST1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04613596-phase2-brain",
+      "polarity": "exclusion",
+      "sourceText": "Phase 2: Active brain metastases",
+      "reasonFuzzy": "Active brain metastases wording is subjective and does not cleanly map to a single typed brain_mets category."
+    },
+    {
+      "id": "NCT04613596-phase3-cns",
+      "polarity": "exclusion",
+      "sourceText": "Phase 3: Patients with known central nervous system (CNS) lesions must not have any of the following: 1. Any untreated brain lesions > 2.0 cm in size 2. Any brainstem lesions 3. Ongoing use of systemic corticosteroids for control of symptoms of brain lesions at a total daily dose of > 10 mg of prednisone (or equivalent) prior to randomization. 4. Have poorly controlled (> 1/week) generalized or complex partial seizures, or manifest neurologic progression due to brain lesions notwithstanding CNS-directed therapy",
+      "reasonFuzzy": "Complex multivariable exclusions on brain lesion size, location, symptoms, and steroid use cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT04613596-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Phase 3: Radiation to the lung > 30 Gy within 6 months prior to the first dose of study treatment",
+      "reasonFuzzy": "Prior radiation dose and timing washout rules are not represented by available typed kinds."
+    },
+    {
+      "id": "NCT04613596-kras",
+      "polarity": "inclusion",
+      "sourceText": "Phase 2: Histologically confirmed diagnosis of unresectable or metastatic NSCLC with KRAS G12C mutation and any PD-L1 TPS",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT04613596-kras-var",
+      "polarity": "inclusion",
+      "sourceText": "Phase 2: Histologically confirmed diagnosis of unresectable or metastatic NSCLC with KRAS G12C mutation and any PD-L1 TPS",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04613596-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Phase 3: Histologically confirmed diagnosis of unresectable or metastatic squamous or nonsquamous NSCLC with KRAS G12C mutation and PD-L1 TPS>=50%",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04613596-brain",
+      "polarity": "inclusion",
+      "sourceText": "Phase 3: CNS Inclusion - Based on screening brain imaging, patients must have one of the following: 1. No evidence of brain metastases 2. Untreated brain metastases not needing immediate local therapy 3. Previously treated brain metastases not needing immediate local therapy",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04613596-prior-tx",
+      "polarity": "exclusion",
+      "sourceText": "Phase 2 and Phase 3: Prior systemic treatment for locally advanced or metastatic NSCLC including chemotherapy, immune checkpoint inhibitor therapy, or a therapy targeting KRAS G12C mutation (e.g., AMG 510).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12c"
+        },
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:50"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:none,treated_stable,untreated"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:chemotherapy"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3466
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 2868
+  },
+  "ms": 14312,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04613596",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04613596-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Phase 2: Histologically confirmed diagnosis of unresectable or metastatic NSCLC with KRAS G12C mutation and any PD-L1 TPS",
+        "presence": "present"
+      },
+      {
+        "id": "NCT04613596-kras-var",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Phase 2: Histologically confirmed diagnosis of unresectable or metastatic NSCLC with KRAS G12C mutation and any PD-L1 TPS",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT04613596-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Phase 3: Histologically confirmed diagnosis of unresectable or metastatic squamous or nonsquamous NSCLC with KRAS G12C mutation and PD-L1 TPS>=50%",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT04613596-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Phase 3: CNS Inclusion - Based on screening brain imaging, patients must have one of the following: 1. No evidence of brain metastases 2. Untreated brain metastases not needing immediate local therapy 3. Previously treated brain metastases not needing immediate local therapy",
+        "allowedBrainMets": [
+          "none",
+          "untreated",
+          "treated_stable"
+        ],
+        "exceptions": "not needing immediate local therapy"
+      },
+      {
+        "id": "NCT04613596-prior-tx",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Phase 2 and Phase 3: Prior systemic treatment for locally advanced or metastatic NSCLC including chemotherapy, immune checkpoint inhibitor therapy, or a therapy targeting KRAS G12C mutation (e.g., AMG 510).",
+        "stringValue": "chemotherapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04613596-age",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "reasonFuzzy": "Age minimum from metadata not explicitly listed in text snippets, but matches study parameters."
+      },
+      {
+        "id": "NCT04613596-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Phase 3: Presence of measurable disease per RECIST1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT04613596-active-brain",
+        "polarity": "exclusion",
+        "sourceText": "Phase 2: Active brain metastases",
+        "reasonFuzzy": "Active metastases wording is subjective and not a strict standalone category."
+      },
+      {
+        "id": "NCT04613596-phase3-brain",
+        "polarity": "exclusion",
+        "sourceText": "Phase 3: Patients with known central nervous system (CNS) lesions must not have any of the following: 1. Any untreated brain lesions > 2.0 cm in size 2. Any brainstem lesions 3. Ongoing use of systemic corticosteroids for control of symptoms of brain lesions at a total daily dose of > 10 mg of prednisone (or equivalent) prior to randomization. 4. Have poorly controlled (> 1/week) generalized or complex partial seizures, or manifest neurologic progression due to brain lesions notwithstanding CNS-directed therapy",
+        "reasonFuzzy": "Complex multivariable exclusion criteria for brain lesions including size limits, locations, corticosteroid doses, and seizures."
+      },
+      {
+        "id": "NCT04613596-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Phase 3: Radiation to the lung > 30 Gy within 6 months prior to the first dose of study treatment",
+        "reasonFuzzy": "Radiation dose and window exclusion rule is not covered by standard typed kinds."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04613596",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04613596-kras",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Phase 2: Histologically confirmed diagnosis of unresectable or metastatic NSCLC with KRAS G12C mutation and any PD-L1 TPS",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT04613596-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Phase 3: Histologically confirmed diagnosis of unresectable or metastatic squamous or nonsquamous NSCLC with KRAS G12C mutation and PD-L1 TPS>=50%",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT04613596-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Phase 3: CNS Inclusion - Based on screening brain imaging, patients must have one of the following: 1. No evidence of brain metastases 2. Untreated brain metastases not needing immediate local therapy 3. Previously treated brain metastases not needing immediate local therapy",
+        "allowedBrainMets": [
+          "none",
+          "untreated",
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT04613596-prior",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Phase 2 and Phase 3: Prior systemic treatment for locally advanced or metastatic NSCLC including chemotherapy, immune checkpoint inhibitor therapy, or a therapy targeting KRAS G12C mutation (e.g., AMG 510).",
+        "stringValue": "chemotherapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04613596-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Phase 3: Presence of measurable disease per RECIST1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT04613596-phase2-brain",
+        "polarity": "exclusion",
+        "sourceText": "Phase 2: Active brain metastases",
+        "reasonFuzzy": "Active brain metastases wording is subjective and does not cleanly map to a single typed brain_mets category."
+      },
+      {
+        "id": "NCT04613596-phase3-cns",
+        "polarity": "exclusion",
+        "sourceText": "Phase 3: Patients with known central nervous system (CNS) lesions must not have any of the following: 1. Any untreated brain lesions > 2.0 cm in size 2. Any brainstem lesions 3. Ongoing use of systemic corticosteroids for control of symptoms of brain lesions at a total daily dose of > 10 mg of prednisone (or equivalent) prior to randomization. 4. Have poorly controlled (> 1/week) generalized or complex partial seizures, or manifest neurologic progression due to brain lesions notwithstanding CNS-directed therapy",
+        "reasonFuzzy": "Complex multivariable exclusions on brain lesion size, location, symptoms, and steroid use cannot be expressed as a single typed check."
+      },
+      {
+        "id": "NCT04613596-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Phase 3: Radiation to the lung > 30 Gy within 6 months prior to the first dose of study treatment",
+        "reasonFuzzy": "Prior radiation dose and timing washout rules are not represented by available typed kinds."
+      }
+    ]
+  }
+}

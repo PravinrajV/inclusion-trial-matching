@@ -1,0 +1,221 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06515990",
+  "briefTitle": "A Study of DM005 in Patients With Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T13:18:16.532Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06515990-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Participants must be ≥18 years of age on the day of signing the informed consent form (ICF).",
+      "numberValue": 18,
+      "evidence_quote": "Participants must be ≥18 years of age on the day of signing the informed consent form (ICF).",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06515990-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have an Eastern Cooperative Oncology Group performance status (ECOG PS) of 0 to 2.",
+      "numberValue": 2,
+      "evidence_quote": "Participants must have an Eastern Cooperative Oncology Group performance status (ECOG PS) of 0 to 2.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06515990-life",
+      "polarity": "inclusion",
+      "sourceText": "Has a life expectancy ≥3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06515990-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has measurable disease based on response evaluation criteria in solid tumors (RECIST) version 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06515990-stage",
+      "polarity": "inclusion",
+      "sourceText": "Participants who have pathologically or cytologically documented metastatic/advanced NSCLC, gastroesophageal cancer, CRC, HCC, pancreatic cancer, or HNSCC, not curable with standard local therapies (i.e., surgery and/or radiation) and have progressed on standard therapy, or intolerant to standard therapy.",
+      "reasonFuzzy": "The record specifies metastatic/advanced NSCLC without a numbered stage list, keeping it in scope as advanced disease."
+    },
+    {
+      "id": "NCT06515990-life",
+      "polarity": "inclusion",
+      "sourceText": "Has a life expectancy ≥3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06515990-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has measurable disease based on response evaluation criteria in solid tumors (RECIST) version 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06515990-washout",
+      "polarity": "exclusion",
+      "sourceText": "Anticancer therapy (chemotherapy, immunotherapy, hormonal therapy, targeted therapy, biologic therapy, or other anti-cancer therapies, except for hormones for hypothyroidism or estrogen replacement therapy, anti-estrogen analogs, agonists required to suppress serum testosterone levels) within 28 days or 5 half-lives, whichever is shorter, prior to the first study dose. Radiotherapy with a wide field of radiation within 28 days, or radiotherapy with a limited field of radiation for palliation within 14 days of the first study dose. Major surgery, other than diagnostic surgery, within 4 weeks of the first study dose.",
+      "reasonFuzzy": "Complex washout windows involving half-lives, multiple therapy types, and radiation/surgery are not a simple lab cutoff."
+    },
+    {
+      "id": "NCT06515990-brain",
+      "polarity": "exclusion",
+      "sourceText": "Primary central nervous system (CNS) malignancies or CNS metastases. Individuals with brain metastases can be enrolled only if treated, non-progressive brain metastases and off high-dose steroids (>20 mg prednisone or equivalent) for at least 4 weeks.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 20560
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 5543
+  },
+  "ms": 30133,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06515990",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06515990-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must be ≥18 years of age on the day of signing the informed consent form (ICF).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06515990-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group performance status (ECOG PS) of 0 to 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06515990-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Individuals with brain metastases can be enrolled only if treated, non-progressive brain metastases and off high-dose steroids (>20 mg prednisone or equivalent) for at least 4 weeks.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ],
+        "exceptions": "off high-dose steroids (>20 mg prednisone or equivalent) for at least 4 weeks"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06515990-life",
+        "polarity": "inclusion",
+        "sourceText": "Has a life expectancy ≥3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06515990-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has measurable disease based on response evaluation criteria in solid tumors (RECIST) version 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06515990",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06515990-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must be ≥18 years of age on the day of signing the informed consent form (ICF).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06515990-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group performance status (ECOG PS) of 0 to 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06515990-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Primary central nervous system (CNS) malignancies or CNS metastases. Individuals with brain metastases can be enrolled only if treated, non-progressive brain metastases and off high-dose steroids (>20 mg prednisone or equivalent) for at least 4 weeks.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06515990-stage",
+        "polarity": "inclusion",
+        "sourceText": "Participants who have pathologically or cytologically documented metastatic/advanced NSCLC, gastroesophageal cancer, CRC, HCC, pancreatic cancer, or HNSCC, not curable with standard local therapies (i.e., surgery and/or radiation) and have progressed on standard therapy, or intolerant to standard therapy.",
+        "reasonFuzzy": "The record specifies metastatic/advanced NSCLC without a numbered stage list, keeping it in scope as advanced disease."
+      },
+      {
+        "id": "NCT06515990-life",
+        "polarity": "inclusion",
+        "sourceText": "Has a life expectancy ≥3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06515990-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has measurable disease based on response evaluation criteria in solid tumors (RECIST) version 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06515990-washout",
+        "polarity": "exclusion",
+        "sourceText": "Anticancer therapy (chemotherapy, immunotherapy, hormonal therapy, targeted therapy, biologic therapy, or other anti-cancer therapies, except for hormones for hypothyroidism or estrogen replacement therapy, anti-estrogen analogs, agonists required to suppress serum testosterone levels) within 28 days or 5 half-lives, whichever is shorter, prior to the first study dose. Radiotherapy with a wide field of radiation within 28 days, or radiotherapy with a limited field of radiation for palliation within 14 days of the first study dose. Major surgery, other than diagnostic surgery, within 4 weeks of the first study dose.",
+        "reasonFuzzy": "Complex washout windows involving half-lives, multiple therapy types, and radiation/surgery are not a simple lab cutoff."
+      }
+    ]
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07361497",
+  "briefTitle": "A Study to Evaluate Pumitamig Versus Durvalumab Following Concurrent Chemoradiation Therapy in Participants With Unresectable Stage III Non-small Cell Lung Cancer (NSCLC) (ROSETTA Lung-201)",
+  "parsedAt": "2026-11-12T05:58:45.299Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07361497-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a histologically- or cytologically-confirmed diagnoses of non-small cell lung cancer (NSCLC) with unresectable Stage III disease.",
+      "stages": [
+        "IIIA",
+        "IIIB",
+        "IIIC"
+      ],
+      "evidence_quote": "Participants must have a histologically- or cytologically-confirmed diagnoses of non-small cell lung cancer (NSCLC) with unresectable Stage III disease.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07361497-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have an Eastern Cooperative Oncology Group (ECOG) performance status (PS) score of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Participants must have an Eastern Cooperative Oncology Group (ECOG) performance status (PS) score of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07361497-egfr",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Participants with non-squamous histology must not have documented Epidermal Growth Factor Receptor (EGFR) and anaplastic lymphoma kinase (ALK) rearrangements.",
+      "presence": "present",
+      "stages": [
+        "IIIA",
+        "IIIB",
+        "IIIC"
+      ],
+      "evidence_quote": "Participants with non-squamous histology must not have documented Epidermal Growth Factor Receptor (EGFR) and anaplastic lymphoma kinase (ALK) rearrangements.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07361497-alk",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Participants with non-squamous histology must not have documented Epidermal Growth Factor Receptor (EGFR) and anaplastic lymphoma kinase (ALK) rearrangements.",
+      "presence": "present",
+      "evidence_quote": "Participants with non-squamous histology must not have documented Epidermal Growth Factor Receptor (EGFR) and anaplastic lymphoma kinase (ALK) rearrangements.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07361497-progression",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have no progressive disease (PD) following treatment with concurrent chemoradiotherapy (CCRT).",
+      "reasonFuzzy": "Assessment of progressive disease is a clinical and imaging evaluation, not a typed check."
+    },
+    {
+      "id": "NCT07361497-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have an active autoimmune disease.",
+      "reasonFuzzy": "Active autoimmune disease is a subjective clinical condition, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07361497-cardiovascular",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have significant cardiovascular impairment such as uncontrolled hypertension (despite optimal medical treatment), congestive heart failure, active coronary disease (within 6 months prior to randomization), ventricular arrhythmias, major thrombotic or embolic events or major hemorrhagic events within 6 months prior to randomization, or significant risk of pulmonary hemorrhage.",
+      "reasonFuzzy": "Complex cardiovascular exclusions with multiple clauses are not captured by single typed checks."
+    },
+    {
+      "id": "NCT07361497-lung",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have advanced/clinically significant lung disease (within 6 months prior to randomization) or history of interstitial lung disease (ILD) or pneumonitis requiring treatment with systemic steroids (≥ Grade 2), or current or suspected ILD or pneumonitis.",
+      "reasonFuzzy": "Pulmonary disease and ILD history with steroid grading are complex clinical judgments."
+    },
+    {
+      "id": "NCT07361497-anticancer",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have any prior anticancer therapy (outside of CCRT) for locally advanced Stage III disease.",
+      "reasonFuzzy": "Exclusion of prior therapy outside of CCRT for a specific stage is not a simple standard prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT07361497-ccrt",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have received at least 2 cycles of platinum-based concurrent chemoradiotherapy (a total dose of radiation of at least 54 Gy).",
+      "reasonFuzzy": "This is a complex treatment history requirement involving cycle counts, platinum therapy, and radiation dose, which cannot be expressed as a single typed prior_therapy check."
+    },
+    {
+      "id": "NCT07361497-progression",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have no progressive disease (PD) following treatment with concurrent chemoradiotherapy (CCRT).",
+      "reasonFuzzy": "Lack of progressive disease following CCRT is an assessment of treatment response rather than a typed lab or condition check."
+    },
+    {
+      "id": "NCT07361497-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have an active autoimmune disease.",
+      "reasonFuzzy": "Active autoimmune disease is a clinical condition check that does not have a specific typed kind."
+    },
+    {
+      "id": "NCT07361497-cardiovascular",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have significant cardiovascular impairment such as uncontrolled hypertension (despite optimal medical treatment), congestive heart failure, active coronary disease (within 6 months prior to randomization), ventricular arrhythmias, major thrombotic or embolic events or major hemorrhagic events within 6 months prior to randomization, or significant risk of pulmonary hemorrhage.",
+      "reasonFuzzy": "This is a complex exclusion for various cardiovascular impairments and timeframes, not a single typed lab cutoff or rule."
+    },
+    {
+      "id": "NCT07361497-lung",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have advanced/clinically significant lung disease (within 6 months prior to randomization) or history of interstitial lung disease (ILD) or pneumonitis requiring treatment with systemic steroids (≥ Grade 2), or current or suspected ILD or pneumonitis.",
+      "reasonFuzzy": "This is a multifaceted exclusion for lung disease, ILD, or pneumonitis with specific steroid grade requirements."
+    },
+    {
+      "id": "NCT07361497-prior",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have any prior anticancer therapy (outside of CCRT) for locally advanced Stage III disease.",
+      "reasonFuzzy": "This is a broad exclusion regarding prior anticancer therapies with specific disease stage context."
+    },
+    {
+      "id": "NCT07361497-prior",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have received at least 2 cycles of platinum-based concurrent chemoradiotherapy (a total dose of radiation of at least 54 Gy).",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:platinum-based concurrent chemoradiotherapy"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3382
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 3766
+  },
+  "ms": 15134,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07361497",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07361497-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a histologically- or cytologically-confirmed diagnoses of non-small cell lung cancer (NSCLC) with unresectable Stage III disease.",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT07361497-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group (ECOG) performance status (PS) score of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07361497-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with non-squamous histology must not have documented Epidermal Growth Factor Receptor (EGFR) and anaplastic lymphoma kinase (ALK) rearrangements.",
+        "presence": "present",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT07361497-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with non-squamous histology must not have documented Epidermal Growth Factor Receptor (EGFR) and anaplastic lymphoma kinase (ALK) rearrangements.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07361497-prior",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have received at least 2 cycles of platinum-based concurrent chemoradiotherapy (a total dose of radiation of at least 54 Gy).",
+        "stringValue": "platinum-based concurrent chemoradiotherapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07361497-progression",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have no progressive disease (PD) following treatment with concurrent chemoradiotherapy (CCRT).",
+        "reasonFuzzy": "Assessment of progressive disease is a clinical and imaging evaluation, not a typed check."
+      },
+      {
+        "id": "NCT07361497-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have an active autoimmune disease.",
+        "reasonFuzzy": "Active autoimmune disease is a subjective clinical condition, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT07361497-cardiovascular",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have significant cardiovascular impairment such as uncontrolled hypertension (despite optimal medical treatment), congestive heart failure, active coronary disease (within 6 months prior to randomization), ventricular arrhythmias, major thrombotic or embolic events or major hemorrhagic events within 6 months prior to randomization, or significant risk of pulmonary hemorrhage.",
+        "reasonFuzzy": "Complex cardiovascular exclusions with multiple clauses are not captured by single typed checks."
+      },
+      {
+        "id": "NCT07361497-lung",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have advanced/clinically significant lung disease (within 6 months prior to randomization) or history of interstitial lung disease (ILD) or pneumonitis requiring treatment with systemic steroids (≥ Grade 2), or current or suspected ILD or pneumonitis.",
+        "reasonFuzzy": "Pulmonary disease and ILD history with steroid grading are complex clinical judgments."
+      },
+      {
+        "id": "NCT07361497-anticancer",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have any prior anticancer therapy (outside of CCRT) for locally advanced Stage III disease.",
+        "reasonFuzzy": "Exclusion of prior therapy outside of CCRT for a specific stage is not a simple standard prior_therapy_excluded check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07361497",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07361497-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a histologically- or cytologically-confirmed diagnoses of non-small cell lung cancer (NSCLC) with unresectable Stage III disease.",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT07361497-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group (ECOG) performance status (PS) score of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07361497-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with non-squamous histology must not have documented Epidermal Growth Factor Receptor (EGFR) and anaplastic lymphoma kinase (ALK) rearrangements.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07361497-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with non-squamous histology must not have documented Epidermal Growth Factor Receptor (EGFR) and anaplastic lymphoma kinase (ALK) rearrangements.",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07361497-ccrt",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have received at least 2 cycles of platinum-based concurrent chemoradiotherapy (a total dose of radiation of at least 54 Gy).",
+        "reasonFuzzy": "This is a complex treatment history requirement involving cycle counts, platinum therapy, and radiation dose, which cannot be expressed as a single typed prior_therapy check."
+      },
+      {
+        "id": "NCT07361497-progression",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have no progressive disease (PD) following treatment with concurrent chemoradiotherapy (CCRT).",
+        "reasonFuzzy": "Lack of progressive disease following CCRT is an assessment of treatment response rather than a typed lab or condition check."
+      },
+      {
+        "id": "NCT07361497-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have an active autoimmune disease.",
+        "reasonFuzzy": "Active autoimmune disease is a clinical condition check that does not have a specific typed kind."
+      },
+      {
+        "id": "NCT07361497-cardiovascular",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have significant cardiovascular impairment such as uncontrolled hypertension (despite optimal medical treatment), congestive heart failure, active coronary disease (within 6 months prior to randomization), ventricular arrhythmias, major thrombotic or embolic events or major hemorrhagic events within 6 months prior to randomization, or significant risk of pulmonary hemorrhage.",
+        "reasonFuzzy": "This is a complex exclusion for various cardiovascular impairments and timeframes, not a single typed lab cutoff or rule."
+      },
+      {
+        "id": "NCT07361497-lung",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have advanced/clinically significant lung disease (within 6 months prior to randomization) or history of interstitial lung disease (ILD) or pneumonitis requiring treatment with systemic steroids (≥ Grade 2), or current or suspected ILD or pneumonitis.",
+        "reasonFuzzy": "This is a multifaceted exclusion for lung disease, ILD, or pneumonitis with specific steroid grade requirements."
+      },
+      {
+        "id": "NCT07361497-prior",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have any prior anticancer therapy (outside of CCRT) for locally advanced Stage III disease.",
+        "reasonFuzzy": "This is a broad exclusion regarding prior anticancer therapies with specific disease stage context."
+      }
+    ]
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06040541",
+  "briefTitle": "Study of RMC-9805 in Participants With KRAS G12D-Mutant Solid Tumors",
+  "parsedAt": "2026-11-12T06:22:13.051Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06040541-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06040541-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known or suspected leptomeningeal or active brain metastases or spinal cord compression",
+      "reasonFuzzy": "Active brain metastases wording prevents assigning a clean typed brain_mets category."
+    },
+    {
+      "id": "NCT06040541-gi",
+      "polarity": "exclusion",
+      "sourceText": "Known or suspected impairment of gastrointestinal function that may prohibit ability to swallow or absorb an oral medication",
+      "reasonFuzzy": "Subjective clinical judgment on GI function impairment."
+    },
+    {
+      "id": "NCT06040541-minage",
+      "polarity": "inclusion",
+      "sourceText": "18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06040541-stage",
+      "polarity": "inclusion",
+      "sourceText": "locally advanced or metastatic solid tumor",
+      "reasonFuzzy": "The record mentions locally advanced or metastatic solid tumors broadly without a formal stage list or explicit NSCLC stage breakdown."
+    },
+    {
+      "id": "NCT06040541-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known or suspected leptomeningeal or active brain metastases or spinal cord compression",
+      "reasonFuzzy": "Active brain metastases are not a clean typed brain_mets rule of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT06040541-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06040541-kras",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically documented, locally advanced or metastatic solid tumor with a KRAS G12D-mutation",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06040541-krasvar",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically documented, locally advanced or metastatic solid tumor with a KRAS G12D-mutation",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06040541-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Participant was previously treated with an investigational KRAS G12D inhibitor, pan- or multi-RAS inhibitor, or had prior therapy with any direct RAS-targeted therapy (eg, degraders and inhibitors)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12d"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:direct ras-targeted therapy"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 6736
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 4049
+  },
+  "ms": 18777,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06040541",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06040541-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically documented, locally advanced or metastatic solid tumor with a KRAS G12D-mutation",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06040541-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically documented, locally advanced or metastatic solid tumor with a KRAS G12D-mutation",
+        "stringValue": "G12D"
+      },
+      {
+        "id": "NCT06040541-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06040541-minage",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06040541-prior-therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participant was previously treated with an investigational KRAS G12D inhibitor, pan- or multi-RAS inhibitor, or had prior therapy with any direct RAS-targeted therapy (eg, degraders and inhibitors)",
+        "stringValue": "direct RAS-targeted therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06040541-brain",
+        "polarity": "exclusion",
+        "sourceText": "Known or suspected leptomeningeal or active brain metastases or spinal cord compression",
+        "reasonFuzzy": "Active brain metastases wording prevents assigning a clean typed brain_mets category."
+      },
+      {
+        "id": "NCT06040541-gi",
+        "polarity": "exclusion",
+        "sourceText": "Known or suspected impairment of gastrointestinal function that may prohibit ability to swallow or absorb an oral medication",
+        "reasonFuzzy": "Subjective clinical judgment on GI function impairment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06040541",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06040541-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically documented, locally advanced or metastatic solid tumor with a KRAS G12D-mutation",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06040541-kras-var",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically documented, locally advanced or metastatic solid tumor with a KRAS G12D-mutation",
+        "stringValue": "G12D"
+      },
+      {
+        "id": "NCT06040541-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06040541-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06040541-prior-ras",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participant was previously treated with an investigational KRAS G12D inhibitor, pan- or multi-RAS inhibitor, or had prior therapy with any direct RAS-targeted therapy (eg, degraders and inhibitors)",
+        "stringValue": "direct RAS-targeted therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06040541-stage",
+        "polarity": "inclusion",
+        "sourceText": "locally advanced or metastatic solid tumor",
+        "reasonFuzzy": "The record mentions locally advanced or metastatic solid tumors broadly without a formal stage list or explicit NSCLC stage breakdown."
+      },
+      {
+        "id": "NCT06040541-brain",
+        "polarity": "exclusion",
+        "sourceText": "Known or suspected leptomeningeal or active brain metastases or spinal cord compression",
+        "reasonFuzzy": "Active brain metastases are not a clean typed brain_mets rule of none, treated_stable, or untreated."
+      }
+    ]
+  }
+}

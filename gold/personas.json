@@ -1,0 +1,129 @@
+{
+  "disclaimer": "Synthetic data only. These are not real patients.",
+  "region": "Ohio, city-level coordinates for on-device distance filtering",
+  "personas": [
+    {
+      "id": "alex-rivera",
+      "displayName": "Alex Rivera",
+      "synthetic": true,
+      "clinicNote": "Synthetic oncology progress note. Not a real patient.\n\nAlex Rivera is a 62-year-old never-smoker who lives in Columbus, Ohio. Diagnosis: stage IV lung adenocarcinoma, EGFR exon 19 deletion detected on tumor NGS. The patient received osimertinib as first-line therapy and has now progressed. No other systemic lines. ALK rearrangement not detected. KRAS mutation not detected. PD-L1 TPS 30% (22C3). ECOG performance status 1. MRI brain without evidence of metastases. Labs today: creatinine 0.9 mg/dL, eGFR 85 mL/min, AST 28, ALT 22, total bilirubin 0.6 mg/dL, ANC 3200/uL, platelets 210000/uL, hemoglobin 12.4 g/dL. Measurable lung and mediastinal disease on CT.",
+      "factSheet": {
+        "schemaVersion": "1",
+        "source": "self_entry",
+        "ageYears": 62,
+        "sex": "unknown",
+        "home": { "city": "Columbus", "state": "OH", "lat": 39.9612, "lon": -82.9988 },
+        "diagnosis": "nsclc",
+        "stage": "IV",
+        "histology": "adenocarcinoma",
+        "ecog": 1,
+        "biomarkers": {
+          "egfr": { "status": "present", "variant": "exon 19 deletion" },
+          "alk": { "status": "absent", "variant": null },
+          "kras": { "status": "absent", "variant": null },
+          "ros1": { "status": "unknown", "variant": null },
+          "braf": { "status": "unknown", "variant": null },
+          "pdL1TpsPercent": 30
+        },
+        "priorSystemicLines": 1,
+        "priorTherapies": ["osimertinib"],
+        "brainMets": { "status": "none", "detail": null },
+        "organFunction": {
+          "creatinineMgDl": 0.9,
+          "egfrMlMin": 85,
+          "astUL": 28,
+          "altUL": 22,
+          "totalBilirubinMgDl": 0.6,
+          "ancPerUl": 3200,
+          "plateletsPerUl": 210000,
+          "hemoglobinGdl": 12.4
+        },
+        "smoking": "never",
+        "notes": null,
+        "excerpts": []
+      }
+    },
+    {
+      "id": "jordan-blake",
+      "displayName": "Jordan Blake",
+      "synthetic": true,
+      "clinicNote": "Synthetic oncology progress note. Not a real patient.\n\nJordan Blake is a 71-year-old former smoker (40 pack-years, quit 5 years ago) who lives in Cleveland, Ohio. Diagnosis: unresectable stage IIIB squamous non-small cell lung cancer. No EGFR sensitizing mutation, no ALK rearrangement, and no KRAS mutation reported on the molecular panel. PD-L1 TPS 80% (22C3). ECOG performance status 2. No prior systemic therapy for this cancer. No brain metastases. Labs: creatinine 1.6 mg/dL, eGFR 48 mL/min, AST 35, ALT 30, total bilirubin 0.8 mg/dL, ANC 1800/uL, platelets 155000/uL, hemoglobin 11.1 g/dL.",
+      "factSheet": {
+        "schemaVersion": "1",
+        "source": "self_entry",
+        "ageYears": 71,
+        "sex": "unknown",
+        "home": { "city": "Cleveland", "state": "OH", "lat": 41.4993, "lon": -81.6944 },
+        "diagnosis": "nsclc",
+        "stage": "IIIB",
+        "histology": "squamous",
+        "ecog": 2,
+        "biomarkers": {
+          "egfr": { "status": "absent", "variant": null },
+          "alk": { "status": "absent", "variant": null },
+          "kras": { "status": "absent", "variant": null },
+          "ros1": { "status": "unknown", "variant": null },
+          "braf": { "status": "unknown", "variant": null },
+          "pdL1TpsPercent": 80
+        },
+        "priorSystemicLines": 0,
+        "priorTherapies": [],
+        "brainMets": { "status": "none", "detail": null },
+        "organFunction": {
+          "creatinineMgDl": 1.6,
+          "egfrMlMin": 48,
+          "astUL": 35,
+          "altUL": 30,
+          "totalBilirubinMgDl": 0.8,
+          "ancPerUl": 1800,
+          "plateletsPerUl": 155000,
+          "hemoglobinGdl": 11.1
+        },
+        "smoking": "former",
+        "notes": null,
+        "excerpts": []
+      }
+    },
+    {
+      "id": "sam-okonkwo",
+      "displayName": "Sam Okonkwo",
+      "synthetic": true,
+      "clinicNote": "Synthetic oncology progress note. Not a real patient.\n\nSam Okonkwo is a 54-year-old never-smoker who lives in Cincinnati, Ohio. Diagnosis: stage IV lung adenocarcinoma with an ALK rearrangement. The patient was treated with alectinib as first-line therapy and has radiographic progression. EGFR mutation not detected. KRAS mutation not detected. PD-L1 TPS 5%. ECOG performance status 0. Brain metastases were treated with stereotactic radiosurgery 6 weeks ago and are stable. The patient is off glucocorticoids and neurologically stable. Labs: creatinine 0.8 mg/dL, eGFR 95 mL/min, AST 24, ALT 20, total bilirubin 0.5 mg/dL, ANC 4100/uL, platelets 240000/uL, hemoglobin 13.6 g/dL.",
+      "factSheet": {
+        "schemaVersion": "1",
+        "source": "self_entry",
+        "ageYears": 54,
+        "sex": "unknown",
+        "home": { "city": "Cincinnati", "state": "OH", "lat": 39.1031, "lon": -84.512 },
+        "diagnosis": "nsclc",
+        "stage": "IV",
+        "histology": "adenocarcinoma",
+        "ecog": 0,
+        "biomarkers": {
+          "egfr": { "status": "absent", "variant": null },
+          "alk": { "status": "present", "variant": "rearrangement" },
+          "kras": { "status": "absent", "variant": null },
+          "ros1": { "status": "unknown", "variant": null },
+          "braf": { "status": "unknown", "variant": null },
+          "pdL1TpsPercent": 5
+        },
+        "priorSystemicLines": 1,
+        "priorTherapies": ["alectinib"],
+        "brainMets": { "status": "treated_stable", "detail": "SRS 6 weeks ago, off steroids, neurologically stable" },
+        "organFunction": {
+          "creatinineMgDl": 0.8,
+          "egfrMlMin": 95,
+          "astUL": 24,
+          "altUL": 20,
+          "totalBilirubinMgDl": 0.5,
+          "ancPerUl": 4100,
+          "plateletsPerUl": 240000,
+          "hemoglobinGdl": 13.6
+        },
+        "smoking": "never",
+        "notes": null,
+        "excerpts": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,357 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06171750",
+  "briefTitle": "Phase I Study of Tolododekin Alfa (ANK-101) in Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T06:27:13.306Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06171750-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "≥ 18 years of age on day of signing informed consent",
+      "numberValue": 18,
+      "evidence_quote": "≥ 18 years of age on day of signing informed consent",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06171750-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed Stage III or Stage IV NSCLC",
+      "stages": [
+        "IIIA",
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Histologically confirmed Stage III or Stage IV NSCLC",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06171750-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status 0-1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status 0-1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06171750-measurable",
+      "polarity": "inclusion",
+      "sourceText": "measurable disease per RECIST v1.1 - Note: Must have at least 1 tumor lesion with longest dimension of ≥ 10 mm...",
+      "reasonFuzzy": "Measurable disease by RECIST and lesion access requirements are subjective imaging and procedural judgments."
+    },
+    {
+      "id": "NCT06171750-life",
+      "polarity": "inclusion",
+      "sourceText": "life expectancy > 12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06171750-organ",
+      "polarity": "inclusion",
+      "sourceText": "adequate bone marrow, hepatic and renal function",
+      "reasonFuzzy": "Organ function is stated generally without specific numeric lab cutoffs in this clause."
+    },
+    {
+      "id": "NCT06171750-washout",
+      "polarity": "inclusion",
+      "sourceText": "last dose of previous anticancer therapy (including investigational agents) ≥ 28 days, radiotherapy ≥ 14 days..., or surgical intervention ≥ 21 days prior to the start of treatment",
+      "reasonFuzzy": "Washout windows for prior therapies are complex rules not covered by simple typed lab or biomarker checks."
+    },
+    {
+      "id": "NCT06171750-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "willing to provide pre- and post-treatment tumor biopsy samples if medically feasible",
+      "reasonFuzzy": "Willingness to undergo a biopsy is a subjective procedural requirement."
+    },
+    {
+      "id": "NCT06171750-prior-il12",
+      "polarity": "exclusion",
+      "sourceText": "prior treatment with recombinant interleukin-12 (IL-12)",
+      "reasonFuzzy": "Prior IL-12 is not an allowed prior_therapy_excluded drug name in the restricted list."
+    },
+    {
+      "id": "NCT06171750-cemiplimab-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Part 3 only: hypersensitivity to cemiplimab or any of its excipients or contraindications to cemiplimab per approved local labeling",
+      "reasonFuzzy": "Cemiplimab hypersensitivity applies only to a specific study part and is not a generalized exclusion."
+    },
+    {
+      "id": "NCT06171750-measurable",
+      "polarity": "inclusion",
+      "sourceText": "measurable disease per RECIST v1.1 - Note: Must have at least 1 tumor lesion with longest dimension of ≥ 10 mm...",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06171750-life",
+      "polarity": "inclusion",
+      "sourceText": "life expectancy > 12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06171750-organ",
+      "polarity": "inclusion",
+      "sourceText": "adequate bone marrow, hepatic and renal function",
+      "reasonFuzzy": "Organ function is a general statement without specific numeric cutoffs in this clause."
+    },
+    {
+      "id": "NCT06171750-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "willing to provide pre- and post-treatment tumor biopsy samples if medically feasible",
+      "reasonFuzzy": "Willingness to undergo biopsy is a procedure requirement, not a typed check."
+    },
+    {
+      "id": "NCT06171750-brain",
+      "polarity": "exclusion",
+      "sourceText": "known active central nervous system (CNS) metastases",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06171750-brain",
+      "polarity": "exclusion",
+      "sourceText": "known active central nervous system (CNS) metastases",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06171750-prior-il12",
+      "polarity": "exclusion",
+      "sourceText": "prior treatment with recombinant interleukin-12 (IL-12)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 3,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:untreated"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:recombinant interleukin-12 (il-12)"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 7,
+    "attempts": 2,
+    "ms": 30400
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 6805
+  },
+  "ms": 45176,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06171750",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06171750-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "≥ 18 years of age on day of signing informed consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06171750-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed Stage III or Stage IV NSCLC",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06171750-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status 0-1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06171750-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "known active central nervous system (CNS) metastases",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06171750-measurable",
+        "polarity": "inclusion",
+        "sourceText": "measurable disease per RECIST v1.1 - Note: Must have at least 1 tumor lesion with longest dimension of ≥ 10 mm...",
+        "reasonFuzzy": "Measurable disease by RECIST and lesion access requirements are subjective imaging and procedural judgments."
+      },
+      {
+        "id": "NCT06171750-life",
+        "polarity": "inclusion",
+        "sourceText": "life expectancy > 12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06171750-organ",
+        "polarity": "inclusion",
+        "sourceText": "adequate bone marrow, hepatic and renal function",
+        "reasonFuzzy": "Organ function is stated generally without specific numeric lab cutoffs in this clause."
+      },
+      {
+        "id": "NCT06171750-washout",
+        "polarity": "inclusion",
+        "sourceText": "last dose of previous anticancer therapy (including investigational agents) ≥ 28 days, radiotherapy ≥ 14 days..., or surgical intervention ≥ 21 days prior to the start of treatment",
+        "reasonFuzzy": "Washout windows for prior therapies are complex rules not covered by simple typed lab or biomarker checks."
+      },
+      {
+        "id": "NCT06171750-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "willing to provide pre- and post-treatment tumor biopsy samples if medically feasible",
+        "reasonFuzzy": "Willingness to undergo a biopsy is a subjective procedural requirement."
+      },
+      {
+        "id": "NCT06171750-prior-il12",
+        "polarity": "exclusion",
+        "sourceText": "prior treatment with recombinant interleukin-12 (IL-12)",
+        "reasonFuzzy": "Prior IL-12 is not an allowed prior_therapy_excluded drug name in the restricted list."
+      },
+      {
+        "id": "NCT06171750-cemiplimab-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Part 3 only: hypersensitivity to cemiplimab or any of its excipients or contraindications to cemiplimab per approved local labeling",
+        "reasonFuzzy": "Cemiplimab hypersensitivity applies only to a specific study part and is not a generalized exclusion."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06171750",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06171750-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "≥ 18 years of age on day of signing informed consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06171750-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed Stage III or Stage IV NSCLC",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06171750-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status 0-1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06171750-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "known active central nervous system (CNS) metastases",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06171750-prior-il12",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "prior treatment with recombinant interleukin-12 (IL-12)",
+        "stringValue": "recombinant interleukin-12 (IL-12)"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06171750-measurable",
+        "polarity": "inclusion",
+        "sourceText": "measurable disease per RECIST v1.1 - Note: Must have at least 1 tumor lesion with longest dimension of ≥ 10 mm...",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06171750-life",
+        "polarity": "inclusion",
+        "sourceText": "life expectancy > 12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06171750-organ",
+        "polarity": "inclusion",
+        "sourceText": "adequate bone marrow, hepatic and renal function",
+        "reasonFuzzy": "Organ function is a general statement without specific numeric cutoffs in this clause."
+      },
+      {
+        "id": "NCT06171750-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "willing to provide pre- and post-treatment tumor biopsy samples if medically feasible",
+        "reasonFuzzy": "Willingness to undergo biopsy is a procedure requirement, not a typed check."
+      }
+    ]
+  }
+}

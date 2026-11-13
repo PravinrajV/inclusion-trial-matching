@@ -1,0 +1,338 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07349537",
+  "briefTitle": "Study of RMC-5127 in Patients With Advanced KRAS G12V-Mutant Solid Tumors",
+  "parsedAt": "2026-11-12T11:09:21.961Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07349537-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "At least 18 years old and has provided informed consent.",
+      "numberValue": 18,
+      "evidence_quote": "At least 18 years old and has provided informed consent.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07349537-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07349537-stage",
+      "polarity": "inclusion",
+      "sourceText": "locally advanced or metastatic KRAS G12V-mutated solid tumor malignancy",
+      "reasonFuzzy": "Locally advanced or metastatic solid tumor is specified rather than numbered stages."
+    },
+    {
+      "id": "NCT07349537-prior-standard",
+      "polarity": "inclusion",
+      "sourceText": "Received and progressed or been intolerant to prior standard therapy (including targeted therapy) appropriate for tumor type and stage.",
+      "reasonFuzzy": "Prior standard therapy requirements are generalized and do not specify a fixed count or precise line limit."
+    },
+    {
+      "id": "NCT07349537-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07349537-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function (bone marrow, liver, kidney, coagulation).",
+      "reasonFuzzy": "General organ function statement without specific numeric lab thresholds."
+    },
+    {
+      "id": "NCT07349537-cns",
+      "polarity": "exclusion",
+      "sourceText": "Primary central nervous system (CNS) tumors",
+      "reasonFuzzy": "Exclusion of primary CNS tumors is distinct from metastatic brain metastases checks."
+    },
+    {
+      "id": "NCT07349537-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery within 28 days prior to receiving study drug(s).",
+      "reasonFuzzy": "Washout window for major surgery is a procedure-related rule, not a simple lab cutoff."
+    },
+    {
+      "id": "NCT07349537-stage",
+      "polarity": "inclusion",
+      "sourceText": "locally advanced or metastatic KRAS G12V-mutated solid tumor malignancy.",
+      "reasonFuzzy": "The trial enrolls solid tumors broadly including NSCLC without a numeric stage list, and remains in scope."
+    },
+    {
+      "id": "NCT07349537-priorthx-std",
+      "polarity": "inclusion",
+      "sourceText": "Received and progressed or been intolerant to prior standard therapy (including targeted therapy) appropriate for tumor type and stage.",
+      "reasonFuzzy": "Prior therapy requirement is generalized based on tumor type and stage rather than a specific line number or named drug class."
+    },
+    {
+      "id": "NCT07349537-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07349537-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function (bone marrow, liver, kidney, coagulation).",
+      "reasonFuzzy": "Organ function is qualitative without explicit laboratory threshold cutoffs."
+    },
+    {
+      "id": "NCT07349537-cns",
+      "polarity": "exclusion",
+      "sourceText": "Primary central nervous system (CNS) tumors",
+      "reasonFuzzy": "Exclusion of primary CNS tumors is distinct from a brain metastasis status check."
+    },
+    {
+      "id": "NCT07349537-compliance",
+      "polarity": "exclusion",
+      "sourceText": "Patient is unable or unwilling to comply with protocol-required study visits or procedures.",
+      "reasonFuzzy": "Willingness and ability to comply is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07349537-kras",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically documented, locally advanced or metastatic KRAS G12V-mutated solid tumor malignancy.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07349537-kras-variant",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically documented, locally advanced or metastatic KRAS G12V-mutated solid tumor malignancy.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07349537-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Prior therapy with KRAS G12V inhibitor or direct RAS-targeted therapy (eg. degraders and/or inhibitors).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12v"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:kras g12v inhibitor"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 4582
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 6469
+  },
+  "ms": 19020,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07349537",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07349537-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "At least 18 years old and has provided informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07349537-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07349537-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically documented, locally advanced or metastatic KRAS G12V-mutated solid tumor malignancy.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07349537-kras-variant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically documented, locally advanced or metastatic KRAS G12V-mutated solid tumor malignancy.",
+        "stringValue": "G12V"
+      },
+      {
+        "id": "NCT07349537-prior-therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy with KRAS G12V inhibitor or direct RAS-targeted therapy (eg. degraders and/or inhibitors).",
+        "stringValue": "KRAS G12V inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07349537-stage",
+        "polarity": "inclusion",
+        "sourceText": "locally advanced or metastatic KRAS G12V-mutated solid tumor malignancy",
+        "reasonFuzzy": "Locally advanced or metastatic solid tumor is specified rather than numbered stages."
+      },
+      {
+        "id": "NCT07349537-prior-standard",
+        "polarity": "inclusion",
+        "sourceText": "Received and progressed or been intolerant to prior standard therapy (including targeted therapy) appropriate for tumor type and stage.",
+        "reasonFuzzy": "Prior standard therapy requirements are generalized and do not specify a fixed count or precise line limit."
+      },
+      {
+        "id": "NCT07349537-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07349537-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function (bone marrow, liver, kidney, coagulation).",
+        "reasonFuzzy": "General organ function statement without specific numeric lab thresholds."
+      },
+      {
+        "id": "NCT07349537-cns",
+        "polarity": "exclusion",
+        "sourceText": "Primary central nervous system (CNS) tumors",
+        "reasonFuzzy": "Exclusion of primary CNS tumors is distinct from metastatic brain metastases checks."
+      },
+      {
+        "id": "NCT07349537-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery within 28 days prior to receiving study drug(s).",
+        "reasonFuzzy": "Washout window for major surgery is a procedure-related rule, not a simple lab cutoff."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07349537",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07349537-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "At least 18 years old and has provided informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07349537-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07349537-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically documented, locally advanced or metastatic KRAS G12V-mutated solid tumor malignancy.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07349537-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically documented, locally advanced or metastatic KRAS G12V-mutated solid tumor malignancy.",
+        "stringValue": "G12V"
+      },
+      {
+        "id": "NCT07349537-priorthx",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy with KRAS G12V inhibitor or direct RAS-targeted therapy (eg. degraders and/or inhibitors).",
+        "stringValue": "KRAS G12V inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07349537-stage",
+        "polarity": "inclusion",
+        "sourceText": "locally advanced or metastatic KRAS G12V-mutated solid tumor malignancy.",
+        "reasonFuzzy": "The trial enrolls solid tumors broadly including NSCLC without a numeric stage list, and remains in scope."
+      },
+      {
+        "id": "NCT07349537-priorthx-std",
+        "polarity": "inclusion",
+        "sourceText": "Received and progressed or been intolerant to prior standard therapy (including targeted therapy) appropriate for tumor type and stage.",
+        "reasonFuzzy": "Prior therapy requirement is generalized based on tumor type and stage rather than a specific line number or named drug class."
+      },
+      {
+        "id": "NCT07349537-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07349537-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function (bone marrow, liver, kidney, coagulation).",
+        "reasonFuzzy": "Organ function is qualitative without explicit laboratory threshold cutoffs."
+      },
+      {
+        "id": "NCT07349537-cns",
+        "polarity": "exclusion",
+        "sourceText": "Primary central nervous system (CNS) tumors",
+        "reasonFuzzy": "Exclusion of primary CNS tumors is distinct from a brain metastasis status check."
+      },
+      {
+        "id": "NCT07349537-compliance",
+        "polarity": "exclusion",
+        "sourceText": "Patient is unable or unwilling to comply with protocol-required study visits or procedures.",
+        "reasonFuzzy": "Willingness and ability to comply is a subjective clinical judgment."
+      }
+    ]
+  }
+}

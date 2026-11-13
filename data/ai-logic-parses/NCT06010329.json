@@ -1,0 +1,305 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06010329",
+  "briefTitle": "A Study to Evaluate the Efficacy and Safety of Sutetinib Maleate Capsule in Locally Advanced or Metastatic NSCLC",
+  "parsedAt": "2026-11-12T05:49:23.644Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06010329-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age 18 years old and above, male or female",
+      "numberValue": 18,
+      "evidence_quote": "Age 18 years old and above, male or female",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06010329-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) score of 0, 1, or 2",
+      "numberValue": 2,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) score of 0, 1, or 2",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06010329-brain",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Active central nervous system metastases",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Active central nervous system metastases",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06010329-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histopathological and/or cytopathological confirmation of locally advanced or metastatic NSCLC",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope but does not provide a specific stage list for stage_in."
+    },
+    {
+      "id": "NCT06010329-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one measurable lesion",
+      "reasonFuzzy": "Measurable disease is a subjective imaging assessment, not a typed kind."
+    },
+    {
+      "id": "NCT06010329-life",
+      "polarity": "inclusion",
+      "sourceText": "A minimum life expectancy of > 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06010329-organs",
+      "polarity": "inclusion",
+      "sourceText": "Adequate bone marrow reserve, hepatic, renal, and coagulation function",
+      "reasonFuzzy": "General organ function without specific numeric lab cutoffs cannot be represented as typed lab checks."
+    },
+    {
+      "id": "NCT06010329-prior-tki",
+      "polarity": "exclusion",
+      "sourceText": "Participant ever used the epidermal growth factor receptor-tyrosine kinase inhibitor (EGFR TKI) for anti-tumor therapy prior to enrollment (Cohort 1), or second generation EGFR TKI (Cohort 2)",
+      "reasonFuzzy": "Prior EGFR TKI restrictions differ by cohort, making it not a simple universal typed prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT06010329-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histopathological and/or cytopathological confirmation of locally advanced or metastatic NSCLC",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC without a numbered stage list remains in scope, but cannot be mapped to stage_in."
+    },
+    {
+      "id": "NCT06010329-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one measurable lesion",
+      "reasonFuzzy": "Measurable disease is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06010329-life",
+      "polarity": "inclusion",
+      "sourceText": "A minimum life expectancy of > 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06010329-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate bone marrow reserve, hepatic, renal, and coagulation function",
+      "reasonFuzzy": "Broad organ function without specific numeric cutoffs cannot be represented by typed lab checks."
+    },
+    {
+      "id": "NCT06010329-prior-tki",
+      "polarity": "exclusion",
+      "sourceText": "Participant ever used the epidermal growth factor receptor-tyrosine kinase inhibitor (EGFR TKI) for anti-tumor therapy prior to enrollment (Cohort 1), or second generation EGFR TKI (Cohort 2)",
+      "reasonFuzzy": "Prior therapy exclusions differ by cohort, making it complex for a single prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT06010329-washout",
+      "polarity": "exclusion",
+      "sourceText": "Any systemic anti-tumor therapy such as chemotherapy and radiation therapy (including curative radiotherapy or spinal radiotherapy portion >30%) used within 3 weeks prior to enrollment; immunotherapy within 4 weeks; any palliative radiotherapy for non-target lesions used to relieve symptoms and traditional Chinese medicines indicated for the tumor within 2 weeks prior to enrollment; Cohort 2: any EGFR TKIs within 5 half-lives.",
+      "reasonFuzzy": "Multi-category washout windows with varying timeframes cannot be expressed using a single typed check."
+    },
+    {
+      "id": "NCT06010329-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Confirmation that the tumor harbors an uncommon epidermal growth factor receptor (EGFR) mutation (tumor tissue biopsy)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 2847
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2862
+  },
+  "ms": 13707,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06010329",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06010329-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 years old and above, male or female",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06010329-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Confirmation that the tumor harbors an uncommon epidermal growth factor receptor (EGFR) mutation (tumor tissue biopsy)",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06010329-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) score of 0, 1, or 2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06010329-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active central nervous system metastases",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06010329-stage",
+        "polarity": "inclusion",
+        "sourceText": "Histopathological and/or cytopathological confirmation of locally advanced or metastatic NSCLC",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope but does not provide a specific stage list for stage_in."
+      },
+      {
+        "id": "NCT06010329-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one measurable lesion",
+        "reasonFuzzy": "Measurable disease is a subjective imaging assessment, not a typed kind."
+      },
+      {
+        "id": "NCT06010329-life",
+        "polarity": "inclusion",
+        "sourceText": "A minimum life expectancy of > 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06010329-organs",
+        "polarity": "inclusion",
+        "sourceText": "Adequate bone marrow reserve, hepatic, renal, and coagulation function",
+        "reasonFuzzy": "General organ function without specific numeric lab cutoffs cannot be represented as typed lab checks."
+      },
+      {
+        "id": "NCT06010329-prior-tki",
+        "polarity": "exclusion",
+        "sourceText": "Participant ever used the epidermal growth factor receptor-tyrosine kinase inhibitor (EGFR TKI) for anti-tumor therapy prior to enrollment (Cohort 1), or second generation EGFR TKI (Cohort 2)",
+        "reasonFuzzy": "Prior EGFR TKI restrictions differ by cohort, making it not a simple universal typed prior_therapy_excluded check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06010329",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06010329-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 years old and above, male or female",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06010329-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Confirmation that the tumor harbors an uncommon epidermal growth factor receptor (EGFR) mutation (tumor tissue biopsy)",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06010329-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) score of 0, 1, or 2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06010329-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active central nervous system metastases",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06010329-stage",
+        "polarity": "inclusion",
+        "sourceText": "Histopathological and/or cytopathological confirmation of locally advanced or metastatic NSCLC",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC without a numbered stage list remains in scope, but cannot be mapped to stage_in."
+      },
+      {
+        "id": "NCT06010329-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one measurable lesion",
+        "reasonFuzzy": "Measurable disease is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06010329-life",
+        "polarity": "inclusion",
+        "sourceText": "A minimum life expectancy of > 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06010329-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate bone marrow reserve, hepatic, renal, and coagulation function",
+        "reasonFuzzy": "Broad organ function without specific numeric cutoffs cannot be represented by typed lab checks."
+      },
+      {
+        "id": "NCT06010329-prior-tki",
+        "polarity": "exclusion",
+        "sourceText": "Participant ever used the epidermal growth factor receptor-tyrosine kinase inhibitor (EGFR TKI) for anti-tumor therapy prior to enrollment (Cohort 1), or second generation EGFR TKI (Cohort 2)",
+        "reasonFuzzy": "Prior therapy exclusions differ by cohort, making it complex for a single prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT06010329-washout",
+        "polarity": "exclusion",
+        "sourceText": "Any systemic anti-tumor therapy such as chemotherapy and radiation therapy (including curative radiotherapy or spinal radiotherapy portion >30%) used within 3 weeks prior to enrollment; immunotherapy within 4 weeks; any palliative radiotherapy for non-target lesions used to relieve symptoms and traditional Chinese medicines indicated for the tumor within 2 weeks prior to enrollment; Cohort 2: any EGFR TKIs within 5 half-lives.",
+        "reasonFuzzy": "Multi-category washout windows with varying timeframes cannot be expressed using a single typed check."
+      }
+    ]
+  }
+}

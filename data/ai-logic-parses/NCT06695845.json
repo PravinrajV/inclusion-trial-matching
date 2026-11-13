@@ -1,0 +1,435 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06695845",
+  "briefTitle": "A Phase 2 Study of Zanidatamab in Patients With HER2-expressing Tumors",
+  "parsedAt": "2026-11-12T10:32:04.725Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06695845-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Is at least 18 years of age inclusive at the time of signing the informed consent",
+      "numberValue": 18,
+      "evidence_quote": "Is at least 18 years of age inclusive at the time of signing the informed consent",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06695845-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Has Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Has Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06695845-brain-excl",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Has known or suspected leptomeningeal disease and/or untreated brain metastasis.",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Has known or suspected leptomeningeal disease and/or untreated brain metastasis.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06695845-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Participants with locally advanced, unresectable, or metastatic solid tumors... who have progressed following at least 1 prior systemic treatment for metastatic or advanced disease and have no available treatment options that have confirmed benefit. Prior treatment with HER2-targeted therapy is not permitted (Cohort 1 only). For participants with breast cancer (Cohort 2) or GEA (Cohort 3), prior HER2-targeted therapy is permitted and prior therapy with trastuzumab deruxtecan (T-DXd) is required.",
+      "reasonFuzzy": "Prior therapy requirements and exclusions differ by cohort, making it impossible to express as a single typed check."
+    },
+    {
+      "id": "NCT06695845-her2",
+      "polarity": "inclusion",
+      "sourceText": "HER2 overexpression (IHC 3+) must be determined by a sponsor designated central laboratory.",
+      "reasonFuzzy": "There is no typed kind for HER2 overexpression."
+    },
+    {
+      "id": "NCT06695845-tumor-sample",
+      "polarity": "inclusion",
+      "sourceText": "All participants must have adequate tumor sample for submission to allow central HER2 testing.",
+      "reasonFuzzy": "Tissue submission requirement is not a typed check."
+    },
+    {
+      "id": "NCT06695845-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Presence of at least 1 measurable lesion as assessed by Independent Central Review (ICR) based on Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06695845-life",
+      "polarity": "inclusion",
+      "sourceText": "Has a life expectancy of at least 3 months, in the opinion of the investigator.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06695845-kras-excl",
+      "polarity": "exclusion",
+      "sourceText": "Colorectal Cancer (CRC) participants with known KRAS/NRAS and BRAF mutations.",
+      "reasonFuzzy": "This exclusion applies specifically to Colorectal Cancer and includes NRAS which lacks a typed kind."
+    },
+    {
+      "id": "NCT06695845-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Participants with locally advanced, unresectable, or metastatic solid tumors (except Biliary Tract Cancer (BTC), defined as gallbladder cancer or cholangiocarcinoma) who have progressed following at least 1 prior systemic treatment for metastatic or advanced disease and have no available treatment options that have confirmed benefit. Prior treatment with HER2-targeted therapy is not permitted (Cohort 1 only). For participants with breast cancer (Cohort 2) or GEA (Cohort 3), prior HER2-targeted therapy is permitted and prior therapy with trastuzumab deruxtecan (T-DXd) is required.",
+      "reasonFuzzy": "Prior therapy requirements and exclusions differ by specific cancer cohort."
+    },
+    {
+      "id": "NCT06695845-her2",
+      "polarity": "inclusion",
+      "sourceText": "HER2 overexpression (IHC 3+) must be determined by a sponsor designated central laboratory.",
+      "reasonFuzzy": "There is no typed kind for HER2 overexpression."
+    },
+    {
+      "id": "NCT06695845-tumor-sample",
+      "polarity": "inclusion",
+      "sourceText": "All participants must have adequate tumor sample for submission to allow central HER2 testing.",
+      "reasonFuzzy": "Tissue submission requirement is not a standard typed check."
+    },
+    {
+      "id": "NCT06695845-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Presence of at least 1 measurable lesion as assessed by Independent Central Review (ICR) based on Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06695845-life",
+      "polarity": "inclusion",
+      "sourceText": "Has a life expectancy of at least 3 months, in the opinion of the investigator.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06695845-washout",
+      "polarity": "exclusion",
+      "sourceText": "Was treated with systemic antineoplastic therapy, including hormonal therapies for breast cancer, or any investigational therapy within 4 weeks or 5 half-lives (whichever is longer) prior to Cycle 1 Day 1.",
+      "reasonFuzzy": "Washout window depends on half-lives and multiple therapy types, not a simple lab cutoff."
+    },
+    {
+      "id": "NCT06695845-kras",
+      "polarity": "exclusion",
+      "sourceText": "Colorectal Cancer (CRC) participants with known KRAS/NRAS and BRAF mutations.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06695845-braf",
+      "polarity": "exclusion",
+      "sourceText": "Colorectal Cancer (CRC) participants with known KRAS/NRAS and BRAF mutations.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06695845-brain",
+      "polarity": "inclusion",
+      "sourceText": "Participants with history of treated and stable CNS metastases are eligible",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06695845-alk-excl",
+      "polarity": "exclusion",
+      "sourceText": "Non-Small Cell Lung Cancer (NSCLC) participants with known ALK, EGFR mutations and ROS1 fusion.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06695845-egfr-excl",
+      "polarity": "exclusion",
+      "sourceText": "Non-Small Cell Lung Cancer (NSCLC) participants with known ALK, EGFR mutations and ROS1 fusion.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06695845-ros1-excl",
+      "polarity": "exclusion",
+      "sourceText": "Non-Small Cell Lung Cancer (NSCLC) participants with known ALK, EGFR mutations and ROS1 fusion.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 7,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 9,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 7,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "kras_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "b-only",
+          "kind": "braf_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "ros1_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 6,
+    "attempts": 2,
+    "ms": 12243
+  },
+  "runB": {
+    "typedEmitted": 9,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 5585
+  },
+  "ms": 25836,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06695845",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06695845-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Is at least 18 years of age inclusive at the time of signing the informed consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06695845-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06695845-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Participants with history of treated and stable CNS metastases are eligible",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06695845-brain-excl",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known or suspected leptomeningeal disease and/or untreated brain metastasis.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      },
+      {
+        "id": "NCT06695845-alk-excl",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Non-Small Cell Lung Cancer (NSCLC) participants with known ALK, EGFR mutations and ROS1 fusion.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06695845-egfr-excl",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Non-Small Cell Lung Cancer (NSCLC) participants with known ALK, EGFR mutations and ROS1 fusion.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06695845-ros1-excl",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Non-Small Cell Lung Cancer (NSCLC) participants with known ALK, EGFR mutations and ROS1 fusion.",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06695845-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Participants with locally advanced, unresectable, or metastatic solid tumors... who have progressed following at least 1 prior systemic treatment for metastatic or advanced disease and have no available treatment options that have confirmed benefit. Prior treatment with HER2-targeted therapy is not permitted (Cohort 1 only). For participants with breast cancer (Cohort 2) or GEA (Cohort 3), prior HER2-targeted therapy is permitted and prior therapy with trastuzumab deruxtecan (T-DXd) is required.",
+        "reasonFuzzy": "Prior therapy requirements and exclusions differ by cohort, making it impossible to express as a single typed check."
+      },
+      {
+        "id": "NCT06695845-her2",
+        "polarity": "inclusion",
+        "sourceText": "HER2 overexpression (IHC 3+) must be determined by a sponsor designated central laboratory.",
+        "reasonFuzzy": "There is no typed kind for HER2 overexpression."
+      },
+      {
+        "id": "NCT06695845-tumor-sample",
+        "polarity": "inclusion",
+        "sourceText": "All participants must have adequate tumor sample for submission to allow central HER2 testing.",
+        "reasonFuzzy": "Tissue submission requirement is not a typed check."
+      },
+      {
+        "id": "NCT06695845-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Presence of at least 1 measurable lesion as assessed by Independent Central Review (ICR) based on Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06695845-life",
+        "polarity": "inclusion",
+        "sourceText": "Has a life expectancy of at least 3 months, in the opinion of the investigator.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06695845-kras-excl",
+        "polarity": "exclusion",
+        "sourceText": "Colorectal Cancer (CRC) participants with known KRAS/NRAS and BRAF mutations.",
+        "reasonFuzzy": "This exclusion applies specifically to Colorectal Cancer and includes NRAS which lacks a typed kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06695845",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06695845-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Is at least 18 years of age inclusive at the time of signing the informed consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06695845-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06695845-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Participants with history of treated and stable CNS metastases are eligible",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06695845-brain-excl",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known or suspected leptomeningeal disease and/or untreated brain metastasis.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      },
+      {
+        "id": "NCT06695845-kras",
+        "kind": "kras_status",
+        "polarity": "exclusion",
+        "sourceText": "Colorectal Cancer (CRC) participants with known KRAS/NRAS and BRAF mutations.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06695845-braf",
+        "kind": "braf_status",
+        "polarity": "exclusion",
+        "sourceText": "Colorectal Cancer (CRC) participants with known KRAS/NRAS and BRAF mutations.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06695845-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Non-Small Cell Lung Cancer (NSCLC) participants with known ALK, EGFR mutations and ROS1 fusion.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06695845-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Non-Small Cell Lung Cancer (NSCLC) participants with known ALK, EGFR mutations and ROS1 fusion.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06695845-ros1",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Non-Small Cell Lung Cancer (NSCLC) participants with known ALK, EGFR mutations and ROS1 fusion.",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06695845-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Participants with locally advanced, unresectable, or metastatic solid tumors (except Biliary Tract Cancer (BTC), defined as gallbladder cancer or cholangiocarcinoma) who have progressed following at least 1 prior systemic treatment for metastatic or advanced disease and have no available treatment options that have confirmed benefit. Prior treatment with HER2-targeted therapy is not permitted (Cohort 1 only). For participants with breast cancer (Cohort 2) or GEA (Cohort 3), prior HER2-targeted therapy is permitted and prior therapy with trastuzumab deruxtecan (T-DXd) is required.",
+        "reasonFuzzy": "Prior therapy requirements and exclusions differ by specific cancer cohort."
+      },
+      {
+        "id": "NCT06695845-her2",
+        "polarity": "inclusion",
+        "sourceText": "HER2 overexpression (IHC 3+) must be determined by a sponsor designated central laboratory.",
+        "reasonFuzzy": "There is no typed kind for HER2 overexpression."
+      },
+      {
+        "id": "NCT06695845-tumor-sample",
+        "polarity": "inclusion",
+        "sourceText": "All participants must have adequate tumor sample for submission to allow central HER2 testing.",
+        "reasonFuzzy": "Tissue submission requirement is not a standard typed check."
+      },
+      {
+        "id": "NCT06695845-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Presence of at least 1 measurable lesion as assessed by Independent Central Review (ICR) based on Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06695845-life",
+        "polarity": "inclusion",
+        "sourceText": "Has a life expectancy of at least 3 months, in the opinion of the investigator.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06695845-washout",
+        "polarity": "exclusion",
+        "sourceText": "Was treated with systemic antineoplastic therapy, including hormonal therapies for breast cancer, or any investigational therapy within 4 weeks or 5 half-lives (whichever is longer) prior to Cycle 1 Day 1.",
+        "reasonFuzzy": "Washout window depends on half-lives and multiple therapy types, not a simple lab cutoff."
+      }
+    ]
+  }
+}

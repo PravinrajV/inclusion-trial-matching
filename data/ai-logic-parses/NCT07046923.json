@@ -1,0 +1,301 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07046923",
+  "briefTitle": "A Study of LY4175408 in Participants With Advanced Cancer",
+  "parsedAt": "2026-11-12T10:43:37.391Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07046923-cancer",
+      "polarity": "inclusion",
+      "sourceText": "Have one of the following advanced or metastatic solid tumor cancers: Non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "The study enrolls multiple cancer types and uses broad advanced/metastatic wording without a detailed numbered stage list."
+    },
+    {
+      "id": "NCT07046923-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Received all standard therapies for which the individual was deemed to be an appropriate candidate by the treating investigator (except in Cohort B1 and B2 expansion, which require participants who are treatment naive in the advanced metastatic setting); OR the individual is refusing the remaining most appropriate standard of care treatment; OR there is no standard therapy available for the disease.",
+      "reasonFuzzy": "Prior therapy requirement involves investigator discretion and varies by cohort."
+    },
+    {
+      "id": "NCT07046923-measurable",
+      "polarity": "inclusion",
+      "sourceText": "For dose optimization/dose and expansion cohorts (Cohort A2, Cohort B/C): Measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07046923-cohort-b1-b2",
+      "polarity": "inclusion",
+      "sourceText": "Cohorts B1/B2: NSCLC with no known actionable genomic alterations. ≤2 prior lines of systemic therapy for advanced or metastatic disease in safety lead-in; no prior systemic therapy in expansion",
+      "reasonFuzzy": "Genomic alteration rules and prior line limits vary by specific study cohorts."
+    },
+    {
+      "id": "NCT07046923-ptk7-excl",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with a protein tyrosine kinase 7 (PTK7) antibody-drug conjugate (ADC) with a topoisomerase I inhibitor as payload (prior therapy with a PTK7 ADC with a non-topoisomerase I inhibitor payload OR non-PTK7 ADC with any payload is permitted). Prior topoisomerase I-based ADCs are not allowed in cohorts A2, B1 or B2.",
+      "reasonFuzzy": "Complex prior ADC and payload exclusions that vary by cohort cannot be expressed with simple typed prior therapy checks."
+    },
+    {
+      "id": "NCT07046923-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07046923-cancer",
+      "polarity": "inclusion",
+      "sourceText": "Non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "Broad tumor type inclusion across multiple indications without specific stage requirement lists."
+    },
+    {
+      "id": "NCT07046923-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Received all standard therapies for which the individual was deemed to be an appropriate candidate by the treating investigator (except in Cohort B1 and B2 expansion, which require participants who are treatment naive in the advanced metastatic setting); OR the individual is refusing the remaining most appropriate standard of care treatment; OR there is no standard therapy available for the disease.",
+      "reasonFuzzy": "Complex investigator discretion and cohort-dependent prior therapy requirements."
+    },
+    {
+      "id": "NCT07046923-measurable",
+      "polarity": "inclusion",
+      "sourceText": "For dose optimization/dose and expansion cohorts (Cohort A2, Cohort B/C): Measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07046923-genomic",
+      "polarity": "inclusion",
+      "sourceText": "Cohorts B1/B2: NSCLC with no known actionable genomic alterations. ≤2 prior lines of systemic therapy for advanced or metastatic disease in safety lead-in; no prior systemic therapy in expansion",
+      "reasonFuzzy": "Cohort-specific genomic alteration and prior line requirements."
+    },
+    {
+      "id": "NCT07046923-ptk7",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with a protein tyrosine kinase 7 (PTK7) antibody-drug conjugate (ADC) with a topoisomerase I inhibitor as payload (prior therapy with a PTK7 ADC with a non-topoisomerase I inhibitor payload OR non-PTK7 ADC with any payload is permitted). Prior topoisomerase I-based ADCs are not allowed in cohorts A2, B1 or B2.",
+      "reasonFuzzy": "Specific payload and cohort-dependent prior ADC exclusions cannot be captured by a simple prior_therapy_excluded rule."
+    },
+    {
+      "id": "NCT07046923-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge\": \"18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07046923-brain",
+      "polarity": "exclusion",
+      "sourceText": "Individual with known or suspected history of uncontrolled central nervous system (CNS) metastases.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07046923-brain",
+      "polarity": "exclusion",
+      "sourceText": "Individual with known or suspected history of uncontrolled central nervous system (CNS) metastases.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07046923-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of greater than or equal to (≤) 1.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge\": \"18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:untreated"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 6401
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 6727
+  },
+  "ms": 21108,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07046923",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07046923-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07046923-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of greater than or equal to (≤) 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07046923-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Individual with known or suspected history of uncontrolled central nervous system (CNS) metastases.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07046923-cancer",
+        "polarity": "inclusion",
+        "sourceText": "Have one of the following advanced or metastatic solid tumor cancers: Non-small cell lung cancer (NSCLC)",
+        "reasonFuzzy": "The study enrolls multiple cancer types and uses broad advanced/metastatic wording without a detailed numbered stage list."
+      },
+      {
+        "id": "NCT07046923-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Received all standard therapies for which the individual was deemed to be an appropriate candidate by the treating investigator (except in Cohort B1 and B2 expansion, which require participants who are treatment naive in the advanced metastatic setting); OR the individual is refusing the remaining most appropriate standard of care treatment; OR there is no standard therapy available for the disease.",
+        "reasonFuzzy": "Prior therapy requirement involves investigator discretion and varies by cohort."
+      },
+      {
+        "id": "NCT07046923-measurable",
+        "polarity": "inclusion",
+        "sourceText": "For dose optimization/dose and expansion cohorts (Cohort A2, Cohort B/C): Measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07046923-cohort-b1-b2",
+        "polarity": "inclusion",
+        "sourceText": "Cohorts B1/B2: NSCLC with no known actionable genomic alterations. ≤2 prior lines of systemic therapy for advanced or metastatic disease in safety lead-in; no prior systemic therapy in expansion",
+        "reasonFuzzy": "Genomic alteration rules and prior line limits vary by specific study cohorts."
+      },
+      {
+        "id": "NCT07046923-ptk7-excl",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a protein tyrosine kinase 7 (PTK7) antibody-drug conjugate (ADC) with a topoisomerase I inhibitor as payload (prior therapy with a PTK7 ADC with a non-topoisomerase I inhibitor payload OR non-PTK7 ADC with any payload is permitted). Prior topoisomerase I-based ADCs are not allowed in cohorts A2, B1 or B2.",
+        "reasonFuzzy": "Complex prior ADC and payload exclusions that vary by cohort cannot be expressed with simple typed prior therapy checks."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07046923",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07046923-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge\": \"18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07046923-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of greater than or equal to (≤) 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07046923-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Individual with known or suspected history of uncontrolled central nervous system (CNS) metastases.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07046923-cancer",
+        "polarity": "inclusion",
+        "sourceText": "Non-small cell lung cancer (NSCLC)",
+        "reasonFuzzy": "Broad tumor type inclusion across multiple indications without specific stage requirement lists."
+      },
+      {
+        "id": "NCT07046923-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Received all standard therapies for which the individual was deemed to be an appropriate candidate by the treating investigator (except in Cohort B1 and B2 expansion, which require participants who are treatment naive in the advanced metastatic setting); OR the individual is refusing the remaining most appropriate standard of care treatment; OR there is no standard therapy available for the disease.",
+        "reasonFuzzy": "Complex investigator discretion and cohort-dependent prior therapy requirements."
+      },
+      {
+        "id": "NCT07046923-measurable",
+        "polarity": "inclusion",
+        "sourceText": "For dose optimization/dose and expansion cohorts (Cohort A2, Cohort B/C): Measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07046923-genomic",
+        "polarity": "inclusion",
+        "sourceText": "Cohorts B1/B2: NSCLC with no known actionable genomic alterations. ≤2 prior lines of systemic therapy for advanced or metastatic disease in safety lead-in; no prior systemic therapy in expansion",
+        "reasonFuzzy": "Cohort-specific genomic alteration and prior line requirements."
+      },
+      {
+        "id": "NCT07046923-ptk7",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a protein tyrosine kinase 7 (PTK7) antibody-drug conjugate (ADC) with a topoisomerase I inhibitor as payload (prior therapy with a PTK7 ADC with a non-topoisomerase I inhibitor payload OR non-PTK7 ADC with any payload is permitted). Prior topoisomerase I-based ADCs are not allowed in cohorts A2, B1 or B2.",
+        "reasonFuzzy": "Specific payload and cohort-dependent prior ADC exclusions cannot be captured by a simple prior_therapy_excluded rule."
+      }
+    ]
+  }
+}

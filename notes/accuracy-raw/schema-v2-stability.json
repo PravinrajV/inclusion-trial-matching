@@ -1,0 +1,291 @@
+{
+  "comparedAt": "2026-11-12T02:06:46.453Z",
+  "promptVersion": "2",
+  "runA": {
+    "runId": "a",
+    "ranAt": "2026-11-12T02:05:07.770Z",
+    "typedHits": 15,
+    "typedTotal": 24,
+    "fuzzyHits": 2,
+    "fuzzyTotal": 2,
+    "hits": 17,
+    "total": 26
+  },
+  "runB": {
+    "runId": "b",
+    "ranAt": "2026-11-12T02:06:30.150Z",
+    "typedHits": 15,
+    "typedTotal": 24,
+    "fuzzyHits": 2,
+    "fuzzyTotal": 2,
+    "hits": 17,
+    "total": 26
+  },
+  "sameVerdict": 26,
+  "totalItems": 26,
+  "bothHit": 17,
+  "flipped": 0,
+  "verdictAgreementPercent": 100,
+  "itemAgreement": [
+    {
+      "id": "C01",
+      "kind": "age_min",
+      "nctId": "NCT03093116",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "kind, polarity, and value matched",
+      "detailB": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C02",
+      "kind": "ecog_max",
+      "nctId": "NCT03093116",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "kind, polarity, and value matched",
+      "detailB": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C03",
+      "kind": "ecog_max",
+      "nctId": "NCT04181060",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "kind, polarity, and value matched",
+      "detailB": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C04",
+      "kind": "histology_in",
+      "nctId": "NCT04181060",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "kind, polarity, and value matched",
+      "detailB": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C05",
+      "kind": "stage_in",
+      "nctId": "NCT03191149",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "kind, polarity, and value matched",
+      "detailB": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C06",
+      "kind": "stage_in",
+      "nctId": "NCT03851445",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "kind, polarity, and value matched",
+      "detailB": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C07",
+      "kind": "egfr_variant_in",
+      "nctId": "NCT04181060",
+      "runA": "miss",
+      "runB": "miss",
+      "agree": true,
+      "detailA": "no typed check with same kind and polarity (emitted: histology_in/inclusion, stage_in/inclusion, egfr_status/inclusion, prior_therapy_excluded/exclusion, age_min/inclusion, ecog_max/inclusion, anc_min/inclusion, platelets_min/inclusion, hemoglobin_min/inclusion, bilirubin_max/inclusion, creatinine_max/inclusion, ast_max/inclusion, alt_max/inclusion, brain_mets/inclusion)",
+      "detailB": "no typed check with same kind and polarity (emitted: histology_in/inclusion, stage_in/inclusion, egfr_status/inclusion, prior_therapy_excluded/exclusion, age_min/inclusion, ecog_max/inclusion, anc_min/inclusion, platelets_min/inclusion, hemoglobin_min/inclusion, bilirubin_max/inclusion, creatinine_max/inclusion, ast_max/inclusion, alt_max/inclusion, brain_mets/inclusion)"
+    },
+    {
+      "id": "C08",
+      "kind": "egfr_variant_in",
+      "nctId": "NCT03191149",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "kind, polarity, and value matched",
+      "detailB": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C09",
+      "kind": "egfr_status",
+      "nctId": "NCT04198766",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "kind, polarity, and value matched",
+      "detailB": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C10",
+      "kind": "alk_status",
+      "nctId": "NCT04198766",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "kind, polarity, and value matched",
+      "detailB": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C11",
+      "kind": "egfr_status",
+      "nctId": "NCT03851445",
+      "runA": "miss",
+      "runB": "miss",
+      "agree": true,
+      "detailA": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, age_min/inclusion)",
+      "detailB": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, age_min/inclusion)"
+    },
+    {
+      "id": "C12",
+      "kind": "alk_status",
+      "nctId": "NCT03851445",
+      "runA": "miss",
+      "runB": "miss",
+      "agree": true,
+      "detailA": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, age_min/inclusion)",
+      "detailB": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, age_min/inclusion)"
+    },
+    {
+      "id": "C13",
+      "kind": "kras_variant_in",
+      "nctId": "NCT04613596",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "kind, polarity, and value matched",
+      "detailB": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C14",
+      "kind": "alk_status",
+      "nctId": "NCT03093116",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "kind, polarity, and value matched",
+      "detailB": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C15",
+      "kind": "prior_lines_max",
+      "nctId": "NCT04181060",
+      "runA": "miss",
+      "runB": "miss",
+      "agree": true,
+      "detailA": "no typed check with same kind and polarity (emitted: histology_in/inclusion, stage_in/inclusion, egfr_status/inclusion, prior_therapy_excluded/exclusion, age_min/inclusion, ecog_max/inclusion, anc_min/inclusion, platelets_min/inclusion, hemoglobin_min/inclusion, bilirubin_max/inclusion, creatinine_max/inclusion, ast_max/inclusion, alt_max/inclusion, brain_mets/inclusion)",
+      "detailB": "no typed check with same kind and polarity (emitted: histology_in/inclusion, stage_in/inclusion, egfr_status/inclusion, prior_therapy_excluded/exclusion, age_min/inclusion, ecog_max/inclusion, anc_min/inclusion, platelets_min/inclusion, hemoglobin_min/inclusion, bilirubin_max/inclusion, creatinine_max/inclusion, ast_max/inclusion, alt_max/inclusion, brain_mets/inclusion)"
+    },
+    {
+      "id": "C16",
+      "kind": "prior_therapy_excluded",
+      "nctId": "NCT04181060",
+      "runA": "miss",
+      "runB": "miss",
+      "agree": true,
+      "detailA": "kind and polarity matched, value did not (emitted {\"stringValue\":\"anti-VEGF agent\"})",
+      "detailB": "kind and polarity matched, value did not (emitted {\"stringValue\":\"anti-VEGF agent\"})"
+    },
+    {
+      "id": "C17",
+      "kind": "prior_lines_min",
+      "nctId": "NCT03851445",
+      "runA": "miss",
+      "runB": "miss",
+      "agree": true,
+      "detailA": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, age_min/inclusion)",
+      "detailB": "no typed check with same kind and polarity (emitted: stage_in/inclusion, ecog_max/inclusion, age_min/inclusion)"
+    },
+    {
+      "id": "C18",
+      "kind": "brain_mets",
+      "nctId": "NCT04165070",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "kind, polarity, and value matched",
+      "detailB": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C19",
+      "kind": "brain_mets",
+      "nctId": "NCT06561386",
+      "runA": "miss",
+      "runB": "miss",
+      "agree": true,
+      "detailA": "no typed check with same kind and polarity (emitted: stage_in/inclusion, histology_in/inclusion, pdl1_min/inclusion, ecog_max/inclusion, egfr_status/exclusion, alk_status/exclusion, ros1_status/exclusion, braf_status/exclusion, brain_mets/exclusion)",
+      "detailB": "no typed check with same kind and polarity (emitted: stage_in/inclusion, histology_in/inclusion, pdl1_min/inclusion, ecog_max/inclusion, egfr_status/exclusion, alk_status/exclusion, ros1_status/exclusion, braf_status/exclusion, brain_mets/exclusion, prior_therapy_excluded/exclusion, prior_therapy_excluded/exclusion, prior_therapy_excluded/exclusion, prior_therapy_excluded/exclusion)"
+    },
+    {
+      "id": "C20",
+      "kind": "egfr_min",
+      "nctId": "NCT01720836",
+      "runA": "miss",
+      "runB": "miss",
+      "agree": true,
+      "detailA": "no typed check with same kind and polarity (emitted: stage_in/inclusion, age_min/inclusion, ecog_max/inclusion, anc_min/inclusion, hemoglobin_min/inclusion, platelets_min/inclusion)",
+      "detailB": "no typed check with same kind and polarity (emitted: stage_in/inclusion, age_min/inclusion, ecog_max/inclusion, anc_min/inclusion, hemoglobin_min/inclusion, platelets_min/inclusion, bilirubin_max/inclusion, prior_therapy_excluded/exclusion)"
+    },
+    {
+      "id": "C21",
+      "kind": "egfr_min",
+      "nctId": "NCT03093116",
+      "runA": "miss",
+      "runB": "miss",
+      "agree": true,
+      "detailA": "no typed check with same kind and polarity (emitted: stage_in/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, age_min/inclusion, age_min/inclusion, brain_mets/inclusion, anc_min/inclusion, platelets_min/inclusion, hemoglobin_min/inclusion, bilirubin_max/inclusion, ast_max/inclusion, alt_max/inclusion, brain_mets/exclusion)",
+      "detailB": "no typed check with same kind and polarity (emitted: stage_in/inclusion, alk_status/inclusion, ros1_status/inclusion, ecog_max/inclusion, age_min/inclusion, brain_mets/inclusion, anc_min/inclusion, platelets_min/inclusion, hemoglobin_min/inclusion, bilirubin_max/inclusion, brain_mets/exclusion, age_min/inclusion)"
+    },
+    {
+      "id": "C22",
+      "kind": "hemoglobin_min",
+      "nctId": "NCT03093116",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "kind, polarity, and value matched",
+      "detailB": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C23",
+      "kind": "platelets_min",
+      "nctId": "NCT01720836",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "kind, polarity, and value matched",
+      "detailB": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C24",
+      "kind": "anc_min",
+      "nctId": "NCT01720836",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "kind, polarity, and value matched",
+      "detailB": "kind, polarity, and value matched"
+    },
+    {
+      "id": "C25",
+      "kind": "fuzzy",
+      "nctId": "NCT04181060",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "left fuzzy",
+      "detailB": "left fuzzy"
+    },
+    {
+      "id": "C26",
+      "kind": "fuzzy",
+      "nctId": "NCT06561386",
+      "runA": "hit",
+      "runB": "hit",
+      "agree": true,
+      "detailA": "left fuzzy",
+      "detailB": "left fuzzy"
+    }
+  ]
+}

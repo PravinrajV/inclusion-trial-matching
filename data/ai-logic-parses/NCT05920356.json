@@ -1,0 +1,394 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05920356",
+  "briefTitle": "A Study Evaluating Sotorasib Platinum Doublet Combination Versus Pembrolizumab Platinum Doublet Combination as a Front-Line Therapy in Participants With Stage IV or Advanced Stage IIIB/C Nonsquamous Non-Small Cell Lung Cancers (CodeBreaK 202)",
+  "parsedAt": "2026-11-12T05:49:09.933Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05920356-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of nonsquamous stage IV or advanced Stage IIIB or IIIC NSCLC with KRAS p. G12C mutation and negative for PD-L1 expression by central testing or local laboratory testing confirmed through central testing",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Histologically or cytologically confirmed diagnosis of nonsquamous stage IV or advanced Stage IIIB or IIIC NSCLC with KRAS p. G12C mutation and negative for PD-L1 expression by central testing or local laboratory testing confirmed through central testing",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05920356-mixedhistology",
+      "polarity": "exclusion",
+      "sourceText": "Mixed histology NSCLC with either small-cell or large-cell neuroendocrine cell component or predominant squamous cell histology",
+      "reasonFuzzy": "Exclusion involves mixed and component histologies that do not map directly to simple categorical inclusion/exclusion lists."
+    },
+    {
+      "id": "NCT05920356-targetedtherapy",
+      "polarity": "exclusion",
+      "sourceText": "Participants with tumors known to harbor molecular alterations for which targeted therapy is locally approved as a front-line therapy",
+      "reasonFuzzy": "Rule depends on local regulatory approvals for targeted therapies, which is not a static typed check."
+    },
+    {
+      "id": "NCT05920356-brainmets",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic (treated or untreated) brain metastases",
+      "reasonFuzzy": "Symptomatic CNS disease status is not a clean typed brain_mets restriction of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT05920356-agemin",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05920356-agemax",
+      "polarity": "inclusion",
+      "sourceText": "Maximum Age: 100 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05920356-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic (treated or untreated) brain metastases",
+      "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT05920356-age-min",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05920356-age-max",
+      "polarity": "inclusion",
+      "sourceText": "Maximum Age: 100 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05920356-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of nonsquamous stage IV or advanced Stage IIIB or IIIC NSCLC with KRAS p. G12C mutation and negative for PD-L1 expression by central testing or local laboratory testing confirmed through central testing",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05920356-kras",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of nonsquamous stage IV or advanced Stage IIIB or IIIC NSCLC with KRAS p. G12C mutation and negative for PD-L1 expression by central testing or local laboratory testing confirmed through central testing",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05920356-krasvariant",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of nonsquamous stage IV or advanced Stage IIIB or IIIC NSCLC with KRAS p. G12C mutation and negative for PD-L1 expression by central testing or local laboratory testing confirmed through central testing",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05920356-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed diagnosis of nonsquamous stage IV or advanced Stage IIIB or IIIC NSCLC with KRAS p. G12C mutation and negative for PD-L1 expression by central testing or local laboratory testing confirmed through central testing",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05920356-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) ≤ 1",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05920356-priotherapy",
+      "polarity": "exclusion",
+      "sourceText": "Prior therapy with a KRAS G12C inhibitor",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 7,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        },
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Maximum Age: 100 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 7,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        },
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Maximum Age: 100 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 7,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 6,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma"
+        },
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12c"
+        },
+        {
+          "kind": "pdl1_max",
+          "polarity": "inclusion",
+          "value": "n:0"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:kras g12c inhibitor"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 9,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3173
+  },
+  "runB": {
+    "typedEmitted": 9,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 2885
+  },
+  "ms": 14045,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05920356",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05920356-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of nonsquamous stage IV or advanced Stage IIIB or IIIC NSCLC with KRAS p. G12C mutation and negative for PD-L1 expression by central testing or local laboratory testing confirmed through central testing",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05920356-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of nonsquamous stage IV or advanced Stage IIIB or IIIC NSCLC with KRAS p. G12C mutation and negative for PD-L1 expression by central testing or local laboratory testing confirmed through central testing",
+        "histologies": [
+          "adenocarcinoma"
+        ]
+      },
+      {
+        "id": "NCT05920356-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of nonsquamous stage IV or advanced Stage IIIB or IIIC NSCLC with KRAS p. G12C mutation and negative for PD-L1 expression by central testing or local laboratory testing confirmed through central testing",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05920356-krasvariant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of nonsquamous stage IV or advanced Stage IIIB or IIIC NSCLC with KRAS p. G12C mutation and negative for PD-L1 expression by central testing or local laboratory testing confirmed through central testing",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT05920356-pdl1",
+        "kind": "pdl1_max",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of nonsquamous stage IV or advanced Stage IIIB or IIIC NSCLC with KRAS p. G12C mutation and negative for PD-L1 expression by central testing or local laboratory testing confirmed through central testing",
+        "numberValue": 0
+      },
+      {
+        "id": "NCT05920356-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) ≤ 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05920356-agemin",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05920356-agemax",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "Maximum Age: 100 Years",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT05920356-priotherapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy with a KRAS G12C inhibitor",
+        "stringValue": "KRAS G12C inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05920356-mixedhistology",
+        "polarity": "exclusion",
+        "sourceText": "Mixed histology NSCLC with either small-cell or large-cell neuroendocrine cell component or predominant squamous cell histology",
+        "reasonFuzzy": "Exclusion involves mixed and component histologies that do not map directly to simple categorical inclusion/exclusion lists."
+      },
+      {
+        "id": "NCT05920356-targetedtherapy",
+        "polarity": "exclusion",
+        "sourceText": "Participants with tumors known to harbor molecular alterations for which targeted therapy is locally approved as a front-line therapy",
+        "reasonFuzzy": "Rule depends on local regulatory approvals for targeted therapies, which is not a static typed check."
+      },
+      {
+        "id": "NCT05920356-brainmets",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic (treated or untreated) brain metastases",
+        "reasonFuzzy": "Symptomatic CNS disease status is not a clean typed brain_mets restriction of none, treated_stable, or untreated."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05920356",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05920356-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of nonsquamous stage IV or advanced Stage IIIB or IIIC NSCLC with KRAS p. G12C mutation and negative for PD-L1 expression by central testing or local laboratory testing confirmed through central testing",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05920356-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of nonsquamous stage IV or advanced Stage IIIB or IIIC NSCLC with KRAS p. G12C mutation and negative for PD-L1 expression by central testing or local laboratory testing confirmed through central testing",
+        "histologies": [
+          "adenocarcinoma"
+        ]
+      },
+      {
+        "id": "NCT05920356-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of nonsquamous stage IV or advanced Stage IIIB or IIIC NSCLC with KRAS p. G12C mutation and negative for PD-L1 expression by central testing or local laboratory testing confirmed through central testing",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05920356-kras-variant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of nonsquamous stage IV or advanced Stage IIIB or IIIC NSCLC with KRAS p. G12C mutation and negative for PD-L1 expression by central testing or local laboratory testing confirmed through central testing",
+        "stringValue": "p. G12C"
+      },
+      {
+        "id": "NCT05920356-pdl1",
+        "kind": "pdl1_max",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed diagnosis of nonsquamous stage IV or advanced Stage IIIB or IIIC NSCLC with KRAS p. G12C mutation and negative for PD-L1 expression by central testing or local laboratory testing confirmed through central testing",
+        "numberValue": 0
+      },
+      {
+        "id": "NCT05920356-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) ≤ 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05920356-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05920356-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "Maximum Age: 100 Years",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT05920356-prior-kras",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy with a KRAS G12C inhibitor",
+        "stringValue": "KRAS G12C inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05920356-brain",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic (treated or untreated) brain metastases",
+        "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      }
+    ]
+  }
+}

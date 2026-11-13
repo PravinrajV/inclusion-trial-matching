@@ -1,0 +1,211 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05935384",
+  "briefTitle": "SIBYL: obServation of Therapy Response With lIquid BiopsY evaLuation",
+  "parsedAt": "2026-11-12T06:20:43.761Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05935384-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥18 years old",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥18 years old",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05935384-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Cohort 1: Unresectable Stage III/IV NSCLC",
+      "stages": [
+        "IIIA",
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Cohort 1: Unresectable Stage III/IV NSCLC",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05935384-life",
+      "polarity": "exclusion",
+      "sourceText": "Life expectancy ≤12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05935384-blood",
+      "polarity": "inclusion",
+      "sourceText": "Are willing to provide blood samples at enrollment and at subsequent clinical visits",
+      "reasonFuzzy": "Willingness to provide blood samples is a procedure requirement, not a typed check."
+    },
+    {
+      "id": "NCT05935384-consent",
+      "polarity": "inclusion",
+      "sourceText": "Able to understand, and capable of providing written consent to participate in the study",
+      "reasonFuzzy": "Informed consent is a general administrative requirement, not a typed check."
+    },
+    {
+      "id": "NCT05935384-life",
+      "polarity": "exclusion",
+      "sourceText": "Life expectancy ≤12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05935384-consent",
+      "polarity": "inclusion",
+      "sourceText": "Able to understand, and capable of providing written consent to participate in the study",
+      "reasonFuzzy": "Willingness and ability to provide consent is a subjective judgment."
+    },
+    {
+      "id": "NCT05935384-blood",
+      "polarity": "inclusion",
+      "sourceText": "Are willing to provide blood samples at enrollment and at subsequent clinical visits",
+      "reasonFuzzy": "Willingness to undergo procedures or provide samples is a subjective requirement."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 3,
+    "attempts": 2,
+    "ms": 13724
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2562
+  },
+  "ms": 24195,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05935384",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05935384-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥18 years old",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05935384-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Cohort 1: Unresectable Stage III/IV NSCLC",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05935384-life",
+        "polarity": "exclusion",
+        "sourceText": "Life expectancy ≤12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05935384-blood",
+        "polarity": "inclusion",
+        "sourceText": "Are willing to provide blood samples at enrollment and at subsequent clinical visits",
+        "reasonFuzzy": "Willingness to provide blood samples is a procedure requirement, not a typed check."
+      },
+      {
+        "id": "NCT05935384-consent",
+        "polarity": "inclusion",
+        "sourceText": "Able to understand, and capable of providing written consent to participate in the study",
+        "reasonFuzzy": "Informed consent is a general administrative requirement, not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05935384",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05935384-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥18 years old",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05935384-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Cohort 1: Unresectable Stage III/IV NSCLC",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05935384-life",
+        "polarity": "exclusion",
+        "sourceText": "Life expectancy ≤12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05935384-consent",
+        "polarity": "inclusion",
+        "sourceText": "Able to understand, and capable of providing written consent to participate in the study",
+        "reasonFuzzy": "Willingness and ability to provide consent is a subjective judgment."
+      },
+      {
+        "id": "NCT05935384-blood",
+        "polarity": "inclusion",
+        "sourceText": "Are willing to provide blood samples at enrollment and at subsequent clinical visits",
+        "reasonFuzzy": "Willingness to undergo procedures or provide samples is a subjective requirement."
+      }
+    ]
+  }
+}

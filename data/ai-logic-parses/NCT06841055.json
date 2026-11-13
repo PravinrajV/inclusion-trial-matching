@@ -1,0 +1,439 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06841055",
+  "briefTitle": "Safety and Preliminary Efficacy of Pumitamig (BNT327), an Investigational Therapy for Patients With Non-small Cell Lung Cancer in Combination With Chemotherapy as First-line or Second-line Treatment",
+  "parsedAt": "2026-11-12T10:37:51.463Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06841055-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern cooperative oncology group performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern cooperative oncology group performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06841055-immunotherapy-details",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have received minimum two cycles of immunotherapy in first-line treatment to be eligible to this study. Only one prior line of immunotherapy containing regimen is allowed in an advanced/metastatic setting. If participant had received adjuvant immunotherapy the disease-free interval (after the last dose of adjuvant immunotherapy) should be at least 6 months.",
+      "reasonFuzzy": "Detailed prior immunotherapy cycle counts and disease-free intervals are complex and cannot be fully expressed in a single typed check."
+    },
+    {
+      "id": "NCT06841055-pdl1-history",
+      "polarity": "inclusion",
+      "sourceText": "Historical PD-L1 results must be available.",
+      "reasonFuzzy": "Requires availability of historical results without specifying a numerical PD-L1 minimum or maximum percentage cutoff."
+    },
+    {
+      "id": "NCT06841055-measurable-disease",
+      "polarity": "inclusion",
+      "sourceText": "Have at least one measurable lesion as the targeted lesion based on RECIST v1.1. Tumor lesions situated in a previously irradiated area are considered measurable if progression has been documented after irradiation. Historical images within 28 days of the screening visit may be accepted as a screening image if deemed acceptable in the opinion of the investigator.",
+      "reasonFuzzy": "Measurable disease assessment by RECIST v1.1 is subjective imaging criteria."
+    },
+    {
+      "id": "NCT06841055-tumor-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Participants must provide tumor tissue samples obtained ≤18 months prior to enrollment. For the additional cohort in Part 2, both baseline (freshly obtained) and on-treatment tumor biopsy samples are required.",
+      "reasonFuzzy": "Willingness or requirement to undergo biopsies and provide specific tissue samples is a procedural criterion."
+    },
+    {
+      "id": "NCT06841055-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Have a known or suspected hypersensitivity to the study treatments, their metabolites or formulation of excipients including polysorbate 80 (see Docetaxel label).",
+      "reasonFuzzy": "Hypersensitivity is a clinical assessment and not a typed laboratory or protocol check."
+    },
+    {
+      "id": "NCT06841055-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Have received systemic corticosteroids (at a dosage greater than 10 mg/day of prednisone or an equivalent dose of other corticosteroids) within 7 days prior to the initiation of study treatment (except for docetaxel premedication).",
+      "reasonFuzzy": "Corticosteroid washout with equivalent dosing rules is complex and combines a medication exclusion with timing windows."
+    },
+    {
+      "id": "NCT06841055-wound-fracture",
+      "polarity": "exclusion",
+      "sourceText": "Have a serious or non-healing wound, or (incompletely healed) bone fracture. This includes history (within 6 months prior to study entry) or risk of abdominal fistula, tracheoesophageal fistula, gastrointestinal perforation, or intra abdominal abscess or esophageal and gastric varices, or acute gastrointestinal bleeding.",
+      "reasonFuzzy": "Complex medical history and risk assessments are subjective and not represented by standard typed checks."
+    },
+    {
+      "id": "NCT06841055-hemorrhage",
+      "polarity": "exclusion",
+      "sourceText": "Participants with significant risk of hemorrhage as defined in the protocol.",
+      "reasonFuzzy": "Risk of hemorrhage is investigator-dependent and subjective."
+    },
+    {
+      "id": "NCT06841055-vena-cava",
+      "polarity": "exclusion",
+      "sourceText": "Have superior vena cava syndrome or symptoms of spinal cord compression.",
+      "reasonFuzzy": "Specific clinical syndrome exclusions are not captured by standard typed checks."
+    },
+    {
+      "id": "NCT06841055-stage",
+      "polarity": "inclusion",
+      "sourceText": "Have histologically or cytologically confirmed diagnosis of Stage IV NSCLC that has documented radiographic progression on one or after one prior line of systemic treatment (programmed death-1 [PD-1]/ programmed death ligand-1 [PD-L1] inhibitor and platinum-based chemotherapy concomitantly) in advanced/metastatic setting per the American Joint Committee on Cancer staging system, 9th edition.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06841055-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06841055-priorimmunochemotherapy",
+      "polarity": "inclusion",
+      "sourceText": "Have histologically or cytologically confirmed diagnosis of Stage IV NSCLC that has documented radiographic progression on one or after one prior line of systemic treatment (programmed death-1 [PD-1]/ programmed death ligand-1 [PD-L1] inhibitor and platinum-based chemotherapy concomitantly) in advanced/metastatic setting per the American Joint Committee on Cancer staging system, 9th edition.",
+      "reasonFuzzy": "Requires specific prior combination therapy rules including cycle counts and intervals that cannot be expressed as a simple prior_therapy_required check."
+    },
+    {
+      "id": "NCT06841055-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have at least one measurable lesion as the targeted lesion based on RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06841055-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Participants must provide tumor tissue samples obtained ≤18 months prior to enrollment. For the additional cohort in Part 2, both baseline (freshly obtained) and on-treatment tumor biopsy samples are required.",
+      "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is subjective and protocol-dependent."
+    },
+    {
+      "id": "NCT06841055-corticosteroids",
+      "polarity": "exclusion",
+      "sourceText": "Have received systemic corticosteroids (at a dosage greater than 10 mg/day of prednisone or an equivalent dose of other corticosteroids) within 7 days prior to the initiation of study treatment (except for docetaxel premedication).",
+      "reasonFuzzy": "Corticosteroid washout with equivalent dosage conversions and multiple exceptions is too complex for a standard typed check."
+    },
+    {
+      "id": "NCT06841055-wound",
+      "polarity": "exclusion",
+      "sourceText": "Have a serious or non-healing wound, or (incompletely healed) bone fracture. This includes history (within 6 months prior to study entry) or risk of abdominal fistula, tracheoesophageal fistula, gastrointestinal perforation, or intra abdominal abscess or esophageal and gastric varices, or acute gastrointestinal bleeding.",
+      "reasonFuzzy": "Clinical history and risk assessment for wounds, fistulas, and bleeding are complex exclusions."
+    },
+    {
+      "id": "NCT06841055-stage",
+      "polarity": "inclusion",
+      "sourceText": "Have histologically or cytologically confirmed diagnosis of Stage IV NSCLC that has documented radiographic progression on one or after one prior line of systemic treatment (programmed death-1 [PD-1]/ programmed death ligand-1 [PD-L1] inhibitor and platinum-based chemotherapy concomitantly) in advanced/metastatic setting per the American Joint Committee on Cancer staging system, 9th edition.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06841055-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06841055-excl-bispecific",
+      "polarity": "exclusion",
+      "sourceText": "Participants who received prior treatment with anti-vascular endothelial growth factor (VEGF) monoclonal antibody, or anti-PD-(L)-1/aVEGF bispecific antibody or docetaxel as monotherapy or in combination with other agents.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06841055-excl-docetaxel",
+      "polarity": "exclusion",
+      "sourceText": "Participants who received prior treatment with anti-vascular endothelial growth factor (VEGF) monoclonal antibody, or anti-PD-(L)-1/aVEGF bispecific antibody or docetaxel as monotherapy or in combination with other agents.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06841055-priorlines",
+      "polarity": "inclusion",
+      "sourceText": "Have received more than one prior lines of therapies in advanced/metastatic setting.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06841055-exclusion-vegf",
+      "polarity": "exclusion",
+      "sourceText": "Participants who received prior treatment with anti-vascular endothelial growth factor (VEGF) monoclonal antibody, or anti-PD-(L)-1/aVEGF bispecific antibody or docetaxel as monotherapy or in combination with other agents.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Have histologically or cytologically confirmed diagnosis of Stage IV NSCLC that has documented radiographic progression on one or after one prior line of system"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Have histologically or cytologically confirmed diagnosis of Stage IV NSCLC that has documented radiographic progression on one or after one prior line of system"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-pd-(l)-1/avegf bispecific antibody"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:docetaxel"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-vascular endothelial growth factor (vegf) monoclonal antibody"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 11411
+  },
+  "runB": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 10405
+  },
+  "ms": 29808,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06841055",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06841055-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Have histologically or cytologically confirmed diagnosis of Stage IV NSCLC that has documented radiographic progression on one or after one prior line of systemic treatment (programmed death-1 [PD-1]/ programmed death ligand-1 [PD-L1] inhibitor and platinum-based chemotherapy concomitantly) in advanced/metastatic setting per the American Joint Committee on Cancer staging system, 9th edition.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06841055-priorlines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Have received more than one prior lines of therapies in advanced/metastatic setting.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06841055-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06841055-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern cooperative oncology group performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06841055-exclusion-vegf",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants who received prior treatment with anti-vascular endothelial growth factor (VEGF) monoclonal antibody, or anti-PD-(L)-1/aVEGF bispecific antibody or docetaxel as monotherapy or in combination with other agents.",
+        "stringValue": "anti-vascular endothelial growth factor (VEGF) monoclonal antibody"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06841055-immunotherapy-details",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have received minimum two cycles of immunotherapy in first-line treatment to be eligible to this study. Only one prior line of immunotherapy containing regimen is allowed in an advanced/metastatic setting. If participant had received adjuvant immunotherapy the disease-free interval (after the last dose of adjuvant immunotherapy) should be at least 6 months.",
+        "reasonFuzzy": "Detailed prior immunotherapy cycle counts and disease-free intervals are complex and cannot be fully expressed in a single typed check."
+      },
+      {
+        "id": "NCT06841055-pdl1-history",
+        "polarity": "inclusion",
+        "sourceText": "Historical PD-L1 results must be available.",
+        "reasonFuzzy": "Requires availability of historical results without specifying a numerical PD-L1 minimum or maximum percentage cutoff."
+      },
+      {
+        "id": "NCT06841055-measurable-disease",
+        "polarity": "inclusion",
+        "sourceText": "Have at least one measurable lesion as the targeted lesion based on RECIST v1.1. Tumor lesions situated in a previously irradiated area are considered measurable if progression has been documented after irradiation. Historical images within 28 days of the screening visit may be accepted as a screening image if deemed acceptable in the opinion of the investigator.",
+        "reasonFuzzy": "Measurable disease assessment by RECIST v1.1 is subjective imaging criteria."
+      },
+      {
+        "id": "NCT06841055-tumor-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Participants must provide tumor tissue samples obtained ≤18 months prior to enrollment. For the additional cohort in Part 2, both baseline (freshly obtained) and on-treatment tumor biopsy samples are required.",
+        "reasonFuzzy": "Willingness or requirement to undergo biopsies and provide specific tissue samples is a procedural criterion."
+      },
+      {
+        "id": "NCT06841055-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Have a known or suspected hypersensitivity to the study treatments, their metabolites or formulation of excipients including polysorbate 80 (see Docetaxel label).",
+        "reasonFuzzy": "Hypersensitivity is a clinical assessment and not a typed laboratory or protocol check."
+      },
+      {
+        "id": "NCT06841055-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Have received systemic corticosteroids (at a dosage greater than 10 mg/day of prednisone or an equivalent dose of other corticosteroids) within 7 days prior to the initiation of study treatment (except for docetaxel premedication).",
+        "reasonFuzzy": "Corticosteroid washout with equivalent dosing rules is complex and combines a medication exclusion with timing windows."
+      },
+      {
+        "id": "NCT06841055-wound-fracture",
+        "polarity": "exclusion",
+        "sourceText": "Have a serious or non-healing wound, or (incompletely healed) bone fracture. This includes history (within 6 months prior to study entry) or risk of abdominal fistula, tracheoesophageal fistula, gastrointestinal perforation, or intra abdominal abscess or esophageal and gastric varices, or acute gastrointestinal bleeding.",
+        "reasonFuzzy": "Complex medical history and risk assessments are subjective and not represented by standard typed checks."
+      },
+      {
+        "id": "NCT06841055-hemorrhage",
+        "polarity": "exclusion",
+        "sourceText": "Participants with significant risk of hemorrhage as defined in the protocol.",
+        "reasonFuzzy": "Risk of hemorrhage is investigator-dependent and subjective."
+      },
+      {
+        "id": "NCT06841055-vena-cava",
+        "polarity": "exclusion",
+        "sourceText": "Have superior vena cava syndrome or symptoms of spinal cord compression.",
+        "reasonFuzzy": "Specific clinical syndrome exclusions are not captured by standard typed checks."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06841055",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06841055-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Have histologically or cytologically confirmed diagnosis of Stage IV NSCLC that has documented radiographic progression on one or after one prior line of systemic treatment (programmed death-1 [PD-1]/ programmed death ligand-1 [PD-L1] inhibitor and platinum-based chemotherapy concomitantly) in advanced/metastatic setting per the American Joint Committee on Cancer staging system, 9th edition.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06841055-priorlines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Have received more than one prior lines of therapies in advanced/metastatic setting.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06841055-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06841055-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern cooperative oncology group performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06841055-excl-vegf",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants who received prior treatment with anti-vascular endothelial growth factor (VEGF) monoclonal antibody, or anti-PD-(L)-1/aVEGF bispecific antibody or docetaxel as monotherapy or in combination with other agents.",
+        "stringValue": "anti-vascular endothelial growth factor (VEGF) monoclonal antibody"
+      },
+      {
+        "id": "NCT06841055-excl-bispecific",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants who received prior treatment with anti-vascular endothelial growth factor (VEGF) monoclonal antibody, or anti-PD-(L)-1/aVEGF bispecific antibody or docetaxel as monotherapy or in combination with other agents.",
+        "stringValue": "anti-PD-(L)-1/aVEGF bispecific antibody"
+      },
+      {
+        "id": "NCT06841055-excl-docetaxel",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants who received prior treatment with anti-vascular endothelial growth factor (VEGF) monoclonal antibody, or anti-PD-(L)-1/aVEGF bispecific antibody or docetaxel as monotherapy or in combination with other agents.",
+        "stringValue": "docetaxel"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06841055-priorimmunochemotherapy",
+        "polarity": "inclusion",
+        "sourceText": "Have histologically or cytologically confirmed diagnosis of Stage IV NSCLC that has documented radiographic progression on one or after one prior line of systemic treatment (programmed death-1 [PD-1]/ programmed death ligand-1 [PD-L1] inhibitor and platinum-based chemotherapy concomitantly) in advanced/metastatic setting per the American Joint Committee on Cancer staging system, 9th edition.",
+        "reasonFuzzy": "Requires specific prior combination therapy rules including cycle counts and intervals that cannot be expressed as a simple prior_therapy_required check."
+      },
+      {
+        "id": "NCT06841055-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have at least one measurable lesion as the targeted lesion based on RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06841055-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Participants must provide tumor tissue samples obtained ≤18 months prior to enrollment. For the additional cohort in Part 2, both baseline (freshly obtained) and on-treatment tumor biopsy samples are required.",
+        "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is subjective and protocol-dependent."
+      },
+      {
+        "id": "NCT06841055-corticosteroids",
+        "polarity": "exclusion",
+        "sourceText": "Have received systemic corticosteroids (at a dosage greater than 10 mg/day of prednisone or an equivalent dose of other corticosteroids) within 7 days prior to the initiation of study treatment (except for docetaxel premedication).",
+        "reasonFuzzy": "Corticosteroid washout with equivalent dosage conversions and multiple exceptions is too complex for a standard typed check."
+      },
+      {
+        "id": "NCT06841055-wound",
+        "polarity": "exclusion",
+        "sourceText": "Have a serious or non-healing wound, or (incompletely healed) bone fracture. This includes history (within 6 months prior to study entry) or risk of abdominal fistula, tracheoesophageal fistula, gastrointestinal perforation, or intra abdominal abscess or esophageal and gastric varices, or acute gastrointestinal bleeding.",
+        "reasonFuzzy": "Clinical history and risk assessment for wounds, fistulas, and bleeding are complex exclusions."
+      }
+    ]
+  }
+}

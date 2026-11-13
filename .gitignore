@@ -1,0 +1,67 @@
+# Dependencies and build output
+node_modules
+dist
+.vite
+coverage
+*.tgz
+*.log
+.DS_Store
+
+# Firebase emulators and CLI cache
+.firebase
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# Local env. .env.example may hold public Firebase web config and the
+# public reCAPTCHA site key. Never commit debug tokens or secrets.
+.env
+.env.local
+.env.*.local
+.env.production
+.env.production.local
+
+# Working cache (the shipped snapshot lives in public/)
+data/criteria-cache
+admin/cache-write.log
+
+# Large video files, raw takes, and render scratch
+demo/video/*.mp4
+demo/video/*.mov
+demo/video/*.webm
+demo/video/*.mkv
+demo/video/think-takes/
+demo/video/render/work/
+demo/video/render/.venv/
+demo/video/render/__pycache__/
+demo/video/render/work/.elevenlabs.env
+
+# Network captures
+*.har
+
+# Think-session DevTools stills (request URLs may be visible)
+runbook/evidence/think-*.png
+runbook/evidence/think-*.har
+
+# Internal working notes (not part of the public entry)
+notes/setup-status.md
+notes/progress.md
+notes/next-firebase-project.md
+notes/contest-video-branding.md
+notes/secret-scan.md
+notes/app-check-plan.md
+notes/hero-check-2026-11-12-tenth-man.json
+notes/video-script-pre-r4b.md
+notes/script-diff-r4b.txt
+notes/batch-resume.pid
+notes/batch-parse-stdout.log
+notes/batch-parse-log.jsonl
+notes/batch-parse-live.txt
+notes/batch-quota-pause.txt
+notes/batch-resume-target.txt
+demo/think-session.md
+demo/think-recording.md
+
+# Raw ClinicalTrials.gov pull pages (pagination cursors). The assembled
+# regional set is data/ctgov/region-trials.json.
+data/ctgov/raw/

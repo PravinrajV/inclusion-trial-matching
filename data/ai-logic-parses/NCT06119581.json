@@ -1,0 +1,419 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06119581",
+  "briefTitle": "A Study of First-Line Olomorasib (LY3537982) and Pembrolizumab With or Without Chemotherapy in Patients With Advanced KRAS G12C-Mutant Non-small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:50:32.349Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06119581-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed NSCLC with Stage IIIB-IIIC or Stage IV disease, not suitable for curative intent radical surgery or radiation therapy.",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Histologically or cytologically confirmed NSCLC with Stage IIIB-IIIC or Stage IV disease, not suitable for curative intent radical surgery or radiation therapy.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06119581-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Must have an ECOG performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Must have an ECOG performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06119581-histology-part",
+      "polarity": "inclusion",
+      "sourceText": "Part B and Safety Lead-In Part B: the histology of the tumor must be predominantly non-squamous (in line with pemetrexed label).",
+      "reasonFuzzy": "Histology restriction applies conditionally to specific study parts and cannot be expressed as a single universal histology_in rule."
+    },
+    {
+      "id": "NCT06119581-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Must have known programmed death-ligand 1 (PD-L1) expression * Part A: Greater than or equal to (≥)50 percent (%). * Part B: 0% to 100%. * Part C: <50%.",
+      "reasonFuzzy": "PD-L1 cutoffs vary depending on study parts (Part A, Part B, Part C) and cannot be expressed as a single typed cutoff."
+    },
+    {
+      "id": "NCT06119581-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Must have measurable disease per RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06119581-life",
+      "polarity": "inclusion",
+      "sourceText": "Estimated life expectancy ≥12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06119581-oncogenic",
+      "polarity": "exclusion",
+      "sourceText": "Have a documented additional validated targetable oncogenic driver mutation or alteration in genes such as epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), BRAF (V600E), human epidermal growth factor receptor 2 (HER2), MET (exon 14), ROS1, rearranged during transfection (RET), or neurotrophic tyrosine receptor kinase (NTRK)1/2/3.",
+      "reasonFuzzy": "Excludes multiple genes and variants which cannot be represented as a single typed variant exclusion check."
+    },
+    {
+      "id": "NCT06119581-prior-tx",
+      "polarity": "exclusion",
+      "sourceText": "Prior systemic therapy (chemotherapy, immunotherapy, targeted therapy, or biological therapy) for advanced or metastatic NSCLC. -- 1 cycle of standard-of-care treatment prior to study enrollment will be allowed for cases where immediate treatment is clinically indicated:",
+      "reasonFuzzy": "Prior therapy exclusion includes a complex exception allowing 1 cycle for standard-of-care treatment."
+    },
+    {
+      "id": "NCT06119581-squamous-part",
+      "polarity": "exclusion",
+      "sourceText": "Have predominantly squamous cell histology for NSCLC",
+      "reasonFuzzy": "Histology exclusion applies conditionally to specific study parts and cannot be expressed as a single universal exclusion rule."
+    },
+    {
+      "id": "NCT06119581-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06119581-histology",
+      "polarity": "inclusion",
+      "sourceText": "Part B and Safety Lead-In Part B: the histology of the tumor must be predominantly non-squamous (in line with pemetrexed label).",
+      "reasonFuzzy": "Histology rules differ by study part, so they cannot be expressed as a single static histology check."
+    },
+    {
+      "id": "NCT06119581-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Must have known programmed death-ligand 1 (PD-L1) expression * Part A: Greater than or equal to (≥)50 percent (%). * Part B: 0% to 100%. * Part C: <50%.",
+      "reasonFuzzy": "PD-L1 cutoff requirements differ depending on study part."
+    },
+    {
+      "id": "NCT06119581-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Must have measurable disease per RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06119581-life",
+      "polarity": "inclusion",
+      "sourceText": "Estimated life expectancy ≥12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06119581-oncogenic",
+      "polarity": "exclusion",
+      "sourceText": "Have a documented additional validated targetable oncogenic driver mutation or alteration in genes such as epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), BRAF (V600E), human epidermal growth factor receptor 2 (HER2), MET (exon 14), ROS1, rearranged during transfection (RET), or neurotrophic tyrosine receptor kinase (NTRK)1/2/3.",
+      "reasonFuzzy": "This rule excludes multiple different driver mutations and is not a single typed mutation exclusion check."
+    },
+    {
+      "id": "NCT06119581-priorsystemic",
+      "polarity": "exclusion",
+      "sourceText": "Prior systemic therapy (chemotherapy, immunotherapy, targeted therapy, or biological therapy) for advanced or metastatic NSCLC. --- 1 cycle of standard-of-care treatment prior to study enrollment will be allowed for cases where immediate treatment is clinically indicated",
+      "reasonFuzzy": "The prior systemic therapy exclusion includes a complex exception allowing 1 cycle of standard-of-care treatment."
+    },
+    {
+      "id": "NCT06119581-squamous",
+      "polarity": "exclusion",
+      "sourceText": "Have predominantly squamous cell histology for NSCLC",
+      "reasonFuzzy": "Squamous cell exclusion applies only to specific parts of the study."
+    },
+    {
+      "id": "NCT06119581-brain",
+      "polarity": "exclusion",
+      "sourceText": "Have known active central nervous system metastases and/or carcinomatous meningitis.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06119581-brain",
+      "polarity": "exclusion",
+      "sourceText": "Have known active central nervous system metastases and/or carcinomatous meningitis.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06119581-kras",
+      "polarity": "inclusion",
+      "sourceText": "Must have disease with evidence of KRAS G12C mutation.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06119581-kras-var",
+      "polarity": "inclusion",
+      "sourceText": "Must have disease with evidence of KRAS G12C mutation.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:untreated"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12c"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 3398
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 4728
+  },
+  "ms": 16099,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06119581",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06119581-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed NSCLC with Stage IIIB-IIIC or Stage IV disease, not suitable for curative intent radical surgery or radiation therapy.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06119581-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Must have disease with evidence of KRAS G12C mutation.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06119581-kras-var",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Must have disease with evidence of KRAS G12C mutation.",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT06119581-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Must have an ECOG performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06119581-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06119581-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Have known active central nervous system metastases and/or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06119581-histology-part",
+        "polarity": "inclusion",
+        "sourceText": "Part B and Safety Lead-In Part B: the histology of the tumor must be predominantly non-squamous (in line with pemetrexed label).",
+        "reasonFuzzy": "Histology restriction applies conditionally to specific study parts and cannot be expressed as a single universal histology_in rule."
+      },
+      {
+        "id": "NCT06119581-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "Must have known programmed death-ligand 1 (PD-L1) expression * Part A: Greater than or equal to (≥)50 percent (%). * Part B: 0% to 100%. * Part C: <50%.",
+        "reasonFuzzy": "PD-L1 cutoffs vary depending on study parts (Part A, Part B, Part C) and cannot be expressed as a single typed cutoff."
+      },
+      {
+        "id": "NCT06119581-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Must have measurable disease per RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06119581-life",
+        "polarity": "inclusion",
+        "sourceText": "Estimated life expectancy ≥12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06119581-oncogenic",
+        "polarity": "exclusion",
+        "sourceText": "Have a documented additional validated targetable oncogenic driver mutation or alteration in genes such as epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), BRAF (V600E), human epidermal growth factor receptor 2 (HER2), MET (exon 14), ROS1, rearranged during transfection (RET), or neurotrophic tyrosine receptor kinase (NTRK)1/2/3.",
+        "reasonFuzzy": "Excludes multiple genes and variants which cannot be represented as a single typed variant exclusion check."
+      },
+      {
+        "id": "NCT06119581-prior-tx",
+        "polarity": "exclusion",
+        "sourceText": "Prior systemic therapy (chemotherapy, immunotherapy, targeted therapy, or biological therapy) for advanced or metastatic NSCLC. -- 1 cycle of standard-of-care treatment prior to study enrollment will be allowed for cases where immediate treatment is clinically indicated:",
+        "reasonFuzzy": "Prior therapy exclusion includes a complex exception allowing 1 cycle for standard-of-care treatment."
+      },
+      {
+        "id": "NCT06119581-squamous-part",
+        "polarity": "exclusion",
+        "sourceText": "Have predominantly squamous cell histology for NSCLC",
+        "reasonFuzzy": "Histology exclusion applies conditionally to specific study parts and cannot be expressed as a single universal exclusion rule."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06119581",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06119581-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed NSCLC with Stage IIIB-IIIC or Stage IV disease, not suitable for curative intent radical surgery or radiation therapy.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06119581-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Must have disease with evidence of KRAS G12C mutation.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06119581-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Must have disease with evidence of KRAS G12C mutation.",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT06119581-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Must have an ECOG performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06119581-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Have known active central nervous system metastases and/or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06119581-histology",
+        "polarity": "inclusion",
+        "sourceText": "Part B and Safety Lead-In Part B: the histology of the tumor must be predominantly non-squamous (in line with pemetrexed label).",
+        "reasonFuzzy": "Histology rules differ by study part, so they cannot be expressed as a single static histology check."
+      },
+      {
+        "id": "NCT06119581-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "Must have known programmed death-ligand 1 (PD-L1) expression * Part A: Greater than or equal to (≥)50 percent (%). * Part B: 0% to 100%. * Part C: <50%.",
+        "reasonFuzzy": "PD-L1 cutoff requirements differ depending on study part."
+      },
+      {
+        "id": "NCT06119581-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Must have measurable disease per RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06119581-life",
+        "polarity": "inclusion",
+        "sourceText": "Estimated life expectancy ≥12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06119581-oncogenic",
+        "polarity": "exclusion",
+        "sourceText": "Have a documented additional validated targetable oncogenic driver mutation or alteration in genes such as epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), BRAF (V600E), human epidermal growth factor receptor 2 (HER2), MET (exon 14), ROS1, rearranged during transfection (RET), or neurotrophic tyrosine receptor kinase (NTRK)1/2/3.",
+        "reasonFuzzy": "This rule excludes multiple different driver mutations and is not a single typed mutation exclusion check."
+      },
+      {
+        "id": "NCT06119581-priorsystemic",
+        "polarity": "exclusion",
+        "sourceText": "Prior systemic therapy (chemotherapy, immunotherapy, targeted therapy, or biological therapy) for advanced or metastatic NSCLC. --- 1 cycle of standard-of-care treatment prior to study enrollment will be allowed for cases where immediate treatment is clinically indicated",
+        "reasonFuzzy": "The prior systemic therapy exclusion includes a complex exception allowing 1 cycle of standard-of-care treatment."
+      },
+      {
+        "id": "NCT06119581-squamous",
+        "polarity": "exclusion",
+        "sourceText": "Have predominantly squamous cell histology for NSCLC",
+        "reasonFuzzy": "Squamous cell exclusion applies only to specific parts of the study."
+      }
+    ]
+  }
+}

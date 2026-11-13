@@ -1,0 +1,324 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07488676",
+  "briefTitle": "A Study of ASP546C in Adults With Gastroesophageal Cancer, Pancreatic Cancer or Other Solid Tumors",
+  "parsedAt": "2026-11-12T11:54:42.586Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07488676-lines",
+      "kind": "prior_lines_min",
+      "polarity": "inclusion",
+      "sourceText": "Participant has received at least 1 line of therapy for uLA/m disease.",
+      "numberValue": 1,
+      "evidence_quote": "Participant has received at least 1 line of therapy for uLA/m disease.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07488676-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participant has an ECOG performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Participant has an ECOG performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07488676-histology",
+      "polarity": "inclusion",
+      "sourceText": "Participant has a histologically confirmed diagnosis of gastroesophageal (gastric/GEJ/esophageal) adenocarcinoma, pancreatic adenocarcinoma, or pan-tumor (cholangiocarcinoma, colorectal adenocarcinoma, NSCLC [adenocarcinoma], SCLC, ovarian mucinous carcinoma or invasive breast cancer [ER/PR+HER2-; ER/PR-HER2+; ER/PR+HER2+ (triple positive); ER/PR-HER2- (triple negative)]).",
+      "reasonFuzzy": "The trial is a basket trial covering multiple tumor types with conditional cohort rules, making a simple typed histology or stage rule insufficient."
+    },
+    {
+      "id": "NCT07488676-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participant has measurable disease according to RECIST v1.1 within 28 days prior to the first dose of study intervention.",
+      "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07488676-life",
+      "polarity": "inclusion",
+      "sourceText": "Participant has a predicted life expectancy >= 12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07488676-priorlines-excl",
+      "polarity": "exclusion",
+      "sourceText": "Cohorts 1, 2 and 3 only: Participant has received > 2 prior lines of therapy for uLA/m disease.",
+      "reasonFuzzy": "Prior line limits differ by study cohort."
+    },
+    {
+      "id": "NCT07488676-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07488676-histology-pan-tumor",
+      "polarity": "inclusion",
+      "sourceText": "Participant has a histologically confirmed diagnosis of gastroesophageal (gastric/GEJ/esophageal) adenocarcinoma, pancreatic adenocarcinoma, or pan-tumor (cholangiocarcinoma, colorectal adenocarcinoma, NSCLC [adenocarcinoma], SCLC, ovarian mucinous carcinoma or invasive breast cancer [ER/PR+HER2-; ER/PR-HER2+; ER/PR+HER2+ (triple positive); ER/PR-HER2- (triple negative)]).",
+      "reasonFuzzy": "The trial is a pan-tumor study including NSCLC along with multiple other cancer types, so typed NSCLC stage or histology checks are not appropriate."
+    },
+    {
+      "id": "NCT07488676-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participant has measurable disease according to RECIST v1.1 within 28 days prior to the first dose of study intervention.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07488676-life-expectancy",
+      "polarity": "inclusion",
+      "sourceText": "Participant has a predicted life expectancy >= 12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07488676-prior-lines-cohort",
+      "polarity": "exclusion",
+      "sourceText": "Cohorts 1, 2 and 3 only: Participant has received > 2 prior lines of therapy for uLA/m disease. Participants in Cohort 4 (pan-tumor) may enroll regardless of the number of prior lines of therapy, if they are not eligible for, decline, or do not have any available standard of care treatment options.",
+      "reasonFuzzy": "Prior-line limits vary by study cohort and include conditional exceptions."
+    },
+    {
+      "id": "NCT07488676-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07488676-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participant has symptomatic, untreated brain metastases or meningeal carcinomatosis (carcinomatous meningitis) from the primary malignancy.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07488676-brain-mets",
+      "polarity": "exclusion",
+      "sourceText": "Participant has symptomatic, untreated brain metastases or meningeal carcinomatosis (carcinomatous meningitis) from the primary malignancy. A participant with stable central nervous system metastases for > 3 months without need of steroids for >= 2 weeks prior to the first dose of study intervention is eligible.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07488676-prior-clnd",
+      "polarity": "exclusion",
+      "sourceText": "Participant has received prior CLDN18.2 ADC.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:cldn18.2 adc"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 6333
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 15865
+  },
+  "ms": 30215,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07488676",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07488676-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07488676-lines",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant has received at least 1 line of therapy for uLA/m disease.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07488676-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant has an ECOG performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07488676-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participant has symptomatic, untreated brain metastases or meningeal carcinomatosis (carcinomatous meningitis) from the primary malignancy.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT07488676-prior-clnd",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participant has received prior CLDN18.2 ADC.",
+        "stringValue": "CLDN18.2 ADC"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07488676-histology",
+        "polarity": "inclusion",
+        "sourceText": "Participant has a histologically confirmed diagnosis of gastroesophageal (gastric/GEJ/esophageal) adenocarcinoma, pancreatic adenocarcinoma, or pan-tumor (cholangiocarcinoma, colorectal adenocarcinoma, NSCLC [adenocarcinoma], SCLC, ovarian mucinous carcinoma or invasive breast cancer [ER/PR+HER2-; ER/PR-HER2+; ER/PR+HER2+ (triple positive); ER/PR-HER2- (triple negative)]).",
+        "reasonFuzzy": "The trial is a basket trial covering multiple tumor types with conditional cohort rules, making a simple typed histology or stage rule insufficient."
+      },
+      {
+        "id": "NCT07488676-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participant has measurable disease according to RECIST v1.1 within 28 days prior to the first dose of study intervention.",
+        "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07488676-life",
+        "polarity": "inclusion",
+        "sourceText": "Participant has a predicted life expectancy >= 12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT07488676-priorlines-excl",
+        "polarity": "exclusion",
+        "sourceText": "Cohorts 1, 2 and 3 only: Participant has received > 2 prior lines of therapy for uLA/m disease.",
+        "reasonFuzzy": "Prior line limits differ by study cohort."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07488676",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07488676-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07488676-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant has an ECOG performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07488676-prior-lines",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant has received at least 1 line of therapy for uLA/m disease.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07488676-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participant has symptomatic, untreated brain metastases or meningeal carcinomatosis (carcinomatous meningitis) from the primary malignancy. A participant with stable central nervous system metastases for > 3 months without need of steroids for >= 2 weeks prior to the first dose of study intervention is eligible.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT07488676-prior-clnd",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participant has received prior CLDN18.2 ADC.",
+        "stringValue": "CLDN18.2 ADC"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07488676-histology-pan-tumor",
+        "polarity": "inclusion",
+        "sourceText": "Participant has a histologically confirmed diagnosis of gastroesophageal (gastric/GEJ/esophageal) adenocarcinoma, pancreatic adenocarcinoma, or pan-tumor (cholangiocarcinoma, colorectal adenocarcinoma, NSCLC [adenocarcinoma], SCLC, ovarian mucinous carcinoma or invasive breast cancer [ER/PR+HER2-; ER/PR-HER2+; ER/PR+HER2+ (triple positive); ER/PR-HER2- (triple negative)]).",
+        "reasonFuzzy": "The trial is a pan-tumor study including NSCLC along with multiple other cancer types, so typed NSCLC stage or histology checks are not appropriate."
+      },
+      {
+        "id": "NCT07488676-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participant has measurable disease according to RECIST v1.1 within 28 days prior to the first dose of study intervention.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07488676-life-expectancy",
+        "polarity": "inclusion",
+        "sourceText": "Participant has a predicted life expectancy >= 12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT07488676-prior-lines-cohort",
+        "polarity": "exclusion",
+        "sourceText": "Cohorts 1, 2 and 3 only: Participant has received > 2 prior lines of therapy for uLA/m disease. Participants in Cohort 4 (pan-tumor) may enroll regardless of the number of prior lines of therapy, if they are not eligible for, decline, or do not have any available standard of care treatment options.",
+        "reasonFuzzy": "Prior-line limits vary by study cohort and include conditional exceptions."
+      }
+    ]
+  }
+}

@@ -1,0 +1,639 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06225427",
+  "briefTitle": "Gilteritinib for the Treatment of ALK NSCLC",
+  "parsedAt": "2026-11-12T05:51:34.024Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06225427-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06225427-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0-2",
+      "numberValue": 2,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status 0-2",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06225427-anc",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥ 1500/mcL",
+      "numberValue": 1500,
+      "evidence_quote": "Absolute neutrophil count (ANC) ≥ 1500/mcL",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06225427-platelets",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets ≥ 100,000/mcL",
+      "numberValue": 100000,
+      "evidence_quote": "Platelets ≥ 100,000/mcL",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06225427-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin ≥ 9 g/dL without transfusion or erythropoietin (EPO) dependency (within 7 days of assessment)",
+      "numberValue": 9,
+      "evidence_quote": "Hemoglobin ≥ 9 g/dL without transfusion or erythropoietin (EPO) dependency (within 7 days of assessment)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06225427-egfr",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Measured or calculated creatinine clearance (CrCl) ≥ 50mL/min (calculated per Cockcroft-Gault formula)",
+      "numberValue": 50,
+      "evidence_quote": "Measured or calculated creatinine clearance (CrCl) ≥ 50mL/min (calculated per Cockcroft-Gault formula)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06225427-bilirubin",
+      "kind": "bilirubin_max",
+      "polarity": "inclusion",
+      "sourceText": "Serum total bilirubin ≤ 1.5 X upper limit of normal (ULN) (per institutional guidelines) OR direct bilirubin ≤ ULN for subjects with total bilirubin levels > 1.5 ULN",
+      "numberValue": 1.5,
+      "stages": [],
+      "stringValue": "1.5 X upper limit of normal (ULN) (per institutional guidelines) OR direct bilirubin ≤ ULN for subjects with total bilirubin levels > 1.5 ULN",
+      "evidence_quote": "Serum total bilirubin ≤ 1.5 X upper limit of normal (ULN) (per institutional guidelines) OR direct bilirubin ≤ ULN for subjects with total bilirubin levels > 1.5 ULN",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06225427-cohorts",
+      "polarity": "inclusion",
+      "sourceText": "The patient must belong to one of the following treatment cohorts.",
+      "reasonFuzzy": "Prior therapy rules are complex and divided across three different multi-line cohorts."
+    },
+    {
+      "id": "NCT06225427-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1 criteria assessed per screening imaging",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06225427-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "If a cancerous lesion is easily and safely accessible, a pre-treatment biopsy of this lesion is strongly encouraged but NOT required prior to first dose of gilteritinib.",
+      "reasonFuzzy": "Willingness or encouragement to undergo a biopsy is a judgment-based rule, not a typed check."
+    },
+    {
+      "id": "NCT06225427-washout",
+      "polarity": "inclusion",
+      "sourceText": "At least 7 days must have elapsed since last anti-neoplastic TKI, chemotherapy, immunotherapy, or investigational agent prior to the first dose of gilteritinib",
+      "reasonFuzzy": "Washout window spanning multiple therapy classes is not a simple typed lab cutoff."
+    },
+    {
+      "id": "NCT06225427-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Received palliative radiation within 7 days of enrollment",
+      "reasonFuzzy": "Palliative radiation washout window is not a typed lab check."
+    },
+    {
+      "id": "NCT06225427-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Has a concurrent active malignancy receiving interventional therapy unless it is the investigator's opinion that the concurrent active malignancy will NOT significantly impact the survival of the patient",
+      "reasonFuzzy": "Investigator opinion regarding concurrent active malignancy is a subjective judgment."
+    },
+    {
+      "id": "NCT06225427-stage",
+      "polarity": "inclusion",
+      "sourceText": "Stage IV (American Joint Committee on Cancer [AJCC] 8th edition) non-small cell lung cancer with an oncogenic ALK fusion",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06225427-alk",
+      "polarity": "inclusion",
+      "sourceText": "Stage IV (American Joint Committee on Cancer [AJCC] 8th edition) non-small cell lung cancer with an oncogenic ALK fusion",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06225427-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) ≤ 2.5 X ULN OR ≤ 5 X ULN for subjects with liver metastases",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06225427-alt",
+      "polarity": "inclusion",
+      "sourceText": "Alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 2.5 X ULN OR ≤ 5 X ULN for subjects with liver metastases",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06225427-cohorts",
+      "polarity": "inclusion",
+      "sourceText": "The patient must belong to one of the following treatment cohorts. Cohort 1... Cohort 2... Cohort 3...",
+      "reasonFuzzy": "Multiple cohorts with overlapping and layered prior therapies are complex and cannot be expressed as a single typed prior therapy check."
+    },
+    {
+      "id": "NCT06225427-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1 criteria assessed per screening imaging",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06225427-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "If a cancerous lesion is easily and safely accessible, a pre-treatment biopsy of this lesion is strongly encouraged but NOT required",
+      "reasonFuzzy": "Willingness or ability to undergo a biopsy is a subjective procedure check."
+    },
+    {
+      "id": "NCT06225427-washout",
+      "polarity": "inclusion",
+      "sourceText": "At least 7 days must have elapsed since last anti-neoplastic TKI, chemotherapy, immunotherapy, or investigational agent",
+      "reasonFuzzy": "Washout window covering a broad group of multi-class therapies is not a simple typed prior therapy check."
+    },
+    {
+      "id": "NCT06225427-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Received palliative radiation within 7 days of enrollment",
+      "reasonFuzzy": "Palliative radiation washout does not map to a standard typed prior therapy check."
+    },
+    {
+      "id": "NCT06225427-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Has a concurrent active malignancy receiving interventional therapy unless it is the investigator's opinion that the concurrent active malignancy will NOT significantly impact the survival of the patient",
+      "reasonFuzzy": "Investigator opinion on concurrent malignancy impact is subjective."
+    },
+    {
+      "id": "NCT06225427-stage",
+      "polarity": "inclusion",
+      "sourceText": "Stage IV (American Joint Committee on Cancer [AJCC] 8th edition) non-small cell lung cancer with an oncogenic ALK fusion",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06225427-alk",
+      "polarity": "inclusion",
+      "sourceText": "Stage IV (American Joint Committee on Cancer [AJCC] 8th edition) non-small cell lung cancer with an oncogenic ALK fusion",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06225427-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) ≤ 2.5 X ULN OR ≤ 5 X ULN for subjects with liver metastases",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06225427-alt",
+      "polarity": "inclusion",
+      "sourceText": "Alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 2.5 X ULN OR ≤ 5 X ULN for subjects with liver metastases",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06225427-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologies include adenocarcinoma, squamous cell carcinoma, adenosquamous adenocarcinoma, and NSCLC NOS (not otherwise specified)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06225427-prior-flt3",
+      "polarity": "exclusion",
+      "sourceText": "Received prior therapy with a FLT3 inhibitor",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06225427-brain",
+      "polarity": "exclusion",
+      "sourceText": "Has known active and symptomatic central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 10,
+      "unquoted": 4,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Stage IV (American Joint Committee on Cancer [AJCC] 8th edition) non-small cell lung cancer with an oncogenic ALK fusion"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Stage IV (American Joint Committee on Cancer [AJCC] 8th edition) non-small cell lung cancer with an oncogenic ALK fusion"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) ≤ 2.5 X ULN OR ≤ 5 X ULN for subjects with liver metastases"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 2.5 X ULN OR ≤ 5 X ULN for subjects with liver metastases"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 10,
+      "unquoted": 4,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Stage IV (American Joint Committee on Cancer [AJCC] 8th edition) non-small cell lung cancer with an oncogenic ALK fusion"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Stage IV (American Joint Committee on Cancer [AJCC] 8th edition) non-small cell lung cancer with an oncogenic ALK fusion"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) ≤ 2.5 X ULN OR ≤ 5 X ULN for subjects with liver metastases"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 2.5 X ULN OR ≤ 5 X ULN for subjects with liver metastases"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 10,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 7,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,nsclc_nos,squamous"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:flt3 inhibitor"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 9
+    }
+  },
+  "runA": {
+    "typedEmitted": 14,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 4801
+  },
+  "runB": {
+    "typedEmitted": 14,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 4606
+  },
+  "ms": 17419,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06225427",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06225427-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage IV (American Joint Committee on Cancer [AJCC] 8th edition) non-small cell lung cancer with an oncogenic ALK fusion",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06225427-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Stage IV (American Joint Committee on Cancer [AJCC] 8th edition) non-small cell lung cancer with an oncogenic ALK fusion",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06225427-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologies include adenocarcinoma, squamous cell carcinoma, adenosquamous adenocarcinoma, and NSCLC NOS (not otherwise specified)",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06225427-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06225427-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0-2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06225427-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥ 1500/mcL",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT06225427-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 100,000/mcL",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT06225427-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 9 g/dL without transfusion or erythropoietin (EPO) dependency (within 7 days of assessment)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT06225427-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Measured or calculated creatinine clearance (CrCl) ≥ 50mL/min (calculated per Cockcroft-Gault formula)",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT06225427-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Serum total bilirubin ≤ 1.5 X upper limit of normal (ULN) (per institutional guidelines) OR direct bilirubin ≤ ULN for subjects with total bilirubin levels > 1.5 ULN",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "1.5 X upper limit of normal (ULN) (per institutional guidelines) OR direct bilirubin ≤ ULN for subjects with total bilirubin levels > 1.5 ULN"
+      },
+      {
+        "id": "NCT06225427-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) ≤ 2.5 X ULN OR ≤ 5 X ULN for subjects with liver metastases",
+        "numberValue": 2.5,
+        "stringValue": "2.5 X ULN OR ≤ 5 X ULN for subjects with liver metastases"
+      },
+      {
+        "id": "NCT06225427-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 2.5 X ULN OR ≤ 5 X ULN for subjects with liver metastases",
+        "numberValue": 2.5,
+        "stringValue": "2.5 X ULN OR ≤ 5 X ULN for subjects with liver metastases"
+      },
+      {
+        "id": "NCT06225427-prior-flt3",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Received prior therapy with a FLT3 inhibitor",
+        "stringValue": "FLT3 inhibitor"
+      },
+      {
+        "id": "NCT06225427-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active and symptomatic central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06225427-cohorts",
+        "polarity": "inclusion",
+        "sourceText": "The patient must belong to one of the following treatment cohorts.",
+        "reasonFuzzy": "Prior therapy rules are complex and divided across three different multi-line cohorts."
+      },
+      {
+        "id": "NCT06225427-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1 criteria assessed per screening imaging",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06225427-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "If a cancerous lesion is easily and safely accessible, a pre-treatment biopsy of this lesion is strongly encouraged but NOT required prior to first dose of gilteritinib.",
+        "reasonFuzzy": "Willingness or encouragement to undergo a biopsy is a judgment-based rule, not a typed check."
+      },
+      {
+        "id": "NCT06225427-washout",
+        "polarity": "inclusion",
+        "sourceText": "At least 7 days must have elapsed since last anti-neoplastic TKI, chemotherapy, immunotherapy, or investigational agent prior to the first dose of gilteritinib",
+        "reasonFuzzy": "Washout window spanning multiple therapy classes is not a simple typed lab cutoff."
+      },
+      {
+        "id": "NCT06225427-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Received palliative radiation within 7 days of enrollment",
+        "reasonFuzzy": "Palliative radiation washout window is not a typed lab check."
+      },
+      {
+        "id": "NCT06225427-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Has a concurrent active malignancy receiving interventional therapy unless it is the investigator's opinion that the concurrent active malignancy will NOT significantly impact the survival of the patient",
+        "reasonFuzzy": "Investigator opinion regarding concurrent active malignancy is a subjective judgment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06225427",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06225427-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage IV (American Joint Committee on Cancer [AJCC] 8th edition) non-small cell lung cancer with an oncogenic ALK fusion",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06225427-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Stage IV (American Joint Committee on Cancer [AJCC] 8th edition) non-small cell lung cancer with an oncogenic ALK fusion",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06225427-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologies include adenocarcinoma, squamous cell carcinoma, adenosquamous adenocarcinoma, and NSCLC NOS (not otherwise specified)",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06225427-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06225427-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0-2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06225427-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥ 1500/mcL",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT06225427-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 100,000/mcL",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT06225427-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 9 g/dL without transfusion or erythropoietin (EPO) dependency (within 7 days of assessment)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT06225427-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Measured or calculated creatinine clearance (CrCl) ≥ 50mL/min (calculated per Cockcroft-Gault formula)",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT06225427-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Serum total bilirubin ≤ 1.5 X upper limit of normal (ULN) (per institutional guidelines) OR direct bilirubin ≤ ULN for subjects with total bilirubin levels > 1.5 ULN",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "1.5 X ULN (total bilirubin) or direct bilirubin <= ULN"
+      },
+      {
+        "id": "NCT06225427-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) ≤ 2.5 X ULN OR ≤ 5 X ULN for subjects with liver metastases",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "2.5 X ULN"
+      },
+      {
+        "id": "NCT06225427-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 2.5 X ULN OR ≤ 5 X ULN for subjects with liver metastases",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "2.5 X ULN"
+      },
+      {
+        "id": "NCT06225427-prior-flt3",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Received prior therapy with a FLT3 inhibitor",
+        "stringValue": "FLT3 inhibitor"
+      },
+      {
+        "id": "NCT06225427-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active and symptomatic central nervous system (CNS) metastases and/or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06225427-cohorts",
+        "polarity": "inclusion",
+        "sourceText": "The patient must belong to one of the following treatment cohorts. Cohort 1... Cohort 2... Cohort 3...",
+        "reasonFuzzy": "Multiple cohorts with overlapping and layered prior therapies are complex and cannot be expressed as a single typed prior therapy check."
+      },
+      {
+        "id": "NCT06225427-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1 criteria assessed per screening imaging",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06225427-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "If a cancerous lesion is easily and safely accessible, a pre-treatment biopsy of this lesion is strongly encouraged but NOT required",
+        "reasonFuzzy": "Willingness or ability to undergo a biopsy is a subjective procedure check."
+      },
+      {
+        "id": "NCT06225427-washout",
+        "polarity": "inclusion",
+        "sourceText": "At least 7 days must have elapsed since last anti-neoplastic TKI, chemotherapy, immunotherapy, or investigational agent",
+        "reasonFuzzy": "Washout window covering a broad group of multi-class therapies is not a simple typed prior therapy check."
+      },
+      {
+        "id": "NCT06225427-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Received palliative radiation within 7 days of enrollment",
+        "reasonFuzzy": "Palliative radiation washout does not map to a standard typed prior therapy check."
+      },
+      {
+        "id": "NCT06225427-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Has a concurrent active malignancy receiving interventional therapy unless it is the investigator's opinion that the concurrent active malignancy will NOT significantly impact the survival of the patient",
+        "reasonFuzzy": "Investigator opinion on concurrent malignancy impact is subjective."
+      }
+    ]
+  }
+}

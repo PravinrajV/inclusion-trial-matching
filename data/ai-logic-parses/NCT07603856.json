@@ -1,0 +1,527 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07603856",
+  "briefTitle": "A Study Evaluating The Combination of Immunotherapy With Radiotherapy in Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T11:58:31.626Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07603856-prior-pd1",
+      "kind": "prior_therapy_required",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have received exactly ONE prior line of anti-PD-1 or anti-PD-L1 therapy for non-small cell lung cancer.",
+      "stringValue": "anti-PD-1 or anti-PD-L1",
+      "evidence_quote": "Patients must have received exactly ONE prior line of anti-PD-1 or anti-PD-L1 therapy for non-small cell lung cancer.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07603856-egfr",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Patients with the following sensitizing mutations are ineligible, given known poor response to immunotherapy: EGFR, ALK, ROS1, RET, NTRK, HER2.",
+      "presence": "present",
+      "evidence_quote": "Patients with the following sensitizing mutations are ineligible, given known poor response to immunotherapy: EGFR, ALK, ROS1, RET, NTRK, HER2.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07603856-alk",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Patients with the following sensitizing mutations are ineligible, given known poor response to immunotherapy: EGFR, ALK, ROS1, RET, NTRK, HER2.",
+      "presence": "present",
+      "evidence_quote": "Patients with the following sensitizing mutations are ineligible, given known poor response to immunotherapy: EGFR, ALK, ROS1, RET, NTRK, HER2.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07603856-ros1",
+      "kind": "ros1_status",
+      "polarity": "exclusion",
+      "sourceText": "Patients with the following sensitizing mutations are ineligible, given known poor response to immunotherapy: EGFR, ALK, ROS1, RET, NTRK, HER2.",
+      "presence": "present",
+      "evidence_quote": "Patients with the following sensitizing mutations are ineligible, given known poor response to immunotherapy: EGFR, ALK, ROS1, RET, NTRK, HER2.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07603856-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥18 years",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥18 years",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07603856-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG Performance Status 0-2 (see Appendix A)",
+      "numberValue": 2,
+      "evidence_quote": "ECOG Performance Status 0-2 (see Appendix A)",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07603856-stage",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have histologically or cytologically confirmed metastatic or recurrent non-small cell lung cancer (NSCLC) with progression on prior immunotherapy",
+      "reasonFuzzy": "Metastatic or recurrent NSCLC is in scope, but there is no specific numerical stage list to emit a stage_in check."
+    },
+    {
+      "id": "NCT07603856-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have measurable disease per RECIST v1.1, defined as at least one lesion that can be accurately measured in at least one dimension with longest diameter ≥10 mm (or ≥15 mm short axis for lymph nodes) by CT or MRI",
+      "reasonFuzzy": "Measurable disease per RECIST v1.1 is subjective and not a typed kind."
+    },
+    {
+      "id": "NCT07603856-rt-lesion",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have at least one lesion that meets criteria for hypofractionated ablative RT treatment",
+      "reasonFuzzy": "Radiation treatment site criteria and tumor volume specifications are complex and subjective, not typed kinds."
+    },
+    {
+      "id": "NCT07603856-neoadj-rules",
+      "polarity": "inclusion",
+      "sourceText": "Special Cases for Neoadjuvant/Adjuvant Immunotherapy: If patient received neoadjuvant, adjuvant, or consolidation anti-PD-1/PD-L1 therapy for Stage I-III disease and progressed ≤365 days from initiation (Cycle 1 Day 1), this counts as the single allowed therapy for advanced disease...",
+      "reasonFuzzy": "Prior therapy counting logic based on time since neoadjuvant/adjuvant therapy initiation is complex and cannot be represented by a simple prior_lines check."
+    },
+    {
+      "id": "NCT07603856-other-mutations",
+      "polarity": "exclusion",
+      "sourceText": "Patients with the following sensitizing mutations are ineligible, given known poor response to immunotherapy: EGFR, ALK, ROS1, RET, NTRK, HER2.",
+      "reasonFuzzy": "RET and NTRK are not supported by the typed kinds list."
+    },
+    {
+      "id": "NCT07603856-brain",
+      "polarity": "inclusion",
+      "sourceText": "Patients with new or progressive brain metastases (active brain metastases) or leptomeningeal disease are eligible if the treating physician determines that immediate CNS specific treatment is not required and is unlikely to be required during the first cycle of therapy.",
+      "reasonFuzzy": "Eligibility for active brain metastases depends on physician judgment and treatment urgency, not a standard brain_mets check."
+    },
+    {
+      "id": "NCT07603856-malignancy",
+      "polarity": "inclusion",
+      "sourceText": "Patients with a prior or concurrent malignancy whose natural history or treatment does not have the potential to interfere with the safety or efficacy assessment of the investigational regimen are eligible for this trial.",
+      "reasonFuzzy": "Concurrent malignancy eligibility depends on investigator judgment."
+    },
+    {
+      "id": "NCT07603856-pneumonitis",
+      "polarity": "exclusion",
+      "sourceText": "Patients with history of (non-infectious) pneumonitis requiring corticosteroids.",
+      "reasonFuzzy": "History of pneumonitis requiring corticosteroids is an exclusion not covered by a typed kind."
+    },
+    {
+      "id": "NCT07603856-ild",
+      "polarity": "exclusion",
+      "sourceText": "Patients with evidence of interstitial lung disease.",
+      "reasonFuzzy": "Evidence of interstitial lung disease is an exclusion not covered by a typed kind."
+    },
+    {
+      "id": "NCT07603856-uncontrolled-illness",
+      "polarity": "exclusion",
+      "sourceText": "Patients with uncontrolled intercurrent illness.",
+      "reasonFuzzy": "Uncontrolled intercurrent illness is a clinical judgment."
+    },
+    {
+      "id": "NCT07603856-prior-rad",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have received prior radiation to any of the planned treatment sites (>10% dose overlap)",
+      "reasonFuzzy": "Prior radiation overlap with planned treatment sites is not a typed check."
+    },
+    {
+      "id": "NCT07603856-stage",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have histologically or cytologically confirmed metastatic or recurrent non-small cell lung cancer (NSCLC) with progression on prior immunotherapy",
+      "reasonFuzzy": "Metastatic or recurrent NSCLC is in scope, but no numbered stage list is given to use stage_in."
+    },
+    {
+      "id": "NCT07603856-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have measurable disease per RECIST v1.1, defined as at least one lesion that can be accurately measured in at least one dimension with longest diameter ≥10 mm (or ≥15 mm short axis for lymph nodes) by CT or MRI",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07603856-rt-lesion",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have at least one lesion that meets criteria for hypofractionated ablative RT treatment: Tumor volume 0.25 cc to 65 cc (approximately ≤5 cm maximal dimension)",
+      "reasonFuzzy": "Radiation-specific lesion sizing and criteria are complex and not represented by standard biomarker or lab kinds."
+    },
+    {
+      "id": "NCT07603856-prior-lines-detail",
+      "polarity": "inclusion",
+      "sourceText": "If patient received neoadjuvant, adjuvant, or consolidation anti-PD-1/PD-L1 therapy for Stage I-III disease and progressed ≤365 days from initiation (Cycle 1 Day 1), this counts as the single allowed therapy for advanced disease",
+      "reasonFuzzy": "Complex prior line time windows and neoadjuvant/adjuvant rules cannot be captured by a simple prior_lines check."
+    },
+    {
+      "id": "NCT07603856-targeted-mutations",
+      "polarity": "inclusion",
+      "sourceText": "Patients with the following sensitizing mutations must have previously received at least one of the appropriate targeted therapies, in addition to prior immunotherapy: BRAF, KRAS, MET.",
+      "reasonFuzzy": "Conditional inclusion rules for multiple specific biomarker alterations with prior targeted therapies cannot be represented in single typed checks."
+    },
+    {
+      "id": "NCT07603856-brain",
+      "polarity": "inclusion",
+      "sourceText": "Patients with new or progressive brain metastases (active brain metastases) or leptomeningeal disease are eligible if the treating physician determines that immediate CNS specific treatment is not required and is unlikely to be required during the first cycle of therapy.",
+      "reasonFuzzy": "Active brain metastases are allowed under specific physician discretion criteria, not a clean standard brain_mets check."
+    },
+    {
+      "id": "NCT07603856-pneumonitis",
+      "polarity": "exclusion",
+      "sourceText": "Patients with history of (non-infectious) pneumonitis requiring corticosteroids.",
+      "reasonFuzzy": "Pneumonitis history requiring corticosteroids is an exclusion not covered by standard typed checks."
+    },
+    {
+      "id": "NCT07603856-ild",
+      "polarity": "exclusion",
+      "sourceText": "Patients with evidence of interstitial lung disease.",
+      "reasonFuzzy": "Interstitial lung disease exclusion is not mapped to a typed kind."
+    },
+    {
+      "id": "NCT07603856-radiation-excl",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have received prior radiation to any of the planned treatment sites (>10% dose overlap)",
+      "reasonFuzzy": "Prior radiation and dose overlap exclusions are complex protocol-specific rules."
+    },
+    {
+      "id": "NCT07603856-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have received exactly ONE prior line of anti-PD-1 or anti-PD-L1 therapy for non-small cell lung cancer.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07603856-prior-lines-min",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have received exactly ONE prior line of anti-PD-1 or anti-PD-L1 therapy for non-small cell lung cancer.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07603856-braf",
+      "polarity": "inclusion",
+      "sourceText": "Patients with the following sensitizing mutations must have previously received at least one of the appropriate targeted therapies, in addition to prior immunotherapy: BRAF, KRAS, MET.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07603856-kras",
+      "polarity": "inclusion",
+      "sourceText": "Patients with the following sensitizing mutations must have previously received at least one of the appropriate targeted therapies, in addition to prior immunotherapy: BRAF, KRAS, MET.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 10,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 6,
+      "disagreements": 4,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "side": "a-only",
+          "kind": "prior_lines_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "side": "a-only",
+          "kind": "braf_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "a-only",
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 6,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 9
+    }
+  },
+  "runA": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 11,
+    "attempts": 1,
+    "ms": 8714
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 8540
+  },
+  "ms": 25254,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07603856",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07603856-prior-pd1",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have received exactly ONE prior line of anti-PD-1 or anti-PD-L1 therapy for non-small cell lung cancer.",
+        "stringValue": "anti-PD-1 or anti-PD-L1"
+      },
+      {
+        "id": "NCT07603856-prior-lines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have received exactly ONE prior line of anti-PD-1 or anti-PD-L1 therapy for non-small cell lung cancer.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07603856-prior-lines-min",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have received exactly ONE prior line of anti-PD-1 or anti-PD-L1 therapy for non-small cell lung cancer.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07603856-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with the following sensitizing mutations are ineligible, given known poor response to immunotherapy: EGFR, ALK, ROS1, RET, NTRK, HER2.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07603856-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with the following sensitizing mutations are ineligible, given known poor response to immunotherapy: EGFR, ALK, ROS1, RET, NTRK, HER2.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07603856-ros1",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with the following sensitizing mutations are ineligible, given known poor response to immunotherapy: EGFR, ALK, ROS1, RET, NTRK, HER2.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07603856-braf",
+        "kind": "braf_status",
+        "polarity": "inclusion",
+        "sourceText": "Patients with the following sensitizing mutations must have previously received at least one of the appropriate targeted therapies, in addition to prior immunotherapy: BRAF, KRAS, MET.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07603856-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Patients with the following sensitizing mutations must have previously received at least one of the appropriate targeted therapies, in addition to prior immunotherapy: BRAF, KRAS, MET.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07603856-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07603856-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance Status 0-2 (see Appendix A)",
+        "numberValue": 2
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07603856-stage",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have histologically or cytologically confirmed metastatic or recurrent non-small cell lung cancer (NSCLC) with progression on prior immunotherapy",
+        "reasonFuzzy": "Metastatic or recurrent NSCLC is in scope, but there is no specific numerical stage list to emit a stage_in check."
+      },
+      {
+        "id": "NCT07603856-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have measurable disease per RECIST v1.1, defined as at least one lesion that can be accurately measured in at least one dimension with longest diameter ≥10 mm (or ≥15 mm short axis for lymph nodes) by CT or MRI",
+        "reasonFuzzy": "Measurable disease per RECIST v1.1 is subjective and not a typed kind."
+      },
+      {
+        "id": "NCT07603856-rt-lesion",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have at least one lesion that meets criteria for hypofractionated ablative RT treatment",
+        "reasonFuzzy": "Radiation treatment site criteria and tumor volume specifications are complex and subjective, not typed kinds."
+      },
+      {
+        "id": "NCT07603856-neoadj-rules",
+        "polarity": "inclusion",
+        "sourceText": "Special Cases for Neoadjuvant/Adjuvant Immunotherapy: If patient received neoadjuvant, adjuvant, or consolidation anti-PD-1/PD-L1 therapy for Stage I-III disease and progressed ≤365 days from initiation (Cycle 1 Day 1), this counts as the single allowed therapy for advanced disease...",
+        "reasonFuzzy": "Prior therapy counting logic based on time since neoadjuvant/adjuvant therapy initiation is complex and cannot be represented by a simple prior_lines check."
+      },
+      {
+        "id": "NCT07603856-other-mutations",
+        "polarity": "exclusion",
+        "sourceText": "Patients with the following sensitizing mutations are ineligible, given known poor response to immunotherapy: EGFR, ALK, ROS1, RET, NTRK, HER2.",
+        "reasonFuzzy": "RET and NTRK are not supported by the typed kinds list."
+      },
+      {
+        "id": "NCT07603856-brain",
+        "polarity": "inclusion",
+        "sourceText": "Patients with new or progressive brain metastases (active brain metastases) or leptomeningeal disease are eligible if the treating physician determines that immediate CNS specific treatment is not required and is unlikely to be required during the first cycle of therapy.",
+        "reasonFuzzy": "Eligibility for active brain metastases depends on physician judgment and treatment urgency, not a standard brain_mets check."
+      },
+      {
+        "id": "NCT07603856-malignancy",
+        "polarity": "inclusion",
+        "sourceText": "Patients with a prior or concurrent malignancy whose natural history or treatment does not have the potential to interfere with the safety or efficacy assessment of the investigational regimen are eligible for this trial.",
+        "reasonFuzzy": "Concurrent malignancy eligibility depends on investigator judgment."
+      },
+      {
+        "id": "NCT07603856-pneumonitis",
+        "polarity": "exclusion",
+        "sourceText": "Patients with history of (non-infectious) pneumonitis requiring corticosteroids.",
+        "reasonFuzzy": "History of pneumonitis requiring corticosteroids is an exclusion not covered by a typed kind."
+      },
+      {
+        "id": "NCT07603856-ild",
+        "polarity": "exclusion",
+        "sourceText": "Patients with evidence of interstitial lung disease.",
+        "reasonFuzzy": "Evidence of interstitial lung disease is an exclusion not covered by a typed kind."
+      },
+      {
+        "id": "NCT07603856-uncontrolled-illness",
+        "polarity": "exclusion",
+        "sourceText": "Patients with uncontrolled intercurrent illness.",
+        "reasonFuzzy": "Uncontrolled intercurrent illness is a clinical judgment."
+      },
+      {
+        "id": "NCT07603856-prior-rad",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have received prior radiation to any of the planned treatment sites (>10% dose overlap)",
+        "reasonFuzzy": "Prior radiation overlap with planned treatment sites is not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07603856",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07603856-prior-therapy",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have received exactly ONE prior line of anti-PD-1 or anti-PD-L1 therapy for non-small cell lung cancer.",
+        "stringValue": "anti-PD-1 or anti-PD-L1"
+      },
+      {
+        "id": "NCT07603856-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07603856-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance Status 0-2 (see Appendix A)",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07603856-egfr-excl",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with the following sensitizing mutations are ineligible, given known poor response to immunotherapy: EGFR, ALK, ROS1, RET, NTRK, HER2.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07603856-alk-excl",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with the following sensitizing mutations are ineligible, given known poor response to immunotherapy: EGFR, ALK, ROS1, RET, NTRK, HER2.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07603856-ros1-excl",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with the following sensitizing mutations are ineligible, given known poor response to immunotherapy: EGFR, ALK, ROS1, RET, NTRK, HER2.",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07603856-stage",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have histologically or cytologically confirmed metastatic or recurrent non-small cell lung cancer (NSCLC) with progression on prior immunotherapy",
+        "reasonFuzzy": "Metastatic or recurrent NSCLC is in scope, but no numbered stage list is given to use stage_in."
+      },
+      {
+        "id": "NCT07603856-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have measurable disease per RECIST v1.1, defined as at least one lesion that can be accurately measured in at least one dimension with longest diameter ≥10 mm (or ≥15 mm short axis for lymph nodes) by CT or MRI",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07603856-rt-lesion",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have at least one lesion that meets criteria for hypofractionated ablative RT treatment: Tumor volume 0.25 cc to 65 cc (approximately ≤5 cm maximal dimension)",
+        "reasonFuzzy": "Radiation-specific lesion sizing and criteria are complex and not represented by standard biomarker or lab kinds."
+      },
+      {
+        "id": "NCT07603856-prior-lines-detail",
+        "polarity": "inclusion",
+        "sourceText": "If patient received neoadjuvant, adjuvant, or consolidation anti-PD-1/PD-L1 therapy for Stage I-III disease and progressed ≤365 days from initiation (Cycle 1 Day 1), this counts as the single allowed therapy for advanced disease",
+        "reasonFuzzy": "Complex prior line time windows and neoadjuvant/adjuvant rules cannot be captured by a simple prior_lines check."
+      },
+      {
+        "id": "NCT07603856-targeted-mutations",
+        "polarity": "inclusion",
+        "sourceText": "Patients with the following sensitizing mutations must have previously received at least one of the appropriate targeted therapies, in addition to prior immunotherapy: BRAF, KRAS, MET.",
+        "reasonFuzzy": "Conditional inclusion rules for multiple specific biomarker alterations with prior targeted therapies cannot be represented in single typed checks."
+      },
+      {
+        "id": "NCT07603856-brain",
+        "polarity": "inclusion",
+        "sourceText": "Patients with new or progressive brain metastases (active brain metastases) or leptomeningeal disease are eligible if the treating physician determines that immediate CNS specific treatment is not required and is unlikely to be required during the first cycle of therapy.",
+        "reasonFuzzy": "Active brain metastases are allowed under specific physician discretion criteria, not a clean standard brain_mets check."
+      },
+      {
+        "id": "NCT07603856-pneumonitis",
+        "polarity": "exclusion",
+        "sourceText": "Patients with history of (non-infectious) pneumonitis requiring corticosteroids.",
+        "reasonFuzzy": "Pneumonitis history requiring corticosteroids is an exclusion not covered by standard typed checks."
+      },
+      {
+        "id": "NCT07603856-ild",
+        "polarity": "exclusion",
+        "sourceText": "Patients with evidence of interstitial lung disease.",
+        "reasonFuzzy": "Interstitial lung disease exclusion is not mapped to a typed kind."
+      },
+      {
+        "id": "NCT07603856-radiation-excl",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have received prior radiation to any of the planned treatment sites (>10% dose overlap)",
+        "reasonFuzzy": "Prior radiation and dose overlap exclusions are complex protocol-specific rules."
+      }
+    ]
+  }
+}

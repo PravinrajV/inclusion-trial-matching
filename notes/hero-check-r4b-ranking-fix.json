@@ -1,0 +1,154 @@
+{
+  "cache": "/workspace/competitions/firebase-hybridai/inclusion/public/criteria-cache.json",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "trials": 277,
+  "alex": {
+    "persona": "Alex Rivera",
+    "id": "alex-rivera",
+    "reviewed": 277,
+    "strong": 9,
+    "possible": 198,
+    "unlikely": 70,
+    "first": {
+      "nctId": "NCT04486833",
+      "briefTitle": "Quaratusugene Ozeplasmid (Reqorsa) and Osimertinib in Patients With Advanced Lung Cancer Who Progressed on Osimertinib",
+      "officialTitle": "A Phase 1/2 Open-Label, Dose-Escalation and Clinical Response Study of Quaratusugene Ozeplasmid in Combination With Osimertinib in Patients With Advanced, Metastatic EGFR-Mutant, Metastatic Non-Small Cell Lung Cancer",
+      "tier": "strong",
+      "miles": 103,
+      "siteLabel": "Canton, OH, 103 miles",
+      "keyCriteriaMet": 4,
+      "keyCriteriaTotal": 6,
+      "metQuoted": 7,
+      "metChecks": [
+        {
+          "kind": "egfr_status",
+          "headline": "Requires an EGFR alteration: chart: EGFR exon 19 deletion.",
+          "quote": "The NSCLC must be epidermal growth factor receptor (EGFR) mutation positive-positive based on results from most recent tissue biopsy or most recent evaluation of circulating tumor ",
+          "hasQuote": true
+        },
+        {
+          "kind": "stage_in",
+          "headline": "Requires stage IIIA, IIIB, IIIC, IV, IVA, or IVB: chart shows stage IV.",
+          "quote": "Stage III or IV NSCLC or recurrent NSCLC that is not potentially curable by radiotherapy or surgery.",
+          "hasQuote": true
+        },
+        {
+          "kind": "ecog_max",
+          "headline": "Requires ECOG 0 or 1: chart shows ECOG 1.",
+          "quote": "Eastern Cooperative Oncology Group performance status (ECOG PS) score from 0 to 1.",
+          "hasQuote": true
+        },
+        {
+          "kind": "anc_min",
+          "headline": "ANC ≥ 1500/µL: chart shows 3200/µL.",
+          "quote": "Absolute neutrophil count (ANC) >1500/mm3, platelet count >100,000/mm3 within ≤28 days.",
+          "hasQuote": true
+        },
+        {
+          "kind": "platelets_min",
+          "headline": "Platelets ≥ 100000/µL: chart shows 210000/µL.",
+          "quote": "Absolute neutrophil count (ANC) >1500/mm3, platelet count >100,000/mm3 within ≤28 days.",
+          "hasQuote": true
+        },
+        {
+          "kind": "creatinine_max",
+          "headline": "Creatinine ≤ 1.5 mg/dL: chart shows 0.9 mg/dL.",
+          "quote": "Adequate renal function documented by serum creatinine of ≤1.5 mg/dL or calculated creatinine clearance >50 ml/min within ≤28 days.",
+          "hasQuote": true
+        },
+        {
+          "kind": "bilirubin_max",
+          "headline": "Total bilirubin ≤ 1.5 × ULN: chart shows 0.6 mg/dL.",
+          "quote": "Adequate hepatic function as documented by serum bilirubin <1.5 mg/dL and aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤2.5 X upper limit of normal (ULN) wit",
+          "hasQuote": true
+        }
+      ],
+      "discuss": [
+        "Must have a minimum of a 10-day osimertinib washout completed at the time of enrollment.",
+        "Must have measurable disease per RECIST 1.1.",
+        "Must be ≥28 days beyond major surgical procedures such as thoracotomy, laparotomy, or joint replacement and must not have evidence of wound dehiscence, active w",
+        "Must have and be willing to submit a prior tumor biopsy or undergo a biopsy during Screening to obtain tumor tissue for submission to a central laboratory for I"
+      ]
+    },
+    "heroOk": true
+  },
+  "sam": {
+    "persona": "Sam Okonkwo",
+    "id": "sam-okonkwo",
+    "reviewed": 277,
+    "strong": 4,
+    "possible": 200,
+    "unlikely": 73,
+    "first": {
+      "nctId": "NCT03093116",
+      "briefTitle": "A Study of Repotrectinib (TPX-0005) in Patients With Advanced Solid Tumors Harboring ALK, ROS1, or NTRK1-3 Rearrangements",
+      "officialTitle": "A Phase 1/2, Open-Label, Multi-Center, First-in-Human Study of the Safety, Tolerability, Pharmacokinetics, and Anti-Tumor Activity of TPX-0005 in Patients With Advanced Solid Tumors Harboring ALK, ROS1, or NTRK1-3 Rearrangements (TRIDENT-1)",
+      "tier": "strong",
+      "miles": 2,
+      "siteLabel": "Cincinnati, OH, 2 miles",
+      "keyCriteriaMet": 4,
+      "keyCriteriaTotal": 6,
+      "metQuoted": 8,
+      "metChecks": [
+        {
+          "kind": "alk_status",
+          "headline": "Requires an ALK alteration: chart: ALK rearrangement.",
+          "quote": "Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) (Stage IV, American Joint Committee on Cancer v.7)",
+          "hasQuote": true
+        },
+        {
+          "kind": "stage_in",
+          "headline": "Requires stage IV, IVA, or IVB: chart shows stage IV.",
+          "quote": "Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) (Stage IV, American Joint Committee on Cancer v.7)",
+          "hasQuote": true
+        },
+        {
+          "kind": "ecog_max",
+          "headline": "Requires ECOG 0 or 1: chart shows ECOG 0.",
+          "quote": "ECOG PS 0-1.",
+          "hasQuote": true
+        },
+        {
+          "kind": "anc_min",
+          "headline": "ANC ≥ 1500/µL: chart shows 4100/µL.",
+          "quote": "Absolute neutrophils count (ANC) ≥1500/mm3 (1.5 × 109/L);",
+          "hasQuote": true
+        },
+        {
+          "kind": "platelets_min",
+          "headline": "Platelets ≥ 100000/µL: chart shows 240000/µL.",
+          "quote": "Platelets (PLTs) ≥100,000/mm3 (100 × 109/L);",
+          "hasQuote": true
+        },
+        {
+          "kind": "hemoglobin_min",
+          "headline": "Hemoglobin ≥ 9 g/dL: chart shows 13.6 g/dL.",
+          "quote": "Hemoglobin ≥ 9.0 g/dL transfusions are allowed;",
+          "hasQuote": true
+        },
+        {
+          "kind": "egfr_min",
+          "headline": "eGFR ≥ 40 mL/min: chart shows 95 mL/min.",
+          "quote": "Serum creatinine or creatinine clearance Within normal limits or > 40 mL/min;",
+          "hasQuote": true
+        },
+        {
+          "kind": "bilirubin_max",
+          "headline": "Total bilirubin ≤ 1.5 × ULN: chart shows 0.5 mg/dL.",
+          "quote": "Total serum bilirubin < 1.5 × ULN;",
+          "hasQuote": true
+        }
+      ],
+      "discuss": [
+        "Capability to swallow capsules intact (without chewing, crushing, or opening).",
+        "At least 1 measurable target lesion according to RECIST version 1.1. CNS-only measurable disease as defined by RECIST version 1.1 is allowed.",
+        "Life expectancy ≥ 3 months.",
+        "Age ≥12 (or age ≥ 20 as required by local regulation)."
+      ]
+    },
+    "heroOk": true
+  },
+  "bothHeroesOk": true
+}

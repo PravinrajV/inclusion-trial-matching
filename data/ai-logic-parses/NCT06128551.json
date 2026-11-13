@@ -1,0 +1,285 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06128551",
+  "briefTitle": "Study of Elironrasib and Daraxonrasib as Monotherapies and Combination Therapy in Participants With Advanced KRAS G12C Mutant Solid Tumors",
+  "parsedAt": "2026-11-12T06:24:59.617Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06128551-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "18 years of age",
+      "numberValue": 18,
+      "evidence_quote": "18 years of age",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06128551-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06128551-stage",
+      "polarity": "inclusion",
+      "sourceText": "advanced or metastatic solid tumors not amendable to curative therapy",
+      "reasonFuzzy": "Advanced or metastatic solid tumors is a general term and does not provide a specific numbered stage list for NSCLC."
+    },
+    {
+      "id": "NCT06128551-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC, previously treated with immunotherapy, chemotherapy, and KRAS G12C (OFF) inhibitors",
+      "reasonFuzzy": "Prior therapy requirements differ by study phase and part, which cannot be expressed as a single prior_therapy_required or prior_lines check."
+    },
+    {
+      "id": "NCT06128551-cns-tumors",
+      "polarity": "exclusion",
+      "sourceText": "Primary central nervous system (CNS) tumors",
+      "reasonFuzzy": "Exclusion of primary CNS tumors is a diagnosis rule, not a brain metastases status check."
+    },
+    {
+      "id": "NCT06128551-stage",
+      "polarity": "inclusion",
+      "sourceText": "advanced or metastatic solid tumors not amendable to curative therapy",
+      "reasonFuzzy": "The record mentions advanced or metastatic solid tumors without a numbered stage list."
+    },
+    {
+      "id": "NCT06128551-prior",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC, previously treated with immunotherapy, chemotherapy, and KRAS G12C (OFF) inhibitors",
+      "reasonFuzzy": "Prior therapy lists multiple distinct classes and treatment histories depending on study cohorts, which cannot be expressed as a single prior_therapy_required check."
+    },
+    {
+      "id": "NCT06128551-cns",
+      "polarity": "exclusion",
+      "sourceText": "Primary central nervous system (CNS) tumors",
+      "reasonFuzzy": "Primary CNS tumors refer to the cancer type rather than metastatic brain lesions."
+    },
+    {
+      "id": "NCT06128551-brain",
+      "polarity": "exclusion",
+      "sourceText": "Active brain metastases",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06128551-brain",
+      "polarity": "exclusion",
+      "sourceText": "Active brain metastases",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06128551-kras",
+      "polarity": "inclusion",
+      "sourceText": "Histology: pathologically documented, KRAS G12C-mutated, advanced or metastatic solid tumors not amendable to curative therapy",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06128551-kras-variant",
+      "polarity": "inclusion",
+      "sourceText": "Histology: pathologically documented, KRAS G12C-mutated, advanced or metastatic solid tumors not amendable to curative therapy",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:untreated"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12c"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3505
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 9411
+  },
+  "ms": 20909,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06128551",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06128551-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06128551-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Histology: pathologically documented, KRAS G12C-mutated, advanced or metastatic solid tumors not amendable to curative therapy",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06128551-kras-variant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Histology: pathologically documented, KRAS G12C-mutated, advanced or metastatic solid tumors not amendable to curative therapy",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT06128551-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06128551-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active brain metastases",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06128551-stage",
+        "polarity": "inclusion",
+        "sourceText": "advanced or metastatic solid tumors not amendable to curative therapy",
+        "reasonFuzzy": "Advanced or metastatic solid tumors is a general term and does not provide a specific numbered stage list for NSCLC."
+      },
+      {
+        "id": "NCT06128551-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC, previously treated with immunotherapy, chemotherapy, and KRAS G12C (OFF) inhibitors",
+        "reasonFuzzy": "Prior therapy requirements differ by study phase and part, which cannot be expressed as a single prior_therapy_required or prior_lines check."
+      },
+      {
+        "id": "NCT06128551-cns-tumors",
+        "polarity": "exclusion",
+        "sourceText": "Primary central nervous system (CNS) tumors",
+        "reasonFuzzy": "Exclusion of primary CNS tumors is a diagnosis rule, not a brain metastases status check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06128551",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06128551-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06128551-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Histology: pathologically documented, KRAS G12C-mutated, advanced or metastatic solid tumors not amendable to curative therapy",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06128551-krasvariant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "pathologically documented, KRAS G12C-mutated, advanced or metastatic solid tumors not amendable to curative therapy",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT06128551-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06128551-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active brain metastases",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06128551-stage",
+        "polarity": "inclusion",
+        "sourceText": "advanced or metastatic solid tumors not amendable to curative therapy",
+        "reasonFuzzy": "The record mentions advanced or metastatic solid tumors without a numbered stage list."
+      },
+      {
+        "id": "NCT06128551-prior",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC, previously treated with immunotherapy, chemotherapy, and KRAS G12C (OFF) inhibitors",
+        "reasonFuzzy": "Prior therapy lists multiple distinct classes and treatment histories depending on study cohorts, which cannot be expressed as a single prior_therapy_required check."
+      },
+      {
+        "id": "NCT06128551-cns",
+        "polarity": "exclusion",
+        "sourceText": "Primary central nervous system (CNS) tumors",
+        "reasonFuzzy": "Primary CNS tumors refer to the cancer type rather than metastatic brain lesions."
+      }
+    ]
+  }
+}

@@ -1,0 +1,353 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06472245",
+  "briefTitle": "Trial of Therapeutic Cancer Vaccine OSE2101 in Patients With Non-Small Cell Lung Cancer and Secondary Resistance to Immune Checkpoint Inhibitor",
+  "parsedAt": "2026-11-12T09:23:44.563Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06472245-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male or female, aged ≥ 18 years",
+      "numberValue": 18,
+      "evidence_quote": "Male or female, aged ≥ 18 years",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06472245-hla",
+      "polarity": "inclusion",
+      "sourceText": "Patients expressing HLA-A2 phenotype in blood by pre-screening central laboratory",
+      "reasonFuzzy": "HLA phenotype screening is not a typed biomarker check supported by the schema."
+    },
+    {
+      "id": "NCT06472245-exceptions",
+      "polarity": "inclusion",
+      "sourceText": "for patients with squamous NSCLC, the molecular tests are not mandatory if age ≥ 50 years old and smoker ≥ 15 pack years; other sensitizing mutations known to be immunosensitive are eligible in case of lack of local access to targeted therapy (i.e.; KRAS G12C and BRAF mutations) after Sponsor' agreement.",
+      "reasonFuzzy": "Complex exception rules involving conditional molecular test waivers, smoking history, and sponsor agreement cannot be expressed as simple typed checks."
+    },
+    {
+      "id": "NCT06472245-hla",
+      "polarity": "inclusion",
+      "sourceText": "Patients expressing HLA-A2 phenotype in blood by pre-screening central laboratory",
+      "reasonFuzzy": "HLA phenotype checking is not a supported typed check kind."
+    },
+    {
+      "id": "NCT06472245-exceptions",
+      "polarity": "inclusion",
+      "sourceText": "for patients with squamous NSCLC, the molecular tests are not mandatory if age ≥ 50 years old and smoker ≥ 15 pack years; other sensitizing mutations known to be immunosensitive are eligible in case of lack of local access to targeted therapy (i.e.; KRAS G12C and BRAF mutations) after Sponsor' agreement.",
+      "reasonFuzzy": "Complex conditional mutation exemptions and smoking/age criteria cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT06472245-other",
+      "polarity": "inclusion",
+      "sourceText": "Other inclusion and exclusion criteria will apply per protocol.",
+      "reasonFuzzy": "Placeholder text referring to unspecified protocol criteria."
+    },
+    {
+      "id": "NCT06472245-histology",
+      "polarity": "inclusion",
+      "sourceText": "Patients with histologically or cytologically squamous or non-squamous documented NSCLC",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06472245-egfr",
+      "polarity": "exclusion",
+      "sourceText": "without EGFR, ALK and ROS1 gene alterations eligible for targeted therapy",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06472245-alk",
+      "polarity": "exclusion",
+      "sourceText": "without EGFR, ALK and ROS1 gene alterations eligible for targeted therapy",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06472245-ros1",
+      "polarity": "exclusion",
+      "sourceText": "without EGFR, ALK and ROS1 gene alterations eligible for targeted therapy",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06472245-egfr",
+      "polarity": "inclusion",
+      "sourceText": "without EGFR, ALK and ROS1 gene alterations eligible for targeted therapy",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06472245-alk",
+      "polarity": "inclusion",
+      "sourceText": "without EGFR, ALK and ROS1 gene alterations eligible for targeted therapy",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06472245-ros1",
+      "polarity": "inclusion",
+      "sourceText": "without EGFR, ALK and ROS1 gene alterations eligible for targeted therapy",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06472245-stage",
+      "polarity": "inclusion",
+      "sourceText": "Patients with histologically or cytologically squamous or non-squamous documented NSCLC, metastatic stage at study entry, not eligible for definite surgery or radiation",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06472245-prior",
+      "polarity": "inclusion",
+      "sourceText": "Patients with secondary resistance to ICI;",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 7,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 7,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos,squamous"
+        },
+        {
+          "side": "a-only",
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        },
+        {
+          "side": "a-only",
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        },
+        {
+          "side": "a-only",
+          "kind": "ros1_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        },
+        {
+          "side": "b-only",
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:absent"
+        },
+        {
+          "side": "b-only",
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "value": "p:absent"
+        },
+        {
+          "side": "b-only",
+          "kind": "ros1_status",
+          "polarity": "inclusion",
+          "value": "p:absent"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IV,IVA,IVB"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:ici"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 3604
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 6337
+  },
+  "ms": 17923,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06472245",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06472245-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female, aged ≥ 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06472245-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Patients with histologically or cytologically squamous or non-squamous documented NSCLC, metastatic stage at study entry, not eligible for definite surgery or radiation",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06472245-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Patients with histologically or cytologically squamous or non-squamous documented NSCLC",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06472245-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "without EGFR, ALK and ROS1 gene alterations eligible for targeted therapy",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06472245-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "without EGFR, ALK and ROS1 gene alterations eligible for targeted therapy",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06472245-ros1",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "without EGFR, ALK and ROS1 gene alterations eligible for targeted therapy",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06472245-prior",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Patients with secondary resistance to ICI;",
+        "stringValue": "ICI"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06472245-hla",
+        "polarity": "inclusion",
+        "sourceText": "Patients expressing HLA-A2 phenotype in blood by pre-screening central laboratory",
+        "reasonFuzzy": "HLA phenotype screening is not a typed biomarker check supported by the schema."
+      },
+      {
+        "id": "NCT06472245-exceptions",
+        "polarity": "inclusion",
+        "sourceText": "for patients with squamous NSCLC, the molecular tests are not mandatory if age ≥ 50 years old and smoker ≥ 15 pack years; other sensitizing mutations known to be immunosensitive are eligible in case of lack of local access to targeted therapy (i.e.; KRAS G12C and BRAF mutations) after Sponsor' agreement.",
+        "reasonFuzzy": "Complex exception rules involving conditional molecular test waivers, smoking history, and sponsor agreement cannot be expressed as simple typed checks."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06472245",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06472245-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female, aged ≥ 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06472245-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Patients with histologically or cytologically squamous or non-squamous documented NSCLC, metastatic stage at study entry, not eligible for definite surgery or radiation",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06472245-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "without EGFR, ALK and ROS1 gene alterations eligible for targeted therapy",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06472245-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "without EGFR, ALK and ROS1 gene alterations eligible for targeted therapy",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06472245-ros1",
+        "kind": "ros1_status",
+        "polarity": "inclusion",
+        "sourceText": "without EGFR, ALK and ROS1 gene alterations eligible for targeted therapy",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06472245-ici",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Patients with secondary resistance to ICI",
+        "stringValue": "ICI"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06472245-hla",
+        "polarity": "inclusion",
+        "sourceText": "Patients expressing HLA-A2 phenotype in blood by pre-screening central laboratory",
+        "reasonFuzzy": "HLA phenotype checking is not a supported typed check kind."
+      },
+      {
+        "id": "NCT06472245-exceptions",
+        "polarity": "inclusion",
+        "sourceText": "for patients with squamous NSCLC, the molecular tests are not mandatory if age ≥ 50 years old and smoker ≥ 15 pack years; other sensitizing mutations known to be immunosensitive are eligible in case of lack of local access to targeted therapy (i.e.; KRAS G12C and BRAF mutations) after Sponsor' agreement.",
+        "reasonFuzzy": "Complex conditional mutation exemptions and smoking/age criteria cannot be expressed as a single typed check."
+      },
+      {
+        "id": "NCT06472245-other",
+        "polarity": "inclusion",
+        "sourceText": "Other inclusion and exclusion criteria will apply per protocol.",
+        "reasonFuzzy": "Placeholder text referring to unspecified protocol criteria."
+      }
+    ]
+  }
+}

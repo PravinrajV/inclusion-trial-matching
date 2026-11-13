@@ -1,0 +1,234 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07903415",
+  "briefTitle": "A Study to Learn About the Study Medicine Called PF-08098488 in People With Advanced Solid Tumors.",
+  "parsedAt": "2026-11-12T12:03:05.303Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07903415-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "18 years of age or older",
+      "numberValue": 18,
+      "evidence_quote": "18 years of age or older",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07903415-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance status 0-1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) Performance status 0-1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07903415-nsclc",
+      "polarity": "inclusion",
+      "sourceText": "Advanced non-small cell lung cancer, pancreatic ductal adenocarcinoma, gastric cancer (including gastroesophageal junction carcinoma), or esophageal cancer.",
+      "reasonFuzzy": "The trial enrolls multiple solid tumor types including advanced NSCLC without an explicit numbered stage list."
+    },
+    {
+      "id": "NCT07903415-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease",
+      "reasonFuzzy": "Measurable disease is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07903415-lines",
+      "polarity": "inclusion",
+      "sourceText": "Must have received at least 1 prior approved systemic therapy:\n* Part 1: progression or relapse following standard treatments and have no other appropriate standard of care option.\n* Part 2: maximum of 2 prior lines of systemic therapy in the advanced setting.",
+      "reasonFuzzy": "Prior therapy requirements differ by study part, so they cannot be expressed as a single typed prior_lines or prior_therapy check."
+    },
+    {
+      "id": "NCT07903415-renal-hepatic",
+      "polarity": "exclusion",
+      "sourceText": "Unacceptable renal, hepatic, hematologic, cardiologic, pulmonary, or abnormalities as defined by the protocol.",
+      "reasonFuzzy": "Organ function exclusions refer to protocol definitions without explicit lab cutoffs."
+    },
+    {
+      "id": "NCT07903415-nsclc",
+      "polarity": "inclusion",
+      "sourceText": "Advanced non-small cell lung cancer, pancreatic ductal adenocarcinoma, gastric cancer (including gastroesophageal junction carcinoma), or esophageal cancer.",
+      "reasonFuzzy": "The trial enrolls multiple advanced solid tumors including NSCLC without explicitly stating a specific numbered stage list, and is in scope as advanced NSCLC."
+    },
+    {
+      "id": "NCT07903415-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease",
+      "reasonFuzzy": "Measurable disease is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07903415-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Must have received at least 1 prior approved systemic therapy:\n* Part 1: progression or relapse following standard treatments and have no other appropriate standard of care option.\n* Part 2: maximum of 2 prior lines of systemic therapy in the advanced setting.",
+      "reasonFuzzy": "Prior therapy and lines differ by study part, so they cannot be expressed as a single typed prior lines or prior therapy check."
+    },
+    {
+      "id": "NCT07903415-prior-adc",
+      "polarity": "exclusion",
+      "sourceText": "Received prior treatment with an antibody drug conjugate with an auristatin or microtubule inhibitor payload.",
+      "reasonFuzzy": "The exclusion refers to complex payload classes rather than a simple named drug or standard class."
+    },
+    {
+      "id": "NCT07903415-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Received prior treatment with an antibody drug conjugate with an auristatin or microtubule inhibitor payload.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:antibody drug conjugate with an auristatin or microtubule inhibitor payload"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 7723
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 14960
+  },
+  "ms": 30652,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07903415",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07903415-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 years of age or older",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07903415-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance status 0-1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07903415-prior-therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Received prior treatment with an antibody drug conjugate with an auristatin or microtubule inhibitor payload.",
+        "stringValue": "antibody drug conjugate with an auristatin or microtubule inhibitor payload"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07903415-nsclc",
+        "polarity": "inclusion",
+        "sourceText": "Advanced non-small cell lung cancer, pancreatic ductal adenocarcinoma, gastric cancer (including gastroesophageal junction carcinoma), or esophageal cancer.",
+        "reasonFuzzy": "The trial enrolls multiple solid tumor types including advanced NSCLC without an explicit numbered stage list."
+      },
+      {
+        "id": "NCT07903415-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease",
+        "reasonFuzzy": "Measurable disease is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07903415-lines",
+        "polarity": "inclusion",
+        "sourceText": "Must have received at least 1 prior approved systemic therapy:\n* Part 1: progression or relapse following standard treatments and have no other appropriate standard of care option.\n* Part 2: maximum of 2 prior lines of systemic therapy in the advanced setting.",
+        "reasonFuzzy": "Prior therapy requirements differ by study part, so they cannot be expressed as a single typed prior_lines or prior_therapy check."
+      },
+      {
+        "id": "NCT07903415-renal-hepatic",
+        "polarity": "exclusion",
+        "sourceText": "Unacceptable renal, hepatic, hematologic, cardiologic, pulmonary, or abnormalities as defined by the protocol.",
+        "reasonFuzzy": "Organ function exclusions refer to protocol definitions without explicit lab cutoffs."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07903415",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07903415-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 years of age or older",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07903415-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance status 0-1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07903415-nsclc",
+        "polarity": "inclusion",
+        "sourceText": "Advanced non-small cell lung cancer, pancreatic ductal adenocarcinoma, gastric cancer (including gastroesophageal junction carcinoma), or esophageal cancer.",
+        "reasonFuzzy": "The trial enrolls multiple advanced solid tumors including NSCLC without explicitly stating a specific numbered stage list, and is in scope as advanced NSCLC."
+      },
+      {
+        "id": "NCT07903415-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease",
+        "reasonFuzzy": "Measurable disease is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07903415-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "Must have received at least 1 prior approved systemic therapy:\n* Part 1: progression or relapse following standard treatments and have no other appropriate standard of care option.\n* Part 2: maximum of 2 prior lines of systemic therapy in the advanced setting.",
+        "reasonFuzzy": "Prior therapy and lines differ by study part, so they cannot be expressed as a single typed prior lines or prior therapy check."
+      },
+      {
+        "id": "NCT07903415-prior-adc",
+        "polarity": "exclusion",
+        "sourceText": "Received prior treatment with an antibody drug conjugate with an auristatin or microtubule inhibitor payload.",
+        "reasonFuzzy": "The exclusion refers to complex payload classes rather than a simple named drug or standard class."
+      }
+    ]
+  }
+}

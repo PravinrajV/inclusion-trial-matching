@@ -1,0 +1,757 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT03191149",
+  "briefTitle": "Testing Osimertinib as a Treatment for Lung Cancers With an EGFR Exon 20 Change",
+  "parsedAt": "2026-11-12T06:01:09.066Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT03191149-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age >= 18 years",
+      "numberValue": 18,
+      "evidence_quote": "Age >= 18 years",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT03191149-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin >= 9.0 g/L (within 4 weeks before registration)",
+      "numberValue": 9,
+      "evidence_quote": "Hemoglobin >= 9.0 g/L (within 4 weeks before registration)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT03191149-anc",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count >= 1,500/mcL (within 4 weeks before registration)",
+      "numberValue": 1500,
+      "evidence_quote": "Absolute neutrophil count >= 1,500/mcL (within 4 weeks before registration)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT03191149-platelets",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets >= 100,000/mcL (within 4 weeks before registration)",
+      "numberValue": 100000,
+      "evidence_quote": "Platelets >= 100,000/mcL (within 4 weeks before registration)",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT03191149-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have measurable disease; baseline measurements and ALL sites of disease must be obtained within 4 weeks to registration",
+      "reasonFuzzy": "Measurable disease by RECIST/baseline measurements is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT03191149-pdl1",
+      "polarity": "exclusion",
+      "sourceText": "Participants must have not previously received therapies targeting PDL1, PD1 or CTLA4 within 6 months (180 days) prior to registration",
+      "reasonFuzzy": "This rule specifies a 6-month washout window for multiple immunotherapy classes rather than a simple prior therapy exclusion list."
+    },
+    {
+      "id": "NCT03191149-leukocytes",
+      "polarity": "inclusion",
+      "sourceText": "Leukocytes/white blood cells >= 3,000/mcL (within 4 weeks before registration)",
+      "reasonFuzzy": "White blood cell count is not among the allowed typed check kinds."
+    },
+    {
+      "id": "NCT03191149-ild",
+      "polarity": "exclusion",
+      "sourceText": "Participants may not have clinically active or symptomatic interstitial lung disease or interstitial pneumonitis (i.e., affecting activities of daily living or requiring therapeutic intervention), or a history of clinically significant interstitial lung disease or radiation pneumonitis",
+      "reasonFuzzy": "Interstitial lung disease rules are subjective and involve clinical history/symptoms."
+    },
+    {
+      "id": "NCT03191149-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Participants may not have had radiation to the lung fields within four weeks (28 days) of starting treatment. For patients receiving palliative radiation to thoracic vertebrae, ribs or other sites where the radiation field includes the lungs, radiation must be completed at least two weeks before starting treatment. For all palliative radiation to all other sites, at least 7 days must have elapsed prior to starting treatment. At least six months (180 days) must have elapsed prior to starting treatment for radiation given with curative intent...",
+      "reasonFuzzy": "Complex site- and intent-dependent radiation washout rules cannot be captured in a single typed check."
+    },
+    {
+      "id": "NCT03191149-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants may not have clinically symptomatic brain metastases, leptomeningeal disease, or spinal cord compression. Patients may be on a stable dose of corticosteroids to control brain metastases if they have been on a stable dose for two weeks (14 days) prior to study treatment and are clinically asymptomatic",
+      "reasonFuzzy": "Wording allows stable treated brain metastases under specific corticosteroid conditions, which is not a clean allowedBrainMets status."
+    },
+    {
+      "id": "NCT03191149-lvef",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have an ECHO or a nuclear study (MUGA or first pass) within 4 weeks (28 days) prior to registration to treatment and must not have a left ventricular ejection fraction (LVEF) < institutional lower limit of normal (LLN). If the LLN is not defined at a site, the LVEF must be >= 50% for the patient to be eligible",
+      "reasonFuzzy": "Cardiac ejection fraction rule with conditional site lower limits is not a typed kind."
+    },
+    {
+      "id": "NCT03191149-qtc",
+      "polarity": "exclusion",
+      "sourceText": "Mean resting corrected QT interval (QTc) >= 470 msec obtained from 3 electrocardiograms (ECGs) using the screening clinic ECG machine-derived QTc value...",
+      "reasonFuzzy": "Detailed QTc and cardiac ECG criteria are not among the allowed typed kinds."
+    },
+    {
+      "id": "NCT03191149-second-cancer",
+      "polarity": "exclusion",
+      "sourceText": "Participants may not have a second, clinically active, cancer. Patients with second cancers which have been treated with curative intent and/or are currently inactive are allowed",
+      "reasonFuzzy": "Second primary cancer histories require clinical judgment and are not standard typed checks."
+    },
+    {
+      "id": "NCT03191149-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Participants may not be receiving any other investigational agents. Patients previously treated with investigational agents must complete a washout period of at least two weeks or five half-lives, whichever is longer, before starting treatment",
+      "reasonFuzzy": "Washout windows for prior investigational agents are complex and protocol-dependent."
+    },
+    {
+      "id": "NCT03191149-uncontrolled",
+      "polarity": "exclusion",
+      "sourceText": "Participants may not have uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements",
+      "reasonFuzzy": "General health status and intercurrent illness are subjective clinician judgments."
+    },
+    {
+      "id": "NCT03191149-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Patients must have no history of hypersensitivity active or inactive excipients of osimertinib (AZD9291) or drugs with a similar chemical structure or class to osimertinib (AZD9291)",
+      "reasonFuzzy": "Hypersensitivity to drug excipients or drug classes is a clinical judgment."
+    },
+    {
+      "id": "NCT03191149-cyp3a4",
+      "polarity": "exclusion",
+      "sourceText": "Patients must not currently be receiving (or unable to stop use prior to receiving the first dose of study treatment) medications or herbal supplements known to be potent inducers of CYP3A4 (at least 3 week prior). All patients must try to avoid concomitant use of any medications, herbal supplements and/or ingestion of foods with known inducer effects on CYP3A4",
+      "reasonFuzzy": "Concomitant medications and CYP3A4 inducer restriction rules are complex medication management criteria."
+    },
+    {
+      "id": "NCT03191149-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 x institutional upper limit of normal; for patients with known hepatic metastases AST and/or ALT =< 5 x ULN (within 4 weeks before registration)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT03191149-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 x institutional upper limit of normal; for patients with known hepatic metastases AST and/or ALT =< 5 x ULN (within 4 weeks before registration)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT03191149-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have measurable disease; baseline measurements and ALL sites of disease must be obtained within 4 weeks to registration",
+      "reasonFuzzy": "Measurable disease is a subjective imaging evaluation."
+    },
+    {
+      "id": "NCT03191149-ild",
+      "polarity": "exclusion",
+      "sourceText": "Participants may not have clinically active or symptomatic interstitial lung disease or interstitial pneumonitis (i.e., affecting activities of daily living or requiring therapeutic intervention), or a history of clinically significant interstitial lung disease or radiation pneumonitis",
+      "reasonFuzzy": "Interstitial lung disease rule includes clinical severity and history components not reducible to a standard typed check."
+    },
+    {
+      "id": "NCT03191149-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Participants may not have had radiation to the lung fields within four weeks (28 days) of starting treatment. ...",
+      "reasonFuzzy": "Complex radiation washout windows involving multiple sites and treatment intent are not a single lab or stage cutoff."
+    },
+    {
+      "id": "NCT03191149-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants may not have clinically symptomatic brain metastases, leptomeningeal disease, or spinal cord compression. Patients may be on a stable dose of corticosteroids to control brain metastases if they have been on a stable dose for two weeks (14 days) prior to study treatment and are clinically asymptomatic",
+      "reasonFuzzy": "Mentions symptomatic brain metastases and corticosteroid stability which is not a simple structured brain_mets rule."
+    },
+    {
+      "id": "NCT03191149-echolvef",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have an ECHO or a nuclear study ... must not have a left ventricular ejection fraction (LVEF) < institutional lower limit of normal (LLN). If the LLN is not defined at a site, the LVEF must be >= 50%",
+      "reasonFuzzy": "LVEF cutoff is conditional on site definitions or set to 50% conditionally."
+    },
+    {
+      "id": "NCT03191149-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Participants may not have any of the following cardiac criteria: Mean resting corrected QT interval (QTc) >= 470 msec ... Symptomatic heart failure - New York Heart Association (NYHA) grade II-IV",
+      "reasonFuzzy": "Contains multiple intricate cardiac rules including QTc cutoffs, ECG abnormalities, and NYHA class."
+    },
+    {
+      "id": "NCT03191149-secondcancer",
+      "polarity": "exclusion",
+      "sourceText": "Participants may not have a second, clinically active, cancer. Patients with second cancers which have been treated with curative intent and/or are currently inactive are allowed",
+      "reasonFuzzy": "Second cancer activity is a clinical judgment."
+    },
+    {
+      "id": "NCT03191149-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Participants may not be receiving any other investigational agents. Patients previously treated with investigational agents must complete a washout period of at least two weeks or five half-lives, whichever is longer",
+      "reasonFuzzy": "Complex alternative washout period."
+    },
+    {
+      "id": "NCT03191149-uncontrolled",
+      "polarity": "exclusion",
+      "sourceText": "Participants may not have uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements",
+      "reasonFuzzy": "Uncontrolled intercurrent illness is a clinical judgment."
+    },
+    {
+      "id": "NCT03191149-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Patients must have no history of hypersensitivity active or inactive excipients of osimertinib (AZD9291) or drugs with a similar chemical structure or class to osimertinib",
+      "reasonFuzzy": "Hypersensitivity rule includes drug classes."
+    },
+    {
+      "id": "NCT03191149-cyp3a4",
+      "polarity": "exclusion",
+      "sourceText": "Patients must not currently be receiving (or unable to stop use prior to receiving the first dose of study treatment) medications or herbal supplements known to be potent inducers of CYP3A4 (at least 3 week prior)",
+      "reasonFuzzy": "Concomitant medication restriction for CYP3A4 inducers."
+    },
+    {
+      "id": "NCT03191149-leukocytes",
+      "polarity": "inclusion",
+      "sourceText": "Leukocytes/white blood cells >= 3,000/mcL (within 4 weeks before registration)",
+      "reasonFuzzy": "Leukocytes is not an allowed typed check kind."
+    },
+    {
+      "id": "NCT03191149-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) ... =< 3 x institutional upper limit of normal; for patients with known hepatic metastases AST and/or ALT =< 5 x ULN",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT03191149-alt",
+      "polarity": "inclusion",
+      "sourceText": "alanine aminotransferase (ALT) ... =< 3 x institutional upper limit of normal; for patients with known hepatic metastases AST and/or ALT =< 5 x ULN",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT03191149-priorthx2",
+      "polarity": "exclusion",
+      "sourceText": "Participants must have not previously received therapies targeting PDL1, PD1 or CTLA4 within 6 months (180 days) prior to registration",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT03191149-stage",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have advanced disease - either stage IV disease, stage IIIB disease not amenable to definitive multi-modality therapy, or recurrent disease after a prior diagnosis of stage I-III disease. All staging is via the American Joint Committee on Cancer (AJCC)/International Association for the Study of Lung Cancer (IASLC) 7th edition staging criteria",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT03191149-egfr-var",
+      "polarity": "inclusion",
+      "sourceText": "An EGFR exon 20 insertion mutation must be detected in the tumor tissue.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT03191149-prior-line",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have previously received at least one line of therapy for their advanced lung cancer; there are no restrictions on the maximum number of prior therapies allowed",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT03191149-prior-osimertinib",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have previously received osimertinib",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT03191149-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status =< 1",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT03191149-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin =< 1.5 x upper limit of normal (ULN) if no liver metastases or =< 3 times ULN in the presence of documented Gilbert's syndrome (unconjugated hyperbilirubinemia) or liver metastases (within 4 weeks before registration)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT03191149-creatinine",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine =< 1.5 x institutional upper limit of normal (within 4 weeks before registration)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 11,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) "
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) "
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 12,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) ... =< 3 x institutional upper limit of normal; for patients with known hepatic metastases AST and/or ALT =< 5 x ULN"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "alanine aminotransferase (ALT) ... =< 3 x institutional upper limit of normal; for patients with known hepatic metastases AST and/or ALT =< 5 x ULN"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 11,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:pdl1, pd1 or ctla4"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 7,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIIB,IV,IVA,IVB"
+        },
+        {
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:exon 20 insertion"
+        },
+        {
+          "kind": "prior_lines_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:osimertinib"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "creatinine_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        }
+      ],
+      "normalizerTypedCount": 8
+    }
+  },
+  "runA": {
+    "typedEmitted": 13,
+    "fuzzyEmitted": 13,
+    "attempts": 1,
+    "ms": 6991
+  },
+  "runB": {
+    "typedEmitted": 14,
+    "fuzzyEmitted": 12,
+    "attempts": 1,
+    "ms": 6197
+  },
+  "ms": 21196,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT03191149",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT03191149-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have advanced disease - either stage IV disease, stage IIIB disease not amenable to definitive multi-modality therapy, or recurrent disease after a prior diagnosis of stage I-III disease. All staging is via the American Joint Committee on Cancer (AJCC)/International Association for the Study of Lung Cancer (IASLC) 7th edition staging criteria",
+        "stages": [
+          "IIIB",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT03191149-egfr-var",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "An EGFR exon 20 insertion mutation must be detected in the tumor tissue.",
+        "stringValue": "exon 20 insertion"
+      },
+      {
+        "id": "NCT03191149-prior-line",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have previously received at least one line of therapy for their advanced lung cancer; there are no restrictions on the maximum number of prior therapies allowed",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT03191149-prior-osimertinib",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have previously received osimertinib",
+        "stringValue": "osimertinib"
+      },
+      {
+        "id": "NCT03191149-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age >= 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT03191149-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status =< 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT03191149-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin >= 9.0 g/L (within 4 weeks before registration)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT03191149-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count >= 1,500/mcL (within 4 weeks before registration)",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT03191149-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets >= 100,000/mcL (within 4 weeks before registration)",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT03191149-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin =< 1.5 x upper limit of normal (ULN) if no liver metastases or =< 3 times ULN in the presence of documented Gilbert's syndrome (unconjugated hyperbilirubinemia) or liver metastases (within 4 weeks before registration)",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "1.5 x ULN"
+      },
+      {
+        "id": "NCT03191149-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 x institutional upper limit of normal; for patients with known hepatic metastases AST and/or ALT =< 5 x ULN (within 4 weeks before registration)",
+        "numberValue": 3,
+        "stringValue": "3 x ULN"
+      },
+      {
+        "id": "NCT03191149-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 3 x institutional upper limit of normal; for patients with known hepatic metastases AST and/or ALT =< 5 x ULN (within 4 weeks before registration)",
+        "numberValue": 3,
+        "stringValue": "3 x ULN"
+      },
+      {
+        "id": "NCT03191149-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine =< 1.5 x institutional upper limit of normal (within 4 weeks before registration)",
+        "numberValue": 1.5,
+        "stringValue": "1.5 x ULN"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT03191149-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have measurable disease; baseline measurements and ALL sites of disease must be obtained within 4 weeks to registration",
+        "reasonFuzzy": "Measurable disease by RECIST/baseline measurements is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT03191149-pdl1",
+        "polarity": "exclusion",
+        "sourceText": "Participants must have not previously received therapies targeting PDL1, PD1 or CTLA4 within 6 months (180 days) prior to registration",
+        "reasonFuzzy": "This rule specifies a 6-month washout window for multiple immunotherapy classes rather than a simple prior therapy exclusion list."
+      },
+      {
+        "id": "NCT03191149-leukocytes",
+        "polarity": "inclusion",
+        "sourceText": "Leukocytes/white blood cells >= 3,000/mcL (within 4 weeks before registration)",
+        "reasonFuzzy": "White blood cell count is not among the allowed typed check kinds."
+      },
+      {
+        "id": "NCT03191149-ild",
+        "polarity": "exclusion",
+        "sourceText": "Participants may not have clinically active or symptomatic interstitial lung disease or interstitial pneumonitis (i.e., affecting activities of daily living or requiring therapeutic intervention), or a history of clinically significant interstitial lung disease or radiation pneumonitis",
+        "reasonFuzzy": "Interstitial lung disease rules are subjective and involve clinical history/symptoms."
+      },
+      {
+        "id": "NCT03191149-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Participants may not have had radiation to the lung fields within four weeks (28 days) of starting treatment. For patients receiving palliative radiation to thoracic vertebrae, ribs or other sites where the radiation field includes the lungs, radiation must be completed at least two weeks before starting treatment. For all palliative radiation to all other sites, at least 7 days must have elapsed prior to starting treatment. At least six months (180 days) must have elapsed prior to starting treatment for radiation given with curative intent...",
+        "reasonFuzzy": "Complex site- and intent-dependent radiation washout rules cannot be captured in a single typed check."
+      },
+      {
+        "id": "NCT03191149-brain",
+        "polarity": "exclusion",
+        "sourceText": "Participants may not have clinically symptomatic brain metastases, leptomeningeal disease, or spinal cord compression. Patients may be on a stable dose of corticosteroids to control brain metastases if they have been on a stable dose for two weeks (14 days) prior to study treatment and are clinically asymptomatic",
+        "reasonFuzzy": "Wording allows stable treated brain metastases under specific corticosteroid conditions, which is not a clean allowedBrainMets status."
+      },
+      {
+        "id": "NCT03191149-lvef",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have an ECHO or a nuclear study (MUGA or first pass) within 4 weeks (28 days) prior to registration to treatment and must not have a left ventricular ejection fraction (LVEF) < institutional lower limit of normal (LLN). If the LLN is not defined at a site, the LVEF must be >= 50% for the patient to be eligible",
+        "reasonFuzzy": "Cardiac ejection fraction rule with conditional site lower limits is not a typed kind."
+      },
+      {
+        "id": "NCT03191149-qtc",
+        "polarity": "exclusion",
+        "sourceText": "Mean resting corrected QT interval (QTc) >= 470 msec obtained from 3 electrocardiograms (ECGs) using the screening clinic ECG machine-derived QTc value...",
+        "reasonFuzzy": "Detailed QTc and cardiac ECG criteria are not among the allowed typed kinds."
+      },
+      {
+        "id": "NCT03191149-second-cancer",
+        "polarity": "exclusion",
+        "sourceText": "Participants may not have a second, clinically active, cancer. Patients with second cancers which have been treated with curative intent and/or are currently inactive are allowed",
+        "reasonFuzzy": "Second primary cancer histories require clinical judgment and are not standard typed checks."
+      },
+      {
+        "id": "NCT03191149-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Participants may not be receiving any other investigational agents. Patients previously treated with investigational agents must complete a washout period of at least two weeks or five half-lives, whichever is longer, before starting treatment",
+        "reasonFuzzy": "Washout windows for prior investigational agents are complex and protocol-dependent."
+      },
+      {
+        "id": "NCT03191149-uncontrolled",
+        "polarity": "exclusion",
+        "sourceText": "Participants may not have uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements",
+        "reasonFuzzy": "General health status and intercurrent illness are subjective clinician judgments."
+      },
+      {
+        "id": "NCT03191149-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Patients must have no history of hypersensitivity active or inactive excipients of osimertinib (AZD9291) or drugs with a similar chemical structure or class to osimertinib (AZD9291)",
+        "reasonFuzzy": "Hypersensitivity to drug excipients or drug classes is a clinical judgment."
+      },
+      {
+        "id": "NCT03191149-cyp3a4",
+        "polarity": "exclusion",
+        "sourceText": "Patients must not currently be receiving (or unable to stop use prior to receiving the first dose of study treatment) medications or herbal supplements known to be potent inducers of CYP3A4 (at least 3 week prior). All patients must try to avoid concomitant use of any medications, herbal supplements and/or ingestion of foods with known inducer effects on CYP3A4",
+        "reasonFuzzy": "Concomitant medications and CYP3A4 inducer restriction rules are complex medication management criteria."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT03191149",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT03191149-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have advanced disease - either stage IV disease, stage IIIB disease not amenable to definitive multi-modality therapy, or recurrent disease after a prior diagnosis of stage I-III disease.",
+        "stages": [
+          "IIIB",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT03191149-egfrvariant",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "An EGFR exon 20 insertion mutation must be detected in the tumor tissue.",
+        "stringValue": "exon 20 insertion"
+      },
+      {
+        "id": "NCT03191149-priorlines",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have previously received at least one line of therapy for their advanced lung cancer",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT03191149-priorthx1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have previously received osimertinib",
+        "stringValue": "osimertinib"
+      },
+      {
+        "id": "NCT03191149-priorthx2",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participants must have not previously received therapies targeting PDL1, PD1 or CTLA4 within 6 months (180 days) prior to registration",
+        "exceptions": "within 6 months (180 days) prior to registration",
+        "stringValue": "PDL1, PD1 or CTLA4"
+      },
+      {
+        "id": "NCT03191149-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age >= 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT03191149-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status =< 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT03191149-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin >= 9.0 g/L (within 4 weeks before registration)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT03191149-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count >= 1,500/mcL (within 4 weeks before registration)",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT03191149-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets >= 100,000/mcL (within 4 weeks before registration)",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT03191149-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin =< 1.5 x upper limit of normal (ULN) if no liver metastases or =< 3 times ULN in the presence of documented Gilbert's syndrome (unconjugated hyperbilirubinemia) or liver metastases",
+        "exceptions": "=< 3 times ULN in the presence of documented Gilbert's syndrome or liver metastases",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT03191149-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) ... =< 3 x institutional upper limit of normal; for patients with known hepatic metastases AST and/or ALT =< 5 x ULN",
+        "exceptions": "for patients with known hepatic metastases AST and/or ALT =< 5 x ULN",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT03191149-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "alanine aminotransferase (ALT) ... =< 3 x institutional upper limit of normal; for patients with known hepatic metastases AST and/or ALT =< 5 x ULN",
+        "exceptions": "for patients with known hepatic metastases AST and/or ALT =< 5 x ULN",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT03191149-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine =< 1.5 x institutional upper limit of normal (within 4 weeks before registration)",
+        "numberValue": 1.5
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT03191149-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have measurable disease; baseline measurements and ALL sites of disease must be obtained within 4 weeks to registration",
+        "reasonFuzzy": "Measurable disease is a subjective imaging evaluation."
+      },
+      {
+        "id": "NCT03191149-ild",
+        "polarity": "exclusion",
+        "sourceText": "Participants may not have clinically active or symptomatic interstitial lung disease or interstitial pneumonitis (i.e., affecting activities of daily living or requiring therapeutic intervention), or a history of clinically significant interstitial lung disease or radiation pneumonitis",
+        "reasonFuzzy": "Interstitial lung disease rule includes clinical severity and history components not reducible to a standard typed check."
+      },
+      {
+        "id": "NCT03191149-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Participants may not have had radiation to the lung fields within four weeks (28 days) of starting treatment. ...",
+        "reasonFuzzy": "Complex radiation washout windows involving multiple sites and treatment intent are not a single lab or stage cutoff."
+      },
+      {
+        "id": "NCT03191149-brain",
+        "polarity": "exclusion",
+        "sourceText": "Participants may not have clinically symptomatic brain metastases, leptomeningeal disease, or spinal cord compression. Patients may be on a stable dose of corticosteroids to control brain metastases if they have been on a stable dose for two weeks (14 days) prior to study treatment and are clinically asymptomatic",
+        "reasonFuzzy": "Mentions symptomatic brain metastases and corticosteroid stability which is not a simple structured brain_mets rule."
+      },
+      {
+        "id": "NCT03191149-echolvef",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have an ECHO or a nuclear study ... must not have a left ventricular ejection fraction (LVEF) < institutional lower limit of normal (LLN). If the LLN is not defined at a site, the LVEF must be >= 50%",
+        "reasonFuzzy": "LVEF cutoff is conditional on site definitions or set to 50% conditionally."
+      },
+      {
+        "id": "NCT03191149-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Participants may not have any of the following cardiac criteria: Mean resting corrected QT interval (QTc) >= 470 msec ... Symptomatic heart failure - New York Heart Association (NYHA) grade II-IV",
+        "reasonFuzzy": "Contains multiple intricate cardiac rules including QTc cutoffs, ECG abnormalities, and NYHA class."
+      },
+      {
+        "id": "NCT03191149-secondcancer",
+        "polarity": "exclusion",
+        "sourceText": "Participants may not have a second, clinically active, cancer. Patients with second cancers which have been treated with curative intent and/or are currently inactive are allowed",
+        "reasonFuzzy": "Second cancer activity is a clinical judgment."
+      },
+      {
+        "id": "NCT03191149-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Participants may not be receiving any other investigational agents. Patients previously treated with investigational agents must complete a washout period of at least two weeks or five half-lives, whichever is longer",
+        "reasonFuzzy": "Complex alternative washout period."
+      },
+      {
+        "id": "NCT03191149-uncontrolled",
+        "polarity": "exclusion",
+        "sourceText": "Participants may not have uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements",
+        "reasonFuzzy": "Uncontrolled intercurrent illness is a clinical judgment."
+      },
+      {
+        "id": "NCT03191149-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Patients must have no history of hypersensitivity active or inactive excipients of osimertinib (AZD9291) or drugs with a similar chemical structure or class to osimertinib",
+        "reasonFuzzy": "Hypersensitivity rule includes drug classes."
+      },
+      {
+        "id": "NCT03191149-cyp3a4",
+        "polarity": "exclusion",
+        "sourceText": "Patients must not currently be receiving (or unable to stop use prior to receiving the first dose of study treatment) medications or herbal supplements known to be potent inducers of CYP3A4 (at least 3 week prior)",
+        "reasonFuzzy": "Concomitant medication restriction for CYP3A4 inducers."
+      },
+      {
+        "id": "NCT03191149-leukocytes",
+        "polarity": "inclusion",
+        "sourceText": "Leukocytes/white blood cells >= 3,000/mcL (within 4 weeks before registration)",
+        "reasonFuzzy": "Leukocytes is not an allowed typed check kind."
+      }
+    ]
+  }
+}

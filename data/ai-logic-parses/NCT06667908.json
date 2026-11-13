@@ -1,0 +1,249 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06667908",
+  "briefTitle": "A Study of JNJ-90301900 in Combination With Chemoradiation Followed by Consolidation Immunotherapy for Non-Small Cell Lung Cancer (NSCLC)",
+  "parsedAt": "2026-11-12T10:30:02.560Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06667908-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Have an eastern cooperative oncology group (ECOG) performance status of 0 to 1",
+      "numberValue": 1,
+      "evidence_quote": "Have an eastern cooperative oncology group (ECOG) performance status of 0 to 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06667908-soc",
+      "polarity": "inclusion",
+      "sourceText": "Must be a candidate for standard of care (SOC) treatment of non small cell lung cancer (NSCLC) by concurrent platinum-based doublet chemotherapy with radiation therapy (cCRT) followed by consolidation durvalumab treatment as determined by the investigator and per local guidelines at screening",
+      "reasonFuzzy": "Investigator discretion and subjective candidacy determination."
+    },
+    {
+      "id": "NCT06667908-target",
+      "polarity": "inclusion",
+      "sourceText": "Have at least 1 target lesion (primary lung lesion or involved lymph node\\[s\\]) per RECIST version 1.1 that is amenable to intratumoral and/or intranodal injection and intensity modulated radiation therapy (IMRT) as determined by the investigator at screening",
+      "reasonFuzzy": "Measurable/target lesion per RECIST and procedural amenability are subjective imaging and investigator-dependent assessments."
+    },
+    {
+      "id": "NCT06667908-soc",
+      "polarity": "inclusion",
+      "sourceText": "Must be a candidate for standard of care (SOC) treatment of non small cell lung cancer (NSCLC) by concurrent platinum-based doublet chemotherapy with radiation therapy (cCRT) followed by consolidation durvalumab treatment as determined by the investigator and per local guidelines at screening",
+      "reasonFuzzy": "Candidate determination is based on investigator judgment and local guidelines."
+    },
+    {
+      "id": "NCT06667908-pathology",
+      "polarity": "inclusion",
+      "sourceText": "Have a medical history of pathologically (histologically or cytologically) proven diagnosis of NSCLC within 3 months prior to enrollment/randomization",
+      "reasonFuzzy": "Pathologically proven diagnosis timing is a general condition requirement, not a typed biomarker or histology check."
+    },
+    {
+      "id": "NCT06667908-target-lesion",
+      "polarity": "inclusion",
+      "sourceText": "Have at least 1 target lesion (primary lung lesion or involved lymph node[s]) per RECIST version 1.1 that is amenable to intratumoral and/or intranodal injection and intensity modulated radiation therapy (IMRT) as determined by the investigator at screening",
+      "reasonFuzzy": "Involves RECIST assessment and procedural amenability determined by investigator discretion."
+    },
+    {
+      "id": "NCT06667908-immunodeficiency",
+      "polarity": "exclusion",
+      "sourceText": "Medical history of: (a) Primary immunodeficiency (b) Organ transplant that requires therapeutic immunosuppression",
+      "reasonFuzzy": "Medical history exclusion items for immunodeficiency and organ transplant do not map to allowed typed kinds."
+    },
+    {
+      "id": "NCT06667908-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Any of the following within 3 months prior to enrollment/randomization: severe or unstable angina, myocardial infarction, clinically significant ventricular arrhythmias or heart failure New York heart association functional classification class III to IV",
+      "reasonFuzzy": "Cardiac history and NYHA functional class criteria are clinical judgments not mapped to typed kinds."
+    },
+    {
+      "id": "NCT06667908-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Another concurrent or prior primary malignancy within the last 36 months at informed consent",
+      "reasonFuzzy": "Prior malignancy timeframe is an exclusion condition not matching available typed kinds."
+    },
+    {
+      "id": "NCT06667908-allergies",
+      "polarity": "exclusion",
+      "sourceText": "Known allergies, hypersensitivity, or intolerance to any ingredients of JNJ-90301900 crystalline solution, platinum-based doublet chemotherapy (ChT), or durvalumab",
+      "reasonFuzzy": "Allergies and hypersensitivities are general exclusion criteria."
+    },
+    {
+      "id": "NCT06667908-coagulation",
+      "polarity": "exclusion",
+      "sourceText": "History of coagulation disorders, including: (a) Active bleeding diathesis or requirement for therapeutic anticoagulation or antiplatelet that cannot be interrupted or altered for JNJ-90301900 injection procedures, (b) Major thromboembolic events (for example, pulmonary embolism, cerebrovascular accident) within 3 months of enrollment or randomization",
+      "reasonFuzzy": "Coagulation and anticoagulation management depend on procedural flexibility and investigator discretion."
+    },
+    {
+      "id": "NCT06667908-stage",
+      "polarity": "inclusion",
+      "sourceText": "Have locally advanced unresectable stage III NSCLC according to the eighth edition lung cancer stage classification",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIIA,IIIB,IIIC"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 4820
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 3451
+  },
+  "ms": 16224,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06667908",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06667908-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Have locally advanced unresectable stage III NSCLC according to the eighth edition lung cancer stage classification",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT06667908-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an eastern cooperative oncology group (ECOG) performance status of 0 to 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06667908-soc",
+        "polarity": "inclusion",
+        "sourceText": "Must be a candidate for standard of care (SOC) treatment of non small cell lung cancer (NSCLC) by concurrent platinum-based doublet chemotherapy with radiation therapy (cCRT) followed by consolidation durvalumab treatment as determined by the investigator and per local guidelines at screening",
+        "reasonFuzzy": "Investigator discretion and subjective candidacy determination."
+      },
+      {
+        "id": "NCT06667908-target",
+        "polarity": "inclusion",
+        "sourceText": "Have at least 1 target lesion (primary lung lesion or involved lymph node\\[s\\]) per RECIST version 1.1 that is amenable to intratumoral and/or intranodal injection and intensity modulated radiation therapy (IMRT) as determined by the investigator at screening",
+        "reasonFuzzy": "Measurable/target lesion per RECIST and procedural amenability are subjective imaging and investigator-dependent assessments."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06667908",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06667908-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Have locally advanced unresectable stage III NSCLC according to the eighth edition lung cancer stage classification",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT06667908-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have an eastern cooperative oncology group (ECOG) performance status of 0 to 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06667908-soc",
+        "polarity": "inclusion",
+        "sourceText": "Must be a candidate for standard of care (SOC) treatment of non small cell lung cancer (NSCLC) by concurrent platinum-based doublet chemotherapy with radiation therapy (cCRT) followed by consolidation durvalumab treatment as determined by the investigator and per local guidelines at screening",
+        "reasonFuzzy": "Candidate determination is based on investigator judgment and local guidelines."
+      },
+      {
+        "id": "NCT06667908-pathology",
+        "polarity": "inclusion",
+        "sourceText": "Have a medical history of pathologically (histologically or cytologically) proven diagnosis of NSCLC within 3 months prior to enrollment/randomization",
+        "reasonFuzzy": "Pathologically proven diagnosis timing is a general condition requirement, not a typed biomarker or histology check."
+      },
+      {
+        "id": "NCT06667908-target-lesion",
+        "polarity": "inclusion",
+        "sourceText": "Have at least 1 target lesion (primary lung lesion or involved lymph node[s]) per RECIST version 1.1 that is amenable to intratumoral and/or intranodal injection and intensity modulated radiation therapy (IMRT) as determined by the investigator at screening",
+        "reasonFuzzy": "Involves RECIST assessment and procedural amenability determined by investigator discretion."
+      },
+      {
+        "id": "NCT06667908-immunodeficiency",
+        "polarity": "exclusion",
+        "sourceText": "Medical history of: (a) Primary immunodeficiency (b) Organ transplant that requires therapeutic immunosuppression",
+        "reasonFuzzy": "Medical history exclusion items for immunodeficiency and organ transplant do not map to allowed typed kinds."
+      },
+      {
+        "id": "NCT06667908-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Any of the following within 3 months prior to enrollment/randomization: severe or unstable angina, myocardial infarction, clinically significant ventricular arrhythmias or heart failure New York heart association functional classification class III to IV",
+        "reasonFuzzy": "Cardiac history and NYHA functional class criteria are clinical judgments not mapped to typed kinds."
+      },
+      {
+        "id": "NCT06667908-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Another concurrent or prior primary malignancy within the last 36 months at informed consent",
+        "reasonFuzzy": "Prior malignancy timeframe is an exclusion condition not matching available typed kinds."
+      },
+      {
+        "id": "NCT06667908-allergies",
+        "polarity": "exclusion",
+        "sourceText": "Known allergies, hypersensitivity, or intolerance to any ingredients of JNJ-90301900 crystalline solution, platinum-based doublet chemotherapy (ChT), or durvalumab",
+        "reasonFuzzy": "Allergies and hypersensitivities are general exclusion criteria."
+      },
+      {
+        "id": "NCT06667908-coagulation",
+        "polarity": "exclusion",
+        "sourceText": "History of coagulation disorders, including: (a) Active bleeding diathesis or requirement for therapeutic anticoagulation or antiplatelet that cannot be interrupted or altered for JNJ-90301900 injection procedures, (b) Major thromboembolic events (for example, pulmonary embolism, cerebrovascular accident) within 3 months of enrollment or randomization",
+        "reasonFuzzy": "Coagulation and anticoagulation management depend on procedural flexibility and investigator discretion."
+      }
+    ]
+  }
+}

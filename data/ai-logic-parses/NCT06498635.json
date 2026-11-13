@@ -1,0 +1,540 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06498635",
+  "briefTitle": "Immunotherapy After Surgery for People Who Have No Remaining Cancer Cells After Standard Treatment for Early-Stage Non-Small Cell Lung Cancer, INSIGHT Trial",
+  "parsedAt": "2026-11-12T09:25:47.196Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06498635-prior-therapy",
+      "kind": "prior_therapy_required",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have received at least two cycles of neoadjuvant platinum-based chemotherapy and anti-PD-1 or anti-PD-L1 therapy.",
+      "stringValue": "platinum-based chemotherapy",
+      "evidence_quote": "Participants must have received at least two cycles of neoadjuvant platinum-based chemotherapy and anti-PD-1 or anti-PD-L1 therapy.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06498635-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Participant must be ≥ 18 years old at time of study entry",
+      "numberValue": 18,
+      "evidence_quote": "Participant must be ≥ 18 years old at time of study entry",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06498635-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin > 9.0 g/dL (within 28 days prior to randomization)",
+      "numberValue": 9,
+      "evidence_quote": "Hemoglobin > 9.0 g/dL (within 28 days prior to randomization)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06498635-egfr-min",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a calculated creatinine clearance ≥ 40 mL/min using the following Cockcroft-Gault formula.",
+      "numberValue": 40,
+      "evidence_quote": "Participants must have a calculated creatinine clearance ≥ 40 mL/min using the following Cockcroft-Gault formula.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06498635-resection",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have had a complete (R0) resection of NSCLC (with appropriate lymph node sampling as defined by the National Comprehensive Cancer Network [NCCN] guidelines) within 84 days (12 weeks) prior to randomization. Acceptable types of surgical resection are: lobectomy, sleeve resection, bi-lobectomy, or pneumonectomy. Wedge resection is not allowed.",
+      "reasonFuzzy": "Surgical resection details and complete R0 status are procedural criteria, not typed biomarker or organ checks."
+    },
+    {
+      "id": "NCT06498635-pcr",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a pathologic complete response (pCR) (no viable tumor in the resected specimen or lymph nodes), as determined by local pathology review",
+      "reasonFuzzy": "Pathologic response evaluation is a specialized clinical assessment outside standard typed checks."
+    },
+    {
+      "id": "NCT06498635-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a PD-L1 status result (e.g. [< 1% versus >= 1% or unknown])",
+      "reasonFuzzy": "Requiring a status result to be known/reported is not a simple pdl1_min or pdl1_max cutoff check."
+    },
+    {
+      "id": "NCT06498635-washout",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have received any prior systemic therapy (systemic chemotherapy, immunotherapy or investigational drug) within 28 days prior to randomization",
+      "reasonFuzzy": "Prior systemic therapy washout window involves multiple categories of therapies and is not mapped to a single typed prior therapy exclusion."
+    },
+    {
+      "id": "NCT06498635-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count ≥ 1.5 x 10^3/uL (within 28 days prior to randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06498635-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelets ≥ 100 x 10^3/uL (within 28 days prior to randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06498635-stage-n3",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have histologically or cytological confirmed diagnosis of clinical stage II-IIIB (excluding clinical N3 disease) non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "Exclusion of clinical N3 disease is a nodal descriptor exception within the stage range."
+    },
+    {
+      "id": "NCT06498635-resection",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have had a complete (R0) resection of NSCLC (with appropriate lymph node sampling as defined by the National Comprehensive Cancer Network [NCCN] guidelines) within 84 days (12 weeks) prior to randomization. Acceptable types of surgical resection are: lobectomy, sleeve resection, bi-lobectomy, or pneumonectomy. Wedge resection is not allowed.",
+      "reasonFuzzy": "Surgical resection type and complete R0 status are surgical criteria, not typed biomarker or organ function kinds."
+    },
+    {
+      "id": "NCT06498635-pcr",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a pathologic complete response (pCR) (no viable tumor in the resected specimen or lymph nodes), as determined by local pathology review",
+      "reasonFuzzy": "Pathologic complete response is a specialized pathology assessment after surgery, not a typed genomic or lab check."
+    },
+    {
+      "id": "NCT06498635-pdl1-status",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a PD-L1 status result (e.g. [< 1% versus >= 1% or unknown])",
+      "reasonFuzzy": "Requiring a test result to be known or documented without a specific cutoff does not fit pdl1_min or pdl1_max."
+    },
+    {
+      "id": "NCT06498635-prior-therapy-combo",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have received at least two cycles of neoadjuvant platinum-based chemotherapy and anti-PD-1 or anti-PD-L1 therapy. The neoadjuvant treatment must be Food and Drug Administration (FDA) approved and standard of care as listed in NCCN guidelines",
+      "reasonFuzzy": "Requires a complex combination of neoadjuvant platinum-based chemotherapy and anti-PD-1/anti-PD-L1 therapy, which cannot be captured by a single prior_therapy_required value."
+    },
+    {
+      "id": "NCT06498635-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count ≥ 1.5 x 10^3/uL (within 28 days prior to randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06498635-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelets ≥ 100 x 10^3/uL (within 28 days prior to randomization)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06498635-stage",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have histologically or cytological confirmed diagnosis of clinical stage II-IIIB (excluding clinical N3 disease) non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06498635-egfr",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have known EGFR mutations, or ALK gene fusion",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06498635-alk",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have known EGFR mutations, or ALK gene fusion",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06498635-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Participant must have Zubrod performance status of 0-2",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06498635-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin ≤ 1 x institutional upper limit of normal (ULN) unless history of Gilbert's disease. Participants with history of Gilbert's disease must have total bilirubin ≤ 5 x institutional ULN (within 28 days prior to randomization)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06498635-ast-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate transaminase (AST)/alanine transaminase (ALT) ≤ 3 × institutional ULN (within 28 days prior to randomization)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06498635-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate transaminase (AST)/alanine transaminase (ALT) ≤ 3 × institutional ULN (within 28 days prior to randomization)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 11,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count ≥ 1.5 x 10^3/uL (within 28 days prior to randomization)"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelets ≥ 100 x 10^3/uL (within 28 days prior to randomization)"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 11,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count ≥ 1.5 x 10^3/uL (within 28 days prior to randomization)"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelets ≥ 100 x 10^3/uL (within 28 days prior to randomization)"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 11,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 7,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIA,IIB,IIIA,IIIB"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:2"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        }
+      ],
+      "normalizerTypedCount": 7
+    }
+  },
+  "runA": {
+    "typedEmitted": 13,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 11286
+  },
+  "runB": {
+    "typedEmitted": 13,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 9021
+  },
+  "ms": 28312,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06498635",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06498635-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically or cytological confirmed diagnosis of clinical stage II-IIIB (excluding clinical N3 disease) non-small cell lung cancer (NSCLC)",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT06498635-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have known EGFR mutations, or ALK gene fusion",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06498635-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have known EGFR mutations, or ALK gene fusion",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06498635-prior-therapy",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have received at least two cycles of neoadjuvant platinum-based chemotherapy and anti-PD-1 or anti-PD-L1 therapy.",
+        "stringValue": "platinum-based chemotherapy"
+      },
+      {
+        "id": "NCT06498635-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant must be ≥ 18 years old at time of study entry",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06498635-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant must have Zubrod performance status of 0-2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06498635-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin > 9.0 g/dL (within 28 days prior to randomization)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT06498635-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count ≥ 1.5 x 10^3/uL (within 28 days prior to randomization)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT06498635-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 100 x 10^3/uL (within 28 days prior to randomization)",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT06498635-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1 x institutional upper limit of normal (ULN) unless history of Gilbert's disease. Participants with history of Gilbert's disease must have total bilirubin ≤ 5 x institutional ULN (within 28 days prior to randomization)",
+        "numberValue": 1,
+        "stages": [],
+        "stringValue": "1 x ULN"
+      },
+      {
+        "id": "NCT06498635-ast-alt",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate transaminase (AST)/alanine transaminase (ALT) ≤ 3 × institutional ULN (within 28 days prior to randomization)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06498635-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate transaminase (AST)/alanine transaminase (ALT) ≤ 3 × institutional ULN (within 28 days prior to randomization)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06498635-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a calculated creatinine clearance ≥ 40 mL/min using the following Cockcroft-Gault formula.",
+        "numberValue": 40
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06498635-resection",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have had a complete (R0) resection of NSCLC (with appropriate lymph node sampling as defined by the National Comprehensive Cancer Network [NCCN] guidelines) within 84 days (12 weeks) prior to randomization. Acceptable types of surgical resection are: lobectomy, sleeve resection, bi-lobectomy, or pneumonectomy. Wedge resection is not allowed.",
+        "reasonFuzzy": "Surgical resection details and complete R0 status are procedural criteria, not typed biomarker or organ checks."
+      },
+      {
+        "id": "NCT06498635-pcr",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a pathologic complete response (pCR) (no viable tumor in the resected specimen or lymph nodes), as determined by local pathology review",
+        "reasonFuzzy": "Pathologic response evaluation is a specialized clinical assessment outside standard typed checks."
+      },
+      {
+        "id": "NCT06498635-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a PD-L1 status result (e.g. [< 1% versus >= 1% or unknown])",
+        "reasonFuzzy": "Requiring a status result to be known/reported is not a simple pdl1_min or pdl1_max cutoff check."
+      },
+      {
+        "id": "NCT06498635-washout",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have received any prior systemic therapy (systemic chemotherapy, immunotherapy or investigational drug) within 28 days prior to randomization",
+        "reasonFuzzy": "Prior systemic therapy washout window involves multiple categories of therapies and is not mapped to a single typed prior therapy exclusion."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06498635",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06498635-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically or cytological confirmed diagnosis of clinical stage II-IIIB (excluding clinical N3 disease) non-small cell lung cancer (NSCLC)",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT06498635-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have known EGFR mutations, or ALK gene fusion",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06498635-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have known EGFR mutations, or ALK gene fusion",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06498635-prior-therapy",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have received at least two cycles of neoadjuvant platinum-based chemotherapy and anti-PD-1 or anti-PD-L1 therapy.",
+        "stringValue": "platinum-based chemotherapy"
+      },
+      {
+        "id": "NCT06498635-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant must be ≥ 18 years old at time of study entry",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06498635-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant must have Zubrod performance status of 0-2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06498635-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin > 9.0 g/dL (within 28 days prior to randomization)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT06498635-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count ≥ 1.5 x 10^3/uL (within 28 days prior to randomization)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT06498635-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 100 x 10^3/uL (within 28 days prior to randomization)",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT06498635-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1 x institutional upper limit of normal (ULN) unless history of Gilbert's disease. Participants with history of Gilbert's disease must have total bilirubin ≤ 5 x institutional ULN (within 28 days prior to randomization)",
+        "numberValue": 1,
+        "stages": [],
+        "stringValue": "unless history of Gilbert's disease. Participants with history of Gilbert's disease must have total bilirubin ≤ 5 x institutional ULN"
+      },
+      {
+        "id": "NCT06498635-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate transaminase (AST)/alanine transaminase (ALT) ≤ 3 × institutional ULN (within 28 days prior to randomization)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06498635-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate transaminase (AST)/alanine transaminase (ALT) ≤ 3 × institutional ULN (within 28 days prior to randomization)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06498635-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a calculated creatinine clearance ≥ 40 mL/min using the following Cockcroft-Gault formula.",
+        "numberValue": 40
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06498635-stage-n3",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically or cytological confirmed diagnosis of clinical stage II-IIIB (excluding clinical N3 disease) non-small cell lung cancer (NSCLC)",
+        "reasonFuzzy": "Exclusion of clinical N3 disease is a nodal descriptor exception within the stage range."
+      },
+      {
+        "id": "NCT06498635-resection",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have had a complete (R0) resection of NSCLC (with appropriate lymph node sampling as defined by the National Comprehensive Cancer Network [NCCN] guidelines) within 84 days (12 weeks) prior to randomization. Acceptable types of surgical resection are: lobectomy, sleeve resection, bi-lobectomy, or pneumonectomy. Wedge resection is not allowed.",
+        "reasonFuzzy": "Surgical resection type and complete R0 status are surgical criteria, not typed biomarker or organ function kinds."
+      },
+      {
+        "id": "NCT06498635-pcr",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a pathologic complete response (pCR) (no viable tumor in the resected specimen or lymph nodes), as determined by local pathology review",
+        "reasonFuzzy": "Pathologic complete response is a specialized pathology assessment after surgery, not a typed genomic or lab check."
+      },
+      {
+        "id": "NCT06498635-pdl1-status",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a PD-L1 status result (e.g. [< 1% versus >= 1% or unknown])",
+        "reasonFuzzy": "Requiring a test result to be known or documented without a specific cutoff does not fit pdl1_min or pdl1_max."
+      },
+      {
+        "id": "NCT06498635-prior-therapy-combo",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have received at least two cycles of neoadjuvant platinum-based chemotherapy and anti-PD-1 or anti-PD-L1 therapy. The neoadjuvant treatment must be Food and Drug Administration (FDA) approved and standard of care as listed in NCCN guidelines",
+        "reasonFuzzy": "Requires a complex combination of neoadjuvant platinum-based chemotherapy and anti-PD-1/anti-PD-L1 therapy, which cannot be captured by a single prior_therapy_required value."
+      }
+    ]
+  }
+}

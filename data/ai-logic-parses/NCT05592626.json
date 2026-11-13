@@ -1,0 +1,552 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05592626",
+  "briefTitle": "A Study of a Selective T Cell Receptor (TCR) Targeting, Bifunctional Antibody-fusion Molecule STAR0602 in Participants With Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T06:14:35.650Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05592626-prior-therapies",
+      "polarity": "inclusion",
+      "sourceText": "Participants should not have received more than three regimens of prior therapies for their advanced or metastatic diseases. For Phase 2 Cohorts 8 and 10 (see below), participants should not have received more than one line of prior therapy.",
+      "reasonFuzzy": "Prior therapy line limits vary by phase and cohort, preventing representation as a single typed prior_lines_max check."
+    },
+    {
+      "id": "NCT05592626-phase1-tumors",
+      "polarity": "inclusion",
+      "sourceText": "For Phase 1, participants must have one of the following solid tumors: High mutational burden (TMB-H), Microsatellite Instability (MSI-H)/DNA mismatch repair (dMMR), Virally associated tumors, Solid tumors generally considered as immunogenic (e.g., melanoma and renal cell carcinoma) are eligible without prior testing for TMB, MSI or viral status after the Sponsor's approval.",
+      "reasonFuzzy": "Tumor eligibility in Phase 1 relies on biomarker subgroups and sponsor discretion rather than a single standardized histology check."
+    },
+    {
+      "id": "NCT05592626-phase2-tumors",
+      "polarity": "inclusion",
+      "sourceText": "For Phase 2, participants must have one of the following solid tumors: TMB-H (not enrolling), MSI-H/dMMR (not enrolling), CRC (both Ras wild type and mutant) (not enrolling), NSCLC (recurrent or Primary Stage 4), CRC with pMMR/MSS (without TMB-H requirement)",
+      "reasonFuzzy": "Phase 2 cohort criteria include specific mutations and statuses that do not map to simple typed histological categories alone."
+    },
+    {
+      "id": "NCT05592626-cns-mets",
+      "polarity": "inclusion",
+      "sourceText": "Symptomatic central nervous system (CNS) metastases must have been treated, be asymptomatic for ≥ 14 days, and meet the following at the time of enrollment: No concurrent treatment for CNS disease (e.g., surgery, radiation, corticosteroids > 10 mg prednisone/day or equivalent); No concurrent leptomeningeal disease or cord compression.",
+      "reasonFuzzy": "The CNS metastases criteria include multi-part requirements regarding symptom duration, concurrent treatments, and specific neurological conditions that cannot be expressed as a standard brain_mets check."
+    },
+    {
+      "id": "NCT05592626-cpi-tox",
+      "polarity": "inclusion",
+      "sourceText": "Subjects who have previously received a CPI (e.g., anti-PD-L1, anti-PD-1, anti CTLA 4) prior to enrollment must have CPI immune-related toxicity resolved to either Grade ≤ 1 or baseline (prior to the CPI) to be eligible for enrollment.",
+      "reasonFuzzy": "Resolution of prior CPI immune-related toxicity involves specific conditions and exceptions that cannot be reduced to a typed check."
+    },
+    {
+      "id": "NCT05592626-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Participants with a history of known autoimmune disease with exceptions of: Vitiligo; Psoriasis, atopic dermatitis or other autoimmune skin condition not requiring systemic treatment; History of Graves' disease, now euthyroid for > 4 weeks; Hypothyroidism managed by thyroid replacement; Alopecia; Arthritis managed without systemic therapy beyond oral nonsteroidal anti-inflammatory drugs. Adrenal insufficiency well controlled on replacement therapy.",
+      "reasonFuzzy": "Autoimmune disease history with multiple specific disease-dependent exceptions cannot be modeled as a single typed check."
+    },
+    {
+      "id": "NCT05592626-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery or traumatic injury within 8 weeks before first dose of study drug.",
+      "reasonFuzzy": "Washout window for major surgery is not a lab cutoff."
+    },
+    {
+      "id": "NCT05592626-wounds",
+      "polarity": "exclusion",
+      "sourceText": "Unhealed wounds from surgery or injury.",
+      "reasonFuzzy": "Unhealed wounds is a clinical judgment-based criterion."
+    },
+    {
+      "id": "NCT05592626-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with >10 mg per day of prednisone (or equivalent) or other immune-suppressive drugs within 7 days prior to the initiation of study drug. Exceptions may be made for patients who have had allergic reaction to iodinated contrast media. Steroids for topical, ophthalmic, inhaled, or nasal administration are allowed.",
+      "reasonFuzzy": "Systemic corticosteroid and immunosuppressive washout window with route exceptions is not a standard lab check."
+    },
+    {
+      "id": "NCT05592626-prior-therapy-washout",
+      "polarity": "exclusion",
+      "sourceText": "Prior therapy within the following timeframe before planned infusion of STAR0602 as follows: Cytotoxic chemotherapy, small molecule inhibitors, radiation, interventional radiology procedure, or similar investigational therapies within ≤ 2 weeks or participants who have not recovered (i.e., ≤ Grade 1 or to baseline) from AEs due to a previously administered agent; Monoclonal antibodies, antibody-drug conjugates, radioimmunoconjugates, or similar investigational therapies within 6 weeks prior to the initiation of study drug or participants who have not recovered (i.e., ≤ Grade 1 or to baseline) from AEs due to agents administered more than 4 weeks earlier. Note: Participants with ≤ Grade 2 neuropathy or ≤ Grade 2 alopecia are an exception to this criterion and may qualify for the study.",
+      "reasonFuzzy": "Complex multimodality prior therapy washout windows and adverse event recovery rules cannot be represented as simple typed items."
+    },
+    {
+      "id": "NCT05592626-clin-sig-disease",
+      "polarity": "exclusion",
+      "sourceText": "Clinically significant cardiovascular/vascular disease, gastrointestinal disorders, inflammatory processes, pulmonary compromises",
+      "reasonFuzzy": "Clinically significant conditions require investigator judgment."
+    },
+    {
+      "id": "NCT05592626-infection",
+      "polarity": "exclusion",
+      "sourceText": "Active viral, bacterial, or systemic fungal infection requiring parenteral treatment within 7 days prior to the initiation of study drug.",
+      "reasonFuzzy": "Active infection requiring parenteral treatment involves treatment modality and timeframe criteria not covered by typed checks."
+    },
+    {
+      "id": "NCT05592626-vaccination",
+      "polarity": "exclusion",
+      "sourceText": "Vaccination with any live virus vaccine within 4 weeks prior to the initiation of study drug administration. Inactivated annual influenza vaccination is allowed.",
+      "reasonFuzzy": "Live virus vaccination washout period is not a standard lab cutoff."
+    },
+    {
+      "id": "NCT05592626-hiv-hep",
+      "polarity": "exclusion",
+      "sourceText": "Participants who are known to be human immunodeficiency virus positive or hepatitis B or C positive and have uncontrolled disease.",
+      "reasonFuzzy": "Viral positivity coupled with disease control status is not a simple binary presence check."
+    },
+    {
+      "id": "NCT05592626-second-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Second primary invasive malignancy not in remission for ≥ 1 year. Exceptions include non-melanoma locally advanced skin cancer, cervical carcinoma in situ, localized prostate cancer (Gleason score ≤ 7), resected melanoma in situ, or any malignancy considered to be indolent and never required systemic therapy, with the exception of indolent lymphomas.",
+      "reasonFuzzy": "Second primary malignancy history with specific histological exceptions and remission duration is not a typed check."
+    },
+    {
+      "id": "NCT05592626-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant, likely to become pregnant, or lactating women (where pregnancy is defined as the state of a female after conception and until the termination of gestation).",
+      "reasonFuzzy": "Pregnancy and lactation status are subjective or standard reproductive conditions, not typed clinical lab checks."
+    },
+    {
+      "id": "NCT05592626-hepatic-mets",
+      "polarity": "exclusion",
+      "sourceText": "Hepatic metastases unless adequately treated, either locally (e.g., by surgery, radiofrequency ablation, or chemoembolization) or systemically or both, and stable for 3 months.",
+      "reasonFuzzy": "Hepatic metastases treatment and stability criteria involve clinical evaluations not captured by standard typed checks."
+    },
+    {
+      "id": "NCT05592626-bulky-disease",
+      "polarity": "exclusion",
+      "sourceText": "Bulky disease defined as any lesion ≥ 5 cm in greatest dimension unless approved by the Sponsor.",
+      "reasonFuzzy": "Bulky disease dimension with sponsor approval exception requires imaging and sponsor judgment."
+    },
+    {
+      "id": "NCT05592626-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Participants should not have received more than three regimens of prior therapies for their advanced or metastatic diseases. For Phase 2 Cohorts 8 and 10 (see below), participants should not have received more than one line of prior therapy.",
+      "reasonFuzzy": "Prior-line limits vary depending on study phase and cohort, preventing expression as a single typed check."
+    },
+    {
+      "id": "NCT05592626-phase1-tumors",
+      "polarity": "inclusion",
+      "sourceText": "For Phase 1, participants must have one of the following solid tumors: High mutational burden (TMB-H), Microsatellite Instability (MSI-H)/DNA mismatch repair (dMMR), Virally associated tumors, Solid tumors generally considered as immunogenic...",
+      "reasonFuzzy": "Phase 1 tumor requirements include broad categories and investigator discretion."
+    },
+    {
+      "id": "NCT05592626-brain-mets",
+      "polarity": "inclusion",
+      "sourceText": "Symptomatic central nervous system (CNS) metastases must have been treated, be asymptomatic for ≥ 14 days, and meet the following at the time of enrollment: No concurrent treatment for CNS disease (e.g., surgery, radiation, corticosteroids > 10 mg prednisone/day or equivalent); No concurrent leptomeningeal disease or cord compression.",
+      "reasonFuzzy": "Brain metastases rules involve complex criteria regarding treatment timing, symptom duration, and concurrent therapies, which cannot be captured by a simple typed brain_mets check."
+    },
+    {
+      "id": "NCT05592626-cpi",
+      "polarity": "inclusion",
+      "sourceText": "Subjects who have previously received a CPI (e.g., anti-PD-L1, anti-PD-1, anti CTLA 4) prior to enrollment must have CPI immune-related toxicity resolved to either Grade ≤ 1 or baseline...",
+      "reasonFuzzy": "Prior CPI toxicity resolution rules are complex and dependent on specific prior agents and adverse event grades with exceptions requiring sponsor approval."
+    },
+    {
+      "id": "NCT05592626-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Participants with a history of known autoimmune disease with exceptions of...",
+      "reasonFuzzy": "Autoimmune disease history with multiple condition-specific exceptions is subjective and cannot be represented by a typed check."
+    },
+    {
+      "id": "NCT05592626-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery or traumatic injury within 8 weeks before first dose of study drug.",
+      "reasonFuzzy": "Major surgery and traumatic injury washout windows are not simple lab cutoffs or typed checks."
+    },
+    {
+      "id": "NCT05592626-wounds",
+      "polarity": "exclusion",
+      "sourceText": "Unhealed wounds from surgery or injury.",
+      "reasonFuzzy": "Unhealed wounds represent a clinical assessment rather than a typed lab or condition check."
+    },
+    {
+      "id": "NCT05592626-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with >10 mg per day of prednisone (or equivalent) or other immune-suppressive drugs within 7 days prior to the initiation of study drug.",
+      "reasonFuzzy": "Systemic corticosteroid dose and immunosuppressive drug restrictions with multiple route-based exceptions cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT05592626-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Prior therapy within the following timeframe before planned infusion of STAR0602 as follows: Cytotoxic chemotherapy, small molecule inhibitors, radiation, interventional radiology procedure... Monoclonal antibodies, antibody-drug conjugates, radioimmunoconjugates...",
+      "reasonFuzzy": "Multiple complex prior therapy categories and variable washout windows with exception grades cannot be represented by a single typed check."
+    },
+    {
+      "id": "NCT05592626-clin-sig",
+      "polarity": "exclusion",
+      "sourceText": "Clinically significant cardiovascular/vascular disease, gastrointestinal disorders, inflammatory processes, pulmonary compromises",
+      "reasonFuzzy": "Clinically significant disease categories rely heavily on investigator judgment."
+    },
+    {
+      "id": "NCT05592626-infection",
+      "polarity": "exclusion",
+      "sourceText": "Active viral, bacterial, or systemic fungal infection requiring parenteral treatment within 7 days prior to the initiation of study drug.",
+      "reasonFuzzy": "Active infection criteria requiring parenteral treatment is a clinical judgment-based exclusion."
+    },
+    {
+      "id": "NCT05592626-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Vaccination with any live virus vaccine within 4 weeks prior to the initiation of study drug administration.",
+      "reasonFuzzy": "Live virus vaccine washout window is not a standard typed laboratory or clinical check."
+    },
+    {
+      "id": "NCT05592626-hiv-hep",
+      "polarity": "exclusion",
+      "sourceText": "Participants who are known to be human immunodeficiency virus positive or hepatitis B or C positive and have uncontrolled disease.",
+      "reasonFuzzy": "Uncontrolled status of viral infections involves clinical judgment rather than a simple presence check."
+    },
+    {
+      "id": "NCT05592626-second-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Second primary invasive malignancy not in remission for ≥ 1 year. Exceptions include non-melanoma locally advanced skin cancer, cervical carcinoma in situ, localized prostate cancer...",
+      "reasonFuzzy": "Second primary malignancy rules and varied remission exceptions cannot be structured into a typed check."
+    },
+    {
+      "id": "NCT05592626-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant, likely to become pregnant, or lactating women (where pregnancy is defined as the state of a female after conception and until the termination of gestation).",
+      "reasonFuzzy": "Pregnancy and lactation status checks are standard clinical exclusions not fitting typed biomarker/lab criteria."
+    },
+    {
+      "id": "NCT05592626-hepatic-mets",
+      "polarity": "exclusion",
+      "sourceText": "Hepatic metastases unless adequately treated, either locally (e.g., by surgery, radiofrequency ablation, or chemoembolization) or systemically or both, and stable for 3 months.",
+      "reasonFuzzy": "Hepatic metastases treatment and stability criteria involve complex clinical determinations."
+    },
+    {
+      "id": "NCT05592626-bulky-disease",
+      "polarity": "exclusion",
+      "sourceText": "Bulky disease defined as any lesion ≥ 5 cm in greatest dimension unless approved by the Sponsor.",
+      "reasonFuzzy": "Bulky disease measurements with sponsor approval exceptions are not standard typed metrics."
+    },
+    {
+      "id": "NCT05592626-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05592626-age",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have histologically confirmed solid tumors that are unresectable, locally advanced, or metastatic and for which standard curative therapies do not exist or are no longer effective or have intolerable toxicities.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05592626-stage",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC (recurrent or Primary Stage 4)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 0,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:18"
+        },
+        {
+          "side": "b-only",
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IV"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 18,
+    "attempts": 1,
+    "ms": 6248
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 17,
+    "attempts": 1,
+    "ms": 6036
+  },
+  "ms": 20269,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05592626",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05592626-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically confirmed solid tumors that are unresectable, locally advanced, or metastatic and for which standard curative therapies do not exist or are no longer effective or have intolerable toxicities.",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05592626-prior-therapies",
+        "polarity": "inclusion",
+        "sourceText": "Participants should not have received more than three regimens of prior therapies for their advanced or metastatic diseases. For Phase 2 Cohorts 8 and 10 (see below), participants should not have received more than one line of prior therapy.",
+        "reasonFuzzy": "Prior therapy line limits vary by phase and cohort, preventing representation as a single typed prior_lines_max check."
+      },
+      {
+        "id": "NCT05592626-phase1-tumors",
+        "polarity": "inclusion",
+        "sourceText": "For Phase 1, participants must have one of the following solid tumors: High mutational burden (TMB-H), Microsatellite Instability (MSI-H)/DNA mismatch repair (dMMR), Virally associated tumors, Solid tumors generally considered as immunogenic (e.g., melanoma and renal cell carcinoma) are eligible without prior testing for TMB, MSI or viral status after the Sponsor's approval.",
+        "reasonFuzzy": "Tumor eligibility in Phase 1 relies on biomarker subgroups and sponsor discretion rather than a single standardized histology check."
+      },
+      {
+        "id": "NCT05592626-phase2-tumors",
+        "polarity": "inclusion",
+        "sourceText": "For Phase 2, participants must have one of the following solid tumors: TMB-H (not enrolling), MSI-H/dMMR (not enrolling), CRC (both Ras wild type and mutant) (not enrolling), NSCLC (recurrent or Primary Stage 4), CRC with pMMR/MSS (without TMB-H requirement)",
+        "reasonFuzzy": "Phase 2 cohort criteria include specific mutations and statuses that do not map to simple typed histological categories alone."
+      },
+      {
+        "id": "NCT05592626-cns-mets",
+        "polarity": "inclusion",
+        "sourceText": "Symptomatic central nervous system (CNS) metastases must have been treated, be asymptomatic for ≥ 14 days, and meet the following at the time of enrollment: No concurrent treatment for CNS disease (e.g., surgery, radiation, corticosteroids > 10 mg prednisone/day or equivalent); No concurrent leptomeningeal disease or cord compression.",
+        "reasonFuzzy": "The CNS metastases criteria include multi-part requirements regarding symptom duration, concurrent treatments, and specific neurological conditions that cannot be expressed as a standard brain_mets check."
+      },
+      {
+        "id": "NCT05592626-cpi-tox",
+        "polarity": "inclusion",
+        "sourceText": "Subjects who have previously received a CPI (e.g., anti-PD-L1, anti-PD-1, anti CTLA 4) prior to enrollment must have CPI immune-related toxicity resolved to either Grade ≤ 1 or baseline (prior to the CPI) to be eligible for enrollment.",
+        "reasonFuzzy": "Resolution of prior CPI immune-related toxicity involves specific conditions and exceptions that cannot be reduced to a typed check."
+      },
+      {
+        "id": "NCT05592626-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Participants with a history of known autoimmune disease with exceptions of: Vitiligo; Psoriasis, atopic dermatitis or other autoimmune skin condition not requiring systemic treatment; History of Graves' disease, now euthyroid for > 4 weeks; Hypothyroidism managed by thyroid replacement; Alopecia; Arthritis managed without systemic therapy beyond oral nonsteroidal anti-inflammatory drugs. Adrenal insufficiency well controlled on replacement therapy.",
+        "reasonFuzzy": "Autoimmune disease history with multiple specific disease-dependent exceptions cannot be modeled as a single typed check."
+      },
+      {
+        "id": "NCT05592626-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery or traumatic injury within 8 weeks before first dose of study drug.",
+        "reasonFuzzy": "Washout window for major surgery is not a lab cutoff."
+      },
+      {
+        "id": "NCT05592626-wounds",
+        "polarity": "exclusion",
+        "sourceText": "Unhealed wounds from surgery or injury.",
+        "reasonFuzzy": "Unhealed wounds is a clinical judgment-based criterion."
+      },
+      {
+        "id": "NCT05592626-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with >10 mg per day of prednisone (or equivalent) or other immune-suppressive drugs within 7 days prior to the initiation of study drug. Exceptions may be made for patients who have had allergic reaction to iodinated contrast media. Steroids for topical, ophthalmic, inhaled, or nasal administration are allowed.",
+        "reasonFuzzy": "Systemic corticosteroid and immunosuppressive washout window with route exceptions is not a standard lab check."
+      },
+      {
+        "id": "NCT05592626-prior-therapy-washout",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy within the following timeframe before planned infusion of STAR0602 as follows: Cytotoxic chemotherapy, small molecule inhibitors, radiation, interventional radiology procedure, or similar investigational therapies within ≤ 2 weeks or participants who have not recovered (i.e., ≤ Grade 1 or to baseline) from AEs due to a previously administered agent; Monoclonal antibodies, antibody-drug conjugates, radioimmunoconjugates, or similar investigational therapies within 6 weeks prior to the initiation of study drug or participants who have not recovered (i.e., ≤ Grade 1 or to baseline) from AEs due to agents administered more than 4 weeks earlier. Note: Participants with ≤ Grade 2 neuropathy or ≤ Grade 2 alopecia are an exception to this criterion and may qualify for the study.",
+        "reasonFuzzy": "Complex multimodality prior therapy washout windows and adverse event recovery rules cannot be represented as simple typed items."
+      },
+      {
+        "id": "NCT05592626-clin-sig-disease",
+        "polarity": "exclusion",
+        "sourceText": "Clinically significant cardiovascular/vascular disease, gastrointestinal disorders, inflammatory processes, pulmonary compromises",
+        "reasonFuzzy": "Clinically significant conditions require investigator judgment."
+      },
+      {
+        "id": "NCT05592626-infection",
+        "polarity": "exclusion",
+        "sourceText": "Active viral, bacterial, or systemic fungal infection requiring parenteral treatment within 7 days prior to the initiation of study drug.",
+        "reasonFuzzy": "Active infection requiring parenteral treatment involves treatment modality and timeframe criteria not covered by typed checks."
+      },
+      {
+        "id": "NCT05592626-vaccination",
+        "polarity": "exclusion",
+        "sourceText": "Vaccination with any live virus vaccine within 4 weeks prior to the initiation of study drug administration. Inactivated annual influenza vaccination is allowed.",
+        "reasonFuzzy": "Live virus vaccination washout period is not a standard lab cutoff."
+      },
+      {
+        "id": "NCT05592626-hiv-hep",
+        "polarity": "exclusion",
+        "sourceText": "Participants who are known to be human immunodeficiency virus positive or hepatitis B or C positive and have uncontrolled disease.",
+        "reasonFuzzy": "Viral positivity coupled with disease control status is not a simple binary presence check."
+      },
+      {
+        "id": "NCT05592626-second-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Second primary invasive malignancy not in remission for ≥ 1 year. Exceptions include non-melanoma locally advanced skin cancer, cervical carcinoma in situ, localized prostate cancer (Gleason score ≤ 7), resected melanoma in situ, or any malignancy considered to be indolent and never required systemic therapy, with the exception of indolent lymphomas.",
+        "reasonFuzzy": "Second primary malignancy history with specific histological exceptions and remission duration is not a typed check."
+      },
+      {
+        "id": "NCT05592626-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant, likely to become pregnant, or lactating women (where pregnancy is defined as the state of a female after conception and until the termination of gestation).",
+        "reasonFuzzy": "Pregnancy and lactation status are subjective or standard reproductive conditions, not typed clinical lab checks."
+      },
+      {
+        "id": "NCT05592626-hepatic-mets",
+        "polarity": "exclusion",
+        "sourceText": "Hepatic metastases unless adequately treated, either locally (e.g., by surgery, radiofrequency ablation, or chemoembolization) or systemically or both, and stable for 3 months.",
+        "reasonFuzzy": "Hepatic metastases treatment and stability criteria involve clinical evaluations not captured by standard typed checks."
+      },
+      {
+        "id": "NCT05592626-bulky-disease",
+        "polarity": "exclusion",
+        "sourceText": "Bulky disease defined as any lesion ≥ 5 cm in greatest dimension unless approved by the Sponsor.",
+        "reasonFuzzy": "Bulky disease dimension with sponsor approval exception requires imaging and sponsor judgment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05592626",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05592626-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05592626-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC (recurrent or Primary Stage 4)",
+        "stages": [
+          "IV"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05592626-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "Participants should not have received more than three regimens of prior therapies for their advanced or metastatic diseases. For Phase 2 Cohorts 8 and 10 (see below), participants should not have received more than one line of prior therapy.",
+        "reasonFuzzy": "Prior-line limits vary depending on study phase and cohort, preventing expression as a single typed check."
+      },
+      {
+        "id": "NCT05592626-phase1-tumors",
+        "polarity": "inclusion",
+        "sourceText": "For Phase 1, participants must have one of the following solid tumors: High mutational burden (TMB-H), Microsatellite Instability (MSI-H)/DNA mismatch repair (dMMR), Virally associated tumors, Solid tumors generally considered as immunogenic...",
+        "reasonFuzzy": "Phase 1 tumor requirements include broad categories and investigator discretion."
+      },
+      {
+        "id": "NCT05592626-brain-mets",
+        "polarity": "inclusion",
+        "sourceText": "Symptomatic central nervous system (CNS) metastases must have been treated, be asymptomatic for ≥ 14 days, and meet the following at the time of enrollment: No concurrent treatment for CNS disease (e.g., surgery, radiation, corticosteroids > 10 mg prednisone/day or equivalent); No concurrent leptomeningeal disease or cord compression.",
+        "reasonFuzzy": "Brain metastases rules involve complex criteria regarding treatment timing, symptom duration, and concurrent therapies, which cannot be captured by a simple typed brain_mets check."
+      },
+      {
+        "id": "NCT05592626-cpi",
+        "polarity": "inclusion",
+        "sourceText": "Subjects who have previously received a CPI (e.g., anti-PD-L1, anti-PD-1, anti CTLA 4) prior to enrollment must have CPI immune-related toxicity resolved to either Grade ≤ 1 or baseline...",
+        "reasonFuzzy": "Prior CPI toxicity resolution rules are complex and dependent on specific prior agents and adverse event grades with exceptions requiring sponsor approval."
+      },
+      {
+        "id": "NCT05592626-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Participants with a history of known autoimmune disease with exceptions of...",
+        "reasonFuzzy": "Autoimmune disease history with multiple condition-specific exceptions is subjective and cannot be represented by a typed check."
+      },
+      {
+        "id": "NCT05592626-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery or traumatic injury within 8 weeks before first dose of study drug.",
+        "reasonFuzzy": "Major surgery and traumatic injury washout windows are not simple lab cutoffs or typed checks."
+      },
+      {
+        "id": "NCT05592626-wounds",
+        "polarity": "exclusion",
+        "sourceText": "Unhealed wounds from surgery or injury.",
+        "reasonFuzzy": "Unhealed wounds represent a clinical assessment rather than a typed lab or condition check."
+      },
+      {
+        "id": "NCT05592626-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with >10 mg per day of prednisone (or equivalent) or other immune-suppressive drugs within 7 days prior to the initiation of study drug.",
+        "reasonFuzzy": "Systemic corticosteroid dose and immunosuppressive drug restrictions with multiple route-based exceptions cannot be expressed as a single typed check."
+      },
+      {
+        "id": "NCT05592626-prior-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy within the following timeframe before planned infusion of STAR0602 as follows: Cytotoxic chemotherapy, small molecule inhibitors, radiation, interventional radiology procedure... Monoclonal antibodies, antibody-drug conjugates, radioimmunoconjugates...",
+        "reasonFuzzy": "Multiple complex prior therapy categories and variable washout windows with exception grades cannot be represented by a single typed check."
+      },
+      {
+        "id": "NCT05592626-clin-sig",
+        "polarity": "exclusion",
+        "sourceText": "Clinically significant cardiovascular/vascular disease, gastrointestinal disorders, inflammatory processes, pulmonary compromises",
+        "reasonFuzzy": "Clinically significant disease categories rely heavily on investigator judgment."
+      },
+      {
+        "id": "NCT05592626-infection",
+        "polarity": "exclusion",
+        "sourceText": "Active viral, bacterial, or systemic fungal infection requiring parenteral treatment within 7 days prior to the initiation of study drug.",
+        "reasonFuzzy": "Active infection criteria requiring parenteral treatment is a clinical judgment-based exclusion."
+      },
+      {
+        "id": "NCT05592626-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Vaccination with any live virus vaccine within 4 weeks prior to the initiation of study drug administration.",
+        "reasonFuzzy": "Live virus vaccine washout window is not a standard typed laboratory or clinical check."
+      },
+      {
+        "id": "NCT05592626-hiv-hep",
+        "polarity": "exclusion",
+        "sourceText": "Participants who are known to be human immunodeficiency virus positive or hepatitis B or C positive and have uncontrolled disease.",
+        "reasonFuzzy": "Uncontrolled status of viral infections involves clinical judgment rather than a simple presence check."
+      },
+      {
+        "id": "NCT05592626-second-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Second primary invasive malignancy not in remission for ≥ 1 year. Exceptions include non-melanoma locally advanced skin cancer, cervical carcinoma in situ, localized prostate cancer...",
+        "reasonFuzzy": "Second primary malignancy rules and varied remission exceptions cannot be structured into a typed check."
+      },
+      {
+        "id": "NCT05592626-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant, likely to become pregnant, or lactating women (where pregnancy is defined as the state of a female after conception and until the termination of gestation).",
+        "reasonFuzzy": "Pregnancy and lactation status checks are standard clinical exclusions not fitting typed biomarker/lab criteria."
+      },
+      {
+        "id": "NCT05592626-hepatic-mets",
+        "polarity": "exclusion",
+        "sourceText": "Hepatic metastases unless adequately treated, either locally (e.g., by surgery, radiofrequency ablation, or chemoembolization) or systemically or both, and stable for 3 months.",
+        "reasonFuzzy": "Hepatic metastases treatment and stability criteria involve complex clinical determinations."
+      },
+      {
+        "id": "NCT05592626-bulky-disease",
+        "polarity": "exclusion",
+        "sourceText": "Bulky disease defined as any lesion ≥ 5 cm in greatest dimension unless approved by the Sponsor.",
+        "reasonFuzzy": "Bulky disease measurements with sponsor approval exceptions are not standard typed metrics."
+      }
+    ]
+  }
+}

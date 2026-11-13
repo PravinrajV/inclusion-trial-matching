@@ -1,0 +1,352 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06427941",
+  "briefTitle": "A Phase 1/2 Study of BGB-B2033, Alone or in Combination With Tislelizumab With or Without Bevacizumab, in Participants With Advanced or Metastatic Solid Tumors",
+  "parsedAt": "2026-11-12T09:22:10.805Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06427941-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status ≤ 1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) Performance Status ≤ 1.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06427941-brain",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Active leptomeningeal disease or uncontrolled/untreated brain metastases.",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Active leptomeningeal disease or uncontrolled/untreated brain metastases.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06427941-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one evaluable lesion for dose escalation, and at least one measurable lesion for safety expansion, as defined by Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+      "reasonFuzzy": "Evaluable and measurable disease per RECIST are subjective imaging judgments, not typed checks."
+    },
+    {
+      "id": "NCT06427941-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Provision of tumor tissue samples is required for specified parts of the study.",
+      "reasonFuzzy": "Willingness or requirement to undergo a tissue procedure is a subjective/judgment-based requirement."
+    },
+    {
+      "id": "NCT06427941-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06427941-lesions",
+      "polarity": "inclusion",
+      "sourceText": "At least one evaluable lesion for dose escalation, and at least one measurable lesion for safety expansion, as defined by Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+      "reasonFuzzy": "Evaluable and measurable disease per RECIST version 1.1 is subjective imaging criteria."
+    },
+    {
+      "id": "NCT06427941-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Provision of tumor tissue samples is required for specified parts of the study.",
+      "reasonFuzzy": "Willingness or requirement to provide tumor tissue samples is not a typed check."
+    },
+    {
+      "id": "NCT06427941-prior-therapy-41bb",
+      "polarity": "exclusion",
+      "sourceText": "Prior therapy directed against glypican-3 (GPC3) or the T-cell costimulatory receptor 4-1BB (CD137).",
+      "reasonFuzzy": "This exclusion rule covers multiple therapies (GPC3 or 4-1BB) and cannot be captured fully by a single typed prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT06427941-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Active autoimmune disease or a history of autoimmune disease with potential for relapse.",
+      "reasonFuzzy": "Autoimmune disease history and relapse potential are not typed checks."
+    },
+    {
+      "id": "NCT06427941-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Any malignancy diagnosed ≤ 2 years before the first dose of study drug(s), except: The cancer type under investigation in this study, or Locally recurring malignancies previously treated with curative intent.",
+      "reasonFuzzy": "Prior malignancy history with specific exceptions is not a typed check."
+    },
+    {
+      "id": "NCT06427941-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Requirement for systemic corticosteroids (> 10 mg/day prednisone or equivalent) or other immunosuppressive therapy within 14 days prior to the first dose of study drug(s).",
+      "reasonFuzzy": "Systemic corticosteroid and immunosuppressive therapy restrictions are not typed checks."
+    },
+    {
+      "id": "NCT06427941-comorbidities",
+      "polarity": "exclusion",
+      "sourceText": "Certain comorbidities involving the lungs, heart, bleeding conditions, or active infections, as defined in the protocol.",
+      "reasonFuzzy": "Comorbidity exclusions are broad protocol-defined conditions rather than standard lab or clinical typed checks."
+    },
+    {
+      "id": "NCT06427941-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06427941-histology",
+      "polarity": "inclusion",
+      "sourceText": "Glypican-3 (GPC3)-positive squamous non-small cell lung cancer (NSCLC): Histologically confirmed GPC3-positive squamous NSCLC with prior exposure to a checkpoint inhibitor (CPI).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06427941-prior-cpi",
+      "polarity": "inclusion",
+      "sourceText": "Glypican-3 (GPC3)-positive squamous non-small cell lung cancer (NSCLC): Histologically confirmed GPC3-positive squamous NSCLC with prior exposure to a checkpoint inhibitor (CPI).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06427941-prior-gpc3-41bb",
+      "polarity": "exclusion",
+      "sourceText": "Prior therapy directed against glypican-3 (GPC3) or the T-cell costimulatory receptor 4-1BB (CD137).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:squamous"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:checkpoint inhibitor"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:glypican-3"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2565
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 4863
+  },
+  "ms": 15422,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06427941",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06427941-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Glypican-3 (GPC3)-positive squamous non-small cell lung cancer (NSCLC): Histologically confirmed GPC3-positive squamous NSCLC with prior exposure to a checkpoint inhibitor (CPI).",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT06427941-prior-cpi",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Glypican-3 (GPC3)-positive squamous non-small cell lung cancer (NSCLC): Histologically confirmed GPC3-positive squamous NSCLC with prior exposure to a checkpoint inhibitor (CPI).",
+        "stringValue": "checkpoint inhibitor"
+      },
+      {
+        "id": "NCT06427941-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status ≤ 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06427941-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06427941-prior-gpc3-41bb",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy directed against glypican-3 (GPC3) or the T-cell costimulatory receptor 4-1BB (CD137).",
+        "stringValue": "glypican-3"
+      },
+      {
+        "id": "NCT06427941-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active leptomeningeal disease or uncontrolled/untreated brain metastases.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06427941-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one evaluable lesion for dose escalation, and at least one measurable lesion for safety expansion, as defined by Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+        "reasonFuzzy": "Evaluable and measurable disease per RECIST are subjective imaging judgments, not typed checks."
+      },
+      {
+        "id": "NCT06427941-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Provision of tumor tissue samples is required for specified parts of the study.",
+        "reasonFuzzy": "Willingness or requirement to undergo a tissue procedure is a subjective/judgment-based requirement."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06427941",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06427941-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Glypican-3 (GPC3)-positive squamous non-small cell lung cancer (NSCLC): Histologically confirmed GPC3-positive squamous NSCLC with prior exposure to a checkpoint inhibitor (CPI).",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT06427941-prior-therapy",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Glypican-3 (GPC3)-positive squamous non-small cell lung cancer (NSCLC): Histologically confirmed GPC3-positive squamous NSCLC with prior exposure to a checkpoint inhibitor (CPI).",
+        "stringValue": "checkpoint inhibitor"
+      },
+      {
+        "id": "NCT06427941-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status ≤ 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06427941-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06427941-prior-therapy-excl",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy directed against glypican-3 (GPC3) or the T-cell costimulatory receptor 4-1BB (CD137).",
+        "stringValue": "glypican-3"
+      },
+      {
+        "id": "NCT06427941-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active leptomeningeal disease or uncontrolled/untreated brain metastases.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06427941-lesions",
+        "polarity": "inclusion",
+        "sourceText": "At least one evaluable lesion for dose escalation, and at least one measurable lesion for safety expansion, as defined by Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+        "reasonFuzzy": "Evaluable and measurable disease per RECIST version 1.1 is subjective imaging criteria."
+      },
+      {
+        "id": "NCT06427941-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Provision of tumor tissue samples is required for specified parts of the study.",
+        "reasonFuzzy": "Willingness or requirement to provide tumor tissue samples is not a typed check."
+      },
+      {
+        "id": "NCT06427941-prior-therapy-41bb",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy directed against glypican-3 (GPC3) or the T-cell costimulatory receptor 4-1BB (CD137).",
+        "reasonFuzzy": "This exclusion rule covers multiple therapies (GPC3 or 4-1BB) and cannot be captured fully by a single typed prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT06427941-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Active autoimmune disease or a history of autoimmune disease with potential for relapse.",
+        "reasonFuzzy": "Autoimmune disease history and relapse potential are not typed checks."
+      },
+      {
+        "id": "NCT06427941-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Any malignancy diagnosed ≤ 2 years before the first dose of study drug(s), except: The cancer type under investigation in this study, or Locally recurring malignancies previously treated with curative intent.",
+        "reasonFuzzy": "Prior malignancy history with specific exceptions is not a typed check."
+      },
+      {
+        "id": "NCT06427941-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Requirement for systemic corticosteroids (> 10 mg/day prednisone or equivalent) or other immunosuppressive therapy within 14 days prior to the first dose of study drug(s).",
+        "reasonFuzzy": "Systemic corticosteroid and immunosuppressive therapy restrictions are not typed checks."
+      },
+      {
+        "id": "NCT06427941-comorbidities",
+        "polarity": "exclusion",
+        "sourceText": "Certain comorbidities involving the lungs, heart, bleeding conditions, or active infections, as defined in the protocol.",
+        "reasonFuzzy": "Comorbidity exclusions are broad protocol-defined conditions rather than standard lab or clinical typed checks."
+      }
+    ]
+  }
+}

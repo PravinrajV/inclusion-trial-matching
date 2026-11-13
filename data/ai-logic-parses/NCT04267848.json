@@ -1,0 +1,687 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04267848",
+  "briefTitle": "Testing the Addition of a Type of Drug Called Immunotherapy to the Usual Chemotherapy Treatment for Non-small Cell Lung Cancer, an ALCHEMIST Treatment Trial (Chemo-IO [ACCIO])",
+  "parsedAt": "2026-11-12T06:04:04.612Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04267848-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age >= 18 years",
+      "numberValue": 18,
+      "evidence_quote": "Age >= 18 years",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04267848-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin >= 8 gm/dl",
+      "numberValue": 8,
+      "evidence_quote": "Hemoglobin >= 8 gm/dl",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04267848-egfr_min",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Calculated (Calc.) creatinine clearance >= 45 mL/min",
+      "numberValue": 45,
+      "evidence_quote": "Calculated (Calc.) creatinine clearance >= 45 mL/min",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04267848-bilirubin",
+      "kind": "bilirubin_max",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin =< 1.5 x upper limit of normal (ULN)",
+      "numberValue": 1.5,
+      "evidence_quote": "Total bilirubin =< 1.5 x upper limit of normal (ULN)",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04267848-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Local testing of PD-L1 immunohistochemistry (IHC) using one of the following assays: DAKO 22C3, DAKO 28-8, EIL3N or SP263",
+      "reasonFuzzy": "Requires specific assay testing without specifying a numerical PD-L1 expression cutoff."
+    },
+    {
+      "id": "NCT04267848-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Note: Patients with pathologic N2 disease, completely resected, are eligible. However, patients known to have N2 disease prior to surgery are not eligible; guidelines do not recommend up-front surgery for this population",
+      "reasonFuzzy": "Requires nuanced clinical history regarding the timing of N2 disease diagnosis relative to surgery."
+    },
+    {
+      "id": "NCT04267848-recovery",
+      "polarity": "inclusion",
+      "sourceText": "Complete recovery from surgery. Registration to A081801 must be 30-77 days following surgery",
+      "reasonFuzzy": "Includes a specific post-operative window (30-77 days) alongside subjective complete recovery."
+    },
+    {
+      "id": "NCT04267848-prior_therapy",
+      "polarity": "exclusion",
+      "sourceText": "No prior neoadjuvant or adjuvant therapy for current lung cancer diagnosis",
+      "reasonFuzzy": "Excludes prior neoadjuvant or adjuvant therapy which is broad and not captured by simple prior_therapy_excluded typed checks."
+    },
+    {
+      "id": "NCT04267848-transplant",
+      "polarity": "exclusion",
+      "sourceText": "No prior allogeneic tissue/solid organ transplant",
+      "reasonFuzzy": "Organ transplant exclusion is not a typed check kind."
+    },
+    {
+      "id": "NCT04267848-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Patients must NOT have uncontrolled intercurrent illness including, but not limited to, serious ongoing or active infection, symptomatic congestive heart failure, uncontrolled cardiac arrhythmia, unstable angina pectoris, that would limit compliance with study requirements",
+      "reasonFuzzy": "Involves multiple complex medical conditions and investigator judgment."
+    },
+    {
+      "id": "NCT04267848-pneumonitis",
+      "polarity": "exclusion",
+      "sourceText": "No current pneumonitis or history of (non-infectious) pneumonitis that required steroids",
+      "reasonFuzzy": "Pneumonitis history requiring steroids is a complex medical history condition not covered by allowed kinds."
+    },
+    {
+      "id": "NCT04267848-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "No active auto-immune disease that has required systemic treatment within the last 2 years (e.g., disease-modifying agents, corticosteroids, or immunosuppressive drugs). Replacement therapy (e.g., thyroxine, insulin, or physiologic corticosteroid release therapy for adrenal or pituitary insufficiency) is not considered a form of systemic treatment",
+      "reasonFuzzy": "Active autoimmune disease and treatment timeframes require clinical interpretation."
+    },
+    {
+      "id": "NCT04267848-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "No patients with a \"currently active\" second malignancy that is progressing or has required active treatment within the last 3 years. Participants with non-melanoma skin cancers, low grade or low-risk cancers, or stage I malignancies not requiring systemic therapy (e.g., prostate cancer requiring only observation or superficial bladder cancer), or carcinoma in situ (e.g., breast carcinoma or cervical cancer in situ) that have undergone potentially curative therapy are eligible",
+      "reasonFuzzy": "Complex criteria regarding second malignancies with multiple specific exceptions and timeframes."
+    },
+    {
+      "id": "NCT04267848-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "No live vaccine within 30 days prior to registration. Examples of live vaccines include, but are not limited to, the following: measles, mumps, rubella, varicella/zoster (chicken pox), yellow fever, rabies, Bacillus Calmette-Guerin (BCG), and typhoid vaccine. Seasonal influenza vaccines for injection are generally killed virus vaccines and are allowed; however, intranasal influenza vaccines (e.g., FluMist) are live attenuated vaccines and are not allowed",
+      "reasonFuzzy": "Live vaccine washout window is not a simple lab cutoff and involves specific vaccination rules."
+    },
+    {
+      "id": "NCT04267848-hepatitis",
+      "polarity": "exclusion",
+      "sourceText": "No known hepatitis C virus (defined as HCV ribonucleic acid [RNA] [qualitative] is detected) infection or known history of hepatitis B (defined as hepatitis B surface antigen [HBsAg] reactive)",
+      "reasonFuzzy": "Specific virology testing criteria for Hepatitis B and C are not a single typed lab check kind."
+    },
+    {
+      "id": "NCT04267848-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) >= 1,500/mm^3",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04267848-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count >= 100,000/mm^3",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04267848-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Local testing of PD-L1 immunohistochemistry (IHC) using one of the following assays: DAKO 22C3, DAKO 28-8, EIL3N or SP263",
+      "reasonFuzzy": "Requires specific assay testing without stating a specific numeric percentage cutoff for pdl1_min."
+    },
+    {
+      "id": "NCT04267848-n2-disease",
+      "polarity": "exclusion",
+      "sourceText": "Note: Patients with pathologic N2 disease, completely resected, are eligible. However, patients known to have N2 disease prior to surgery are not eligible; guidelines do not recommend up-front surgery for this population",
+      "reasonFuzzy": "Exclusion depends on timing and knowledge of N2 disease status prior to surgery, which cannot be modeled as a simple stage or biomarker check."
+    },
+    {
+      "id": "NCT04267848-surgery-recovery",
+      "polarity": "inclusion",
+      "sourceText": "Complete recovery from surgery. Registration to A081801 must be 30-77 days following surgery",
+      "reasonFuzzy": "Includes subjective clinical recovery assessment and a specific trial registration day window."
+    },
+    {
+      "id": "NCT04267848-transplant",
+      "polarity": "exclusion",
+      "sourceText": "No prior allogeneic tissue/solid organ transplant",
+      "reasonFuzzy": "Organ transplant exclusion is not a typed prior therapy or medical history kind."
+    },
+    {
+      "id": "NCT04267848-uncontrolled",
+      "polarity": "exclusion",
+      "sourceText": "Patients must NOT have uncontrolled intercurrent illness including, but not limited to, serious ongoing or active infection, symptomatic congestive heart failure, uncontrolled cardiac arrhythmia, unstable angina pectoris, that would limit compliance with study requirements",
+      "reasonFuzzy": "Uncontrolled intercurrent illnesses and compliance judgments are subjective."
+    },
+    {
+      "id": "NCT04267848-pneumonitis",
+      "polarity": "exclusion",
+      "sourceText": "No current pneumonitis or history of (non-infectious) pneumonitis that required steroids",
+      "reasonFuzzy": "Pneumonitis history requiring steroids is a specific clinical history condition without a dedicated typed check."
+    },
+    {
+      "id": "NCT04267848-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "No active auto-immune disease that has required systemic treatment within the last 2 years (e.g., disease-modifying agents, corticosteroids, or immunosuppressive drugs). Replacement therapy (e.g., thyroxine, insulin, or physiologic corticosteroid release therapy for adrenal or pituitary insufficiency) is not considered a form of systemic treatment",
+      "reasonFuzzy": "Active autoimmune disease and treatment history involves clinical judgment and exceptions for replacement therapy."
+    },
+    {
+      "id": "NCT04267848-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "No patients with a \"currently active\" second malignancy that is progressing or has required active treatment within the last 3 years. Participants with non-melanoma skin cancers, low grade or low-risk cancers, or stage I malignancies not requiring systemic therapy (e.g., prostate cancer requiring only observation or superficial bladder cancer), or carcinoma in situ (e.g., breast carcinoma or cervical cancer in situ) that have undergone potentially curative therapy are eligible",
+      "reasonFuzzy": "Complex second malignancy rules with multiple exceptions for stage, grade, and tumor type."
+    },
+    {
+      "id": "NCT04267848-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "No hypersensitivity (>= grade 3) to pembrolizumab and/or any of its excipients",
+      "reasonFuzzy": "Hypersensitivity grade to specific trial drugs is not a standard typed check."
+    },
+    {
+      "id": "NCT04267848-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "No live vaccine within 30 days prior to registration. Examples of live vaccines include, but are not limited to, the following: measles, mumps, rubella, varicella/zoster (chicken pox), yellow fever, rabies, Bacillus Calmette-Guerin (BCG), and typhoid vaccine. Seasonal influenza vaccines for injection are generally killed virus vaccines and are allowed; however, intranasal influenza vaccines (e.g., FluMist) are live attenuated vaccines and are not allowed",
+      "reasonFuzzy": "Washout window and specific restrictions for live vaccines cannot be modeled into existing typed checks."
+    },
+    {
+      "id": "NCT04267848-hepatitis",
+      "polarity": "exclusion",
+      "sourceText": "No known hepatitis C virus (defined as HCV ribonucleic acid [RNA] [qualitative] is detected) infection or known history of hepatitis B (defined as hepatitis B surface antigen [HBsAg] reactive)",
+      "reasonFuzzy": "Specific virology lab definitions for Hepatitis B and C are not directly covered by the standard allowed lab kinds."
+    },
+    {
+      "id": "NCT04267848-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) >= 1,500/mm^3",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04267848-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count >= 100,000/mm^3",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04267848-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "No prior neoadjuvant or adjuvant therapy for current lung cancer diagnosis",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT04267848-egfr",
+      "polarity": "exclusion",
+      "sourceText": "Local testing of EGFR with no EGFR exon 19 deletion or EGFR L858 R mutation (applicable to non-squamous patients only)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04267848-alk",
+      "polarity": "exclusion",
+      "sourceText": "Local testing of ALK with no ALK rearrangement (failed testing is considered negative) (applicable to non-squamous patients only)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04267848-stage",
+      "polarity": "inclusion",
+      "sourceText": "Completely resected stage IIA, IIB IIIA or IIIB (T3-4N2) non-small cell lung cancer (NSCLC) (squamous or non-squamous) with negative margins (complete R0 resection). Patients will be staged according to the 8th edition of the American Joint Committee on Cancer (AJCC) Staging Manual, 2017",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04267848-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status (PS): 0-1",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04267848-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) / alanine aminotransferase (ALT) =< 2.5 x upper limit of normal (ULN)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04267848-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) / alanine aminotransferase (ALT) =< 2.5 x upper limit of normal (ULN)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 10,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) >= 1,500/mm^3"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelet count >= 100,000/mm^3"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 11,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) >= 1,500/mm^3"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelet count >= 100,000/mm^3"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 10,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:neoadjuvant or adjuvant therapy"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 6,
+      "rejectedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:absent"
+        },
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIA,IIB,IIIA,IIIB"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        }
+      ],
+      "normalizerTypedCount": 6
+    }
+  },
+  "runA": {
+    "typedEmitted": 12,
+    "fuzzyEmitted": 11,
+    "attempts": 1,
+    "ms": 5633
+  },
+  "runB": {
+    "typedEmitted": 13,
+    "fuzzyEmitted": 11,
+    "attempts": 1,
+    "ms": 5907
+  },
+  "ms": 19535,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04267848",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04267848-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Local testing of EGFR with no EGFR exon 19 deletion or EGFR L858 R mutation (applicable to non-squamous patients only)",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT04267848-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Local testing of ALK with no ALK rearrangement (failed testing is considered negative) (applicable to non-squamous patients only)",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT04267848-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Completely resected stage IIA, IIB IIIA or IIIB (T3-4N2) non-small cell lung cancer (NSCLC) (squamous or non-squamous) with negative margins (complete R0 resection). Patients will be staged according to the 8th edition of the American Joint Committee on Cancer (AJCC) Staging Manual, 2017",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT04267848-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age >= 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04267848-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status (PS): 0-1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04267848-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) >= 1,500/mm^3",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT04267848-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count >= 100,000/mm^3",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT04267848-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin >= 8 gm/dl",
+        "numberValue": 8
+      },
+      {
+        "id": "NCT04267848-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Calculated (Calc.) creatinine clearance >= 45 mL/min",
+        "numberValue": 45
+      },
+      {
+        "id": "NCT04267848-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin =< 1.5 x upper limit of normal (ULN)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT04267848-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) / alanine aminotransferase (ALT) =< 2.5 x upper limit of normal (ULN)",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT04267848-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) / alanine aminotransferase (ALT) =< 2.5 x upper limit of normal (ULN)",
+        "numberValue": 2.5
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04267848-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "Local testing of PD-L1 immunohistochemistry (IHC) using one of the following assays: DAKO 22C3, DAKO 28-8, EIL3N or SP263",
+        "reasonFuzzy": "Requires specific assay testing without specifying a numerical PD-L1 expression cutoff."
+      },
+      {
+        "id": "NCT04267848-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Note: Patients with pathologic N2 disease, completely resected, are eligible. However, patients known to have N2 disease prior to surgery are not eligible; guidelines do not recommend up-front surgery for this population",
+        "reasonFuzzy": "Requires nuanced clinical history regarding the timing of N2 disease diagnosis relative to surgery."
+      },
+      {
+        "id": "NCT04267848-recovery",
+        "polarity": "inclusion",
+        "sourceText": "Complete recovery from surgery. Registration to A081801 must be 30-77 days following surgery",
+        "reasonFuzzy": "Includes a specific post-operative window (30-77 days) alongside subjective complete recovery."
+      },
+      {
+        "id": "NCT04267848-prior_therapy",
+        "polarity": "exclusion",
+        "sourceText": "No prior neoadjuvant or adjuvant therapy for current lung cancer diagnosis",
+        "reasonFuzzy": "Excludes prior neoadjuvant or adjuvant therapy which is broad and not captured by simple prior_therapy_excluded typed checks."
+      },
+      {
+        "id": "NCT04267848-transplant",
+        "polarity": "exclusion",
+        "sourceText": "No prior allogeneic tissue/solid organ transplant",
+        "reasonFuzzy": "Organ transplant exclusion is not a typed check kind."
+      },
+      {
+        "id": "NCT04267848-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Patients must NOT have uncontrolled intercurrent illness including, but not limited to, serious ongoing or active infection, symptomatic congestive heart failure, uncontrolled cardiac arrhythmia, unstable angina pectoris, that would limit compliance with study requirements",
+        "reasonFuzzy": "Involves multiple complex medical conditions and investigator judgment."
+      },
+      {
+        "id": "NCT04267848-pneumonitis",
+        "polarity": "exclusion",
+        "sourceText": "No current pneumonitis or history of (non-infectious) pneumonitis that required steroids",
+        "reasonFuzzy": "Pneumonitis history requiring steroids is a complex medical history condition not covered by allowed kinds."
+      },
+      {
+        "id": "NCT04267848-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "No active auto-immune disease that has required systemic treatment within the last 2 years (e.g., disease-modifying agents, corticosteroids, or immunosuppressive drugs). Replacement therapy (e.g., thyroxine, insulin, or physiologic corticosteroid release therapy for adrenal or pituitary insufficiency) is not considered a form of systemic treatment",
+        "reasonFuzzy": "Active autoimmune disease and treatment timeframes require clinical interpretation."
+      },
+      {
+        "id": "NCT04267848-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "No patients with a \"currently active\" second malignancy that is progressing or has required active treatment within the last 3 years. Participants with non-melanoma skin cancers, low grade or low-risk cancers, or stage I malignancies not requiring systemic therapy (e.g., prostate cancer requiring only observation or superficial bladder cancer), or carcinoma in situ (e.g., breast carcinoma or cervical cancer in situ) that have undergone potentially curative therapy are eligible",
+        "reasonFuzzy": "Complex criteria regarding second malignancies with multiple specific exceptions and timeframes."
+      },
+      {
+        "id": "NCT04267848-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "No live vaccine within 30 days prior to registration. Examples of live vaccines include, but are not limited to, the following: measles, mumps, rubella, varicella/zoster (chicken pox), yellow fever, rabies, Bacillus Calmette-Guerin (BCG), and typhoid vaccine. Seasonal influenza vaccines for injection are generally killed virus vaccines and are allowed; however, intranasal influenza vaccines (e.g., FluMist) are live attenuated vaccines and are not allowed",
+        "reasonFuzzy": "Live vaccine washout window is not a simple lab cutoff and involves specific vaccination rules."
+      },
+      {
+        "id": "NCT04267848-hepatitis",
+        "polarity": "exclusion",
+        "sourceText": "No known hepatitis C virus (defined as HCV ribonucleic acid [RNA] [qualitative] is detected) infection or known history of hepatitis B (defined as hepatitis B surface antigen [HBsAg] reactive)",
+        "reasonFuzzy": "Specific virology testing criteria for Hepatitis B and C are not a single typed lab check kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04267848",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04267848-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Local testing of EGFR with no EGFR exon 19 deletion or EGFR L858 R mutation (applicable to non-squamous patients only)",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT04267848-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Local testing of ALK with no ALK rearrangement (failed testing is considered negative) (applicable to non-squamous patients only)",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT04267848-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Completely resected stage IIA, IIB IIIA or IIIB (T3-4N2) non-small cell lung cancer (NSCLC) (squamous or non-squamous) with negative margins (complete R0 resection). Patients will be staged according to the 8th edition of the American Joint Committee on Cancer (AJCC) Staging Manual, 2017",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT04267848-prior-therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "No prior neoadjuvant or adjuvant therapy for current lung cancer diagnosis",
+        "stringValue": "neoadjuvant or adjuvant therapy"
+      },
+      {
+        "id": "NCT04267848-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age >= 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04267848-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status (PS): 0-1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04267848-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) >= 1,500/mm^3",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT04267848-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count >= 100,000/mm^3",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT04267848-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin >= 8 gm/dl",
+        "numberValue": 8
+      },
+      {
+        "id": "NCT04267848-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Calculated (Calc.) creatinine clearance >= 45 mL/min",
+        "numberValue": 45
+      },
+      {
+        "id": "NCT04267848-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin =< 1.5 x upper limit of normal (ULN)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT04267848-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) / alanine aminotransferase (ALT) =< 2.5 x upper limit of normal (ULN)",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT04267848-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) / alanine aminotransferase (ALT) =< 2.5 x upper limit of normal (ULN)",
+        "numberValue": 2.5
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04267848-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "Local testing of PD-L1 immunohistochemistry (IHC) using one of the following assays: DAKO 22C3, DAKO 28-8, EIL3N or SP263",
+        "reasonFuzzy": "Requires specific assay testing without stating a specific numeric percentage cutoff for pdl1_min."
+      },
+      {
+        "id": "NCT04267848-n2-disease",
+        "polarity": "exclusion",
+        "sourceText": "Note: Patients with pathologic N2 disease, completely resected, are eligible. However, patients known to have N2 disease prior to surgery are not eligible; guidelines do not recommend up-front surgery for this population",
+        "reasonFuzzy": "Exclusion depends on timing and knowledge of N2 disease status prior to surgery, which cannot be modeled as a simple stage or biomarker check."
+      },
+      {
+        "id": "NCT04267848-surgery-recovery",
+        "polarity": "inclusion",
+        "sourceText": "Complete recovery from surgery. Registration to A081801 must be 30-77 days following surgery",
+        "reasonFuzzy": "Includes subjective clinical recovery assessment and a specific trial registration day window."
+      },
+      {
+        "id": "NCT04267848-transplant",
+        "polarity": "exclusion",
+        "sourceText": "No prior allogeneic tissue/solid organ transplant",
+        "reasonFuzzy": "Organ transplant exclusion is not a typed prior therapy or medical history kind."
+      },
+      {
+        "id": "NCT04267848-uncontrolled",
+        "polarity": "exclusion",
+        "sourceText": "Patients must NOT have uncontrolled intercurrent illness including, but not limited to, serious ongoing or active infection, symptomatic congestive heart failure, uncontrolled cardiac arrhythmia, unstable angina pectoris, that would limit compliance with study requirements",
+        "reasonFuzzy": "Uncontrolled intercurrent illnesses and compliance judgments are subjective."
+      },
+      {
+        "id": "NCT04267848-pneumonitis",
+        "polarity": "exclusion",
+        "sourceText": "No current pneumonitis or history of (non-infectious) pneumonitis that required steroids",
+        "reasonFuzzy": "Pneumonitis history requiring steroids is a specific clinical history condition without a dedicated typed check."
+      },
+      {
+        "id": "NCT04267848-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "No active auto-immune disease that has required systemic treatment within the last 2 years (e.g., disease-modifying agents, corticosteroids, or immunosuppressive drugs). Replacement therapy (e.g., thyroxine, insulin, or physiologic corticosteroid release therapy for adrenal or pituitary insufficiency) is not considered a form of systemic treatment",
+        "reasonFuzzy": "Active autoimmune disease and treatment history involves clinical judgment and exceptions for replacement therapy."
+      },
+      {
+        "id": "NCT04267848-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "No patients with a \"currently active\" second malignancy that is progressing or has required active treatment within the last 3 years. Participants with non-melanoma skin cancers, low grade or low-risk cancers, or stage I malignancies not requiring systemic therapy (e.g., prostate cancer requiring only observation or superficial bladder cancer), or carcinoma in situ (e.g., breast carcinoma or cervical cancer in situ) that have undergone potentially curative therapy are eligible",
+        "reasonFuzzy": "Complex second malignancy rules with multiple exceptions for stage, grade, and tumor type."
+      },
+      {
+        "id": "NCT04267848-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "No hypersensitivity (>= grade 3) to pembrolizumab and/or any of its excipients",
+        "reasonFuzzy": "Hypersensitivity grade to specific trial drugs is not a standard typed check."
+      },
+      {
+        "id": "NCT04267848-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "No live vaccine within 30 days prior to registration. Examples of live vaccines include, but are not limited to, the following: measles, mumps, rubella, varicella/zoster (chicken pox), yellow fever, rabies, Bacillus Calmette-Guerin (BCG), and typhoid vaccine. Seasonal influenza vaccines for injection are generally killed virus vaccines and are allowed; however, intranasal influenza vaccines (e.g., FluMist) are live attenuated vaccines and are not allowed",
+        "reasonFuzzy": "Washout window and specific restrictions for live vaccines cannot be modeled into existing typed checks."
+      },
+      {
+        "id": "NCT04267848-hepatitis",
+        "polarity": "exclusion",
+        "sourceText": "No known hepatitis C virus (defined as HCV ribonucleic acid [RNA] [qualitative] is detected) infection or known history of hepatitis B (defined as hepatitis B surface antigen [HBsAg] reactive)",
+        "reasonFuzzy": "Specific virology lab definitions for Hepatitis B and C are not directly covered by the standard allowed lab kinds."
+      }
+    ]
+  }
+}

@@ -1,0 +1,513 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06568939",
+  "briefTitle": "A Study to Assess Adverse Events and How Intravenously (IV) Infused Telisotuzumab Vedotin (ABBV-399) Moves Through the Body as a Monotherapy in Adult Participants With Previously Treated Non-Squamous Non-Small Cell Lung Cancer (NSCLC)",
+  "parsedAt": "2026-11-12T05:53:17.733Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06568939-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Must have an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.",
+      "numberValue": 1,
+      "evidence_quote": "Must have an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06568939-life-expectancy",
+      "polarity": "inclusion",
+      "sourceText": "Projected life expectancy of at least 12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06568939-cmet-expr",
+      "polarity": "inclusion",
+      "sourceText": "Must have c-Met overexpressing non-small cell lung cancer (NSCLC) (defined as >= 25% tumor cells with 3+ staining (high [>= 50% 3+]; intermediate [>= 25% - < 50%]) as assessed by a Sponsor designated immunohistochemistry (IHC) laboratory",
+      "reasonFuzzy": "c-Met overexpression by IHC with percentage cutoffs is not supported by a specific typed biomarker kind in the allowed list."
+    },
+    {
+      "id": "NCT06568939-stage",
+      "polarity": "inclusion",
+      "sourceText": "Must have histologically or cytologically documented NSCLC that is locally advanced or metastatic.",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no explicit numbered stage list."
+    },
+    {
+      "id": "NCT06568939-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Must have measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06568939-histology",
+      "polarity": "inclusion",
+      "sourceText": "Non-Squamous Non-Small Cell Lung Cancer (NSCLC)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06568939-life",
+      "polarity": "inclusion",
+      "sourceText": "Projected life expectancy of at least 12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06568939-cmet",
+      "polarity": "inclusion",
+      "sourceText": "Must have c-Met overexpressing non-small cell lung cancer (NSCLC) (defined as \\>= 25% tumor cells with 3+ staining (high \\[\\>= 50% 3+\\]; intermediate \\[\\>= 25% - \\< 50%\\]) as assessed by a Sponsor designated immunohistochemistry (IHC) laboratory",
+      "reasonFuzzy": "c-Met overexpression with percentage cutoffs is not a standard typed biomarker kind."
+    },
+    {
+      "id": "NCT06568939-stage",
+      "polarity": "inclusion",
+      "sourceText": "Must have histologically or cytologically documented NSCLC that is locally advanced or metastatic.",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is described without specific stage numbers."
+    },
+    {
+      "id": "NCT06568939-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Must have measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06568939-prior-progression",
+      "polarity": "inclusion",
+      "sourceText": "Must have progressed on at least 1 line of prior therapy for locally advanced/metastatic NSCLC, as stated in the protocol.",
+      "reasonFuzzy": "Prior line progression rule requires protocol-specific details not fully captured by a simple prior lines count."
+    },
+    {
+      "id": "NCT06568939-histology",
+      "polarity": "inclusion",
+      "sourceText": "Non-Squamous Non-Small Cell Lung Cancer",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06568939-age",
+      "polarity": "inclusion",
+      "sourceText": "Adult Participants",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06568939-prior-lines-min",
+      "polarity": "inclusion",
+      "sourceText": "Must have progressed on at least 1 line of prior therapy for locally advanced/metastatic NSCLC, as stated in the protocol.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06568939-brain-mets",
+      "polarity": "exclusion",
+      "sourceText": "Metastases to the central nervous system (CNS). Participants with CNS metastases are eligible only after adequate treatment (such as surgery or, radiotherapy, or drug therapy) is provided, as stated on the protocol.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06568939-brain",
+      "polarity": "exclusion",
+      "sourceText": "Metastases to the central nervous system (CNS). Participants with CNS metastases are eligible only after adequate treatment (such as surgery or, radiotherapy, or drug therapy) is provided, as stated on the protocol.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06568939-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Must have a known epidermal growth factor receptor (EGFR) activating mutation status.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06568939-prior-lines-max",
+      "polarity": "inclusion",
+      "sourceText": "Must have received no more than 1 line of prior systemic cytotoxic chemotherapy in the locally advanced or metastatic setting, as stated in the protocol.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06568939-histology-excl",
+      "polarity": "exclusion",
+      "sourceText": "Adenosquamous or neuroendocrine histology, or sarcomatoid features.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06568939-egfr-excl",
+      "polarity": "exclusion",
+      "sourceText": "EGFR activating mutations (e.g., EGFR Exon 19 deletions, T790M, Exon 21 L858R, or Exon 20 insertion mutations).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06568939-prior-cmet",
+      "polarity": "exclusion",
+      "sourceText": "Received prior c-Met-targeted antibodies, prior telisotuzumab vedotin, or prior antibody-drug conjugates either targeting c-Met or consisting of monomethylauristatin E.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06568939-prior-telisotuzumab",
+      "polarity": "exclusion",
+      "sourceText": "Received prior c-Met-targeted antibodies, prior telisotuzumab vedotin, or prior antibody-drug conjugates either targeting c-Met or consisting of monomethylauristatin E.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06568939-prior-docetaxel",
+      "polarity": "exclusion",
+      "sourceText": "Received prior docetaxel therapy.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 10,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Non-Squamous Non-Small Cell Lung Cancer (NSCLC)"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 9,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Non-Squamous Non-Small Cell Lung Cancer"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Adult Participants"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 8,
+      "disagreements": 3,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_lines_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 7,
+      "rejectedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "histology_in",
+          "polarity": "exclusion",
+          "value": "h:squamous"
+        },
+        {
+          "kind": "egfr_variant_in",
+          "polarity": "exclusion",
+          "value": "s:egfr exon 19 deletions, t790m, exon 21 l858r, or exon 20 insertion mutations"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:c-met-targeted antibodies"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:telisotuzumab vedotin"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:docetaxel"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 11,
+    "fuzzyEmitted": 4,
+    "attempts": 2,
+    "ms": 12338
+  },
+  "runB": {
+    "typedEmitted": 11,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3827
+  },
+  "ms": 24114,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06568939",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06568939-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Non-Squamous Non-Small Cell Lung Cancer (NSCLC)",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06568939-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Must have a known epidermal growth factor receptor (EGFR) activating mutation status.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06568939-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Must have an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06568939-prior-lines-max",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Must have received no more than 1 line of prior systemic cytotoxic chemotherapy in the locally advanced or metastatic setting, as stated in the protocol.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06568939-prior-lines-min",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Must have progressed on at least 1 line of prior therapy for locally advanced/metastatic NSCLC, as stated in the protocol.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06568939-histology-excl",
+        "kind": "histology_in",
+        "polarity": "exclusion",
+        "sourceText": "Adenosquamous or neuroendocrine histology, or sarcomatoid features.",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT06568939-egfr-excl",
+        "kind": "egfr_variant_in",
+        "polarity": "exclusion",
+        "sourceText": "EGFR activating mutations (e.g., EGFR Exon 19 deletions, T790M, Exon 21 L858R, or Exon 20 insertion mutations).",
+        "stringValue": "EGFR Exon 19 deletions, T790M, Exon 21 L858R, or Exon 20 insertion mutations"
+      },
+      {
+        "id": "NCT06568939-prior-cmet",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Received prior c-Met-targeted antibodies, prior telisotuzumab vedotin, or prior antibody-drug conjugates either targeting c-Met or consisting of monomethylauristatin E.",
+        "stringValue": "c-Met-targeted antibodies"
+      },
+      {
+        "id": "NCT06568939-prior-telisotuzumab",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Received prior c-Met-targeted antibodies, prior telisotuzumab vedotin, or prior antibody-drug conjugates either targeting c-Met or consisting of monomethylauristatin E.",
+        "stringValue": "telisotuzumab vedotin"
+      },
+      {
+        "id": "NCT06568939-prior-docetaxel",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Received prior docetaxel therapy.",
+        "stringValue": "docetaxel"
+      },
+      {
+        "id": "NCT06568939-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Metastases to the central nervous system (CNS). Participants with CNS metastases are eligible only after adequate treatment (such as surgery or, radiotherapy, or drug therapy) is provided, as stated on the protocol.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06568939-life-expectancy",
+        "polarity": "inclusion",
+        "sourceText": "Projected life expectancy of at least 12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06568939-cmet-expr",
+        "polarity": "inclusion",
+        "sourceText": "Must have c-Met overexpressing non-small cell lung cancer (NSCLC) (defined as >= 25% tumor cells with 3+ staining (high [>= 50% 3+]; intermediate [>= 25% - < 50%]) as assessed by a Sponsor designated immunohistochemistry (IHC) laboratory",
+        "reasonFuzzy": "c-Met overexpression by IHC with percentage cutoffs is not supported by a specific typed biomarker kind in the allowed list."
+      },
+      {
+        "id": "NCT06568939-stage",
+        "polarity": "inclusion",
+        "sourceText": "Must have histologically or cytologically documented NSCLC that is locally advanced or metastatic.",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no explicit numbered stage list."
+      },
+      {
+        "id": "NCT06568939-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Must have measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06568939",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06568939-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Non-Squamous Non-Small Cell Lung Cancer",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06568939-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adult Participants",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06568939-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Must have a known epidermal growth factor receptor (EGFR) activating mutation status.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06568939-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Must have an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06568939-prior-lines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Must have received no more than 1 line of prior systemic cytotoxic chemotherapy in the locally advanced or metastatic setting, as stated in the protocol.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06568939-excl-histology",
+        "kind": "histology_in",
+        "polarity": "exclusion",
+        "sourceText": "Adenosquamous or neuroendocrine histology, or sarcomatoid features.",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT06568939-excl-egfr",
+        "kind": "egfr_variant_in",
+        "polarity": "exclusion",
+        "sourceText": "EGFR activating mutations (e.g., EGFR Exon 19 deletions, T790M, Exon 21 L858R, or Exon 20 insertion mutations).",
+        "stringValue": "EGFR Exon 19 deletions, T790M, Exon 21 L858R, or Exon 20 insertion mutations"
+      },
+      {
+        "id": "NCT06568939-excl-therapy-1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Received prior c-Met-targeted antibodies, prior telisotuzumab vedotin, or prior antibody-drug conjugates either targeting c-Met or consisting of monomethylauristatin E.",
+        "stringValue": "c-Met-targeted antibodies"
+      },
+      {
+        "id": "NCT06568939-excl-therapy-2",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Received prior c-Met-targeted antibodies, prior telisotuzumab vedotin, or prior antibody-drug conjugates either targeting c-Met or consisting of monomethylauristatin E.",
+        "stringValue": "telisotuzumab vedotin"
+      },
+      {
+        "id": "NCT06568939-excl-therapy-3",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Received prior docetaxel therapy.",
+        "stringValue": "docetaxel"
+      },
+      {
+        "id": "NCT06568939-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Metastases to the central nervous system (CNS). Participants with CNS metastases are eligible only after adequate treatment (such as surgery or, radiotherapy, or drug therapy) is provided, as stated on the protocol.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06568939-life",
+        "polarity": "inclusion",
+        "sourceText": "Projected life expectancy of at least 12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06568939-cmet",
+        "polarity": "inclusion",
+        "sourceText": "Must have c-Met overexpressing non-small cell lung cancer (NSCLC) (defined as \\>= 25% tumor cells with 3+ staining (high \\[\\>= 50% 3+\\]; intermediate \\[\\>= 25% - \\< 50%\\]) as assessed by a Sponsor designated immunohistochemistry (IHC) laboratory",
+        "reasonFuzzy": "c-Met overexpression with percentage cutoffs is not a standard typed biomarker kind."
+      },
+      {
+        "id": "NCT06568939-stage",
+        "polarity": "inclusion",
+        "sourceText": "Must have histologically or cytologically documented NSCLC that is locally advanced or metastatic.",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is described without specific stage numbers."
+      },
+      {
+        "id": "NCT06568939-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Must have measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06568939-prior-progression",
+        "polarity": "inclusion",
+        "sourceText": "Must have progressed on at least 1 line of prior therapy for locally advanced/metastatic NSCLC, as stated in the protocol.",
+        "reasonFuzzy": "Prior line progression rule requires protocol-specific details not fully captured by a simple prior lines count."
+      }
+    ]
+  }
+}

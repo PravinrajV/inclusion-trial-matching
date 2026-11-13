@@ -1,0 +1,277 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07584239",
+  "briefTitle": "Prehabilitation Physical Therapy and Relaxation Intervention Program to Promote Resiliency and Operative Success Among Adults Receiving Lung Cancer Surgery, ROAR-LCS Trial",
+  "parsedAt": "2026-11-12T11:57:42.949Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07584239-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07584239-surgery",
+      "polarity": "inclusion",
+      "sourceText": "Intent to receive surgery following neoadjuvant systemic therapy from the Ohio State University Comprehensive Cancer Center (OSUCCC) Thoracic Oncology Clinic",
+      "reasonFuzzy": "Intent to undergo surgery at a specific clinic is a procedural requirement, not a typed clinical check."
+    },
+    {
+      "id": "NCT07584239-timing",
+      "polarity": "inclusion",
+      "sourceText": "Patients who are at least 6 weeks out of the surgery date are eligible to participate",
+      "reasonFuzzy": "Post-surgical timing rule is a protocol schedule detail, not a typed check."
+    },
+    {
+      "id": "NCT07584239-willingness",
+      "polarity": "inclusion",
+      "sourceText": "Willingness to participate and adhere to the study intervention program",
+      "reasonFuzzy": "Willingness and adherence are subjective patient behaviors."
+    },
+    {
+      "id": "NCT07584239-consent",
+      "polarity": "inclusion",
+      "sourceText": "Ability to understand and willingness to sign an informed consent document",
+      "reasonFuzzy": "Informed consent is a standard administrative requirement."
+    },
+    {
+      "id": "NCT07584239-prisoners",
+      "polarity": "exclusion",
+      "sourceText": "Prisoners are excluded from participation",
+      "reasonFuzzy": "Prisoner status is an administrative exclusion, not a typed biomarker or lab check."
+    },
+    {
+      "id": "NCT07584239-trial",
+      "polarity": "exclusion",
+      "sourceText": "Patients already enrolled on a therapeutic clinical trial will be excluded from this study as to not confound any exploratory outcomes associated with this trial and/or any clinical trials evaluating novel anti-cancer therapies unless granted permission by the local site principal investigator (PI)",
+      "reasonFuzzy": "Concurrent trial participation with an investigator exception is a protocol administrative rule."
+    },
+    {
+      "id": "NCT07584239-intent",
+      "polarity": "inclusion",
+      "sourceText": "Intent to receive surgery following neoadjuvant systemic therapy from the Ohio State University Comprehensive Cancer Center (OSUCCC) Thoracic Oncology Clinic",
+      "reasonFuzzy": "Treatment intent and site-specific care are subjective study requirements not covered by typed checks."
+    },
+    {
+      "id": "NCT07584239-timing",
+      "polarity": "inclusion",
+      "sourceText": "Patients who are at least 6 weeks out of the surgery date are eligible to participate",
+      "reasonFuzzy": "Timing relative to surgery date is a specialized operational rule rather than a standard typed prior line or washout window."
+    },
+    {
+      "id": "NCT07584239-willingness",
+      "polarity": "inclusion",
+      "sourceText": "Willingness to participate and adhere to the study intervention program",
+      "reasonFuzzy": "Willingness and adherence are subjective judgment items."
+    },
+    {
+      "id": "NCT07584239-consent",
+      "polarity": "inclusion",
+      "sourceText": "Ability to understand and willingness to sign an informed consent document",
+      "reasonFuzzy": "Consent capability is a standard administrative requirement."
+    },
+    {
+      "id": "NCT07584239-prisoners",
+      "polarity": "exclusion",
+      "sourceText": "Prisoners are excluded from participation",
+      "reasonFuzzy": "Prisoner status is a vulnerable population exclusion, not a typed clinical check."
+    },
+    {
+      "id": "NCT07584239-trial",
+      "polarity": "exclusion",
+      "sourceText": "Patients already enrolled on a therapeutic clinical trial will be excluded from this study as to not confound any exploratory outcomes associated with this trial and/or any clinical trials evaluating novel anti-cancer therapies unless granted permission by the local site principal investigator (PI)",
+      "reasonFuzzy": "Concurrent clinical trial enrollment exclusion with investigator discretion exception cannot be mapped to a simple typed check."
+    },
+    {
+      "id": "NCT07584239-stage",
+      "polarity": "inclusion",
+      "sourceText": "Diagnosed with: potentially resectable non small cell lung cancer (NSCLC) stage (9th edition: IB-IIIB)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IB,IIA,IIB,IIIA,IIIB"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 4025
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 4522
+  },
+  "ms": 16529,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07584239",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07584239-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07584239-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Diagnosed with: potentially resectable non small cell lung cancer (NSCLC) stage (9th edition: IB-IIIB)",
+        "stages": [
+          "IB",
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07584239-surgery",
+        "polarity": "inclusion",
+        "sourceText": "Intent to receive surgery following neoadjuvant systemic therapy from the Ohio State University Comprehensive Cancer Center (OSUCCC) Thoracic Oncology Clinic",
+        "reasonFuzzy": "Intent to undergo surgery at a specific clinic is a procedural requirement, not a typed clinical check."
+      },
+      {
+        "id": "NCT07584239-timing",
+        "polarity": "inclusion",
+        "sourceText": "Patients who are at least 6 weeks out of the surgery date are eligible to participate",
+        "reasonFuzzy": "Post-surgical timing rule is a protocol schedule detail, not a typed check."
+      },
+      {
+        "id": "NCT07584239-willingness",
+        "polarity": "inclusion",
+        "sourceText": "Willingness to participate and adhere to the study intervention program",
+        "reasonFuzzy": "Willingness and adherence are subjective patient behaviors."
+      },
+      {
+        "id": "NCT07584239-consent",
+        "polarity": "inclusion",
+        "sourceText": "Ability to understand and willingness to sign an informed consent document",
+        "reasonFuzzy": "Informed consent is a standard administrative requirement."
+      },
+      {
+        "id": "NCT07584239-prisoners",
+        "polarity": "exclusion",
+        "sourceText": "Prisoners are excluded from participation",
+        "reasonFuzzy": "Prisoner status is an administrative exclusion, not a typed biomarker or lab check."
+      },
+      {
+        "id": "NCT07584239-trial",
+        "polarity": "exclusion",
+        "sourceText": "Patients already enrolled on a therapeutic clinical trial will be excluded from this study as to not confound any exploratory outcomes associated with this trial and/or any clinical trials evaluating novel anti-cancer therapies unless granted permission by the local site principal investigator (PI)",
+        "reasonFuzzy": "Concurrent trial participation with an investigator exception is a protocol administrative rule."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07584239",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07584239-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07584239-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Diagnosed with: potentially resectable non small cell lung cancer (NSCLC) stage (9th edition: IB-IIIB)",
+        "stages": [
+          "IB",
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07584239-intent",
+        "polarity": "inclusion",
+        "sourceText": "Intent to receive surgery following neoadjuvant systemic therapy from the Ohio State University Comprehensive Cancer Center (OSUCCC) Thoracic Oncology Clinic",
+        "reasonFuzzy": "Treatment intent and site-specific care are subjective study requirements not covered by typed checks."
+      },
+      {
+        "id": "NCT07584239-timing",
+        "polarity": "inclusion",
+        "sourceText": "Patients who are at least 6 weeks out of the surgery date are eligible to participate",
+        "reasonFuzzy": "Timing relative to surgery date is a specialized operational rule rather than a standard typed prior line or washout window."
+      },
+      {
+        "id": "NCT07584239-willingness",
+        "polarity": "inclusion",
+        "sourceText": "Willingness to participate and adhere to the study intervention program",
+        "reasonFuzzy": "Willingness and adherence are subjective judgment items."
+      },
+      {
+        "id": "NCT07584239-consent",
+        "polarity": "inclusion",
+        "sourceText": "Ability to understand and willingness to sign an informed consent document",
+        "reasonFuzzy": "Consent capability is a standard administrative requirement."
+      },
+      {
+        "id": "NCT07584239-prisoners",
+        "polarity": "exclusion",
+        "sourceText": "Prisoners are excluded from participation",
+        "reasonFuzzy": "Prisoner status is a vulnerable population exclusion, not a typed clinical check."
+      },
+      {
+        "id": "NCT07584239-trial",
+        "polarity": "exclusion",
+        "sourceText": "Patients already enrolled on a therapeutic clinical trial will be excluded from this study as to not confound any exploratory outcomes associated with this trial and/or any clinical trials evaluating novel anti-cancer therapies unless granted permission by the local site principal investigator (PI)",
+        "reasonFuzzy": "Concurrent clinical trial enrollment exclusion with investigator discretion exception cannot be mapped to a simple typed check."
+      }
+    ]
+  }
+}

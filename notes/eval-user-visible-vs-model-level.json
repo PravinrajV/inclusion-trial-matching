@@ -1,0 +1,228 @@
+{
+  "title": "Held-out eval: model-level vs user-visible typed checks",
+  "source": "notes/accuracy-raw/set{1,2,3}-ai-logic-score.json and notes/accuracy-raw/ai-logic-score-summary.json",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "computedFromOfficialScores": true,
+  "sets": [
+    {
+      "set": 1,
+      "labelSet": "held-out-2026-11-11",
+      "goldPath": "/workspace/competitions/firebase-hybridai/inclusion/gold/held-out-criteria-2026-11-11T211725-0500.json",
+      "ranAt": "2026-11-12T13:30:18.370Z",
+      "pipeline": "ai-logic-v3-quote-two-run-verifier",
+      "parserModel": "gemini-3.5-flash-lite",
+      "promptVersion": "3",
+      "modelLevel": {
+        "typedHits": 41,
+        "typedTotal": 87,
+        "coverage": 47.1,
+        "unsafeMisses": 0,
+        "priorTherapyUnsafe": 0,
+        "otherUnsafe": 0,
+        "unsafeReport": "0 unsafe out of 87 criteria",
+        "unsafeRows": []
+      },
+      "userVisibleTypedChecks": {
+        "note": "Same official pipeline score, after dropping prior_therapy_* kinds, which the shipped demo cache does not include as typed checks (see scripts/ship-ai-logic-cache.mjs).",
+        "unsafeMisses": 0,
+        "unsafeRows": []
+      }
+    },
+    {
+      "set": 2,
+      "labelSet": "held-out-2-2026-11-11",
+      "goldPath": "/workspace/competitions/firebase-hybridai/inclusion/gold/held-out-2-criteria-2026-11-11T213510-0500.json",
+      "ranAt": "2026-11-12T13:30:18.374Z",
+      "pipeline": "ai-logic-v3-quote-two-run-verifier",
+      "parserModel": "gemini-3.5-flash-lite",
+      "promptVersion": "3",
+      "modelLevel": {
+        "typedHits": 70,
+        "typedTotal": 131,
+        "coverage": 53.4,
+        "unsafeMisses": 0,
+        "priorTherapyUnsafe": 0,
+        "otherUnsafe": 0,
+        "unsafeReport": "0 unsafe out of 131 criteria",
+        "unsafeRows": []
+      },
+      "userVisibleTypedChecks": {
+        "note": "Same official pipeline score, after dropping prior_therapy_* kinds, which the shipped demo cache does not include as typed checks (see scripts/ship-ai-logic-cache.mjs).",
+        "unsafeMisses": 0,
+        "unsafeRows": []
+      }
+    },
+    {
+      "set": 3,
+      "labelSet": "held-out-3-2026-11-11",
+      "goldPath": "/workspace/competitions/firebase-hybridai/inclusion/gold/held-out-3-criteria-2026-11-11T214338-0500.json",
+      "ranAt": "2026-11-12T13:30:18.378Z",
+      "pipeline": "ai-logic-v3-quote-two-run-verifier",
+      "parserModel": "gemini-3.5-flash-lite",
+      "promptVersion": "3",
+      "modelLevel": {
+        "typedHits": 46,
+        "typedTotal": 94,
+        "coverage": 48.9,
+        "unsafeMisses": 1,
+        "priorTherapyUnsafe": 1,
+        "otherUnsafe": 0,
+        "unsafeReport": "1 unsafe out of 94 criteria",
+        "unsafeRows": [
+          {
+            "id": "U16",
+            "nctId": "NCT06170788",
+            "kind": "prior_therapy_excluded",
+            "group": "prior",
+            "verdict": "miss",
+            "detail": "kind and polarity matched, value did not (emitted {\"stringValue\":\"anti-PD-1\"})",
+            "safety": "unsafe",
+            "safetyReason": "same kind and polarity with a non-matching value (s:anti-pd-1)"
+          }
+        ]
+      },
+      "userVisibleTypedChecks": {
+        "note": "Same official pipeline score, after dropping prior_therapy_* kinds, which the shipped demo cache does not include as typed checks (see scripts/ship-ai-logic-cache.mjs).",
+        "unsafeMisses": 0,
+        "unsafeRows": []
+      }
+    }
+  ],
+  "framing": {
+    "proposed": "What users see: 0 unsafe typed checks on all three held-out sets. Model level: 1 prior-therapy miss on set 3, so prior-therapy rules aren't automated from the parser.",
+    "userVisibleUnsafeBySet": [
+      0,
+      0,
+      0
+    ],
+    "modelLevelUnsafeBySet": [
+      0,
+      0,
+      1
+    ],
+    "userVisibleZeroUnsafeOnAllThree": true,
+    "modelLevel": "Set 1: 41/87, 0 unsafe; set 2: 70/131, 0 unsafe; set 3: 46/94, 1 unsafe (prior_therapy_excluded, NCT06170788, U16).",
+    "priorTherapyAlwaysDiscuss": false,
+    "priorTherapyAlwaysDiscussReason": "The shipped cache omits parser prior_therapy_* classes from typedChecks, so those items stay in Discuss. A separate client rule, src/match/population.ts tkiNaiveConflict, still marks a trial Unlikely when the title says TKI-naive, treatment-naive, previously untreated, or no prior treatment/therapy, and the chart lists a targeted TKI. That title-based rule is an automated prior-therapy gate. It is not a parser typed check, so it is not scored in this file's model-level or user-visible typed-check counts.",
+    "wordingUsed": "What users see: 0 unsafe typed checks on all three held-out sets. Model level: 1 prior-therapy miss on set 3, so prior-therapy rules aren't automated from the parser."
+  },
+  "tkiNaiveConflictAudit": {
+    "computedAt": "2026-11-12T23:47:00-05:00",
+    "countedInThisEvalFile": false,
+    "reasonNotCounted": "This eval file scores parser typed checks against gold criteria. tkiNaiveConflict is a client-side title rule, not a parser prior_therapy_* class.",
+    "cacheTrials": 277,
+    "hitsByPersona": {
+      "alex-rivera": 7,
+      "sam-okonkwo": 7,
+      "jordan-blake": 0
+    },
+    "uniqueTrials": 7,
+    "trials": [
+      {
+        "nctId": "NCT04165070",
+        "titleQuote": "Treatment-Naive",
+        "personas": [
+          "Alex Rivera",
+          "Sam Okonkwo"
+        ],
+        "soleReasonUnlikely": true,
+        "unsafe": false,
+        "note": "KEYMAKER-U01A for treatment-naive stage IV NSCLC. Both personas have a prior TKI (osimertinib or alectinib). Correct exclusion."
+      },
+      {
+        "nctId": "NCT05789082",
+        "titleQuote": "Previously Untreated",
+        "personas": [
+          "Alex Rivera",
+          "Sam Okonkwo"
+        ],
+        "soleReasonUnlikely": false,
+        "alsoUnlikelyFor": "kras_variant_in not_met and driver_conflict",
+        "unsafe": false,
+        "note": "Previously untreated KRAS G12C NSCLC. Both personas had prior TKI and do not have KRAS G12C. Correct exclusion; would be Unlikely anyway."
+      },
+      {
+        "nctId": "NCT06765109",
+        "titleQuote": "TKI-naive",
+        "personas": [
+          "Alex Rivera",
+          "Sam Okonkwo"
+        ],
+        "soleReasonUnlikelyFor": [
+          "Sam Okonkwo"
+        ],
+        "alsoUnlikelyForAlex": "alk_status not_met and driver_conflict",
+        "unsafe": false,
+        "note": "Neladalkib for TKI-naive ALK-positive NSCLC versus first-line alectinib. Alex is not ALK-positive. Sam is ALK-positive but already progressed on alectinib. Correct exclusion."
+      },
+      {
+        "nctId": "NCT06772623",
+        "titleQuote": "No Prior Treatment",
+        "personas": [
+          "Alex Rivera",
+          "Sam Okonkwo"
+        ],
+        "soleReasonUnlikely": true,
+        "unsafe": false,
+        "note": "No prior treatment for advanced disease and no actionable genomic alterations. Both personas have prior TKI and an actionable driver. Correct exclusion. Also in held-out set 1."
+      },
+      {
+        "nctId": "NCT06793215",
+        "titleQuote": "Previously Untreated",
+        "personas": [
+          "Alex Rivera",
+          "Sam Okonkwo"
+        ],
+        "soleReasonUnlikely": false,
+        "alsoUnlikelyFor": "kras_variant_in not_met and driver_conflict",
+        "unsafe": false,
+        "note": "Previously untreated KRAS G12C NSCLC. Correct exclusion; would be Unlikely anyway."
+      },
+      {
+        "nctId": "NCT06875310",
+        "titleQuote": "Previously Untreated",
+        "personas": [
+          "Alex Rivera",
+          "Sam Okonkwo"
+        ],
+        "soleReasonUnlikely": false,
+        "alsoUnlikelyFor": "kras_variant_in not_met and driver_conflict",
+        "unsafe": false,
+        "note": "KRYSTAL-4, previously untreated KRAS G12C NSCLC. Correct exclusion; would be Unlikely anyway."
+      },
+      {
+        "nctId": "NCT07361510",
+        "titleQuote": "Previously Untreated",
+        "personas": [
+          "Alex Rivera",
+          "Sam Okonkwo"
+        ],
+        "soleReasonUnlikely": true,
+        "unsafe": false,
+        "note": "ROSETTA Lung-202, previously untreated / first-line advanced NSCLC with PD-L1 >= 50%. Both personas have a prior TKI. Correct exclusion."
+      }
+    ],
+    "goldSetsWithTkiNaiveTitleHint": [
+      {
+        "set": "held-out-2026-11-11",
+        "nctId": "NCT06772623",
+        "titleQuote": "No Prior Treatment",
+        "firesFor": [
+          "Alex Rivera",
+          "Sam Okonkwo"
+        ]
+      },
+      {
+        "set": "held-out-2-2026-11-11",
+        "nctId": "NCT05789082",
+        "titleQuote": "Previously Untreated",
+        "firesFor": [
+          "Alex Rivera",
+          "Sam Okonkwo"
+        ]
+      }
+    ],
+    "unsafeExclusions": 0,
+    "action": "No code change. The rule stayed an automated title-based prior-therapy gate. None of the 7 trials was an unsafe exclusion when scored against the trial title and each persona's prior TKI."
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07094204",
+  "briefTitle": "A Study to Find a Suitable Dose of ASP5834 in Adults With Solid Tumors",
+  "parsedAt": "2026-11-12T10:44:55.415Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07094204-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participant has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Participant has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07094204-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Participant consents to provide tumor specimen in a tissue block or unstained serial slides or a baseline tumor biopsy obtained after the last interventional treatment, but not more than 90 days prior to the start of study intervention.",
+      "reasonFuzzy": "Willingness to undergo biopsy procedure is a subjective or judgment-based requirement."
+    },
+    {
+      "id": "NCT07094204-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participant has at least 1 measurable lesion per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07094204-prior-therapy-1",
+      "polarity": "inclusion",
+      "sourceText": "Participant must have received prior standard therapy in the advanced setting, and the investigator does not see any further clinical benefit from continuing such therapy or the participant is ineligible to receive standard approved therapies.",
+      "reasonFuzzy": "Investigator opinion and flexible standard therapy requirements cannot be expressed as a simple typed check."
+    },
+    {
+      "id": "NCT07094204-prior-therapy-2",
+      "polarity": "inclusion",
+      "sourceText": "No more than 2 prior lines of systemic therapy are allowed in the advanced setting",
+      "reasonFuzzy": "Prior line restrictions vary across different cohorts and parts of the study."
+    },
+    {
+      "id": "NCT07094204-kras",
+      "polarity": "inclusion",
+      "sourceText": "Participant has histologically confirmed locally advanced (unresectable) or metastatic solid tumor malignancy with a documented Kirsten rat sarcoma viral oncogene homolog (KRAS) G12V, G12D, G12C, G12R, G12A or G13D mutation or KRAS amplification (copy number >= 4) determined by local testing.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07094204-kras-target",
+      "polarity": "exclusion",
+      "sourceText": "Participant has received prior KRAS targeting agents (including but not limited to KRAS directed inhibitors, degraders, small interfering RNA [siRNA] therapies, vaccines and cellular therapies)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07094204-stage",
+      "polarity": "inclusion",
+      "sourceText": "locally advanced (unresectable) or metastatic solid tumor malignancy",
+      "reasonFuzzy": "Solid tumor trials with locally advanced or metastatic populations do not list specific numbered AJCC stages."
+    },
+    {
+      "id": "NCT07094204-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Participant consents to provide tumor specimen in a tissue block or unstained serial slides or a baseline tumor biopsy obtained after the last interventional treatment, but not more than 90 days prior to the start of study intervention.",
+      "reasonFuzzy": "Willingness to undergo a biopsy procedure is subjective and process-based."
+    },
+    {
+      "id": "NCT07094204-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participant has at least 1 measurable lesion per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+      "reasonFuzzy": "Measurable disease per RECIST v1.1 is an imaging-based judgment."
+    },
+    {
+      "id": "NCT07094204-kras-targeted-excl",
+      "polarity": "exclusion",
+      "sourceText": "Participant has received prior KRAS targeting agents (including but not limited to KRAS directed inhibitors, degraders, small interfering RNA [siRNA] therapies, vaccines and cellular therapies)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07094204-kras",
+      "polarity": "inclusion",
+      "sourceText": "Participant has histologically confirmed locally advanced (unresectable) or metastatic solid tumor malignancy with a documented Kirsten rat sarcoma viral oncogene homolog (KRAS) G12V, G12D, G12C, G12R, G12A or G13D mutation or KRAS amplification (copy number >/= 4) determined by local testing.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07094204-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participant has symptomatic or untreated central nervous system (CNS) metastases. Participants with stable, asymptomatic and treated CNS metastases are eligible.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Participant has histologically confirmed locally advanced (unresectable) or metastatic solid tumor malignancy with a documented Kirsten rat sarcoma viral oncoge"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Participant has received prior KRAS targeting agents (including but not limited to KRAS directed inhibitors, degraders, small interfering RNA [siRNA] therapies,"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Participant has received prior KRAS targeting agents (including but not limited to KRAS directed inhibitors, degraders, small interfering RNA [siRNA] therapies,"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 5082
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 4881
+  },
+  "ms": 17991,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07094204",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07094204-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Participant has histologically confirmed locally advanced (unresectable) or metastatic solid tumor malignancy with a documented Kirsten rat sarcoma viral oncogene homolog (KRAS) G12V, G12D, G12C, G12R, G12A or G13D mutation or KRAS amplification (copy number >= 4) determined by local testing.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07094204-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07094204-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participant has symptomatic or untreated central nervous system (CNS) metastases. Participants with stable, asymptomatic and treated CNS metastases are eligible.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT07094204-kras-target",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participant has received prior KRAS targeting agents (including but not limited to KRAS directed inhibitors, degraders, small interfering RNA [siRNA] therapies, vaccines and cellular therapies)",
+        "stringValue": "KRAS targeting agents"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07094204-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Participant consents to provide tumor specimen in a tissue block or unstained serial slides or a baseline tumor biopsy obtained after the last interventional treatment, but not more than 90 days prior to the start of study intervention.",
+        "reasonFuzzy": "Willingness to undergo biopsy procedure is a subjective or judgment-based requirement."
+      },
+      {
+        "id": "NCT07094204-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participant has at least 1 measurable lesion per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07094204-prior-therapy-1",
+        "polarity": "inclusion",
+        "sourceText": "Participant must have received prior standard therapy in the advanced setting, and the investigator does not see any further clinical benefit from continuing such therapy or the participant is ineligible to receive standard approved therapies.",
+        "reasonFuzzy": "Investigator opinion and flexible standard therapy requirements cannot be expressed as a simple typed check."
+      },
+      {
+        "id": "NCT07094204-prior-therapy-2",
+        "polarity": "inclusion",
+        "sourceText": "No more than 2 prior lines of systemic therapy are allowed in the advanced setting",
+        "reasonFuzzy": "Prior line restrictions vary across different cohorts and parts of the study."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07094204",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07094204-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Participant has histologically confirmed locally advanced (unresectable) or metastatic solid tumor malignancy with a documented Kirsten rat sarcoma viral oncogene homolog (KRAS) G12V, G12D, G12C, G12R, G12A or G13D mutation or KRAS amplification (copy number >/= 4) determined by local testing.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07094204-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07094204-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participant has symptomatic or untreated central nervous system (CNS) metastases. Participants with stable, asymptomatic and treated CNS metastases are eligible.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT07094204-kras-targeted-excl",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Participant has received prior KRAS targeting agents (including but not limited to KRAS directed inhibitors, degraders, small interfering RNA [siRNA] therapies, vaccines and cellular therapies)",
+        "stringValue": "KRAS targeting agents"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07094204-stage",
+        "polarity": "inclusion",
+        "sourceText": "locally advanced (unresectable) or metastatic solid tumor malignancy",
+        "reasonFuzzy": "Solid tumor trials with locally advanced or metastatic populations do not list specific numbered AJCC stages."
+      },
+      {
+        "id": "NCT07094204-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Participant consents to provide tumor specimen in a tissue block or unstained serial slides or a baseline tumor biopsy obtained after the last interventional treatment, but not more than 90 days prior to the start of study intervention.",
+        "reasonFuzzy": "Willingness to undergo a biopsy procedure is subjective and process-based."
+      },
+      {
+        "id": "NCT07094204-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participant has at least 1 measurable lesion per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+        "reasonFuzzy": "Measurable disease per RECIST v1.1 is an imaging-based judgment."
+      }
+    ]
+  }
+}

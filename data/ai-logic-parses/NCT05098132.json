@@ -1,0 +1,418 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05098132",
+  "briefTitle": "Study of STK-012 Alone and With Other Treatments in Patients With Advanced Lung Cancer and Other Cancers",
+  "parsedAt": "2026-11-12T05:44:50.843Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05098132-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Stage IV or Stage IIIB/IIIC and not a candidate for definitive treatment.",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Stage IV or Stage IIIB/IIIC and not a candidate for definitive treatment.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05098132-egfr",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+      "presence": "present",
+      "evidence_quote": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05098132-alk",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+      "presence": "present",
+      "evidence_quote": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05098132-ros1",
+      "kind": "ros1_status",
+      "polarity": "exclusion",
+      "sourceText": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+      "presence": "present",
+      "evidence_quote": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05098132-brain",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Known active central nervous system metastases",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Known active central nervous system metastases",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05098132-prior",
+      "polarity": "inclusion",
+      "sourceText": "No prior systemic therapy for advanced/metastatic NSQ NSCLC.",
+      "reasonFuzzy": "Zero prior lines rule is best captured by prior_lines_max 0, but prior_lines_max kind is not listed in the permitted kinds. Using fuzzy criteria."
+    },
+    {
+      "id": "NCT05098132-stk11",
+      "polarity": "inclusion",
+      "sourceText": "STK11 mutated on tumor tissue or ctDNA",
+      "reasonFuzzy": "There is no typed kind for STK11 mutations."
+    },
+    {
+      "id": "NCT05098132-subtypes",
+      "polarity": "exclusion",
+      "sourceText": "Rare tumor subtypes (mucinous histology or tumors with small cell, neuroendocrine, or sarcomatoid components).",
+      "reasonFuzzy": "Complex exclusion of specific rare histological components not fully covered by standard histology categories."
+    },
+    {
+      "id": "NCT05098132-rad",
+      "polarity": "exclusion",
+      "sourceText": "Received radiotherapy ≤ 7 days of the first dose of study treatment.",
+      "reasonFuzzy": "Short washout window for radiation is not a typed lab or simple prior therapy check."
+    },
+    {
+      "id": "NCT05098132-pdi",
+      "polarity": "exclusion",
+      "sourceText": "Prior immune checkpoint inhibitor (anti-PD[L]1 and/or anti-CTLA-4) treatment",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05098132-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "No prior systemic therapy for advanced/metastatic NSQ NSCLC.",
+      "reasonFuzzy": "This is a prior systemic therapy exclusion phrased as an inclusion, which cannot be expressed as a standard prior_therapy_required check."
+    },
+    {
+      "id": "NCT05098132-stk11",
+      "polarity": "inclusion",
+      "sourceText": "STK11 mutated on tumor tissue or ctDNA",
+      "reasonFuzzy": "STK11 is not among the allowed biomarker typed kinds."
+    },
+    {
+      "id": "NCT05098132-rare-subtypes",
+      "polarity": "exclusion",
+      "sourceText": "Rare tumor subtypes (mucinous histology or tumors with small cell, neuroendocrine, or sarcomatoid components).",
+      "reasonFuzzy": "This exclusion specifies various rare tumor components and subtypes rather than a simple histology_in list."
+    },
+    {
+      "id": "NCT05098132-radiotherapy",
+      "polarity": "exclusion",
+      "sourceText": "Received radiotherapy ≤ 7 days of the first dose of study treatment.",
+      "reasonFuzzy": "A radiotherapy washout window is not a typed check."
+    },
+    {
+      "id": "NCT05098132-meningitis",
+      "polarity": "exclusion",
+      "sourceText": "Any history of carcinomatous meningitis",
+      "reasonFuzzy": "Carcinomatous meningitis is not a standard brain_mets check."
+    },
+    {
+      "id": "NCT05098132-prior-ici",
+      "polarity": "exclusion",
+      "sourceText": "Prior immune checkpoint inhibitor (anti-PD[L]1 and/or anti-CTLA-4) treatment",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05098132-histology",
+      "polarity": "inclusion",
+      "sourceText": "Non-squamous (NSQ) cell histology.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05098132-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "PD-L1 negative (TPS <1%), OR;",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 7,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Prior immune checkpoint inhibitor (anti-PD[L]1 and/or anti-CTLA-4) treatment"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 7,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Prior immune checkpoint inhibitor (anti-PD[L]1 and/or anti-CTLA-4) treatment"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 7,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 5,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        },
+        {
+          "kind": "pdl1_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        }
+      ],
+      "normalizerTypedCount": 7
+    }
+  },
+  "runA": {
+    "typedEmitted": 8,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 3183
+  },
+  "runB": {
+    "typedEmitted": 8,
+    "fuzzyEmitted": 5,
+    "attempts": 2,
+    "ms": 12349
+  },
+  "ms": 23526,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05098132",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05098132-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage IV or Stage IIIB/IIIC and not a candidate for definitive treatment.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05098132-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Non-squamous (NSQ) cell histology.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT05098132-pdl1",
+        "kind": "pdl1_max",
+        "polarity": "inclusion",
+        "sourceText": "PD-L1 negative (TPS <1%), OR;",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05098132-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05098132-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05098132-ros1",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05098132-pdi",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior immune checkpoint inhibitor (anti-PD[L]1 and/or anti-CTLA-4) treatment",
+        "stringValue": "immune checkpoint inhibitor"
+      },
+      {
+        "id": "NCT05098132-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known active central nervous system metastases",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05098132-prior",
+        "polarity": "inclusion",
+        "sourceText": "No prior systemic therapy for advanced/metastatic NSQ NSCLC.",
+        "reasonFuzzy": "Zero prior lines rule is best captured by prior_lines_max 0, but prior_lines_max kind is not listed in the permitted kinds. Using fuzzy criteria."
+      },
+      {
+        "id": "NCT05098132-stk11",
+        "polarity": "inclusion",
+        "sourceText": "STK11 mutated on tumor tissue or ctDNA",
+        "reasonFuzzy": "There is no typed kind for STK11 mutations."
+      },
+      {
+        "id": "NCT05098132-subtypes",
+        "polarity": "exclusion",
+        "sourceText": "Rare tumor subtypes (mucinous histology or tumors with small cell, neuroendocrine, or sarcomatoid components).",
+        "reasonFuzzy": "Complex exclusion of specific rare histological components not fully covered by standard histology categories."
+      },
+      {
+        "id": "NCT05098132-rad",
+        "polarity": "exclusion",
+        "sourceText": "Received radiotherapy ≤ 7 days of the first dose of study treatment.",
+        "reasonFuzzy": "Short washout window for radiation is not a typed lab or simple prior therapy check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05098132",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05098132-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage IV or Stage IIIB/IIIC and not a candidate for definitive treatment.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05098132-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Non-squamous (NSQ) cell histology.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT05098132-pdl1",
+        "kind": "pdl1_max",
+        "polarity": "inclusion",
+        "sourceText": "PD-L1 negative (TPS <1%), OR;",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05098132-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05098132-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05098132-ros1",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "No known actionable EGFR, ALK, ROS1, or other actionable genomic aberrations for which there is a local standard of care available as front line therapy.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05098132-prior-ici",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior immune checkpoint inhibitor (anti-PD[L]1 and/or anti-CTLA-4) treatment",
+        "stringValue": "anti-PD[L]1 and/or anti-CTLA-4"
+      },
+      {
+        "id": "NCT05098132-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known active central nervous system metastases",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05098132-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "No prior systemic therapy for advanced/metastatic NSQ NSCLC.",
+        "reasonFuzzy": "This is a prior systemic therapy exclusion phrased as an inclusion, which cannot be expressed as a standard prior_therapy_required check."
+      },
+      {
+        "id": "NCT05098132-stk11",
+        "polarity": "inclusion",
+        "sourceText": "STK11 mutated on tumor tissue or ctDNA",
+        "reasonFuzzy": "STK11 is not among the allowed biomarker typed kinds."
+      },
+      {
+        "id": "NCT05098132-rare-subtypes",
+        "polarity": "exclusion",
+        "sourceText": "Rare tumor subtypes (mucinous histology or tumors with small cell, neuroendocrine, or sarcomatoid components).",
+        "reasonFuzzy": "This exclusion specifies various rare tumor components and subtypes rather than a simple histology_in list."
+      },
+      {
+        "id": "NCT05098132-radiotherapy",
+        "polarity": "exclusion",
+        "sourceText": "Received radiotherapy ≤ 7 days of the first dose of study treatment.",
+        "reasonFuzzy": "A radiotherapy washout window is not a typed check."
+      },
+      {
+        "id": "NCT05098132-meningitis",
+        "polarity": "exclusion",
+        "sourceText": "Any history of carcinomatous meningitis",
+        "reasonFuzzy": "Carcinomatous meningitis is not a standard brain_mets check."
+      }
+    ]
+  }
+}

@@ -1,0 +1,427 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07659782",
+  "briefTitle": "A Phase 2 Study of VS-7375 in Patients With KRAS G12D-Mutated Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T11:59:18.637Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07659782-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histopathology confirmed unresectable locally advanced or metastatic NSCLC",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope but does not list specific stages for a stage_in check."
+    },
+    {
+      "id": "NCT07659782-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST 1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07659782-lines-conditional",
+      "polarity": "inclusion",
+      "sourceText": "Patients with 2L/3L on stable or preferred dose: Received at least 1 and no more than 2 prior systemic lines of therapy for advanced (in the unresectable locally advanced or metastatic setting) NSCLC. Patients with 2L-4L with brain metastases: Received at least 1 and no more than 3 prior systemic lines of therapy for advanced (in the unresectable locally advanced or metastatic setting) NSCLC.",
+      "reasonFuzzy": "Prior-line limits are conditional based on patient subsets (brain metastases vs. others), so they cannot be expressed as a single typed prior lines check."
+    },
+    {
+      "id": "NCT07659782-brain-subsets",
+      "polarity": "inclusion",
+      "sourceText": "Have asymptomatic and untreated brain metastases At least 1 untreated measurable brain lesion per mRECIST v1.1 with a long axis ≥ 0.5 cm and ≤ 3 cm.",
+      "reasonFuzzy": "Brain metastases subset criteria include specific mRECIST measurements and conditional line requirements that do not map to a standard typed brain_mets check."
+    },
+    {
+      "id": "NCT07659782-ras-mutation-excl",
+      "polarity": "exclusion",
+      "sourceText": "Have any other documented co-existing common RAS mutation(s)",
+      "reasonFuzzy": "Exclusion of co-existing common RAS mutations is not a single typed variant exclusion check."
+    },
+    {
+      "id": "NCT07659782-washout",
+      "polarity": "exclusion",
+      "sourceText": "Prior anti-cancer Tx within 4 weeks or drug-specific timeline within first treatment dose, whichever shorter Major surgery within 4 weeks of first treatment dose Radiation therapy (RT) within 1 week of first treatment dose",
+      "reasonFuzzy": "Washout periods for prior therapies and surgery are not simple lab cutoffs."
+    },
+    {
+      "id": "NCT07659782-brain-excl",
+      "polarity": "exclusion",
+      "sourceText": "Untreated or symptomatic CNS metastasis",
+      "reasonFuzzy": "Excluding untreated or symptomatic CNS metastases conflicts with inclusion rules for certain brain metastasis subsets, making it complex."
+    },
+    {
+      "id": "NCT07659782-cyp3a4",
+      "polarity": "exclusion",
+      "sourceText": "Receipt of strong CYP3A4 inhibitor/inducer or CYP3A4 sensitive substrates with narrow therapeutic index within 14 days or drug-specific timeline within first treatment dose, whichever is shorter",
+      "reasonFuzzy": "Complex drug interaction exclusions are not covered by typed checks."
+    },
+    {
+      "id": "NCT07659782-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07659782-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histopathology confirmed unresectable locally advanced or metastatic NSCLC",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope but does not provide a standard numbered stage list for stage_in."
+    },
+    {
+      "id": "NCT07659782-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST 1.1",
+      "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07659782-lines",
+      "polarity": "inclusion",
+      "sourceText": "Patients with 2L/3L on stable or preferred dose: Received at least 1 and no more than 2 prior systemic lines of therapy for advanced (in the unresectable locally advanced or metastatic setting) NSCLC. Patients with 2L-4L with brain metastases: Received at least 1 and no more than 3 prior systemic lines of therapy for advanced (in the unresectable locally advanced or metastatic setting) NSCLC.",
+      "reasonFuzzy": "Prior lines rules depend on patient subgroups (with or without brain metastases), so they cannot be expressed as a single simple prior lines check."
+    },
+    {
+      "id": "NCT07659782-brainsub",
+      "polarity": "inclusion",
+      "sourceText": "Have asymptomatic and untreated brain metastases",
+      "reasonFuzzy": "This subgroup-specific inclusion allows untreated brain metastases under specific conditions, which conflicts with standard typed brain_mets checks."
+    },
+    {
+      "id": "NCT07659782-rasexcl",
+      "polarity": "exclusion",
+      "sourceText": "Have any other documented co-existing common RAS mutation(s)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07659782-brain",
+      "polarity": "exclusion",
+      "sourceText": "Untreated or symptomatic CNS metastasis",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07659782-kras",
+      "polarity": "inclusion",
+      "sourceText": "Local testing confirmed KRAS G12D mutation (tissue required for confirmatory central testing)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07659782-krasvariant",
+      "polarity": "inclusion",
+      "sourceText": "Local testing confirmed KRAS G12D mutation (tissue required for confirmatory central testing)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07659782-ecog",
+      "polarity": "inclusion",
+      "sourceText": "ECOG PS=0 or 1",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07659782-prior-platinum",
+      "polarity": "inclusion",
+      "sourceText": "Received prior treatment with a platinum-based chemotherapy regimen and an immune checkpoint inhibitor in the advanced, non-resectable setting.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07659782-prior-ici",
+      "polarity": "inclusion",
+      "sourceText": "Received prior treatment with a platinum-based chemotherapy regimen and an immune checkpoint inhibitor in the advanced, non-resectable setting.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07659782-prior-ras",
+      "polarity": "exclusion",
+      "sourceText": "Receipt of prior direct RAS inhibitor",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 8,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 6,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "kras_variant_in",
+          "polarity": "exclusion",
+          "value": "s:co-existing common ras mutation"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 6,
+      "rejectedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12d"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:platinum"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:immune checkpoint inhibitor"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:direct ras inhibitor"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 5595
+  },
+  "runB": {
+    "typedEmitted": 8,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 5720
+  },
+  "ms": 19303,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07659782",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07659782-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Local testing confirmed KRAS G12D mutation (tissue required for confirmatory central testing)",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07659782-krasvariant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Local testing confirmed KRAS G12D mutation (tissue required for confirmatory central testing)",
+        "stringValue": "G12D"
+      },
+      {
+        "id": "NCT07659782-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG PS=0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07659782-prior-platinum",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Received prior treatment with a platinum-based chemotherapy regimen and an immune checkpoint inhibitor in the advanced, non-resectable setting.",
+        "stringValue": "platinum"
+      },
+      {
+        "id": "NCT07659782-prior-ici",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Received prior treatment with a platinum-based chemotherapy regimen and an immune checkpoint inhibitor in the advanced, non-resectable setting.",
+        "stringValue": "immune checkpoint inhibitor"
+      },
+      {
+        "id": "NCT07659782-prior-ras",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Receipt of prior direct RAS inhibitor",
+        "stringValue": "direct RAS inhibitor"
+      },
+      {
+        "id": "NCT07659782-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07659782-stage",
+        "polarity": "inclusion",
+        "sourceText": "Histopathology confirmed unresectable locally advanced or metastatic NSCLC",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope but does not list specific stages for a stage_in check."
+      },
+      {
+        "id": "NCT07659782-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST 1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07659782-lines-conditional",
+        "polarity": "inclusion",
+        "sourceText": "Patients with 2L/3L on stable or preferred dose: Received at least 1 and no more than 2 prior systemic lines of therapy for advanced (in the unresectable locally advanced or metastatic setting) NSCLC. Patients with 2L-4L with brain metastases: Received at least 1 and no more than 3 prior systemic lines of therapy for advanced (in the unresectable locally advanced or metastatic setting) NSCLC.",
+        "reasonFuzzy": "Prior-line limits are conditional based on patient subsets (brain metastases vs. others), so they cannot be expressed as a single typed prior lines check."
+      },
+      {
+        "id": "NCT07659782-brain-subsets",
+        "polarity": "inclusion",
+        "sourceText": "Have asymptomatic and untreated brain metastases At least 1 untreated measurable brain lesion per mRECIST v1.1 with a long axis ≥ 0.5 cm and ≤ 3 cm.",
+        "reasonFuzzy": "Brain metastases subset criteria include specific mRECIST measurements and conditional line requirements that do not map to a standard typed brain_mets check."
+      },
+      {
+        "id": "NCT07659782-ras-mutation-excl",
+        "polarity": "exclusion",
+        "sourceText": "Have any other documented co-existing common RAS mutation(s)",
+        "reasonFuzzy": "Exclusion of co-existing common RAS mutations is not a single typed variant exclusion check."
+      },
+      {
+        "id": "NCT07659782-washout",
+        "polarity": "exclusion",
+        "sourceText": "Prior anti-cancer Tx within 4 weeks or drug-specific timeline within first treatment dose, whichever shorter Major surgery within 4 weeks of first treatment dose Radiation therapy (RT) within 1 week of first treatment dose",
+        "reasonFuzzy": "Washout periods for prior therapies and surgery are not simple lab cutoffs."
+      },
+      {
+        "id": "NCT07659782-brain-excl",
+        "polarity": "exclusion",
+        "sourceText": "Untreated or symptomatic CNS metastasis",
+        "reasonFuzzy": "Excluding untreated or symptomatic CNS metastases conflicts with inclusion rules for certain brain metastasis subsets, making it complex."
+      },
+      {
+        "id": "NCT07659782-cyp3a4",
+        "polarity": "exclusion",
+        "sourceText": "Receipt of strong CYP3A4 inhibitor/inducer or CYP3A4 sensitive substrates with narrow therapeutic index within 14 days or drug-specific timeline within first treatment dose, whichever is shorter",
+        "reasonFuzzy": "Complex drug interaction exclusions are not covered by typed checks."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07659782",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07659782-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Local testing confirmed KRAS G12D mutation (tissue required for confirmatory central testing)",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07659782-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Local testing confirmed KRAS G12D mutation (tissue required for confirmatory central testing)",
+        "stringValue": "G12D"
+      },
+      {
+        "id": "NCT07659782-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG PS=0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07659782-plat",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Received prior treatment with a platinum-based chemotherapy regimen and an immune checkpoint inhibitor in the advanced, non-resectable setting.",
+        "stringValue": "platinum-based chemotherapy"
+      },
+      {
+        "id": "NCT07659782-ici",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Received prior treatment with a platinum-based chemotherapy regimen and an immune checkpoint inhibitor in the advanced, non-resectable setting.",
+        "stringValue": "immune checkpoint inhibitor"
+      },
+      {
+        "id": "NCT07659782-rasexcl",
+        "kind": "kras_variant_in",
+        "polarity": "exclusion",
+        "sourceText": "Have any other documented co-existing common RAS mutation(s)",
+        "stringValue": "co-existing common RAS mutation"
+      },
+      {
+        "id": "NCT07659782-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Untreated or symptomatic CNS metastasis",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT07659782-rasinh",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Receipt of prior direct RAS inhibitor",
+        "stringValue": "direct RAS inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07659782-stage",
+        "polarity": "inclusion",
+        "sourceText": "Histopathology confirmed unresectable locally advanced or metastatic NSCLC",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope but does not provide a standard numbered stage list for stage_in."
+      },
+      {
+        "id": "NCT07659782-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST 1.1",
+        "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07659782-lines",
+        "polarity": "inclusion",
+        "sourceText": "Patients with 2L/3L on stable or preferred dose: Received at least 1 and no more than 2 prior systemic lines of therapy for advanced (in the unresectable locally advanced or metastatic setting) NSCLC. Patients with 2L-4L with brain metastases: Received at least 1 and no more than 3 prior systemic lines of therapy for advanced (in the unresectable locally advanced or metastatic setting) NSCLC.",
+        "reasonFuzzy": "Prior lines rules depend on patient subgroups (with or without brain metastases), so they cannot be expressed as a single simple prior lines check."
+      },
+      {
+        "id": "NCT07659782-brainsub",
+        "polarity": "inclusion",
+        "sourceText": "Have asymptomatic and untreated brain metastases",
+        "reasonFuzzy": "This subgroup-specific inclusion allows untreated brain metastases under specific conditions, which conflicts with standard typed brain_mets checks."
+      }
+    ]
+  }
+}

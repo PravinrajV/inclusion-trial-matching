@@ -1,0 +1,698 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06096844",
+  "briefTitle": "Chemotherapy Combined With Immunotherapy Versus Immunotherapy Alone for Older Adults With Stage IIIB-IV Lung Cancer, The ACHIEVE Trial",
+  "parsedAt": "2026-11-12T05:50:01.113Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06096844-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have Stage IIIB, IIIC or IV disease and not be candidates for combined chemo-radiation. NOTE: Prior chemo-radiation therapy (RT) for stage III with recurrence is allowed",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Patient must have Stage IIIB, IIIC or IV disease and not be candidates for combined chemo-radiation. NOTE: Prior chemo-radiation therapy (RT) for stage III with recurrence is allowed",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06096844-egfr",
+      "kind": "egfr_status",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have a tumor that is negative for EGFR mutation/ALK translocations or other actionable first line mutations in which patients would receive first-line oral tyrosine kinase inhibitors",
+      "presence": "absent",
+      "evidence_quote": "Patient must have a tumor that is negative for EGFR mutation/ALK translocations or other actionable first line mutations in which patients would receive first-line oral tyrosine kinase inhibitors",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06096844-alk",
+      "kind": "alk_status",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have a tumor that is negative for EGFR mutation/ALK translocations or other actionable first line mutations in which patients would receive first-line oral tyrosine kinase inhibitors",
+      "presence": "absent",
+      "evidence_quote": "Patient must have a tumor that is negative for EGFR mutation/ALK translocations or other actionable first line mutations in which patients would receive first-line oral tyrosine kinase inhibitors",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06096844-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0-2",
+      "numberValue": 2,
+      "evidence_quote": "Patient must have an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0-2",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06096844-anc",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥ 1,500/uL (obtained within 14 days prior to Step 1 registration)",
+      "numberValue": 1500,
+      "evidence_quote": "Absolute neutrophil count (ANC) ≥ 1,500/uL (obtained within 14 days prior to Step 1 registration)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06096844-platelets",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets ≥ 75,000/uL (obtained within 14 days prior to Step 1 registration)",
+      "numberValue": 75000,
+      "evidence_quote": "Platelets ≥ 75,000/uL (obtained within 14 days prior to Step 1 registration)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06096844-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin (Hgb) ≥ 8.0 g/dL (obtained within 14 days prior to Step 1 registration)",
+      "numberValue": 8,
+      "evidence_quote": "Hemoglobin (Hgb) ≥ 8.0 g/dL (obtained within 14 days prior to Step 1 registration)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06096844-bilirubin",
+      "kind": "bilirubin_max",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin ≤ 1.5 x institutional upper limit of normal (ULN) (obtained within 14 days prior to Step 1 registration)",
+      "numberValue": 1.5,
+      "evidence_quote": "Total bilirubin ≤ 1.5 x institutional upper limit of normal (ULN) (obtained within 14 days prior to Step 1 registration)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06096844-egfr_min",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine clearance (CrCL) ≥ 45 mL/min (estimated using Cockcroft-Gault method with actual body weight or measured) (obtained within 14 days prior to Step 1 registration)",
+      "numberValue": 45,
+      "evidence_quote": "Creatinine clearance (CrCL) ≥ 45 mL/min (estimated using Cockcroft-Gault method with actual body weight or measured) (obtained within 14 days prior to Step 1 registration)",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06096844-consent",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have the ability to understand and the willingness to sign a written informed consent document. Patients with impaired decision-making capacity (IDMC) who have a legally authorized representative (LAR) or caregiver and/or family member available will also be considered eligible",
+      "reasonFuzzy": "Willingness to sign informed consent and decision-making capacity are subjective criteria."
+    },
+    {
+      "id": "NCT06096844-language",
+      "polarity": "inclusion",
+      "sourceText": "Patient must be English or Spanish speaking to be eligible for the QOL component of the study",
+      "reasonFuzzy": "Language requirement for quality-of-life component is not a typed clinical check."
+    },
+    {
+      "id": "NCT06096844-chemo",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not have had any prior cytotoxic chemotherapy regimen for metastatic disease. Chemotherapy given in the setting of adjuvant therapy or locally advanced disease is allowed as long as treatment was completed, and they have fully recovered from treatment related adverse events prior to Step 1 registration",
+      "reasonFuzzy": "Prior chemotherapy exclusion has complex exceptions regarding metastatic setting versus adjuvant or locally advanced settings."
+    },
+    {
+      "id": "NCT06096844-immuno",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not have had any prior immunotherapy for metastatic disease. Immunotherapy given in the setting of adjuvant therapy or locally advanced disease is allowed as long as treatment was completed greater than 6 months prior to Step 1 registration",
+      "reasonFuzzy": "Prior immunotherapy exclusion has complex time windows and setting dependencies."
+    },
+    {
+      "id": "NCT06096844-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not have a history of uncontrolled autoimmune conditions with the following exceptions, which are allowed: alopecia, vitiligo, rheumatoid arthritis, psoriasis/psoriatic arthritis, Hashimoto's thyroiditis, lupus, inflammatory bowel disease",
+      "reasonFuzzy": "Uncontrolled autoimmune conditions and multiple specific exceptions require subjective clinical judgment."
+    },
+    {
+      "id": "NCT06096844-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not be on immunosuppressive medication, including steroids (if doses exceed the equivalent of prednisone 10 mg daily). Short courses of steroids which are discontinued prior to randomization are acceptable. Patients on inhaled, intranasal and/or topical steroids are eligible",
+      "reasonFuzzy": "Immunosuppressive medication and steroid equivalent dosing involve complex rule evaluations."
+    },
+    {
+      "id": "NCT06096844-imaging",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have baseline imaging done assessing all measurable or non-measurable sites of disease within 45 days prior to Step 1 registration",
+      "reasonFuzzy": "Baseline imaging assessment is a procedural requirement rather than a typed biomarker or lab cutoff."
+    },
+    {
+      "id": "NCT06096844-investigator",
+      "polarity": "inclusion",
+      "sourceText": "Investigator must declare their intended chemotherapy regimen should their patient be randomized to Arm B (doublet versus[vs] singlet)",
+      "reasonFuzzy": "Investigator declaration of treatment regimen is a trial administrative requirement."
+    },
+    {
+      "id": "NCT06096844-geriatric",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have completed the baseline Geriatric Assessment (GA) after Step 1 registration and prior to Step 2 randomization",
+      "reasonFuzzy": "Completion of geriatric assessment is a study process requirement."
+    },
+    {
+      "id": "NCT06096844-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) ≤ 3.0 × institutional ULN (obtained within 14 days prior to Step 1 registration)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06096844-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) ≤ 3.0 × institutional ULN (obtained within 14 days prior to Step 1 registration)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06096844-consent",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have the ability to understand and the willingness to sign a written informed consent document. Patients with impaired decision-making capacity (IDMC) who have a legally authorized representative (LAR) or caregiver and/or family member available will also be considered eligible",
+      "reasonFuzzy": "Informed consent and decision-making capacity are subjective criteria."
+    },
+    {
+      "id": "NCT06096844-language",
+      "polarity": "inclusion",
+      "sourceText": "Patient must be English or Spanish speaking to be eligible for the QOL component of the study",
+      "reasonFuzzy": "Language requirement for quality-of-life component is not a standard clinical eligibility kind."
+    },
+    {
+      "id": "NCT06096844-prior-chemo",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not have had any prior cytotoxic chemotherapy regimen for metastatic disease. Chemotherapy given in the setting of adjuvant therapy or locally advanced disease is allowed as long as treatment was completed, and they have fully recovered from treatment related adverse events prior to Step 1 registration",
+      "reasonFuzzy": "Prior therapy restrictions depend on the disease setting (metastatic vs adjuvant/locally advanced) and recovery status."
+    },
+    {
+      "id": "NCT06096844-prior-immuno",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not have had any prior immunotherapy for metastatic disease. Immunotherapy given in the setting of adjuvant therapy or locally advanced disease is allowed as long as treatment was completed greater than 6 months prior to Step 1 registration",
+      "reasonFuzzy": "Prior immunotherapy rules depend on setting and a specific time washout window."
+    },
+    {
+      "id": "NCT06096844-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not have a history of uncontrolled autoimmune conditions with the following exceptions, which are allowed: alopecia, vitiligo, rheumatoid arthritis, psoriasis/psoriatic arthritis, Hashimoto's thyroiditis, lupus, inflammatory bowel disease",
+      "reasonFuzzy": "History of uncontrolled autoimmune conditions with multiple disease-specific exceptions is not a standard typed check."
+    },
+    {
+      "id": "NCT06096844-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not be on immunosuppressive medication, including steroids (if doses exceed the equivalent of prednisone 10 mg daily). Short courses of steroids which are discontinued prior to randomization are acceptable. Patients on inhaled, intranasal and/or topical steroids are eligible",
+      "reasonFuzzy": "Immunosuppressive medication and steroid dose limits involve clinical judgment and route/dose exceptions."
+    },
+    {
+      "id": "NCT06096844-imaging",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have baseline imaging done assessing all measurable or non-measurable sites of disease within 45 days prior to Step 1 registration",
+      "reasonFuzzy": "Baseline imaging requirement for measurable or non-measurable disease sites is an assessment procedure rather than a disease status check."
+    },
+    {
+      "id": "NCT06096844-investigator",
+      "polarity": "inclusion",
+      "sourceText": "Investigator must declare their intended chemotherapy regimen should their patient be randomized to Arm B (doublet versus[vs] singlet)",
+      "reasonFuzzy": "Investigator declaration of an intended regimen is an operational trial step rather than a patient eligibility rule."
+    },
+    {
+      "id": "NCT06096844-ga",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have completed the baseline Geriatric Assessment (GA) after Step 1 registration and prior to Step 2 randomization",
+      "reasonFuzzy": "Completion of a Geriatric Assessment is a study procedure."
+    },
+    {
+      "id": "NCT06096844-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) ≤ 3.0 × institutional ULN (obtained within 14 days prior to Step 1 registration)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06096844-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) ≤ 3.0 × institutional ULN (obtained within 14 days prior to Step 1 registration)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06096844-age",
+      "polarity": "inclusion",
+      "sourceText": "Patient must be ≥ 70 years of age",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06096844-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have histologically or cytologically confirmed non-small cell lung cancer (NSCLC) with PD-L1 Tumor Proportion Score (TPS) range of 1-49%",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06096844-pdl1-max",
+      "polarity": "inclusion",
+      "sourceText": "Patient must have histologically or cytologically confirmed non-small cell lung cancer (NSCLC) with PD-L1 Tumor Proportion Score (TPS) range of 1-49%",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06096844-brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Patient must not have symptomatic central nervous system disease (CNS) metastases. Patients with a clinical history of CNS metastases or cord compression are eligible if they have been definitively treated and are clinically stable for at least 14 days prior to Step 1 registration and off all steroids for at least 24 hours prior to Step 1 registration. Patients with asymptomatic CNS metastases are eligible",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 13,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGP"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGP"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 13,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGP"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGP"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 13,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 9,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:70"
+        },
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "pdl1_max",
+          "polarity": "inclusion",
+          "value": "n:49"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable,untreated"
+        }
+      ],
+      "normalizerTypedCount": 10
+    }
+  },
+  "runA": {
+    "typedEmitted": 15,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 6104
+  },
+  "runB": {
+    "typedEmitted": 15,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 5785
+  },
+  "ms": 19875,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06096844",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06096844-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patient must be ≥ 70 years of age",
+        "numberValue": 70
+      },
+      {
+        "id": "NCT06096844-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have histologically or cytologically confirmed non-small cell lung cancer (NSCLC) with PD-L1 Tumor Proportion Score (TPS) range of 1-49%",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06096844-pdl1-max",
+        "kind": "pdl1_max",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have histologically or cytologically confirmed non-small cell lung cancer (NSCLC) with PD-L1 Tumor Proportion Score (TPS) range of 1-49%",
+        "numberValue": 49
+      },
+      {
+        "id": "NCT06096844-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have Stage IIIB, IIIC or IV disease and not be candidates for combined chemo-radiation. NOTE: Prior chemo-radiation therapy (RT) for stage III with recurrence is allowed",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06096844-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have a tumor that is negative for EGFR mutation/ALK translocations or other actionable first line mutations in which patients would receive first-line oral tyrosine kinase inhibitors",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06096844-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have a tumor that is negative for EGFR mutation/ALK translocations or other actionable first line mutations in which patients would receive first-line oral tyrosine kinase inhibitors",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06096844-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0-2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06096844-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥ 1,500/uL (obtained within 14 days prior to Step 1 registration)",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT06096844-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 75,000/uL (obtained within 14 days prior to Step 1 registration)",
+        "numberValue": 75000
+      },
+      {
+        "id": "NCT06096844-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin (Hgb) ≥ 8.0 g/dL (obtained within 14 days prior to Step 1 registration)",
+        "numberValue": 8
+      },
+      {
+        "id": "NCT06096844-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 x institutional upper limit of normal (ULN) (obtained within 14 days prior to Step 1 registration)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT06096844-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) ≤ 3.0 × institutional ULN (obtained within 14 days prior to Step 1 registration)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06096844-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) ≤ 3.0 × institutional ULN (obtained within 14 days prior to Step 1 registration)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06096844-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine clearance (CrCL) ≥ 45 mL/min (estimated using Cockcroft-Gault method with actual body weight or measured) (obtained within 14 days prior to Step 1 registration)",
+        "numberValue": 45
+      },
+      {
+        "id": "NCT06096844-brain_mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have symptomatic central nervous system disease (CNS) metastases. Patients with a clinical history of CNS metastases or cord compression are eligible if they have been definitively treated and are clinically stable for at least 14 days prior to Step 1 registration and off all steroids for at least 24 hours prior to Step 1 registration. Patients with asymptomatic CNS metastases are eligible",
+        "allowedBrainMets": [
+          "treated_stable",
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06096844-consent",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have the ability to understand and the willingness to sign a written informed consent document. Patients with impaired decision-making capacity (IDMC) who have a legally authorized representative (LAR) or caregiver and/or family member available will also be considered eligible",
+        "reasonFuzzy": "Willingness to sign informed consent and decision-making capacity are subjective criteria."
+      },
+      {
+        "id": "NCT06096844-language",
+        "polarity": "inclusion",
+        "sourceText": "Patient must be English or Spanish speaking to be eligible for the QOL component of the study",
+        "reasonFuzzy": "Language requirement for quality-of-life component is not a typed clinical check."
+      },
+      {
+        "id": "NCT06096844-chemo",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have had any prior cytotoxic chemotherapy regimen for metastatic disease. Chemotherapy given in the setting of adjuvant therapy or locally advanced disease is allowed as long as treatment was completed, and they have fully recovered from treatment related adverse events prior to Step 1 registration",
+        "reasonFuzzy": "Prior chemotherapy exclusion has complex exceptions regarding metastatic setting versus adjuvant or locally advanced settings."
+      },
+      {
+        "id": "NCT06096844-immuno",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have had any prior immunotherapy for metastatic disease. Immunotherapy given in the setting of adjuvant therapy or locally advanced disease is allowed as long as treatment was completed greater than 6 months prior to Step 1 registration",
+        "reasonFuzzy": "Prior immunotherapy exclusion has complex time windows and setting dependencies."
+      },
+      {
+        "id": "NCT06096844-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have a history of uncontrolled autoimmune conditions with the following exceptions, which are allowed: alopecia, vitiligo, rheumatoid arthritis, psoriasis/psoriatic arthritis, Hashimoto's thyroiditis, lupus, inflammatory bowel disease",
+        "reasonFuzzy": "Uncontrolled autoimmune conditions and multiple specific exceptions require subjective clinical judgment."
+      },
+      {
+        "id": "NCT06096844-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not be on immunosuppressive medication, including steroids (if doses exceed the equivalent of prednisone 10 mg daily). Short courses of steroids which are discontinued prior to randomization are acceptable. Patients on inhaled, intranasal and/or topical steroids are eligible",
+        "reasonFuzzy": "Immunosuppressive medication and steroid equivalent dosing involve complex rule evaluations."
+      },
+      {
+        "id": "NCT06096844-imaging",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have baseline imaging done assessing all measurable or non-measurable sites of disease within 45 days prior to Step 1 registration",
+        "reasonFuzzy": "Baseline imaging assessment is a procedural requirement rather than a typed biomarker or lab cutoff."
+      },
+      {
+        "id": "NCT06096844-investigator",
+        "polarity": "inclusion",
+        "sourceText": "Investigator must declare their intended chemotherapy regimen should their patient be randomized to Arm B (doublet versus[vs] singlet)",
+        "reasonFuzzy": "Investigator declaration of treatment regimen is a trial administrative requirement."
+      },
+      {
+        "id": "NCT06096844-geriatric",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have completed the baseline Geriatric Assessment (GA) after Step 1 registration and prior to Step 2 randomization",
+        "reasonFuzzy": "Completion of geriatric assessment is a study process requirement."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06096844",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06096844-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patient must be ≥ 70 years of age",
+        "numberValue": 70
+      },
+      {
+        "id": "NCT06096844-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have histologically or cytologically confirmed non-small cell lung cancer (NSCLC) with PD-L1 Tumor Proportion Score (TPS) range of 1-49%",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06096844-pdl1-max",
+        "kind": "pdl1_max",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have histologically or cytologically confirmed non-small cell lung cancer (NSCLC) with PD-L1 Tumor Proportion Score (TPS) range of 1-49%",
+        "numberValue": 49
+      },
+      {
+        "id": "NCT06096844-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have Stage IIIB, IIIC or IV disease and not be candidates for combined chemo-radiation. NOTE: Prior chemo-radiation therapy (RT) for stage III with recurrence is allowed",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06096844-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have a tumor that is negative for EGFR mutation/ALK translocations or other actionable first line mutations in which patients would receive first-line oral tyrosine kinase inhibitors",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06096844-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have a tumor that is negative for EGFR mutation/ALK translocations or other actionable first line mutations in which patients would receive first-line oral tyrosine kinase inhibitors",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06096844-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0-2",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT06096844-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥ 1,500/uL (obtained within 14 days prior to Step 1 registration)",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT06096844-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 75,000/uL (obtained within 14 days prior to Step 1 registration)",
+        "numberValue": 75000
+      },
+      {
+        "id": "NCT06096844-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin (Hgb) ≥ 8.0 g/dL (obtained within 14 days prior to Step 1 registration)",
+        "numberValue": 8
+      },
+      {
+        "id": "NCT06096844-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 x institutional upper limit of normal (ULN) (obtained within 14 days prior to Step 1 registration)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT06096844-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) ≤ 3.0 × institutional ULN (obtained within 14 days prior to Step 1 registration)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06096844-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT]) and alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) ≤ 3.0 × institutional ULN (obtained within 14 days prior to Step 1 registration)",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06096844-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine clearance (CrCL) ≥ 45 mL/min (estimated using Cockcroft-Gault method with actual body weight or measured) (obtained within 14 days prior to Step 1 registration)",
+        "numberValue": 45
+      },
+      {
+        "id": "NCT06096844-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have symptomatic central nervous system disease (CNS) metastases. Patients with a clinical history of CNS metastases or cord compression are eligible if they have been definitively treated and are clinically stable for at least 14 days prior to Step 1 registration and off all steroids for at least 24 hours prior to Step 1 registration. Patients with asymptomatic CNS metastases are eligible",
+        "allowedBrainMets": [
+          "treated_stable",
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06096844-consent",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have the ability to understand and the willingness to sign a written informed consent document. Patients with impaired decision-making capacity (IDMC) who have a legally authorized representative (LAR) or caregiver and/or family member available will also be considered eligible",
+        "reasonFuzzy": "Informed consent and decision-making capacity are subjective criteria."
+      },
+      {
+        "id": "NCT06096844-language",
+        "polarity": "inclusion",
+        "sourceText": "Patient must be English or Spanish speaking to be eligible for the QOL component of the study",
+        "reasonFuzzy": "Language requirement for quality-of-life component is not a standard clinical eligibility kind."
+      },
+      {
+        "id": "NCT06096844-prior-chemo",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have had any prior cytotoxic chemotherapy regimen for metastatic disease. Chemotherapy given in the setting of adjuvant therapy or locally advanced disease is allowed as long as treatment was completed, and they have fully recovered from treatment related adverse events prior to Step 1 registration",
+        "reasonFuzzy": "Prior therapy restrictions depend on the disease setting (metastatic vs adjuvant/locally advanced) and recovery status."
+      },
+      {
+        "id": "NCT06096844-prior-immuno",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have had any prior immunotherapy for metastatic disease. Immunotherapy given in the setting of adjuvant therapy or locally advanced disease is allowed as long as treatment was completed greater than 6 months prior to Step 1 registration",
+        "reasonFuzzy": "Prior immunotherapy rules depend on setting and a specific time washout window."
+      },
+      {
+        "id": "NCT06096844-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not have a history of uncontrolled autoimmune conditions with the following exceptions, which are allowed: alopecia, vitiligo, rheumatoid arthritis, psoriasis/psoriatic arthritis, Hashimoto's thyroiditis, lupus, inflammatory bowel disease",
+        "reasonFuzzy": "History of uncontrolled autoimmune conditions with multiple disease-specific exceptions is not a standard typed check."
+      },
+      {
+        "id": "NCT06096844-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Patient must not be on immunosuppressive medication, including steroids (if doses exceed the equivalent of prednisone 10 mg daily). Short courses of steroids which are discontinued prior to randomization are acceptable. Patients on inhaled, intranasal and/or topical steroids are eligible",
+        "reasonFuzzy": "Immunosuppressive medication and steroid dose limits involve clinical judgment and route/dose exceptions."
+      },
+      {
+        "id": "NCT06096844-imaging",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have baseline imaging done assessing all measurable or non-measurable sites of disease within 45 days prior to Step 1 registration",
+        "reasonFuzzy": "Baseline imaging requirement for measurable or non-measurable disease sites is an assessment procedure rather than a disease status check."
+      },
+      {
+        "id": "NCT06096844-investigator",
+        "polarity": "inclusion",
+        "sourceText": "Investigator must declare their intended chemotherapy regimen should their patient be randomized to Arm B (doublet versus[vs] singlet)",
+        "reasonFuzzy": "Investigator declaration of an intended regimen is an operational trial step rather than a patient eligibility rule."
+      },
+      {
+        "id": "NCT06096844-ga",
+        "polarity": "inclusion",
+        "sourceText": "Patient must have completed the baseline Geriatric Assessment (GA) after Step 1 registration and prior to Step 2 randomization",
+        "reasonFuzzy": "Completion of a Geriatric Assessment is a study procedure."
+      }
+    ]
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06545331",
+  "briefTitle": "Study of XB010 in Subjects With Solid Tumors",
+  "parsedAt": "2026-11-12T10:07:32.089Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06545331-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age 18 years or older on the day of consent.",
+      "numberValue": 18,
+      "evidence_quote": "Age 18 years or older on the day of consent.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06545331-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0-1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06545331-solid",
+      "polarity": "inclusion",
+      "sourceText": "Cytologically or histologically and radiologically confirmed solid tumor that is inoperable, locally advanced, metastatic, or recurrent.",
+      "reasonFuzzy": "This is a broad solid tumor trial mentioning multiple tumor types, and the NSCLC cohort description does not specify an explicit numbered stage list."
+    },
+    {
+      "id": "NCT06545331-solid-tumor",
+      "polarity": "inclusion",
+      "sourceText": "Cytologically or histologically and radiologically confirmed solid tumor that is inoperable, locally advanced, metastatic, or recurrent. The Cohort Expansion stage will enroll subjects with multiple tumor types (non-small cell lung cancer, hormone-receptor-positive breast cancer, head and neck cancer, esophageal squamous cell, triple-negative breast cancer).",
+      "reasonFuzzy": "The trial is a basket study for multiple solid tumors with specific cohort expansions, and does not provide a standard numbered stage list for NSCLC."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 1667
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 3058
+  },
+  "ms": 12619,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06545331",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06545331-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 years or older on the day of consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06545331-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0-1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06545331-solid",
+        "polarity": "inclusion",
+        "sourceText": "Cytologically or histologically and radiologically confirmed solid tumor that is inoperable, locally advanced, metastatic, or recurrent.",
+        "reasonFuzzy": "This is a broad solid tumor trial mentioning multiple tumor types, and the NSCLC cohort description does not specify an explicit numbered stage list."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06545331",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06545331-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 years or older on the day of consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06545331-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0-1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06545331-solid-tumor",
+        "polarity": "inclusion",
+        "sourceText": "Cytologically or histologically and radiologically confirmed solid tumor that is inoperable, locally advanced, metastatic, or recurrent. The Cohort Expansion stage will enroll subjects with multiple tumor types (non-small cell lung cancer, hormone-receptor-positive breast cancer, head and neck cancer, esophageal squamous cell, triple-negative breast cancer).",
+        "reasonFuzzy": "The trial is a basket study for multiple solid tumors with specific cohort expansions, and does not provide a standard numbered stage list for NSCLC."
+      }
+    ]
+  }
+}

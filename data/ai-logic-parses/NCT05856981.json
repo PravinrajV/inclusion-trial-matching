@@ -1,0 +1,278 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05856981",
+  "briefTitle": "Phase 1 Study Evaluating the Safety and PK of ADU-1805 in Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T06:18:19.738Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05856981-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male or female aged ≥18 years",
+      "numberValue": 18,
+      "evidence_quote": "Male or female aged ≥18 years",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05856981-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG Performance status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG Performance status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05856981-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease according to RECIST (Safety Expansion only)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05856981-solid-tumor",
+      "polarity": "inclusion",
+      "sourceText": "Histologically and/or cytologically confirmed diagnosis of metastatic or unresectable solid tumors that are refractory to standard therapy or for which no standard therapy exists",
+      "reasonFuzzy": "General solid tumors are broad and do not map to a single specific typed stage or histology list."
+    },
+    {
+      "id": "NCT05856981-expansion-diagnoses",
+      "polarity": "inclusion",
+      "sourceText": "Expansion Phase: histologically and/or cytologically confirmed diagnosis of advanced PD-(L)1-naïve MSS colorectal cancer (CRC), PD-1 relapsed/refractory patients with either advanced MSS endometrial cancer (EC), renal cell carcinoma (RCC) or non-small cell lung cancer (NSCLC) patients, and that have measurable disease according to RECIST",
+      "reasonFuzzy": "The expansion cohorts span multiple specific cancer types with conditional biomarker and prior-treatment states that cannot be captured in a single typed check."
+    },
+    {
+      "id": "NCT05856981-escalation-excl",
+      "polarity": "exclusion",
+      "sourceText": "Escalation Phase: Patients that suffer from melanoma, brain tumors, glioblastoma, sarcoma and pancreatic ductal adenocarcinoma (PDAC)",
+      "reasonFuzzy": "Cohort-specific tumor type exclusions are not a single standard histology exclusion check."
+    },
+    {
+      "id": "NCT05856981-crc-liver",
+      "polarity": "exclusion",
+      "sourceText": "MSS colorectal cancer (CRC): liver metastasis present",
+      "reasonFuzzy": "This exclusion is specific to the MSS CRC cohort and organ-specific metastasis location."
+    },
+    {
+      "id": "NCT05856981-washout",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with or receipt of: biological agents, including monoclonal antibodies and immunotherapies, within 28 days prior to the first dose of ADU-1805",
+      "reasonFuzzy": "Washout windows for prior systemic therapies are complex and not standard typed lab or prior therapy presence/exclusion checks."
+    },
+    {
+      "id": "NCT05856981-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease according to RECIST (Safety Expansion only)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05856981-expansion-lines",
+      "polarity": "exclusion",
+      "sourceText": "> 3 lines of prior systemic treatments",
+      "reasonFuzzy": "This prior line limit applies specifically to the expansion phase, making it conditional rather than a global typed check."
+    },
+    {
+      "id": "NCT05856981-prior-tx",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with or receipt of: biological agents, including monoclonal antibodies and immunotherapies, within 28 days prior to the first dose of ADU-1805",
+      "reasonFuzzy": "Washout windows for diverse prior therapies are not simple lab cutoffs or typed prior therapy exclusions."
+    },
+    {
+      "id": "NCT05856981-prior-lines",
+      "polarity": "exclusion",
+      "sourceText": "> 3 lines of prior systemic treatments",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05856981-brain",
+      "polarity": "exclusion",
+      "sourceText": "Active untreated brain metastases",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_lines_max",
+          "polarity": "exclusion",
+          "value": "n:3"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 3399
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 5332
+  },
+  "ms": 16722,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05856981",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05856981-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female aged ≥18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05856981-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05856981-prior-lines",
+        "kind": "prior_lines_max",
+        "polarity": "exclusion",
+        "sourceText": "> 3 lines of prior systemic treatments",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT05856981-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active untreated brain metastases",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05856981-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease according to RECIST (Safety Expansion only)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05856981-solid-tumor",
+        "polarity": "inclusion",
+        "sourceText": "Histologically and/or cytologically confirmed diagnosis of metastatic or unresectable solid tumors that are refractory to standard therapy or for which no standard therapy exists",
+        "reasonFuzzy": "General solid tumors are broad and do not map to a single specific typed stage or histology list."
+      },
+      {
+        "id": "NCT05856981-expansion-diagnoses",
+        "polarity": "inclusion",
+        "sourceText": "Expansion Phase: histologically and/or cytologically confirmed diagnosis of advanced PD-(L)1-naïve MSS colorectal cancer (CRC), PD-1 relapsed/refractory patients with either advanced MSS endometrial cancer (EC), renal cell carcinoma (RCC) or non-small cell lung cancer (NSCLC) patients, and that have measurable disease according to RECIST",
+        "reasonFuzzy": "The expansion cohorts span multiple specific cancer types with conditional biomarker and prior-treatment states that cannot be captured in a single typed check."
+      },
+      {
+        "id": "NCT05856981-escalation-excl",
+        "polarity": "exclusion",
+        "sourceText": "Escalation Phase: Patients that suffer from melanoma, brain tumors, glioblastoma, sarcoma and pancreatic ductal adenocarcinoma (PDAC)",
+        "reasonFuzzy": "Cohort-specific tumor type exclusions are not a single standard histology exclusion check."
+      },
+      {
+        "id": "NCT05856981-crc-liver",
+        "polarity": "exclusion",
+        "sourceText": "MSS colorectal cancer (CRC): liver metastasis present",
+        "reasonFuzzy": "This exclusion is specific to the MSS CRC cohort and organ-specific metastasis location."
+      },
+      {
+        "id": "NCT05856981-washout",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with or receipt of: biological agents, including monoclonal antibodies and immunotherapies, within 28 days prior to the first dose of ADU-1805",
+        "reasonFuzzy": "Washout windows for prior systemic therapies are complex and not standard typed lab or prior therapy presence/exclusion checks."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05856981",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05856981-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female aged ≥18 years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05856981-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05856981-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active untreated brain metastases",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05856981-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease according to RECIST (Safety Expansion only)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05856981-expansion-lines",
+        "polarity": "exclusion",
+        "sourceText": "> 3 lines of prior systemic treatments",
+        "reasonFuzzy": "This prior line limit applies specifically to the expansion phase, making it conditional rather than a global typed check."
+      },
+      {
+        "id": "NCT05856981-prior-tx",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with or receipt of: biological agents, including monoclonal antibodies and immunotherapies, within 28 days prior to the first dose of ADU-1805",
+        "reasonFuzzy": "Washout windows for diverse prior therapies are not simple lab cutoffs or typed prior therapy exclusions."
+      }
+    ]
+  }
+}

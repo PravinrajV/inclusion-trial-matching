@@ -1,0 +1,289 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07680790",
+  "briefTitle": "Study of Izalontamab Brengitecan (BMS-986507) in Combination With Osimertinib Versus Osimertinib Monotherapy or Osimertinib in Combination With Platinum-based Chemotherapy for EGFRmt Non-small Cell Lung Cancer (IZABRIGHT-Lung02)",
+  "parsedAt": "2026-11-12T11:59:54.317Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07680790-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have histologically or cytologically confirmed non-squamous NSCLC, newly diagnosed locally advanced (Stage IIIB/IIIC), metastatic (Stage IVA/IVB), or recurrent disease not amenable to curative surgery or definitive radiotherapy and requiring systemic treatment",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Participants must have histologically or cytologically confirmed non-squamous NSCLC, newly diagnosed locally advanced (Stage IIIB/IIIC), metastatic (Stage IVA/IVB), or recurrent disease not amenable to curative surgery or definitive radiotherapy and requiring systemic treatment",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07680790-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have ECOG Performance Status 0-1",
+      "numberValue": 1,
+      "evidence_quote": "Participants must have ECOG Performance Status 0-1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07680790-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have measurable extracranial disease per RECIST v1.1 as assessed by the investigator",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07680790-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have unstable, symptomatic, or uncontrolled CNS metastases, including brain, leptomeningeal disease, and/or spinal cord compression",
+      "reasonFuzzy": "Unstable, symptomatic, or uncontrolled CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT07680790-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have measurable extracranial disease per RECIST v1.1 as assessed by the investigator",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07680790-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have unstable, symptomatic, or uncontrolled CNS metastases, including brain, leptomeningeal disease, and/or spinal cord compression",
+      "reasonFuzzy": "Unstable, symptomatic, or uncontrolled CNS metastases is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT07680790-ild",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have history of ILD/pneumonitis requiring treatment with steroids (≥ Grade 2), or current or suspected ILD/pneumonitis",
+      "reasonFuzzy": "ILD history with steroid grading is not a standard typed check."
+    },
+    {
+      "id": "NCT07680790-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have clinically significant cardiac disease",
+      "reasonFuzzy": "Clinically significant cardiac disease is an investigator judgment, not a typed check."
+    },
+    {
+      "id": "NCT07680790-histology",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have histologically or cytologically confirmed non-squamous NSCLC, newly diagnosed locally advanced (Stage IIIB/IIIC), metastatic (Stage IVA/IVB), or recurrent disease not amenable to curative surgery or definitive radiotherapy and requiring systemic treatment",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07680790-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have documented EGFR-TKI-sensitizing mutation (exon 19 deletion or exon 21 L858R substitution)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07680790-egfr-variant",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have documented EGFR-TKI-sensitizing mutation (exon 19 deletion or exon 21 L858R substitution)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:exon 19 deletion or exon 21 l858r substitution"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 4747
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 4230
+  },
+  "ms": 16963,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07680790",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07680790-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically or cytologically confirmed non-squamous NSCLC, newly diagnosed locally advanced (Stage IIIB/IIIC), metastatic (Stage IVA/IVB), or recurrent disease not amenable to curative surgery or definitive radiotherapy and requiring systemic treatment",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07680790-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically or cytologically confirmed non-squamous NSCLC, newly diagnosed locally advanced (Stage IIIB/IIIC), metastatic (Stage IVA/IVB), or recurrent disease not amenable to curative surgery or definitive radiotherapy and requiring systemic treatment",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07680790-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have documented EGFR-TKI-sensitizing mutation (exon 19 deletion or exon 21 L858R substitution)",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07680790-egfr-variant",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have documented EGFR-TKI-sensitizing mutation (exon 19 deletion or exon 21 L858R substitution)",
+        "stringValue": "exon 19 deletion or exon 21 L858R substitution"
+      },
+      {
+        "id": "NCT07680790-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have ECOG Performance Status 0-1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07680790-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have measurable extracranial disease per RECIST v1.1 as assessed by the investigator",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07680790-brain",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have unstable, symptomatic, or uncontrolled CNS metastases, including brain, leptomeningeal disease, and/or spinal cord compression",
+        "reasonFuzzy": "Unstable, symptomatic, or uncontrolled CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07680790",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07680790-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically or cytologically confirmed non-squamous NSCLC, newly diagnosed locally advanced (Stage IIIB/IIIC), metastatic (Stage IVA/IVB), or recurrent disease not amenable to curative surgery or definitive radiotherapy and requiring systemic treatment",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07680790-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically or cytologically confirmed non-squamous NSCLC, newly diagnosed locally advanced (Stage IIIB/IIIC), metastatic (Stage IVA/IVB), or recurrent disease not amenable to curative surgery or definitive radiotherapy and requiring systemic treatment",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07680790-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have documented EGFR-TKI-sensitizing mutation (exon 19 deletion or exon 21 L858R substitution)",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07680790-egfr-variant",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have documented EGFR-TKI-sensitizing mutation (exon 19 deletion or exon 21 L858R substitution)",
+        "stringValue": "exon 19 deletion or exon 21 L858R substitution"
+      },
+      {
+        "id": "NCT07680790-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have ECOG Performance Status 0-1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07680790-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have measurable extracranial disease per RECIST v1.1 as assessed by the investigator",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07680790-brain",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have unstable, symptomatic, or uncontrolled CNS metastases, including brain, leptomeningeal disease, and/or spinal cord compression",
+        "reasonFuzzy": "Unstable, symptomatic, or uncontrolled CNS metastases is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      },
+      {
+        "id": "NCT07680790-ild",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have history of ILD/pneumonitis requiring treatment with steroids (≥ Grade 2), or current or suspected ILD/pneumonitis",
+        "reasonFuzzy": "ILD history with steroid grading is not a standard typed check."
+      },
+      {
+        "id": "NCT07680790-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have clinically significant cardiac disease",
+        "reasonFuzzy": "Clinically significant cardiac disease is an investigator judgment, not a typed check."
+      }
+    ]
+  }
+}

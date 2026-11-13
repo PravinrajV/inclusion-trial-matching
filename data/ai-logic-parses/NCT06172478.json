@@ -1,0 +1,274 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06172478",
+  "briefTitle": "A Study of HER3-DXd in Subjects With Locally Advanced or Metastatic Solid Tumors",
+  "parsedAt": "2026-11-12T06:27:54.290Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06172478-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Participants aged ≥18 years (follow local regulatory requirements if the legal age of consent for study participation is >18 years old).",
+      "numberValue": 18,
+      "evidence_quote": "Participants aged ≥18 years (follow local regulatory requirements if the legal age of consent for study participation is >18 years old).",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06172478-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Has Eastern Cooperative Oncology Group performance status (ECOG PS) of 0 or 1 at screening.",
+      "numberValue": 1,
+      "evidence_quote": "Has Eastern Cooperative Oncology Group performance status (ECOG PS) of 0 or 1 at screening.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06172478-nsclc-cohort",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically documented metastatic or locally advanced nonsquamous NSCLC not amenable to curative surgery or radiation",
+      "reasonFuzzy": "This trial evaluates multiple solid tumor cohorts including a nonsquamous NSCLC cohort, but specific stage lists are not provided."
+    },
+    {
+      "id": "NCT06172478-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has ≥1 measurable lesion on CT or MRI as per RECIST v1.1 by investigator assessment. Prostate cancer participants with bone only disease may be eligible.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06172478-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Provides a pretreatment tumor tissue sample that meets 1 of the following collection requirements",
+      "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is a subjective requirement, not a typed check."
+    },
+    {
+      "id": "NCT06172478-ild",
+      "polarity": "exclusion",
+      "sourceText": "Has a history of (non-infectious) interstitial lung disease (ILD), that required corticosteroids, has current ILD/pneumonitis, or suspected ILD/pneumonitis cannot be ruled out by imaging at screening.",
+      "reasonFuzzy": "ILD history involving corticosteroid requirement and imaging suspicion is not a typed check."
+    },
+    {
+      "id": "NCT06172478-egfr",
+      "polarity": "exclusion",
+      "sourceText": "Documentation of absence of actionable driver mutation (ie, ALK rearrangement, BRAF V600E mutation, EGFR-activating mutations [exon 19 deletion or L858R mutation], EGFR exon 20 insertion mutation, HER2 mutation, KRAS G12C mutation, MET exon 14 skipping mutation, NTRK 1/2/3 gene fusion, RET rearrangement, or ROS1 rearrangement). New testing for these genomic alterations is not required for Screening.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06172478-alk",
+      "polarity": "exclusion",
+      "sourceText": "Documentation of absence of actionable driver mutation (ie, ALK rearrangement, BRAF V600E mutation, EGFR-activating mutations [exon 19 deletion or L858R mutation], EGFR exon 20 insertion mutation, HER2 mutation, KRAS G12C mutation, MET exon 14 skipping mutation, NTRK 1/2/3 gene fusion, RET rearrangement, or ROS1 rearrangement). New testing for these genomic alterations is not required for Screening.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06172478-ros1",
+      "polarity": "exclusion",
+      "sourceText": "Documentation of absence of actionable driver mutation (ie, ALK rearrangement, BRAF V600E mutation, EGFR-activating mutations [exon 19 deletion or L858R mutation], EGFR exon 20 insertion mutation, HER2 mutation, KRAS G12C mutation, MET exon 14 skipping mutation, NTRK 1/2/3 gene fusion, RET rearrangement, or ROS1 rearrangement). New testing for these genomic alterations is not required for Screening.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06172478-braf",
+      "polarity": "exclusion",
+      "sourceText": "Documentation of absence of actionable driver mutation (ie, ALK rearrangement, BRAF V600E mutation, EGFR-activating mutations [exon 19 deletion or L858R mutation], EGFR exon 20 insertion mutation, HER2 mutation, KRAS G12C mutation, MET exon 14 skipping mutation, NTRK 1/2/3 gene fusion, RET rearrangement, or ROS1 rearrangement). New testing for these genomic alterations is not required for Screening.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06172478-kras",
+      "polarity": "exclusion",
+      "sourceText": "Documentation of absence of actionable driver mutation (ie, ALK rearrangement, BRAF V600E mutation, EGFR-activating mutations [exon 19 deletion or L858R mutation], EGFR exon 20 insertion mutation, HER2 mutation, KRAS G12C mutation, MET exon 14 skipping mutation, NTRK 1/2/3 gene fusion, RET rearrangement, or ROS1 rearrangement). New testing for these genomic alterations is not required for Screening.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06172478-solid-tumors",
+      "polarity": "inclusion",
+      "sourceText": "A Study of HER3-DXd in Subjects With Locally Advanced or Metastatic Solid Tumors",
+      "reasonFuzzy": "This is a basket trial for multiple solid tumor types including NSCLC, with specific inclusion and exclusion criteria for each tumor cohort rather than a single unified stage or histology list."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 5,
+      "unquotedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Documentation of absence of actionable driver mutation (ie, ALK rearrangement, BRAF V600E mutation, EGFR-activating mutations [exon 19 deletion or L858R mutatio"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Documentation of absence of actionable driver mutation (ie, ALK rearrangement, BRAF V600E mutation, EGFR-activating mutations [exon 19 deletion or L858R mutatio"
+        },
+        {
+          "kind": "ros1_status",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Documentation of absence of actionable driver mutation (ie, ALK rearrangement, BRAF V600E mutation, EGFR-activating mutations [exon 19 deletion or L858R mutatio"
+        },
+        {
+          "kind": "braf_status",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Documentation of absence of actionable driver mutation (ie, ALK rearrangement, BRAF V600E mutation, EGFR-activating mutations [exon 19 deletion or L858R mutatio"
+        },
+        {
+          "kind": "kras_status",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Documentation of absence of actionable driver mutation (ie, ALK rearrangement, BRAF V600E mutation, EGFR-activating mutations [exon 19 deletion or L858R mutatio"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 23887
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 9049
+  },
+  "ms": 40963,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06172478",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06172478-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants aged ≥18 years (follow local regulatory requirements if the legal age of consent for study participation is >18 years old).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06172478-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Documentation of absence of actionable driver mutation (ie, ALK rearrangement, BRAF V600E mutation, EGFR-activating mutations [exon 19 deletion or L858R mutation], EGFR exon 20 insertion mutation, HER2 mutation, KRAS G12C mutation, MET exon 14 skipping mutation, NTRK 1/2/3 gene fusion, RET rearrangement, or ROS1 rearrangement). New testing for these genomic alterations is not required for Screening.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06172478-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Documentation of absence of actionable driver mutation (ie, ALK rearrangement, BRAF V600E mutation, EGFR-activating mutations [exon 19 deletion or L858R mutation], EGFR exon 20 insertion mutation, HER2 mutation, KRAS G12C mutation, MET exon 14 skipping mutation, NTRK 1/2/3 gene fusion, RET rearrangement, or ROS1 rearrangement). New testing for these genomic alterations is not required for Screening.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06172478-ros1",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Documentation of absence of actionable driver mutation (ie, ALK rearrangement, BRAF V600E mutation, EGFR-activating mutations [exon 19 deletion or L858R mutation], EGFR exon 20 insertion mutation, HER2 mutation, KRAS G12C mutation, MET exon 14 skipping mutation, NTRK 1/2/3 gene fusion, RET rearrangement, or ROS1 rearrangement). New testing for these genomic alterations is not required for Screening.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06172478-braf",
+        "kind": "braf_status",
+        "polarity": "exclusion",
+        "sourceText": "Documentation of absence of actionable driver mutation (ie, ALK rearrangement, BRAF V600E mutation, EGFR-activating mutations [exon 19 deletion or L858R mutation], EGFR exon 20 insertion mutation, HER2 mutation, KRAS G12C mutation, MET exon 14 skipping mutation, NTRK 1/2/3 gene fusion, RET rearrangement, or ROS1 rearrangement). New testing for these genomic alterations is not required for Screening.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06172478-kras",
+        "kind": "kras_status",
+        "polarity": "exclusion",
+        "sourceText": "Documentation of absence of actionable driver mutation (ie, ALK rearrangement, BRAF V600E mutation, EGFR-activating mutations [exon 19 deletion or L858R mutation], EGFR exon 20 insertion mutation, HER2 mutation, KRAS G12C mutation, MET exon 14 skipping mutation, NTRK 1/2/3 gene fusion, RET rearrangement, or ROS1 rearrangement). New testing for these genomic alterations is not required for Screening.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT06172478-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has Eastern Cooperative Oncology Group performance status (ECOG PS) of 0 or 1 at screening.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06172478-nsclc-cohort",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically documented metastatic or locally advanced nonsquamous NSCLC not amenable to curative surgery or radiation",
+        "reasonFuzzy": "This trial evaluates multiple solid tumor cohorts including a nonsquamous NSCLC cohort, but specific stage lists are not provided."
+      },
+      {
+        "id": "NCT06172478-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has ≥1 measurable lesion on CT or MRI as per RECIST v1.1 by investigator assessment. Prostate cancer participants with bone only disease may be eligible.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06172478-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Provides a pretreatment tumor tissue sample that meets 1 of the following collection requirements",
+        "reasonFuzzy": "Willingness or ability to undergo a biopsy procedure is a subjective requirement, not a typed check."
+      },
+      {
+        "id": "NCT06172478-ild",
+        "polarity": "exclusion",
+        "sourceText": "Has a history of (non-infectious) interstitial lung disease (ILD), that required corticosteroids, has current ILD/pneumonitis, or suspected ILD/pneumonitis cannot be ruled out by imaging at screening.",
+        "reasonFuzzy": "ILD history involving corticosteroid requirement and imaging suspicion is not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06172478",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06172478-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants aged ≥18 years (follow local regulatory requirements if the legal age of consent for study participation is >18 years old).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06172478-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has Eastern Cooperative Oncology Group performance status (ECOG PS) of 0 or 1 at screening.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06172478-solid-tumors",
+        "polarity": "inclusion",
+        "sourceText": "A Study of HER3-DXd in Subjects With Locally Advanced or Metastatic Solid Tumors",
+        "reasonFuzzy": "This is a basket trial for multiple solid tumor types including NSCLC, with specific inclusion and exclusion criteria for each tumor cohort rather than a single unified stage or histology list."
+      }
+    ]
+  }
+}

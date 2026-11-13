@@ -1,0 +1,274 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06281678",
+  "briefTitle": "A Study of IBI363 in Subjects with Advanced Solid Malignancies",
+  "parsedAt": "2026-11-12T06:31:57.053Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06281678-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male or female subjects ≥ 18 years old",
+      "numberValue": 18,
+      "evidence_quote": "Male or female subjects ≥ 18 years old",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06281678-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06281678-consent",
+      "polarity": "inclusion",
+      "sourceText": "Subjects have the ability to understand and give written informed consent for participation in this trial, including all evaluations and procedures as specified by this protocol",
+      "reasonFuzzy": "Ability to give informed consent and comply with study evaluations is a judgment-based item."
+    },
+    {
+      "id": "NCT06281678-life",
+      "polarity": "inclusion",
+      "sourceText": "Anticipated life expectancy of ≥ 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06281678-organ",
+      "polarity": "exclusion",
+      "sourceText": "Inadequate bone marrow and organ function",
+      "reasonFuzzy": "General organ function without specific numeric cutoffs is a subjective evaluation."
+    },
+    {
+      "id": "NCT06281678-prior",
+      "polarity": "exclusion",
+      "sourceText": "Received previous anti-tumor therapy: Any chemotherapy or targeted small molecule therapy (standard or investigational) within 2 weeks or 5 plasma half-lives. Received Nitrosoureas and mitomycin C within 6 weeks prior to first dose of study drug and during study; Any anti-cancer monoclonal antibody (mAb) within 4 weeks prior to first dose",
+      "reasonFuzzy": "Complex washout windows involving various categories of treatments and half-lives cannot be expressed with a single typed prior therapy check."
+    },
+    {
+      "id": "NCT06281678-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Received live vaccines within 28 days prior to first administration of the study drug or plan on receiving any live vaccine during the study",
+      "reasonFuzzy": "Live vaccine washout is not covered by any allowed typed check kind."
+    },
+    {
+      "id": "NCT06281678-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Has adverse reactions resulting from previous antitumor therapies, which have not resolved to Grade 0 or 1 toxicity according to NCI-CTCAE v5.0 (except for alopecia, fatigue, pigmentation and other conditions with no safety risk according to investigator' discretion) or baseline prior to the first dose of the study drug",
+      "reasonFuzzy": "Resolution of previous toxicity with investigator discretion exceptions is not a standard typed check."
+    },
+    {
+      "id": "NCT06281678-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Undergone major surgery (Craniotomy, thoracotomy or laparotomy, and other surgery according to investigator' discretion, excluding needle biopsy) within 4 weeks prior to the first dose of the study drug, or who are expected to undergo major surgery during the study period, or who have severe unhealed wounds, trauma, ulcers, etc.",
+      "reasonFuzzy": "Major surgery washout windows and investigator discretion are subjective or judgment-based items."
+    },
+    {
+      "id": "NCT06281678-life",
+      "polarity": "inclusion",
+      "sourceText": "Anticipated life expectancy of ≥ 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06281678-organ",
+      "polarity": "exclusion",
+      "sourceText": "Inadequate bone marrow and organ function",
+      "reasonFuzzy": "General organ function without specific numeric laboratory cutoffs cannot be represented as a typed lab check."
+    },
+    {
+      "id": "NCT06281678-prior",
+      "polarity": "exclusion",
+      "sourceText": "Received previous anti-tumor therapy: Any chemotherapy or targeted small molecule therapy (standard or investigational) within 2 weeks or 5 plasma half-lives. Received Nitrosoureas and mitomycin C within 6 weeks prior to first dose of study drug and during study; Any anti-cancer monoclonal antibody (mAb) within 4 weeks prior to first dose",
+      "reasonFuzzy": "Washout windows and multiple therapy categories with complex conditions cannot be expressed with a simple typed check."
+    },
+    {
+      "id": "NCT06281678-vaccines",
+      "polarity": "exclusion",
+      "sourceText": "Received live vaccines within 28 days prior to first administration of the study drug or plan on receiving any live vaccine during the study",
+      "reasonFuzzy": "Live vaccine washout is not among the allowed typed kinds."
+    },
+    {
+      "id": "NCT06281678-tox",
+      "polarity": "exclusion",
+      "sourceText": "Has adverse reactions resulting from previous antitumor therapies, which have not resolved to Grade 0 or 1 toxicity according to NCI-CTCAE v5.0 (except for alopecia, fatigue, pigmentation and other conditions with no safety risk according to investigator' discretion) or baseline prior to the first dose of the study drug",
+      "reasonFuzzy": "Unresolved toxicity with investigator discretion exceptions is not a typed check."
+    },
+    {
+      "id": "NCT06281678-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Undergone major surgery (Craniotomy, thoracotomy or laparotomy, and other surgery according to investigator' discretion, excluding needle biopsy) within 4 weeks prior to the first dose of the study drug, or who are expected to undergo major surgery during the study period, or who have severe unhealed wounds, trauma, ulcers, etc.",
+      "reasonFuzzy": "Major surgery washout and wound status with investigator discretion are subjective clinical exclusions."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 10801
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2677
+  },
+  "ms": 21473,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06281678",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06281678-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female subjects ≥ 18 years old",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06281678-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06281678-consent",
+        "polarity": "inclusion",
+        "sourceText": "Subjects have the ability to understand and give written informed consent for participation in this trial, including all evaluations and procedures as specified by this protocol",
+        "reasonFuzzy": "Ability to give informed consent and comply with study evaluations is a judgment-based item."
+      },
+      {
+        "id": "NCT06281678-life",
+        "polarity": "inclusion",
+        "sourceText": "Anticipated life expectancy of ≥ 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06281678-organ",
+        "polarity": "exclusion",
+        "sourceText": "Inadequate bone marrow and organ function",
+        "reasonFuzzy": "General organ function without specific numeric cutoffs is a subjective evaluation."
+      },
+      {
+        "id": "NCT06281678-prior",
+        "polarity": "exclusion",
+        "sourceText": "Received previous anti-tumor therapy: Any chemotherapy or targeted small molecule therapy (standard or investigational) within 2 weeks or 5 plasma half-lives. Received Nitrosoureas and mitomycin C within 6 weeks prior to first dose of study drug and during study; Any anti-cancer monoclonal antibody (mAb) within 4 weeks prior to first dose",
+        "reasonFuzzy": "Complex washout windows involving various categories of treatments and half-lives cannot be expressed with a single typed prior therapy check."
+      },
+      {
+        "id": "NCT06281678-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Received live vaccines within 28 days prior to first administration of the study drug or plan on receiving any live vaccine during the study",
+        "reasonFuzzy": "Live vaccine washout is not covered by any allowed typed check kind."
+      },
+      {
+        "id": "NCT06281678-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Has adverse reactions resulting from previous antitumor therapies, which have not resolved to Grade 0 or 1 toxicity according to NCI-CTCAE v5.0 (except for alopecia, fatigue, pigmentation and other conditions with no safety risk according to investigator' discretion) or baseline prior to the first dose of the study drug",
+        "reasonFuzzy": "Resolution of previous toxicity with investigator discretion exceptions is not a standard typed check."
+      },
+      {
+        "id": "NCT06281678-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Undergone major surgery (Craniotomy, thoracotomy or laparotomy, and other surgery according to investigator' discretion, excluding needle biopsy) within 4 weeks prior to the first dose of the study drug, or who are expected to undergo major surgery during the study period, or who have severe unhealed wounds, trauma, ulcers, etc.",
+        "reasonFuzzy": "Major surgery washout windows and investigator discretion are subjective or judgment-based items."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06281678",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06281678-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female subjects ≥ 18 years old",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06281678-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06281678-life",
+        "polarity": "inclusion",
+        "sourceText": "Anticipated life expectancy of ≥ 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06281678-organ",
+        "polarity": "exclusion",
+        "sourceText": "Inadequate bone marrow and organ function",
+        "reasonFuzzy": "General organ function without specific numeric laboratory cutoffs cannot be represented as a typed lab check."
+      },
+      {
+        "id": "NCT06281678-prior",
+        "polarity": "exclusion",
+        "sourceText": "Received previous anti-tumor therapy: Any chemotherapy or targeted small molecule therapy (standard or investigational) within 2 weeks or 5 plasma half-lives. Received Nitrosoureas and mitomycin C within 6 weeks prior to first dose of study drug and during study; Any anti-cancer monoclonal antibody (mAb) within 4 weeks prior to first dose",
+        "reasonFuzzy": "Washout windows and multiple therapy categories with complex conditions cannot be expressed with a simple typed check."
+      },
+      {
+        "id": "NCT06281678-vaccines",
+        "polarity": "exclusion",
+        "sourceText": "Received live vaccines within 28 days prior to first administration of the study drug or plan on receiving any live vaccine during the study",
+        "reasonFuzzy": "Live vaccine washout is not among the allowed typed kinds."
+      },
+      {
+        "id": "NCT06281678-tox",
+        "polarity": "exclusion",
+        "sourceText": "Has adverse reactions resulting from previous antitumor therapies, which have not resolved to Grade 0 or 1 toxicity according to NCI-CTCAE v5.0 (except for alopecia, fatigue, pigmentation and other conditions with no safety risk according to investigator' discretion) or baseline prior to the first dose of the study drug",
+        "reasonFuzzy": "Unresolved toxicity with investigator discretion exceptions is not a typed check."
+      },
+      {
+        "id": "NCT06281678-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Undergone major surgery (Craniotomy, thoracotomy or laparotomy, and other surgery according to investigator' discretion, excluding needle biopsy) within 4 weeks prior to the first dose of the study drug, or who are expected to undergo major surgery during the study period, or who have severe unhealed wounds, trauma, ulcers, etc.",
+        "reasonFuzzy": "Major surgery washout and wound status with investigator discretion are subjective clinical exclusions."
+      }
+    ]
+  }
+}

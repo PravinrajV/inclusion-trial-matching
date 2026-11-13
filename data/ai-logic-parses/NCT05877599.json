@@ -1,0 +1,305 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05877599",
+  "briefTitle": "A Study of NT-175 in Adult Participants With Advanced Malignancies That Are Positive for HLA-A*02:01 and the TP53 R175H Mutation",
+  "parsedAt": "2026-11-12T06:19:22.790Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05877599-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Subjects must be at least 18 years of age",
+      "numberValue": 18,
+      "evidence_quote": "Subjects must be at least 18 years of age",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05877599-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Subject has advanced solid cancer, defined as unresectable, advanced, and/or metastatic disease (Stage III or IV) after at least 1 line of approved systemic standard of care (SOC) treatment regimen and for which there are no available curative treatment options.",
+      "stages": [
+        "IIIA",
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Subject has advanced solid cancer, defined as unresectable, advanced, and/or metastatic disease (Stage III or IV) after at least 1 line of approved systemic standard of care (SOC) treatment regimen and for which there are no available curative treatment options.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05877599-lines",
+      "kind": "prior_lines_min",
+      "polarity": "inclusion",
+      "sourceText": "Subject has advanced solid cancer, defined as unresectable, advanced, and/or metastatic disease (Stage III or IV) after at least 1 line of approved systemic standard of care (SOC) treatment regimen and for which there are no available curative treatment options.",
+      "numberValue": 1,
+      "evidence_quote": "Subject has advanced solid cancer, defined as unresectable, advanced, and/or metastatic disease (Stage III or IV) after at least 1 line of approved systemic standard of care (SOC) treatment regimen and for which there are no available curative treatment options.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05877599-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05877599-histology",
+      "polarity": "inclusion",
+      "sourceText": "Subject must be diagnosed with one of the histologies below: NSCLC, Colorectal adenocarcinoma, HNSCC, Pancreatic adenocarcinoma, Breast cancer, Ovarian cancer, Any other solid tumor",
+      "reasonFuzzy": "Includes multiple diverse solid tumors and other cancer types, not representable as a standard NSCLC-specific histology list."
+    },
+    {
+      "id": "NCT05877599-mutation",
+      "polarity": "inclusion",
+      "sourceText": "Tumors must harbor a TP53 R175H variant mutation and subject must be HLA-A*02:01 positive (at least 1 allele)",
+      "reasonFuzzy": "TP53 R175H and HLA-A*02:01 do not have designated typed check kinds."
+    },
+    {
+      "id": "NCT05877599-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Subject has at least 1 measurable lesion",
+      "reasonFuzzy": "Measurable disease is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT05877599-cns",
+      "polarity": "exclusion",
+      "sourceText": "Known, active primary central nervous system (CNS) malignancy",
+      "reasonFuzzy": "Wording specifies active primary CNS malignancy, which does not map cleanly to standard brain_mets categories."
+    },
+    {
+      "id": "NCT05877599-histology",
+      "polarity": "inclusion",
+      "sourceText": "Subject must be diagnosed with one of the histologies below: NSCLC, Colorectal adenocarcinoma, HNSCC, Pancreatic adenocarcinoma, Breast cancer, Ovarian cancer, Any other solid tumor",
+      "reasonFuzzy": "Includes multiple tumor types across different organs, some of which are not standard NSCLC histologic categories."
+    },
+    {
+      "id": "NCT05877599-tp53",
+      "polarity": "inclusion",
+      "sourceText": "Tumors must harbor a TP53 R175H variant mutation and subject must be HLA-A*02:01 positive (at least 1 allele)",
+      "reasonFuzzy": "No typed kind for TP53 variants or HLA status."
+    },
+    {
+      "id": "NCT05877599-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Subject has at least 1 measurable lesion",
+      "reasonFuzzy": "Measurable lesion is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT05877599-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematological, renal, hepatic, pulmonary, and cardiac function",
+      "reasonFuzzy": "General organ function statement without specific lab cutoffs."
+    },
+    {
+      "id": "NCT05877599-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known, active primary central nervous system (CNS) malignancy",
+      "reasonFuzzy": "Primary CNS malignancy is not a standard brain_mets check for secondary metastases."
+    },
+    {
+      "id": "NCT05877599-washout",
+      "polarity": "exclusion",
+      "sourceText": "Systemic therapy within at least 2 weeks or 3 half-lives, whichever is shorter, prior to enrollment.",
+      "reasonFuzzy": "Washout window is condition-dependent and complex."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 4,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 4,
+    "attempts": 3,
+    "ms": 36393
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 6,
+    "attempts": 2,
+    "ms": 18658
+  },
+  "ms": 63042,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05877599",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05877599-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Subjects must be at least 18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05877599-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Subject has advanced solid cancer, defined as unresectable, advanced, and/or metastatic disease (Stage III or IV)",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05877599-lines",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "after at least 1 line of approved systemic standard of care (SOC) treatment regimen",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05877599-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05877599-histology",
+        "polarity": "inclusion",
+        "sourceText": "Subject must be diagnosed with one of the histologies below: NSCLC, Colorectal adenocarcinoma, HNSCC, Pancreatic adenocarcinoma, Breast cancer, Ovarian cancer, Any other solid tumor",
+        "reasonFuzzy": "Includes multiple diverse solid tumors and other cancer types, not representable as a standard NSCLC-specific histology list."
+      },
+      {
+        "id": "NCT05877599-mutation",
+        "polarity": "inclusion",
+        "sourceText": "Tumors must harbor a TP53 R175H variant mutation and subject must be HLA-A*02:01 positive (at least 1 allele)",
+        "reasonFuzzy": "TP53 R175H and HLA-A*02:01 do not have designated typed check kinds."
+      },
+      {
+        "id": "NCT05877599-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Subject has at least 1 measurable lesion",
+        "reasonFuzzy": "Measurable disease is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT05877599-cns",
+        "polarity": "exclusion",
+        "sourceText": "Known, active primary central nervous system (CNS) malignancy",
+        "reasonFuzzy": "Wording specifies active primary CNS malignancy, which does not map cleanly to standard brain_mets categories."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05877599",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05877599-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Subjects must be at least 18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05877599-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Subject has advanced solid cancer, defined as unresectable, advanced, and/or metastatic disease (Stage III or IV) after at least 1 line of approved systemic standard of care (SOC) treatment regimen and for which there are no available curative treatment options.",
+        "stages": [
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05877599-lines",
+        "kind": "prior_lines_min",
+        "polarity": "inclusion",
+        "sourceText": "Subject has advanced solid cancer, defined as unresectable, advanced, and/or metastatic disease (Stage III or IV) after at least 1 line of approved systemic standard of care (SOC) treatment regimen and for which there are no available curative treatment options.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05877599-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05877599-histology",
+        "polarity": "inclusion",
+        "sourceText": "Subject must be diagnosed with one of the histologies below: NSCLC, Colorectal adenocarcinoma, HNSCC, Pancreatic adenocarcinoma, Breast cancer, Ovarian cancer, Any other solid tumor",
+        "reasonFuzzy": "Includes multiple tumor types across different organs, some of which are not standard NSCLC histologic categories."
+      },
+      {
+        "id": "NCT05877599-tp53",
+        "polarity": "inclusion",
+        "sourceText": "Tumors must harbor a TP53 R175H variant mutation and subject must be HLA-A*02:01 positive (at least 1 allele)",
+        "reasonFuzzy": "No typed kind for TP53 variants or HLA status."
+      },
+      {
+        "id": "NCT05877599-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Subject has at least 1 measurable lesion",
+        "reasonFuzzy": "Measurable lesion is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT05877599-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematological, renal, hepatic, pulmonary, and cardiac function",
+        "reasonFuzzy": "General organ function statement without specific lab cutoffs."
+      },
+      {
+        "id": "NCT05877599-brain",
+        "polarity": "exclusion",
+        "sourceText": "Known, active primary central nervous system (CNS) malignancy",
+        "reasonFuzzy": "Primary CNS malignancy is not a standard brain_mets check for secondary metastases."
+      },
+      {
+        "id": "NCT05877599-washout",
+        "polarity": "exclusion",
+        "sourceText": "Systemic therapy within at least 2 weeks or 3 half-lives, whichever is shorter, prior to enrollment.",
+        "reasonFuzzy": "Washout window is condition-dependent and complex."
+      }
+    ]
+  }
+}

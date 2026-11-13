@@ -1,0 +1,388 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05037825",
+  "briefTitle": "The Gut Microbiome and Immune Checkpoint Inhibitor Therapy in Solid Tumors",
+  "parsedAt": "2026-11-12T06:09:05.397Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05037825-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Men or women ≥18 years of age",
+      "numberValue": 18,
+      "evidence_quote": "Men or women ≥18 years of age",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05037825-brain",
+      "kind": "brain_mets",
+      "polarity": "exclusion",
+      "sourceText": "Experiencing active brain metastasis/metastases",
+      "allowedBrainMets": [
+        "untreated"
+      ],
+      "evidence_quote": "Experiencing active brain metastasis/metastases",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05037825-covid",
+      "polarity": "inclusion",
+      "sourceText": "Screened negative for COVID-19 symptoms at time of consent, as per institutional policy and as applicable for the duration of the COVID-19 pandemic",
+      "reasonFuzzy": "COVID-19 screening and institutional policies are not standard typed clinical criteria."
+    },
+    {
+      "id": "NCT05037825-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Plan to be treated at a partner cancer site with a checkpoint inhibitor (anti-PD-1, anti-PD-L1, or anti-CTLA-4) as a single agent or in combination with another checkpoint inhibitor or other treatment agent or modality (e.g., targeted therapy, chemotherapy, surgery, radiation, etc.) in accordance with FDA-labeled use of the agent",
+      "reasonFuzzy": "Planned treatment with various checkpoint inhibitors or modalities is not a simple prior therapy required/excluded check."
+    },
+    {
+      "id": "NCT05037825-consent",
+      "polarity": "inclusion",
+      "sourceText": "Able to provide informed consent and answer study questionnaires in either English or Spanish",
+      "reasonFuzzy": "Language and questionnaire capacity are subjective/operational criteria."
+    },
+    {
+      "id": "NCT05037825-stool",
+      "polarity": "inclusion",
+      "sourceText": "Able to provide stool specimens for research purposes",
+      "reasonFuzzy": "Willingness or ability to provide biological specimens is a procedural requirement, not a typed clinical check."
+    },
+    {
+      "id": "NCT05037825-mental",
+      "polarity": "exclusion",
+      "sourceText": "Mental incapacity",
+      "reasonFuzzy": "Mental capacity is a clinical judgment, not a typed check."
+    },
+    {
+      "id": "NCT05037825-incarcerated",
+      "polarity": "exclusion",
+      "sourceText": "Incarcerated individuals",
+      "reasonFuzzy": "Incarceration status is an administrative rather than clinical typed check."
+    },
+    {
+      "id": "NCT05037825-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Pregnancy (by self-report of pregnancy status)",
+      "reasonFuzzy": "Pregnancy status is not a typed lab or genetic check."
+    },
+    {
+      "id": "NCT05037825-offlabel",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with checkpoint inhibitor in off-label capacity or through a clinical/interventional trial",
+      "reasonFuzzy": "Exclusion of off-label treatment or trial participation is not a standard typed prior therapy exclusion."
+    },
+    {
+      "id": "NCT05037825-trial",
+      "polarity": "exclusion",
+      "sourceText": "Active participation in an immuno-oncology clinical/interventional trial or pharma-sponsored observational study",
+      "reasonFuzzy": "Concurrent trial participation exclusion is not a standard typed check."
+    },
+    {
+      "id": "NCT05037825-covid",
+      "polarity": "inclusion",
+      "sourceText": "Screened negative for COVID-19 symptoms at time of consent, as per institutional policy and as applicable for the duration of the COVID-19 pandemic",
+      "reasonFuzzy": "COVID-19 screening and institutional policy are not part of standard typed checks."
+    },
+    {
+      "id": "NCT05037825-treatment",
+      "polarity": "inclusion",
+      "sourceText": "Plan to be treated at a partner cancer site with a checkpoint inhibitor (anti-PD-1, anti-PD-L1, or anti-CTLA-4) as a single agent or in combination with another checkpoint inhibitor or other treatment agent or modality (e.g., targeted therapy, chemotherapy, surgery, radiation, etc.) in accordance with FDA-labeled use of the agent",
+      "reasonFuzzy": "Treatment plan involving checkpoint inhibitors and multiple combination options is not a simple typed prior therapy check."
+    },
+    {
+      "id": "NCT05037825-consent",
+      "polarity": "inclusion",
+      "sourceText": "Able to provide informed consent and answer study questionnaires in either English or Spanish",
+      "reasonFuzzy": "Informed consent and language ability are subjective capabilities rather than a typed lab or stage check."
+    },
+    {
+      "id": "NCT05037825-stool",
+      "polarity": "inclusion",
+      "sourceText": "Able to provide stool specimens for research purposes",
+      "reasonFuzzy": "Willingness or ability to provide stool specimens is not a typed clinical check."
+    },
+    {
+      "id": "NCT05037825-capacity",
+      "polarity": "exclusion",
+      "sourceText": "Mental incapacity",
+      "reasonFuzzy": "Mental incapacity is a clinical evaluation, not a typed check."
+    },
+    {
+      "id": "NCT05037825-incarcerated",
+      "polarity": "exclusion",
+      "sourceText": "Incarcerated individuals",
+      "reasonFuzzy": "Incarceration status is an administrative criterion, not a typed check."
+    },
+    {
+      "id": "NCT05037825-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Pregnancy (by self-report of pregnancy status)",
+      "reasonFuzzy": "Pregnancy is a subjective self-report criterion."
+    },
+    {
+      "id": "NCT05037825-offlabel",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with checkpoint inhibitor in off-label capacity or through a clinical/interventional trial",
+      "reasonFuzzy": "Off-label or clinical trial treatment restrictions are not standard typed rules."
+    },
+    {
+      "id": "NCT05037825-trialpart",
+      "polarity": "exclusion",
+      "sourceText": "Active participation in an immuno-oncology clinical/interventional trial or pharma-sponsored observational study",
+      "reasonFuzzy": "Concurrent trial participation restriction is an administrative rule."
+    },
+    {
+      "id": "NCT05037825-stage",
+      "polarity": "inclusion",
+      "sourceText": "Diagnosed with stages I-IV primary NSCLC, MM, TNBC or RCC",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IA,IB,IIA,IIB,IIIA,IIIB,IIIC,IV,IVA,IVB"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 4112
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 3431
+  },
+  "ms": 15539,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05037825",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05037825-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Men or women ≥18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05037825-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Diagnosed with stages I-IV primary NSCLC, MM, TNBC or RCC",
+        "stages": [
+          "IA",
+          "IB",
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05037825-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Experiencing active brain metastasis/metastases",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05037825-covid",
+        "polarity": "inclusion",
+        "sourceText": "Screened negative for COVID-19 symptoms at time of consent, as per institutional policy and as applicable for the duration of the COVID-19 pandemic",
+        "reasonFuzzy": "COVID-19 screening and institutional policies are not standard typed clinical criteria."
+      },
+      {
+        "id": "NCT05037825-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Plan to be treated at a partner cancer site with a checkpoint inhibitor (anti-PD-1, anti-PD-L1, or anti-CTLA-4) as a single agent or in combination with another checkpoint inhibitor or other treatment agent or modality (e.g., targeted therapy, chemotherapy, surgery, radiation, etc.) in accordance with FDA-labeled use of the agent",
+        "reasonFuzzy": "Planned treatment with various checkpoint inhibitors or modalities is not a simple prior therapy required/excluded check."
+      },
+      {
+        "id": "NCT05037825-consent",
+        "polarity": "inclusion",
+        "sourceText": "Able to provide informed consent and answer study questionnaires in either English or Spanish",
+        "reasonFuzzy": "Language and questionnaire capacity are subjective/operational criteria."
+      },
+      {
+        "id": "NCT05037825-stool",
+        "polarity": "inclusion",
+        "sourceText": "Able to provide stool specimens for research purposes",
+        "reasonFuzzy": "Willingness or ability to provide biological specimens is a procedural requirement, not a typed clinical check."
+      },
+      {
+        "id": "NCT05037825-mental",
+        "polarity": "exclusion",
+        "sourceText": "Mental incapacity",
+        "reasonFuzzy": "Mental capacity is a clinical judgment, not a typed check."
+      },
+      {
+        "id": "NCT05037825-incarcerated",
+        "polarity": "exclusion",
+        "sourceText": "Incarcerated individuals",
+        "reasonFuzzy": "Incarceration status is an administrative rather than clinical typed check."
+      },
+      {
+        "id": "NCT05037825-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Pregnancy (by self-report of pregnancy status)",
+        "reasonFuzzy": "Pregnancy status is not a typed lab or genetic check."
+      },
+      {
+        "id": "NCT05037825-offlabel",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with checkpoint inhibitor in off-label capacity or through a clinical/interventional trial",
+        "reasonFuzzy": "Exclusion of off-label treatment or trial participation is not a standard typed prior therapy exclusion."
+      },
+      {
+        "id": "NCT05037825-trial",
+        "polarity": "exclusion",
+        "sourceText": "Active participation in an immuno-oncology clinical/interventional trial or pharma-sponsored observational study",
+        "reasonFuzzy": "Concurrent trial participation exclusion is not a standard typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05037825",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05037825-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Men or women ≥18 years of age",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05037825-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Diagnosed with stages I-IV primary NSCLC, MM, TNBC or RCC",
+        "stages": [
+          "IA",
+          "IB",
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05037825-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Experiencing active brain metastasis/metastases",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05037825-covid",
+        "polarity": "inclusion",
+        "sourceText": "Screened negative for COVID-19 symptoms at time of consent, as per institutional policy and as applicable for the duration of the COVID-19 pandemic",
+        "reasonFuzzy": "COVID-19 screening and institutional policy are not part of standard typed checks."
+      },
+      {
+        "id": "NCT05037825-treatment",
+        "polarity": "inclusion",
+        "sourceText": "Plan to be treated at a partner cancer site with a checkpoint inhibitor (anti-PD-1, anti-PD-L1, or anti-CTLA-4) as a single agent or in combination with another checkpoint inhibitor or other treatment agent or modality (e.g., targeted therapy, chemotherapy, surgery, radiation, etc.) in accordance with FDA-labeled use of the agent",
+        "reasonFuzzy": "Treatment plan involving checkpoint inhibitors and multiple combination options is not a simple typed prior therapy check."
+      },
+      {
+        "id": "NCT05037825-consent",
+        "polarity": "inclusion",
+        "sourceText": "Able to provide informed consent and answer study questionnaires in either English or Spanish",
+        "reasonFuzzy": "Informed consent and language ability are subjective capabilities rather than a typed lab or stage check."
+      },
+      {
+        "id": "NCT05037825-stool",
+        "polarity": "inclusion",
+        "sourceText": "Able to provide stool specimens for research purposes",
+        "reasonFuzzy": "Willingness or ability to provide stool specimens is not a typed clinical check."
+      },
+      {
+        "id": "NCT05037825-capacity",
+        "polarity": "exclusion",
+        "sourceText": "Mental incapacity",
+        "reasonFuzzy": "Mental incapacity is a clinical evaluation, not a typed check."
+      },
+      {
+        "id": "NCT05037825-incarcerated",
+        "polarity": "exclusion",
+        "sourceText": "Incarcerated individuals",
+        "reasonFuzzy": "Incarceration status is an administrative criterion, not a typed check."
+      },
+      {
+        "id": "NCT05037825-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Pregnancy (by self-report of pregnancy status)",
+        "reasonFuzzy": "Pregnancy is a subjective self-report criterion."
+      },
+      {
+        "id": "NCT05037825-offlabel",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with checkpoint inhibitor in off-label capacity or through a clinical/interventional trial",
+        "reasonFuzzy": "Off-label or clinical trial treatment restrictions are not standard typed rules."
+      },
+      {
+        "id": "NCT05037825-trialpart",
+        "polarity": "exclusion",
+        "sourceText": "Active participation in an immuno-oncology clinical/interventional trial or pharma-sponsored observational study",
+        "reasonFuzzy": "Concurrent trial participation restriction is an administrative rule."
+      }
+    ]
+  }
+}

@@ -1,0 +1,762 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04777994",
+  "briefTitle": "Study With ABBV-CLS-484 in Participants With Locally Advanced or Metastatic Tumors",
+  "parsedAt": "2026-11-12T06:07:21.003Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04777994-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of >= 12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT04777994-labs",
+      "polarity": "inclusion",
+      "sourceText": "Laboratory values meeting protocol criteria.",
+      "reasonFuzzy": "General laboratory values are not specified with explicit cutoffs."
+    },
+    {
+      "id": "NCT04777994-qtc",
+      "polarity": "inclusion",
+      "sourceText": "QT interval corrected for heart rate < 470 msec (using Fridericia's correction), and no clinically significant electrocardiographic findings.",
+      "reasonFuzzy": "QTc interval check is not part of the allowed typed kinds."
+    },
+    {
+      "id": "NCT04777994-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease defined by RECIST 1.1 criteria.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT04777994-prior-therapy-1",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have received at least 1 prior systemic anticancer therapy for the indication being considered.",
+      "reasonFuzzy": "Prior lines and therapy requirements vary across multiple study arms and dose expansion cohorts."
+    },
+    {
+      "id": "NCT04777994-prior-therapy-2",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have received at least 1 prior line containing PD-1/PD-L1 targeted therapy with a best response by RECIST v1.1 of CR/PR/stable (any duration) or stable disease (for greater than 6 months); AND Must have been previously treated with 1 or more prior lines of therapy in the locally advanced or metastatic setting with the following tumor types: Relapsed/refractory HNSCC, Relapsed/refractory NSCLC, Advanced ccRCC",
+      "reasonFuzzy": "Dose expansion cohorts have conditional and multi-part prior line and response criteria that cannot be expressed with a single typed rule."
+    },
+    {
+      "id": "NCT04777994-prior-therapy-3",
+      "polarity": "inclusion",
+      "sourceText": "For the following tumor types, subject must have received at least 1 prior line containing PD-1/PD-L1 targeted therapy with response by RECIST v1.1 of CR/PR (any duration) or stable disease (for greater than 6 months): Relapsed HNSCC, Relapsed NSCLC, Relapsed Advanced ccRCC",
+      "reasonFuzzy": "Combination dose expansion criteria depend on specific tumor types and response categories."
+    },
+    {
+      "id": "NCT04777994-prior-therapy-4",
+      "polarity": "inclusion",
+      "sourceText": "For the following tumor types, subject must have received at least 1 prior line containing PD-1/PD-L1 targeted therapy and have had disease progression with PD-1/PD-L1 targeted therapy: Locally Advanced or metastatic MSI-H tumors",
+      "reasonFuzzy": "Combination dose expansion criteria depend on specific tumor types and disease progression status."
+    },
+    {
+      "id": "NCT04777994-prior-therapy-5",
+      "polarity": "inclusion",
+      "sourceText": "Relapsed advance ccRCC with no more than 1 prior VEGFR TKI",
+      "reasonFuzzy": "Sub-cohort specific prior VEGFR TKI limit."
+    },
+    {
+      "id": "NCT04777994-hemorrhage",
+      "polarity": "exclusion",
+      "sourceText": "Participants no recent history of hemorrhage, including hemoptysis, hematemesis, or melena",
+      "reasonFuzzy": "Hemorrhage history is an exclusion condition not covered by typed kinds."
+    },
+    {
+      "id": "NCT04777994-hypertension",
+      "polarity": "exclusion",
+      "sourceText": "Participants with poorly controlled hypertension are excluded.",
+      "reasonFuzzy": "Poorly controlled hypertension is a subjective clinical condition."
+    },
+    {
+      "id": "NCT04777994-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Unresolved Grade 2 or higher toxicities related to previous anticancer therapy except alopecia.",
+      "reasonFuzzy": "Unresolved toxicity grade rule is not a typed check."
+    },
+    {
+      "id": "NCT04777994-neuropathy",
+      "polarity": "exclusion",
+      "sourceText": "Unresolved Grade 2 or higher peripheral neuropathy.",
+      "reasonFuzzy": "Unresolved neuropathy grade rule is not a typed check."
+    },
+    {
+      "id": "NCT04777994-infection",
+      "polarity": "exclusion",
+      "sourceText": "History of hepatitis B, hepatitis C, or human immunodeficiency virus (HIV) infection.",
+      "reasonFuzzy": "Infectious disease history exclusions are not typed checks."
+    },
+    {
+      "id": "NCT04777994-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Recent history (within 6 months) of congestive heart failure (defined as New York Heart Association, Class 2 or higher), ischemic cardiovascular event, pericarditis, or clinically significant pericardial effusion or arrythmia.",
+      "reasonFuzzy": "Cardiac history and NYHA class exclusions are not typed checks."
+    },
+    {
+      "id": "NCT04777994-liver",
+      "polarity": "exclusion",
+      "sourceText": "Recent history (within 6 months) of Childs-Pugh B or C classification of liver disease.",
+      "reasonFuzzy": "Child-Pugh classification is not a typed check."
+    },
+    {
+      "id": "NCT04777994-investigator",
+      "polarity": "exclusion",
+      "sourceText": "History of clinically significant medical and/or psychiatric conditions or any other reason that, in the opinion of the investigator, would interfere with the subject's participation in this study or would make the subject an unsuitable candidate to receive study drug.",
+      "reasonFuzzy": "Investigator discretion is subjective."
+    },
+    {
+      "id": "NCT04777994-endocrinopathy",
+      "polarity": "exclusion",
+      "sourceText": "History of uncontrolled, clinically significant endocrinopathy.",
+      "reasonFuzzy": "Endocrinopathy condition is subjective."
+    },
+    {
+      "id": "NCT04777994-gi",
+      "polarity": "exclusion",
+      "sourceText": "Known gastrointestinal disorders making absorption of oral medications problematic; subject must be able to swallow capsules.",
+      "reasonFuzzy": "GI absorption disorders and ability to swallow are subjective conditions."
+    },
+    {
+      "id": "NCT04777994-io-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "If treated with a PD-1/aPD-L1 targeting or other immune-oncology agents in the past, excluded if had prior pneumonitis, prior Grade 3 or higher immune mediated toxicity, hypersensitivity to administered drug or drug related toxicity requiring discontinuation.",
+      "reasonFuzzy": "Conditional prior IO toxicities are complex and not a simple typed prior therapy exclusion."
+    },
+    {
+      "id": "NCT04777994-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Active autoimmune disease requiring systemic treatment in past 2-years (exceptions for endocrinopathies, vitiligo or atopic conditions).",
+      "reasonFuzzy": "Autoimmune disease history with exceptions is not a typed check."
+    },
+    {
+      "id": "NCT04777994-transplant",
+      "polarity": "exclusion",
+      "sourceText": "History of solid organ transplant or allogeneic stem cell transplant.",
+      "reasonFuzzy": "Transplant history is not a typed check."
+    },
+    {
+      "id": "NCT04777994-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "History of other malignancy, with the following exceptions: No known active disease present within >= 3 years before first dose of study treatment and felt to be at low recurrence by investigator. Adequately treated non-melanoma skin cancer or lentigo maligna without evidence of disease. Adequately treated carcinoma in situ without evidence of disease.",
+      "reasonFuzzy": "Prior malignancy history with recurrence timeframe and investigator judgment is not a typed check."
+    },
+    {
+      "id": "NCT04777994-ild",
+      "polarity": "exclusion",
+      "sourceText": "History of interstitial lung disease or pneumonitis.",
+      "reasonFuzzy": "ILD or pneumonitis history is not a typed check."
+    },
+    {
+      "id": "NCT04777994-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery <= 28 days prior to first dose of study drug",
+      "reasonFuzzy": "Washout window for surgery is not a typed lab cutoff."
+    },
+    {
+      "id": "NCT04777994-sars",
+      "polarity": "exclusion",
+      "sourceText": "Known active severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection per local testing practices.",
+      "reasonFuzzy": "Active SARS-CoV-2 infection status is not a typed check."
+    },
+    {
+      "id": "NCT04777994-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of >= 12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT04777994-labs",
+      "polarity": "inclusion",
+      "sourceText": "Laboratory values meeting protocol criteria.",
+      "reasonFuzzy": "Protocol criteria are unspecified in the provided text."
+    },
+    {
+      "id": "NCT04777994-qt",
+      "polarity": "inclusion",
+      "sourceText": "QT interval corrected for heart rate < 470 msec (using Fridericia's correction), and no clinically significant electrocardiographic findings.",
+      "reasonFuzzy": "QT interval cutoff does not map directly to a standard typed check kind."
+    },
+    {
+      "id": "NCT04777994-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease defined by RECIST 1.1 criteria.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT04777994-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have received at least 1 prior systemic anticancer therapy for the indication being considered.",
+      "reasonFuzzy": "Prior therapy requirements vary across multiple dose escalation and expansion cohorts."
+    },
+    {
+      "id": "NCT04777994-expansion-lines",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have received at least 1 prior line containing PD-1/PD-L1 targeted therapy with a best response by RECIST v1.1 of CR/PR/stable (any duration) or stable disease (for greater than 6 months)",
+      "reasonFuzzy": "Complex prior line and response criteria are cohort-specific and cannot be expressed with a single typed prior_lines or prior_therapy check."
+    },
+    {
+      "id": "NCT04777994-hypertension",
+      "polarity": "exclusion",
+      "sourceText": "Participants with poorly controlled hypertension are excluded.",
+      "reasonFuzzy": "Poorly controlled hypertension is a subjective investigator assessment."
+    },
+    {
+      "id": "NCT04777994-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Unresolved Grade 2 or higher toxicities related to previous anticancer therapy except alopecia.",
+      "reasonFuzzy": "General unresolved toxicity grades are not captured by single organ-specific lab checks."
+    },
+    {
+      "id": "NCT04777994-neuropathy",
+      "polarity": "exclusion",
+      "sourceText": "Unresolved Grade 2 or higher peripheral neuropathy.",
+      "reasonFuzzy": "Neuropathy grade is a clinical toxicity assessment rather than a typed lab check."
+    },
+    {
+      "id": "NCT04777994-infxn",
+      "polarity": "exclusion",
+      "sourceText": "History of hepatitis B, hepatitis C, or human immunodeficiency virus (HIV) infection.",
+      "reasonFuzzy": "Infection history exclusion is not a typed lab check."
+    },
+    {
+      "id": "NCT04777994-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Recent history (within 6 months) of congestive heart failure (defined as New York Heart Association, Class 2 or higher), ischemic cardiovascular event, pericarditis, or clinically significant pericardial effusion or arrythmia.",
+      "reasonFuzzy": "Complex cardiac history and NYHA class restrictions are subjective clinical evaluations."
+    },
+    {
+      "id": "NCT04777994-liver",
+      "polarity": "exclusion",
+      "sourceText": "Recent history (within 6 months) of Childs-Pugh B or C classification of liver disease.",
+      "reasonFuzzy": "Child-Pugh classification is an investigator scoring assessment."
+    },
+    {
+      "id": "NCT04777994-investigator",
+      "polarity": "exclusion",
+      "sourceText": "History of clinically significant medical and/or psychiatric conditions or any other reason that, in the opinion of the investigator, would interfere with the subject's participation in this study",
+      "reasonFuzzy": "Investigator discretion is subjective."
+    },
+    {
+      "id": "NCT04777994-endocrine",
+      "polarity": "exclusion",
+      "sourceText": "History of uncontrolled, clinically significant endocrinopathy.",
+      "reasonFuzzy": "Uncontrolled endocrinopathy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT04777994-gi",
+      "polarity": "exclusion",
+      "sourceText": "Known gastrointestinal disorders making absorption of oral medications problematic; subject must be able to swallow capsules.",
+      "reasonFuzzy": "Swallowing ability and GI absorption are subjective judgments."
+    },
+    {
+      "id": "NCT04777994-io-tox",
+      "polarity": "exclusion",
+      "sourceText": "If treated with a PD-1/aPD-L1 targeting or other immune-oncology agents in the past, excluded if had prior pneumonitis, prior Grade 3 or higher immune mediated toxicity, hypersensitivity to administered drug or drug related toxicity requiring discontinuation.",
+      "reasonFuzzy": "Past IO-specific toxicity criteria are multifaceted."
+    },
+    {
+      "id": "NCT04777994-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Active autoimmune disease requiring systemic treatment in past 2-years (exceptions for endocrinopathies, vitiligo or atopic conditions).",
+      "reasonFuzzy": "Active autoimmune disease history involves time windows and exceptions not matching typed kinds."
+    },
+    {
+      "id": "NCT04777994-transplant",
+      "polarity": "exclusion",
+      "sourceText": "History of solid organ transplant or allogeneic stem cell transplant.",
+      "reasonFuzzy": "Transplant history is not a typed check."
+    },
+    {
+      "id": "NCT04777994-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "History of other malignancy, with the following exceptions: No known active disease present within >= 3 years before first dose of study treatment and felt to be at low recurrence by investigator.",
+      "reasonFuzzy": "Other malignancy history and investigator recurrence assessment are subjective."
+    },
+    {
+      "id": "NCT04777994-ild",
+      "polarity": "exclusion",
+      "sourceText": "History of interstitial lung disease or pneumonitis.",
+      "reasonFuzzy": "History of interstitial lung disease is not a typed check kind."
+    },
+    {
+      "id": "NCT04777994-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery <= 28 days prior to first dose of study drug",
+      "reasonFuzzy": "Major surgery washout window is not a typed lab check."
+    },
+    {
+      "id": "NCT04777994-covid",
+      "polarity": "exclusion",
+      "sourceText": "Known active severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection per local testing practices.",
+      "reasonFuzzy": "Active viral infection status is not a typed check kind."
+    },
+    {
+      "id": "NCT04777994-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04777994-brain",
+      "polarity": "exclusion",
+      "sourceText": "Untreated brain or meningeal metastases (i.e., subjects with history of metastases are eligible provided they do not require ongoing steroid treatment and have shown clinical and radiographic stability for at least 28 days after definitive therapy)",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT04777994-brain",
+      "polarity": "exclusion",
+      "sourceText": "Untreated brain or meningeal metastases (i.e., subjects with history of metastases are eligible provided they do not require ongoing steroid treatment and have shown clinical and radiographic stability for at least 28 days after definitive therapy)",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT04777994-weight",
+      "polarity": "inclusion",
+      "sourceText": "Must weigh at least 35 kilograms (kg).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04777994-ecog",
+      "polarity": "inclusion",
+      "sourceText": "An Eastern Cooperative Oncology Group (ECOG) performance status <= 2.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:35"
+        },
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:2"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 26,
+    "attempts": 1,
+    "ms": 6602
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 22,
+    "attempts": 1,
+    "ms": 6674
+  },
+  "ms": 21269,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04777994",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04777994-weight",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Must weigh at least 35 kilograms (kg).",
+        "numberValue": 35
+      },
+      {
+        "id": "NCT04777994-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "An Eastern Cooperative Oncology Group (ECOG) performance status <= 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT04777994-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Untreated brain or meningeal metastases (i.e., subjects with history of metastases are eligible provided they do not require ongoing steroid treatment and have shown clinical and radiographic stability for at least 28 days after definitive therapy)",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04777994-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of >= 12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT04777994-labs",
+        "polarity": "inclusion",
+        "sourceText": "Laboratory values meeting protocol criteria.",
+        "reasonFuzzy": "General laboratory values are not specified with explicit cutoffs."
+      },
+      {
+        "id": "NCT04777994-qtc",
+        "polarity": "inclusion",
+        "sourceText": "QT interval corrected for heart rate < 470 msec (using Fridericia's correction), and no clinically significant electrocardiographic findings.",
+        "reasonFuzzy": "QTc interval check is not part of the allowed typed kinds."
+      },
+      {
+        "id": "NCT04777994-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease defined by RECIST 1.1 criteria.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT04777994-prior-therapy-1",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have received at least 1 prior systemic anticancer therapy for the indication being considered.",
+        "reasonFuzzy": "Prior lines and therapy requirements vary across multiple study arms and dose expansion cohorts."
+      },
+      {
+        "id": "NCT04777994-prior-therapy-2",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have received at least 1 prior line containing PD-1/PD-L1 targeted therapy with a best response by RECIST v1.1 of CR/PR/stable (any duration) or stable disease (for greater than 6 months); AND Must have been previously treated with 1 or more prior lines of therapy in the locally advanced or metastatic setting with the following tumor types: Relapsed/refractory HNSCC, Relapsed/refractory NSCLC, Advanced ccRCC",
+        "reasonFuzzy": "Dose expansion cohorts have conditional and multi-part prior line and response criteria that cannot be expressed with a single typed rule."
+      },
+      {
+        "id": "NCT04777994-prior-therapy-3",
+        "polarity": "inclusion",
+        "sourceText": "For the following tumor types, subject must have received at least 1 prior line containing PD-1/PD-L1 targeted therapy with response by RECIST v1.1 of CR/PR (any duration) or stable disease (for greater than 6 months): Relapsed HNSCC, Relapsed NSCLC, Relapsed Advanced ccRCC",
+        "reasonFuzzy": "Combination dose expansion criteria depend on specific tumor types and response categories."
+      },
+      {
+        "id": "NCT04777994-prior-therapy-4",
+        "polarity": "inclusion",
+        "sourceText": "For the following tumor types, subject must have received at least 1 prior line containing PD-1/PD-L1 targeted therapy and have had disease progression with PD-1/PD-L1 targeted therapy: Locally Advanced or metastatic MSI-H tumors",
+        "reasonFuzzy": "Combination dose expansion criteria depend on specific tumor types and disease progression status."
+      },
+      {
+        "id": "NCT04777994-prior-therapy-5",
+        "polarity": "inclusion",
+        "sourceText": "Relapsed advance ccRCC with no more than 1 prior VEGFR TKI",
+        "reasonFuzzy": "Sub-cohort specific prior VEGFR TKI limit."
+      },
+      {
+        "id": "NCT04777994-hemorrhage",
+        "polarity": "exclusion",
+        "sourceText": "Participants no recent history of hemorrhage, including hemoptysis, hematemesis, or melena",
+        "reasonFuzzy": "Hemorrhage history is an exclusion condition not covered by typed kinds."
+      },
+      {
+        "id": "NCT04777994-hypertension",
+        "polarity": "exclusion",
+        "sourceText": "Participants with poorly controlled hypertension are excluded.",
+        "reasonFuzzy": "Poorly controlled hypertension is a subjective clinical condition."
+      },
+      {
+        "id": "NCT04777994-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Unresolved Grade 2 or higher toxicities related to previous anticancer therapy except alopecia.",
+        "reasonFuzzy": "Unresolved toxicity grade rule is not a typed check."
+      },
+      {
+        "id": "NCT04777994-neuropathy",
+        "polarity": "exclusion",
+        "sourceText": "Unresolved Grade 2 or higher peripheral neuropathy.",
+        "reasonFuzzy": "Unresolved neuropathy grade rule is not a typed check."
+      },
+      {
+        "id": "NCT04777994-infection",
+        "polarity": "exclusion",
+        "sourceText": "History of hepatitis B, hepatitis C, or human immunodeficiency virus (HIV) infection.",
+        "reasonFuzzy": "Infectious disease history exclusions are not typed checks."
+      },
+      {
+        "id": "NCT04777994-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Recent history (within 6 months) of congestive heart failure (defined as New York Heart Association, Class 2 or higher), ischemic cardiovascular event, pericarditis, or clinically significant pericardial effusion or arrythmia.",
+        "reasonFuzzy": "Cardiac history and NYHA class exclusions are not typed checks."
+      },
+      {
+        "id": "NCT04777994-liver",
+        "polarity": "exclusion",
+        "sourceText": "Recent history (within 6 months) of Childs-Pugh B or C classification of liver disease.",
+        "reasonFuzzy": "Child-Pugh classification is not a typed check."
+      },
+      {
+        "id": "NCT04777994-investigator",
+        "polarity": "exclusion",
+        "sourceText": "History of clinically significant medical and/or psychiatric conditions or any other reason that, in the opinion of the investigator, would interfere with the subject's participation in this study or would make the subject an unsuitable candidate to receive study drug.",
+        "reasonFuzzy": "Investigator discretion is subjective."
+      },
+      {
+        "id": "NCT04777994-endocrinopathy",
+        "polarity": "exclusion",
+        "sourceText": "History of uncontrolled, clinically significant endocrinopathy.",
+        "reasonFuzzy": "Endocrinopathy condition is subjective."
+      },
+      {
+        "id": "NCT04777994-gi",
+        "polarity": "exclusion",
+        "sourceText": "Known gastrointestinal disorders making absorption of oral medications problematic; subject must be able to swallow capsules.",
+        "reasonFuzzy": "GI absorption disorders and ability to swallow are subjective conditions."
+      },
+      {
+        "id": "NCT04777994-io-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "If treated with a PD-1/aPD-L1 targeting or other immune-oncology agents in the past, excluded if had prior pneumonitis, prior Grade 3 or higher immune mediated toxicity, hypersensitivity to administered drug or drug related toxicity requiring discontinuation.",
+        "reasonFuzzy": "Conditional prior IO toxicities are complex and not a simple typed prior therapy exclusion."
+      },
+      {
+        "id": "NCT04777994-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Active autoimmune disease requiring systemic treatment in past 2-years (exceptions for endocrinopathies, vitiligo or atopic conditions).",
+        "reasonFuzzy": "Autoimmune disease history with exceptions is not a typed check."
+      },
+      {
+        "id": "NCT04777994-transplant",
+        "polarity": "exclusion",
+        "sourceText": "History of solid organ transplant or allogeneic stem cell transplant.",
+        "reasonFuzzy": "Transplant history is not a typed check."
+      },
+      {
+        "id": "NCT04777994-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "History of other malignancy, with the following exceptions: No known active disease present within >= 3 years before first dose of study treatment and felt to be at low recurrence by investigator. Adequately treated non-melanoma skin cancer or lentigo maligna without evidence of disease. Adequately treated carcinoma in situ without evidence of disease.",
+        "reasonFuzzy": "Prior malignancy history with recurrence timeframe and investigator judgment is not a typed check."
+      },
+      {
+        "id": "NCT04777994-ild",
+        "polarity": "exclusion",
+        "sourceText": "History of interstitial lung disease or pneumonitis.",
+        "reasonFuzzy": "ILD or pneumonitis history is not a typed check."
+      },
+      {
+        "id": "NCT04777994-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery <= 28 days prior to first dose of study drug",
+        "reasonFuzzy": "Washout window for surgery is not a typed lab cutoff."
+      },
+      {
+        "id": "NCT04777994-sars",
+        "polarity": "exclusion",
+        "sourceText": "Known active severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection per local testing practices.",
+        "reasonFuzzy": "Active SARS-CoV-2 infection status is not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04777994",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04777994-weight",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Must weigh at least 35 kilograms (kg).",
+        "numberValue": 35
+      },
+      {
+        "id": "NCT04777994-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "An Eastern Cooperative Oncology Group (ECOG) performance status <= 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT04777994-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04777994-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Untreated brain or meningeal metastases (i.e., subjects with history of metastases are eligible provided they do not require ongoing steroid treatment and have shown clinical and radiographic stability for at least 28 days after definitive therapy)",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04777994-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of >= 12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT04777994-labs",
+        "polarity": "inclusion",
+        "sourceText": "Laboratory values meeting protocol criteria.",
+        "reasonFuzzy": "Protocol criteria are unspecified in the provided text."
+      },
+      {
+        "id": "NCT04777994-qt",
+        "polarity": "inclusion",
+        "sourceText": "QT interval corrected for heart rate < 470 msec (using Fridericia's correction), and no clinically significant electrocardiographic findings.",
+        "reasonFuzzy": "QT interval cutoff does not map directly to a standard typed check kind."
+      },
+      {
+        "id": "NCT04777994-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease defined by RECIST 1.1 criteria.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT04777994-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have received at least 1 prior systemic anticancer therapy for the indication being considered.",
+        "reasonFuzzy": "Prior therapy requirements vary across multiple dose escalation and expansion cohorts."
+      },
+      {
+        "id": "NCT04777994-expansion-lines",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have received at least 1 prior line containing PD-1/PD-L1 targeted therapy with a best response by RECIST v1.1 of CR/PR/stable (any duration) or stable disease (for greater than 6 months)",
+        "reasonFuzzy": "Complex prior line and response criteria are cohort-specific and cannot be expressed with a single typed prior_lines or prior_therapy check."
+      },
+      {
+        "id": "NCT04777994-hypertension",
+        "polarity": "exclusion",
+        "sourceText": "Participants with poorly controlled hypertension are excluded.",
+        "reasonFuzzy": "Poorly controlled hypertension is a subjective investigator assessment."
+      },
+      {
+        "id": "NCT04777994-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Unresolved Grade 2 or higher toxicities related to previous anticancer therapy except alopecia.",
+        "reasonFuzzy": "General unresolved toxicity grades are not captured by single organ-specific lab checks."
+      },
+      {
+        "id": "NCT04777994-neuropathy",
+        "polarity": "exclusion",
+        "sourceText": "Unresolved Grade 2 or higher peripheral neuropathy.",
+        "reasonFuzzy": "Neuropathy grade is a clinical toxicity assessment rather than a typed lab check."
+      },
+      {
+        "id": "NCT04777994-infxn",
+        "polarity": "exclusion",
+        "sourceText": "History of hepatitis B, hepatitis C, or human immunodeficiency virus (HIV) infection.",
+        "reasonFuzzy": "Infection history exclusion is not a typed lab check."
+      },
+      {
+        "id": "NCT04777994-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Recent history (within 6 months) of congestive heart failure (defined as New York Heart Association, Class 2 or higher), ischemic cardiovascular event, pericarditis, or clinically significant pericardial effusion or arrythmia.",
+        "reasonFuzzy": "Complex cardiac history and NYHA class restrictions are subjective clinical evaluations."
+      },
+      {
+        "id": "NCT04777994-liver",
+        "polarity": "exclusion",
+        "sourceText": "Recent history (within 6 months) of Childs-Pugh B or C classification of liver disease.",
+        "reasonFuzzy": "Child-Pugh classification is an investigator scoring assessment."
+      },
+      {
+        "id": "NCT04777994-investigator",
+        "polarity": "exclusion",
+        "sourceText": "History of clinically significant medical and/or psychiatric conditions or any other reason that, in the opinion of the investigator, would interfere with the subject's participation in this study",
+        "reasonFuzzy": "Investigator discretion is subjective."
+      },
+      {
+        "id": "NCT04777994-endocrine",
+        "polarity": "exclusion",
+        "sourceText": "History of uncontrolled, clinically significant endocrinopathy.",
+        "reasonFuzzy": "Uncontrolled endocrinopathy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT04777994-gi",
+        "polarity": "exclusion",
+        "sourceText": "Known gastrointestinal disorders making absorption of oral medications problematic; subject must be able to swallow capsules.",
+        "reasonFuzzy": "Swallowing ability and GI absorption are subjective judgments."
+      },
+      {
+        "id": "NCT04777994-io-tox",
+        "polarity": "exclusion",
+        "sourceText": "If treated with a PD-1/aPD-L1 targeting or other immune-oncology agents in the past, excluded if had prior pneumonitis, prior Grade 3 or higher immune mediated toxicity, hypersensitivity to administered drug or drug related toxicity requiring discontinuation.",
+        "reasonFuzzy": "Past IO-specific toxicity criteria are multifaceted."
+      },
+      {
+        "id": "NCT04777994-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Active autoimmune disease requiring systemic treatment in past 2-years (exceptions for endocrinopathies, vitiligo or atopic conditions).",
+        "reasonFuzzy": "Active autoimmune disease history involves time windows and exceptions not matching typed kinds."
+      },
+      {
+        "id": "NCT04777994-transplant",
+        "polarity": "exclusion",
+        "sourceText": "History of solid organ transplant or allogeneic stem cell transplant.",
+        "reasonFuzzy": "Transplant history is not a typed check."
+      },
+      {
+        "id": "NCT04777994-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "History of other malignancy, with the following exceptions: No known active disease present within >= 3 years before first dose of study treatment and felt to be at low recurrence by investigator.",
+        "reasonFuzzy": "Other malignancy history and investigator recurrence assessment are subjective."
+      },
+      {
+        "id": "NCT04777994-ild",
+        "polarity": "exclusion",
+        "sourceText": "History of interstitial lung disease or pneumonitis.",
+        "reasonFuzzy": "History of interstitial lung disease is not a typed check kind."
+      },
+      {
+        "id": "NCT04777994-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery <= 28 days prior to first dose of study drug",
+        "reasonFuzzy": "Major surgery washout window is not a typed lab check."
+      },
+      {
+        "id": "NCT04777994-covid",
+        "polarity": "exclusion",
+        "sourceText": "Known active severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection per local testing practices.",
+        "reasonFuzzy": "Active viral infection status is not a typed check kind."
+      }
+    ]
+  }
+}

@@ -1,0 +1,1045 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07145255",
+  "briefTitle": "Phase 1/2 Dose Finding, Safety and PK Study in Advanced Refractory Solid Tumors",
+  "parsedAt": "2026-11-12T10:58:17.002Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07145255-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "18 years of age or older at the time of informed consent.",
+      "numberValue": 18,
+      "evidence_quote": "18 years of age or older at the time of informed consent.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07145255-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2.",
+      "numberValue": 2,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07145255-anc",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥ 1500/uL",
+      "numberValue": 1500,
+      "evidence_quote": "Absolute neutrophil count (ANC) ≥ 1500/uL",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07145255-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin (Hgb) ≥ 9 g/dL",
+      "numberValue": 9,
+      "evidence_quote": "Hemoglobin (Hgb) ≥ 9 g/dL",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07145255-platelets",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count ≥ 100,000/uL",
+      "numberValue": 100000,
+      "evidence_quote": "Platelet count ≥ 100,000/uL",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07145255-egfr",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Estimated glomerular filtration rate (eGFR) ≥ 60 mL/min by the CKD-EPI or similar equation or as measured by 24-hour urine collection",
+      "numberValue": 60,
+      "evidence_quote": "Estimated glomerular filtration rate (eGFR) ≥ 60 mL/min by the CKD-EPI or similar equation or as measured by 24-hour urine collection",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07145255-consent",
+      "polarity": "inclusion",
+      "sourceText": "Provide written consent on an informed consent form (ICF), approved by an Institutional Review Board (IRB)/Independent Ethics Committee (IEC), prior to any study-specific evaluation. Patients should have the ability to read and understand the ICF, ask for any clarifications from the study staff, and be able to comply with all planned study procedures.",
+      "reasonFuzzy": "Ability to read, understand, and comply with procedures is subjective."
+    },
+    {
+      "id": "NCT07145255-tumor-type",
+      "polarity": "inclusion",
+      "sourceText": "Have a histologic or cytologic diagnosis of malignant solid tumor for which there are no standard-of-care treatment options known to confer a clinical benefit or for which the patient is ineligible or declines (except for Phase 1b-Cohort A). A. For Phase 1a dose escalation: Patients must have one of the following tumor types: i. mCRPC, breast cancer (TNBC, HR+/HER2-negative or HER2-low, HR-/HER2+), CRC, NSCLC, or PDAC B. For Phase 1b: Patients must have one of the following tumor types: i. Cohort A: Histologic or cytologic diagnosis of mCRPC (with confirmed adenocarcinoma histology) refractory to standard treatment. Patients must have had prior exposure to at least one novel AR-targeted therapy (e.g., abiraterone acetate, enzalutamide, apalutamide, darolutamide). Prior taxane or lutetium Lu 177 vipivotide tetraxetan is acceptable but not required. ii. Cohort B: Histologic or cytologic diagnosis of advanced metastatic NSCLC refractory to standard treatment. iii. Cohort C: Histologic or cytologic diagnosis of advanced metastatic breast cancer (TNBC, HR+/HER2-negative or HER2-low, HR-/HER2+) refractory to standard treatment. iv. Cohort D: Histologic or cytologic diagnosis of advanced metastatic CRC, PDAC refractory to standard treatment. The Sponsor may add or remove specific tumor indications based on emerging, real-time study results.",
+      "reasonFuzzy": "Cohort-specific and multi-tumor disease criteria with various indications cannot be summarized in a single typed check."
+    },
+    {
+      "id": "NCT07145255-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Availability of a tumor tissue sample (formalin-fixed paraffin-embedded [FFPE]) must be confirmed if feasible. Patients without tumor sample may be eligible with medical monitor approval. Tumor biopsies are not required and should not be performed to assess eligibility.",
+      "reasonFuzzy": "Willingness or availability of tissue sample with investigator/monitor discretion is not a typed check."
+    },
+    {
+      "id": "NCT07145255-measurable",
+      "polarity": "inclusion",
+      "sourceText": "For Dose Escalation (Phase 1a), patients may have evaluable disease or measurable disease according to Response Evaluation Criteria in Solid Tumor (RECIST) v1.1. For both Dose Expansion (Phase 1b) and Phase 2, patients must have measurable disease according to RECIST v1.1",
+      "reasonFuzzy": "Measurable disease according to RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07145255-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy ≥ 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07145255-malig",
+      "polarity": "exclusion",
+      "sourceText": "History of another malignancy within 3 years before the first dose of study drug, or any evidence of residual disease from a previously diagnosed malignancy. Allowed exceptions are patients with: 1. Non-melanoma skin cancer considered completely cured; 2. Localized prostate cancer treated with curative intent with no evidence of progression; 3. Low-risk or very low-risk (per standard clinical guidelines) localized prostate cancer under active surveillance without immediate intent to treat; 4. Malignancy that is otherwise considered cured with minimal risk of recurrence.",
+      "reasonFuzzy": "History of prior malignancy with multiple exceptions is complex and not a typed check."
+    },
+    {
+      "id": "NCT07145255-hypersens",
+      "polarity": "exclusion",
+      "sourceText": "Known or suspected sensitivity to any of the ingredients of the investigational product MBRC-201.",
+      "reasonFuzzy": "Hypersensitivity/allergy to study drug ingredients is not a typed check."
+    },
+    {
+      "id": "NCT07145255-infection",
+      "polarity": "exclusion",
+      "sourceText": "Any uncontrolled viral, bacterial, or fungal infection within 2 weeks prior to the first dose of study drug, unless deemed not clinically significant by the investigator (e.g., onychomycosis). Routine antimicrobial prophylaxis is permitted.",
+      "reasonFuzzy": "Uncontrolled infection status and investigator discretion are not typed checks."
+    },
+    {
+      "id": "NCT07145255-hepatitis",
+      "polarity": "exclusion",
+      "sourceText": "Active or symptomatic viral hepatitis, including patients with active hepatitis C infection (positive by polymerase chain reaction or on antiviral therapy for hepatitis C within the last 6 months). Patients who have been treated for hepatitis C infection or who have spontaneously recovered are permitted.",
+      "reasonFuzzy": "Active or symptomatic viral hepatitis criteria are not typed checks."
+    },
+    {
+      "id": "NCT07145255-hiv",
+      "polarity": "exclusion",
+      "sourceText": "Patients with HIV infection with 1 or more of the following: * Acquired immunodeficiency syndrome (AIDs)-defining opportunistic infection within 6 months of the start of screening * A change in antiretroviral therapy within 3 months of the start of screening and viral load > 500 copies/mL * Receiving antiretroviral therapy that may interfere with study drug * CD4 count < 350 at screening",
+      "reasonFuzzy": "Complex HIV infection and CD4/viral load criteria are not typed checks."
+    },
+    {
+      "id": "NCT07145255-thrombo",
+      "polarity": "exclusion",
+      "sourceText": "Thromboembolic events and/or bleeding disorders ≤ 14 days (e.g., venous thromboembolism [VTE] or pulmonary embolism [or PE]) prior to the first dose of study drug",
+      "reasonFuzzy": "Recent thromboembolic events or bleeding disorders are not typed checks."
+    },
+    {
+      "id": "NCT07145255-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Documented history of a cerebral vascular event (stroke or transient ischemic attack), unstable angina, myocardial infarction, or cardiac symptoms (including congestive heart failure) consistent with New York Heart Association Class III-IV within 6 months prior to the first dose of study drug",
+      "reasonFuzzy": "Cardiovascular event history and NYHA class restrictions are not typed checks."
+    },
+    {
+      "id": "NCT07145255-qtc",
+      "polarity": "exclusion",
+      "sourceText": "A baseline QT (time from the beginning of the Q wave to the end of the T wave) interval as corrected by Fridericia's formula (QTcF) > 470 msec or patients with risk factors for Torsades de pointes",
+      "reasonFuzzy": "QTcF interval cutoff and Torsades de pointes risk factors are not typed checks."
+    },
+    {
+      "id": "NCT07145255-ibd",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled Inflammatory Bowel Disease (IBD)",
+      "reasonFuzzy": "Uncontrolled IBD is a subjective medical history criterion."
+    },
+    {
+      "id": "NCT07145255-ild",
+      "polarity": "exclusion",
+      "sourceText": "A history of (non-infectious) ILD/pneumonitis requiring steroid therapy, or active ILD/pneumonitis, or clinically suspected ILD/pneumonitis that cannot be ruled out by imaging at screening",
+      "reasonFuzzy": "ILD/pneumonitis history and imaging-suspected cases are not typed checks."
+    },
+    {
+      "id": "NCT07145255-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled autoimmune disease or syndrome",
+      "reasonFuzzy": "Uncontrolled autoimmune disease is a subjective medical history criterion."
+    },
+    {
+      "id": "NCT07145255-ocular",
+      "polarity": "exclusion",
+      "sourceText": "Active ocular surface disease at screening, including confluent superficial keratitis, cornea epithelial defect, corneal ulcer or stromal opacity or any components of the ophthalmologic history which, in the investigator's opinion, may place the patient at significant risk. Cataracts alone are not an exclusion criterion.",
+      "reasonFuzzy": "Ocular surface disease and investigator opinion are not typed checks."
+    },
+    {
+      "id": "NCT07145255-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Any anticancer therapy within 14 days prior to the first dose of study drug, including: small molecules, immunotherapy, chemotherapy, monoclonal antibody therapy, radiotherapy, or any other agents to treat cancer (anti-hormonal therapy given for advanced prostate cancer or as adjuvant therapy for early stage, HR positive breast cancer is not considered cancer therapy for the purpose of this protocol).",
+      "reasonFuzzy": "Washout windows for prior anticancer therapies with multiple exceptions are not standard typed checks."
+    },
+    {
+      "id": "NCT07145255-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Use of any investigational drug within 14 days prior to the first dose of study drug.",
+      "reasonFuzzy": "Washout window for investigational drugs is not a typed check."
+    },
+    {
+      "id": "NCT07145255-adc",
+      "polarity": "exclusion",
+      "sourceText": "For Phase 1b and Phase 2: prior treatment with an ADC with a camptothecin (CPT) payload, such as Enhertu (trastuzumab deruxtecan), Datroway (datopotamab deruxtecan), or Trodelvy (sacituzumab govitecan). Prior treatment with irinotecan and other non-ADC topoisomerase inhibitors is allowed in all phases of the study.",
+      "reasonFuzzy": "Exclusion of specific ADC payloads and phase-specific restrictions are not simple typed prior_therapy_excluded checks."
+    },
+    {
+      "id": "NCT07145255-meds",
+      "polarity": "exclusion",
+      "sourceText": "Current use of any prohibited concomitant medication(s).",
+      "reasonFuzzy": "Prohibited concomitant medications are not a typed check."
+    },
+    {
+      "id": "NCT07145255-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery within 28 days prior to first dose of study drug.",
+      "reasonFuzzy": "Washout window for major surgery is not a typed check."
+    },
+    {
+      "id": "NCT07145255-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have not recovered from AEs due to prior anticancer therapy (i.e., have residual toxicities > Grade 1) with the exception of alopecia",
+      "reasonFuzzy": "Recovery from prior adverse events is a clinical judgment, not a typed check."
+    },
+    {
+      "id": "NCT07145255-disorder",
+      "polarity": "exclusion",
+      "sourceText": "Any medical, psychiatric, addictive, or other kind of disorder which compromises the ability of the patient to give written informed consent and/or to comply with procedures.",
+      "reasonFuzzy": "Subjective psychiatric or medical disorder criteria are not typed checks."
+    },
+    {
+      "id": "NCT07145255-risk",
+      "polarity": "exclusion",
+      "sourceText": "Condition or situation which, based on Investigator or Sponsor assessment, may put the patient at significant risk, may confound the study results, or may interfere significantly with patient's participation in the study.",
+      "reasonFuzzy": "Investigator or sponsor assessment of risk or confounding is subjective."
+    },
+    {
+      "id": "NCT07145255-general",
+      "polarity": "exclusion",
+      "sourceText": "Other serious underlying medical condition that would impair the patient's ability to receive or tolerate the planned treatment and follow-up",
+      "reasonFuzzy": "General medical condition tolerance is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07145255-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin ≤ 1.5 × ULN [or ≤ 3-times ULN for patients with Gilbert's disease or documented hepatic tumor involvement]",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07145255-ast",
+      "polarity": "inclusion",
+      "sourceText": "ALT and AST ≤ 3 × ULN [or ≤ 5-times ULN for patients with documented hepatic tumor involvement]",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07145255-alt",
+      "polarity": "inclusion",
+      "sourceText": "ALT and AST ≤ 3 × ULN [or ≤ 5-times ULN for patients with documented hepatic tumor involvement]",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07145255-consent",
+      "polarity": "inclusion",
+      "sourceText": "Provide written consent on an informed consent form (ICF), approved by an Institutional Review Board (IRB)/Independent Ethics Committee (IEC), prior to any study-specific evaluation. Patients should have the ability to read and understand the ICF, ask for any clarifications from the study staff, and be able to comply with all planned study procedures.",
+      "reasonFuzzy": "Ability to read, understand, and comply with procedures is subjective and not a typed check."
+    },
+    {
+      "id": "NCT07145255-female-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Female patients must be at least 2 years postmenopausal (defined as 2 years without menses), surgically sterile (at least 6 months prior to dosing; must be documented) or patients of childbearing potential under the following conditions: Must be nonlactating and have a negative serum (preferred) or urine pregnancy test results within 72 hours prior to the first dose of MBRC-201. Must agree not to try to become pregnant during the study and for at least 6 months after the final dose of MBRC-201 Must agree to practice effective contraception (must agree to use 2 forms of contraception, 1 of which must be a barrier method) and willing to continue to use effective contraception for the duration of study participation and for 6 months after the final dose of study drug.",
+      "reasonFuzzy": "Contraception and pregnancy conditions are complex instructions rather than a simple typed check."
+    },
+    {
+      "id": "NCT07145255-male-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Male patients whose partners are of childbearing potential must agree to use effective contraception (must agree to use 2 forms of contraception, 1 of which must be a barrier method) (Section 10.4) for the duration of study participation and for 6 months after the final dose of study drug.",
+      "reasonFuzzy": "Contraception requirements for male patients are not standard typed criteria."
+    },
+    {
+      "id": "NCT07145255-tumor-type",
+      "polarity": "inclusion",
+      "sourceText": "Have a histologic or cytologic diagnosis of malignant solid tumor for which there are no standard-of-care treatment options known to confer a clinical benefit or for which the patient is ineligible or declines (except for Phase 1b-Cohort A). A. For Phase 1a dose escalation: Patients must have one of the following tumor types: i. mCRPC, breast cancer (TNBC, HR+/HER2-negative or HER2-low, HR-/HER2+), CRC, NSCLC, or PDAC B. For Phase 1b: Patients must have one of the following tumor types: i. Cohort A: Histologic or cytologic diagnosis of mCRPC (with confirmed adenocarcinoma histology) refractory to standard treatment. Patients must have had prior exposure to at least one novel AR-targeted therapy (e.g., abiraterone acetate, enzalutamide, apalutamide, darolutamide). Prior taxane or lutetium Lu 177 vipivotide tetraxetan is acceptable but not required. ii. Cohort B: Histologic or cytologic diagnosis of advanced metastatic NSCLC refractory to standard treatment. iii. Cohort C: Histologic or cytologic diagnosis of advanced metastatic breast cancer (TNBC, HR+/HER2-negative or HER2-low, HR-/HER2+) refractory to standard treatment. iv. Cohort D: Histologic or cytologic diagnosis of advanced metastatic CRC, PDAC refractory to standard treatment. The Sponsor may add or remove specific tumor indications based on emerging, real-time study results.",
+      "reasonFuzzy": "Tumor type requirements depend on study phases and cohorts, which cannot be modeled with a single standard stage or histology check."
+    },
+    {
+      "id": "NCT07145255-tissue-sample",
+      "polarity": "inclusion",
+      "sourceText": "Availability of a tumor tissue sample (formalin-fixed paraffin-embedded [FFPE]) must be confirmed if feasible. Patients without tumor sample may be eligible with medical monitor approval. Tumor biopsies are not required and should not be performed to assess eligibility.",
+      "reasonFuzzy": "Tissue sample availability and medical monitor exceptions are not typed criteria."
+    },
+    {
+      "id": "NCT07145255-disease-evaluable",
+      "polarity": "inclusion",
+      "sourceText": "For Dose Escalation (Phase 1a), patients may have evaluable disease or measurable disease according to Response Evaluation Criteria in Solid Tumor (RECIST) v1.1. For both Dose Expansion (Phase 1b) and Phase 2, patients must have measurable disease according to RECIST v1.1",
+      "reasonFuzzy": "Measurable or evaluable disease definitions according to RECIST by study phase are subjective imaging assessments."
+    },
+    {
+      "id": "NCT07145255-life-expectancy",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy ≥ 3 months",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07145255-inr",
+      "polarity": "inclusion",
+      "sourceText": "International normalized ratio (INR) < 1.5 (or ≤ 3.0 if on therapeutic anticoagulation)",
+      "reasonFuzzy": "INR is not among the allowed typed kinds."
+    },
+    {
+      "id": "NCT07145255-malignancy-history",
+      "polarity": "exclusion",
+      "sourceText": "History of another malignancy within 3 years before the first dose of study drug, or any evidence of residual disease from a previously diagnosed malignancy. Allowed exceptions are patients with: 1. Non-melanoma skin cancer considered completely cured; 2. Localized prostate cancer treated with curative intent with no evidence of progression; 3. Low-risk or very low-risk (per standard clinical guidelines) localized prostate cancer under active surveillance without immediate intent to treat; 4. Malignancy that is otherwise considered cured with minimal risk of recurrence.",
+      "reasonFuzzy": "Prior malignancy exclusions with multiple conditional exceptions are too complex for a simple typed check."
+    },
+    {
+      "id": "NCT07145255-product-sensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Known or suspected sensitivity to any of the ingredients of the investigational product MBRC-201.",
+      "reasonFuzzy": "Drug hypersensitivity is not a standard typed check."
+    },
+    {
+      "id": "NCT07145255-active-cerebral",
+      "polarity": "exclusion",
+      "sourceText": "Active cerebral/meningeal disease related to the underlying malignancy. Patients with a history of cerebral/meningeal disease related to the underlying malignancy are allowed if prior central nervous system disease has been treated and the patient is clinically stable. (defined as not having received steroid treatment for symptoms related to cerebral/meningeal disease for at least 2 weeks prior to the first dose of study drug and with no ongoing related AEs).",
+      "reasonFuzzy": "Active cerebral/meningeal disease criteria involving steroid use and clinical stability are too detailed for simple brain_mets checks."
+    },
+    {
+      "id": "NCT07145255-infection",
+      "polarity": "exclusion",
+      "sourceText": "Any uncontrolled viral, bacterial, or fungal infection within 2 weeks prior to the first dose of study drug, unless deemed not clinically significant by the investigator (e.g., onychomycosis). Routine antimicrobial prophylaxis is permitted.",
+      "reasonFuzzy": "Uncontrolled infection with investigator discretion is subjective."
+    },
+    {
+      "id": "NCT07145255-hepatitis",
+      "polarity": "exclusion",
+      "sourceText": "Active or symptomatic viral hepatitis, including patients with active hepatitis C infection (positive by polymerase chain reaction or on antiviral therapy for hepatitis C within the last 6 months). Patients who have been treated for hepatitis C infection or who have spontaneously recovered are permitted.",
+      "reasonFuzzy": "Active or symptomatic viral hepatitis rules are not typed checks."
+    },
+    {
+      "id": "NCT07145255-hiv",
+      "polarity": "exclusion",
+      "sourceText": "Patients with HIV infection with 1 or more of the following: * Acquired immunodeficiency syndrome (AIDs)-defining opportunistic infection within 6 months of the start of screening * A change in antiretroviral therapy within 3 months of the start of screening and viral load > 500 copies/mL * Receiving antiretroviral therapy that may interfere with study drug * CD4 count < 350 at screening",
+      "reasonFuzzy": "HIV infection criteria with CD4 counts and viral loads are not typed checks."
+    },
+    {
+      "id": "NCT07145255-thromboembolic",
+      "polarity": "exclusion",
+      "sourceText": "Thromboembolic events and/or bleeding disorders ≤ 14 days (e.g., venous thromboembolism [VTE] or pulmonary embolism [or PE]) prior to the first dose of study drug",
+      "reasonFuzzy": "Thromboembolic events and bleeding disorders are not typed checks."
+    },
+    {
+      "id": "NCT07145255-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Documented history of a cerebral vascular event (stroke or transient ischemic attack), unstable angina, myocardial infarction, or cardiac symptoms (including congestive heart failure) consistent with New York Heart Association Class III-IV within 6 months prior to the first dose of study drug",
+      "reasonFuzzy": "Cardiovascular event history is not a typed check."
+    },
+    {
+      "id": "NCT07145255-qt",
+      "polarity": "exclusion",
+      "sourceText": "A baseline QT (time from the beginning of the Q wave to the end of the T wave) interval as corrected by Fridericia's formula (QTcF) > 470 msec or patients with risk factors for Torsades de pointes",
+      "reasonFuzzy": "QT interval is not a typed check."
+    },
+    {
+      "id": "NCT07145255-ibd",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled Inflammatory Bowel Disease (IBD)",
+      "reasonFuzzy": "Inflammatory Bowel Disease is not a typed check."
+    },
+    {
+      "id": "NCT07145255-ild",
+      "polarity": "exclusion",
+      "sourceText": "A history of (non-infectious) ILD/pneumonitis requiring steroid therapy, or active ILD/pneumonitis, or clinically suspected ILD/pneumonitis that cannot be ruled out by imaging at screening",
+      "reasonFuzzy": "ILD/pneumonitis history is not a typed check."
+    },
+    {
+      "id": "NCT07145255-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled autoimmune disease or syndrome",
+      "reasonFuzzy": "Autoimmune disease conditions are subjective and not typed checks."
+    },
+    {
+      "id": "NCT07145255-ocular",
+      "polarity": "exclusion",
+      "sourceText": "Active ocular surface disease at screening, including confluent superficial keratitis, cornea epithelial defect, corneal ulcer or stromal opacity or any components of the ophthalmologic history which, in the investigator's opinion, may place the patient at significant risk. Cataracts alone are not an exclusion criterion.",
+      "reasonFuzzy": "Ocular surface disease and investigator opinion are subjective."
+    },
+    {
+      "id": "NCT07145255-anticancer",
+      "polarity": "exclusion",
+      "sourceText": "Any anticancer therapy within 14 days prior to the first dose of study drug, including: small molecules, immunotherapy, chemotherapy, monoclonal antibody therapy, radiotherapy, or any other agents to treat cancer (anti-hormonal therapy given for advanced prostate cancer or as adjuvant therapy for early stage, HR positive breast cancer is not considered cancer therapy for the purpose of this protocol).",
+      "reasonFuzzy": "Washout windows for general anticancer therapy are not typed prior_therapy_excluded rules."
+    },
+    {
+      "id": "NCT07145255-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Use of any investigational drug within 14 days prior to the first dose of study drug.",
+      "reasonFuzzy": "Investigational drug washout is not a typed check."
+    },
+    {
+      "id": "NCT07145255-adc",
+      "polarity": "exclusion",
+      "sourceText": "For Phase 1b and Phase 2: prior treatment with an ADC with a camptothecin (CPT) payload, such as Enhertu (trastuzumab deruxtecan), Datroway (datopotamab deruxtecan), or Trodelvy (sacituzumab govitecan). Prior treatment with irinotecan and other non-ADC topoisomerase inhibitors is allowed in all phases of the study.",
+      "reasonFuzzy": "Prior specific ADC payload exclusions are too complex for a standard prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT07145255-prohibited-meds",
+      "polarity": "exclusion",
+      "sourceText": "Current use of any prohibited concomitant medication(s).",
+      "reasonFuzzy": "Prohibited concomitant medications are not typed checks."
+    },
+    {
+      "id": "NCT07145255-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery within 28 days prior to first dose of study drug.",
+      "reasonFuzzy": "Major surgery washout is not a typed check."
+    },
+    {
+      "id": "NCT07145255-recovery",
+      "polarity": "exclusion",
+      "sourceText": "Patients who have not recovered from AEs due to prior anticancer therapy (i.e., have residual toxicities > Grade 1) with the exception of alopecia",
+      "reasonFuzzy": "Recovery from prior adverse events is not a typed check."
+    },
+    {
+      "id": "NCT07145255-disorder",
+      "polarity": "exclusion",
+      "sourceText": "Any medical, psychiatric, addictive, or other kind of disorder which compromises the ability of the patient to give written informed consent and/or to comply with procedures.",
+      "reasonFuzzy": "Medical or psychiatric disorders compromising compliance are subjective."
+    },
+    {
+      "id": "NCT07145255-investigator-assessment",
+      "polarity": "exclusion",
+      "sourceText": "Condition or situation which, based on Investigator or Sponsor assessment, may put the patient at significant risk, may confound the study results, or may interfere significantly with patient's participation in the study.",
+      "reasonFuzzy": "Investigator discretion is subjective."
+    },
+    {
+      "id": "NCT07145255-other-medical",
+      "polarity": "exclusion",
+      "sourceText": "Other serious underlying medical condition that would impair the patient's ability to receive or tolerate the planned treatment and follow-up",
+      "reasonFuzzy": "Serious underlying medical conditions are subjective."
+    },
+    {
+      "id": "NCT07145255-bili",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin ≤ 1.5 × ULN [or ≤ 3-times ULN for patients with Gilbert's disease or documented hepatic tumor involvement]",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07145255-ast",
+      "polarity": "inclusion",
+      "sourceText": "ALT and AST ≤ 3 × ULN [or ≤ 5-times ULN for patients with documented hepatic tumor involvement]",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07145255-alt",
+      "polarity": "inclusion",
+      "sourceText": "ALT and AST ≤ 3 × ULN [or ≤ 5-times ULN for patients with documented hepatic tumor involvement]",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07145255-brain",
+      "polarity": "inclusion",
+      "sourceText": "Active cerebral/meningeal disease related to the underlying malignancy. Patients with a history of cerebral/meningeal disease related to the underlying malignancy are allowed if prior central nervous system disease has been treated and the patient is clinically stable.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07145255-brain",
+      "polarity": "exclusion",
+      "sourceText": "Patients with a history of cerebral/meningeal disease related to the underlying malignancy are allowed if prior central nervous system disease has been treated and the patient is clinically stable. (defined as not having received steroid treatment for symptoms related to cerebral/meningeal disease for at least 2 weeks prior to the first dose of study drug and with no ongoing related AEs).",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 7,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Total bilirubin ≤ 1.5 × ULN [or ≤ 3-times ULN for patients with Gilbert's disease or documented hepatic tumor involvement]"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "ALT and AST ≤ 3 × ULN [or ≤ 5-times ULN for patients with documented hepatic tumor involvement]"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "ALT and AST ≤ 3 × ULN [or ≤ 5-times ULN for patients with documented hepatic tumor involvement]"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 7,
+      "unquoted": 3,
+      "unquotedItems": [
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Total bilirubin ≤ 1.5 × ULN [or ≤ 3-times ULN for patients with Gilbert's disease or documented hepatic tumor involvement]"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "ALT and AST ≤ 3 × ULN [or ≤ 5-times ULN for patients with documented hepatic tumor involvement]"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "ALT and AST ≤ 3 × ULN [or ≤ 5-times ULN for patients with documented hepatic tumor involvement]"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 6,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 6,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 9
+    }
+  },
+  "runA": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 26,
+    "attempts": 1,
+    "ms": 15671
+  },
+  "runB": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 30,
+    "attempts": 1,
+    "ms": 15426
+  },
+  "ms": 39185,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07145255",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07145255-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 years of age or older at the time of informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07145255-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07145255-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥ 1500/uL",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT07145255-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin (Hgb) ≥ 9 g/dL",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT07145255-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count ≥ 100,000/uL",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT07145255-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Estimated glomerular filtration rate (eGFR) ≥ 60 mL/min by the CKD-EPI or similar equation or as measured by 24-hour urine collection",
+        "numberValue": 60
+      },
+      {
+        "id": "NCT07145255-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 × ULN [or ≤ 3-times ULN for patients with Gilbert's disease or documented hepatic tumor involvement]",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "1.5 * ULN"
+      },
+      {
+        "id": "NCT07145255-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "ALT and AST ≤ 3 × ULN [or ≤ 5-times ULN for patients with documented hepatic tumor involvement]",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT07145255-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "ALT and AST ≤ 3 × ULN [or ≤ 5-times ULN for patients with documented hepatic tumor involvement]",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT07145255-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Active cerebral/meningeal disease related to the underlying malignancy. Patients with a history of cerebral/meningeal disease related to the underlying malignancy are allowed if prior central nervous system disease has been treated and the patient is clinically stable.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07145255-consent",
+        "polarity": "inclusion",
+        "sourceText": "Provide written consent on an informed consent form (ICF), approved by an Institutional Review Board (IRB)/Independent Ethics Committee (IEC), prior to any study-specific evaluation. Patients should have the ability to read and understand the ICF, ask for any clarifications from the study staff, and be able to comply with all planned study procedures.",
+        "reasonFuzzy": "Ability to read, understand, and comply with procedures is subjective."
+      },
+      {
+        "id": "NCT07145255-tumor-type",
+        "polarity": "inclusion",
+        "sourceText": "Have a histologic or cytologic diagnosis of malignant solid tumor for which there are no standard-of-care treatment options known to confer a clinical benefit or for which the patient is ineligible or declines (except for Phase 1b-Cohort A). A. For Phase 1a dose escalation: Patients must have one of the following tumor types: i. mCRPC, breast cancer (TNBC, HR+/HER2-negative or HER2-low, HR-/HER2+), CRC, NSCLC, or PDAC B. For Phase 1b: Patients must have one of the following tumor types: i. Cohort A: Histologic or cytologic diagnosis of mCRPC (with confirmed adenocarcinoma histology) refractory to standard treatment. Patients must have had prior exposure to at least one novel AR-targeted therapy (e.g., abiraterone acetate, enzalutamide, apalutamide, darolutamide). Prior taxane or lutetium Lu 177 vipivotide tetraxetan is acceptable but not required. ii. Cohort B: Histologic or cytologic diagnosis of advanced metastatic NSCLC refractory to standard treatment. iii. Cohort C: Histologic or cytologic diagnosis of advanced metastatic breast cancer (TNBC, HR+/HER2-negative or HER2-low, HR-/HER2+) refractory to standard treatment. iv. Cohort D: Histologic or cytologic diagnosis of advanced metastatic CRC, PDAC refractory to standard treatment. The Sponsor may add or remove specific tumor indications based on emerging, real-time study results.",
+        "reasonFuzzy": "Cohort-specific and multi-tumor disease criteria with various indications cannot be summarized in a single typed check."
+      },
+      {
+        "id": "NCT07145255-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Availability of a tumor tissue sample (formalin-fixed paraffin-embedded [FFPE]) must be confirmed if feasible. Patients without tumor sample may be eligible with medical monitor approval. Tumor biopsies are not required and should not be performed to assess eligibility.",
+        "reasonFuzzy": "Willingness or availability of tissue sample with investigator/monitor discretion is not a typed check."
+      },
+      {
+        "id": "NCT07145255-measurable",
+        "polarity": "inclusion",
+        "sourceText": "For Dose Escalation (Phase 1a), patients may have evaluable disease or measurable disease according to Response Evaluation Criteria in Solid Tumor (RECIST) v1.1. For both Dose Expansion (Phase 1b) and Phase 2, patients must have measurable disease according to RECIST v1.1",
+        "reasonFuzzy": "Measurable disease according to RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07145255-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy ≥ 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT07145255-malig",
+        "polarity": "exclusion",
+        "sourceText": "History of another malignancy within 3 years before the first dose of study drug, or any evidence of residual disease from a previously diagnosed malignancy. Allowed exceptions are patients with: 1. Non-melanoma skin cancer considered completely cured; 2. Localized prostate cancer treated with curative intent with no evidence of progression; 3. Low-risk or very low-risk (per standard clinical guidelines) localized prostate cancer under active surveillance without immediate intent to treat; 4. Malignancy that is otherwise considered cured with minimal risk of recurrence.",
+        "reasonFuzzy": "History of prior malignancy with multiple exceptions is complex and not a typed check."
+      },
+      {
+        "id": "NCT07145255-hypersens",
+        "polarity": "exclusion",
+        "sourceText": "Known or suspected sensitivity to any of the ingredients of the investigational product MBRC-201.",
+        "reasonFuzzy": "Hypersensitivity/allergy to study drug ingredients is not a typed check."
+      },
+      {
+        "id": "NCT07145255-infection",
+        "polarity": "exclusion",
+        "sourceText": "Any uncontrolled viral, bacterial, or fungal infection within 2 weeks prior to the first dose of study drug, unless deemed not clinically significant by the investigator (e.g., onychomycosis). Routine antimicrobial prophylaxis is permitted.",
+        "reasonFuzzy": "Uncontrolled infection status and investigator discretion are not typed checks."
+      },
+      {
+        "id": "NCT07145255-hepatitis",
+        "polarity": "exclusion",
+        "sourceText": "Active or symptomatic viral hepatitis, including patients with active hepatitis C infection (positive by polymerase chain reaction or on antiviral therapy for hepatitis C within the last 6 months). Patients who have been treated for hepatitis C infection or who have spontaneously recovered are permitted.",
+        "reasonFuzzy": "Active or symptomatic viral hepatitis criteria are not typed checks."
+      },
+      {
+        "id": "NCT07145255-hiv",
+        "polarity": "exclusion",
+        "sourceText": "Patients with HIV infection with 1 or more of the following: * Acquired immunodeficiency syndrome (AIDs)-defining opportunistic infection within 6 months of the start of screening * A change in antiretroviral therapy within 3 months of the start of screening and viral load > 500 copies/mL * Receiving antiretroviral therapy that may interfere with study drug * CD4 count < 350 at screening",
+        "reasonFuzzy": "Complex HIV infection and CD4/viral load criteria are not typed checks."
+      },
+      {
+        "id": "NCT07145255-thrombo",
+        "polarity": "exclusion",
+        "sourceText": "Thromboembolic events and/or bleeding disorders ≤ 14 days (e.g., venous thromboembolism [VTE] or pulmonary embolism [or PE]) prior to the first dose of study drug",
+        "reasonFuzzy": "Recent thromboembolic events or bleeding disorders are not typed checks."
+      },
+      {
+        "id": "NCT07145255-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Documented history of a cerebral vascular event (stroke or transient ischemic attack), unstable angina, myocardial infarction, or cardiac symptoms (including congestive heart failure) consistent with New York Heart Association Class III-IV within 6 months prior to the first dose of study drug",
+        "reasonFuzzy": "Cardiovascular event history and NYHA class restrictions are not typed checks."
+      },
+      {
+        "id": "NCT07145255-qtc",
+        "polarity": "exclusion",
+        "sourceText": "A baseline QT (time from the beginning of the Q wave to the end of the T wave) interval as corrected by Fridericia's formula (QTcF) > 470 msec or patients with risk factors for Torsades de pointes",
+        "reasonFuzzy": "QTcF interval cutoff and Torsades de pointes risk factors are not typed checks."
+      },
+      {
+        "id": "NCT07145255-ibd",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled Inflammatory Bowel Disease (IBD)",
+        "reasonFuzzy": "Uncontrolled IBD is a subjective medical history criterion."
+      },
+      {
+        "id": "NCT07145255-ild",
+        "polarity": "exclusion",
+        "sourceText": "A history of (non-infectious) ILD/pneumonitis requiring steroid therapy, or active ILD/pneumonitis, or clinically suspected ILD/pneumonitis that cannot be ruled out by imaging at screening",
+        "reasonFuzzy": "ILD/pneumonitis history and imaging-suspected cases are not typed checks."
+      },
+      {
+        "id": "NCT07145255-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled autoimmune disease or syndrome",
+        "reasonFuzzy": "Uncontrolled autoimmune disease is a subjective medical history criterion."
+      },
+      {
+        "id": "NCT07145255-ocular",
+        "polarity": "exclusion",
+        "sourceText": "Active ocular surface disease at screening, including confluent superficial keratitis, cornea epithelial defect, corneal ulcer or stromal opacity or any components of the ophthalmologic history which, in the investigator's opinion, may place the patient at significant risk. Cataracts alone are not an exclusion criterion.",
+        "reasonFuzzy": "Ocular surface disease and investigator opinion are not typed checks."
+      },
+      {
+        "id": "NCT07145255-prior-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Any anticancer therapy within 14 days prior to the first dose of study drug, including: small molecules, immunotherapy, chemotherapy, monoclonal antibody therapy, radiotherapy, or any other agents to treat cancer (anti-hormonal therapy given for advanced prostate cancer or as adjuvant therapy for early stage, HR positive breast cancer is not considered cancer therapy for the purpose of this protocol).",
+        "reasonFuzzy": "Washout windows for prior anticancer therapies with multiple exceptions are not standard typed checks."
+      },
+      {
+        "id": "NCT07145255-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Use of any investigational drug within 14 days prior to the first dose of study drug.",
+        "reasonFuzzy": "Washout window for investigational drugs is not a typed check."
+      },
+      {
+        "id": "NCT07145255-adc",
+        "polarity": "exclusion",
+        "sourceText": "For Phase 1b and Phase 2: prior treatment with an ADC with a camptothecin (CPT) payload, such as Enhertu (trastuzumab deruxtecan), Datroway (datopotamab deruxtecan), or Trodelvy (sacituzumab govitecan). Prior treatment with irinotecan and other non-ADC topoisomerase inhibitors is allowed in all phases of the study.",
+        "reasonFuzzy": "Exclusion of specific ADC payloads and phase-specific restrictions are not simple typed prior_therapy_excluded checks."
+      },
+      {
+        "id": "NCT07145255-meds",
+        "polarity": "exclusion",
+        "sourceText": "Current use of any prohibited concomitant medication(s).",
+        "reasonFuzzy": "Prohibited concomitant medications are not a typed check."
+      },
+      {
+        "id": "NCT07145255-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery within 28 days prior to first dose of study drug.",
+        "reasonFuzzy": "Washout window for major surgery is not a typed check."
+      },
+      {
+        "id": "NCT07145255-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have not recovered from AEs due to prior anticancer therapy (i.e., have residual toxicities > Grade 1) with the exception of alopecia",
+        "reasonFuzzy": "Recovery from prior adverse events is a clinical judgment, not a typed check."
+      },
+      {
+        "id": "NCT07145255-disorder",
+        "polarity": "exclusion",
+        "sourceText": "Any medical, psychiatric, addictive, or other kind of disorder which compromises the ability of the patient to give written informed consent and/or to comply with procedures.",
+        "reasonFuzzy": "Subjective psychiatric or medical disorder criteria are not typed checks."
+      },
+      {
+        "id": "NCT07145255-risk",
+        "polarity": "exclusion",
+        "sourceText": "Condition or situation which, based on Investigator or Sponsor assessment, may put the patient at significant risk, may confound the study results, or may interfere significantly with patient's participation in the study.",
+        "reasonFuzzy": "Investigator or sponsor assessment of risk or confounding is subjective."
+      },
+      {
+        "id": "NCT07145255-general",
+        "polarity": "exclusion",
+        "sourceText": "Other serious underlying medical condition that would impair the patient's ability to receive or tolerate the planned treatment and follow-up",
+        "reasonFuzzy": "General medical condition tolerance is a subjective clinical judgment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07145255",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07145255-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 years of age or older at the time of informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07145255-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status ≤ 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07145255-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥ 1500/uL",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT07145255-hb",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin (Hgb) ≥ 9 g/dL",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT07145255-plt",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count ≥ 100,000/uL",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT07145255-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Estimated glomerular filtration rate (eGFR) ≥ 60 mL/min by the CKD-EPI or similar equation or as measured by 24-hour urine collection",
+        "numberValue": 60
+      },
+      {
+        "id": "NCT07145255-bili",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 × ULN [or ≤ 3-times ULN for patients with Gilbert's disease or documented hepatic tumor involvement]",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "1.5 * ULN (or <= 3-times ULN for patients with Gilbert's disease or documented hepatic tumor involvement)"
+      },
+      {
+        "id": "NCT07145255-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "ALT and AST ≤ 3 × ULN [or ≤ 5-times ULN for patients with documented hepatic tumor involvement]",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT07145255-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "ALT and AST ≤ 3 × ULN [or ≤ 5-times ULN for patients with documented hepatic tumor involvement]",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT07145255-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Patients with a history of cerebral/meningeal disease related to the underlying malignancy are allowed if prior central nervous system disease has been treated and the patient is clinically stable. (defined as not having received steroid treatment for symptoms related to cerebral/meningeal disease for at least 2 weeks prior to the first dose of study drug and with no ongoing related AEs).",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07145255-consent",
+        "polarity": "inclusion",
+        "sourceText": "Provide written consent on an informed consent form (ICF), approved by an Institutional Review Board (IRB)/Independent Ethics Committee (IEC), prior to any study-specific evaluation. Patients should have the ability to read and understand the ICF, ask for any clarifications from the study staff, and be able to comply with all planned study procedures.",
+        "reasonFuzzy": "Ability to read, understand, and comply with procedures is subjective and not a typed check."
+      },
+      {
+        "id": "NCT07145255-female-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Female patients must be at least 2 years postmenopausal (defined as 2 years without menses), surgically sterile (at least 6 months prior to dosing; must be documented) or patients of childbearing potential under the following conditions: Must be nonlactating and have a negative serum (preferred) or urine pregnancy test results within 72 hours prior to the first dose of MBRC-201. Must agree not to try to become pregnant during the study and for at least 6 months after the final dose of MBRC-201 Must agree to practice effective contraception (must agree to use 2 forms of contraception, 1 of which must be a barrier method) and willing to continue to use effective contraception for the duration of study participation and for 6 months after the final dose of study drug.",
+        "reasonFuzzy": "Contraception and pregnancy conditions are complex instructions rather than a simple typed check."
+      },
+      {
+        "id": "NCT07145255-male-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Male patients whose partners are of childbearing potential must agree to use effective contraception (must agree to use 2 forms of contraception, 1 of which must be a barrier method) (Section 10.4) for the duration of study participation and for 6 months after the final dose of study drug.",
+        "reasonFuzzy": "Contraception requirements for male patients are not standard typed criteria."
+      },
+      {
+        "id": "NCT07145255-tumor-type",
+        "polarity": "inclusion",
+        "sourceText": "Have a histologic or cytologic diagnosis of malignant solid tumor for which there are no standard-of-care treatment options known to confer a clinical benefit or for which the patient is ineligible or declines (except for Phase 1b-Cohort A). A. For Phase 1a dose escalation: Patients must have one of the following tumor types: i. mCRPC, breast cancer (TNBC, HR+/HER2-negative or HER2-low, HR-/HER2+), CRC, NSCLC, or PDAC B. For Phase 1b: Patients must have one of the following tumor types: i. Cohort A: Histologic or cytologic diagnosis of mCRPC (with confirmed adenocarcinoma histology) refractory to standard treatment. Patients must have had prior exposure to at least one novel AR-targeted therapy (e.g., abiraterone acetate, enzalutamide, apalutamide, darolutamide). Prior taxane or lutetium Lu 177 vipivotide tetraxetan is acceptable but not required. ii. Cohort B: Histologic or cytologic diagnosis of advanced metastatic NSCLC refractory to standard treatment. iii. Cohort C: Histologic or cytologic diagnosis of advanced metastatic breast cancer (TNBC, HR+/HER2-negative or HER2-low, HR-/HER2+) refractory to standard treatment. iv. Cohort D: Histologic or cytologic diagnosis of advanced metastatic CRC, PDAC refractory to standard treatment. The Sponsor may add or remove specific tumor indications based on emerging, real-time study results.",
+        "reasonFuzzy": "Tumor type requirements depend on study phases and cohorts, which cannot be modeled with a single standard stage or histology check."
+      },
+      {
+        "id": "NCT07145255-tissue-sample",
+        "polarity": "inclusion",
+        "sourceText": "Availability of a tumor tissue sample (formalin-fixed paraffin-embedded [FFPE]) must be confirmed if feasible. Patients without tumor sample may be eligible with medical monitor approval. Tumor biopsies are not required and should not be performed to assess eligibility.",
+        "reasonFuzzy": "Tissue sample availability and medical monitor exceptions are not typed criteria."
+      },
+      {
+        "id": "NCT07145255-disease-evaluable",
+        "polarity": "inclusion",
+        "sourceText": "For Dose Escalation (Phase 1a), patients may have evaluable disease or measurable disease according to Response Evaluation Criteria in Solid Tumor (RECIST) v1.1. For both Dose Expansion (Phase 1b) and Phase 2, patients must have measurable disease according to RECIST v1.1",
+        "reasonFuzzy": "Measurable or evaluable disease definitions according to RECIST by study phase are subjective imaging assessments."
+      },
+      {
+        "id": "NCT07145255-life-expectancy",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy ≥ 3 months",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT07145255-inr",
+        "polarity": "inclusion",
+        "sourceText": "International normalized ratio (INR) < 1.5 (or ≤ 3.0 if on therapeutic anticoagulation)",
+        "reasonFuzzy": "INR is not among the allowed typed kinds."
+      },
+      {
+        "id": "NCT07145255-malignancy-history",
+        "polarity": "exclusion",
+        "sourceText": "History of another malignancy within 3 years before the first dose of study drug, or any evidence of residual disease from a previously diagnosed malignancy. Allowed exceptions are patients with: 1. Non-melanoma skin cancer considered completely cured; 2. Localized prostate cancer treated with curative intent with no evidence of progression; 3. Low-risk or very low-risk (per standard clinical guidelines) localized prostate cancer under active surveillance without immediate intent to treat; 4. Malignancy that is otherwise considered cured with minimal risk of recurrence.",
+        "reasonFuzzy": "Prior malignancy exclusions with multiple conditional exceptions are too complex for a simple typed check."
+      },
+      {
+        "id": "NCT07145255-product-sensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Known or suspected sensitivity to any of the ingredients of the investigational product MBRC-201.",
+        "reasonFuzzy": "Drug hypersensitivity is not a standard typed check."
+      },
+      {
+        "id": "NCT07145255-active-cerebral",
+        "polarity": "exclusion",
+        "sourceText": "Active cerebral/meningeal disease related to the underlying malignancy. Patients with a history of cerebral/meningeal disease related to the underlying malignancy are allowed if prior central nervous system disease has been treated and the patient is clinically stable. (defined as not having received steroid treatment for symptoms related to cerebral/meningeal disease for at least 2 weeks prior to the first dose of study drug and with no ongoing related AEs).",
+        "reasonFuzzy": "Active cerebral/meningeal disease criteria involving steroid use and clinical stability are too detailed for simple brain_mets checks."
+      },
+      {
+        "id": "NCT07145255-infection",
+        "polarity": "exclusion",
+        "sourceText": "Any uncontrolled viral, bacterial, or fungal infection within 2 weeks prior to the first dose of study drug, unless deemed not clinically significant by the investigator (e.g., onychomycosis). Routine antimicrobial prophylaxis is permitted.",
+        "reasonFuzzy": "Uncontrolled infection with investigator discretion is subjective."
+      },
+      {
+        "id": "NCT07145255-hepatitis",
+        "polarity": "exclusion",
+        "sourceText": "Active or symptomatic viral hepatitis, including patients with active hepatitis C infection (positive by polymerase chain reaction or on antiviral therapy for hepatitis C within the last 6 months). Patients who have been treated for hepatitis C infection or who have spontaneously recovered are permitted.",
+        "reasonFuzzy": "Active or symptomatic viral hepatitis rules are not typed checks."
+      },
+      {
+        "id": "NCT07145255-hiv",
+        "polarity": "exclusion",
+        "sourceText": "Patients with HIV infection with 1 or more of the following: * Acquired immunodeficiency syndrome (AIDs)-defining opportunistic infection within 6 months of the start of screening * A change in antiretroviral therapy within 3 months of the start of screening and viral load > 500 copies/mL * Receiving antiretroviral therapy that may interfere with study drug * CD4 count < 350 at screening",
+        "reasonFuzzy": "HIV infection criteria with CD4 counts and viral loads are not typed checks."
+      },
+      {
+        "id": "NCT07145255-thromboembolic",
+        "polarity": "exclusion",
+        "sourceText": "Thromboembolic events and/or bleeding disorders ≤ 14 days (e.g., venous thromboembolism [VTE] or pulmonary embolism [or PE]) prior to the first dose of study drug",
+        "reasonFuzzy": "Thromboembolic events and bleeding disorders are not typed checks."
+      },
+      {
+        "id": "NCT07145255-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Documented history of a cerebral vascular event (stroke or transient ischemic attack), unstable angina, myocardial infarction, or cardiac symptoms (including congestive heart failure) consistent with New York Heart Association Class III-IV within 6 months prior to the first dose of study drug",
+        "reasonFuzzy": "Cardiovascular event history is not a typed check."
+      },
+      {
+        "id": "NCT07145255-qt",
+        "polarity": "exclusion",
+        "sourceText": "A baseline QT (time from the beginning of the Q wave to the end of the T wave) interval as corrected by Fridericia's formula (QTcF) > 470 msec or patients with risk factors for Torsades de pointes",
+        "reasonFuzzy": "QT interval is not a typed check."
+      },
+      {
+        "id": "NCT07145255-ibd",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled Inflammatory Bowel Disease (IBD)",
+        "reasonFuzzy": "Inflammatory Bowel Disease is not a typed check."
+      },
+      {
+        "id": "NCT07145255-ild",
+        "polarity": "exclusion",
+        "sourceText": "A history of (non-infectious) ILD/pneumonitis requiring steroid therapy, or active ILD/pneumonitis, or clinically suspected ILD/pneumonitis that cannot be ruled out by imaging at screening",
+        "reasonFuzzy": "ILD/pneumonitis history is not a typed check."
+      },
+      {
+        "id": "NCT07145255-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled autoimmune disease or syndrome",
+        "reasonFuzzy": "Autoimmune disease conditions are subjective and not typed checks."
+      },
+      {
+        "id": "NCT07145255-ocular",
+        "polarity": "exclusion",
+        "sourceText": "Active ocular surface disease at screening, including confluent superficial keratitis, cornea epithelial defect, corneal ulcer or stromal opacity or any components of the ophthalmologic history which, in the investigator's opinion, may place the patient at significant risk. Cataracts alone are not an exclusion criterion.",
+        "reasonFuzzy": "Ocular surface disease and investigator opinion are subjective."
+      },
+      {
+        "id": "NCT07145255-anticancer",
+        "polarity": "exclusion",
+        "sourceText": "Any anticancer therapy within 14 days prior to the first dose of study drug, including: small molecules, immunotherapy, chemotherapy, monoclonal antibody therapy, radiotherapy, or any other agents to treat cancer (anti-hormonal therapy given for advanced prostate cancer or as adjuvant therapy for early stage, HR positive breast cancer is not considered cancer therapy for the purpose of this protocol).",
+        "reasonFuzzy": "Washout windows for general anticancer therapy are not typed prior_therapy_excluded rules."
+      },
+      {
+        "id": "NCT07145255-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Use of any investigational drug within 14 days prior to the first dose of study drug.",
+        "reasonFuzzy": "Investigational drug washout is not a typed check."
+      },
+      {
+        "id": "NCT07145255-adc",
+        "polarity": "exclusion",
+        "sourceText": "For Phase 1b and Phase 2: prior treatment with an ADC with a camptothecin (CPT) payload, such as Enhertu (trastuzumab deruxtecan), Datroway (datopotamab deruxtecan), or Trodelvy (sacituzumab govitecan). Prior treatment with irinotecan and other non-ADC topoisomerase inhibitors is allowed in all phases of the study.",
+        "reasonFuzzy": "Prior specific ADC payload exclusions are too complex for a standard prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT07145255-prohibited-meds",
+        "polarity": "exclusion",
+        "sourceText": "Current use of any prohibited concomitant medication(s).",
+        "reasonFuzzy": "Prohibited concomitant medications are not typed checks."
+      },
+      {
+        "id": "NCT07145255-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery within 28 days prior to first dose of study drug.",
+        "reasonFuzzy": "Major surgery washout is not a typed check."
+      },
+      {
+        "id": "NCT07145255-recovery",
+        "polarity": "exclusion",
+        "sourceText": "Patients who have not recovered from AEs due to prior anticancer therapy (i.e., have residual toxicities > Grade 1) with the exception of alopecia",
+        "reasonFuzzy": "Recovery from prior adverse events is not a typed check."
+      },
+      {
+        "id": "NCT07145255-disorder",
+        "polarity": "exclusion",
+        "sourceText": "Any medical, psychiatric, addictive, or other kind of disorder which compromises the ability of the patient to give written informed consent and/or to comply with procedures.",
+        "reasonFuzzy": "Medical or psychiatric disorders compromising compliance are subjective."
+      },
+      {
+        "id": "NCT07145255-investigator-assessment",
+        "polarity": "exclusion",
+        "sourceText": "Condition or situation which, based on Investigator or Sponsor assessment, may put the patient at significant risk, may confound the study results, or may interfere significantly with patient's participation in the study.",
+        "reasonFuzzy": "Investigator discretion is subjective."
+      },
+      {
+        "id": "NCT07145255-other-medical",
+        "polarity": "exclusion",
+        "sourceText": "Other serious underlying medical condition that would impair the patient's ability to receive or tolerate the planned treatment and follow-up",
+        "reasonFuzzy": "Serious underlying medical conditions are subjective."
+      }
+    ]
+  }
+}

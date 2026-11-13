@@ -1,0 +1,409 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06810544",
+  "briefTitle": "Safety and Tolerability of TNG456 Alone and in Combination With Abemaciclib in Patients With Solid Tumors With MTAP Loss",
+  "parsedAt": "2026-11-12T10:37:21.637Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06810544-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Is ≥18 years of age at the time of signature of the main study ICF",
+      "numberValue": 18,
+      "evidence_quote": "Is ≥18 years of age at the time of signature of the main study ICF",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06810544-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Has an ECOG performance status score of 0 to 1",
+      "numberValue": 1,
+      "evidence_quote": "Has an ECOG performance status score of 0 to 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06810544-mtap",
+      "polarity": "inclusion",
+      "sourceText": "Has a tumor with a confirmed MTAP loss",
+      "reasonFuzzy": "MTAP loss is not one of the allowed typed biomarker kinds (egfr, alk, kras, ros1, braf)."
+    },
+    {
+      "id": "NCT06810544-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Has had progression or an inadequate response to or is intolerant of the approved standard of care therapy, no standard of care therapy exists, or the investigator has determined that treatment with the standard of care therapy is not appropriate.",
+      "reasonFuzzy": "This criterion involves investigator discretion and multiple alternative conditions, not a standard prior lines count."
+    },
+    {
+      "id": "NCT06810544-swallow",
+      "polarity": "inclusion",
+      "sourceText": "Is able to swallow tablets",
+      "reasonFuzzy": "Ability to swallow is a clinical capability judgment, not a typed check."
+    },
+    {
+      "id": "NCT06810544-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate Organ function/reserve per local labs",
+      "reasonFuzzy": "Organ function per local labs without explicit numeric cutoffs cannot be expressed as specific typed lab checks."
+    },
+    {
+      "id": "NCT06810544-pregnancy",
+      "polarity": "inclusion",
+      "sourceText": "Negative serum pregnancy test result at screening",
+      "reasonFuzzy": "Pregnancy test status is not a typed check kind."
+    },
+    {
+      "id": "NCT06810544-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has measurable disease based on RECIST v1.1 or a confirmed glioblastoma (IDH-wildtype) with radiographic evidence of disease progression or recurrence defined by RANO 2.0.",
+      "reasonFuzzy": "Measurable disease by RECIST or RANO is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06810544-karnofsky",
+      "polarity": "inclusion",
+      "sourceText": "Has an ECOG performance score of 0 to 1 or for GBM has a Karnofsky performance status score ≥70.",
+      "reasonFuzzy": "Karnofsky performance status is not a typed performance score kind."
+    },
+    {
+      "id": "NCT06810544-breastfeeding",
+      "polarity": "exclusion",
+      "sourceText": "A female patient is who is pregnant or breastfeeding",
+      "reasonFuzzy": "Pregnancy and breastfeeding status are not typed check kinds."
+    },
+    {
+      "id": "NCT06810544-gi",
+      "polarity": "exclusion",
+      "sourceText": "Has impaired GI function or disease that may significantly alter the absorption of oral study treatment(s)",
+      "reasonFuzzy": "GI function and absorption impairment are clinical judgments, not typed checks."
+    },
+    {
+      "id": "NCT06810544-infection",
+      "polarity": "exclusion",
+      "sourceText": "Has an active infection requiring systemic therapy",
+      "reasonFuzzy": "Active infection requiring systemic therapy is not a typed check kind."
+    },
+    {
+      "id": "NCT06810544-cdk46",
+      "polarity": "exclusion",
+      "sourceText": "Patients in the expansion receiving the combination therapy that have received prior treatment with a CDK4/6 inhibitor",
+      "reasonFuzzy": "This prior therapy exclusion applies conditionally to a specific expansion cohort receiving combination therapy."
+    },
+    {
+      "id": "NCT06810544-cv",
+      "polarity": "exclusion",
+      "sourceText": "Clinically relevant cardiovascular disease",
+      "reasonFuzzy": "Clinically relevant cardiovascular disease is a subjective medical judgment, not a typed check."
+    },
+    {
+      "id": "NCT06810544-illness",
+      "polarity": "exclusion",
+      "sourceText": "Has a prior or ongoing clinically significant illness may affect the safety of the patient, impair the assessment of study results or compliance with the protocol",
+      "reasonFuzzy": "General significant illness is an investigator judgment, not a typed check."
+    },
+    {
+      "id": "NCT06810544-mtap",
+      "polarity": "inclusion",
+      "sourceText": "Has a tumor with a confirmed MTAP loss",
+      "reasonFuzzy": "MTAP loss is not a standard typed biomarker kind in the allowed schema."
+    },
+    {
+      "id": "NCT06810544-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Has had progression or an inadequate response to or is intolerant of the approved standard of care therapy, no standard of care therapy exists, or the investigator has determined that treatment with the standard of care therapy is not appropriate.",
+      "reasonFuzzy": "This involves complex prior therapy options and investigator discretion, not a simple prior lines count or typed drug."
+    },
+    {
+      "id": "NCT06810544-swallow",
+      "polarity": "inclusion",
+      "sourceText": "Is able to swallow tablets",
+      "reasonFuzzy": "Ability to swallow is a functional criterion, not a typed check."
+    },
+    {
+      "id": "NCT06810544-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate Organ function/reserve per local labs",
+      "reasonFuzzy": "Organ function per local labs is non-specific and lacks explicit numerical cutoffs."
+    },
+    {
+      "id": "NCT06810544-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Has measurable disease based on RECIST v1.1 or a confirmed glioblastoma (IDH-wildtype) with radiographic evidence of disease progression or recurrence defined by RANO 2.0.",
+      "reasonFuzzy": "Measurable disease by RECIST or RANO is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06810544-karnofsky",
+      "polarity": "inclusion",
+      "sourceText": "Has an ECOG performance score of 0 to 1 or for GBM has a Karnofsky performance status score ≥70.",
+      "reasonFuzzy": "Karnofsky performance status is not an ECOG performance status check."
+    },
+    {
+      "id": "NCT06810544-prior-cdk46",
+      "polarity": "exclusion",
+      "sourceText": "Patients in the expansion receiving the combination therapy that have received prior treatment with a CDK4/6 inhibitor",
+      "reasonFuzzy": "This exclusion applies conditionally to a specific expansion cohort rather than all participants universally."
+    },
+    {
+      "id": "NCT06810544-prmt5",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior treatment with a PRMT5 inhibitor or a MAT2A inhibitor",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06810544-mat2a",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior treatment with a PRMT5 inhibitor or a MAT2A inhibitor",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:prmt5 inhibitor"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:mat2a inhibitor"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 13,
+    "attempts": 1,
+    "ms": 5124
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 3890
+  },
+  "ms": 17000,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06810544",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06810544-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Is ≥18 years of age at the time of signature of the main study ICF",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06810544-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has an ECOG performance status score of 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06810544-prmt5",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior treatment with a PRMT5 inhibitor or a MAT2A inhibitor",
+        "stringValue": "PRMT5 inhibitor"
+      },
+      {
+        "id": "NCT06810544-mat2a",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior treatment with a PRMT5 inhibitor or a MAT2A inhibitor",
+        "stringValue": "MAT2A inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06810544-mtap",
+        "polarity": "inclusion",
+        "sourceText": "Has a tumor with a confirmed MTAP loss",
+        "reasonFuzzy": "MTAP loss is not one of the allowed typed biomarker kinds (egfr, alk, kras, ros1, braf)."
+      },
+      {
+        "id": "NCT06810544-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "Has had progression or an inadequate response to or is intolerant of the approved standard of care therapy, no standard of care therapy exists, or the investigator has determined that treatment with the standard of care therapy is not appropriate.",
+        "reasonFuzzy": "This criterion involves investigator discretion and multiple alternative conditions, not a standard prior lines count."
+      },
+      {
+        "id": "NCT06810544-swallow",
+        "polarity": "inclusion",
+        "sourceText": "Is able to swallow tablets",
+        "reasonFuzzy": "Ability to swallow is a clinical capability judgment, not a typed check."
+      },
+      {
+        "id": "NCT06810544-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate Organ function/reserve per local labs",
+        "reasonFuzzy": "Organ function per local labs without explicit numeric cutoffs cannot be expressed as specific typed lab checks."
+      },
+      {
+        "id": "NCT06810544-pregnancy",
+        "polarity": "inclusion",
+        "sourceText": "Negative serum pregnancy test result at screening",
+        "reasonFuzzy": "Pregnancy test status is not a typed check kind."
+      },
+      {
+        "id": "NCT06810544-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has measurable disease based on RECIST v1.1 or a confirmed glioblastoma (IDH-wildtype) with radiographic evidence of disease progression or recurrence defined by RANO 2.0.",
+        "reasonFuzzy": "Measurable disease by RECIST or RANO is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06810544-karnofsky",
+        "polarity": "inclusion",
+        "sourceText": "Has an ECOG performance score of 0 to 1 or for GBM has a Karnofsky performance status score ≥70.",
+        "reasonFuzzy": "Karnofsky performance status is not a typed performance score kind."
+      },
+      {
+        "id": "NCT06810544-breastfeeding",
+        "polarity": "exclusion",
+        "sourceText": "A female patient is who is pregnant or breastfeeding",
+        "reasonFuzzy": "Pregnancy and breastfeeding status are not typed check kinds."
+      },
+      {
+        "id": "NCT06810544-gi",
+        "polarity": "exclusion",
+        "sourceText": "Has impaired GI function or disease that may significantly alter the absorption of oral study treatment(s)",
+        "reasonFuzzy": "GI function and absorption impairment are clinical judgments, not typed checks."
+      },
+      {
+        "id": "NCT06810544-infection",
+        "polarity": "exclusion",
+        "sourceText": "Has an active infection requiring systemic therapy",
+        "reasonFuzzy": "Active infection requiring systemic therapy is not a typed check kind."
+      },
+      {
+        "id": "NCT06810544-cdk46",
+        "polarity": "exclusion",
+        "sourceText": "Patients in the expansion receiving the combination therapy that have received prior treatment with a CDK4/6 inhibitor",
+        "reasonFuzzy": "This prior therapy exclusion applies conditionally to a specific expansion cohort receiving combination therapy."
+      },
+      {
+        "id": "NCT06810544-cv",
+        "polarity": "exclusion",
+        "sourceText": "Clinically relevant cardiovascular disease",
+        "reasonFuzzy": "Clinically relevant cardiovascular disease is a subjective medical judgment, not a typed check."
+      },
+      {
+        "id": "NCT06810544-illness",
+        "polarity": "exclusion",
+        "sourceText": "Has a prior or ongoing clinically significant illness may affect the safety of the patient, impair the assessment of study results or compliance with the protocol",
+        "reasonFuzzy": "General significant illness is an investigator judgment, not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06810544",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06810544-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Is ≥18 years of age at the time of signature of the main study ICF",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06810544-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has an ECOG performance status score of 0 to 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06810544-prior-prmt5",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior treatment with a PRMT5 inhibitor or a MAT2A inhibitor",
+        "stringValue": "PRMT5 inhibitor"
+      },
+      {
+        "id": "NCT06810544-prior-mat2a",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior treatment with a PRMT5 inhibitor or a MAT2A inhibitor",
+        "stringValue": "MAT2A inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06810544-mtap",
+        "polarity": "inclusion",
+        "sourceText": "Has a tumor with a confirmed MTAP loss",
+        "reasonFuzzy": "MTAP loss is not a standard typed biomarker kind in the allowed schema."
+      },
+      {
+        "id": "NCT06810544-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Has had progression or an inadequate response to or is intolerant of the approved standard of care therapy, no standard of care therapy exists, or the investigator has determined that treatment with the standard of care therapy is not appropriate.",
+        "reasonFuzzy": "This involves complex prior therapy options and investigator discretion, not a simple prior lines count or typed drug."
+      },
+      {
+        "id": "NCT06810544-swallow",
+        "polarity": "inclusion",
+        "sourceText": "Is able to swallow tablets",
+        "reasonFuzzy": "Ability to swallow is a functional criterion, not a typed check."
+      },
+      {
+        "id": "NCT06810544-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate Organ function/reserve per local labs",
+        "reasonFuzzy": "Organ function per local labs is non-specific and lacks explicit numerical cutoffs."
+      },
+      {
+        "id": "NCT06810544-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Has measurable disease based on RECIST v1.1 or a confirmed glioblastoma (IDH-wildtype) with radiographic evidence of disease progression or recurrence defined by RANO 2.0.",
+        "reasonFuzzy": "Measurable disease by RECIST or RANO is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06810544-karnofsky",
+        "polarity": "inclusion",
+        "sourceText": "Has an ECOG performance score of 0 to 1 or for GBM has a Karnofsky performance status score ≥70.",
+        "reasonFuzzy": "Karnofsky performance status is not an ECOG performance status check."
+      },
+      {
+        "id": "NCT06810544-prior-cdk46",
+        "polarity": "exclusion",
+        "sourceText": "Patients in the expansion receiving the combination therapy that have received prior treatment with a CDK4/6 inhibitor",
+        "reasonFuzzy": "This exclusion applies conditionally to a specific expansion cohort rather than all participants universally."
+      }
+    ]
+  }
+}

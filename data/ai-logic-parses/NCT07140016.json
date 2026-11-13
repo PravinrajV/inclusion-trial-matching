@@ -1,0 +1,489 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07140016",
+  "briefTitle": "A Study of Gilteritinib in Adults With Advanced ALK-positive Non-small Cell Lung Cancer (NSCLC)",
+  "parsedAt": "2026-11-12T13:19:10.832Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07140016-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participant has an Eastern Cooperative Oncology Group (ECOG) performance status of ≤ 2.",
+      "numberValue": 2,
+      "evidence_quote": "Participant has an Eastern Cooperative Oncology Group (ECOG) performance status of ≤ 2.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07140016-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Participant is willing to submit, prior to enrollment, a fresh tumor tissue sample that was collected after completion of the most recent anti-cancer treatment and before the first dose of study intervention.",
+      "reasonFuzzy": "Willingness to undergo a biopsy or procedure is a subjective criterion, not a typed check."
+    },
+    {
+      "id": "NCT07140016-prior-alk",
+      "polarity": "inclusion",
+      "sourceText": "Participant must have at least one prior line of ALK inhibitor-based therapy and meet one of the following criteria: Participant received alectinib as the only prior ALK inhibitor regimen... Participant received lorlatinib as one of the prior ALK inhibitor regimens.",
+      "reasonFuzzy": "Prior-line and prior ALK inhibitor rules involve conditional requirements and are not a simple typed prior_lines or prior_therapy check."
+    },
+    {
+      "id": "NCT07140016-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participant has measurable disease according to Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07140016-stage",
+      "polarity": "inclusion",
+      "sourceText": "locally advanced or metastatic non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC remains in scope, but no explicit numbered stage list is provided."
+    },
+    {
+      "id": "NCT07140016-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participant has symptomatic central nervous system (CNS) metastases or leptomeningeal metastasis.",
+      "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT07140016-other-drivers",
+      "polarity": "exclusion",
+      "sourceText": "Participant has known oncogenic driver alterations other than ALK rearrangement.",
+      "reasonFuzzy": "Excluding other oncogenic driver alterations generally is not a single typed variant or status check."
+    },
+    {
+      "id": "NCT07140016-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Participant is willing to submit, prior to enrollment, a fresh tumor tissue sample that was collected after completion of the most recent anti-cancer treatment and before the first dose of study intervention.",
+      "reasonFuzzy": "Willingness to submit a fresh tissue sample or coordinate with a medical monitor is a procedural requirement, not a typed check."
+    },
+    {
+      "id": "NCT07140016-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Participant must have at least one prior line of ALK inhibitor-based therapy and meet one of the following criteria: Participant received alectinib as the only prior ALK inhibitor regimen. Participant is ineligible or unable to tolerate approved and available second-line therapy or is determined to potentially benefit from gilteritinib in this setting. Participant is eligible if chemotherapy was received in the neoadjuvant or adjuvant setting, and relapse or disease progressed after 12 months from completion of the treatment. Participant received lorlatinib as one of the prior ALK inhibitor regimens.",
+      "reasonFuzzy": "Prior-line and prior ALK inhibitor requirements have conditional branching rules that cannot be expressed as a simple typed prior_lines or prior_therapy check."
+    },
+    {
+      "id": "NCT07140016-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participant has measurable disease according to Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07140016-stage",
+      "polarity": "inclusion",
+      "sourceText": "locally advanced or metastatic non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "The record mentions locally advanced or metastatic NSCLC without an explicit numbered stage list, keeping it in scope as a fuzzy description."
+    },
+    {
+      "id": "NCT07140016-drivers",
+      "polarity": "exclusion",
+      "sourceText": "Participant has known oncogenic driver alterations other than ALK rearrangement.",
+      "reasonFuzzy": "Excluding other oncogenic drivers is not a single typed biomarker status check."
+    },
+    {
+      "id": "NCT07140016-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participant has symptomatic central nervous system (CNS) metastases or leptomeningeal metastasis.",
+      "reasonFuzzy": "Symptomatic CNS metastases and leptomeningeal disease are not a clean typed brain_mets rule."
+    },
+    {
+      "id": "NCT07140016-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Participant has a history of malignancy other than NSCLC within 2 years before screening",
+      "reasonFuzzy": "Prior history of other malignancies with specific exceptions is not a typed check."
+    },
+    {
+      "id": "NCT07140016-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Participant had major surgery (e.g., requiring general anesthesia) within 4 weeks prior to first dose of study intervention",
+      "reasonFuzzy": "Washout window for major surgery is not a typed lab cutoff."
+    },
+    {
+      "id": "NCT07140016-toxicity",
+      "polarity": "exclusion",
+      "sourceText": "Participant has ongoing clinically significant toxicity (Grade 2 or higher with the exception of alopecia) associated with prior anti-cancer treatment.",
+      "reasonFuzzy": "Unresolved prior toxicity grade threshold is a clinical assessment."
+    },
+    {
+      "id": "NCT07140016-infection",
+      "polarity": "exclusion",
+      "sourceText": "Participant has/had febrile illness or symptomatic, viral, bacterial (including upper respiratory infection) or fungal (noncutaneous) infection within 28 days prior to first dose of study intervention.",
+      "reasonFuzzy": "Recent infection and febrile illness criteria are not typed checks."
+    },
+    {
+      "id": "NCT07140016-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Participant has a history of unexplained syncope, cardiac arrest, unexplained cardiac arrhythmias or torsades de pointes, structural heart disease or a family history of long QT syndrome.",
+      "reasonFuzzy": "Specific cardiac history and arrhythmia exclusions are not typed checks."
+    },
+    {
+      "id": "NCT07140016-cardiac-event",
+      "polarity": "exclusion",
+      "sourceText": "Participant has a history of a cerebral vascular event (stroke or transient ischemic attack), unstable angina, myocardial infarction or cardiac symptoms (including congestive heart failure) consistent with New York Heart Association Class III-IV within 6 months prior to the first dose of study intervention.",
+      "reasonFuzzy": "Cerebrovascular and cardiac event history within a 6-month window is not a typed lab or simple check."
+    },
+    {
+      "id": "NCT07140016-pneumonia",
+      "polarity": "exclusion",
+      "sourceText": "Participant has a history of interstitial pneumonia.",
+      "reasonFuzzy": "History of interstitial pneumonia is not a typed check."
+    },
+    {
+      "id": "NCT07140016-washout",
+      "polarity": "exclusion",
+      "sourceText": "Participant had completed target therapy, radiotherapy, chemotherapy, biologics and/or immunotherapy within 14 days prior to first dose of study intervention.",
+      "reasonFuzzy": "Washout windows for prior anti-cancer therapies are not typed lab cutoffs."
+    },
+    {
+      "id": "NCT07140016-cyp3a",
+      "polarity": "exclusion",
+      "sourceText": "Participant requires treatment with strong inducers of cytochrome P450 (CYP) 3A.",
+      "reasonFuzzy": "Concomitant medication restriction for strong CYP3A inducers is not a typed check."
+    },
+    {
+      "id": "NCT07140016-serotonin",
+      "polarity": "exclusion",
+      "sourceText": "Participant requires treatment with concomitant drugs that target serotonin 5HT1 or 5HT2B receptors or sigma nonspecific receptor with the exception of drugs that are considered absolutely essential for the care of the participant.",
+      "reasonFuzzy": "Concomitant receptor-targeting drug restrictions with exceptions are not typed checks."
+    },
+    {
+      "id": "NCT07140016-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Participant has received any investigational therapy within 14 days or 5 half-lives, whichever is longer, prior to screening.",
+      "reasonFuzzy": "Washout for investigational therapy is not a typed check."
+    },
+    {
+      "id": "NCT07140016-qtcf",
+      "polarity": "exclusion",
+      "sourceText": "Participant has a mean Fridericia-corrected QT interval (QTcF) of > 450 msec at screening.",
+      "reasonFuzzy": "QTcF interval cutoff is not a supported typed kind in the allowed list."
+    },
+    {
+      "id": "NCT07140016-hepatitis",
+      "polarity": "exclusion",
+      "sourceText": "Participant has known active hepatitis B virus (HBV) infection (defined as hepatitis B surface antigen (HBsAg)-positive and/or anti-HBV core antibody-positive) or known active hepatitis C virus (HCV) infection (defined as HCV RNA [qualitative] detected).",
+      "reasonFuzzy": "Complex viral hepatitis criteria with nested exceptions and PCR rules are not typed checks."
+    },
+    {
+      "id": "NCT07140016-hiv",
+      "polarity": "exclusion",
+      "sourceText": "Participant has a known history of human immunodeficiency virus (HIV) infection with acquired immunodeficiency syndrome (AIDS)-related complications.",
+      "reasonFuzzy": "HIV infection with AIDS-related complications is not a typed check."
+    },
+    {
+      "id": "NCT07140016-lvef",
+      "polarity": "exclusion",
+      "sourceText": "Participant has echocardiogram (ECHO) or multigated acquisition scan (MUGA) at screening revealing left ventricular ejection fraction < 45%.",
+      "reasonFuzzy": "Left ventricular ejection fraction cutoff is not a supported typed kind."
+    },
+    {
+      "id": "NCT07140016-unsuitable",
+      "polarity": "exclusion",
+      "sourceText": "Participant has any condition that makes the participant unsuitable for study participation.",
+      "reasonFuzzy": "Investigator discretion regarding trial unsuitability is a subjective judgment."
+    },
+    {
+      "id": "NCT07140016-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Participant has a known or suspected hypersensitivity to gilteritinib or any components of the formulation used.",
+      "reasonFuzzy": "Hypersensitivity to study drug is not a typed check."
+    },
+    {
+      "id": "NCT07140016-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07140016-alk",
+      "polarity": "inclusion",
+      "sourceText": "Participant has histologically or cytologically confirmed locally advanced or metastatic non-small cell lung cancer (NSCLC) with a documented anaplastic lymphoma kinase (ALK) rearrangement and is not amenable to curative intent treatment.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 8351
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 23,
+    "attempts": 3,
+    "ms": 37953
+  },
+  "ms": 54262,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07140016",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07140016-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Participant has histologically or cytologically confirmed locally advanced or metastatic non-small cell lung cancer (NSCLC) with a documented anaplastic lymphoma kinase (ALK) rearrangement and is not amenable to curative intent treatment.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07140016-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant has an Eastern Cooperative Oncology Group (ECOG) performance status of ≤ 2.",
+        "numberValue": 2
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07140016-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Participant is willing to submit, prior to enrollment, a fresh tumor tissue sample that was collected after completion of the most recent anti-cancer treatment and before the first dose of study intervention.",
+        "reasonFuzzy": "Willingness to undergo a biopsy or procedure is a subjective criterion, not a typed check."
+      },
+      {
+        "id": "NCT07140016-prior-alk",
+        "polarity": "inclusion",
+        "sourceText": "Participant must have at least one prior line of ALK inhibitor-based therapy and meet one of the following criteria: Participant received alectinib as the only prior ALK inhibitor regimen... Participant received lorlatinib as one of the prior ALK inhibitor regimens.",
+        "reasonFuzzy": "Prior-line and prior ALK inhibitor rules involve conditional requirements and are not a simple typed prior_lines or prior_therapy check."
+      },
+      {
+        "id": "NCT07140016-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participant has measurable disease according to Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07140016-stage",
+        "polarity": "inclusion",
+        "sourceText": "locally advanced or metastatic non-small cell lung cancer (NSCLC)",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC remains in scope, but no explicit numbered stage list is provided."
+      },
+      {
+        "id": "NCT07140016-brain",
+        "polarity": "exclusion",
+        "sourceText": "Participant has symptomatic central nervous system (CNS) metastases or leptomeningeal metastasis.",
+        "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      },
+      {
+        "id": "NCT07140016-other-drivers",
+        "polarity": "exclusion",
+        "sourceText": "Participant has known oncogenic driver alterations other than ALK rearrangement.",
+        "reasonFuzzy": "Excluding other oncogenic driver alterations generally is not a single typed variant or status check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07140016",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07140016-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "Participant has histologically or cytologically confirmed locally advanced or metastatic non-small cell lung cancer (NSCLC) with a documented anaplastic lymphoma kinase (ALK) rearrangement and is not amenable to curative intent treatment.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07140016-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant has an Eastern Cooperative Oncology Group (ECOG) performance status of ≤ 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT07140016-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07140016-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Participant is willing to submit, prior to enrollment, a fresh tumor tissue sample that was collected after completion of the most recent anti-cancer treatment and before the first dose of study intervention.",
+        "reasonFuzzy": "Willingness to submit a fresh tissue sample or coordinate with a medical monitor is a procedural requirement, not a typed check."
+      },
+      {
+        "id": "NCT07140016-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "Participant must have at least one prior line of ALK inhibitor-based therapy and meet one of the following criteria: Participant received alectinib as the only prior ALK inhibitor regimen. Participant is ineligible or unable to tolerate approved and available second-line therapy or is determined to potentially benefit from gilteritinib in this setting. Participant is eligible if chemotherapy was received in the neoadjuvant or adjuvant setting, and relapse or disease progressed after 12 months from completion of the treatment. Participant received lorlatinib as one of the prior ALK inhibitor regimens.",
+        "reasonFuzzy": "Prior-line and prior ALK inhibitor requirements have conditional branching rules that cannot be expressed as a simple typed prior_lines or prior_therapy check."
+      },
+      {
+        "id": "NCT07140016-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participant has measurable disease according to Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07140016-stage",
+        "polarity": "inclusion",
+        "sourceText": "locally advanced or metastatic non-small cell lung cancer (NSCLC)",
+        "reasonFuzzy": "The record mentions locally advanced or metastatic NSCLC without an explicit numbered stage list, keeping it in scope as a fuzzy description."
+      },
+      {
+        "id": "NCT07140016-drivers",
+        "polarity": "exclusion",
+        "sourceText": "Participant has known oncogenic driver alterations other than ALK rearrangement.",
+        "reasonFuzzy": "Excluding other oncogenic drivers is not a single typed biomarker status check."
+      },
+      {
+        "id": "NCT07140016-brain",
+        "polarity": "exclusion",
+        "sourceText": "Participant has symptomatic central nervous system (CNS) metastases or leptomeningeal metastasis.",
+        "reasonFuzzy": "Symptomatic CNS metastases and leptomeningeal disease are not a clean typed brain_mets rule."
+      },
+      {
+        "id": "NCT07140016-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Participant has a history of malignancy other than NSCLC within 2 years before screening",
+        "reasonFuzzy": "Prior history of other malignancies with specific exceptions is not a typed check."
+      },
+      {
+        "id": "NCT07140016-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Participant had major surgery (e.g., requiring general anesthesia) within 4 weeks prior to first dose of study intervention",
+        "reasonFuzzy": "Washout window for major surgery is not a typed lab cutoff."
+      },
+      {
+        "id": "NCT07140016-toxicity",
+        "polarity": "exclusion",
+        "sourceText": "Participant has ongoing clinically significant toxicity (Grade 2 or higher with the exception of alopecia) associated with prior anti-cancer treatment.",
+        "reasonFuzzy": "Unresolved prior toxicity grade threshold is a clinical assessment."
+      },
+      {
+        "id": "NCT07140016-infection",
+        "polarity": "exclusion",
+        "sourceText": "Participant has/had febrile illness or symptomatic, viral, bacterial (including upper respiratory infection) or fungal (noncutaneous) infection within 28 days prior to first dose of study intervention.",
+        "reasonFuzzy": "Recent infection and febrile illness criteria are not typed checks."
+      },
+      {
+        "id": "NCT07140016-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Participant has a history of unexplained syncope, cardiac arrest, unexplained cardiac arrhythmias or torsades de pointes, structural heart disease or a family history of long QT syndrome.",
+        "reasonFuzzy": "Specific cardiac history and arrhythmia exclusions are not typed checks."
+      },
+      {
+        "id": "NCT07140016-cardiac-event",
+        "polarity": "exclusion",
+        "sourceText": "Participant has a history of a cerebral vascular event (stroke or transient ischemic attack), unstable angina, myocardial infarction or cardiac symptoms (including congestive heart failure) consistent with New York Heart Association Class III-IV within 6 months prior to the first dose of study intervention.",
+        "reasonFuzzy": "Cerebrovascular and cardiac event history within a 6-month window is not a typed lab or simple check."
+      },
+      {
+        "id": "NCT07140016-pneumonia",
+        "polarity": "exclusion",
+        "sourceText": "Participant has a history of interstitial pneumonia.",
+        "reasonFuzzy": "History of interstitial pneumonia is not a typed check."
+      },
+      {
+        "id": "NCT07140016-washout",
+        "polarity": "exclusion",
+        "sourceText": "Participant had completed target therapy, radiotherapy, chemotherapy, biologics and/or immunotherapy within 14 days prior to first dose of study intervention.",
+        "reasonFuzzy": "Washout windows for prior anti-cancer therapies are not typed lab cutoffs."
+      },
+      {
+        "id": "NCT07140016-cyp3a",
+        "polarity": "exclusion",
+        "sourceText": "Participant requires treatment with strong inducers of cytochrome P450 (CYP) 3A.",
+        "reasonFuzzy": "Concomitant medication restriction for strong CYP3A inducers is not a typed check."
+      },
+      {
+        "id": "NCT07140016-serotonin",
+        "polarity": "exclusion",
+        "sourceText": "Participant requires treatment with concomitant drugs that target serotonin 5HT1 or 5HT2B receptors or sigma nonspecific receptor with the exception of drugs that are considered absolutely essential for the care of the participant.",
+        "reasonFuzzy": "Concomitant receptor-targeting drug restrictions with exceptions are not typed checks."
+      },
+      {
+        "id": "NCT07140016-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Participant has received any investigational therapy within 14 days or 5 half-lives, whichever is longer, prior to screening.",
+        "reasonFuzzy": "Washout for investigational therapy is not a typed check."
+      },
+      {
+        "id": "NCT07140016-qtcf",
+        "polarity": "exclusion",
+        "sourceText": "Participant has a mean Fridericia-corrected QT interval (QTcF) of > 450 msec at screening.",
+        "reasonFuzzy": "QTcF interval cutoff is not a supported typed kind in the allowed list."
+      },
+      {
+        "id": "NCT07140016-hepatitis",
+        "polarity": "exclusion",
+        "sourceText": "Participant has known active hepatitis B virus (HBV) infection (defined as hepatitis B surface antigen (HBsAg)-positive and/or anti-HBV core antibody-positive) or known active hepatitis C virus (HCV) infection (defined as HCV RNA [qualitative] detected).",
+        "reasonFuzzy": "Complex viral hepatitis criteria with nested exceptions and PCR rules are not typed checks."
+      },
+      {
+        "id": "NCT07140016-hiv",
+        "polarity": "exclusion",
+        "sourceText": "Participant has a known history of human immunodeficiency virus (HIV) infection with acquired immunodeficiency syndrome (AIDS)-related complications.",
+        "reasonFuzzy": "HIV infection with AIDS-related complications is not a typed check."
+      },
+      {
+        "id": "NCT07140016-lvef",
+        "polarity": "exclusion",
+        "sourceText": "Participant has echocardiogram (ECHO) or multigated acquisition scan (MUGA) at screening revealing left ventricular ejection fraction < 45%.",
+        "reasonFuzzy": "Left ventricular ejection fraction cutoff is not a supported typed kind."
+      },
+      {
+        "id": "NCT07140016-unsuitable",
+        "polarity": "exclusion",
+        "sourceText": "Participant has any condition that makes the participant unsuitable for study participation.",
+        "reasonFuzzy": "Investigator discretion regarding trial unsuitability is a subjective judgment."
+      },
+      {
+        "id": "NCT07140016-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Participant has a known or suspected hypersensitivity to gilteritinib or any components of the formulation used.",
+        "reasonFuzzy": "Hypersensitivity to study drug is not a typed check."
+      }
+    ]
+  }
+}

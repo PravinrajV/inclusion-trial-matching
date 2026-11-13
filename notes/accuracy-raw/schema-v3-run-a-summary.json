@@ -1,0 +1,270 @@
+{
+  "ranAt": "2026-11-12T02:13:12.114Z",
+  "model": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "schemaLocked": true,
+  "postprocessed": true,
+  "responseMimeType": "application/json",
+  "runId": "a",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "schemaVersion": "1",
+  "hits": 26,
+  "total": 26,
+  "percent": 100,
+  "typedHits": 24,
+  "typedTotal": 24,
+  "fuzzyHits": 2,
+  "fuzzyTotal": 2,
+  "safeMisses": 0,
+  "unsafeMisses": 0,
+  "typedTargetMet": true,
+  "unsafeTargetMet": true,
+  "retries": {
+    "NCT01720836": 1,
+    "NCT03093116": 1,
+    "NCT03191149": 1,
+    "NCT03851445": 1,
+    "NCT04165070": 1,
+    "NCT04181060": 1,
+    "NCT04198766": 1,
+    "NCT04613596": 1,
+    "NCT06561386": 1
+  },
+  "rows": [
+    {
+      "id": "C01",
+      "nctId": "NCT03093116",
+      "kind": "age_min",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C02",
+      "nctId": "NCT03093116",
+      "kind": "ecog_max",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C03",
+      "nctId": "NCT04181060",
+      "kind": "ecog_max",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C04",
+      "nctId": "NCT04181060",
+      "kind": "histology_in",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C05",
+      "nctId": "NCT03191149",
+      "kind": "stage_in",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C06",
+      "nctId": "NCT03851445",
+      "kind": "stage_in",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C07",
+      "nctId": "NCT04181060",
+      "kind": "egfr_variant_in",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C08",
+      "nctId": "NCT03191149",
+      "kind": "egfr_variant_in",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C09",
+      "nctId": "NCT04198766",
+      "kind": "egfr_status",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C10",
+      "nctId": "NCT04198766",
+      "kind": "alk_status",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C11",
+      "nctId": "NCT03851445",
+      "kind": "egfr_status",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C12",
+      "nctId": "NCT03851445",
+      "kind": "alk_status",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C13",
+      "nctId": "NCT04613596",
+      "kind": "kras_variant_in",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C14",
+      "nctId": "NCT03093116",
+      "kind": "alk_status",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C15",
+      "nctId": "NCT04181060",
+      "kind": "prior_lines_max",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C16",
+      "nctId": "NCT04181060",
+      "kind": "prior_therapy_excluded",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C17",
+      "nctId": "NCT03851445",
+      "kind": "prior_lines_min",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C18",
+      "nctId": "NCT04165070",
+      "kind": "brain_mets",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C19",
+      "nctId": "NCT06561386",
+      "kind": "brain_mets",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C20",
+      "nctId": "NCT01720836",
+      "kind": "egfr_min",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C21",
+      "nctId": "NCT03093116",
+      "kind": "egfr_min",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C22",
+      "nctId": "NCT03093116",
+      "kind": "hemoglobin_min",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C23",
+      "nctId": "NCT01720836",
+      "kind": "platelets_min",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C24",
+      "nctId": "NCT01720836",
+      "kind": "anc_min",
+      "verdict": "hit",
+      "detail": "kind, polarity, and value matched",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C25",
+      "nctId": "NCT04181060",
+      "kind": "fuzzy",
+      "verdict": "hit",
+      "detail": "left fuzzy",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    },
+    {
+      "id": "C26",
+      "nctId": "NCT06561386",
+      "kind": "fuzzy",
+      "verdict": "hit",
+      "detail": "left fuzzy",
+      "safety": "not_a_miss",
+      "safetyReason": "official hit"
+    }
+  ],
+  "rescoredAfterStageExpand": true
+}

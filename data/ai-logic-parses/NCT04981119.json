@@ -1,0 +1,370 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04981119",
+  "briefTitle": "Solid Tumor Analysis for HLA Loss of Heterozygosity (LOH) and Apheresis for CAR T- Cell Manufacturing",
+  "parsedAt": "2026-11-12T06:08:29.651Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04981119-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) 0 or 1 performance status.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) 0 or 1 performance status.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04981119-stage",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically confirmed solid tumors, e.g., Colorectal Cancer (CRC), Non-Small Cell Lung Cancer (NSCLC), or Pancreatic Cancer (PANC), that is metastatic, unresectable locally advanced, or in the Investigator's opinion the subject is high risk for incurable relapse within two years.",
+      "reasonFuzzy": "The record mentions metastatic and unresectable locally advanced disease or investigator opinion, but does not state a numbered stage list."
+    },
+    {
+      "id": "NCT04981119-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "History of any of other malignancy in the past 5 years other than non-melanoma skin carcinoma, low grade localized prostate cancer, superficial bladder cancer, ductal carcinoma in situ (CIS) of the breast, CIS of the Cervix, or Stage I uterine cancer.",
+      "reasonFuzzy": "Prior malignancy exclusions with multiple cancer-specific exceptions cannot be expressed as a single typed prior therapy check."
+    },
+    {
+      "id": "NCT04981119-allo-tx",
+      "polarity": "exclusion",
+      "sourceText": "Prior allogeneic stem cell transplant.",
+      "reasonFuzzy": "Prior transplant is not represented in the allowed typed prior therapy or exclusion kinds."
+    },
+    {
+      "id": "NCT04981119-solid-tx",
+      "polarity": "exclusion",
+      "sourceText": "Prior solid organ transplant.",
+      "reasonFuzzy": "Prior organ transplant is not represented in the allowed typed prior therapy or exclusion kinds."
+    },
+    {
+      "id": "NCT04981119-washout",
+      "polarity": "exclusion",
+      "sourceText": "Participants who have received any cancer therapy on any investigational therapy for any indication, including but not limited to chemotherapy, small molecules, monoclonal antibodies, or radiotherapy (with bone marrow impact) within 2 weeks of planned apheresis or 3 half-lives, whichever is shorter.",
+      "reasonFuzzy": "Washout windows tied to half-lives or multiple treatment modalities are left in fuzzy criteria."
+    },
+    {
+      "id": "NCT04981119-infection",
+      "polarity": "exclusion",
+      "sourceText": "Known active bacterial, viral, fungal, mycobacterial, parasitic, or other infection (excluding fungal infections of nail beds) at study enrollment necessitating specific treatment, or any major episode of infection requiring treatment with Intravenous (IV) antimicrobials (e.g., IV antibiotics) or hospitalization (relating to completion of antibiotic course).",
+      "reasonFuzzy": "Active infection criteria requiring specific treatment or hospitalization are subjective and not typed lab cutoffs."
+    },
+    {
+      "id": "NCT04981119-investigator",
+      "polarity": "exclusion",
+      "sourceText": "In the Investigator's judgement, any other condition or reason the subject would not complete the required study visits and procedures, and follow up visits, or comply with the study requirements for participation.",
+      "reasonFuzzy": "Investigator judgment criteria are subjective."
+    },
+    {
+      "id": "NCT04981119-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04981119-stage-part1",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically confirmed solid tumors, e.g., Colorectal Cancer (CRC), Non-Small Cell Lung Cancer (NSCLC), or Pancreatic Cancer (PANC), that is metastatic, unresectable locally advanced, or in the Investigator's opinion the subject is high risk for incurable relapse within two years.",
+      "reasonFuzzy": "The stage description uses descriptive terms (metastatic, unresectable locally advanced) and investigator opinion rather than a standardized stage list."
+    },
+    {
+      "id": "NCT04981119-stage-part2",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically confirmed solid tumors, e.g., Colorectal Cancer (CRC), Non-Small Cell Lung Cancer (NSCLC), Pancreatic Cancer (PANC), Mesothelioma, or Ovarian Cancer (OVAC) that is metastatic, unresectable locally advanced, or in the Investigator's opinion the subject is high risk for incurable relapse within two years.",
+      "reasonFuzzy": "The stage description uses descriptive terms (metastatic, unresectable locally advanced) and investigator opinion rather than a standardized stage list."
+    },
+    {
+      "id": "NCT04981119-hla-part2",
+      "polarity": "inclusion",
+      "sourceText": "Participants are germline HLA-A*02 heterozygous confirmed by HLA typing.",
+      "reasonFuzzy": "HLA genotyping is not a typed biomarker kind available in the schema."
+    },
+    {
+      "id": "NCT04981119-loh-part2",
+      "polarity": "inclusion",
+      "sourceText": "Primary tumor tissue showing LOH of HLA-A*02 by NGS testing.",
+      "reasonFuzzy": "Loss of heterozygosity is not a typed biomarker kind available in the schema."
+    },
+    {
+      "id": "NCT04981119-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "History of any of other malignancy in the past 5 years other than non-melanoma skin carcinoma, low grade localized prostate cancer, superficial bladder cancer, ductal carcinoma in situ (CIS) of the breast, CIS of the Cervix, or Stage I uterine cancer.",
+      "reasonFuzzy": "Prior malignancy history with multiple specific exceptions is too complex for a single typed rule."
+    },
+    {
+      "id": "NCT04981119-allo-stem-cell",
+      "polarity": "exclusion",
+      "sourceText": "Prior allogeneic stem cell transplant.",
+      "reasonFuzzy": "Prior transplant exclusion is not covered by the allowed typed prior therapy categories."
+    },
+    {
+      "id": "NCT04981119-solid-organ",
+      "polarity": "exclusion",
+      "sourceText": "Prior solid organ transplant.",
+      "reasonFuzzy": "Prior transplant exclusion is not covered by the allowed typed prior therapy categories."
+    },
+    {
+      "id": "NCT04981119-washout",
+      "polarity": "exclusion",
+      "sourceText": "Participants who have received any cancer therapy on any investigational therapy for any indication, including but not limited to chemotherapy, small molecules, monoclonal antibodies, or radiotherapy (with bone marrow impact) within 2 weeks of planned apheresis or 3 half-lives, whichever is shorter.",
+      "reasonFuzzy": "Complex washout window involving multiple therapy types and half-lives is not a simple lab or standard therapy exclusion."
+    },
+    {
+      "id": "NCT04981119-infection",
+      "polarity": "exclusion",
+      "sourceText": "Known active bacterial, viral, fungal, mycobacterial, parasitic, or other infection (excluding fungal infections of nail beds) at study enrollment necessitating specific treatment, or any major episode of infection requiring treatment with Intravenous (IV) antimicrobials (e.g., IV antibiotics) or hospitalization (relating to completion of antibiotic course).",
+      "reasonFuzzy": "Active infection criteria with multiple clinical conditions and hospitalization clauses are subjective and lack a direct typed category."
+    },
+    {
+      "id": "NCT04981119-investigator-judgement",
+      "polarity": "exclusion",
+      "sourceText": "In the Investigator's judgement, any other condition or reason the subject would not complete the required study visits and procedures, and follow up visits, or comply with the study requirements for participation.",
+      "reasonFuzzy": "Investigator judgment-based exclusions are subjective."
+    },
+    {
+      "id": "NCT04981119-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04981119-brain",
+      "polarity": "exclusion",
+      "sourceText": "Has known active central nervous system metastases. Subjects with previously treated brain metastases may participate upon medical monitor agreement.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 3685
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 10,
+    "attempts": 1,
+    "ms": 4355
+  },
+  "ms": 16038,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04981119",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04981119-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) 0 or 1 performance status.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04981119-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active central nervous system metastases. Subjects with previously treated brain metastases may participate upon medical monitor agreement.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ],
+        "exceptions": "Subjects with previously treated brain metastases may participate upon medical monitor agreement."
+      },
+      {
+        "id": "NCT04981119-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04981119-stage",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed solid tumors, e.g., Colorectal Cancer (CRC), Non-Small Cell Lung Cancer (NSCLC), or Pancreatic Cancer (PANC), that is metastatic, unresectable locally advanced, or in the Investigator's opinion the subject is high risk for incurable relapse within two years.",
+        "reasonFuzzy": "The record mentions metastatic and unresectable locally advanced disease or investigator opinion, but does not state a numbered stage list."
+      },
+      {
+        "id": "NCT04981119-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "History of any of other malignancy in the past 5 years other than non-melanoma skin carcinoma, low grade localized prostate cancer, superficial bladder cancer, ductal carcinoma in situ (CIS) of the breast, CIS of the Cervix, or Stage I uterine cancer.",
+        "reasonFuzzy": "Prior malignancy exclusions with multiple cancer-specific exceptions cannot be expressed as a single typed prior therapy check."
+      },
+      {
+        "id": "NCT04981119-allo-tx",
+        "polarity": "exclusion",
+        "sourceText": "Prior allogeneic stem cell transplant.",
+        "reasonFuzzy": "Prior transplant is not represented in the allowed typed prior therapy or exclusion kinds."
+      },
+      {
+        "id": "NCT04981119-solid-tx",
+        "polarity": "exclusion",
+        "sourceText": "Prior solid organ transplant.",
+        "reasonFuzzy": "Prior organ transplant is not represented in the allowed typed prior therapy or exclusion kinds."
+      },
+      {
+        "id": "NCT04981119-washout",
+        "polarity": "exclusion",
+        "sourceText": "Participants who have received any cancer therapy on any investigational therapy for any indication, including but not limited to chemotherapy, small molecules, monoclonal antibodies, or radiotherapy (with bone marrow impact) within 2 weeks of planned apheresis or 3 half-lives, whichever is shorter.",
+        "reasonFuzzy": "Washout windows tied to half-lives or multiple treatment modalities are left in fuzzy criteria."
+      },
+      {
+        "id": "NCT04981119-infection",
+        "polarity": "exclusion",
+        "sourceText": "Known active bacterial, viral, fungal, mycobacterial, parasitic, or other infection (excluding fungal infections of nail beds) at study enrollment necessitating specific treatment, or any major episode of infection requiring treatment with Intravenous (IV) antimicrobials (e.g., IV antibiotics) or hospitalization (relating to completion of antibiotic course).",
+        "reasonFuzzy": "Active infection criteria requiring specific treatment or hospitalization are subjective and not typed lab cutoffs."
+      },
+      {
+        "id": "NCT04981119-investigator",
+        "polarity": "exclusion",
+        "sourceText": "In the Investigator's judgement, any other condition or reason the subject would not complete the required study visits and procedures, and follow up visits, or comply with the study requirements for participation.",
+        "reasonFuzzy": "Investigator judgment criteria are subjective."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04981119",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04981119-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) 0 or 1 performance status.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04981119-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04981119-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has known active central nervous system metastases. Subjects with previously treated brain metastases may participate upon medical monitor agreement.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04981119-stage-part1",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed solid tumors, e.g., Colorectal Cancer (CRC), Non-Small Cell Lung Cancer (NSCLC), or Pancreatic Cancer (PANC), that is metastatic, unresectable locally advanced, or in the Investigator's opinion the subject is high risk for incurable relapse within two years.",
+        "reasonFuzzy": "The stage description uses descriptive terms (metastatic, unresectable locally advanced) and investigator opinion rather than a standardized stage list."
+      },
+      {
+        "id": "NCT04981119-stage-part2",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed solid tumors, e.g., Colorectal Cancer (CRC), Non-Small Cell Lung Cancer (NSCLC), Pancreatic Cancer (PANC), Mesothelioma, or Ovarian Cancer (OVAC) that is metastatic, unresectable locally advanced, or in the Investigator's opinion the subject is high risk for incurable relapse within two years.",
+        "reasonFuzzy": "The stage description uses descriptive terms (metastatic, unresectable locally advanced) and investigator opinion rather than a standardized stage list."
+      },
+      {
+        "id": "NCT04981119-hla-part2",
+        "polarity": "inclusion",
+        "sourceText": "Participants are germline HLA-A*02 heterozygous confirmed by HLA typing.",
+        "reasonFuzzy": "HLA genotyping is not a typed biomarker kind available in the schema."
+      },
+      {
+        "id": "NCT04981119-loh-part2",
+        "polarity": "inclusion",
+        "sourceText": "Primary tumor tissue showing LOH of HLA-A*02 by NGS testing.",
+        "reasonFuzzy": "Loss of heterozygosity is not a typed biomarker kind available in the schema."
+      },
+      {
+        "id": "NCT04981119-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "History of any of other malignancy in the past 5 years other than non-melanoma skin carcinoma, low grade localized prostate cancer, superficial bladder cancer, ductal carcinoma in situ (CIS) of the breast, CIS of the Cervix, or Stage I uterine cancer.",
+        "reasonFuzzy": "Prior malignancy history with multiple specific exceptions is too complex for a single typed rule."
+      },
+      {
+        "id": "NCT04981119-allo-stem-cell",
+        "polarity": "exclusion",
+        "sourceText": "Prior allogeneic stem cell transplant.",
+        "reasonFuzzy": "Prior transplant exclusion is not covered by the allowed typed prior therapy categories."
+      },
+      {
+        "id": "NCT04981119-solid-organ",
+        "polarity": "exclusion",
+        "sourceText": "Prior solid organ transplant.",
+        "reasonFuzzy": "Prior transplant exclusion is not covered by the allowed typed prior therapy categories."
+      },
+      {
+        "id": "NCT04981119-washout",
+        "polarity": "exclusion",
+        "sourceText": "Participants who have received any cancer therapy on any investigational therapy for any indication, including but not limited to chemotherapy, small molecules, monoclonal antibodies, or radiotherapy (with bone marrow impact) within 2 weeks of planned apheresis or 3 half-lives, whichever is shorter.",
+        "reasonFuzzy": "Complex washout window involving multiple therapy types and half-lives is not a simple lab or standard therapy exclusion."
+      },
+      {
+        "id": "NCT04981119-infection",
+        "polarity": "exclusion",
+        "sourceText": "Known active bacterial, viral, fungal, mycobacterial, parasitic, or other infection (excluding fungal infections of nail beds) at study enrollment necessitating specific treatment, or any major episode of infection requiring treatment with Intravenous (IV) antimicrobials (e.g., IV antibiotics) or hospitalization (relating to completion of antibiotic course).",
+        "reasonFuzzy": "Active infection criteria with multiple clinical conditions and hospitalization clauses are subjective and lack a direct typed category."
+      },
+      {
+        "id": "NCT04981119-investigator-judgement",
+        "polarity": "exclusion",
+        "sourceText": "In the Investigator's judgement, any other condition or reason the subject would not complete the required study visits and procedures, and follow up visits, or comply with the study requirements for participation.",
+        "reasonFuzzy": "Investigator judgment-based exclusions are subjective."
+      }
+    ]
+  }
+}

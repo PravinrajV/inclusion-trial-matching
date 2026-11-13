@@ -1,0 +1,408 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06692738",
+  "briefTitle": "A Global Phase III Study of Rilvegostomig or Pembrolizumab Plus Chemotherapy for First-Line Treatment of Locally Advanced or Metastatic Squamous Non-small Cell Lung Cancer (NSCLC)",
+  "parsedAt": "2026-11-12T10:31:38.874Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06692738-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Stage III B/C or IV mNSCLC (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment.",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Stage III B/C or IV mNSCLC (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06692738-prior-pdl1",
+      "kind": "prior_therapy_excluded",
+      "polarity": "exclusion",
+      "sourceText": "Any prior treatment with an anti-PD-1 or anti-PD-L1 agent.",
+      "stringValue": "anti-PD-1 or anti-PD-L1 agent",
+      "evidence_quote": "Any prior treatment with an anti-PD-1 or anti-PD-L1 agent.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06692738-actionable",
+      "polarity": "inclusion",
+      "sourceText": "Absence of documented tumor genomic mutation results from tests conducted as part of standard local practice in any actionable driver oncogenes for which there are locally approved and available targeted 1L therapies.",
+      "reasonFuzzy": "Actionable driver oncogenes without specific gene names cannot be represented by a single typed mutation check."
+    },
+    {
+      "id": "NCT06692738-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 TL at baseline and can be accurately measured at baseline as ≥ 10 mm in the longest diameter (except lymph nodes, which must have short axis ≥ 15 mm) with CT or MRI and is suitable for accurate repeated measurements.",
+      "reasonFuzzy": "Measurable disease per RECIST 1.1 is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06692738-histology-excl",
+      "polarity": "exclusion",
+      "sourceText": "Presence of small cell and neuroendocrine histology components.",
+      "reasonFuzzy": "Exclusion of mixed components is a histological judgment not directly mapped to a typed presence check."
+    },
+    {
+      "id": "NCT06692738-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06692738-driver",
+      "polarity": "inclusion",
+      "sourceText": "Absence of documented tumor genomic mutation results from tests conducted as part of standard local practice in any actionable driver oncogenes for which there are locally approved and available targeted 1L therapies.",
+      "reasonFuzzy": "Refers broadly to any actionable driver oncogenes with locally approved targeted therapies rather than a single specific named biomarker status."
+    },
+    {
+      "id": "NCT06692738-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 TL at baseline and can be accurately measured at baseline as ≥ 10 mm in the longest diameter (except lymph nodes, which must have short axis ≥ 15 mm) with CT or MRI and is suitable for accurate repeated measurements.",
+      "reasonFuzzy": "Measurable disease per RECIST 1.1 is an imaging judgment and involves multiple specific lesion criteria."
+    },
+    {
+      "id": "NCT06692738-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ and bone marrow function.",
+      "reasonFuzzy": "General statement for organ and marrow function without explicit numeric cutoffs in the source text."
+    },
+    {
+      "id": "NCT06692738-smallcell",
+      "polarity": "exclusion",
+      "sourceText": "Presence of small cell and neuroendocrine histology components.",
+      "reasonFuzzy": "Exclusion covers specific mixed components rather than a straightforward histology exclusion category."
+    },
+    {
+      "id": "NCT06692738-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06692738-brain",
+      "polarity": "inclusion",
+      "sourceText": "Brain metastases unless asymptomatic, stable, and not requiring steroids or anticonvulsants for at least 7 days prior to randomization.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06692738-brain",
+      "polarity": "exclusion",
+      "sourceText": "Brain metastases unless asymptomatic, stable, and not requiring steroids or anticonvulsants for at least 7 days prior to randomization.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06692738-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically documented squamous NSCLC.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06692738-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Provision of acceptable tumor sample to confirm tumor PD-L1 expression TC ≥ 1%.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06692738-prior-systemic",
+      "polarity": "exclusion",
+      "sourceText": "Any prior systemic, non-curative therapy received for NSCLC.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06692738-prior-tigit",
+      "polarity": "exclusion",
+      "sourceText": "Any prior exposure to an anti-TIGIT therapy or any other anticancer therapy targeting immune-regulatory receptors or mechanisms.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 7,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 7,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 6,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:squamous"
+        },
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:systemic, non-curative therapy"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-tigit therapy"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 8,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 5413
+  },
+  "runB": {
+    "typedEmitted": 8,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 3484
+  },
+  "ms": 16877,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06692738",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06692738-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically documented squamous NSCLC.",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT06692738-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage III B/C or IV mNSCLC (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06692738-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Provision of acceptable tumor sample to confirm tumor PD-L1 expression TC ≥ 1%.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06692738-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Brain metastases unless asymptomatic, stable, and not requiring steroids or anticonvulsants for at least 7 days prior to randomization.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06692738-prior-systemic",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior systemic, non-curative therapy received for NSCLC.",
+        "stringValue": "systemic, non-curative therapy"
+      },
+      {
+        "id": "NCT06692738-prior-pdl1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior treatment with an anti-PD-1 or anti-PD-L1 agent.",
+        "stringValue": "anti-PD-1 or anti-PD-L1 agent"
+      },
+      {
+        "id": "NCT06692738-prior-tigit",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior exposure to an anti-TIGIT therapy or any other anticancer therapy targeting immune-regulatory receptors or mechanisms.",
+        "stringValue": "anti-TIGIT therapy"
+      },
+      {
+        "id": "NCT06692738-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06692738-actionable",
+        "polarity": "inclusion",
+        "sourceText": "Absence of documented tumor genomic mutation results from tests conducted as part of standard local practice in any actionable driver oncogenes for which there are locally approved and available targeted 1L therapies.",
+        "reasonFuzzy": "Actionable driver oncogenes without specific gene names cannot be represented by a single typed mutation check."
+      },
+      {
+        "id": "NCT06692738-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 TL at baseline and can be accurately measured at baseline as ≥ 10 mm in the longest diameter (except lymph nodes, which must have short axis ≥ 15 mm) with CT or MRI and is suitable for accurate repeated measurements.",
+        "reasonFuzzy": "Measurable disease per RECIST 1.1 is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06692738-histology-excl",
+        "polarity": "exclusion",
+        "sourceText": "Presence of small cell and neuroendocrine histology components.",
+        "reasonFuzzy": "Exclusion of mixed components is a histological judgment not directly mapped to a typed presence check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06692738",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06692738-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically documented squamous NSCLC.",
+        "histologies": [
+          "squamous"
+        ]
+      },
+      {
+        "id": "NCT06692738-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Stage III B/C or IV mNSCLC (based on the American Joint Committee on Cancer Edition 8) not amenable to curative treatment.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06692738-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Provision of acceptable tumor sample to confirm tumor PD-L1 expression TC ≥ 1%.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06692738-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06692738-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Brain metastases unless asymptomatic, stable, and not requiring steroids or anticonvulsants for at least 7 days prior to randomization.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06692738-prior-systemic",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior systemic, non-curative therapy received for NSCLC.",
+        "stringValue": "systemic, non-curative therapy"
+      },
+      {
+        "id": "NCT06692738-prior-pd1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior treatment with an anti-PD-1 or anti-PD-L1 agent.",
+        "stringValue": "anti-PD-1 or anti-PD-L1"
+      },
+      {
+        "id": "NCT06692738-prior-tigit",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Any prior exposure to an anti-TIGIT therapy or any other anticancer therapy targeting immune-regulatory receptors or mechanisms.",
+        "stringValue": "anti-TIGIT"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06692738-driver",
+        "polarity": "inclusion",
+        "sourceText": "Absence of documented tumor genomic mutation results from tests conducted as part of standard local practice in any actionable driver oncogenes for which there are locally approved and available targeted 1L therapies.",
+        "reasonFuzzy": "Refers broadly to any actionable driver oncogenes with locally approved targeted therapies rather than a single specific named biomarker status."
+      },
+      {
+        "id": "NCT06692738-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one lesion not previously irradiated that qualifies as a RECIST 1.1 TL at baseline and can be accurately measured at baseline as ≥ 10 mm in the longest diameter (except lymph nodes, which must have short axis ≥ 15 mm) with CT or MRI and is suitable for accurate repeated measurements.",
+        "reasonFuzzy": "Measurable disease per RECIST 1.1 is an imaging judgment and involves multiple specific lesion criteria."
+      },
+      {
+        "id": "NCT06692738-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ and bone marrow function.",
+        "reasonFuzzy": "General statement for organ and marrow function without explicit numeric cutoffs in the source text."
+      },
+      {
+        "id": "NCT06692738-smallcell",
+        "polarity": "exclusion",
+        "sourceText": "Presence of small cell and neuroendocrine histology components.",
+        "reasonFuzzy": "Exclusion covers specific mixed components rather than a straightforward histology exclusion category."
+      }
+    ]
+  }
+}

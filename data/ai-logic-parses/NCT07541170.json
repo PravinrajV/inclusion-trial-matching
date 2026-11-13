@@ -1,0 +1,385 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07541170",
+  "briefTitle": "A Study to Evaluate the Efficacy and Safety of Divarasib Compared With Investigator's Choice of Immunotherapy or Observation in Participants With Resected Stage II-III KRAS G12C-Positive Non-Small Cell Lung Cancer (NSCLC)",
+  "parsedAt": "2026-11-12T11:56:28.078Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07541170-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07541170-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Histological or cytological diagnosis of clinical Stage II-IIIB NSCLC of either non-squamous or squamous histology",
+      "stages": [
+        "IIA",
+        "IIB",
+        "IIIA",
+        "IIIB"
+      ],
+      "evidence_quote": "Histological or cytological diagnosis of clinical Stage II-IIIB NSCLC of either non-squamous or squamous histology",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07541170-resection",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have had complete resection of NSCLC",
+      "reasonFuzzy": "Surgical resection status is not a typed check."
+    },
+    {
+      "id": "NCT07541170-neoadj",
+      "polarity": "inclusion",
+      "sourceText": "Prior treatment with neoadjuvant immune checkpoint inhibitor (pembrolizumab or nivolumab) in combination with histology-based platinum-based doublet chemotherapy",
+      "reasonFuzzy": "Complex prior therapy combination with multiple agents is not easily expressible as a single typed prior_therapy_required check."
+    },
+    {
+      "id": "NCT07541170-randomized",
+      "polarity": "inclusion",
+      "sourceText": "Participants must be randomized within 12 weeks of their surgery date",
+      "reasonFuzzy": "Randomization time window relative to surgery is a procedural rule."
+    },
+    {
+      "id": "NCT07541170-recurrence",
+      "polarity": "inclusion",
+      "sourceText": "No evidence of disease recurrence or metastatic disease",
+      "reasonFuzzy": "Disease recurrence status is an imaging/clinical assessment judgment."
+    },
+    {
+      "id": "NCT07541170-pcr",
+      "polarity": "exclusion",
+      "sourceText": "Participants who achieve pCR following neoadjuvant treatment",
+      "reasonFuzzy": "Pathological complete response (pCR) is a pathologist judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07541170-rad",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with radiation therapy for NSCLC, with the exception of localized symptom-directed radiation prior to surgical resection",
+      "reasonFuzzy": "Prior radiation with specific localization exception is not a simple typed prior therapy exclusion."
+    },
+    {
+      "id": "NCT07541170-irgae",
+      "polarity": "exclusion",
+      "sourceText": "Resolved Grade 3 or greater immune-related AE or unresolved Grade 2 or greater immune-related AE from neoadjuvant immunotherapy",
+      "reasonFuzzy": "Immune-related adverse event grading and resolution status are clinical judgment criteria."
+    },
+    {
+      "id": "NCT07541170-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Active or history of autoimmune disease or immune deficiency",
+      "reasonFuzzy": "Autoimmune disease history is a medical history judgment, not a typed check."
+    },
+    {
+      "id": "NCT07541170-cardio",
+      "polarity": "exclusion",
+      "sourceText": "Significant cardiovascular disease",
+      "reasonFuzzy": "Significant cardiovascular disease is a clinical judgment criterion."
+    },
+    {
+      "id": "NCT07541170-resection",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have had complete resection of NSCLC",
+      "reasonFuzzy": "Complete resection is a surgical status, not a typed check."
+    },
+    {
+      "id": "NCT07541170-randomized",
+      "polarity": "inclusion",
+      "sourceText": "Participants must be randomized within 12 weeks of their surgery date",
+      "reasonFuzzy": "A surgery-to-randomization time window is a scheduling rule rather than a lab or clinical cutoff."
+    },
+    {
+      "id": "NCT07541170-recurrence",
+      "polarity": "inclusion",
+      "sourceText": "No evidence of disease recurrence or metastatic disease",
+      "reasonFuzzy": "Absence of recurrence/metastatic disease is a disease status assessed by imaging, not a typed check."
+    },
+    {
+      "id": "NCT07541170-pcr",
+      "polarity": "exclusion",
+      "sourceText": "Participants who achieve pCR following neoadjuvant treatment",
+      "reasonFuzzy": "Pathological complete response (pCR) is a specialized histologic evaluation, not a typed check."
+    },
+    {
+      "id": "NCT07541170-priorthx",
+      "polarity": "inclusion",
+      "sourceText": "Prior treatment with neoadjuvant immune checkpoint inhibitor (pembrolizumab or nivolumab) in combination with histology-based platinum-based doublet chemotherapy",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07541170-kras",
+      "polarity": "inclusion",
+      "sourceText": "Documentation of the presence of a KRAS G12C mutation",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07541170-krasvar",
+      "polarity": "inclusion",
+      "sourceText": "Documentation of the presence of a KRAS G12C mutation",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07541170-krasexcl",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with a KRAS inhibitor or any other anti-cancer therapy not otherwise specified in the protocol",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:platinum-based doublet chemotherapy"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12c"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:kras inhibitor"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 3990
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 3175
+  },
+  "ms": 15148,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07541170",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07541170-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07541170-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histological or cytological diagnosis of clinical Stage II-IIIB NSCLC of either non-squamous or squamous histology",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT07541170-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Documentation of the presence of a KRAS G12C mutation",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07541170-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Documentation of the presence of a KRAS G12C mutation",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT07541170-krasexcl",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a KRAS inhibitor or any other anti-cancer therapy not otherwise specified in the protocol",
+        "stringValue": "KRAS inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07541170-resection",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have had complete resection of NSCLC",
+        "reasonFuzzy": "Surgical resection status is not a typed check."
+      },
+      {
+        "id": "NCT07541170-neoadj",
+        "polarity": "inclusion",
+        "sourceText": "Prior treatment with neoadjuvant immune checkpoint inhibitor (pembrolizumab or nivolumab) in combination with histology-based platinum-based doublet chemotherapy",
+        "reasonFuzzy": "Complex prior therapy combination with multiple agents is not easily expressible as a single typed prior_therapy_required check."
+      },
+      {
+        "id": "NCT07541170-randomized",
+        "polarity": "inclusion",
+        "sourceText": "Participants must be randomized within 12 weeks of their surgery date",
+        "reasonFuzzy": "Randomization time window relative to surgery is a procedural rule."
+      },
+      {
+        "id": "NCT07541170-recurrence",
+        "polarity": "inclusion",
+        "sourceText": "No evidence of disease recurrence or metastatic disease",
+        "reasonFuzzy": "Disease recurrence status is an imaging/clinical assessment judgment."
+      },
+      {
+        "id": "NCT07541170-pcr",
+        "polarity": "exclusion",
+        "sourceText": "Participants who achieve pCR following neoadjuvant treatment",
+        "reasonFuzzy": "Pathological complete response (pCR) is a pathologist judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT07541170-rad",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with radiation therapy for NSCLC, with the exception of localized symptom-directed radiation prior to surgical resection",
+        "reasonFuzzy": "Prior radiation with specific localization exception is not a simple typed prior therapy exclusion."
+      },
+      {
+        "id": "NCT07541170-irgae",
+        "polarity": "exclusion",
+        "sourceText": "Resolved Grade 3 or greater immune-related AE or unresolved Grade 2 or greater immune-related AE from neoadjuvant immunotherapy",
+        "reasonFuzzy": "Immune-related adverse event grading and resolution status are clinical judgment criteria."
+      },
+      {
+        "id": "NCT07541170-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Active or history of autoimmune disease or immune deficiency",
+        "reasonFuzzy": "Autoimmune disease history is a medical history judgment, not a typed check."
+      },
+      {
+        "id": "NCT07541170-cardio",
+        "polarity": "exclusion",
+        "sourceText": "Significant cardiovascular disease",
+        "reasonFuzzy": "Significant cardiovascular disease is a clinical judgment criterion."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07541170",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07541170-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07541170-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histological or cytological diagnosis of clinical Stage II-IIIB NSCLC of either non-squamous or squamous histology",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT07541170-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Documentation of the presence of a KRAS G12C mutation",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07541170-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Documentation of the presence of a KRAS G12C mutation",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT07541170-priorthx",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Prior treatment with neoadjuvant immune checkpoint inhibitor (pembrolizumab or nivolumab) in combination with histology-based platinum-based doublet chemotherapy",
+        "stringValue": "platinum-based doublet chemotherapy"
+      },
+      {
+        "id": "NCT07541170-krasexcl",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a KRAS inhibitor or any other anti-cancer therapy not otherwise specified in the protocol",
+        "stringValue": "KRAS inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07541170-resection",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have had complete resection of NSCLC",
+        "reasonFuzzy": "Complete resection is a surgical status, not a typed check."
+      },
+      {
+        "id": "NCT07541170-randomized",
+        "polarity": "inclusion",
+        "sourceText": "Participants must be randomized within 12 weeks of their surgery date",
+        "reasonFuzzy": "A surgery-to-randomization time window is a scheduling rule rather than a lab or clinical cutoff."
+      },
+      {
+        "id": "NCT07541170-recurrence",
+        "polarity": "inclusion",
+        "sourceText": "No evidence of disease recurrence or metastatic disease",
+        "reasonFuzzy": "Absence of recurrence/metastatic disease is a disease status assessed by imaging, not a typed check."
+      },
+      {
+        "id": "NCT07541170-pcr",
+        "polarity": "exclusion",
+        "sourceText": "Participants who achieve pCR following neoadjuvant treatment",
+        "reasonFuzzy": "Pathological complete response (pCR) is a specialized histologic evaluation, not a typed check."
+      }
+    ]
+  }
+}

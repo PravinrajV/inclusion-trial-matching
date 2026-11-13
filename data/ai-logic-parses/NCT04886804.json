@@ -1,0 +1,536 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04886804",
+  "briefTitle": "Beamion LUNG-1: A Study to Test Different Doses of Zongertinib in People With Different Types of Advanced Cancer (Solid Tumours With Changes in the HER2 Gene)",
+  "parsedAt": "2026-11-12T06:07:52.393Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04886804-egfr",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Estimated Glomerular Filtration Rate (eGFR) ≥ 50 mL/min - calculated using Chronic Kidney Disease Epidemiology (CKD-EPI) formula (≥ 30 mL/min/1.73m² for cohorts 6, 8, and 9).",
+      "numberValue": 50,
+      "stages": [],
+      "stringValue": "50 mL/min",
+      "evidence_quote": "Estimated Glomerular Filtration Rate (eGFR) ≥ 50 mL/min - calculated using Chronic Kidney Disease Epidemiology (CKD-EPI) formula (≥ 30 mL/min/1.73m² for cohorts 6, 8, and 9).",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT04886804-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "At least 18 years of age at the time of consent or over the legal age of consent in countries where that is greater than 18 years.",
+      "numberValue": 18,
+      "evidence_quote": "At least 18 years of age at the time of consent or over the legal age of consent in countries where that is greater than 18 years.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04886804-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patient must show presence of at least one measurable lesion according to Response Evaluation Criteria In Solid Tumors (RECIST) 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04886804-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Availability and patient willingness to provide a sample of tumour for confirmation of the patient´s Human epidermal growth factor receptor 2 (HER2) status. This sample can be archival material obtained at any time prior to study enrollment.",
+      "reasonFuzzy": "Willingness to provide a biopsy and tissue availability are subjective clinical requirements, not typed checks."
+    },
+    {
+      "id": "NCT04886804-brainbiopsy",
+      "polarity": "inclusion",
+      "sourceText": "Patient willing and able to comply with the protocol requirements for tumour biopsies (biopsies from brain metastases are not allowed).",
+      "reasonFuzzy": "Willingness to comply with procedure requirements is subjective."
+    },
+    {
+      "id": "NCT04886804-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of at least 12 weeks at the start of treatment in the opinion of the investigator.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT04886804-her2var",
+      "polarity": "inclusion",
+      "sourceText": "Patients with a documented diagnosis of HER2 aberration: overexpression OR gene amplification OR non-synonymous somatic mutation OR gene rearrangement involving HER2 or Neuregulin 1 (NRG1)",
+      "reasonFuzzy": "There is no typed kind for HER2 or NRG1 variants."
+    },
+    {
+      "id": "NCT04886804-brainmets",
+      "polarity": "inclusion",
+      "sourceText": "Patient with active brain metastases who are not eligible for immediate local therapy, as per investigator evaluation.",
+      "reasonFuzzy": "Active or symptomatic brain metastases and investigator evaluation are not a clean typed brain_mets status."
+    },
+    {
+      "id": "NCT04886804-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥ 1.5 x 10^9/L (≥ 1.5 x 10^3/μL) (≥ 1500/mm^3)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04886804-plt",
+      "polarity": "inclusion",
+      "sourceText": "platelets ≥ 100 x 10^9/L (100 x 10^3/μL) (100 x 10^3/mm3) without the use of hematopoietic growth factors within 4 weeks of start of trial medication",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04886804-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Patient must show presence of at least one measurable lesion according to Response Evaluation Criteria In Solid Tumors (RECIST) 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04886804-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) score of 0, 1 or 2 (ECOG=2 only for Cohorts 6, 7 and 9) .",
+      "reasonFuzzy": "ECOG maximum is 2, but restricted by cohort rules, which cannot be modeled with a simple static ecog_max check."
+    },
+    {
+      "id": "NCT04886804-biopsy-willingness",
+      "polarity": "inclusion",
+      "sourceText": "Availability and patient willingness to provide a sample of tumour for confirmation of the patient´s Human epidermal growth factor receptor 2 (HER2) status. This sample can be archival material obtained at any time prior to study enrollment.",
+      "reasonFuzzy": "Patient willingness and sample availability are subjective criteria."
+    },
+    {
+      "id": "NCT04886804-brain-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Patient willing and able to comply with the protocol requirements for tumour biopsies (biopsies from brain metastases are not allowed).",
+      "reasonFuzzy": "Willingness and biopsy constraints are subjective requirements."
+    },
+    {
+      "id": "NCT04886804-life-expectancy",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of at least 12 weeks at the start of treatment in the opinion of the investigator.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT04886804-her2",
+      "polarity": "inclusion",
+      "sourceText": "Patients with a documented diagnosis of HER2 aberration: overexpression OR gene amplification OR non-synonymous somatic mutation OR gene rearrangement involving HER2 or Neuregulin 1 (NRG1)",
+      "reasonFuzzy": "There is no typed kind for HER2 variants."
+    },
+    {
+      "id": "NCT04886804-cohort-complexities",
+      "polarity": "inclusion",
+      "sourceText": "Additional inclusion criteria for Phase Ib - Cohort 1 through Cohort 9",
+      "reasonFuzzy": "Detailed phase Ib cohort-specific lines of therapy, prior targeted therapies, and brain metastasis permissions are too complex and variant to express as single global typed checks."
+    },
+    {
+      "id": "NCT04886804-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Previous or concomitant malignancies other than the one treated in this trial within the last 2 years, except...",
+      "reasonFuzzy": "Prior malignancy exclusions with specific exceptions cannot be modeled by a standard typed check."
+    },
+    {
+      "id": "NCT04886804-washout",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with a systemic anti-cancer therapy or investigational drug within 21 days or 5 half-lives (whichever is shorter) of the first treatment with the study medication",
+      "reasonFuzzy": "Complex washout window involving half-lives."
+    },
+    {
+      "id": "NCT04886804-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥ 1.5 x 10^9/L (≥ 1.5 x 10^3/μL) (≥ 1500/mm^3)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04886804-platelets",
+      "polarity": "inclusion",
+      "sourceText": "platelets ≥ 100 x 10^9/L (100 x 10^3/μL) (100 x 10^3/mm3)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04886804-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) score of 0, 1 or 2 (ECOG=2 only for Cohorts 6, 7 and 9)",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT04886804-hgb",
+      "polarity": "inclusion",
+      "sourceText": "haemoglobin ≥ 9.0 g/dL (≥ 90 g/L) (≥ 5.6 mmol/L)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04886804-bili",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin ≤ 1.5 times the upper limit of normal (ULN), except for patients with Gilbert's syndrome: total bilirubin ≤ 3 x ULN or direct bilirubin ≤ 1.5 x ULN.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04886804-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate transaminase (AST) and alanine transaminase (ALT) ≤ 3 x ULN if no demonstrable liver metastases, or otherwise ≤ 5 x ULN if transaminase elevation is attributable to liver metastases.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04886804-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate transaminase (AST) and alanine transaminase (ALT) ≤ 3 x ULN if no demonstrable liver metastases, or otherwise ≤ 5 x ULN if transaminase elevation is attributable to liver metastases.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT04886804-priorzongertinib",
+      "polarity": "exclusion",
+      "sourceText": "Previous treatment with zongertinib.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 8,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) ≥ 1.5 x 10^9/L (≥ 1.5 x 10^3/μL) (≥ 1500/mm^3)"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "platelets ≥ 100 x 10^9/L (100 x 10^3/μL) (100 x 10^3/mm3) without the use of hematopoietic growth factors within 4 weeks of start of trial medication"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 7,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) ≥ 1.5 x 10^9/L (≥ 1.5 x 10^3/μL) (≥ 1500/mm^3)"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "platelets ≥ 100 x 10^9/L (100 x 10^3/μL) (100 x 10^3/mm3)"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 7,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:2"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 5,
+      "rejectedItems": [
+        {
+          "kind": "hemoglobin_min",
+          "polarity": "inclusion",
+          "value": "n:9"
+        },
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:3"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:zongertinib"
+        }
+      ],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 10,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 4559
+  },
+  "runB": {
+    "typedEmitted": 9,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 5268
+  },
+  "ms": 17842,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04886804",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04886804-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) score of 0, 1 or 2 (ECOG=2 only for Cohorts 6, 7 and 9)",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT04886804-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥ 1.5 x 10^9/L (≥ 1.5 x 10^3/μL) (≥ 1500/mm^3)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT04886804-hgb",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "haemoglobin ≥ 9.0 g/dL (≥ 90 g/L) (≥ 5.6 mmol/L)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT04886804-plt",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "platelets ≥ 100 x 10^9/L (100 x 10^3/μL) (100 x 10^3/mm3) without the use of hematopoietic growth factors within 4 weeks of start of trial medication",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT04886804-bili",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 times the upper limit of normal (ULN), except for patients with Gilbert's syndrome: total bilirubin ≤ 3 x ULN or direct bilirubin ≤ 1.5 x ULN.",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "1.5 x ULN"
+      },
+      {
+        "id": "NCT04886804-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Estimated Glomerular Filtration Rate (eGFR) ≥ 50 mL/min - calculated using Chronic Kidney Disease Epidemiology (CKD-EPI) formula (≥ 30 mL/min/1.73m² for cohorts 6, 8, and 9).",
+        "numberValue": 50,
+        "stages": [],
+        "stringValue": "50 mL/min"
+      },
+      {
+        "id": "NCT04886804-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate transaminase (AST) and alanine transaminase (ALT) ≤ 3 x ULN if no demonstrable liver metastases, or otherwise ≤ 5 x ULN if transaminase elevation is attributable to liver metastases.",
+        "numberValue": 3,
+        "stringValue": "3 x ULN"
+      },
+      {
+        "id": "NCT04886804-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate transaminase (AST) and alanine transaminase (ALT) ≤ 3 x ULN if no demonstrable liver metastases, or otherwise ≤ 5 x ULN if transaminase elevation is attributable to liver metastases.",
+        "numberValue": 3,
+        "stringValue": "3 x ULN"
+      },
+      {
+        "id": "NCT04886804-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "At least 18 years of age at the time of consent or over the legal age of consent in countries where that is greater than 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04886804-priorzongertinib",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Previous treatment with zongertinib.",
+        "stringValue": "zongertinib"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04886804-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patient must show presence of at least one measurable lesion according to Response Evaluation Criteria In Solid Tumors (RECIST) 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT04886804-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Availability and patient willingness to provide a sample of tumour for confirmation of the patient´s Human epidermal growth factor receptor 2 (HER2) status. This sample can be archival material obtained at any time prior to study enrollment.",
+        "reasonFuzzy": "Willingness to provide a biopsy and tissue availability are subjective clinical requirements, not typed checks."
+      },
+      {
+        "id": "NCT04886804-brainbiopsy",
+        "polarity": "inclusion",
+        "sourceText": "Patient willing and able to comply with the protocol requirements for tumour biopsies (biopsies from brain metastases are not allowed).",
+        "reasonFuzzy": "Willingness to comply with procedure requirements is subjective."
+      },
+      {
+        "id": "NCT04886804-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of at least 12 weeks at the start of treatment in the opinion of the investigator.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT04886804-her2var",
+        "polarity": "inclusion",
+        "sourceText": "Patients with a documented diagnosis of HER2 aberration: overexpression OR gene amplification OR non-synonymous somatic mutation OR gene rearrangement involving HER2 or Neuregulin 1 (NRG1)",
+        "reasonFuzzy": "There is no typed kind for HER2 or NRG1 variants."
+      },
+      {
+        "id": "NCT04886804-brainmets",
+        "polarity": "inclusion",
+        "sourceText": "Patient with active brain metastases who are not eligible for immediate local therapy, as per investigator evaluation.",
+        "reasonFuzzy": "Active or symptomatic brain metastases and investigator evaluation are not a clean typed brain_mets status."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04886804",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04886804-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥ 1.5 x 10^9/L (≥ 1.5 x 10^3/μL) (≥ 1500/mm^3)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT04886804-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "haemoglobin ≥ 9.0 g/dL (≥ 90 g/L) (≥ 5.6 mmol/L)",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT04886804-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "platelets ≥ 100 x 10^9/L (100 x 10^3/μL) (100 x 10^3/mm3)",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT04886804-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 times the upper limit of normal (ULN)",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "1.5 x ULN (except for patients with Gilbert's syndrome: total bilirubin ≤ 3 x ULN or direct bilirubin ≤ 1.5 x ULN)"
+      },
+      {
+        "id": "NCT04886804-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Estimated Glomerular Filtration Rate (eGFR) ≥ 50 mL/min - calculated using Chronic Kidney Disease Epidemiology (CKD-EPI) formula (≥ 30 mL/min/1.73m² for cohorts 6, 8, and 9).",
+        "numberValue": 50,
+        "stages": [],
+        "stringValue": "≥ 50 mL/min (≥ 30 mL/min/1.73m² for cohorts 6, 8, and 9)"
+      },
+      {
+        "id": "NCT04886804-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate transaminase (AST) and alanine transaminase (ALT) ≤ 3 x ULN if no demonstrable liver metastases, or otherwise ≤ 5 x ULN if transaminase elevation is attributable to liver metastases.",
+        "numberValue": 3,
+        "stringValue": "≤ 3 x ULN if no demonstrable liver metastases, or otherwise ≤ 5 x ULN if transaminase elevation is attributable to liver metastases."
+      },
+      {
+        "id": "NCT04886804-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate transaminase (AST) and alanine transaminase (ALT) ≤ 3 x ULN if no demonstrable liver metastases, or otherwise ≤ 5 x ULN if transaminase elevation is attributable to liver metastases.",
+        "numberValue": 3,
+        "stringValue": "≤ 3 x ULN if no demonstrable liver metastases, or otherwise ≤ 5 x ULN if transaminase elevation is attributable to liver metastases."
+      },
+      {
+        "id": "NCT04886804-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "At least 18 years of age at the time of consent or over the legal age of consent in countries where that is greater than 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04886804-zongertinib",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Previous treatment with zongertinib.",
+        "stringValue": "zongertinib"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04886804-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Patient must show presence of at least one measurable lesion according to Response Evaluation Criteria In Solid Tumors (RECIST) 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT04886804-ecog",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) score of 0, 1 or 2 (ECOG=2 only for Cohorts 6, 7 and 9) .",
+        "reasonFuzzy": "ECOG maximum is 2, but restricted by cohort rules, which cannot be modeled with a simple static ecog_max check."
+      },
+      {
+        "id": "NCT04886804-biopsy-willingness",
+        "polarity": "inclusion",
+        "sourceText": "Availability and patient willingness to provide a sample of tumour for confirmation of the patient´s Human epidermal growth factor receptor 2 (HER2) status. This sample can be archival material obtained at any time prior to study enrollment.",
+        "reasonFuzzy": "Patient willingness and sample availability are subjective criteria."
+      },
+      {
+        "id": "NCT04886804-brain-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Patient willing and able to comply with the protocol requirements for tumour biopsies (biopsies from brain metastases are not allowed).",
+        "reasonFuzzy": "Willingness and biopsy constraints are subjective requirements."
+      },
+      {
+        "id": "NCT04886804-life-expectancy",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of at least 12 weeks at the start of treatment in the opinion of the investigator.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT04886804-her2",
+        "polarity": "inclusion",
+        "sourceText": "Patients with a documented diagnosis of HER2 aberration: overexpression OR gene amplification OR non-synonymous somatic mutation OR gene rearrangement involving HER2 or Neuregulin 1 (NRG1)",
+        "reasonFuzzy": "There is no typed kind for HER2 variants."
+      },
+      {
+        "id": "NCT04886804-cohort-complexities",
+        "polarity": "inclusion",
+        "sourceText": "Additional inclusion criteria for Phase Ib - Cohort 1 through Cohort 9",
+        "reasonFuzzy": "Detailed phase Ib cohort-specific lines of therapy, prior targeted therapies, and brain metastasis permissions are too complex and variant to express as single global typed checks."
+      },
+      {
+        "id": "NCT04886804-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Previous or concomitant malignancies other than the one treated in this trial within the last 2 years, except...",
+        "reasonFuzzy": "Prior malignancy exclusions with specific exceptions cannot be modeled by a standard typed check."
+      },
+      {
+        "id": "NCT04886804-washout",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with a systemic anti-cancer therapy or investigational drug within 21 days or 5 half-lives (whichever is shorter) of the first treatment with the study medication",
+        "reasonFuzzy": "Complex washout window involving half-lives."
+      }
+    ]
+  }
+}

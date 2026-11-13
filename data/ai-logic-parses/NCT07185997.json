@@ -1,0 +1,255 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07185997",
+  "briefTitle": "Study to Evaluate Efficacy and Safety of Firmonertinib Compared With Investigator's Choice of EGFR Inhibitor as First-Line Treatment in Participants Who Have Locally Advanced or Metastatic NSCLC With EGFR P-Loop and Alpha C-Helix Compressing (PACC) Uncommon Mutations",
+  "parsedAt": "2026-11-12T11:02:58.902Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07185997-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically documented, locally advanced or metastatic Non-Small Cell Lung Cancer (NSCLC) not amenable to curative surgery or radiotherapy.",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but no specific numeric stage list is provided."
+    },
+    {
+      "id": "NCT07185997-neoadjuvant",
+      "polarity": "inclusion",
+      "sourceText": "Patients who have received prior neo-adjuvant and/or adjuvant chemotherapy, immunotherapy, or chemo radiotherapy for non-metastatic disease must have experienced a treatment free interval of at least 12 months.",
+      "reasonFuzzy": "Washout window for prior adjuvant/neoadjuvant therapy involving multiple modalities is complex and cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT07185997-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07185997-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "No prior systemic anticancer therapy regimens received for locally advanced or metastatic Non-Small Cell Lung Cancer (NSCLC) including prior treatment with any Epidermal Growth Factor Receptor (EGFR)-targeting agents (e.g., previous (EGFR) TKIs, monoclonal antibodies, or bispecific antibodies).",
+      "reasonFuzzy": "Exclusion rules for prior systemic therapies and specific treatment-free interval exceptions are complex and cannot be fully captured by a single typed check."
+    },
+    {
+      "id": "NCT07185997-pacc-variants",
+      "polarity": "inclusion",
+      "sourceText": "List of eligible PACC mutations: E709X, E709A, E709H, E709V, E709K E709\\_T710delinsD, E709\\_T710delinsA, E709\\_T710delinsG, L718M, L718P, L718Q, L718V, G719X, G719A, G719C, G719D, G719S, G724S, E736K, I740\\_K745dup, I740\\_K745dupIPVAIK, I744\\_K745insKIPVAI, L747P, L747S, K757M, K757R, V765L, S768I, S768\\_V769delinsIL, S768\\_V769delinsIM, S768\\_V769delinsPL, V769L, V769M, N771G, H773\\_V774delinsLM, V774M, R776C, R776H, G779F, L792H, G796S, T854A, T854S, T854I, A647T, R675W, S768C, A755D, A750\\_I759delinsPN, T751\\_I759delinsN",
+      "reasonFuzzy": "Too many individual PACC variant forms are listed to fit a single simple string value check."
+    },
+    {
+      "id": "NCT07185997-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge\": \"18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07185997-egfr-var",
+      "polarity": "inclusion",
+      "sourceText": "List of eligible PACC mutations: E709X, E709A, E709H, E709V, E709K E709\\_T710delinsD, E709\\_T710delinsA, E709\\_T710delinsG, L718M, L718P, L718Q, L718V, G719X, G719A, G719C, G719D, G719S, G724S, E736K, I740\\_K745dup, I740\\_K745dupIPVAIK, I744\\_K745insKIPVAI, L747P, L747S, K757M, K757R, V765L, S768I, S768\\_V769delinsIL, S768\\_V769delinsIM, S768\\_V769delinsPL, V769L, V769M, N771G, H773\\_V774delinsLM, V774M, R776C, R776H, G779F, L792H, G796S, T854A, T854S, T854I, A647T, R675W, S768C, A755D, A750\\_I759delinsPN, T751\\_I759delinsN",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07185997-therapy",
+      "polarity": "exclusion",
+      "sourceText": "No prior systemic anticancer therapy regimens received for locally advanced or metastatic Non-Small Cell Lung Cancer (NSCLC) including prior treatment with any Epidermal Growth Factor Receptor (EGFR)-targeting agents (e.g., previous (EGFR) TKIs, monoclonal antibodies, or bispecific antibodies).",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07185997-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Documented results of the presence of an Epidermal Growth Factor Receptor (EGFR) PACC mutation in tumor tissue or blood from local testing.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07185997-brain",
+      "polarity": "inclusion",
+      "sourceText": "Patients with asymptomatic CNS metastases are eligible.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge\": \"18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:e709x, e709a, e709h, e709v, e709k e709_t710delinsd, e709_t710delinsa, e709_t710delinsg, l718m, l718p, l718q, l718v, g719x, g719a, g719c, g719d, g719s, g724s, e736k, i740_k745dup, i740_k745dupipvaik, i744_k745inskipvai, l747p, l747s, k757m, k757r, v765l, s768i, s768_v769delinsil, s768_v769delinsim, s768_v769delinspl, v769l, v769m, n771g, h773_v774delinslm, v774m, r776c, r776h, g779f, l792h, g796s, t854a, t854s, t854i, a647t, r675w, s768c, a755d, a750_i759delinspn, t751_i759delinsn"
+        },
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:epidermal growth factor receptor (egfr)-targeting agents"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable,untreated"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 2,
+    "attempts": 2,
+    "ms": 17923
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2652
+  },
+  "ms": 24592,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07185997",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07185997-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07185997-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Documented results of the presence of an Epidermal Growth Factor Receptor (EGFR) PACC mutation in tumor tissue or blood from local testing.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07185997-egfr-var",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "List of eligible PACC mutations: E709X, E709A, E709H, E709V, E709K E709\\_T710delinsD, E709\\_T710delinsA, E709\\_T710delinsG, L718M, L718P, L718Q, L718V, G719X, G719A, G719C, G719D, G719S, G724S, E736K, I740\\_K745dup, I740\\_K745dupIPVAIK, I744\\_K745insKIPVAI, L747P, L747S, K757M, K757R, V765L, S768I, S768\\_V769delinsIL, S768\\_V769delinsIM, S768\\_V769delinsPL, V769L, V769M, N771G, H773\\_V774delinsLM, V774M, R776C, R776H, G779F, L792H, G796S, T854A, T854S, T854I, A647T, R675W, S768C, A755D, A750\\_I759delinsPN, T751\\_I759delinsN",
+        "stringValue": "E709X, E709A, E709H, E709V, E709K E709_T710delinsD, E709_T710delinsA, E709_T710delinsG, L718M, L718P, L718Q, L718V, G719X, G719A, G719C, G719D, G719S, G724S, E736K, I740_K745dup, I740_K745dupIPVAIK, I744_K745insKIPVAI, L747P, L747S, K757M, K757R, V765L, S768I, S768_V769delinsIL, S768_V769delinsIM, S768_V769delinsPL, V769L, V769M, N771G, H773_V774delinsLM, V774M, R776C, R776H, G779F, L792H, G796S, T854A, T854S, T854I, A647T, R675W, S768C, A755D, A750_I759delinsPN, T751_I759delinsN"
+      },
+      {
+        "id": "NCT07185997-therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "No prior systemic anticancer therapy regimens received for locally advanced or metastatic Non-Small Cell Lung Cancer (NSCLC) including prior treatment with any Epidermal Growth Factor Receptor (EGFR)-targeting agents (e.g., previous (EGFR) TKIs, monoclonal antibodies, or bispecific antibodies).",
+        "stringValue": "Epidermal Growth Factor Receptor (EGFR)-targeting agents"
+      },
+      {
+        "id": "NCT07185997-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Patients with asymptomatic CNS metastases are eligible.",
+        "allowedBrainMets": [
+          "untreated",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07185997-stage",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically documented, locally advanced or metastatic Non-Small Cell Lung Cancer (NSCLC) not amenable to curative surgery or radiotherapy.",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but no specific numeric stage list is provided."
+      },
+      {
+        "id": "NCT07185997-neoadjuvant",
+        "polarity": "inclusion",
+        "sourceText": "Patients who have received prior neo-adjuvant and/or adjuvant chemotherapy, immunotherapy, or chemo radiotherapy for non-metastatic disease must have experienced a treatment free interval of at least 12 months.",
+        "reasonFuzzy": "Washout window for prior adjuvant/neoadjuvant therapy involving multiple modalities is complex and cannot be expressed as a single typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07185997",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07185997-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge\": \"18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07185997-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Documented results of the presence of an Epidermal Growth Factor Receptor (EGFR) PACC mutation in tumor tissue or blood from local testing.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07185997-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "Patients with asymptomatic CNS metastases are eligible.",
+        "allowedBrainMets": [
+          "treated_stable",
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07185997-prior-therapy",
+        "polarity": "exclusion",
+        "sourceText": "No prior systemic anticancer therapy regimens received for locally advanced or metastatic Non-Small Cell Lung Cancer (NSCLC) including prior treatment with any Epidermal Growth Factor Receptor (EGFR)-targeting agents (e.g., previous (EGFR) TKIs, monoclonal antibodies, or bispecific antibodies).",
+        "reasonFuzzy": "Exclusion rules for prior systemic therapies and specific treatment-free interval exceptions are complex and cannot be fully captured by a single typed check."
+      },
+      {
+        "id": "NCT07185997-pacc-variants",
+        "polarity": "inclusion",
+        "sourceText": "List of eligible PACC mutations: E709X, E709A, E709H, E709V, E709K E709\\_T710delinsD, E709\\_T710delinsA, E709\\_T710delinsG, L718M, L718P, L718Q, L718V, G719X, G719A, G719C, G719D, G719S, G724S, E736K, I740\\_K745dup, I740\\_K745dupIPVAIK, I744\\_K745insKIPVAI, L747P, L747S, K757M, K757R, V765L, S768I, S768\\_V769delinsIL, S768\\_V769delinsIM, S768\\_V769delinsPL, V769L, V769M, N771G, H773\\_V774delinsLM, V774M, R776C, R776H, G779F, L792H, G796S, T854A, T854S, T854I, A647T, R675W, S768C, A755D, A750\\_I759delinsPN, T751\\_I759delinsN",
+        "reasonFuzzy": "Too many individual PACC variant forms are listed to fit a single simple string value check."
+      }
+    ]
+  }
+}

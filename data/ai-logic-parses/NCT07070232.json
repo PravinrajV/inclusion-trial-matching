@@ -1,0 +1,192 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07070232",
+  "briefTitle": "A Clinical Study to Test if an Investigational Treatment Called BNT326 is Safe and Potentially Beneficial When Used Alone or in Combination With Other Investigational Treatments Such as BNT327, for People With Advanced Malignant Tumors",
+  "parsedAt": "2026-11-12T10:44:20.518Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07070232-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Aged ≥18 years at the time of giving informed consent. Local laws will be followed if the age of consent is older.",
+      "numberValue": 18,
+      "evidence_quote": "Aged ≥18 years at the time of giving informed consent. Local laws will be followed if the age of consent is older.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07070232-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Have ECOG performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Have ECOG performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07070232-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease defined by RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07070232-cohort-rules",
+      "polarity": "inclusion",
+      "sourceText": "Cohort 1A, 1B, 1C, 1D, 1E, 1F, 2A, 2B, 2D, 2E, 1G and 2F eligibility and prior lines vary significantly by cohort and cannot be expressed as simple single-cohort typed rules.",
+      "reasonFuzzy": "Complex multi-cohort inclusion rules with differing prior therapies and lines across specific sub-cohorts."
+    },
+    {
+      "id": "NCT07070232-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease defined by RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT07070232-cohorts-nsclc",
+      "polarity": "inclusion",
+      "sourceText": "Cohort 1B and 1C: Have advanced (i.e., metastatic or locally recurrent where local therapy with curative intent is not possible) non-squamous or squamous NSCLC.",
+      "reasonFuzzy": "Eligibility rules are multi-cohort dependent with specific variant, prior line, and therapy criteria depending on the specific NSCLC cohort."
+    },
+    {
+      "id": "NCT07070232-egfr-variant",
+      "polarity": "inclusion",
+      "sourceText": "Have documented positive test results for an EGFR-sensitizing mutation (EGFR-sensitizing mutation Exon 21-L858R and 19del).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:exon 21-l858r and 19del"
+        }
+      ],
+      "normalizerTypedCount": 10
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 2550
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 4671
+  },
+  "ms": 15248,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07070232",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07070232-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Aged ≥18 years at the time of giving informed consent. Local laws will be followed if the age of consent is older.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07070232-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have ECOG performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07070232-egfr-variant",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Have documented positive test results for an EGFR-sensitizing mutation (EGFR-sensitizing mutation Exon 21-L858R and 19del).",
+        "stringValue": "Exon 21-L858R and 19del"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07070232-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease defined by RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07070232-cohort-rules",
+        "polarity": "inclusion",
+        "sourceText": "Cohort 1A, 1B, 1C, 1D, 1E, 1F, 2A, 2B, 2D, 2E, 1G and 2F eligibility and prior lines vary significantly by cohort and cannot be expressed as simple single-cohort typed rules.",
+        "reasonFuzzy": "Complex multi-cohort inclusion rules with differing prior therapies and lines across specific sub-cohorts."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07070232",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07070232-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Aged ≥18 years at the time of giving informed consent. Local laws will be followed if the age of consent is older.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07070232-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Have ECOG performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07070232-egfr-var",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Have documented positive test results for an EGFR-sensitizing mutation (EGFR-sensitizing mutation Exon 21-L858R and 19del).",
+        "stringValue": "Exon 21-L858R and 19del"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07070232-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease defined by RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT07070232-cohorts-nsclc",
+        "polarity": "inclusion",
+        "sourceText": "Cohort 1B and 1C: Have advanced (i.e., metastatic or locally recurrent where local therapy with curative intent is not possible) non-squamous or squamous NSCLC.",
+        "reasonFuzzy": "Eligibility rules are multi-cohort dependent with specific variant, prior line, and therapy criteria depending on the specific NSCLC cohort."
+      }
+    ]
+  }
+}

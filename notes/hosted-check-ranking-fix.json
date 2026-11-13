@@ -1,0 +1,74 @@
+{
+  "when": "2026-11-12 08:34:34 EST",
+  "url": "https://inclusion-hybridai.web.app/",
+  "bundle": [
+    "https://inclusion-hybridai.web.app/assets/index-9HNrSgUq.js"
+  ],
+  "title": "Inclusion: private clinical-trial matching",
+  "brand_descriptor": "Private clinical-trial matching",
+  "hero_descriptor": "Private clinical-trial matching",
+  "name_ok": true,
+  "landing_synthetic_banner": "Synthetic demo data",
+  "landing_synthetic_visible": true,
+  "cache_banner": "Using the bundled public trial snapshot (277 trials).",
+  "status": "",
+  "exchange_status": [
+    403
+  ],
+  "exchange": [
+    {
+      "status": 403,
+      "has_token": false,
+      "error": "App attestation failed."
+    }
+  ],
+  "appcheck_expected_fail_in_automated_chrome": true,
+  "anonymous_signin": true,
+  "signup_status": [
+    200
+  ],
+  "firestore_statuses": [
+    200,
+    200
+  ],
+  "debug_token_exchange_attempted": false,
+  "alex_intake_banner": {
+    "header": "Synthetic demo data",
+    "card": "Synthetic demo data"
+  },
+  "alex": {
+    "nct": "NCT04486833",
+    "key_met": "4 of 6 key criteria met",
+    "strong": 9,
+    "reviewed": 277,
+    "synthetic_visible": {
+      "header": true,
+      "card": false
+    },
+    "banners": {
+      "header": "Synthetic demo data",
+      "card": ""
+    }
+  },
+  "sam": {
+    "nct": "NCT03093116",
+    "key_met": "4 of 6 key criteria met",
+    "strong": 4,
+    "reviewed": 277,
+    "synthetic_visible": {
+      "header": true,
+      "card": false
+    },
+    "banners": {
+      "header": "Synthetic demo data",
+      "card": ""
+    }
+  },
+  "alex_ok": true,
+  "sam_ok": true,
+  "new_bundle_served": true,
+  "pass": true,
+  "intake_card_banner_visible": true,
+  "results_header_banner_visible": true,
+  "note": "Product check passed. App Check exchange 403 in automated Chrome is expected. On the results stage the intake chart-card banner is not visible because intake is collapsed; the header banner stayed visible, and the card banner was confirmed on the Alex intake step. UI used the bundled 277-trial snapshot after the 403, as designed."
+}

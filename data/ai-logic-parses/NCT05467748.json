@@ -1,0 +1,556 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05467748",
+  "briefTitle": "EZH2 Inhibitor, Tulmimetostat, and PD-1 Blockade for Treatment of Advanced Non-small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:46:34.953Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05467748-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male/female participants who are at least 18 years of age on the day of signing informed consent",
+      "numberValue": 18,
+      "evidence_quote": "Male/female participants who are at least 18 years of age on the day of signing informed consent",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05467748-anc",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil counts (ANC) 1500/mm3",
+      "numberValue": 1500,
+      "evidence_quote": "Absolute neutrophil counts (ANC) 1500/mm3",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05467748-platelets",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count 100,000/mm3",
+      "numberValue": 100000,
+      "evidence_quote": "Platelet count 100,000/mm3",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05467748-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin 9 g/dL without need for hematopoietic growth factor or transfusion support.",
+      "numberValue": 9,
+      "evidence_quote": "Hemoglobin 9 g/dL without need for hematopoietic growth factor or transfusion support.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05467748-creatinine",
+      "kind": "creatinine_max",
+      "polarity": "inclusion",
+      "sourceText": "Serum creatinine 1.5 x ULN (Upper Limit of Normal), or 24-hour creatinine clearance 30 cc/min. (note: creatinine clearance need not be determined if the baseline serum creatinine is within normal limits)",
+      "numberValue": 1.5,
+      "stages": [],
+      "stringValue": "ULN",
+      "evidence_quote": "Serum creatinine 1.5 x ULN (Upper Limit of Normal), or 24-hour creatinine clearance 30 cc/min. (note: creatinine clearance need not be determined if the baseline serum creatinine is within normal limits)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05467748-egfr_min",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Serum creatinine 1.5 x ULN (Upper Limit of Normal), or 24-hour creatinine clearance 30 cc/min. (note: creatinine clearance need not be determined if the baseline serum creatinine is within normal limits)",
+      "numberValue": 30,
+      "stages": [],
+      "stringValue": "cc/min",
+      "evidence_quote": "Serum creatinine 1.5 x ULN (Upper Limit of Normal), or 24-hour creatinine clearance 30 cc/min. (note: creatinine clearance need not be determined if the baseline serum creatinine is within normal limits)",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05467748-bilirubin",
+      "kind": "bilirubin_max",
+      "polarity": "inclusion",
+      "sourceText": "Serum bilirubin 1.5 ×ULN OR direct bilirubin ULN for participants with total bilirubin levels \\>1.5 × ULN.",
+      "numberValue": 1.5,
+      "stages": [],
+      "stringValue": "ULN",
+      "evidence_quote": "Serum bilirubin 1.5 ×ULN OR direct bilirubin ULN for participants with total bilirubin levels \\>1.5 × ULN.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05467748-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "ECOG 0-1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05467748-life",
+      "polarity": "inclusion",
+      "sourceText": "Have a life expectancy of 12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT05467748-progression",
+      "polarity": "inclusion",
+      "sourceText": "Participants who progressed from chemo(platinum-based)-immunotherapy, immunotherapy single agent or immuno-immuno combination therapies as front or second line of therapy.",
+      "reasonFuzzy": "Complex prior line combination rules with specific progression timing definitions cannot be expressed with a single typed prior_lines or therapy check."
+    },
+    {
+      "id": "NCT05467748-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease per RECIST v1.1 as assessed by the investigator and site radiologist.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT05467748-stage",
+      "polarity": "inclusion",
+      "sourceText": "Patients with histologically confirmed diagnosis of advanced non-small cell lung cancer.",
+      "reasonFuzzy": "Advanced NSCLC without a numbered stage list is kept as fuzzy criteria."
+    },
+    {
+      "id": "NCT05467748-life",
+      "polarity": "inclusion",
+      "sourceText": "Have a life expectancy of 12 weeks",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT05467748-progression",
+      "polarity": "inclusion",
+      "sourceText": "Participants who progressed from chemo(platinum-based)-immunotherapy, immunotherapy single agent or immuno-immuno combination therapies as front or second line of therapy.",
+      "reasonFuzzy": "Complex prior line and progression history rules cannot be captured cleanly by a single typed check."
+    },
+    {
+      "id": "NCT05467748-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Have measurable disease per RECIST v1.1 as assessed by the investigator and site radiologist.",
+      "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging assessment."
+    },
+    {
+      "id": "NCT05467748-stage",
+      "polarity": "inclusion",
+      "sourceText": "Patients with histologically confirmed diagnosis of advanced non-small cell lung cancer.",
+      "reasonFuzzy": "Advanced NSCLC without a numbered stage list remains in scope, but stage_in cannot be specified."
+    },
+    {
+      "id": "NCT05467748-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate amino transferase (AST) 2.5 ULN or 5XULN for subjects with liver metastases.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05467748-alt",
+      "polarity": "inclusion",
+      "sourceText": "Alanine amino transferase (ALT) 2.5 ULN or 5XULN for subjects with liver metastases.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05467748-brain",
+      "polarity": "exclusion",
+      "sourceText": "Clinically active cerebral metastases. Patients with a prior diagnosis of cerebral metastases may be enrolled, provided that lesions have been adequately treated with radiation therapy or surgery, and have not required steroids for at least one month prior to study initiation.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05467748-ezh2_excl",
+      "polarity": "exclusion",
+      "sourceText": "Prior exposure to tulmimetostat or other EZH2 inhibitors.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05467748-egfr_excl",
+      "polarity": "exclusion",
+      "sourceText": "EGFR or ALK altered patients.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05467748-alk_excl",
+      "polarity": "exclusion",
+      "sourceText": "EGFR or ALK altered patients.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05467748-pd1_req",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have progressed on treatment with an anti-PD-1/L1 mAb administered either as monotherapy or in combination with other checkpoint inhibitors or other therapies.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 15,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 15,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 15,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 8,
+      "rejected": 7,
+      "rejectedItems": [
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:ezh2 inhibitors"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:anti-pd-1/l1 mab"
+        }
+      ],
+      "normalizerTypedCount": 9
+    }
+  },
+  "runA": {
+    "typedEmitted": 15,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 4699
+  },
+  "runB": {
+    "typedEmitted": 15,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 4467
+  },
+  "ms": 17203,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05467748",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05467748-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male/female participants who are at least 18 years of age on the day of signing informed consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05467748-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil counts (ANC) 1500/mm3",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT05467748-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count 100,000/mm3",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT05467748-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin 9 g/dL without need for hematopoietic growth factor or transfusion support.",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT05467748-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Serum creatinine 1.5 x ULN (Upper Limit of Normal), or 24-hour creatinine clearance 30 cc/min. (note: creatinine clearance need not be determined if the baseline serum creatinine is within normal limits)",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT05467748-egfr_min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Serum creatinine 1.5 x ULN (Upper Limit of Normal), or 24-hour creatinine clearance 30 cc/min. (note: creatinine clearance need not be determined if the baseline serum creatinine is within normal limits)",
+        "numberValue": 30,
+        "stages": [],
+        "stringValue": "cc/min"
+      },
+      {
+        "id": "NCT05467748-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Serum bilirubin 1.5 ×ULN OR direct bilirubin ULN for participants with total bilirubin levels >1.5 × ULN.",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT05467748-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate amino transferase (AST) 2.5 ULN or 5XULN for subjects with liver metastases.",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT05467748-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine amino transferase (ALT) 2.5 ULN or 5XULN for subjects with liver metastases.",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "ULN"
+      },
+      {
+        "id": "NCT05467748-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05467748-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Clinically active cerebral metastases. Patients with a prior diagnosis of cerebral metastases may be enrolled, provided that lesions have been adequately treated with radiation therapy or surgery, and have not required steroids for at least one month prior to study initiation.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT05467748-ezh2_excl",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior exposure to tulmimetostat or other EZH2 inhibitors.",
+        "stringValue": "EZH2 inhibitors"
+      },
+      {
+        "id": "NCT05467748-egfr_excl",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "EGFR or ALK altered patients.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05467748-alk_excl",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "EGFR or ALK altered patients.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05467748-pd1_req",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have progressed on treatment with an anti-PD-1/L1 mAb administered either as monotherapy or in combination with other checkpoint inhibitors or other therapies.",
+        "stringValue": "anti-PD-1/L1 mAb"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05467748-life",
+        "polarity": "inclusion",
+        "sourceText": "Have a life expectancy of 12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT05467748-progression",
+        "polarity": "inclusion",
+        "sourceText": "Participants who progressed from chemo(platinum-based)-immunotherapy, immunotherapy single agent or immuno-immuno combination therapies as front or second line of therapy.",
+        "reasonFuzzy": "Complex prior line combination rules with specific progression timing definitions cannot be expressed with a single typed prior_lines or therapy check."
+      },
+      {
+        "id": "NCT05467748-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease per RECIST v1.1 as assessed by the investigator and site radiologist.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT05467748-stage",
+        "polarity": "inclusion",
+        "sourceText": "Patients with histologically confirmed diagnosis of advanced non-small cell lung cancer.",
+        "reasonFuzzy": "Advanced NSCLC without a numbered stage list is kept as fuzzy criteria."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05467748",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05467748-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male/female participants who are at least 18 years of age on the day of signing informed consent",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05467748-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil counts (ANC) 1500/mm3",
+        "numberValue": 1500
+      },
+      {
+        "id": "NCT05467748-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count 100,000/mm3",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT05467748-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin 9 g/dL without need for hematopoietic growth factor or transfusion support.",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT05467748-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Serum creatinine 1.5 x ULN (Upper Limit of Normal), or 24-hour creatinine clearance 30 cc/min. (note: creatinine clearance need not be determined if the baseline serum creatinine is within normal limits)",
+        "numberValue": 1.5,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT05467748-egfr",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Serum creatinine 1.5 x ULN (Upper Limit of Normal), or 24-hour creatinine clearance 30 cc/min. (note: creatinine clearance need not be determined if the baseline serum creatinine is within normal limits)",
+        "numberValue": 30,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT05467748-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Serum bilirubin 1.5 ×ULN OR direct bilirubin ULN for participants with total bilirubin levels \\>1.5 × ULN.",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05467748-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate amino transferase (AST) 2.5 ULN or 5XULN for subjects with liver metastases.",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT05467748-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine amino transferase (ALT) 2.5 ULN or 5XULN for subjects with liver metastases.",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT05467748-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05467748-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Clinically active cerebral metastases. Patients with a prior diagnosis of cerebral metastases may be enrolled, provided that lesions have been adequately treated with radiation therapy or surgery, and have not required steroids for at least one month prior to study initiation.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT05467748-prior-ezh2",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior exposure to tulmimetostat or other EZH2 inhibitors.",
+        "stringValue": "tulmimetostat or other EZH2 inhibitors"
+      },
+      {
+        "id": "NCT05467748-egfr-status",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "EGFR or ALK altered patients.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05467748-alk-status",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "EGFR or ALK altered patients.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05467748-prior-immuno",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have progressed on treatment with an anti-PD-1/L1 mAb administered either as monotherapy or in combination with other checkpoint inhibitors or other therapies.",
+        "stringValue": "anti-PD-1/L1 mAb"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05467748-life",
+        "polarity": "inclusion",
+        "sourceText": "Have a life expectancy of 12 weeks",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT05467748-progression",
+        "polarity": "inclusion",
+        "sourceText": "Participants who progressed from chemo(platinum-based)-immunotherapy, immunotherapy single agent or immuno-immuno combination therapies as front or second line of therapy.",
+        "reasonFuzzy": "Complex prior line and progression history rules cannot be captured cleanly by a single typed check."
+      },
+      {
+        "id": "NCT05467748-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Have measurable disease per RECIST v1.1 as assessed by the investigator and site radiologist.",
+        "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging assessment."
+      },
+      {
+        "id": "NCT05467748-stage",
+        "polarity": "inclusion",
+        "sourceText": "Patients with histologically confirmed diagnosis of advanced non-small cell lung cancer.",
+        "reasonFuzzy": "Advanced NSCLC without a numbered stage list remains in scope, but stage_in cannot be specified."
+      }
+    ]
+  }
+}

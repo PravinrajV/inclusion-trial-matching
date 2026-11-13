@@ -1,0 +1,304 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07554339",
+  "briefTitle": "A Clinical Trial of Calderasib (MK-1084) and Durvalumab in People With Non-Small Cell Lung Cancer (MK-1084-015/KANDLELIT-015)",
+  "parsedAt": "2026-11-12T11:57:26.401Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07554339-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Has a histological or cytological diagnosis of locally advanced, unresected Stage II (node-positive) to III non-small cell lung cancer (NSCLC) with predominantly nonsquamous histology.",
+      "stages": [
+        "IIA",
+        "IIB",
+        "IIIA",
+        "IIIB",
+        "IIIC"
+      ],
+      "evidence_quote": "Has a histological or cytological diagnosis of locally advanced, unresected Stage II (node-positive) to III non-small cell lung cancer (NSCLC) with predominantly nonsquamous histology.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07554339-ccrt",
+      "polarity": "inclusion",
+      "sourceText": "Has completed definitive platinum-based concurrent chemoradiotherapy (CCRT) prior to enrollment, without disease progression.",
+      "reasonFuzzy": "Requires prior definitive platinum-based concurrent chemoradiotherapy and lack of disease progression, which is complex and cannot be expressed in a single typed check."
+    },
+    {
+      "id": "NCT07554339-weight",
+      "polarity": "inclusion",
+      "sourceText": "Has a body weight ≥35 kg.",
+      "reasonFuzzy": "Body weight is not one of the allowed typed kinds."
+    },
+    {
+      "id": "NCT07554339-weight",
+      "polarity": "inclusion",
+      "sourceText": "Has a body weight ≥35 kg.",
+      "reasonFuzzy": "Body weight is not a standard typed biomarker or lab cutoff kind."
+    },
+    {
+      "id": "NCT07554339-priorexclude",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior treatment (other than definitive CCRT) for NSCLC.",
+      "reasonFuzzy": "Prior treatment exclusion contains exceptions and details that are not a simple typed prior therapy exclusion."
+    },
+    {
+      "id": "NCT07554339-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07554339-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior treatment (other than definitive CCRT) for NSCLC.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07554339-priortherapy",
+      "polarity": "inclusion",
+      "sourceText": "Has completed definitive platinum-based concurrent chemoradiotherapy (CCRT) prior to enrollment, without disease progression.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07554339-histology",
+      "polarity": "inclusion",
+      "sourceText": "Has a histological or cytological diagnosis of locally advanced, unresected Stage II (node-positive) to III non-small cell lung cancer (NSCLC) with predominantly nonsquamous histology.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07554339-kras",
+      "polarity": "inclusion",
+      "sourceText": "Tumor tissue sample has a demonstrated presence of KRAS G12C mutation and an evaluable PD-L1 status result.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07554339-kras-variant",
+      "polarity": "inclusion",
+      "sourceText": "Tumor tissue sample has a demonstrated presence of KRAS G12C mutation and an evaluable PD-L1 status result.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:prior treatment"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:platinum-based concurrent chemoradiotherapy (ccrt)"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        },
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12c"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 17474
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 7522
+  },
+  "ms": 32989,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07554339",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07554339-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Has a histological or cytological diagnosis of locally advanced, unresected Stage II (node-positive) to III non-small cell lung cancer (NSCLC) with predominantly nonsquamous histology.",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT07554339-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Has a histological or cytological diagnosis of locally advanced, unresected Stage II (node-positive) to III non-small cell lung cancer (NSCLC) with predominantly nonsquamous histology.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07554339-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Tumor tissue sample has a demonstrated presence of KRAS G12C mutation and an evaluable PD-L1 status result.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07554339-kras-variant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Tumor tissue sample has a demonstrated presence of KRAS G12C mutation and an evaluable PD-L1 status result.",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT07554339-prior-therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior treatment (other than definitive CCRT) for NSCLC.",
+        "stringValue": "prior treatment"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07554339-ccrt",
+        "polarity": "inclusion",
+        "sourceText": "Has completed definitive platinum-based concurrent chemoradiotherapy (CCRT) prior to enrollment, without disease progression.",
+        "reasonFuzzy": "Requires prior definitive platinum-based concurrent chemoradiotherapy and lack of disease progression, which is complex and cannot be expressed in a single typed check."
+      },
+      {
+        "id": "NCT07554339-weight",
+        "polarity": "inclusion",
+        "sourceText": "Has a body weight ≥35 kg.",
+        "reasonFuzzy": "Body weight is not one of the allowed typed kinds."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07554339",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07554339-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Has a histological or cytological diagnosis of locally advanced, unresected Stage II (node-positive) to III non-small cell lung cancer (NSCLC) with predominantly nonsquamous histology.",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB",
+          "IIIC"
+        ]
+      },
+      {
+        "id": "NCT07554339-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Has a histological or cytological diagnosis of locally advanced, unresected Stage II (node-positive) to III non-small cell lung cancer (NSCLC) with predominantly nonsquamous histology.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT07554339-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Tumor tissue sample has a demonstrated presence of KRAS G12C mutation and an evaluable PD-L1 status result.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07554339-krasvariant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Tumor tissue sample has a demonstrated presence of KRAS G12C mutation and an evaluable PD-L1 status result.",
+        "stringValue": "G12C"
+      },
+      {
+        "id": "NCT07554339-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07554339-priortherapy",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Has completed definitive platinum-based concurrent chemoradiotherapy (CCRT) prior to enrollment, without disease progression.",
+        "stringValue": "platinum-based concurrent chemoradiotherapy (CCRT)"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07554339-weight",
+        "polarity": "inclusion",
+        "sourceText": "Has a body weight ≥35 kg.",
+        "reasonFuzzy": "Body weight is not a standard typed biomarker or lab cutoff kind."
+      },
+      {
+        "id": "NCT07554339-priorexclude",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior treatment (other than definitive CCRT) for NSCLC.",
+        "reasonFuzzy": "Prior treatment exclusion contains exceptions and details that are not a simple typed prior therapy exclusion."
+      }
+    ]
+  }
+}

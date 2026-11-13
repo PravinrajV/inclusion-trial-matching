@@ -1,0 +1,499 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05742607",
+  "briefTitle": "IPH5201 and Durvalumab in Patients With Resectable Non-Small Cell Lung Cancer (MATISSE)",
+  "parsedAt": "2026-11-12T05:48:40.453Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05742607-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Patients must be ≥18 years at the time of screening.",
+      "numberValue": 18,
+      "evidence_quote": "Patients must be ≥18 years at the time of screening.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05742607-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "WHO Performance Status (WHO PS) score or Eastern Cooperative Oncology Group Performance Status (ECOG PS) score of 0 or 1 at enrollment.",
+      "numberValue": 1,
+      "evidence_quote": "WHO Performance Status (WHO PS) score or Eastern Cooperative Oncology Group Performance Status (ECOG PS) score of 0 or 1 at enrollment.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05742607-hemoglobin",
+      "kind": "hemoglobin_min",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin ≥9.0 g/dL.",
+      "numberValue": 9,
+      "evidence_quote": "Hemoglobin ≥9.0 g/dL.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05742607-bilirubin",
+      "kind": "bilirubin_max",
+      "polarity": "inclusion",
+      "sourceText": "Serum bilirubin ≤1.5 × Upper limit of normal (ULN).",
+      "numberValue": 1.5,
+      "evidence_quote": "Serum bilirubin ≤1.5 × Upper limit of normal (ULN).",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05742607-ast",
+      "kind": "ast_max",
+      "polarity": "inclusion",
+      "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤2.5 × ULN.",
+      "numberValue": 2.5,
+      "evidence_quote": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤2.5 × ULN.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05742607-egfr-min",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Measured creatinine clearance (CrCL) >40 mL/min or calculated CrCL >40 mL/min as determined by Cockcroft-Gault formula using actual body weight",
+      "numberValue": 40,
+      "evidence_quote": "Measured creatinine clearance (CrCL) >40 mL/min or calculated CrCL >40 mL/min as determined by Cockcroft-Gault formula using actual body weight",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05742607-life-expectancy",
+      "polarity": "inclusion",
+      "sourceText": "Must have a life expectancy of at least 12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT05742607-surg",
+      "polarity": "inclusion",
+      "sourceText": "At screening, complete surgical resection of the primary NSCLC must be deemed achievable, as assessed by a multidisciplinary evaluation",
+      "reasonFuzzy": "Surgical resectability is an investigator judgment."
+    },
+    {
+      "id": "NCT05742607-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Note: For Cohort 2 (PD-L1-positive cohort), only patients with PD-L1 expression tumor proportion score (TPS) ≥1% will be enrolled.",
+      "reasonFuzzy": "PD-L1 expression TPS rule applies specifically to Cohort 2."
+    },
+    {
+      "id": "NCT05742607-stage",
+      "polarity": "inclusion",
+      "sourceText": "Patients should have resectable disease (Stage IIA to Stage IIIA; Stage IIIB - Nodal stage N2 after the first 40 patients [cohort 2]), according to Version 8 of IASLC Staging Manual in Thoracic Oncology (2016)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05742607-life",
+      "polarity": "inclusion",
+      "sourceText": "Must have a life expectancy of at least 12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05742607-egfr-alk-screening",
+      "polarity": "inclusion",
+      "sourceText": "Neither patients with EGFR/ALK mutations nor those with unknown EGFR/ALK status will be enrolled, with the following exceptions: Patients with documented Kirsten rat sarcoma virus (KRAS) mutations do not require EGFR/ALK status. Patients with squamous cell carcinoma do not require ALK status.",
+      "reasonFuzzy": "Complex conditional biomarker requirements with multiple exception rules cannot be captured by a single simple typed check."
+    },
+    {
+      "id": "NCT05742607-surg",
+      "polarity": "inclusion",
+      "sourceText": "Patients are suitable for inclusion if the planned surgery is lobectomy, sleeve resection, or bilobectomy, as determined by the attending surgeon based on the baseline findings.",
+      "reasonFuzzy": "Surgical procedure eligibility is judgment-based and depends on multidisciplinary evaluation."
+    },
+    {
+      "id": "NCT05742607-stage",
+      "polarity": "inclusion",
+      "sourceText": "Patients should have resectable disease (Stage IIA to Stage IIIA; Stage IIIB - Nodal stage N2 after the first 40 patients [cohort 2]), according to Version 8 of IASLC Staging Manual in Thoracic Oncology (2016)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05742607-prior-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Prior exposure to immune-mediated therapy including, but not limited to, other anti-CTLA-4, anti-PD-1, anti-PD-L1, and anti-PD-L2 antibodies. Patients who received agents targeting the adenosine pathway (e.g., anti-CD73 antibody, adenosine A2A receptor [A2AR] inhibitor, anti-CD39 antibody) are also excluded.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05742607-prior-immuno",
+      "polarity": "exclusion",
+      "sourceText": "Prior exposure to immune-mediated therapy including, but not limited to, other anti-CTLA-4, anti-PD-1, anti-PD-L1, and anti-PD-L2 antibodies.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05742607-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥1.5 × 109/L.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05742607-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelet count ≥100 × 109/L.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05742607-alt",
+      "polarity": "inclusion",
+      "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤2.5 × ULN.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05742607-egfr-excl",
+      "polarity": "exclusion",
+      "sourceText": "Patients with sensitizing EGFR mutations or ALK translocations.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05742607-alk-excl",
+      "polarity": "exclusion",
+      "sourceText": "Patients with sensitizing EGFR mutations or ALK translocations.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 12,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Patients should have resectable disease (Stage IIA to Stage IIIA; Stage IIIB - Nodal stage N2 after the first 40 patients [cohort 2]), according to Version 8 of"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 11,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Patients should have resectable disease (Stage IIA to Stage IIIA; Stage IIIB - Nodal stage N2 after the first 40 patients [cohort 2]), according to Version 8 of"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Prior exposure to immune-mediated therapy including, but not limited to, other anti-CTLA-4, anti-PD-1, anti-PD-L1, and anti-PD-L2 antibodies. Patients who recei"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 11,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-pd-1"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 6,
+      "rejected": 5,
+      "rejectedItems": [
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "value": "n:100"
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 8
+    }
+  },
+  "runA": {
+    "typedEmitted": 13,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 3695
+  },
+  "runB": {
+    "typedEmitted": 13,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 5264
+  },
+  "ms": 17046,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05742607",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05742607-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients must be ≥18 years at the time of screening.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05742607-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Patients should have resectable disease (Stage IIA to Stage IIIA; Stage IIIB - Nodal stage N2 after the first 40 patients [cohort 2]), according to Version 8 of IASLC Staging Manual in Thoracic Oncology (2016)",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT05742607-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "WHO Performance Status (WHO PS) score or Eastern Cooperative Oncology Group Performance Status (ECOG PS) score of 0 or 1 at enrollment.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05742607-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥9.0 g/dL.",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT05742607-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥1.5 × 109/L.",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05742607-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count ≥100 × 109/L.",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT05742607-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Serum bilirubin ≤1.5 × Upper limit of normal (ULN).",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05742607-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤2.5 × ULN.",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT05742607-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤2.5 × ULN.",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT05742607-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Measured creatinine clearance (CrCL) >40 mL/min or calculated CrCL >40 mL/min as determined by Cockcroft-Gault formula using actual body weight",
+        "numberValue": 40
+      },
+      {
+        "id": "NCT05742607-egfr-excl",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with sensitizing EGFR mutations or ALK translocations.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05742607-alk-excl",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with sensitizing EGFR mutations or ALK translocations.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05742607-prior-immuno",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior exposure to immune-mediated therapy including, but not limited to, other anti-CTLA-4, anti-PD-1, anti-PD-L1, and anti-PD-L2 antibodies.",
+        "stringValue": "anti-PD-1"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05742607-life-expectancy",
+        "polarity": "inclusion",
+        "sourceText": "Must have a life expectancy of at least 12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT05742607-surg",
+        "polarity": "inclusion",
+        "sourceText": "At screening, complete surgical resection of the primary NSCLC must be deemed achievable, as assessed by a multidisciplinary evaluation",
+        "reasonFuzzy": "Surgical resectability is an investigator judgment."
+      },
+      {
+        "id": "NCT05742607-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "Note: For Cohort 2 (PD-L1-positive cohort), only patients with PD-L1 expression tumor proportion score (TPS) ≥1% will be enrolled.",
+        "reasonFuzzy": "PD-L1 expression TPS rule applies specifically to Cohort 2."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05742607",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05742607-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients must be ≥18 years at the time of screening.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05742607-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Patients should have resectable disease (Stage IIA to Stage IIIA; Stage IIIB - Nodal stage N2 after the first 40 patients [cohort 2]), according to Version 8 of IASLC Staging Manual in Thoracic Oncology (2016)",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT05742607-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "WHO Performance Status (WHO PS) score or Eastern Cooperative Oncology Group Performance Status (ECOG PS) score of 0 or 1 at enrollment.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05742607-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥9.0 g/dL.",
+        "numberValue": 9
+      },
+      {
+        "id": "NCT05742607-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥1.5 × 109/L.",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05742607-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelet count ≥100 × 109/L.",
+        "numberValue": 100
+      },
+      {
+        "id": "NCT05742607-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Serum bilirubin ≤1.5 × Upper limit of normal (ULN).",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT05742607-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤2.5 × ULN.",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT05742607-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤2.5 × ULN.",
+        "numberValue": 2.5
+      },
+      {
+        "id": "NCT05742607-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Measured creatinine clearance (CrCL) >40 mL/min or calculated CrCL >40 mL/min as determined by Cockcroft-Gault formula using actual body weight",
+        "numberValue": 40
+      },
+      {
+        "id": "NCT05742607-egfr-excl",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with sensitizing EGFR mutations or ALK translocations.",
+        "presence": "present",
+        "stringValue": "sensitizing EGFR mutations"
+      },
+      {
+        "id": "NCT05742607-alk-excl",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with sensitizing EGFR mutations or ALK translocations.",
+        "presence": "present",
+        "stringValue": "ALK translocations"
+      },
+      {
+        "id": "NCT05742607-prior-therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior exposure to immune-mediated therapy including, but not limited to, other anti-CTLA-4, anti-PD-1, anti-PD-L1, and anti-PD-L2 antibodies. Patients who received agents targeting the adenosine pathway (e.g., anti-CD73 antibody, adenosine A2A receptor [A2AR] inhibitor, anti-CD39 antibody) are also excluded.",
+        "stringValue": "immune-mediated therapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05742607-life",
+        "polarity": "inclusion",
+        "sourceText": "Must have a life expectancy of at least 12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05742607-egfr-alk-screening",
+        "polarity": "inclusion",
+        "sourceText": "Neither patients with EGFR/ALK mutations nor those with unknown EGFR/ALK status will be enrolled, with the following exceptions: Patients with documented Kirsten rat sarcoma virus (KRAS) mutations do not require EGFR/ALK status. Patients with squamous cell carcinoma do not require ALK status.",
+        "reasonFuzzy": "Complex conditional biomarker requirements with multiple exception rules cannot be captured by a single simple typed check."
+      },
+      {
+        "id": "NCT05742607-surg",
+        "polarity": "inclusion",
+        "sourceText": "Patients are suitable for inclusion if the planned surgery is lobectomy, sleeve resection, or bilobectomy, as determined by the attending surgeon based on the baseline findings.",
+        "reasonFuzzy": "Surgical procedure eligibility is judgment-based and depends on multidisciplinary evaluation."
+      }
+    ]
+  }
+}

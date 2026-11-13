@@ -1,0 +1,470 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06216301",
+  "briefTitle": "LUNAR-2: TTFields With Pembrolizumab + Platinum-based Chemotherapy for Metastatic NSCLC",
+  "parsedAt": "2026-11-12T05:51:16.602Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06216301-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "≥22 years of age in the USA\n\n  ≥18 years of age outside of the USA.",
+      "numberValue": 18,
+      "stages": [],
+      "stringValue": "≥18 years outside USA, ≥22 years in USA",
+      "evidence_quote": "≥22 years of age in the USA\n\n  ≥18 years of age outside of the USA.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06216301-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG Performance Status (PS) of 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "ECOG Performance Status (PS) of 0-1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06216301-evaluable",
+      "polarity": "inclusion",
+      "sourceText": "Evaluable (measurable or non-measurable) disease in the thorax per RECIST v1.1.",
+      "reasonFuzzy": "Evaluable disease per RECIST is a subjective imaging assessment."
+    },
+    {
+      "id": "NCT06216301-prior-systemic",
+      "polarity": "inclusion",
+      "sourceText": "Have not received prior systemic treatment for their metastatic NSCLC. Subjects who received adjuvant, neoadjuvant chemotherapy or chemoradiotherapy with curative intent for non-metastatic disease are eligible if the therapy was completed at least 12 months prior to the development of metastatic disease.",
+      "reasonFuzzy": "The prior systemic therapy exclusion includes complex rules about metastatic versus curative intent and a 12-month washout for non-metastatic treatment."
+    },
+    {
+      "id": "NCT06216301-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematologic and end-organ function o For subjects not receiving therapeutic anticoagulation: INR or aPTT ≤ 1.5 x ULN (unless participant is receiving anticoagulant therapy as long as INR or aPTT is within therapeutic range of intended use of anticoagulants).",
+      "reasonFuzzy": "Coagulation parameters with conditional anticoagulant exceptions are not standard single typed lab checks."
+    },
+    {
+      "id": "NCT06216301-mixed-histology",
+      "polarity": "exclusion",
+      "sourceText": "Mixed small cell and NSCLC histology.",
+      "reasonFuzzy": "Mixed histology exclusion cannot be captured by simple typed histology inclusion lists."
+    },
+    {
+      "id": "NCT06216301-targetable",
+      "polarity": "exclusion",
+      "sourceText": "EGFR sensitizing mutation and/or ALK translocation, and/or ROS1 and/or RET targetable gene rearrangement, and/or METex14 skipping mutation, and/or NTRK1/2 gene fusion and/or BRAF V600 mutations directed therapy is indicated or planned for other targeted therapy, where such testing and therapy is locally approved and available.",
+      "reasonFuzzy": "This exclusion involves multiple biomarkers conditioned on whether directed therapy is indicated or planned and locally available."
+    },
+    {
+      "id": "NCT06216301-surgery-washout",
+      "polarity": "exclusion",
+      "sourceText": "Had major surgery <3 weeks prior to randomization",
+      "reasonFuzzy": "Washout window for major surgery is not a standard lab cutoff."
+    },
+    {
+      "id": "NCT06216301-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Received radiation therapy to the lung that is > 30 Gy within 6 months of randomization. Received prior radiotherapy within 2 weeks of randomization. Subjects must have recovered from all radiation-related toxicities, not require corticosteroids, and not have had radiation pneumonitis. A 1-week washout is permitted for palliative radiation (≤2 weeks of radiotherapy) to non-CNS disease.",
+      "reasonFuzzy": "Complex radiotherapy dose, site, and washout constraints cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT06216301-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Has a known additional malignancy that is progressing or has required active treatment within the past 3 years.",
+      "reasonFuzzy": "Additional malignancy history with progression and time window is a clinical judgment criterion."
+    },
+    {
+      "id": "NCT06216301-brain",
+      "polarity": "exclusion",
+      "sourceText": "Has symptomatic Central Nervous System (CNS) metastases and/or carcinomatous meningitis. Subjects with asymptomatic CNS metastases or with previously treated brain metastases may participate provided they were treated before randomization (if applicable) and are neurologically stable and without requirement of steroid treatment for at least 7 days prior to randomization.",
+      "reasonFuzzy": "The CNS metastasis rule involves symptomatic status, carcinomatous meningitis, and steroid requirements."
+    },
+    {
+      "id": "NCT06216301-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Has active autoimmune disease that has required systemic treatment in past 2 years (i.e. with use of disease modifying agents, corticosteroids or immunosuppressive drugs).",
+      "reasonFuzzy": "Active autoimmune disease and treatment history is a complex clinical criterion."
+    },
+    {
+      "id": "NCT06216301-immunodeficiency",
+      "polarity": "exclusion",
+      "sourceText": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy (in dosing exceeding 10 mg daily of prednisone equivalent) or any other form of immunosuppressive therapy within 7 days prior randomization. Subjects with asthma that require intermittent use of bronchodilators, inhaled steroids, or local steroid injections would not be excluded from the study.",
+      "reasonFuzzy": "Immunodeficiency and steroid dose equivalents with asthma exceptions are non-standard criteria."
+    },
+    {
+      "id": "NCT06216301-prior-pd1",
+      "polarity": "exclusion",
+      "sourceText": "Had prior treatment with any other anti-PD-1, or PD-L1 or PD-L2 agent or an antibody or a small molecule targeting other immuno-regulatory receptors or mechanisms in the 12 months prior to randomization.",
+      "reasonFuzzy": "Prior immunotherapy exclusion with a 12-month window is not handled by a simple prior_therapy_excluded typed check due to the specific mechanism class and time window."
+    },
+    {
+      "id": "NCT06216301-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically diagnosis of stage 4 (according to Version 8 of the American Joint Committee on Cancer [AJCC] criteria) non-squamous or squamous NSCLC.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06216301-evaluable",
+      "polarity": "inclusion",
+      "sourceText": "Evaluable (measurable or non-measurable) disease in the thorax per RECIST v1.1.",
+      "reasonFuzzy": "Evaluable disease per RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06216301-prior-systemic",
+      "polarity": "inclusion",
+      "sourceText": "Have not received prior systemic treatment for their metastatic NSCLC. Subjects who received adjuvant, neoadjuvant chemotherapy or chemoradiotherapy with curative intent for non-metastatic disease are eligible if the therapy was completed at least 12 months prior to the development of metastatic disease.",
+      "reasonFuzzy": "Complex prior therapy rules with time windows and intent clauses cannot be expressed as a simple typed check."
+    },
+    {
+      "id": "NCT06216301-organ-function",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematologic and end-organ function\n\n  o For subjects not receiving therapeutic anticoagulation: INR or aPTT ≤ 1.5 x ULN (unless participant is receiving anticoagulant therapy as long as INR or aPTT is within therapeutic range of intended use of anticoagulants).",
+      "reasonFuzzy": "Coagulation parameters like INR and aPTT are not in the allowed typed kinds list."
+    },
+    {
+      "id": "NCT06216301-histology-mixed",
+      "polarity": "exclusion",
+      "sourceText": "Mixed small cell and NSCLC histology.",
+      "reasonFuzzy": "Mixed histology exclusion is not a single typed histology_in inclusion rule."
+    },
+    {
+      "id": "NCT06216301-biomarkers",
+      "polarity": "exclusion",
+      "sourceText": "EGFR sensitizing mutation and/or ALK translocation, and/or ROS1 and/or RET targetable gene rearrangement, and/or METex14 skipping mutation, and/or NTRK1/2 gene fusion and/or BRAF V600 mutations directed therapy is indicated or planned for other targeted therapy, where such testing and therapy is locally approved and available.",
+      "reasonFuzzy": "Multiple varied biomarkers tied to treatment availability/indication are complex and cannot be represented with single-target typed presence checks."
+    },
+    {
+      "id": "NCT06216301-surgery-radiation-washout",
+      "polarity": "exclusion",
+      "sourceText": "Had major surgery <3 weeks prior to randomization\n\nReceived radiation therapy to the lung that is > 30 Gy within 6 months of randomization.\n\nHas received prior radiotherapy within 2 weeks of randomization. Subjects must have recovered from all radiation-related toxicities, not require corticosteroids, and not have had radiation pneumonitis. A 1-week washout is permitted for palliative radiation (≤2 weeks of radiotherapy) to non-CNS disease.",
+      "reasonFuzzy": "Multiple surgical and radiation washout windows and conditions are too complex for typed fields."
+    },
+    {
+      "id": "NCT06216301-other-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Has a known additional malignancy that is progressing or has required active treatment within the past 3 years.",
+      "reasonFuzzy": "Prior malignancy history with active treatment criteria is a complex condition."
+    },
+    {
+      "id": "NCT06216301-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Has active autoimmune disease that has required systemic treatment in past 2 years (i.e. with use of disease modifying agents, corticosteroids or immunosuppressive drugs).",
+      "reasonFuzzy": "Active autoimmune disease history with specific past treatments is subjective and complex."
+    },
+    {
+      "id": "NCT06216301-immunodeficiency-steroids",
+      "polarity": "exclusion",
+      "sourceText": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy (in dosing exceeding 10 mg daily of prednisone equivalent) or any other form of immunosuppressive therapy within 7 days prior randomization. Subjects with asthma that require intermittent use of bronchodilators, inhaled steroids, or local steroid injections would not be excluded from the study.",
+      "reasonFuzzy": "Chronic steroid dosage equivalents and immunodeficiency conditions are complex exclusions."
+    },
+    {
+      "id": "NCT06216301-prior-immunotherapy",
+      "polarity": "exclusion",
+      "sourceText": "Had prior treatment with any other anti-PD-1, or PD-L1 or PD-L2 agent or an antibody or a small molecule targeting other immuno-regulatory receptors or mechanisms in the 12 months prior to randomization.",
+      "reasonFuzzy": "Class-based immunotherapy exclusion with specific time window cannot be mapped to simple prior_therapy_excluded."
+    },
+    {
+      "id": "NCT06216301-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Participation in another clinical study with an investigational agent or device during the 4 weeks prior to randomization.",
+      "reasonFuzzy": "Investigational trial participation washout is not a standard lab or prior therapy field."
+    },
+    {
+      "id": "NCT06216301-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically diagnosis of stage 4 (according to Version 8 of the American Joint Committee on Cancer [AJCC] criteria) non-squamous or squamous NSCLC.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06216301-brain",
+      "polarity": "exclusion",
+      "sourceText": "Has symptomatic Central Nervous System (CNS) metastases and/or carcinomatous meningitis.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Histologically or cytologically diagnosis of stage 4 (according to Version 8 of the American Joint Committee on Cancer [AJCC] criteria) non-squamous or squamous"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Histologically or cytologically diagnosis of stage 4 (according to Version 8 of the American Joint Committee on Cancer [AJCC] criteria) non-squamous or squamous"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 12,
+    "attempts": 1,
+    "ms": 4737
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 11,
+    "attempts": 1,
+    "ms": 4678
+  },
+  "ms": 17421,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06216301",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06216301-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "≥22 years of age in the USA ≥18 years of age outside of the USA.",
+        "numberValue": 18,
+        "stages": [],
+        "stringValue": "≥18 years outside USA, ≥22 years in USA"
+      },
+      {
+        "id": "NCT06216301-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically diagnosis of stage 4 (according to Version 8 of the American Joint Committee on Cancer [AJCC] criteria) non-squamous or squamous NSCLC.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06216301-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance Status (PS) of 0-1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06216301-evaluable",
+        "polarity": "inclusion",
+        "sourceText": "Evaluable (measurable or non-measurable) disease in the thorax per RECIST v1.1.",
+        "reasonFuzzy": "Evaluable disease per RECIST is a subjective imaging assessment."
+      },
+      {
+        "id": "NCT06216301-prior-systemic",
+        "polarity": "inclusion",
+        "sourceText": "Have not received prior systemic treatment for their metastatic NSCLC. Subjects who received adjuvant, neoadjuvant chemotherapy or chemoradiotherapy with curative intent for non-metastatic disease are eligible if the therapy was completed at least 12 months prior to the development of metastatic disease.",
+        "reasonFuzzy": "The prior systemic therapy exclusion includes complex rules about metastatic versus curative intent and a 12-month washout for non-metastatic treatment."
+      },
+      {
+        "id": "NCT06216301-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematologic and end-organ function o For subjects not receiving therapeutic anticoagulation: INR or aPTT ≤ 1.5 x ULN (unless participant is receiving anticoagulant therapy as long as INR or aPTT is within therapeutic range of intended use of anticoagulants).",
+        "reasonFuzzy": "Coagulation parameters with conditional anticoagulant exceptions are not standard single typed lab checks."
+      },
+      {
+        "id": "NCT06216301-mixed-histology",
+        "polarity": "exclusion",
+        "sourceText": "Mixed small cell and NSCLC histology.",
+        "reasonFuzzy": "Mixed histology exclusion cannot be captured by simple typed histology inclusion lists."
+      },
+      {
+        "id": "NCT06216301-targetable",
+        "polarity": "exclusion",
+        "sourceText": "EGFR sensitizing mutation and/or ALK translocation, and/or ROS1 and/or RET targetable gene rearrangement, and/or METex14 skipping mutation, and/or NTRK1/2 gene fusion and/or BRAF V600 mutations directed therapy is indicated or planned for other targeted therapy, where such testing and therapy is locally approved and available.",
+        "reasonFuzzy": "This exclusion involves multiple biomarkers conditioned on whether directed therapy is indicated or planned and locally available."
+      },
+      {
+        "id": "NCT06216301-surgery-washout",
+        "polarity": "exclusion",
+        "sourceText": "Had major surgery <3 weeks prior to randomization",
+        "reasonFuzzy": "Washout window for major surgery is not a standard lab cutoff."
+      },
+      {
+        "id": "NCT06216301-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Received radiation therapy to the lung that is > 30 Gy within 6 months of randomization. Received prior radiotherapy within 2 weeks of randomization. Subjects must have recovered from all radiation-related toxicities, not require corticosteroids, and not have had radiation pneumonitis. A 1-week washout is permitted for palliative radiation (≤2 weeks of radiotherapy) to non-CNS disease.",
+        "reasonFuzzy": "Complex radiotherapy dose, site, and washout constraints cannot be expressed as a single typed check."
+      },
+      {
+        "id": "NCT06216301-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Has a known additional malignancy that is progressing or has required active treatment within the past 3 years.",
+        "reasonFuzzy": "Additional malignancy history with progression and time window is a clinical judgment criterion."
+      },
+      {
+        "id": "NCT06216301-brain",
+        "polarity": "exclusion",
+        "sourceText": "Has symptomatic Central Nervous System (CNS) metastases and/or carcinomatous meningitis. Subjects with asymptomatic CNS metastases or with previously treated brain metastases may participate provided they were treated before randomization (if applicable) and are neurologically stable and without requirement of steroid treatment for at least 7 days prior to randomization.",
+        "reasonFuzzy": "The CNS metastasis rule involves symptomatic status, carcinomatous meningitis, and steroid requirements."
+      },
+      {
+        "id": "NCT06216301-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Has active autoimmune disease that has required systemic treatment in past 2 years (i.e. with use of disease modifying agents, corticosteroids or immunosuppressive drugs).",
+        "reasonFuzzy": "Active autoimmune disease and treatment history is a complex clinical criterion."
+      },
+      {
+        "id": "NCT06216301-immunodeficiency",
+        "polarity": "exclusion",
+        "sourceText": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy (in dosing exceeding 10 mg daily of prednisone equivalent) or any other form of immunosuppressive therapy within 7 days prior randomization. Subjects with asthma that require intermittent use of bronchodilators, inhaled steroids, or local steroid injections would not be excluded from the study.",
+        "reasonFuzzy": "Immunodeficiency and steroid dose equivalents with asthma exceptions are non-standard criteria."
+      },
+      {
+        "id": "NCT06216301-prior-pd1",
+        "polarity": "exclusion",
+        "sourceText": "Had prior treatment with any other anti-PD-1, or PD-L1 or PD-L2 agent or an antibody or a small molecule targeting other immuno-regulatory receptors or mechanisms in the 12 months prior to randomization.",
+        "reasonFuzzy": "Prior immunotherapy exclusion with a 12-month window is not handled by a simple prior_therapy_excluded typed check due to the specific mechanism class and time window."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06216301",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06216301-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "≥22 years of age in the USA\n\n  ≥18 years of age outside of the USA.",
+        "numberValue": 18,
+        "stages": [],
+        "stringValue": "≥18 years outside USA, ≥22 years in USA"
+      },
+      {
+        "id": "NCT06216301-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically diagnosis of stage 4 (according to Version 8 of the American Joint Committee on Cancer [AJCC] criteria) non-squamous or squamous NSCLC.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06216301-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance Status (PS) of 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06216301-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has symptomatic Central Nervous System (CNS) metastases and/or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06216301-evaluable",
+        "polarity": "inclusion",
+        "sourceText": "Evaluable (measurable or non-measurable) disease in the thorax per RECIST v1.1.",
+        "reasonFuzzy": "Evaluable disease per RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06216301-prior-systemic",
+        "polarity": "inclusion",
+        "sourceText": "Have not received prior systemic treatment for their metastatic NSCLC. Subjects who received adjuvant, neoadjuvant chemotherapy or chemoradiotherapy with curative intent for non-metastatic disease are eligible if the therapy was completed at least 12 months prior to the development of metastatic disease.",
+        "reasonFuzzy": "Complex prior therapy rules with time windows and intent clauses cannot be expressed as a simple typed check."
+      },
+      {
+        "id": "NCT06216301-organ-function",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematologic and end-organ function\n\n  o For subjects not receiving therapeutic anticoagulation: INR or aPTT ≤ 1.5 x ULN (unless participant is receiving anticoagulant therapy as long as INR or aPTT is within therapeutic range of intended use of anticoagulants).",
+        "reasonFuzzy": "Coagulation parameters like INR and aPTT are not in the allowed typed kinds list."
+      },
+      {
+        "id": "NCT06216301-histology-mixed",
+        "polarity": "exclusion",
+        "sourceText": "Mixed small cell and NSCLC histology.",
+        "reasonFuzzy": "Mixed histology exclusion is not a single typed histology_in inclusion rule."
+      },
+      {
+        "id": "NCT06216301-biomarkers",
+        "polarity": "exclusion",
+        "sourceText": "EGFR sensitizing mutation and/or ALK translocation, and/or ROS1 and/or RET targetable gene rearrangement, and/or METex14 skipping mutation, and/or NTRK1/2 gene fusion and/or BRAF V600 mutations directed therapy is indicated or planned for other targeted therapy, where such testing and therapy is locally approved and available.",
+        "reasonFuzzy": "Multiple varied biomarkers tied to treatment availability/indication are complex and cannot be represented with single-target typed presence checks."
+      },
+      {
+        "id": "NCT06216301-surgery-radiation-washout",
+        "polarity": "exclusion",
+        "sourceText": "Had major surgery <3 weeks prior to randomization\n\nReceived radiation therapy to the lung that is > 30 Gy within 6 months of randomization.\n\nHas received prior radiotherapy within 2 weeks of randomization. Subjects must have recovered from all radiation-related toxicities, not require corticosteroids, and not have had radiation pneumonitis. A 1-week washout is permitted for palliative radiation (≤2 weeks of radiotherapy) to non-CNS disease.",
+        "reasonFuzzy": "Multiple surgical and radiation washout windows and conditions are too complex for typed fields."
+      },
+      {
+        "id": "NCT06216301-other-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Has a known additional malignancy that is progressing or has required active treatment within the past 3 years.",
+        "reasonFuzzy": "Prior malignancy history with active treatment criteria is a complex condition."
+      },
+      {
+        "id": "NCT06216301-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Has active autoimmune disease that has required systemic treatment in past 2 years (i.e. with use of disease modifying agents, corticosteroids or immunosuppressive drugs).",
+        "reasonFuzzy": "Active autoimmune disease history with specific past treatments is subjective and complex."
+      },
+      {
+        "id": "NCT06216301-immunodeficiency-steroids",
+        "polarity": "exclusion",
+        "sourceText": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy (in dosing exceeding 10 mg daily of prednisone equivalent) or any other form of immunosuppressive therapy within 7 days prior randomization. Subjects with asthma that require intermittent use of bronchodilators, inhaled steroids, or local steroid injections would not be excluded from the study.",
+        "reasonFuzzy": "Chronic steroid dosage equivalents and immunodeficiency conditions are complex exclusions."
+      },
+      {
+        "id": "NCT06216301-prior-immunotherapy",
+        "polarity": "exclusion",
+        "sourceText": "Had prior treatment with any other anti-PD-1, or PD-L1 or PD-L2 agent or an antibody or a small molecule targeting other immuno-regulatory receptors or mechanisms in the 12 months prior to randomization.",
+        "reasonFuzzy": "Class-based immunotherapy exclusion with specific time window cannot be mapped to simple prior_therapy_excluded."
+      },
+      {
+        "id": "NCT06216301-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Participation in another clinical study with an investigational agent or device during the 4 weeks prior to randomization.",
+        "reasonFuzzy": "Investigational trial participation washout is not a standard lab or prior therapy field."
+      }
+    ]
+  }
+}

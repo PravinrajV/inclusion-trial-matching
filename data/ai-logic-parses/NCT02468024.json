@@ -1,0 +1,368 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT02468024",
+  "briefTitle": "JoLT-Ca Sublobar Resection (SR) Versus Stereotactic Ablative Radiotherapy (SAbR) for Lung Cancer",
+  "parsedAt": "2026-11-12T06:00:20.627Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT02468024-age-min",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age > 18 years.",
+      "numberValue": 18,
+      "evidence_quote": "Age > 18 years.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT02468024-histology",
+      "polarity": "inclusion",
+      "sourceText": "Radiographic findings consistent with non-small cell lung cancer, including lesions with ground glass opacities with a solid component of 50% or greater.",
+      "reasonFuzzy": "Solid component percentage and radiographic findings are complex imaging criteria."
+    },
+    {
+      "id": "NCT02468024-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "The primary tumor in the lung must be biopsy confirmed non-small cell lung cancer within 180 days prior to randomization.",
+      "reasonFuzzy": "Willingness or requirement to undergo biopsy and timing is a procedure requirement."
+    },
+    {
+      "id": "NCT02468024-lymph",
+      "polarity": "inclusion",
+      "sourceText": "All clinically suspicious mediastinal N1, N2, or N3 lymph nodes (> 1 cm short-axis dimension on CT scan and/or positive on PET scan) confirmed negative for involvement with NSCLC by one of the following methods...",
+      "reasonFuzzy": "Detailed lymph node assessment and confirmation method is complex."
+    },
+    {
+      "id": "NCT02468024-location",
+      "polarity": "inclusion",
+      "sourceText": "Tumor verified by a thoracic surgeon to be in a location that will permit sublobar resection. Tumor located peripherally within the lung.",
+      "reasonFuzzy": "Surgeon verification and precise anatomical location are subjective and site-specific judgments."
+    },
+    {
+      "id": "NCT02468024-pfts",
+      "polarity": "inclusion",
+      "sourceText": "To define eligibility of patients being at high risk for surgery, certain criteria must be met. Any one (1) of the following major criteria... Or at least two (2) minor criteria...",
+      "reasonFuzzy": "Complex set of major and minor pulmonary and clinical risk criteria involving multiple conditional options."
+    },
+    {
+      "id": "NCT02468024-prior-tx",
+      "polarity": "inclusion",
+      "sourceText": "No prior intra-thoracic radiation therapy for previously identified intra-thoracic primary tumor",
+      "reasonFuzzy": "Complex prior radiation and surgery restrictions with site-specific and timing constraints."
+    },
+    {
+      "id": "NCT02468024-malignancy",
+      "polarity": "inclusion",
+      "sourceText": "No prior invasive malignancy, unless disease-free for ≥ 3 years prior to registration (exceptions: non-melanoma skin cancer, in-situ cancers).",
+      "reasonFuzzy": "Prior malignancy history rule with specific exceptions and timeline."
+    },
+    {
+      "id": "NCT02468024-histology",
+      "polarity": "inclusion",
+      "sourceText": "Radiographic findings consistent with non-small cell lung cancer, including lesions with ground glass opacities with a solid component of 50% or greater.",
+      "reasonFuzzy": "Radiographic description of ground glass opacity and solid component percentage is not a standard typed histology check."
+    },
+    {
+      "id": "NCT02468024-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "The primary tumor in the lung must be biopsy confirmed non-small cell lung cancer within 180 days prior to randomization.",
+      "reasonFuzzy": "Biopsy confirmation timing is a procedural/administrative requirement rather than a typed biomarker or stage check."
+    },
+    {
+      "id": "NCT02468024-nodes",
+      "polarity": "inclusion",
+      "sourceText": "All clinically suspicious mediastinal N1, N2, or N3 lymph nodes (> 1 cm short-axis dimension on CT scan and/or positive on PET scan) confirmed negative for involvement with NSCLC by one of the following methods...",
+      "reasonFuzzy": "Lymph node evaluation and specific negative biopsy methods are complex procedural criteria."
+    },
+    {
+      "id": "NCT02468024-location",
+      "polarity": "inclusion",
+      "sourceText": "Tumor verified by a thoracic surgeon to be in a location that will permit sublobar resection.",
+      "reasonFuzzy": "Surgeon verification of tumor location for resectability is subjective clinical judgment."
+    },
+    {
+      "id": "NCT02468024-peripheral",
+      "polarity": "inclusion",
+      "sourceText": "Tumor located peripherally within the lung. NOTE: Peripheral is defined as not touching any surface within 2 cm of the proximal bronchial tree in all directions.",
+      "reasonFuzzy": "Anatomical location relative to the bronchial tree distance measurement is not a typed check."
+    },
+    {
+      "id": "NCT02468024-metastases",
+      "polarity": "inclusion",
+      "sourceText": "No evidence of distant metastases.",
+      "reasonFuzzy": "Absence of distant metastases without a specific site or staging tag is general metastatic status."
+    },
+    {
+      "id": "NCT02468024-pft",
+      "polarity": "inclusion",
+      "sourceText": "Availability of pulmonary function tests (PFTs - spirometry, DLCO, +/- arterial blood gases) within 180 days prior to registration.",
+      "reasonFuzzy": "PFT availability and physician documentation exceptions involve complex surgical operability criteria."
+    },
+    {
+      "id": "NCT02468024-risk",
+      "polarity": "inclusion",
+      "sourceText": "To define eligibility of patients being at high risk for surgery, certain criteria must be met. Any one (1) of the following major criteria will define the high risk status for eligibility...",
+      "reasonFuzzy": "Complex conditional logic involving major and minor pulmonary function, age, and comorbidity criteria cannot be expressed in a single typed check."
+    },
+    {
+      "id": "NCT02468024-radiation",
+      "polarity": "inclusion",
+      "sourceText": "No prior intra-thoracic radiation therapy for previously identified intra-thoracic primary tumor (e.g. previous lung cancer) on the ipsilateral side.",
+      "reasonFuzzy": "Prior radiation with specific ipsilateral/contralateral rules and field overlaps cannot be expressed as a simple prior therapy check."
+    },
+    {
+      "id": "NCT02468024-prior-tx",
+      "polarity": "inclusion",
+      "sourceText": "Previous chemotherapy, radiotherapy, or surgical resection specifically for the lung cancer being treated on this protocol is NOT permitted.",
+      "reasonFuzzy": "Exclusion of prior therapy for the specific target cancer is compound and trial-specific."
+    },
+    {
+      "id": "NCT02468024-malignancy",
+      "polarity": "inclusion",
+      "sourceText": "No prior invasive malignancy, unless disease-free for ≥ 3 years prior to registration (exceptions: non-melanoma skin cancer, in-situ cancers).",
+      "reasonFuzzy": "Prior malignancy history with a 3-year disease-free exception rule is a general oncology exclusion."
+    },
+    {
+      "id": "NCT02468024-ecog",
+      "polarity": "inclusion",
+      "sourceText": "ECOG/Zubrod performance status (PS) 0, 1, or 2 (reference Appendix C).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT02468024-stage",
+      "polarity": "inclusion",
+      "sourceText": "Tumor ≤ 4 cm maximum diameter, including clinical stage IA and selected IB by PET or PET integrated with a simultaneous CT scan (PET-CT) of the chest and upper abdomen performed within 180 days prior to randomization (reference Appendix A & B).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:2"
+        },
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IA,IB"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 3180
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 11,
+    "attempts": 1,
+    "ms": 3899
+  },
+  "ms": 15092,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT02468024",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT02468024-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age > 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT02468024-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG/Zubrod performance status (PS) 0, 1, or 2 (reference Appendix C).",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT02468024-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Tumor ≤ 4 cm maximum diameter, including clinical stage IA and selected IB by PET or PET integrated with a simultaneous CT scan (PET-CT) of the chest and upper abdomen performed within 180 days prior to randomization",
+        "stages": [
+          "IA",
+          "IB"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT02468024-histology",
+        "polarity": "inclusion",
+        "sourceText": "Radiographic findings consistent with non-small cell lung cancer, including lesions with ground glass opacities with a solid component of 50% or greater.",
+        "reasonFuzzy": "Solid component percentage and radiographic findings are complex imaging criteria."
+      },
+      {
+        "id": "NCT02468024-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "The primary tumor in the lung must be biopsy confirmed non-small cell lung cancer within 180 days prior to randomization.",
+        "reasonFuzzy": "Willingness or requirement to undergo biopsy and timing is a procedure requirement."
+      },
+      {
+        "id": "NCT02468024-lymph",
+        "polarity": "inclusion",
+        "sourceText": "All clinically suspicious mediastinal N1, N2, or N3 lymph nodes (> 1 cm short-axis dimension on CT scan and/or positive on PET scan) confirmed negative for involvement with NSCLC by one of the following methods...",
+        "reasonFuzzy": "Detailed lymph node assessment and confirmation method is complex."
+      },
+      {
+        "id": "NCT02468024-location",
+        "polarity": "inclusion",
+        "sourceText": "Tumor verified by a thoracic surgeon to be in a location that will permit sublobar resection. Tumor located peripherally within the lung.",
+        "reasonFuzzy": "Surgeon verification and precise anatomical location are subjective and site-specific judgments."
+      },
+      {
+        "id": "NCT02468024-pfts",
+        "polarity": "inclusion",
+        "sourceText": "To define eligibility of patients being at high risk for surgery, certain criteria must be met. Any one (1) of the following major criteria... Or at least two (2) minor criteria...",
+        "reasonFuzzy": "Complex set of major and minor pulmonary and clinical risk criteria involving multiple conditional options."
+      },
+      {
+        "id": "NCT02468024-prior-tx",
+        "polarity": "inclusion",
+        "sourceText": "No prior intra-thoracic radiation therapy for previously identified intra-thoracic primary tumor",
+        "reasonFuzzy": "Complex prior radiation and surgery restrictions with site-specific and timing constraints."
+      },
+      {
+        "id": "NCT02468024-malignancy",
+        "polarity": "inclusion",
+        "sourceText": "No prior invasive malignancy, unless disease-free for ≥ 3 years prior to registration (exceptions: non-melanoma skin cancer, in-situ cancers).",
+        "reasonFuzzy": "Prior malignancy history rule with specific exceptions and timeline."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT02468024",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT02468024-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age > 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT02468024-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG/Zubrod performance status (PS) 0, 1, or 2 (reference Appendix C).",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT02468024-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Tumor ≤ 4 cm maximum diameter, including clinical stage IA and selected IB by PET or PET integrated with a simultaneous CT scan (PET-CT) of the chest and upper abdomen performed within 180 days prior to randomization (reference Appendix A & B).",
+        "stages": [
+          "IA",
+          "IB"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT02468024-histology",
+        "polarity": "inclusion",
+        "sourceText": "Radiographic findings consistent with non-small cell lung cancer, including lesions with ground glass opacities with a solid component of 50% or greater.",
+        "reasonFuzzy": "Radiographic description of ground glass opacity and solid component percentage is not a standard typed histology check."
+      },
+      {
+        "id": "NCT02468024-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "The primary tumor in the lung must be biopsy confirmed non-small cell lung cancer within 180 days prior to randomization.",
+        "reasonFuzzy": "Biopsy confirmation timing is a procedural/administrative requirement rather than a typed biomarker or stage check."
+      },
+      {
+        "id": "NCT02468024-nodes",
+        "polarity": "inclusion",
+        "sourceText": "All clinically suspicious mediastinal N1, N2, or N3 lymph nodes (> 1 cm short-axis dimension on CT scan and/or positive on PET scan) confirmed negative for involvement with NSCLC by one of the following methods...",
+        "reasonFuzzy": "Lymph node evaluation and specific negative biopsy methods are complex procedural criteria."
+      },
+      {
+        "id": "NCT02468024-location",
+        "polarity": "inclusion",
+        "sourceText": "Tumor verified by a thoracic surgeon to be in a location that will permit sublobar resection.",
+        "reasonFuzzy": "Surgeon verification of tumor location for resectability is subjective clinical judgment."
+      },
+      {
+        "id": "NCT02468024-peripheral",
+        "polarity": "inclusion",
+        "sourceText": "Tumor located peripherally within the lung. NOTE: Peripheral is defined as not touching any surface within 2 cm of the proximal bronchial tree in all directions.",
+        "reasonFuzzy": "Anatomical location relative to the bronchial tree distance measurement is not a typed check."
+      },
+      {
+        "id": "NCT02468024-metastases",
+        "polarity": "inclusion",
+        "sourceText": "No evidence of distant metastases.",
+        "reasonFuzzy": "Absence of distant metastases without a specific site or staging tag is general metastatic status."
+      },
+      {
+        "id": "NCT02468024-pft",
+        "polarity": "inclusion",
+        "sourceText": "Availability of pulmonary function tests (PFTs - spirometry, DLCO, +/- arterial blood gases) within 180 days prior to registration.",
+        "reasonFuzzy": "PFT availability and physician documentation exceptions involve complex surgical operability criteria."
+      },
+      {
+        "id": "NCT02468024-risk",
+        "polarity": "inclusion",
+        "sourceText": "To define eligibility of patients being at high risk for surgery, certain criteria must be met. Any one (1) of the following major criteria will define the high risk status for eligibility...",
+        "reasonFuzzy": "Complex conditional logic involving major and minor pulmonary function, age, and comorbidity criteria cannot be expressed in a single typed check."
+      },
+      {
+        "id": "NCT02468024-radiation",
+        "polarity": "inclusion",
+        "sourceText": "No prior intra-thoracic radiation therapy for previously identified intra-thoracic primary tumor (e.g. previous lung cancer) on the ipsilateral side.",
+        "reasonFuzzy": "Prior radiation with specific ipsilateral/contralateral rules and field overlaps cannot be expressed as a simple prior therapy check."
+      },
+      {
+        "id": "NCT02468024-prior-tx",
+        "polarity": "inclusion",
+        "sourceText": "Previous chemotherapy, radiotherapy, or surgical resection specifically for the lung cancer being treated on this protocol is NOT permitted.",
+        "reasonFuzzy": "Exclusion of prior therapy for the specific target cancer is compound and trial-specific."
+      },
+      {
+        "id": "NCT02468024-malignancy",
+        "polarity": "inclusion",
+        "sourceText": "No prior invasive malignancy, unless disease-free for ≥ 3 years prior to registration (exceptions: non-melanoma skin cancer, in-situ cancers).",
+        "reasonFuzzy": "Prior malignancy history with a 3-year disease-free exception rule is a general oncology exclusion."
+      }
+    ]
+  }
+}

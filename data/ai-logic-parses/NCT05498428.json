@@ -1,0 +1,345 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05498428",
+  "briefTitle": "A Study of Amivantamab in Participants With Advanced or Metastatic Solid Tumors Including Epidermal Growth Factor Receptor (EGFR)-Mutated Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:46:48.995Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05498428-stage",
+      "polarity": "inclusion",
+      "sourceText": "Participant must have histologically or cytologically confirmed, locally advanced or metastatic, non-small cell lung cancer (NSCLC) that is not amenable to curative therapy including surgical resection or chemoradiation.",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is described without specific numbered stage categories."
+    },
+    {
+      "id": "NCT05498428-variants",
+      "polarity": "inclusion",
+      "sourceText": "Additional Cohort specific disease requirements include: Cohorts 1, 3, 3b, 5, 6 and 7: epidermal growth factor receptor (EGFR) exon 19 deletion (Exon19del) or Exon 21 L858R mutation; Cohort 2: EGFR Exon 20ins mutation.",
+      "reasonFuzzy": "Cohort-specific variant requirements vary across multiple study arms and cannot be expressed as a single uniform variant check."
+    },
+    {
+      "id": "NCT05498428-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Cohorts 1,5,and6: Participant should not have received any prior systemic therapy for locally advanced or metastatic NSCLC. Cohort 2: Participant should not have received any prior systemic therapy for locally advanced or metastatic NSCLC. Cohorts 3and3b: Participant must have progressed on or after osimertinib monotherapy as the most recent line of treatment.",
+      "reasonFuzzy": "Prior therapy rules differ substantially depending on the specific study cohort."
+    },
+    {
+      "id": "NCT05498428-measurable",
+      "polarity": "inclusion",
+      "sourceText": "All cohorts except Cohort 4: Participants must have at least 1 measurable lesion, according to Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT05498428-age",
+      "polarity": "inclusion",
+      "sourceText": "Participant must be 18 years of age or older",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05498428-stage",
+      "polarity": "inclusion",
+      "sourceText": "Participant must have histologically or cytologically confirmed, locally advanced or metastatic, non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no explicit numbered stage list."
+    },
+    {
+      "id": "NCT05498428-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Cohorts 1,5,and6: Participant should not have received any prior systemic therapy for locally advanced or metastatic NSCLC. Cohort 2: Participant should not have received any prior systemic therapy for locally advanced or metastatic NSCLC. Cohorts 3and3b: Participant must have progressed on or after osimertinib monotherapy... Cohort 7: Participants must have progressed on or after the combination of amivantamab and lazertinib...",
+      "reasonFuzzy": "Prior therapy requirements differ significantly by cohort and cannot be captured in a single typed check."
+    },
+    {
+      "id": "NCT05498428-squamous-excl",
+      "polarity": "exclusion",
+      "sourceText": "Cohort 2, 3, 3b, and 7 only: Squamous NSCLC are excluded.",
+      "reasonFuzzy": "Histology exclusion applies only to specific cohorts rather than the whole trial population."
+    },
+    {
+      "id": "NCT05498428-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have at least 1 measurable lesion, according to Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT05498428-brain-excl",
+      "polarity": "exclusion",
+      "sourceText": "Participant has symptomatic brain metastases.",
+      "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets rule."
+    },
+    {
+      "id": "NCT05498428-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05498428-egfr",
+      "polarity": "inclusion",
+      "sourceText": "epidermal growth factor receptor (EGFR)-Mutated Non-Small Cell Lung Cancer",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05498428-egfr",
+      "polarity": "inclusion",
+      "sourceText": "epidermal growth factor receptor (EGFR) exon 19 deletion (Exon19del) or Exon 21 L858R mutation; Cohort 2: EGFR Exon 20ins mutation.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05498428-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participant has symptomatic brain metastases. A participant with asymptomatic or previously treated and stable brain metastases may participate in this study.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05498428-egfr-variant",
+      "polarity": "inclusion",
+      "sourceText": "Cohorts 1, 3, 3b, 5, 6 and 7: epidermal growth factor receptor (EGFR) exon 19 deletion (Exon19del) or Exon 21 L858R mutation; Cohort 2: EGFR Exon 20ins mutation.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT05498428-brain",
+      "polarity": "inclusion",
+      "sourceText": "A participant with asymptomatic or previously treated and stable brain metastases may participate in this study.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT05498428-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Participant must have eastern cooperative oncology group (ECOG) status of 0 or 1",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Participant must be 18 years of age or older"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "epidermal growth factor receptor (EGFR)-Mutated Non-Small Cell Lung Cancer"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 4,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:exon19del, l858r, exon 20ins"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "inclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 2827
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3231
+  },
+  "ms": 14040,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05498428",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05498428-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "epidermal growth factor receptor (EGFR) exon 19 deletion (Exon19del) or Exon 21 L858R mutation; Cohort 2: EGFR Exon 20ins mutation.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05498428-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant must be 18 years of age or older",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05498428-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant must have eastern cooperative oncology group (ECOG) status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05498428-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participant has symptomatic brain metastases. A participant with asymptomatic or previously treated and stable brain metastases may participate in this study.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05498428-stage",
+        "polarity": "inclusion",
+        "sourceText": "Participant must have histologically or cytologically confirmed, locally advanced or metastatic, non-small cell lung cancer (NSCLC) that is not amenable to curative therapy including surgical resection or chemoradiation.",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is described without specific numbered stage categories."
+      },
+      {
+        "id": "NCT05498428-variants",
+        "polarity": "inclusion",
+        "sourceText": "Additional Cohort specific disease requirements include: Cohorts 1, 3, 3b, 5, 6 and 7: epidermal growth factor receptor (EGFR) exon 19 deletion (Exon19del) or Exon 21 L858R mutation; Cohort 2: EGFR Exon 20ins mutation.",
+        "reasonFuzzy": "Cohort-specific variant requirements vary across multiple study arms and cannot be expressed as a single uniform variant check."
+      },
+      {
+        "id": "NCT05498428-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Cohorts 1,5,and6: Participant should not have received any prior systemic therapy for locally advanced or metastatic NSCLC. Cohort 2: Participant should not have received any prior systemic therapy for locally advanced or metastatic NSCLC. Cohorts 3and3b: Participant must have progressed on or after osimertinib monotherapy as the most recent line of treatment.",
+        "reasonFuzzy": "Prior therapy rules differ substantially depending on the specific study cohort."
+      },
+      {
+        "id": "NCT05498428-measurable",
+        "polarity": "inclusion",
+        "sourceText": "All cohorts except Cohort 4: Participants must have at least 1 measurable lesion, according to Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05498428",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05498428-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05498428-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "epidermal growth factor receptor (EGFR)-Mutated Non-Small Cell Lung Cancer",
+        "presence": "present"
+      },
+      {
+        "id": "NCT05498428-egfr-variant",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Cohorts 1, 3, 3b, 5, 6 and 7: epidermal growth factor receptor (EGFR) exon 19 deletion (Exon19del) or Exon 21 L858R mutation; Cohort 2: EGFR Exon 20ins mutation.",
+        "stringValue": "Exon19del, L858R, Exon 20ins"
+      },
+      {
+        "id": "NCT05498428-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participant must have eastern cooperative oncology group (ECOG) status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05498428-brain",
+        "kind": "brain_mets",
+        "polarity": "inclusion",
+        "sourceText": "A participant with asymptomatic or previously treated and stable brain metastases may participate in this study.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05498428-stage",
+        "polarity": "inclusion",
+        "sourceText": "Participant must have histologically or cytologically confirmed, locally advanced or metastatic, non-small cell lung cancer (NSCLC)",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no explicit numbered stage list."
+      },
+      {
+        "id": "NCT05498428-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Cohorts 1,5,and6: Participant should not have received any prior systemic therapy for locally advanced or metastatic NSCLC. Cohort 2: Participant should not have received any prior systemic therapy for locally advanced or metastatic NSCLC. Cohorts 3and3b: Participant must have progressed on or after osimertinib monotherapy... Cohort 7: Participants must have progressed on or after the combination of amivantamab and lazertinib...",
+        "reasonFuzzy": "Prior therapy requirements differ significantly by cohort and cannot be captured in a single typed check."
+      },
+      {
+        "id": "NCT05498428-squamous-excl",
+        "polarity": "exclusion",
+        "sourceText": "Cohort 2, 3, 3b, and 7 only: Squamous NSCLC are excluded.",
+        "reasonFuzzy": "Histology exclusion applies only to specific cohorts rather than the whole trial population."
+      },
+      {
+        "id": "NCT05498428-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have at least 1 measurable lesion, according to Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT05498428-brain-excl",
+        "polarity": "exclusion",
+        "sourceText": "Participant has symptomatic brain metastases.",
+        "reasonFuzzy": "Symptomatic CNS disease is not a clean typed brain_mets rule."
+      }
+    ]
+  }
+}

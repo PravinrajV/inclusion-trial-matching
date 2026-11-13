@@ -1,0 +1,371 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05168566",
+  "briefTitle": "Study to Evaluate Sutetinib Maleate Capsule in Locally Advanced or Metastatic Non-small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:45:41.204Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05168566-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age 18 years old and above, male or female.",
+      "numberValue": 18,
+      "evidence_quote": "Age 18 years old and above, male or female.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05168566-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG score of 0, 1, or 2.",
+      "numberValue": 2,
+      "evidence_quote": "ECOG score of 0, 1, or 2.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05168566-stage",
+      "polarity": "inclusion",
+      "sourceText": "locally advanced or metastatic NSCLC",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no specific stage list for a stage_in check."
+    },
+    {
+      "id": "NCT05168566-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one measurable lesion.",
+      "reasonFuzzy": "Measurable disease is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05168566-life",
+      "polarity": "inclusion",
+      "sourceText": "A minimum life expectancy of > 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05168566-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate bone marrow reserve, hepatic, renal and coagulation function.",
+      "reasonFuzzy": "General organ function without specific numeric cutoffs is fuzzy."
+    },
+    {
+      "id": "NCT05168566-washout",
+      "polarity": "exclusion",
+      "sourceText": "Any systemic anti-tumor therapy such as chemotherapy, and radiation therapy (including curative radiotherapy or spinal radiotherapy portion >30%) used within 3 weeks prior to enrollment; immunotherapy within 4 weeks; any palliative radiotherapy for non-target lesions used to relieve symptoms and traditional Chinese medicines indicated for the tumor (including Chinese patent medicine) within 2 weeks prior to enrollment.",
+      "reasonFuzzy": "Complex multi-category washout windows with varying timelines cannot be expressed as a simple typed check."
+    },
+    {
+      "id": "NCT05168566-cyp3a4",
+      "polarity": "exclusion",
+      "sourceText": "Use or intake of drugs or foods containing potent inhibitor or inducer of cytochrome P450 isozyme 3A4 (CYP3A4) within 14 days or 5 half-lives, whichever was the longer, prior to enrollment.",
+      "reasonFuzzy": "Concomitant medication restriction for CYP3A4 inhibitors/inducers is not a typed prior therapy check."
+    },
+    {
+      "id": "NCT05168566-stage",
+      "polarity": "inclusion",
+      "sourceText": "locally advanced or metastatic NSCLC",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but no specific stage list or numbered stage is provided for a stage_in check."
+    },
+    {
+      "id": "NCT05168566-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one measurable lesion.",
+      "reasonFuzzy": "Measurable disease assessment is a subjective or imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05168566-life",
+      "polarity": "inclusion",
+      "sourceText": "A minimum life expectancy of > 3 months.",
+      "reasonFuzzy": "Life expectancy is a clinical judgment and cannot be expressed as a typed check."
+    },
+    {
+      "id": "NCT05168566-washout",
+      "polarity": "exclusion",
+      "sourceText": "Any systemic anti-tumor therapy such as chemotherapy, and radiation therapy (including curative radiotherapy or spinal radiotherapy portion >30%) used within 3 weeks prior to enrollment; immunotherapy within 4 weeks; any palliative radiotherapy for non-target lesions used to relieve symptoms and traditional Chinese medicines indicated for the tumor (including Chinese patent medicine) within 2 weeks prior to enrollment.",
+      "reasonFuzzy": "Complex multimodality washout windows with different durations for each therapy type are not a simple lab or single drug exclusion check."
+    },
+    {
+      "id": "NCT05168566-cyp3a4",
+      "polarity": "exclusion",
+      "sourceText": "Use or intake of drugs or foods containing potent inhibitor or inducer of cytochrome P450 isozyme 3A4 (CYP3A4) within 14 days or 5 half-lives, whichever was the longer, prior to enrollment.",
+      "reasonFuzzy": "Exclusion of CYP3A4 inhibitors/inducers involves class-based dietary and drug restrictions with complex dynamic washout windows."
+    },
+    {
+      "id": "NCT05168566-egfr-var",
+      "polarity": "inclusion",
+      "sourceText": "Confirmation that the tumor harbors a non-resistant uncommon EGFR mutation (tumor tissue biopsy), including one or more of L861Q, G719X and S768I mutations, excluding any other EGFR sensitive mutations and/or oncogenes..",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05168566-egfr-var",
+      "polarity": "inclusion",
+      "sourceText": "Confirmation that the tumor harbors a non-resistant uncommon EGFR mutation (tumor tissue biopsy), including one or more of L861Q, G719X and S768I mutations, excluding any other EGFR sensitive mutations and/or oncogenes..",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT05168566-lines",
+      "polarity": "inclusion",
+      "sourceText": "Histopathological and/or cytopathological confirmation of locally advanced or metastatic NSCLC patients with ≤ 1 prior line of chemotherapy.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05168566-egfr-tki-exc",
+      "polarity": "exclusion",
+      "sourceText": "Ever used the epidermal growth factor receptor-tyrosine kinase inhibitor (EGFR-TKI) for anti-tumor therapy prior to enrollment.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05168566-brain",
+      "polarity": "exclusion",
+      "sourceText": "Active central nervous system metastases",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:l861q, g719x and s768i"
+        },
+        {
+          "side": "b-only",
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:l861q, g719x, s768i"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:epidermal growth factor receptor-tyrosine kinase inhibitor (egfr-tki)"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 3822
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 4672
+  },
+  "ms": 16473,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05168566",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05168566-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 years old and above, male or female.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05168566-lines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Histopathological and/or cytopathological confirmation of locally advanced or metastatic NSCLC patients with ≤ 1 prior line of chemotherapy.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05168566-egfr-var",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Confirmation that the tumor harbors a non-resistant uncommon EGFR mutation (tumor tissue biopsy), including one or more of L861Q, G719X and S768I mutations, excluding any other EGFR sensitive mutations and/or oncogenes..",
+        "stringValue": "L861Q, G719X and S768I"
+      },
+      {
+        "id": "NCT05168566-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG score of 0, 1, or 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT05168566-egfr-tki-exc",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Ever used the epidermal growth factor receptor-tyrosine kinase inhibitor (EGFR-TKI) for anti-tumor therapy prior to enrollment.",
+        "stringValue": "epidermal growth factor receptor-tyrosine kinase inhibitor (EGFR-TKI)"
+      },
+      {
+        "id": "NCT05168566-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active central nervous system metastases",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05168566-stage",
+        "polarity": "inclusion",
+        "sourceText": "locally advanced or metastatic NSCLC",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but there is no specific stage list for a stage_in check."
+      },
+      {
+        "id": "NCT05168566-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one measurable lesion.",
+        "reasonFuzzy": "Measurable disease is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05168566-life",
+        "polarity": "inclusion",
+        "sourceText": "A minimum life expectancy of > 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05168566-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate bone marrow reserve, hepatic, renal and coagulation function.",
+        "reasonFuzzy": "General organ function without specific numeric cutoffs is fuzzy."
+      },
+      {
+        "id": "NCT05168566-washout",
+        "polarity": "exclusion",
+        "sourceText": "Any systemic anti-tumor therapy such as chemotherapy, and radiation therapy (including curative radiotherapy or spinal radiotherapy portion >30%) used within 3 weeks prior to enrollment; immunotherapy within 4 weeks; any palliative radiotherapy for non-target lesions used to relieve symptoms and traditional Chinese medicines indicated for the tumor (including Chinese patent medicine) within 2 weeks prior to enrollment.",
+        "reasonFuzzy": "Complex multi-category washout windows with varying timelines cannot be expressed as a simple typed check."
+      },
+      {
+        "id": "NCT05168566-cyp3a4",
+        "polarity": "exclusion",
+        "sourceText": "Use or intake of drugs or foods containing potent inhibitor or inducer of cytochrome P450 isozyme 3A4 (CYP3A4) within 14 days or 5 half-lives, whichever was the longer, prior to enrollment.",
+        "reasonFuzzy": "Concomitant medication restriction for CYP3A4 inhibitors/inducers is not a typed prior therapy check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05168566",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05168566-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age 18 years old and above, male or female.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05168566-prior-lines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Histopathological and/or cytopathological confirmation of locally advanced or metastatic NSCLC patients with ≤ 1 prior line of chemotherapy.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05168566-egfr-var",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Confirmation that the tumor harbors a non-resistant uncommon EGFR mutation (tumor tissue biopsy), including one or more of L861Q, G719X and S768I mutations, excluding any other EGFR sensitive mutations and/or oncogenes..",
+        "stringValue": "L861Q, G719X, S768I"
+      },
+      {
+        "id": "NCT05168566-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG score of 0, 1, or 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT05168566-prior-tki",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Ever used the epidermal growth factor receptor-tyrosine kinase inhibitor (EGFR-TKI) for anti-tumor therapy prior to enrollment.",
+        "stringValue": "epidermal growth factor receptor-tyrosine kinase inhibitor (EGFR-TKI)"
+      },
+      {
+        "id": "NCT05168566-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active central nervous system metastases",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05168566-stage",
+        "polarity": "inclusion",
+        "sourceText": "locally advanced or metastatic NSCLC",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope, but no specific stage list or numbered stage is provided for a stage_in check."
+      },
+      {
+        "id": "NCT05168566-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one measurable lesion.",
+        "reasonFuzzy": "Measurable disease assessment is a subjective or imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05168566-life",
+        "polarity": "inclusion",
+        "sourceText": "A minimum life expectancy of > 3 months.",
+        "reasonFuzzy": "Life expectancy is a clinical judgment and cannot be expressed as a typed check."
+      },
+      {
+        "id": "NCT05168566-washout",
+        "polarity": "exclusion",
+        "sourceText": "Any systemic anti-tumor therapy such as chemotherapy, and radiation therapy (including curative radiotherapy or spinal radiotherapy portion >30%) used within 3 weeks prior to enrollment; immunotherapy within 4 weeks; any palliative radiotherapy for non-target lesions used to relieve symptoms and traditional Chinese medicines indicated for the tumor (including Chinese patent medicine) within 2 weeks prior to enrollment.",
+        "reasonFuzzy": "Complex multimodality washout windows with different durations for each therapy type are not a simple lab or single drug exclusion check."
+      },
+      {
+        "id": "NCT05168566-cyp3a4",
+        "polarity": "exclusion",
+        "sourceText": "Use or intake of drugs or foods containing potent inhibitor or inducer of cytochrome P450 isozyme 3A4 (CYP3A4) within 14 days or 5 half-lives, whichever was the longer, prior to enrollment.",
+        "reasonFuzzy": "Exclusion of CYP3A4 inhibitors/inducers involves class-based dietary and drug restrictions with complex dynamic washout windows."
+      }
+    ]
+  }
+}

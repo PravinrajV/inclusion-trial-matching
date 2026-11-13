@@ -1,0 +1,614 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07770100",
+  "briefTitle": "Concurrent Immunotherapy and Systemic Therapy With Stereotactic Body Radiation Therapy (SBRT) for Stage IV Cancers (COINSSS IV)",
+  "parsedAt": "2026-11-12T12:01:35.938Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07770100-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Histologically proven advanced or stage IV head & neck, non-small cell lung cancer, cervical, esophageal, gastric, and gastroesophageal cancer at least 6 metastases that are eligible for SBRT",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Histologically proven advanced or stage IV head & neck, non-small cell lung cancer, cervical, esophageal, gastric, and gastroesophageal cancer at least 6 metastases that are eligible for SBRT",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07770100-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG Performance Status 0 - 1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG Performance Status 0 - 1",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07770100-anc",
+      "kind": "anc_min",
+      "polarity": "inclusion",
+      "sourceText": "ANC > or equal to 1,000/mm3",
+      "numberValue": 1000,
+      "evidence_quote": "ANC > or equal to 1,000/mm3",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07770100-platelets",
+      "kind": "platelets_min",
+      "polarity": "inclusion",
+      "sourceText": "Platelets > or equal to 100,000/mm3",
+      "numberValue": 100000,
+      "evidence_quote": "Platelets > or equal to 100,000/mm3",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07770100-bilirubin",
+      "kind": "bilirubin_max",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin < or equal to or equal to 1.5 x ULN",
+      "numberValue": 1.5,
+      "evidence_quote": "Total bilirubin < or equal to or equal to 1.5 x ULN",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07770100-egfr-min",
+      "kind": "egfr_min",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine Or Creatinine Clearance < or equal to 1.5 x ULNand/or CrCl > or equal to 30ml/min",
+      "numberValue": 30,
+      "evidence_quote": "Creatinine Or Creatinine Clearance < or equal to 1.5 x ULNand/or CrCl > or equal to 30ml/min",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07770100-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy > or equal to 6 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07770100-metastases",
+      "polarity": "inclusion",
+      "sourceText": "at least 6 metastases that are eligible for SBRT comprising: lung, liver, adrenal glands, bone, and lymph node sites with at least 1 other lesion meeting RECIST criteria of which this additional lesion not be treated with SBRT",
+      "reasonFuzzy": "SBRT eligibility and lesion count rules are complex and require investigator judgment."
+    },
+    {
+      "id": "NCT07770100-age-min",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07770100-age-max",
+      "polarity": "inclusion",
+      "sourceText": "Maximum Age: 99 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07770100-metastases-sbrt",
+      "polarity": "inclusion",
+      "sourceText": "at least 6 metastases that are eligible for SBRT comprising: lung, liver, adrenal glands, bone, and lymph node sites with at least 1 other lesion meeting RECIST criteria of which this additional lesion not be treated with SBRT",
+      "reasonFuzzy": "Complex anatomical and lesion-count requirements for SBRT eligibility are not simple typed checks."
+    },
+    {
+      "id": "NCT07770100-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "If prior treatment with chemotherapy or radiotherapy or surgery has occurred: Prior chemotherapy or radiation must have concluded > 21 days prior to the start of study treatment. Exception: study treatment can start within 2-3 days following GKS [gamma knife surgery] or whole brain radiation therapy [ WBRT], as long as patient is not experiencing ongoing/residual AE's related to GKS or WBRT at discretion of treating physician.",
+      "reasonFuzzy": "Washout windows with various procedure-specific exceptions and investigator discretion are fuzzy criteria."
+    },
+    {
+      "id": "NCT07770100-life-expectancy",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy > or equal to 6 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT07770100-malignancy-history",
+      "polarity": "exclusion",
+      "sourceText": "No previous or concurrent malignancy is allowed except for adequately treated basal cell or squamous cell skin cancer, in situ cervical cancer, or other cancer for which the patient has been disease free for the past 3 years.",
+      "reasonFuzzy": "Prior malignancy history rules with multi-year disease-free exceptions cannot be represented by a standard typed check."
+    },
+    {
+      "id": "NCT07770100-sbrt-sites-excl",
+      "polarity": "exclusion",
+      "sourceText": "Presence of < or equal to 5 sites amenable to SBRT",
+      "reasonFuzzy": "SBRT site counting rules are complex and study-specific."
+    },
+    {
+      "id": "NCT07770100-prohibited-meds",
+      "polarity": "exclusion",
+      "sourceText": "Medications prohibited while receiving concurrent SBRT: gemcitabine, Adriamycin, VEGF or BRAF inhibitors.",
+      "reasonFuzzy": "List of prohibited medications with a holding exception window is not a simple prior_therapy_excluded check."
+    },
+    {
+      "id": "NCT07770100-uncontrolled-illness",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled inter-current illness. This includes, but is not limited to: ongoing or active infection; symptomatic congestive heart failure (NYHA class III or IV); unstable angina pectoris or new onset angina that began within the last 3 months; cardiac ventricular arrhythmias requiring anti-arrhythmic therapy; thrombotic/ embolic events such as cerebrovascular accident, including transient ischemic attacks within the past 6 months;",
+      "reasonFuzzy": "General uncontrolled comorbidities and specific cardiac/vascular events with various timeframes are not a single typed check."
+    },
+    {
+      "id": "NCT07770100-age-min",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07770100-age-max",
+      "polarity": "inclusion",
+      "sourceText": "Maximum Age: 99 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT07770100-ast",
+      "polarity": "inclusion",
+      "sourceText": "AST and ALT - With hepatic metastasis, < or equal to or equal to 5 x ULN. If no hepatic metastasis, < or equal to 2.5 times x ULN",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07770100-alt",
+      "polarity": "inclusion",
+      "sourceText": "AST and ALT - With hepatic metastasis, < or equal to or equal to 5 x ULN. If no hepatic metastasis, < or equal to 2.5 times x ULN",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07770100-pdl1-2",
+      "polarity": "inclusion",
+      "sourceText": "If non-small cell lung cancer on first line ipilimumab in combination with nivolumab, PD-L1 of 1%",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07770100-ast",
+      "polarity": "inclusion",
+      "sourceText": "AST and ALT - With hepatic metastasis, < or equal to or equal to 5 x ULN. If no hepatic metastasis, < or equal to 2.5 times x ULN",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07770100-alt",
+      "polarity": "inclusion",
+      "sourceText": "AST and ALT - With hepatic metastasis, < or equal to or equal to 5 x ULN. If no hepatic metastasis, < or equal to 2.5 times x ULN",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07770100-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "If non-small cell lung cancer patient with pembrolizumab, PD-L1 testing CPS score > or = to 50% will have to be shown",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07770100-egfr",
+      "polarity": "inclusion",
+      "sourceText": "If non-small cell lung cancer on first line ipilimumab in combination with nivolumab, PD-L1 of 1% and negative epidermal growth factor receptor (EGFR) or anaplastic lymphoma kinase (ALK) genomic tumor aberrations.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07770100-alk",
+      "polarity": "inclusion",
+      "sourceText": "If non-small cell lung cancer on first line ipilimumab in combination with nivolumab, PD-L1 of 1% and negative epidermal growth factor receptor (EGFR) or anaplastic lymphoma kinase (ALK) genomic tumor aberrations.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07770100-creatinine",
+      "polarity": "inclusion",
+      "sourceText": "Creatinine Or Creatinine Clearance < or equal to 1.5 x ULNand/or CrCl > or equal to 30ml/min",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 12,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        },
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Maximum Age: 99 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 13,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        },
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Maximum Age: 99 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 10,
+      "disagreements": 5,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:5"
+        },
+        {
+          "side": "a-only",
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:5"
+        },
+        {
+          "side": "b-only",
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "side": "b-only",
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        },
+        {
+          "side": "b-only",
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "value": "n:2.5"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 6,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:50"
+        },
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:absent"
+        },
+        {
+          "kind": "alk_status",
+          "polarity": "inclusion",
+          "value": "p:absent"
+        },
+        {
+          "kind": "creatinine_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        }
+      ],
+      "normalizerTypedCount": 6
+    }
+  },
+  "runA": {
+    "typedEmitted": 14,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 8479
+  },
+  "runB": {
+    "typedEmitted": 15,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 8814
+  },
+  "ms": 25303,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07770100",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07770100-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically proven advanced or stage IV head & neck, non-small cell lung cancer, cervical, esophageal, gastric, and gastroesophageal cancer at least 6 metastases that are eligible for SBRT",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07770100-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "If non-small cell lung cancer patient with pembrolizumab, PD-L1 testing CPS score > or = to 50% will have to be shown",
+        "numberValue": 50,
+        "stringValue": "CPS"
+      },
+      {
+        "id": "NCT07770100-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "If non-small cell lung cancer on first line ipilimumab in combination with nivolumab, PD-L1 of 1% and negative epidermal growth factor receptor (EGFR) or anaplastic lymphoma kinase (ALK) genomic tumor aberrations.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT07770100-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "If non-small cell lung cancer on first line ipilimumab in combination with nivolumab, PD-L1 of 1% and negative epidermal growth factor receptor (EGFR) or anaplastic lymphoma kinase (ALK) genomic tumor aberrations.",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT07770100-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07770100-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "Maximum Age: 99 Years",
+        "numberValue": 99
+      },
+      {
+        "id": "NCT07770100-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance Status 0 - 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07770100-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "ANC > or equal to 1,000/mm3",
+        "numberValue": 1000
+      },
+      {
+        "id": "NCT07770100-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets > or equal to 100,000/mm3",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT07770100-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin < or equal to or equal to 1.5 x ULN",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT07770100-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT - With hepatic metastasis, < or equal to or equal to 5 x ULN. If no hepatic metastasis, < or equal to 2.5 times x ULN",
+        "numberValue": 5,
+        "stringValue": "With hepatic metastasis, <= 5 x ULN; If no hepatic metastasis, <= 2.5 x ULN"
+      },
+      {
+        "id": "NCT07770100-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT - With hepatic metastasis, < or equal to or equal to 5 x ULN. If no hepatic metastasis, < or equal to 2.5 times x ULN",
+        "numberValue": 5,
+        "stringValue": "With hepatic metastasis, <= 5 x ULN; If no hepatic metastasis, <= 2.5 x ULN"
+      },
+      {
+        "id": "NCT07770100-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine Or Creatinine Clearance < or equal to 1.5 x ULNand/or CrCl > or equal to 30ml/min",
+        "numberValue": 1.5,
+        "stringValue": "1.5 x ULN"
+      },
+      {
+        "id": "NCT07770100-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine Or Creatinine Clearance < or equal to 1.5 x ULNand/or CrCl > or equal to 30ml/min",
+        "numberValue": 30
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07770100-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy > or equal to 6 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT07770100-metastases",
+        "polarity": "inclusion",
+        "sourceText": "at least 6 metastases that are eligible for SBRT comprising: lung, liver, adrenal glands, bone, and lymph node sites with at least 1 other lesion meeting RECIST criteria of which this additional lesion not be treated with SBRT",
+        "reasonFuzzy": "SBRT eligibility and lesion count rules are complex and require investigator judgment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07770100",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07770100-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically proven advanced or stage IV head & neck, non-small cell lung cancer, cervical, esophageal, gastric, and gastroesophageal cancer",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07770100-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "If non-small cell lung cancer patient with pembrolizumab, PD-L1 testing CPS score > or = to 50% will have to be shown",
+        "numberValue": 50,
+        "stringValue": "CPS"
+      },
+      {
+        "id": "NCT07770100-pdl1-2",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "If non-small cell lung cancer on first line ipilimumab in combination with nivolumab, PD-L1 of 1%",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07770100-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "negative epidermal growth factor receptor (EGFR) or anaplastic lymphoma kinase (ALK) genomic tumor aberrations",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT07770100-alk",
+        "kind": "alk_status",
+        "polarity": "inclusion",
+        "sourceText": "negative epidermal growth factor receptor (EGFR) or anaplastic lymphoma kinase (ALK) genomic tumor aberrations",
+        "presence": "absent"
+      },
+      {
+        "id": "NCT07770100-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07770100-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "Maximum Age: 99 Years",
+        "numberValue": 99
+      },
+      {
+        "id": "NCT07770100-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG Performance Status 0 - 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07770100-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "ANC > or equal to 1,000/mm3",
+        "numberValue": 1000
+      },
+      {
+        "id": "NCT07770100-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets > or equal to 100,000/mm3",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT07770100-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin < or equal to or equal to 1.5 x ULN",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT07770100-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT - With hepatic metastasis, < or equal to or equal to 5 x ULN. If no hepatic metastasis, < or equal to 2.5 times x ULN",
+        "numberValue": 2.5,
+        "stages": [],
+        "stringValue": "hepatic metastasis: 5 x ULN; no hepatic metastasis: 2.5 x ULN"
+      },
+      {
+        "id": "NCT07770100-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "AST and ALT - With hepatic metastasis, < or equal to or equal to 5 x ULN. If no hepatic metastasis, < or equal to 2.5 times x ULN",
+        "numberValue": 2.5,
+        "stringValue": "hepatic metastasis: 5 x ULN; no hepatic metastasis: 2.5 x ULN"
+      },
+      {
+        "id": "NCT07770100-egfr-min",
+        "kind": "egfr_min",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine Or Creatinine Clearance < or equal to 1.5 x ULNand/or CrCl > or equal to 30ml/min",
+        "numberValue": 30,
+        "stringValue": "CrCl or Creatinine clearance"
+      },
+      {
+        "id": "NCT07770100-creatinine",
+        "kind": "creatinine_max",
+        "polarity": "inclusion",
+        "sourceText": "Creatinine Or Creatinine Clearance < or equal to 1.5 x ULNand/or CrCl > or equal to 30ml/min",
+        "numberValue": 1.5
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07770100-metastases-sbrt",
+        "polarity": "inclusion",
+        "sourceText": "at least 6 metastases that are eligible for SBRT comprising: lung, liver, adrenal glands, bone, and lymph node sites with at least 1 other lesion meeting RECIST criteria of which this additional lesion not be treated with SBRT",
+        "reasonFuzzy": "Complex anatomical and lesion-count requirements for SBRT eligibility are not simple typed checks."
+      },
+      {
+        "id": "NCT07770100-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "If prior treatment with chemotherapy or radiotherapy or surgery has occurred: Prior chemotherapy or radiation must have concluded > 21 days prior to the start of study treatment. Exception: study treatment can start within 2-3 days following GKS [gamma knife surgery] or whole brain radiation therapy [ WBRT], as long as patient is not experiencing ongoing/residual AE's related to GKS or WBRT at discretion of treating physician.",
+        "reasonFuzzy": "Washout windows with various procedure-specific exceptions and investigator discretion are fuzzy criteria."
+      },
+      {
+        "id": "NCT07770100-life-expectancy",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy > or equal to 6 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT07770100-malignancy-history",
+        "polarity": "exclusion",
+        "sourceText": "No previous or concurrent malignancy is allowed except for adequately treated basal cell or squamous cell skin cancer, in situ cervical cancer, or other cancer for which the patient has been disease free for the past 3 years.",
+        "reasonFuzzy": "Prior malignancy history rules with multi-year disease-free exceptions cannot be represented by a standard typed check."
+      },
+      {
+        "id": "NCT07770100-sbrt-sites-excl",
+        "polarity": "exclusion",
+        "sourceText": "Presence of < or equal to 5 sites amenable to SBRT",
+        "reasonFuzzy": "SBRT site counting rules are complex and study-specific."
+      },
+      {
+        "id": "NCT07770100-prohibited-meds",
+        "polarity": "exclusion",
+        "sourceText": "Medications prohibited while receiving concurrent SBRT: gemcitabine, Adriamycin, VEGF or BRAF inhibitors.",
+        "reasonFuzzy": "List of prohibited medications with a holding exception window is not a simple prior_therapy_excluded check."
+      },
+      {
+        "id": "NCT07770100-uncontrolled-illness",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled inter-current illness. This includes, but is not limited to: ongoing or active infection; symptomatic congestive heart failure (NYHA class III or IV); unstable angina pectoris or new onset angina that began within the last 3 months; cardiac ventricular arrhythmias requiring anti-arrhythmic therapy; thrombotic/ embolic events such as cerebrovascular accident, including transient ischemic attacks within the past 6 months;",
+        "reasonFuzzy": "General uncontrolled comorbidities and specific cardiac/vascular events with various timeframes are not a single typed check."
+      }
+    ]
+  }
+}

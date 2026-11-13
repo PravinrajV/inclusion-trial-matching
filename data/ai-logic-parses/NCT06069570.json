@@ -1,0 +1,613 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06069570",
+  "briefTitle": "Safety Study for a Gamma Delta T Cell Product Used With Low Dose Radiotherapy in Patients With Locally Advanced or Metastatic NSCLC or Solid Tumors With Bone Metastases",
+  "parsedAt": "2026-11-12T06:23:57.649Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06069570-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male or female, > 18 years old.",
+      "numberValue": 18,
+      "evidence_quote": "Male or female, > 18 years old.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06069570-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06069570-weight",
+      "polarity": "inclusion",
+      "sourceText": "Minimum body weight of 50 kilograms (kg).",
+      "reasonFuzzy": "Body weight is not one of the allowed typed criteria kinds."
+    },
+    {
+      "id": "NCT06069570-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed locally advanced or metastatic NSCLC or locally advanced or metastatic solid tumor with bone metastasis",
+      "reasonFuzzy": "Locally advanced or metastatic descriptions are in scope but do not provide a structured stage list for stage_in."
+    },
+    {
+      "id": "NCT06069570-genomic",
+      "polarity": "inclusion",
+      "sourceText": "Genomic screening, with tumors with known actionable molecular alterations, such as EGFR, ALK, ROS-1, BRAF, RET, MET, and KRAS etc., must have progressed on appropriate target-directed molecular therapy.",
+      "reasonFuzzy": "Lists multiple broad actionable alterations and prior target-directed therapies without a single biomarker cutoff."
+    },
+    {
+      "id": "NCT06069570-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one measurable target lesion based on RECIST v1.1 confirmed by radiological imaging. Participants with isolated bone metastases are eligible for enrollment are not required to have measurable disease",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06069570-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematopoietic, hepatic and renal function",
+      "reasonFuzzy": "General organ function without specific numeric lab cutoffs."
+    },
+    {
+      "id": "NCT06069570-chemo-washout",
+      "polarity": "exclusion",
+      "sourceText": "Chemotherapy, investigational, and/or check-point inhibitor therapy within the 30 days prior to study Day 1.",
+      "reasonFuzzy": "Washout window for prior systemic therapies is not a typed check."
+    },
+    {
+      "id": "NCT06069570-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery, except for vascular access placement, within the 30 days prior to study Day 1.",
+      "reasonFuzzy": "Major surgery washout is not a typed check."
+    },
+    {
+      "id": "NCT06069570-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Active autoimmune disease requiring immunosuppressive therapy.",
+      "reasonFuzzy": "Active autoimmune disease is a clinical judgment-based exclusion."
+    },
+    {
+      "id": "NCT06069570-infection",
+      "polarity": "exclusion",
+      "sourceText": "Infection requiring systemic treatment within 30 days prior to study Day 1.",
+      "reasonFuzzy": "Recent infection requirement is not a typed check."
+    },
+    {
+      "id": "NCT06069570-effusion",
+      "polarity": "exclusion",
+      "sourceText": "History of peritoneal effusion (ascites), pericardial, or pleural effusions/nodules.",
+      "reasonFuzzy": "History of effusions is not a typed check."
+    },
+    {
+      "id": "NCT06069570-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled hypertension, history of arrhythmia including atrial fibrillation, unstable angina, decompensated congestive heart failure, cardiac ejection fraction ≤ 50%, myocardial infarction, or marked baseline prolonged QT/QTc intervals.",
+      "reasonFuzzy": "Complex cardiovascular exclusions contain multiple conditions and an LVEF threshold not matching allowed cardiac typed items."
+    },
+    {
+      "id": "NCT06069570-hiv-hep",
+      "polarity": "exclusion",
+      "sourceText": "Human immunodeficiency virus (HIV), Hepatitis B, or Hepatitis C detection.",
+      "reasonFuzzy": "Viral serology exclusions are not covered by allowed typed checks."
+    },
+    {
+      "id": "NCT06069570-trial-part",
+      "polarity": "exclusion",
+      "sourceText": "Participation in the treatment portion of a clinical trial or completed a clinical trial within the 30 days prior to the first dose of KB-GDT-01.",
+      "reasonFuzzy": "Prior trial participation washout is not a typed check."
+    },
+    {
+      "id": "NCT06069570-investigator",
+      "polarity": "exclusion",
+      "sourceText": "Presence of any condition that may, in the opinion of the Investigator, render the patient inappropriate from participating in the study.",
+      "reasonFuzzy": "Investigator discretion is a subjective judgment-based item."
+    },
+    {
+      "id": "NCT06069570-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Live vaccines administered within 30 days prior to study Day 1.",
+      "reasonFuzzy": "Live vaccine washout is not a typed check."
+    },
+    {
+      "id": "NCT06069570-svco",
+      "polarity": "exclusion",
+      "sourceText": "Superior vena cava obstruction",
+      "reasonFuzzy": "Superior vena cava obstruction is not a typed check."
+    },
+    {
+      "id": "NCT06069570-rad",
+      "polarity": "exclusion",
+      "sourceText": "Prior radiation therapy to a selected LDRT treatment site </= 30 days prior to Day 1.",
+      "reasonFuzzy": "Prior radiation washout window is not a typed check."
+    },
+    {
+      "id": "NCT06069570-weight",
+      "polarity": "inclusion",
+      "sourceText": "Minimum body weight of 50 kilograms (kg).",
+      "reasonFuzzy": "Body weight is not a typed check kind."
+    },
+    {
+      "id": "NCT06069570-stage",
+      "polarity": "inclusion",
+      "sourceText": "Histologically or cytologically confirmed locally advanced or metastatic NSCLC or locally advanced or metastatic solid tumor with bone metastasis",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope but does not list specific numerical stages for a stage_in check."
+    },
+    {
+      "id": "NCT06069570-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Progressed on SOC therapy including platinum-based chemotherapy and immune checkpoint inhibitors (NSCLC), and are not a candidate for further standard anti-neoplastic therapy and/or have exhibited intolerance to and/or declined clinically applicable salvage therapies, and/or have declined therapy.",
+      "reasonFuzzy": "Complex prior line and standard of care requirements that cannot be expressed as a single typed prior_therapy_required or prior_lines check."
+    },
+    {
+      "id": "NCT06069570-genomic",
+      "polarity": "inclusion",
+      "sourceText": "Genomic screening, with tumors with known actionable molecular alterations, such as EGFR, ALK, ROS-1, BRAF, RET, MET, and KRAS etc., must have progressed on appropriate target-directed molecular therapy.",
+      "reasonFuzzy": "Multiple varied potential biomarkers are mentioned as examples rather than a single explicit required gene presence check."
+    },
+    {
+      "id": "NCT06069570-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one measurable target lesion based on RECIST v1.1 confirmed by radiological imaging. Participants with isolated bone metastases are eligible for enrollment are not required to have measurable disease",
+      "reasonFuzzy": "Measurable disease per RECIST with exception for bone metastases is subjective."
+    },
+    {
+      "id": "NCT06069570-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate hematopoietic, hepatic and renal function",
+      "reasonFuzzy": "General statement for organ function without explicit numerical lab thresholds."
+    },
+    {
+      "id": "NCT06069570-zoledronic",
+      "polarity": "inclusion",
+      "sourceText": "For solid tumors with bone metastases subjects (Part 2 Cohort B): receiving zoledronic acid for solid tumors with bone metastases",
+      "reasonFuzzy": "Treatment requirement specific to a cohort not matching standard prior therapy kinds."
+    },
+    {
+      "id": "NCT06069570-chemo-excl",
+      "polarity": "exclusion",
+      "sourceText": "Chemotherapy, investigational, and/or check-point inhibitor therapy within the 30 days prior to study Day 1.",
+      "reasonFuzzy": "Washout window for various non-specific therapies."
+    },
+    {
+      "id": "NCT06069570-surgery-excl",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery, except for vascular access placement, within the 30 days prior to study Day 1.",
+      "reasonFuzzy": "Major surgery exclusion with washout window."
+    },
+    {
+      "id": "NCT06069570-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Active autoimmune disease requiring immunosuppressive therapy.",
+      "reasonFuzzy": "Clinical condition-based exclusion."
+    },
+    {
+      "id": "NCT06069570-infection",
+      "polarity": "exclusion",
+      "sourceText": "Infection requiring systemic treatment within 30 days prior to study Day 1.",
+      "reasonFuzzy": "Infection-related exclusion with timeframe."
+    },
+    {
+      "id": "NCT06069570-effusion",
+      "polarity": "exclusion",
+      "sourceText": "History of peritoneal effusion (ascites), pericardial, or pleural effusions/nodules.",
+      "reasonFuzzy": "Specific medical history exclusion."
+    },
+    {
+      "id": "NCT06069570-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Uncontrolled hypertension, history of arrhythmia including atrial fibrillation, unstable angina, decompensated congestive heart failure, cardiac ejection fraction ≤ 50%, myocardial infarction, or marked baseline prolonged QT/QTc intervals.",
+      "reasonFuzzy": "Complex cardiovascular exclusions including a mix of clinical diagnoses and an ejection fraction cutoff."
+    },
+    {
+      "id": "NCT06069570-viral",
+      "polarity": "exclusion",
+      "sourceText": "Human immunodeficiency virus (HIV), Hepatitis B, or Hepatitis C detection.",
+      "reasonFuzzy": "Viral serology exclusion."
+    },
+    {
+      "id": "NCT06069570-trial-excl",
+      "polarity": "exclusion",
+      "sourceText": "Participation in the treatment portion of a clinical trial or completed a clinical trial within the 30 days prior to the first dose of KB-GDT-01.",
+      "reasonFuzzy": "Prior clinical trial participation washout."
+    },
+    {
+      "id": "NCT06069570-investigator",
+      "polarity": "exclusion",
+      "sourceText": "Presence of any condition that may, in the opinion of the Investigator, render the patient inappropriate from participating in the study.",
+      "reasonFuzzy": "Investigator discretion exclusion."
+    },
+    {
+      "id": "NCT06069570-allergy",
+      "polarity": "exclusion",
+      "sourceText": "Allergy or intolerance to any of the study product ingredients or excipients.",
+      "reasonFuzzy": "Allergy exclusion."
+    },
+    {
+      "id": "NCT06069570-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Live vaccines administered within 30 days prior to study Day 1.",
+      "reasonFuzzy": "Live vaccine washout."
+    },
+    {
+      "id": "NCT06069570-capacity",
+      "polarity": "exclusion",
+      "sourceText": "Individuals lacking capacity to consent for themselves.",
+      "reasonFuzzy": "Consent capacity exclusion."
+    },
+    {
+      "id": "NCT06069570-svco",
+      "polarity": "exclusion",
+      "sourceText": "Superior vena cava obstruction",
+      "reasonFuzzy": "Specific medical condition exclusion."
+    },
+    {
+      "id": "NCT06069570-rad",
+      "polarity": "exclusion",
+      "sourceText": "Prior radiation therapy to a selected LDRT treatment site </= 30 days prior to Day 1.",
+      "reasonFuzzy": "Prior radiation washout window."
+    },
+    {
+      "id": "NCT06069570-prior-chemo",
+      "polarity": "inclusion",
+      "sourceText": "Progressed on SOC therapy including platinum-based chemotherapy and immune checkpoint inhibitors (NSCLC)",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06069570-prior-ici",
+      "polarity": "inclusion",
+      "sourceText": "Progressed on SOC therapy including platinum-based chemotherapy and immune checkpoint inhibitors (NSCLC)",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:platinum-based chemotherapy"
+        },
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:immune checkpoint inhibitors"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 17,
+    "attempts": 1,
+    "ms": 5219
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 21,
+    "attempts": 1,
+    "ms": 6890
+  },
+  "ms": 20087,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06069570",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06069570-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female, > 18 years old.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06069570-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06069570-prior-chemo",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Progressed on SOC therapy including platinum-based chemotherapy and immune checkpoint inhibitors (NSCLC)",
+        "stringValue": "platinum-based chemotherapy"
+      },
+      {
+        "id": "NCT06069570-prior-ici",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Progressed on SOC therapy including platinum-based chemotherapy and immune checkpoint inhibitors (NSCLC)",
+        "stringValue": "immune checkpoint inhibitors"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06069570-weight",
+        "polarity": "inclusion",
+        "sourceText": "Minimum body weight of 50 kilograms (kg).",
+        "reasonFuzzy": "Body weight is not one of the allowed typed criteria kinds."
+      },
+      {
+        "id": "NCT06069570-stage",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed locally advanced or metastatic NSCLC or locally advanced or metastatic solid tumor with bone metastasis",
+        "reasonFuzzy": "Locally advanced or metastatic descriptions are in scope but do not provide a structured stage list for stage_in."
+      },
+      {
+        "id": "NCT06069570-genomic",
+        "polarity": "inclusion",
+        "sourceText": "Genomic screening, with tumors with known actionable molecular alterations, such as EGFR, ALK, ROS-1, BRAF, RET, MET, and KRAS etc., must have progressed on appropriate target-directed molecular therapy.",
+        "reasonFuzzy": "Lists multiple broad actionable alterations and prior target-directed therapies without a single biomarker cutoff."
+      },
+      {
+        "id": "NCT06069570-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one measurable target lesion based on RECIST v1.1 confirmed by radiological imaging. Participants with isolated bone metastases are eligible for enrollment are not required to have measurable disease",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06069570-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematopoietic, hepatic and renal function",
+        "reasonFuzzy": "General organ function without specific numeric lab cutoffs."
+      },
+      {
+        "id": "NCT06069570-chemo-washout",
+        "polarity": "exclusion",
+        "sourceText": "Chemotherapy, investigational, and/or check-point inhibitor therapy within the 30 days prior to study Day 1.",
+        "reasonFuzzy": "Washout window for prior systemic therapies is not a typed check."
+      },
+      {
+        "id": "NCT06069570-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery, except for vascular access placement, within the 30 days prior to study Day 1.",
+        "reasonFuzzy": "Major surgery washout is not a typed check."
+      },
+      {
+        "id": "NCT06069570-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Active autoimmune disease requiring immunosuppressive therapy.",
+        "reasonFuzzy": "Active autoimmune disease is a clinical judgment-based exclusion."
+      },
+      {
+        "id": "NCT06069570-infection",
+        "polarity": "exclusion",
+        "sourceText": "Infection requiring systemic treatment within 30 days prior to study Day 1.",
+        "reasonFuzzy": "Recent infection requirement is not a typed check."
+      },
+      {
+        "id": "NCT06069570-effusion",
+        "polarity": "exclusion",
+        "sourceText": "History of peritoneal effusion (ascites), pericardial, or pleural effusions/nodules.",
+        "reasonFuzzy": "History of effusions is not a typed check."
+      },
+      {
+        "id": "NCT06069570-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled hypertension, history of arrhythmia including atrial fibrillation, unstable angina, decompensated congestive heart failure, cardiac ejection fraction ≤ 50%, myocardial infarction, or marked baseline prolonged QT/QTc intervals.",
+        "reasonFuzzy": "Complex cardiovascular exclusions contain multiple conditions and an LVEF threshold not matching allowed cardiac typed items."
+      },
+      {
+        "id": "NCT06069570-hiv-hep",
+        "polarity": "exclusion",
+        "sourceText": "Human immunodeficiency virus (HIV), Hepatitis B, or Hepatitis C detection.",
+        "reasonFuzzy": "Viral serology exclusions are not covered by allowed typed checks."
+      },
+      {
+        "id": "NCT06069570-trial-part",
+        "polarity": "exclusion",
+        "sourceText": "Participation in the treatment portion of a clinical trial or completed a clinical trial within the 30 days prior to the first dose of KB-GDT-01.",
+        "reasonFuzzy": "Prior trial participation washout is not a typed check."
+      },
+      {
+        "id": "NCT06069570-investigator",
+        "polarity": "exclusion",
+        "sourceText": "Presence of any condition that may, in the opinion of the Investigator, render the patient inappropriate from participating in the study.",
+        "reasonFuzzy": "Investigator discretion is a subjective judgment-based item."
+      },
+      {
+        "id": "NCT06069570-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Live vaccines administered within 30 days prior to study Day 1.",
+        "reasonFuzzy": "Live vaccine washout is not a typed check."
+      },
+      {
+        "id": "NCT06069570-svco",
+        "polarity": "exclusion",
+        "sourceText": "Superior vena cava obstruction",
+        "reasonFuzzy": "Superior vena cava obstruction is not a typed check."
+      },
+      {
+        "id": "NCT06069570-rad",
+        "polarity": "exclusion",
+        "sourceText": "Prior radiation therapy to a selected LDRT treatment site </= 30 days prior to Day 1.",
+        "reasonFuzzy": "Prior radiation washout window is not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06069570",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06069570-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female, > 18 years old.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06069570-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06069570-weight",
+        "polarity": "inclusion",
+        "sourceText": "Minimum body weight of 50 kilograms (kg).",
+        "reasonFuzzy": "Body weight is not a typed check kind."
+      },
+      {
+        "id": "NCT06069570-stage",
+        "polarity": "inclusion",
+        "sourceText": "Histologically or cytologically confirmed locally advanced or metastatic NSCLC or locally advanced or metastatic solid tumor with bone metastasis",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope but does not list specific numerical stages for a stage_in check."
+      },
+      {
+        "id": "NCT06069570-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Progressed on SOC therapy including platinum-based chemotherapy and immune checkpoint inhibitors (NSCLC), and are not a candidate for further standard anti-neoplastic therapy and/or have exhibited intolerance to and/or declined clinically applicable salvage therapies, and/or have declined therapy.",
+        "reasonFuzzy": "Complex prior line and standard of care requirements that cannot be expressed as a single typed prior_therapy_required or prior_lines check."
+      },
+      {
+        "id": "NCT06069570-genomic",
+        "polarity": "inclusion",
+        "sourceText": "Genomic screening, with tumors with known actionable molecular alterations, such as EGFR, ALK, ROS-1, BRAF, RET, MET, and KRAS etc., must have progressed on appropriate target-directed molecular therapy.",
+        "reasonFuzzy": "Multiple varied potential biomarkers are mentioned as examples rather than a single explicit required gene presence check."
+      },
+      {
+        "id": "NCT06069570-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one measurable target lesion based on RECIST v1.1 confirmed by radiological imaging. Participants with isolated bone metastases are eligible for enrollment are not required to have measurable disease",
+        "reasonFuzzy": "Measurable disease per RECIST with exception for bone metastases is subjective."
+      },
+      {
+        "id": "NCT06069570-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate hematopoietic, hepatic and renal function",
+        "reasonFuzzy": "General statement for organ function without explicit numerical lab thresholds."
+      },
+      {
+        "id": "NCT06069570-zoledronic",
+        "polarity": "inclusion",
+        "sourceText": "For solid tumors with bone metastases subjects (Part 2 Cohort B): receiving zoledronic acid for solid tumors with bone metastases",
+        "reasonFuzzy": "Treatment requirement specific to a cohort not matching standard prior therapy kinds."
+      },
+      {
+        "id": "NCT06069570-chemo-excl",
+        "polarity": "exclusion",
+        "sourceText": "Chemotherapy, investigational, and/or check-point inhibitor therapy within the 30 days prior to study Day 1.",
+        "reasonFuzzy": "Washout window for various non-specific therapies."
+      },
+      {
+        "id": "NCT06069570-surgery-excl",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery, except for vascular access placement, within the 30 days prior to study Day 1.",
+        "reasonFuzzy": "Major surgery exclusion with washout window."
+      },
+      {
+        "id": "NCT06069570-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Active autoimmune disease requiring immunosuppressive therapy.",
+        "reasonFuzzy": "Clinical condition-based exclusion."
+      },
+      {
+        "id": "NCT06069570-infection",
+        "polarity": "exclusion",
+        "sourceText": "Infection requiring systemic treatment within 30 days prior to study Day 1.",
+        "reasonFuzzy": "Infection-related exclusion with timeframe."
+      },
+      {
+        "id": "NCT06069570-effusion",
+        "polarity": "exclusion",
+        "sourceText": "History of peritoneal effusion (ascites), pericardial, or pleural effusions/nodules.",
+        "reasonFuzzy": "Specific medical history exclusion."
+      },
+      {
+        "id": "NCT06069570-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Uncontrolled hypertension, history of arrhythmia including atrial fibrillation, unstable angina, decompensated congestive heart failure, cardiac ejection fraction ≤ 50%, myocardial infarction, or marked baseline prolonged QT/QTc intervals.",
+        "reasonFuzzy": "Complex cardiovascular exclusions including a mix of clinical diagnoses and an ejection fraction cutoff."
+      },
+      {
+        "id": "NCT06069570-viral",
+        "polarity": "exclusion",
+        "sourceText": "Human immunodeficiency virus (HIV), Hepatitis B, or Hepatitis C detection.",
+        "reasonFuzzy": "Viral serology exclusion."
+      },
+      {
+        "id": "NCT06069570-trial-excl",
+        "polarity": "exclusion",
+        "sourceText": "Participation in the treatment portion of a clinical trial or completed a clinical trial within the 30 days prior to the first dose of KB-GDT-01.",
+        "reasonFuzzy": "Prior clinical trial participation washout."
+      },
+      {
+        "id": "NCT06069570-investigator",
+        "polarity": "exclusion",
+        "sourceText": "Presence of any condition that may, in the opinion of the Investigator, render the patient inappropriate from participating in the study.",
+        "reasonFuzzy": "Investigator discretion exclusion."
+      },
+      {
+        "id": "NCT06069570-allergy",
+        "polarity": "exclusion",
+        "sourceText": "Allergy or intolerance to any of the study product ingredients or excipients.",
+        "reasonFuzzy": "Allergy exclusion."
+      },
+      {
+        "id": "NCT06069570-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Live vaccines administered within 30 days prior to study Day 1.",
+        "reasonFuzzy": "Live vaccine washout."
+      },
+      {
+        "id": "NCT06069570-capacity",
+        "polarity": "exclusion",
+        "sourceText": "Individuals lacking capacity to consent for themselves.",
+        "reasonFuzzy": "Consent capacity exclusion."
+      },
+      {
+        "id": "NCT06069570-svco",
+        "polarity": "exclusion",
+        "sourceText": "Superior vena cava obstruction",
+        "reasonFuzzy": "Specific medical condition exclusion."
+      },
+      {
+        "id": "NCT06069570-rad",
+        "polarity": "exclusion",
+        "sourceText": "Prior radiation therapy to a selected LDRT treatment site </= 30 days prior to Day 1.",
+        "reasonFuzzy": "Prior radiation washout window."
+      }
+    ]
+  }
+}

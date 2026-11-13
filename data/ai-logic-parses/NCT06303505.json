@@ -1,0 +1,855 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06303505",
+  "briefTitle": "FiH Study to Investigate Safety, PK and Efficacy of the NaPi2b ADC TUB-040 in Patients With PROC or r/r Adenocarcinoma NSCLC",
+  "parsedAt": "2026-11-12T06:32:53.977Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06303505-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male or non-pregnant, non-breastfeeding female, age 18 years or older at the date of consent.",
+      "numberValue": 18,
+      "evidence_quote": "Male or non-pregnant, non-breastfeeding female, age 18 years or older at the date of consent.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06303505-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) 0-1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06303505-soc",
+      "polarity": "inclusion",
+      "sourceText": "Individuals have exhausted the standard of care treatment (SoC) with expected survival benefit and are not denied SoC with expected survival benefit by participating in the trial.",
+      "reasonFuzzy": "Standard of care exhaustion and survival benefit expectations are subjective clinical judgments."
+    },
+    {
+      "id": "NCT06303505-prior-topo",
+      "polarity": "inclusion",
+      "sourceText": "Individuals with previous systemic topoisomerase I inhibitor treatment (e.g., Topotecan) are allowed in the study.",
+      "reasonFuzzy": "This is an allowance clause for prior topoisomerase I inhibitors rather than a mandatory required prior therapy check."
+    },
+    {
+      "id": "NCT06303505-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Radiologically measurable disease by Response Evaluation Criteria in Solid Tumors (RECIST) 1.1 as assessed by the INV.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging assessment."
+    },
+    {
+      "id": "NCT06303505-life-expectancy",
+      "polarity": "inclusion",
+      "sourceText": "Have a life expectancy of more than 12 weeks for disease-related mortality, as evaluated by the INV.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06303505-tissue-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Individuals must be willing to sign an archival tissue release form for research purposes and determination of biomarker expression.",
+      "reasonFuzzy": "Willingness to release tissue and undergo procedures is a subjective patient preference requirement."
+    },
+    {
+      "id": "NCT06303505-hrct-pft",
+      "polarity": "inclusion",
+      "sourceText": "Individuals must be willing to undergo a non-contrast high resolution computed tomography (HRCT) of the thorax scan and pulmonary function testing (PFT) at screening.",
+      "reasonFuzzy": "Willingness to undergo procedures is a subjective patient preference check."
+    },
+    {
+      "id": "NCT06303505-organ-function",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function",
+      "reasonFuzzy": "Organ function is a general category without specific typed lab cutoffs in this clause."
+    },
+    {
+      "id": "NCT06303505-toxicity-resolution",
+      "polarity": "inclusion",
+      "sourceText": "Resolution of all acute toxic effects of prior therapy or surgical procedures to ≤grade 1 (except alopecia, hyperpigmentation, or discoloration (incl. vitiligo) of the skin and nails, stable immune-related toxicity such as hypothyroidism on hormone replacement, adrenal insufficiency on ≤10 mg daily prednisone [or equivalent], chronic grade 2 peripheral sensory neuropathy after prior taxane therapy or anticancer treatment such as but not limited to immune oncology therapy (IOs)).",
+      "reasonFuzzy": "Toxicity resolution with multiple specific clinical exceptions cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT06303505-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Individuals of childbearing potential (FCBP) who are sexually active with a non-sterilized partner must use at least one highly effective method of contraception from the time of screening and must agree to continue using such precautions until the end of exposure, plus 5 half-lives and 6 months add-on in the case of individuals assigned female at birth.",
+      "reasonFuzzy": "Contraception compliance is a behavioral requirement, not a typed clinical check."
+    },
+    {
+      "id": "NCT06303505-consent-compliance",
+      "polarity": "inclusion",
+      "sourceText": "In the opinion of the investigator, the individual must be able to understand, give written informed consent, and comply with all study-related procedures, medication use, and evaluations.",
+      "reasonFuzzy": "Investigator opinion on patient compliance and consent is a subjective judgment."
+    },
+    {
+      "id": "NCT06303505-non-compliance",
+      "polarity": "exclusion",
+      "sourceText": "The individual must not have a history of non-compliance with medical regimens or be considered potentially unreliable and/or uncooperative.",
+      "reasonFuzzy": "Medical non-compliance history is a subjective investigator assessment."
+    },
+    {
+      "id": "NCT06303505-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "The individual is pregnant, lactating or breastfeeding or has a positive serum pregnancy test during the screening period.",
+      "reasonFuzzy": "Pregnancy screening and status is not mapped to a typed check kind."
+    },
+    {
+      "id": "NCT06303505-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "History of hypersensitivity to exatecan or excipients of the TUB-040 formulation.",
+      "reasonFuzzy": "Drug hypersensitivity is a specific medical history exclusion without a typed kind."
+    },
+    {
+      "id": "NCT06303505-interventional-studies",
+      "polarity": "exclusion",
+      "sourceText": "Individuals are not allowed to participate in interventional clinical studies either concurrently or within the previous 28 days or within 5 half-lives of any investigational pharmacologic agents or imaging materials, including dyes, investigational surgical techniques, or devices.",
+      "reasonFuzzy": "Washout windows for prior investigational studies are complex and lack a specific typed kind."
+    },
+    {
+      "id": "NCT06303505-cns-disease",
+      "polarity": "exclusion",
+      "sourceText": "Individuals with spinal cord compression or active central nervous system disease, and/or carcinomatous meningitis.",
+      "reasonFuzzy": "Active CNS disease combined with spinal cord compression and carcinomatous meningitis does not fit standard clean brain_mets categories."
+    },
+    {
+      "id": "NCT06303505-prior-radiotherapy",
+      "polarity": "exclusion",
+      "sourceText": "Prior radiotherapy <2 weeks from trial inclusion.",
+      "reasonFuzzy": "Prior radiotherapy washout window is not a typed check kind."
+    },
+    {
+      "id": "NCT06303505-major-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery within 21 days prior to signing the ICF, unless the individual is recovered at that time.",
+      "reasonFuzzy": "Major surgery washout and recovery is not a typed check kind."
+    },
+    {
+      "id": "NCT06303505-ild",
+      "polarity": "exclusion",
+      "sourceText": "Has a history of non-infectious interstitial lung disease/pneumonitis (ILD)/pneumonitis/radiation pneumonitis that required steroids or has current ILD/pneumonitis.",
+      "reasonFuzzy": "Interstitial lung disease history and steroid requirement is a complex medical history exclusion."
+    },
+    {
+      "id": "NCT06303505-oxygen-saturation",
+      "polarity": "exclusion",
+      "sourceText": "Has an oxygen saturation of <93% on room air at rest.",
+      "reasonFuzzy": "Oxygen saturation is a vital parameter not covered by allowed typed kinds."
+    },
+    {
+      "id": "NCT06303505-qtcf",
+      "polarity": "exclusion",
+      "sourceText": "Has a QTcF >470 ms",
+      "reasonFuzzy": "QTcF interval is an ECG parameter not covered by allowed typed kinds."
+    },
+    {
+      "id": "NCT06303505-nephrotic-syndrome",
+      "polarity": "exclusion",
+      "sourceText": "History of nephrotic syndrome",
+      "reasonFuzzy": "Nephrotic syndrome history is a disease-specific medical history exclusion."
+    },
+    {
+      "id": "NCT06303505-corneal-disease",
+      "polarity": "exclusion",
+      "sourceText": "Active corneal disease, or history of corneal disease within 12 months prior to enrollment.",
+      "reasonFuzzy": "Corneal disease is an organ-specific ophthalmologic exclusion."
+    },
+    {
+      "id": "NCT06303505-organ-impairment",
+      "polarity": "exclusion",
+      "sourceText": "Active, uncontrolled or severe impairment of the urogenital, renal, hepatobiliary, cardiovascular, gastrointestinal, neurologic, or hematopoietic systems which, in the opinion of the investigator, would predispose the individual to the development of complications from the administration of protocol therapy.",
+      "reasonFuzzy": "Investigator-judged organ impairment is subjective."
+    },
+    {
+      "id": "NCT06303505-other-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "History of another malignancy with ongoing treatment or not yet free from disease for 2 years, except for appropriately treated carcinoma in situ of the cervix, non-melanoma skin carcinoma, or other malignancy with a similar expected curative outcome.",
+      "reasonFuzzy": "Prior malignancy history with time threshold and exceptions is not a typed check kind."
+    },
+    {
+      "id": "NCT06303505-cardiac-comorbidities",
+      "polarity": "exclusion",
+      "sourceText": "Documented other concurrent non-malignant comorbidities such as unstable or uncontrolled pectoral angina, myocardial infarction during the last 6 months, valvular heart disease that requires treatment, acute myocarditis, or congestive heart failure (CHF) (New York Heart Association III or IV).",
+      "reasonFuzzy": "Cardiovascular comorbidities and NYHA functional class are complex clinical exclusions."
+    },
+    {
+      "id": "NCT06303505-anti-tumor-therapy",
+      "polarity": "exclusion",
+      "sourceText": "Any anti-tumor chemotherapy, systemic anti-cancer therapy, radiotherapy (except for local radiation therapy of lesions that may cause imminent complications), hormonal therapy, immunotherapy, or corticoid therapy.",
+      "reasonFuzzy": "Prohibited concurrent anti-tumor therapies are not covered by a single typed exclusion."
+    },
+    {
+      "id": "NCT06303505-cyp3a4",
+      "polarity": "exclusion",
+      "sourceText": "Concurrent use of strong inhibitors or strong inducers of CYP3A4",
+      "reasonFuzzy": "Prohibited medication classes (CYP3A4 inhibitors/inducers) are not covered by a typed exclusion."
+    },
+    {
+      "id": "NCT06303505-live-vaccines",
+      "polarity": "exclusion",
+      "sourceText": "Live vaccines within 30 days prior to study entry.",
+      "reasonFuzzy": "Live vaccine washout window is not a typed check kind."
+    },
+    {
+      "id": "NCT06303505-infections",
+      "polarity": "exclusion",
+      "sourceText": "Individuals with acute or chronic infections such as: Individuals who are HBsAg positive are eligible if they have received Hepatitis B virus (HBV) anti-viral therapy for at least 4 weeks and have an undetectable HBV viral load prior to randomization. Individuals with a history of Hepatitis C virus (HCV) infection are eligible if HCV viral load is undetectable at screening. HIV infected individuals must be on anti-retroviral therapy (ART) and have a well-controlled HIV infection/disease Any other known unresolved and active bacterial, viral, fungal, mycobacterial, or other infection at screening. History of severe and recurrent infections per INV judgment. History of progressive multifocal leukoencephalopathy",
+      "reasonFuzzy": "Infection exclusions including HBV, HCV, HIV with conditional allowances and investigator judgment are complex."
+    },
+    {
+      "id": "NCT06303505-stage",
+      "polarity": "inclusion",
+      "sourceText": "Disease not amenable to curative intent treatment.",
+      "reasonFuzzy": "The record mentions adenocarcinoma NSCLC in the title/conditions but does not list a numbered stage range."
+    },
+    {
+      "id": "NCT06303505-soc",
+      "polarity": "inclusion",
+      "sourceText": "Individuals have exhausted the standard of care treatment (SoC) with expected survival benefit and are not denied SoC with expected survival benefit by participating in the trial.",
+      "reasonFuzzy": "Standard of care exhaustion and clinical judgment on treatment benefit are subjective."
+    },
+    {
+      "id": "NCT06303505-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Radiologically measurable disease by Response Evaluation Criteria in Solid Tumors (RECIST) 1.1 as assessed by the INV.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06303505-life",
+      "polarity": "inclusion",
+      "sourceText": "Have a life expectancy of more than 12 weeks for disease-related mortality, as evaluated by the INV.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06303505-archive",
+      "polarity": "inclusion",
+      "sourceText": "Individuals must be willing to sign an archival tissue release form for research purposes and determination of biomarker expression.",
+      "reasonFuzzy": "Willingness to sign a tissue release form is a procedural requirement, not a typed check."
+    },
+    {
+      "id": "NCT06303505-scan",
+      "polarity": "inclusion",
+      "sourceText": "Individuals must be willing to undergo a non-contrast high resolution computed tomography (HRCT) of the thorax scan and pulmonary function testing (PFT) at screening.",
+      "reasonFuzzy": "Willingness to undergo procedures is subjective and procedural."
+    },
+    {
+      "id": "NCT06303505-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function",
+      "reasonFuzzy": "General adequate organ function without specific lab cutoffs is qualitative."
+    },
+    {
+      "id": "NCT06303505-tox",
+      "polarity": "inclusion",
+      "sourceText": "Resolution of all acute toxic effects of prior therapy or surgical procedures to ≤grade 1 (except alopecia, hyperpigmentation, or discoloration (incl. vitiligo) of the skin and nails, stable immune-related toxicity such as hypothyroidism on hormone replacement, adrenal insufficiency on ≤10 mg daily prednisone [or equivalent], chronic grade 2 peripheral sensory neuropathy after prior taxane therapy or anticancer treatment such as but not limited to immune oncology therapy (IOs)).",
+      "reasonFuzzy": "Resolution of prior toxicities with multiple specific clinical exceptions cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT06303505-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Individuals of childbearing potential (FCBP) who are sexually active with a non-sterilized partner must use at least one highly effective method of contraception from the time of screening and must agree to continue using such precautions until the end of exposure, plus 5 half-lives and 6 months add-on in the case of individuals assigned female at birth.",
+      "reasonFuzzy": "Contraception requirements are not typed clinical eligibility checks."
+    },
+    {
+      "id": "NCT06303505-investigator",
+      "polarity": "inclusion",
+      "sourceText": "In the opinion of the investigator, the individual must be able to understand, give written informed consent, and comply with all study-related procedures, medication use, and evaluations.",
+      "reasonFuzzy": "Investigator opinion on compliance and understanding is subjective."
+    },
+    {
+      "id": "NCT06303505-compliance",
+      "polarity": "inclusion",
+      "sourceText": "The individual must not have a history of non-compliance with medical regimens or be considered potentially unreliable and/or uncooperative.",
+      "reasonFuzzy": "Subjective behavioral history assessment by the investigator."
+    },
+    {
+      "id": "NCT06303505-icf",
+      "polarity": "inclusion",
+      "sourceText": "The individual must be willing to sign and date the informed consent form (ICF)",
+      "reasonFuzzy": "Consent procedural requirement."
+    },
+    {
+      "id": "NCT06303505-pregnant",
+      "polarity": "exclusion",
+      "sourceText": "The individual is pregnant, lactating or breastfeeding or has a positive serum pregnancy test during the screening period.",
+      "reasonFuzzy": "Pregnancy testing/status is not a typed check."
+    },
+    {
+      "id": "NCT06303505-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "History of hypersensitivity to exatecan or excipients of the TUB-040 formulation.",
+      "reasonFuzzy": "Drug hypersensitivity is not a typed check."
+    },
+    {
+      "id": "NCT06303505-washout",
+      "polarity": "exclusion",
+      "sourceText": "Individuals are not allowed to participate in interventional clinical studies either concurrently or within the previous 28 days or within 5 half-lives of any investigational pharmacologic agents or imaging materials, including dyes, investigational surgical techniques, or devices.",
+      "reasonFuzzy": "Complex washout window involving prior interventional studies."
+    },
+    {
+      "id": "NCT06303505-rad",
+      "polarity": "exclusion",
+      "sourceText": "Prior radiotherapy <2 weeks from trial inclusion.",
+      "reasonFuzzy": "Prior radiotherapy washout window is not a typed check."
+    },
+    {
+      "id": "NCT06303505-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery within 21 days prior to signing the ICF, unless the individual is recovered at that time.",
+      "reasonFuzzy": "Major surgery washout window is not a typed check."
+    },
+    {
+      "id": "NCT06303505-ild",
+      "polarity": "exclusion",
+      "sourceText": "Has a history of non-infectious interstitial lung disease/pneumonitis (ILD)/pneumonitis/radiation pneumonitis that required steroids or has current ILD/pneumonitis.",
+      "reasonFuzzy": "History of specific pulmonary toxicities requiring steroids is not a typed check."
+    },
+    {
+      "id": "NCT06303505-oxygen",
+      "polarity": "exclusion",
+      "sourceText": "Has an oxygen saturation of <93% on room air at rest.",
+      "reasonFuzzy": "Oxygen saturation is not an available typed check kind."
+    },
+    {
+      "id": "NCT06303505-qtcf",
+      "polarity": "exclusion",
+      "sourceText": "Has a QTcF >470 ms",
+      "reasonFuzzy": "QTcF interval is not an available typed check kind."
+    },
+    {
+      "id": "NCT06303505-nephrotic",
+      "polarity": "exclusion",
+      "sourceText": "History of nephrotic syndrome",
+      "reasonFuzzy": "Nephrotic syndrome history is not a typed check."
+    },
+    {
+      "id": "NCT06303505-corneal",
+      "polarity": "exclusion",
+      "sourceText": "Active corneal disease, or history of corneal disease within 12 months prior to enrollment.",
+      "reasonFuzzy": "Corneal disease history is not a typed check."
+    },
+    {
+      "id": "NCT06303505-organ-dysfunction",
+      "polarity": "exclusion",
+      "sourceText": "Active, uncontrolled or severe impairment of the urogenital, renal, hepatobiliary, cardiovascular, gastrointestinal, neurologic, or hematopoietic systems which, in the opinion of the investigator, would predispose the individual to the development of complications from the administration of protocol therapy.",
+      "reasonFuzzy": "Investigator-dependent assessment of systemic impairments."
+    },
+    {
+      "id": "NCT06303505-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "History of another malignancy with ongoing treatment or not yet free from disease for 2 years, except for appropriately treated carcinoma in situ of the cervix, non-melanoma skin carcinoma, or other malignancy with a similar expected curative outcome.",
+      "reasonFuzzy": "Prior malignancy history with various cancer-specific exceptions is not a typed check."
+    },
+    {
+      "id": "NCT06303505-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Documented other concurrent non-malignant comorbidities such as unstable or uncontrolled pectoral angina, myocardial infarction during the last 6 months, valvular heart disease that requires treatment, acute myocarditis, or congestive heart failure (CHF) (New York Heart Association III or IV).",
+      "reasonFuzzy": "Cardiovascular comorbidities and NYHA functional class are not typed checks."
+    },
+    {
+      "id": "NCT06303505-antitumor",
+      "polarity": "exclusion",
+      "sourceText": "Any anti-tumor chemotherapy, systemic anti-cancer therapy, radiotherapy (except for local radiation therapy of lesions that may cause imminent complications), hormonal therapy, immunotherapy, or corticoid therapy.",
+      "reasonFuzzy": "Prohibition of concurrent anti-tumor therapies is not a typed prior therapy check."
+    },
+    {
+      "id": "NCT06303505-cyp3a4",
+      "polarity": "exclusion",
+      "sourceText": "Concurrent use of strong inhibitors or strong inducers of CYP3A4",
+      "reasonFuzzy": "Concurrent medication restrictions for CYP3A4 are not typed checks."
+    },
+    {
+      "id": "NCT06303505-vaccines",
+      "polarity": "exclusion",
+      "sourceText": "Live vaccines within 30 days prior to study entry.",
+      "reasonFuzzy": "Live vaccine washout window is not a typed check."
+    },
+    {
+      "id": "NCT06303505-infections",
+      "polarity": "exclusion",
+      "sourceText": "Individuals with acute or chronic infections such as: Individuals who are HBsAg positive are eligible if they have received Hepatitis B virus (HBV) anti-viral therapy for at least 4 weeks and have an undetectable HBV viral load prior to randomization. Individuals with a history of Hepatitis C virus (HCV) infection are eligible if HCV viral load is undetectable at screening. HIV infected individuals must be on anti-retroviral therapy (ART) and have a well-controlled HIV infection/disease Any other known unresolved and active bacterial, viral, fungal, mycobacterial, or other infection at screening. History of severe and recurrent infections per INV judgment. History of progressive multifocal leukoencephalopathy",
+      "reasonFuzzy": "Detailed infection, viral load, and conditional eligibility criteria are complex and non-typed."
+    },
+    {
+      "id": "NCT06303505-topoisomerase",
+      "polarity": "inclusion",
+      "sourceText": "Individuals with previous systemic topoisomerase I inhibitor treatment (e.g., Topotecan) are allowed in the study.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06303505-brain",
+      "polarity": "exclusion",
+      "sourceText": "Individuals with spinal cord compression or active central nervous system disease, and/or carcinomatous meningitis.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:topoisomerase i inhibitor"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:untreated"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 29,
+    "attempts": 1,
+    "ms": 32243
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 29,
+    "attempts": 1,
+    "ms": 16662
+  },
+  "ms": 56911,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06303505",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06303505-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or non-pregnant, non-breastfeeding female, age 18 years or older at the date of consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06303505-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) 0-1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06303505-soc",
+        "polarity": "inclusion",
+        "sourceText": "Individuals have exhausted the standard of care treatment (SoC) with expected survival benefit and are not denied SoC with expected survival benefit by participating in the trial.",
+        "reasonFuzzy": "Standard of care exhaustion and survival benefit expectations are subjective clinical judgments."
+      },
+      {
+        "id": "NCT06303505-prior-topo",
+        "polarity": "inclusion",
+        "sourceText": "Individuals with previous systemic topoisomerase I inhibitor treatment (e.g., Topotecan) are allowed in the study.",
+        "reasonFuzzy": "This is an allowance clause for prior topoisomerase I inhibitors rather than a mandatory required prior therapy check."
+      },
+      {
+        "id": "NCT06303505-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Radiologically measurable disease by Response Evaluation Criteria in Solid Tumors (RECIST) 1.1 as assessed by the INV.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging assessment."
+      },
+      {
+        "id": "NCT06303505-life-expectancy",
+        "polarity": "inclusion",
+        "sourceText": "Have a life expectancy of more than 12 weeks for disease-related mortality, as evaluated by the INV.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06303505-tissue-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Individuals must be willing to sign an archival tissue release form for research purposes and determination of biomarker expression.",
+        "reasonFuzzy": "Willingness to release tissue and undergo procedures is a subjective patient preference requirement."
+      },
+      {
+        "id": "NCT06303505-hrct-pft",
+        "polarity": "inclusion",
+        "sourceText": "Individuals must be willing to undergo a non-contrast high resolution computed tomography (HRCT) of the thorax scan and pulmonary function testing (PFT) at screening.",
+        "reasonFuzzy": "Willingness to undergo procedures is a subjective patient preference check."
+      },
+      {
+        "id": "NCT06303505-organ-function",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function",
+        "reasonFuzzy": "Organ function is a general category without specific typed lab cutoffs in this clause."
+      },
+      {
+        "id": "NCT06303505-toxicity-resolution",
+        "polarity": "inclusion",
+        "sourceText": "Resolution of all acute toxic effects of prior therapy or surgical procedures to ≤grade 1 (except alopecia, hyperpigmentation, or discoloration (incl. vitiligo) of the skin and nails, stable immune-related toxicity such as hypothyroidism on hormone replacement, adrenal insufficiency on ≤10 mg daily prednisone [or equivalent], chronic grade 2 peripheral sensory neuropathy after prior taxane therapy or anticancer treatment such as but not limited to immune oncology therapy (IOs)).",
+        "reasonFuzzy": "Toxicity resolution with multiple specific clinical exceptions cannot be expressed as a single typed check."
+      },
+      {
+        "id": "NCT06303505-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Individuals of childbearing potential (FCBP) who are sexually active with a non-sterilized partner must use at least one highly effective method of contraception from the time of screening and must agree to continue using such precautions until the end of exposure, plus 5 half-lives and 6 months add-on in the case of individuals assigned female at birth.",
+        "reasonFuzzy": "Contraception compliance is a behavioral requirement, not a typed clinical check."
+      },
+      {
+        "id": "NCT06303505-consent-compliance",
+        "polarity": "inclusion",
+        "sourceText": "In the opinion of the investigator, the individual must be able to understand, give written informed consent, and comply with all study-related procedures, medication use, and evaluations.",
+        "reasonFuzzy": "Investigator opinion on patient compliance and consent is a subjective judgment."
+      },
+      {
+        "id": "NCT06303505-non-compliance",
+        "polarity": "exclusion",
+        "sourceText": "The individual must not have a history of non-compliance with medical regimens or be considered potentially unreliable and/or uncooperative.",
+        "reasonFuzzy": "Medical non-compliance history is a subjective investigator assessment."
+      },
+      {
+        "id": "NCT06303505-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "The individual is pregnant, lactating or breastfeeding or has a positive serum pregnancy test during the screening period.",
+        "reasonFuzzy": "Pregnancy screening and status is not mapped to a typed check kind."
+      },
+      {
+        "id": "NCT06303505-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "History of hypersensitivity to exatecan or excipients of the TUB-040 formulation.",
+        "reasonFuzzy": "Drug hypersensitivity is a specific medical history exclusion without a typed kind."
+      },
+      {
+        "id": "NCT06303505-interventional-studies",
+        "polarity": "exclusion",
+        "sourceText": "Individuals are not allowed to participate in interventional clinical studies either concurrently or within the previous 28 days or within 5 half-lives of any investigational pharmacologic agents or imaging materials, including dyes, investigational surgical techniques, or devices.",
+        "reasonFuzzy": "Washout windows for prior investigational studies are complex and lack a specific typed kind."
+      },
+      {
+        "id": "NCT06303505-cns-disease",
+        "polarity": "exclusion",
+        "sourceText": "Individuals with spinal cord compression or active central nervous system disease, and/or carcinomatous meningitis.",
+        "reasonFuzzy": "Active CNS disease combined with spinal cord compression and carcinomatous meningitis does not fit standard clean brain_mets categories."
+      },
+      {
+        "id": "NCT06303505-prior-radiotherapy",
+        "polarity": "exclusion",
+        "sourceText": "Prior radiotherapy <2 weeks from trial inclusion.",
+        "reasonFuzzy": "Prior radiotherapy washout window is not a typed check kind."
+      },
+      {
+        "id": "NCT06303505-major-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery within 21 days prior to signing the ICF, unless the individual is recovered at that time.",
+        "reasonFuzzy": "Major surgery washout and recovery is not a typed check kind."
+      },
+      {
+        "id": "NCT06303505-ild",
+        "polarity": "exclusion",
+        "sourceText": "Has a history of non-infectious interstitial lung disease/pneumonitis (ILD)/pneumonitis/radiation pneumonitis that required steroids or has current ILD/pneumonitis.",
+        "reasonFuzzy": "Interstitial lung disease history and steroid requirement is a complex medical history exclusion."
+      },
+      {
+        "id": "NCT06303505-oxygen-saturation",
+        "polarity": "exclusion",
+        "sourceText": "Has an oxygen saturation of <93% on room air at rest.",
+        "reasonFuzzy": "Oxygen saturation is a vital parameter not covered by allowed typed kinds."
+      },
+      {
+        "id": "NCT06303505-qtcf",
+        "polarity": "exclusion",
+        "sourceText": "Has a QTcF >470 ms",
+        "reasonFuzzy": "QTcF interval is an ECG parameter not covered by allowed typed kinds."
+      },
+      {
+        "id": "NCT06303505-nephrotic-syndrome",
+        "polarity": "exclusion",
+        "sourceText": "History of nephrotic syndrome",
+        "reasonFuzzy": "Nephrotic syndrome history is a disease-specific medical history exclusion."
+      },
+      {
+        "id": "NCT06303505-corneal-disease",
+        "polarity": "exclusion",
+        "sourceText": "Active corneal disease, or history of corneal disease within 12 months prior to enrollment.",
+        "reasonFuzzy": "Corneal disease is an organ-specific ophthalmologic exclusion."
+      },
+      {
+        "id": "NCT06303505-organ-impairment",
+        "polarity": "exclusion",
+        "sourceText": "Active, uncontrolled or severe impairment of the urogenital, renal, hepatobiliary, cardiovascular, gastrointestinal, neurologic, or hematopoietic systems which, in the opinion of the investigator, would predispose the individual to the development of complications from the administration of protocol therapy.",
+        "reasonFuzzy": "Investigator-judged organ impairment is subjective."
+      },
+      {
+        "id": "NCT06303505-other-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "History of another malignancy with ongoing treatment or not yet free from disease for 2 years, except for appropriately treated carcinoma in situ of the cervix, non-melanoma skin carcinoma, or other malignancy with a similar expected curative outcome.",
+        "reasonFuzzy": "Prior malignancy history with time threshold and exceptions is not a typed check kind."
+      },
+      {
+        "id": "NCT06303505-cardiac-comorbidities",
+        "polarity": "exclusion",
+        "sourceText": "Documented other concurrent non-malignant comorbidities such as unstable or uncontrolled pectoral angina, myocardial infarction during the last 6 months, valvular heart disease that requires treatment, acute myocarditis, or congestive heart failure (CHF) (New York Heart Association III or IV).",
+        "reasonFuzzy": "Cardiovascular comorbidities and NYHA functional class are complex clinical exclusions."
+      },
+      {
+        "id": "NCT06303505-anti-tumor-therapy",
+        "polarity": "exclusion",
+        "sourceText": "Any anti-tumor chemotherapy, systemic anti-cancer therapy, radiotherapy (except for local radiation therapy of lesions that may cause imminent complications), hormonal therapy, immunotherapy, or corticoid therapy.",
+        "reasonFuzzy": "Prohibited concurrent anti-tumor therapies are not covered by a single typed exclusion."
+      },
+      {
+        "id": "NCT06303505-cyp3a4",
+        "polarity": "exclusion",
+        "sourceText": "Concurrent use of strong inhibitors or strong inducers of CYP3A4",
+        "reasonFuzzy": "Prohibited medication classes (CYP3A4 inhibitors/inducers) are not covered by a typed exclusion."
+      },
+      {
+        "id": "NCT06303505-live-vaccines",
+        "polarity": "exclusion",
+        "sourceText": "Live vaccines within 30 days prior to study entry.",
+        "reasonFuzzy": "Live vaccine washout window is not a typed check kind."
+      },
+      {
+        "id": "NCT06303505-infections",
+        "polarity": "exclusion",
+        "sourceText": "Individuals with acute or chronic infections such as: Individuals who are HBsAg positive are eligible if they have received Hepatitis B virus (HBV) anti-viral therapy for at least 4 weeks and have an undetectable HBV viral load prior to randomization. Individuals with a history of Hepatitis C virus (HCV) infection are eligible if HCV viral load is undetectable at screening. HIV infected individuals must be on anti-retroviral therapy (ART) and have a well-controlled HIV infection/disease Any other known unresolved and active bacterial, viral, fungal, mycobacterial, or other infection at screening. History of severe and recurrent infections per INV judgment. History of progressive multifocal leukoencephalopathy",
+        "reasonFuzzy": "Infection exclusions including HBV, HCV, HIV with conditional allowances and investigator judgment are complex."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06303505",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06303505-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or non-pregnant, non-breastfeeding female, age 18 years or older at the date of consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06303505-topoisomerase",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Individuals with previous systemic topoisomerase I inhibitor treatment (e.g., Topotecan) are allowed in the study.",
+        "stringValue": "topoisomerase I inhibitor"
+      },
+      {
+        "id": "NCT06303505-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06303505-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Individuals with spinal cord compression or active central nervous system disease, and/or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06303505-stage",
+        "polarity": "inclusion",
+        "sourceText": "Disease not amenable to curative intent treatment.",
+        "reasonFuzzy": "The record mentions adenocarcinoma NSCLC in the title/conditions but does not list a numbered stage range."
+      },
+      {
+        "id": "NCT06303505-soc",
+        "polarity": "inclusion",
+        "sourceText": "Individuals have exhausted the standard of care treatment (SoC) with expected survival benefit and are not denied SoC with expected survival benefit by participating in the trial.",
+        "reasonFuzzy": "Standard of care exhaustion and clinical judgment on treatment benefit are subjective."
+      },
+      {
+        "id": "NCT06303505-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Radiologically measurable disease by Response Evaluation Criteria in Solid Tumors (RECIST) 1.1 as assessed by the INV.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06303505-life",
+        "polarity": "inclusion",
+        "sourceText": "Have a life expectancy of more than 12 weeks for disease-related mortality, as evaluated by the INV.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06303505-archive",
+        "polarity": "inclusion",
+        "sourceText": "Individuals must be willing to sign an archival tissue release form for research purposes and determination of biomarker expression.",
+        "reasonFuzzy": "Willingness to sign a tissue release form is a procedural requirement, not a typed check."
+      },
+      {
+        "id": "NCT06303505-scan",
+        "polarity": "inclusion",
+        "sourceText": "Individuals must be willing to undergo a non-contrast high resolution computed tomography (HRCT) of the thorax scan and pulmonary function testing (PFT) at screening.",
+        "reasonFuzzy": "Willingness to undergo procedures is subjective and procedural."
+      },
+      {
+        "id": "NCT06303505-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function",
+        "reasonFuzzy": "General adequate organ function without specific lab cutoffs is qualitative."
+      },
+      {
+        "id": "NCT06303505-tox",
+        "polarity": "inclusion",
+        "sourceText": "Resolution of all acute toxic effects of prior therapy or surgical procedures to ≤grade 1 (except alopecia, hyperpigmentation, or discoloration (incl. vitiligo) of the skin and nails, stable immune-related toxicity such as hypothyroidism on hormone replacement, adrenal insufficiency on ≤10 mg daily prednisone [or equivalent], chronic grade 2 peripheral sensory neuropathy after prior taxane therapy or anticancer treatment such as but not limited to immune oncology therapy (IOs)).",
+        "reasonFuzzy": "Resolution of prior toxicities with multiple specific clinical exceptions cannot be expressed as a single typed check."
+      },
+      {
+        "id": "NCT06303505-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Individuals of childbearing potential (FCBP) who are sexually active with a non-sterilized partner must use at least one highly effective method of contraception from the time of screening and must agree to continue using such precautions until the end of exposure, plus 5 half-lives and 6 months add-on in the case of individuals assigned female at birth.",
+        "reasonFuzzy": "Contraception requirements are not typed clinical eligibility checks."
+      },
+      {
+        "id": "NCT06303505-investigator",
+        "polarity": "inclusion",
+        "sourceText": "In the opinion of the investigator, the individual must be able to understand, give written informed consent, and comply with all study-related procedures, medication use, and evaluations.",
+        "reasonFuzzy": "Investigator opinion on compliance and understanding is subjective."
+      },
+      {
+        "id": "NCT06303505-compliance",
+        "polarity": "inclusion",
+        "sourceText": "The individual must not have a history of non-compliance with medical regimens or be considered potentially unreliable and/or uncooperative.",
+        "reasonFuzzy": "Subjective behavioral history assessment by the investigator."
+      },
+      {
+        "id": "NCT06303505-icf",
+        "polarity": "inclusion",
+        "sourceText": "The individual must be willing to sign and date the informed consent form (ICF)",
+        "reasonFuzzy": "Consent procedural requirement."
+      },
+      {
+        "id": "NCT06303505-pregnant",
+        "polarity": "exclusion",
+        "sourceText": "The individual is pregnant, lactating or breastfeeding or has a positive serum pregnancy test during the screening period.",
+        "reasonFuzzy": "Pregnancy testing/status is not a typed check."
+      },
+      {
+        "id": "NCT06303505-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "History of hypersensitivity to exatecan or excipients of the TUB-040 formulation.",
+        "reasonFuzzy": "Drug hypersensitivity is not a typed check."
+      },
+      {
+        "id": "NCT06303505-washout",
+        "polarity": "exclusion",
+        "sourceText": "Individuals are not allowed to participate in interventional clinical studies either concurrently or within the previous 28 days or within 5 half-lives of any investigational pharmacologic agents or imaging materials, including dyes, investigational surgical techniques, or devices.",
+        "reasonFuzzy": "Complex washout window involving prior interventional studies."
+      },
+      {
+        "id": "NCT06303505-rad",
+        "polarity": "exclusion",
+        "sourceText": "Prior radiotherapy <2 weeks from trial inclusion.",
+        "reasonFuzzy": "Prior radiotherapy washout window is not a typed check."
+      },
+      {
+        "id": "NCT06303505-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery within 21 days prior to signing the ICF, unless the individual is recovered at that time.",
+        "reasonFuzzy": "Major surgery washout window is not a typed check."
+      },
+      {
+        "id": "NCT06303505-ild",
+        "polarity": "exclusion",
+        "sourceText": "Has a history of non-infectious interstitial lung disease/pneumonitis (ILD)/pneumonitis/radiation pneumonitis that required steroids or has current ILD/pneumonitis.",
+        "reasonFuzzy": "History of specific pulmonary toxicities requiring steroids is not a typed check."
+      },
+      {
+        "id": "NCT06303505-oxygen",
+        "polarity": "exclusion",
+        "sourceText": "Has an oxygen saturation of <93% on room air at rest.",
+        "reasonFuzzy": "Oxygen saturation is not an available typed check kind."
+      },
+      {
+        "id": "NCT06303505-qtcf",
+        "polarity": "exclusion",
+        "sourceText": "Has a QTcF >470 ms",
+        "reasonFuzzy": "QTcF interval is not an available typed check kind."
+      },
+      {
+        "id": "NCT06303505-nephrotic",
+        "polarity": "exclusion",
+        "sourceText": "History of nephrotic syndrome",
+        "reasonFuzzy": "Nephrotic syndrome history is not a typed check."
+      },
+      {
+        "id": "NCT06303505-corneal",
+        "polarity": "exclusion",
+        "sourceText": "Active corneal disease, or history of corneal disease within 12 months prior to enrollment.",
+        "reasonFuzzy": "Corneal disease history is not a typed check."
+      },
+      {
+        "id": "NCT06303505-organ-dysfunction",
+        "polarity": "exclusion",
+        "sourceText": "Active, uncontrolled or severe impairment of the urogenital, renal, hepatobiliary, cardiovascular, gastrointestinal, neurologic, or hematopoietic systems which, in the opinion of the investigator, would predispose the individual to the development of complications from the administration of protocol therapy.",
+        "reasonFuzzy": "Investigator-dependent assessment of systemic impairments."
+      },
+      {
+        "id": "NCT06303505-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "History of another malignancy with ongoing treatment or not yet free from disease for 2 years, except for appropriately treated carcinoma in situ of the cervix, non-melanoma skin carcinoma, or other malignancy with a similar expected curative outcome.",
+        "reasonFuzzy": "Prior malignancy history with various cancer-specific exceptions is not a typed check."
+      },
+      {
+        "id": "NCT06303505-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Documented other concurrent non-malignant comorbidities such as unstable or uncontrolled pectoral angina, myocardial infarction during the last 6 months, valvular heart disease that requires treatment, acute myocarditis, or congestive heart failure (CHF) (New York Heart Association III or IV).",
+        "reasonFuzzy": "Cardiovascular comorbidities and NYHA functional class are not typed checks."
+      },
+      {
+        "id": "NCT06303505-antitumor",
+        "polarity": "exclusion",
+        "sourceText": "Any anti-tumor chemotherapy, systemic anti-cancer therapy, radiotherapy (except for local radiation therapy of lesions that may cause imminent complications), hormonal therapy, immunotherapy, or corticoid therapy.",
+        "reasonFuzzy": "Prohibition of concurrent anti-tumor therapies is not a typed prior therapy check."
+      },
+      {
+        "id": "NCT06303505-cyp3a4",
+        "polarity": "exclusion",
+        "sourceText": "Concurrent use of strong inhibitors or strong inducers of CYP3A4",
+        "reasonFuzzy": "Concurrent medication restrictions for CYP3A4 are not typed checks."
+      },
+      {
+        "id": "NCT06303505-vaccines",
+        "polarity": "exclusion",
+        "sourceText": "Live vaccines within 30 days prior to study entry.",
+        "reasonFuzzy": "Live vaccine washout window is not a typed check."
+      },
+      {
+        "id": "NCT06303505-infections",
+        "polarity": "exclusion",
+        "sourceText": "Individuals with acute or chronic infections such as: Individuals who are HBsAg positive are eligible if they have received Hepatitis B virus (HBV) anti-viral therapy for at least 4 weeks and have an undetectable HBV viral load prior to randomization. Individuals with a history of Hepatitis C virus (HCV) infection are eligible if HCV viral load is undetectable at screening. HIV infected individuals must be on anti-retroviral therapy (ART) and have a well-controlled HIV infection/disease Any other known unresolved and active bacterial, viral, fungal, mycobacterial, or other infection at screening. History of severe and recurrent infections per INV judgment. History of progressive multifocal leukoencephalopathy",
+        "reasonFuzzy": "Detailed infection, viral load, and conditional eligibility criteria are complex and non-typed."
+      }
+    ]
+  }
+}

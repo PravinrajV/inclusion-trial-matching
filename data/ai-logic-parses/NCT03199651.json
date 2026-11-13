@@ -1,0 +1,315 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT03199651",
+  "briefTitle": "Beating Lung Cancer in Ohio Protocol in Improving Survival in Patients With Stage IV Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T06:01:23.235Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT03199651-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically confirmed stage IV NSCLC",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Pathologically confirmed stage IV NSCLC",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT03199651-likely-stage",
+      "polarity": "inclusion",
+      "sourceText": "patients who do not yet have their staging completed, but in the judgment of the physician are likely to be stage IV",
+      "reasonFuzzy": "Staging reliance on physician judgment is subjective."
+    },
+    {
+      "id": "NCT03199651-language",
+      "polarity": "inclusion",
+      "sourceText": "English speaking;",
+      "reasonFuzzy": "Language requirement is not a typed check."
+    },
+    {
+      "id": "NCT03199651-records",
+      "polarity": "inclusion",
+      "sourceText": "Willing to provide access to medical records, insurance and billing data, biospecimens and respond to questionnaires",
+      "reasonFuzzy": "Willingness to provide records and questionnaires is a subjective trial procedure requirement."
+    },
+    {
+      "id": "NCT03199651-aim3-smoking",
+      "polarity": "inclusion",
+      "sourceText": "Patients must be current smokers who smoke at least one cigarette most days per week, or recent quitters who smoked at least one cigarette most days per week (< 3 months); and Household members must be current smokers, defined as smoking at least one cigarette most days per week",
+      "reasonFuzzy": "Smoking history of patients and household members is study-specific (AIM 3 only) and lacks a typed category."
+    },
+    {
+      "id": "NCT03199651-impairments",
+      "polarity": "inclusion",
+      "sourceText": "Hearing and vision impairments that would prevent ability to complete consent, interviews, or sample collection",
+      "reasonFuzzy": "Impairments preventing study tasks is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT03199651-definitive",
+      "polarity": "exclusion",
+      "sourceText": "Being treated with definitive chemoradiotherapy or surgery",
+      "reasonFuzzy": "Exclusion for definitive chemoradiotherapy or surgery is not a standard typed check."
+    },
+    {
+      "id": "NCT03199651-duration",
+      "polarity": "exclusion",
+      "sourceText": "Receiving treatment for advanced lung cancer for over one month before enrollment",
+      "reasonFuzzy": "Prior treatment duration threshold is not a standard typed therapy exclusion check."
+    },
+    {
+      "id": "NCT03199651-age",
+      "polarity": "inclusion",
+      "sourceText": "AIM 1-3",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT03199651-likely-stage",
+      "polarity": "inclusion",
+      "sourceText": "patients who do not yet have their staging completed, but in the judgment of the physician are likely to be stage IV",
+      "reasonFuzzy": "Involves physician judgment regarding likely staging rather than a fixed stage list check."
+    },
+    {
+      "id": "NCT03199651-language",
+      "polarity": "inclusion",
+      "sourceText": "English speaking;",
+      "reasonFuzzy": "Language proficiency is a subjective clinical suitability criteria, not a typed kind."
+    },
+    {
+      "id": "NCT03199651-consent-compliance",
+      "polarity": "inclusion",
+      "sourceText": "Willing to provide access to medical records, insurance and billing data, biospecimens and respond to questionnaires, typically by phone, but possibly to include online or in-person surveys",
+      "reasonFuzzy": "Willingness to comply with study procedures and provide data is a subjective judgment."
+    },
+    {
+      "id": "NCT03199651-aim3-smoking",
+      "polarity": "inclusion",
+      "sourceText": "Patients must be current smokers who smoke at least one cigarette most days per week, or recent quitters who smoked at least one cigarette most days per week (< 3 months); and Household members must be current smokers, defined as smoking at least one cigarette most days per week",
+      "reasonFuzzy": "Smoking history of patients and household members is not a standard typed genomic or lab biomarker."
+    },
+    {
+      "id": "NCT03199651-impairment",
+      "polarity": "inclusion",
+      "sourceText": "Hearing and vision impairments that would prevent ability to complete consent, interviews, or sample collection",
+      "reasonFuzzy": "Impairments evaluation requires investigator assessment of ability to complete procedures."
+    },
+    {
+      "id": "NCT03199651-prior-treatment",
+      "polarity": "exclusion",
+      "sourceText": "Being treated with definitive chemoradiotherapy or surgery",
+      "reasonFuzzy": "Definitive chemoradiotherapy or surgery exclusion involves treatment intent and physician assessment."
+    },
+    {
+      "id": "NCT03199651-treatment-duration",
+      "polarity": "exclusion",
+      "sourceText": "Receiving treatment for advanced lung cancer for over one month before enrollment; OR",
+      "reasonFuzzy": "Prior treatment duration washout window is tied to complex enrollment timing rules."
+    },
+    {
+      "id": "NCT03199651-age",
+      "polarity": "inclusion",
+      "sourceText": "AIM 1-3",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "AIM 1-3"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "AIM 1-3"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 2746
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 7,
+    "attempts": 1,
+    "ms": 3452
+  },
+  "ms": 14159,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT03199651",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT03199651-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed stage IV NSCLC",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT03199651-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "AIM 1-3",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT03199651-likely-stage",
+        "polarity": "inclusion",
+        "sourceText": "patients who do not yet have their staging completed, but in the judgment of the physician are likely to be stage IV",
+        "reasonFuzzy": "Staging reliance on physician judgment is subjective."
+      },
+      {
+        "id": "NCT03199651-language",
+        "polarity": "inclusion",
+        "sourceText": "English speaking;",
+        "reasonFuzzy": "Language requirement is not a typed check."
+      },
+      {
+        "id": "NCT03199651-records",
+        "polarity": "inclusion",
+        "sourceText": "Willing to provide access to medical records, insurance and billing data, biospecimens and respond to questionnaires",
+        "reasonFuzzy": "Willingness to provide records and questionnaires is a subjective trial procedure requirement."
+      },
+      {
+        "id": "NCT03199651-aim3-smoking",
+        "polarity": "inclusion",
+        "sourceText": "Patients must be current smokers who smoke at least one cigarette most days per week, or recent quitters who smoked at least one cigarette most days per week (< 3 months); and Household members must be current smokers, defined as smoking at least one cigarette most days per week",
+        "reasonFuzzy": "Smoking history of patients and household members is study-specific (AIM 3 only) and lacks a typed category."
+      },
+      {
+        "id": "NCT03199651-impairments",
+        "polarity": "inclusion",
+        "sourceText": "Hearing and vision impairments that would prevent ability to complete consent, interviews, or sample collection",
+        "reasonFuzzy": "Impairments preventing study tasks is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT03199651-definitive",
+        "polarity": "exclusion",
+        "sourceText": "Being treated with definitive chemoradiotherapy or surgery",
+        "reasonFuzzy": "Exclusion for definitive chemoradiotherapy or surgery is not a standard typed check."
+      },
+      {
+        "id": "NCT03199651-duration",
+        "polarity": "exclusion",
+        "sourceText": "Receiving treatment for advanced lung cancer for over one month before enrollment",
+        "reasonFuzzy": "Prior treatment duration threshold is not a standard typed therapy exclusion check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT03199651",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT03199651-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed stage IV NSCLC",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT03199651-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "AIM 1-3",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT03199651-likely-stage",
+        "polarity": "inclusion",
+        "sourceText": "patients who do not yet have their staging completed, but in the judgment of the physician are likely to be stage IV",
+        "reasonFuzzy": "Involves physician judgment regarding likely staging rather than a fixed stage list check."
+      },
+      {
+        "id": "NCT03199651-language",
+        "polarity": "inclusion",
+        "sourceText": "English speaking;",
+        "reasonFuzzy": "Language proficiency is a subjective clinical suitability criteria, not a typed kind."
+      },
+      {
+        "id": "NCT03199651-consent-compliance",
+        "polarity": "inclusion",
+        "sourceText": "Willing to provide access to medical records, insurance and billing data, biospecimens and respond to questionnaires, typically by phone, but possibly to include online or in-person surveys",
+        "reasonFuzzy": "Willingness to comply with study procedures and provide data is a subjective judgment."
+      },
+      {
+        "id": "NCT03199651-aim3-smoking",
+        "polarity": "inclusion",
+        "sourceText": "Patients must be current smokers who smoke at least one cigarette most days per week, or recent quitters who smoked at least one cigarette most days per week (< 3 months); and Household members must be current smokers, defined as smoking at least one cigarette most days per week",
+        "reasonFuzzy": "Smoking history of patients and household members is not a standard typed genomic or lab biomarker."
+      },
+      {
+        "id": "NCT03199651-impairment",
+        "polarity": "inclusion",
+        "sourceText": "Hearing and vision impairments that would prevent ability to complete consent, interviews, or sample collection",
+        "reasonFuzzy": "Impairments evaluation requires investigator assessment of ability to complete procedures."
+      },
+      {
+        "id": "NCT03199651-prior-treatment",
+        "polarity": "exclusion",
+        "sourceText": "Being treated with definitive chemoradiotherapy or surgery",
+        "reasonFuzzy": "Definitive chemoradiotherapy or surgery exclusion involves treatment intent and physician assessment."
+      },
+      {
+        "id": "NCT03199651-treatment-duration",
+        "polarity": "exclusion",
+        "sourceText": "Receiving treatment for advanced lung cancer for over one month before enrollment; OR",
+        "reasonFuzzy": "Prior treatment duration washout window is tied to complex enrollment timing rules."
+      }
+    ]
+  }
+}

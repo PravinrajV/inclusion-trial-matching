@@ -1,0 +1,309 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT04389632",
+  "briefTitle": "A Study of Sigvotatug Vedotin in Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T06:05:17.832Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT04389632-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "An Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "An Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT04389632-disease-indication",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have histologically or cytologically confirmed metastatic or unresectable solid malignancy within one of the tumor types listed below (dependent on study part). Non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "The study includes multiple advanced solid tumor types with different part-specific prior therapy and treatment-naive requirements, so a single stage_in check is not sufficient."
+    },
+    {
+      "id": "NCT04389632-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Participants enrolled in the following study parts should have a tumor site accessible for biopsy and agree to biopsy as follows",
+      "reasonFuzzy": "Willingness to undergo a biopsy or procedure is a subjective, judgment-based item."
+    },
+    {
+      "id": "NCT04389632-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per the RECIST v1.1 at baseline",
+      "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging assessment."
+    },
+    {
+      "id": "NCT04389632-brain-part-d",
+      "polarity": "exclusion",
+      "sourceText": "In Part D, participants with untreated, asymptomatic CNS metastases smaller than 1 cm may be enrolled without definitive treatment as long as they have no neurological symptoms, no or minimal surrounding edema, and no requirements for corticosteroids.",
+      "reasonFuzzy": "Part-specific exception for untreated CNS metastases involves conditional asymptomatic size and symptom criteria."
+    },
+    {
+      "id": "NCT04389632-prior-mmae",
+      "polarity": "exclusion",
+      "sourceText": "Previous receipt of an MMAE-containing agent or an agent targeting integrin beta-6",
+      "reasonFuzzy": "Exclusion references drug classes (MMAE-containing agent, agent targeting integrin beta-6) rather than a single specific named drug or typed prior_therapy_excluded kind."
+    },
+    {
+      "id": "NCT04389632-neuropathy",
+      "polarity": "exclusion",
+      "sourceText": "Pre-existing neuropathy Grade 1 or greater per the National Cancer Institute's Common Terminology Criteria for Adverse Events, version 5.0 (NCI CTCAE v5.0) for Parts C and D cohorts with cisplatin or carboplatin; Grade 2 or greater per the NCI CTCAE v5.0 for all other cohorts",
+      "reasonFuzzy": "Neuropathy grade cutoffs vary by study part and specific cohorts, making it unsuitable for a single typed check."
+    },
+    {
+      "id": "NCT04389632-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04389632-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known active central nervous system metastases. Participants with previously treated brain metastases may participate provided they: are clinically stable for at least 4 weeks prior to study entry after brain metastasis treatment, have no new or enlarging brain metastases, and are off of corticosteroids prescribed for symptoms associated with brain metastases for at least 7 days prior to first dose of study drug.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04389632-disease",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have histologically or cytologically confirmed metastatic or unresectable solid malignancy within one of the tumor types listed below (dependent on study part). Non-small cell lung cancer (NSCLC)",
+      "reasonFuzzy": "The disease indication lists multiple distinct solid tumors depending on study part, so a single stage_in or histology_in check cannot capture the complex criteria."
+    },
+    {
+      "id": "NCT04389632-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Part A only: Participants must have disease that is relapsed or refractory or be intolerant to standard-of-care therapies and should have no appropriate standard-of-care therapeutic options. Part B only: Participants must have disease that is relapsed or refractory or be intolerant to standard-of-care therapies. Participants must have received platinum-based therapy and a PD-1/PD-(L)1 inhibitor, if applicable and available. Part C only: For pembrolizumab combination cohorts, participants must be eligible for pembrolizumab per local standard of care. For pembrolizumab with cisplatin or carboplatin, participants must be eligible for both pembrolizumab and the platinum agent per local standard of care. Participants must be treatment naïve for locally advanced or metastatic systemic therapy (prior definitively intended or [neo]adjuvant therapy is allowed). Part D only: Participants must be treatment naïve for locally advanced or metastatic systemic therapy.",
+      "reasonFuzzy": "Prior therapy rules vary extensively by study part (Parts A through D), making a single typed prior_lines or prior_therapy rule impossible."
+    },
+    {
+      "id": "NCT04389632-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Participants enrolled in the following study parts should have a tumor site accessible for biopsy and agree to biopsy as follows: Disease-specific expansion cohorts (Part B and Part D): A baseline fresh tumor biopsy is required. An archival biopsy collected within 90 days prior to first dose of study drug may be used. Biology expansion cohort: pretreatment biopsy and on-treatment (Cycle 1) biopsy",
+      "reasonFuzzy": "Willingness and requirement to undergo a biopsy or procedure are subjective judgment-based items."
+    },
+    {
+      "id": "NCT04389632-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per the RECIST v1.1 at baseline",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT04389632-partd-brain",
+      "polarity": "inclusion",
+      "sourceText": "In Part D, participants with untreated, asymptomatic CNS metastases smaller than 1 cm may be enrolled without definitive treatment as long as they have no neurological symptoms, no or minimal surrounding edema, and no requirements for corticosteroids.",
+      "reasonFuzzy": "Part D allows untreated CNS metastases under conditional criteria that do not map to a standard typed check."
+    },
+    {
+      "id": "NCT04389632-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT04389632-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known active central nervous system metastases. Participants with previously treated brain metastases may participate provided they: are clinically stable for at least 4 weeks prior to study entry after brain metastasis treatment, have no new or enlarging brain metastases, and are off of corticosteroids prescribed for symptoms associated with brain metastases for at least 7 days prior to first dose of study drug.",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Known active central nervous system metastases. Participants with previously treated brain metastases may participate provided they: are clinically stable for a"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Known active central nervous system metastases. Participants with previously treated brain metastases may participate provided they: are clinically stable for a"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 3321
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3483
+  },
+  "ms": 14788,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT04389632",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04389632-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04389632-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "An Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04389632-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known active central nervous system metastases. Participants with previously treated brain metastases may participate provided they: are clinically stable for at least 4 weeks prior to study entry after brain metastasis treatment, have no new or enlarging brain metastases, and are off of corticosteroids prescribed for symptoms associated with brain metastases for at least 7 days prior to first dose of study drug.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04389632-disease-indication",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically or cytologically confirmed metastatic or unresectable solid malignancy within one of the tumor types listed below (dependent on study part). Non-small cell lung cancer (NSCLC)",
+        "reasonFuzzy": "The study includes multiple advanced solid tumor types with different part-specific prior therapy and treatment-naive requirements, so a single stage_in check is not sufficient."
+      },
+      {
+        "id": "NCT04389632-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Participants enrolled in the following study parts should have a tumor site accessible for biopsy and agree to biopsy as follows",
+        "reasonFuzzy": "Willingness to undergo a biopsy or procedure is a subjective, judgment-based item."
+      },
+      {
+        "id": "NCT04389632-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per the RECIST v1.1 at baseline",
+        "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging assessment."
+      },
+      {
+        "id": "NCT04389632-brain-part-d",
+        "polarity": "exclusion",
+        "sourceText": "In Part D, participants with untreated, asymptomatic CNS metastases smaller than 1 cm may be enrolled without definitive treatment as long as they have no neurological symptoms, no or minimal surrounding edema, and no requirements for corticosteroids.",
+        "reasonFuzzy": "Part-specific exception for untreated CNS metastases involves conditional asymptomatic size and symptom criteria."
+      },
+      {
+        "id": "NCT04389632-prior-mmae",
+        "polarity": "exclusion",
+        "sourceText": "Previous receipt of an MMAE-containing agent or an agent targeting integrin beta-6",
+        "reasonFuzzy": "Exclusion references drug classes (MMAE-containing agent, agent targeting integrin beta-6) rather than a single specific named drug or typed prior_therapy_excluded kind."
+      },
+      {
+        "id": "NCT04389632-neuropathy",
+        "polarity": "exclusion",
+        "sourceText": "Pre-existing neuropathy Grade 1 or greater per the National Cancer Institute's Common Terminology Criteria for Adverse Events, version 5.0 (NCI CTCAE v5.0) for Parts C and D cohorts with cisplatin or carboplatin; Grade 2 or greater per the NCI CTCAE v5.0 for all other cohorts",
+        "reasonFuzzy": "Neuropathy grade cutoffs vary by study part and specific cohorts, making it unsuitable for a single typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT04389632",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT04389632-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT04389632-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "An Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT04389632-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known active central nervous system metastases. Participants with previously treated brain metastases may participate provided they: are clinically stable for at least 4 weeks prior to study entry after brain metastasis treatment, have no new or enlarging brain metastases, and are off of corticosteroids prescribed for symptoms associated with brain metastases for at least 7 days prior to first dose of study drug.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT04389632-disease",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have histologically or cytologically confirmed metastatic or unresectable solid malignancy within one of the tumor types listed below (dependent on study part). Non-small cell lung cancer (NSCLC)",
+        "reasonFuzzy": "The disease indication lists multiple distinct solid tumors depending on study part, so a single stage_in or histology_in check cannot capture the complex criteria."
+      },
+      {
+        "id": "NCT04389632-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Part A only: Participants must have disease that is relapsed or refractory or be intolerant to standard-of-care therapies and should have no appropriate standard-of-care therapeutic options. Part B only: Participants must have disease that is relapsed or refractory or be intolerant to standard-of-care therapies. Participants must have received platinum-based therapy and a PD-1/PD-(L)1 inhibitor, if applicable and available. Part C only: For pembrolizumab combination cohorts, participants must be eligible for pembrolizumab per local standard of care. For pembrolizumab with cisplatin or carboplatin, participants must be eligible for both pembrolizumab and the platinum agent per local standard of care. Participants must be treatment naïve for locally advanced or metastatic systemic therapy (prior definitively intended or [neo]adjuvant therapy is allowed). Part D only: Participants must be treatment naïve for locally advanced or metastatic systemic therapy.",
+        "reasonFuzzy": "Prior therapy rules vary extensively by study part (Parts A through D), making a single typed prior_lines or prior_therapy rule impossible."
+      },
+      {
+        "id": "NCT04389632-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Participants enrolled in the following study parts should have a tumor site accessible for biopsy and agree to biopsy as follows: Disease-specific expansion cohorts (Part B and Part D): A baseline fresh tumor biopsy is required. An archival biopsy collected within 90 days prior to first dose of study drug may be used. Biology expansion cohort: pretreatment biopsy and on-treatment (Cycle 1) biopsy",
+        "reasonFuzzy": "Willingness and requirement to undergo a biopsy or procedure are subjective judgment-based items."
+      },
+      {
+        "id": "NCT04389632-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per the RECIST v1.1 at baseline",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT04389632-partd-brain",
+        "polarity": "inclusion",
+        "sourceText": "In Part D, participants with untreated, asymptomatic CNS metastases smaller than 1 cm may be enrolled without definitive treatment as long as they have no neurological symptoms, no or minimal surrounding edema, and no requirements for corticosteroids.",
+        "reasonFuzzy": "Part D allows untreated CNS metastases under conditional criteria that do not map to a standard typed check."
+      }
+    ]
+  }
+}

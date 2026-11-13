@@ -1,0 +1,93 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07241039",
+  "briefTitle": "A Study to Assess the Adverse Events, Change in Disease Activity, and How Oral ABBV-711 Tablets Move Through the Body as a Monotherapy and in Combination With Intravenously Infused Budigalimab (ABBV-181), in Adults With Advanced Squamous Tumors",
+  "parsedAt": "2026-11-12T11:06:04.212Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07241039-scope",
+      "polarity": "inclusion",
+      "sourceText": "Adults With Advanced Squamous Tumors",
+      "reasonFuzzy": "The trial is for advanced squamous tumors in general, and although squamous non-small cell lung cancer is mentioned as a backfill cohort, the record is not clearly limited to NSCLC or stage III/IV NSCLC."
+    },
+    {
+      "id": "NCT07241039-scope",
+      "polarity": "inclusion",
+      "sourceText": "Adults With Advanced Squamous Tumors",
+      "reasonFuzzy": "The trial enrolls advanced squamous tumors generally, not specifically limited to stage III or IV NSCLC, and lacks explicit NSCLC stage or histology inclusion criteria."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 0,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 0,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 0,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 0
+    }
+  },
+  "runA": {
+    "typedEmitted": 0,
+    "fuzzyEmitted": 1,
+    "attempts": 2,
+    "ms": 16901
+  },
+  "runB": {
+    "typedEmitted": 0,
+    "fuzzyEmitted": 1,
+    "attempts": 1,
+    "ms": 6175
+  },
+  "ms": 31050,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07241039",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07241039-scope",
+        "polarity": "inclusion",
+        "sourceText": "Adults With Advanced Squamous Tumors",
+        "reasonFuzzy": "The trial is for advanced squamous tumors in general, and although squamous non-small cell lung cancer is mentioned as a backfill cohort, the record is not clearly limited to NSCLC or stage III/IV NSCLC."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07241039",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07241039-scope",
+        "polarity": "inclusion",
+        "sourceText": "Adults With Advanced Squamous Tumors",
+        "reasonFuzzy": "The trial enrolls advanced squamous tumors generally, not specifically limited to stage III or IV NSCLC, and lacks explicit NSCLC stage or histology inclusion criteria."
+      }
+    ]
+  }
+}

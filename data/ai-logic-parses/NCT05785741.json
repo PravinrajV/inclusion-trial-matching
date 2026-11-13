@@ -1,0 +1,461 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05785741",
+  "briefTitle": "A Study of DB-1310 in Advanced/Metastatic Solid Tumors",
+  "parsedAt": "2026-11-12T06:17:04.863Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05785741-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male or female adults (defined as ≥ 18 years of age or acceptable age according to local regulations at the time of voluntarily signing of informed consent).",
+      "numberValue": 18,
+      "evidence_quote": "Male or female adults (defined as ≥ 18 years of age or acceptable age according to local regulations at the time of voluntarily signing of informed consent).",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05785741-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "Has an Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0-1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05785741-progression",
+      "polarity": "inclusion",
+      "sourceText": "Have relapsed or progressed on or after standard systemic treatments, or intolerable with standard treatment, or for which no standard treatment is available. Documented radiological disease progression during/after most recent treatment regimen for advanced/unresectable, or metastatic disease.",
+      "reasonFuzzy": "Prior treatment response and standard treatment availability are not typed lines or specific drug exclusions."
+    },
+    {
+      "id": "NCT05785741-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one measurable lesion as assessed by the investigator according to response evaluation criteria in solid tumors (RECIST) version 1.1 criteria.",
+      "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT05785741-life",
+      "polarity": "inclusion",
+      "sourceText": "Has a life expectancy of ≥ 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT05785741-lvef",
+      "polarity": "inclusion",
+      "sourceText": "Has LVEF ≥ 50% by either echocardiography (ECHO) or multiple-gated acquisition (MUGA) within 28 days before enrollment.",
+      "reasonFuzzy": "LVEF is not part of the allowed typed lab or biomarker categories."
+    },
+    {
+      "id": "NCT05785741-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Is willing to provide archived tumor tissue or undergo fresh tumor biopsy for the retrospective measurement of human epidermal growth factor receptor 3 (HER3) level and other biomarkers if no contraindication.",
+      "reasonFuzzy": "Willingness to undergo biopsy is a subjective criterion."
+    },
+    {
+      "id": "NCT05785741-prior-adc",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with antibody drug conjugate with topoisomerase I inhibitor (except topoisomerase I inhibitor HER2 ADC for backfilled subjects in Combo A of Phase 1 and subjects in Cohort 2e of Phase 2a, and not applicable for subjects enrolled for DLT observation in Phase 1).",
+      "reasonFuzzy": "Prior therapy exclusion has complex conditional exceptions across study cohorts."
+    },
+    {
+      "id": "NCT05785741-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Has a medical history of symptomatic congestive heart failure (CHF) (New York Heart Association [NYHA] classes II-IV) or serious cardiac arrhythmia requiring treatment.",
+      "reasonFuzzy": "Cardiac history and NYHA class are not typed criteria."
+    },
+    {
+      "id": "NCT05785741-cardiac-event",
+      "polarity": "exclusion",
+      "sourceText": "Has a medical history of myocardial infarction or unstable angina or cerebrovascular accident including transient ischemic attack (TIA) within 6 months before first dose. Or has uncontrolled hypertension (defined as systolic blood pressure > 160 mmHg or diastolic blood pressure > 100 mmHg).",
+      "reasonFuzzy": "Blood pressure and cardiac/vascular history are not typed criteria."
+    },
+    {
+      "id": "NCT05785741-ecg",
+      "polarity": "exclusion",
+      "sourceText": "Has any clinically important abnormalities in rhythm, conduction or morphology of resting electrocardiogram (ECG), e.g., complete left bundle branch block, third-degree heart block, second-degree heart block, or PR interval > 250 milliseconds (ms).",
+      "reasonFuzzy": "ECG findings are not typed criteria."
+    },
+    {
+      "id": "NCT05785741-qt",
+      "polarity": "exclusion",
+      "sourceText": "Has an average of Fredericia's formula-QT corrected interval (QTcF) prolongation to > 470 millisecond (ms) based on a 12-lead electrocardiogram (ECG) in triplicate.",
+      "reasonFuzzy": "QT interval is not part of the allowed typed checks."
+    },
+    {
+      "id": "NCT05785741-ild",
+      "polarity": "exclusion",
+      "sourceText": "Has a history of (non-infectious) ILD/pneumonitis and/or radiation pneumonitis that required glucocorticoids, or has current ILD/pneumonitis and/or radiation pneumonitis, or where suspected ILD/pneumonitis and/or radiation pneumonitis cannot be ruled out by imaging at screening.",
+      "reasonFuzzy": "ILD and pneumonitis history are not typed checks."
+    },
+    {
+      "id": "NCT05785741-pulmonary",
+      "polarity": "exclusion",
+      "sourceText": "Have a lung-specific intercurrent clinically significant illness including, but not limited to, any underlying pulmonary disorder (e.g., pulmonary emboli within 3 months prior to Cycle 1 Day 1, severe asthma, severe chronic obstructive pulmonary disorder, restrictive lung disease, significant pleural effusion etc.), and any autoimmune, connective tissue or inflammatory disorder with pulmonary involvement (e.g., rheumatoid arthritis, Sjogren's syndrome, sarcoidosis etc.), and/or prior pneumonectomy (complete).",
+      "reasonFuzzy": "Pulmonary illnesses and disorders are not typed checks."
+    },
+    {
+      "id": "NCT05785741-progression",
+      "polarity": "inclusion",
+      "sourceText": "Have relapsed or progressed on or after standard systemic treatments, or intolerable with standard treatment, or for which no standard treatment is available. Documented radiological disease progression during/after most recent treatment regimen for advanced/unresectable, or metastatic disease.",
+      "reasonFuzzy": "Prior treatment response and standard treatment availability are not single typed checks."
+    },
+    {
+      "id": "NCT05785741-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one measurable lesion as assessed by the investigator according to response evaluation criteria in solid tumors (RECIST) version 1.1 criteria.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05785741-life-expectancy",
+      "polarity": "inclusion",
+      "sourceText": "Has a life expectancy of ≥ 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05785741-lvef",
+      "polarity": "inclusion",
+      "sourceText": "Has LVEF ≥ 50% by either echocardiography (ECHO) or multiple-gated acquisition (MUGA) within 28 days before enrollment.",
+      "reasonFuzzy": "LVEF is not in the allowed typed kinds."
+    },
+    {
+      "id": "NCT05785741-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Is willing to provide archived tumor tissue or undergo fresh tumor biopsy for the retrospective measurement of human epidermal growth factor receptor 3 (HER3) level and other biomarkers if no contraindication. For HER2 IHC 0 breast cancer subjects, it is highly recommended to collect additional tumor sample (Refer to Lab Manual).",
+      "reasonFuzzy": "Willingness to undergo biopsy or procedure is a subjective criterion, not a typed check."
+    },
+    {
+      "id": "NCT05785741-prior-adc",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with antibody drug conjugate with topoisomerase I inhibitor (except topoisomerase I inhibitor HER2 ADC for backfilled subjects in Combo A of Phase 1 and subjects in Cohort 2e of Phase 2a, and not applicable for subjects enrolled for DLT observation in Phase 1).",
+      "reasonFuzzy": "Complex prior therapy exclusion with multiple study-part exceptions."
+    },
+    {
+      "id": "NCT05785741-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Has a medical history of symptomatic congestive heart failure (CHF) (New York Heart Association \\[NYHA\\] classes II-IV) or serious cardiac arrhythmia requiring treatment.",
+      "reasonFuzzy": "Cardiac history and NYHA class criteria are not typed checks."
+    },
+    {
+      "id": "NCT05785741-cvd",
+      "polarity": "exclusion",
+      "sourceText": "Has a medical history of myocardial infarction or unstable angina or cerebrovascular accident including transient ischemic attack (TIA) within 6 months before first dose. Or has uncontrolled hypertension (defined as systolic blood pressure > 160 mmHg or diastolic blood pressure > 100 mmHg).",
+      "reasonFuzzy": "Cardiovascular history and blood pressure cutoffs are not part of the allowed typed checks."
+    },
+    {
+      "id": "NCT05785741-ecg",
+      "polarity": "exclusion",
+      "sourceText": "Has any clinically important abnormalities in rhythm, conduction or morphology of resting electrocardiogram (ECG), e.g., complete left bundle branch block, third-degree heart block, second-degree heart block, or PR interval > 250 milliseconds (ms).",
+      "reasonFuzzy": "ECG findings and intervals are not typed checks."
+    },
+    {
+      "id": "NCT05785741-qt",
+      "polarity": "exclusion",
+      "sourceText": "Has an average of Fredericia's formula-QT corrected interval (QTcF) prolongation to > 470 millisecond (ms) based on a 12-lead electrocardiogram (ECG) in triplicate.",
+      "reasonFuzzy": "QT interval prolongation is not an allowed typed check."
+    },
+    {
+      "id": "NCT05785741-ild",
+      "polarity": "exclusion",
+      "sourceText": "Has a history of (non-infectious) ILD/pneumonitis and/or radiation pneumonitis that required glucocorticoids, or has current ILD/pneumonitis and/or radiation pneumonitis, or where suspected ILD/pneumonitis and/or radiation pneumonitis cannot be ruled out by imaging at screening.",
+      "reasonFuzzy": "Interstitial lung disease history is not a typed check."
+    },
+    {
+      "id": "NCT05785741-pulmonary",
+      "polarity": "exclusion",
+      "sourceText": "Have a lung-specific intercurrent clinically significant illness including, but not limited to, any underlying pulmonary disorder (e.g., pulmonary emboli within 3 months prior to Cycle 1 Day 1, severe asthma, severe chronic obstructive pulmonary disorder, restrictive lung disease, significant pleural effusion etc.), and any autoimmune, connective tissue or inflammatory disorder with pulmonary involvement (e.g., rheumatoid arthritis, Sjogren's syndrome, sarcoidosis etc.), and/or prior pneumonectomy (complete).",
+      "reasonFuzzy": "Pulmonary illnesses and conditions are not typed checks."
+    },
+    {
+      "id": "NCT05785741-prior-her3",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with HER3 targeted therapy.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05785741-brain",
+      "polarity": "exclusion",
+      "sourceText": "Has clinically active central nervous system (CNS) metastases, defined as untreated, or symptomatic, or requiring therapy with glucocorticoids or anticonvulsants to control associated symptoms. However, subjects with asymptomatic CNS metastases who are radiologically and neurologically stable for at least 4 weeks following CNS-directed radiotherapy or surgery, and who are on stable or decreasing doses of glucocorticoids equivalent to ≤10 mg/day prednisone are eligible for study entry.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:her3 targeted therapy"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 12,
+    "attempts": 1,
+    "ms": 13819
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 12,
+    "attempts": 1,
+    "ms": 23068
+  },
+  "ms": 44825,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05785741",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05785741-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female adults (defined as ≥ 18 years of age or acceptable age according to local regulations at the time of voluntarily signing of informed consent).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05785741-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05785741-prior-her3",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with HER3 targeted therapy.",
+        "stringValue": "HER3 targeted therapy"
+      },
+      {
+        "id": "NCT05785741-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has clinically active central nervous system (CNS) metastases, defined as untreated, or symptomatic, or requiring therapy with glucocorticoids or anticonvulsants to control associated symptoms. However, subjects with asymptomatic CNS metastases who are radiologically and neurologically stable for at least 4 weeks following CNS-directed radiotherapy or surgery, and who are on stable or decreasing doses of glucocorticoids equivalent to ≤10 mg/day prednisone are eligible for study entry.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05785741-progression",
+        "polarity": "inclusion",
+        "sourceText": "Have relapsed or progressed on or after standard systemic treatments, or intolerable with standard treatment, or for which no standard treatment is available. Documented radiological disease progression during/after most recent treatment regimen for advanced/unresectable, or metastatic disease.",
+        "reasonFuzzy": "Prior treatment response and standard treatment availability are not typed lines or specific drug exclusions."
+      },
+      {
+        "id": "NCT05785741-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one measurable lesion as assessed by the investigator according to response evaluation criteria in solid tumors (RECIST) version 1.1 criteria.",
+        "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT05785741-life",
+        "polarity": "inclusion",
+        "sourceText": "Has a life expectancy of ≥ 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT05785741-lvef",
+        "polarity": "inclusion",
+        "sourceText": "Has LVEF ≥ 50% by either echocardiography (ECHO) or multiple-gated acquisition (MUGA) within 28 days before enrollment.",
+        "reasonFuzzy": "LVEF is not part of the allowed typed lab or biomarker categories."
+      },
+      {
+        "id": "NCT05785741-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Is willing to provide archived tumor tissue or undergo fresh tumor biopsy for the retrospective measurement of human epidermal growth factor receptor 3 (HER3) level and other biomarkers if no contraindication.",
+        "reasonFuzzy": "Willingness to undergo biopsy is a subjective criterion."
+      },
+      {
+        "id": "NCT05785741-prior-adc",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with antibody drug conjugate with topoisomerase I inhibitor (except topoisomerase I inhibitor HER2 ADC for backfilled subjects in Combo A of Phase 1 and subjects in Cohort 2e of Phase 2a, and not applicable for subjects enrolled for DLT observation in Phase 1).",
+        "reasonFuzzy": "Prior therapy exclusion has complex conditional exceptions across study cohorts."
+      },
+      {
+        "id": "NCT05785741-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Has a medical history of symptomatic congestive heart failure (CHF) (New York Heart Association [NYHA] classes II-IV) or serious cardiac arrhythmia requiring treatment.",
+        "reasonFuzzy": "Cardiac history and NYHA class are not typed criteria."
+      },
+      {
+        "id": "NCT05785741-cardiac-event",
+        "polarity": "exclusion",
+        "sourceText": "Has a medical history of myocardial infarction or unstable angina or cerebrovascular accident including transient ischemic attack (TIA) within 6 months before first dose. Or has uncontrolled hypertension (defined as systolic blood pressure > 160 mmHg or diastolic blood pressure > 100 mmHg).",
+        "reasonFuzzy": "Blood pressure and cardiac/vascular history are not typed criteria."
+      },
+      {
+        "id": "NCT05785741-ecg",
+        "polarity": "exclusion",
+        "sourceText": "Has any clinically important abnormalities in rhythm, conduction or morphology of resting electrocardiogram (ECG), e.g., complete left bundle branch block, third-degree heart block, second-degree heart block, or PR interval > 250 milliseconds (ms).",
+        "reasonFuzzy": "ECG findings are not typed criteria."
+      },
+      {
+        "id": "NCT05785741-qt",
+        "polarity": "exclusion",
+        "sourceText": "Has an average of Fredericia's formula-QT corrected interval (QTcF) prolongation to > 470 millisecond (ms) based on a 12-lead electrocardiogram (ECG) in triplicate.",
+        "reasonFuzzy": "QT interval is not part of the allowed typed checks."
+      },
+      {
+        "id": "NCT05785741-ild",
+        "polarity": "exclusion",
+        "sourceText": "Has a history of (non-infectious) ILD/pneumonitis and/or radiation pneumonitis that required glucocorticoids, or has current ILD/pneumonitis and/or radiation pneumonitis, or where suspected ILD/pneumonitis and/or radiation pneumonitis cannot be ruled out by imaging at screening.",
+        "reasonFuzzy": "ILD and pneumonitis history are not typed checks."
+      },
+      {
+        "id": "NCT05785741-pulmonary",
+        "polarity": "exclusion",
+        "sourceText": "Have a lung-specific intercurrent clinically significant illness including, but not limited to, any underlying pulmonary disorder (e.g., pulmonary emboli within 3 months prior to Cycle 1 Day 1, severe asthma, severe chronic obstructive pulmonary disorder, restrictive lung disease, significant pleural effusion etc.), and any autoimmune, connective tissue or inflammatory disorder with pulmonary involvement (e.g., rheumatoid arthritis, Sjogren's syndrome, sarcoidosis etc.), and/or prior pneumonectomy (complete).",
+        "reasonFuzzy": "Pulmonary illnesses and disorders are not typed checks."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05785741",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05785741-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female adults (defined as ≥ 18 years of age or acceptable age according to local regulations at the time of voluntarily signing of informed consent).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05785741-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05785741-prior-her3",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with HER3 targeted therapy.",
+        "stringValue": "HER3 targeted therapy"
+      },
+      {
+        "id": "NCT05785741-brain-mets",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has clinically active central nervous system (CNS) metastases, defined as untreated, or symptomatic, or requiring therapy with glucocorticoids or anticonvulsants to control associated symptoms. However, subjects with asymptomatic CNS metastases who are radiologically and neurologically stable for at least 4 weeks following CNS-directed radiotherapy or surgery, and who are on stable or decreasing doses of glucocorticoids equivalent to ≤10 mg/day prednisone are eligible for study entry.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05785741-progression",
+        "polarity": "inclusion",
+        "sourceText": "Have relapsed or progressed on or after standard systemic treatments, or intolerable with standard treatment, or for which no standard treatment is available. Documented radiological disease progression during/after most recent treatment regimen for advanced/unresectable, or metastatic disease.",
+        "reasonFuzzy": "Prior treatment response and standard treatment availability are not single typed checks."
+      },
+      {
+        "id": "NCT05785741-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one measurable lesion as assessed by the investigator according to response evaluation criteria in solid tumors (RECIST) version 1.1 criteria.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05785741-life-expectancy",
+        "polarity": "inclusion",
+        "sourceText": "Has a life expectancy of ≥ 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05785741-lvef",
+        "polarity": "inclusion",
+        "sourceText": "Has LVEF ≥ 50% by either echocardiography (ECHO) or multiple-gated acquisition (MUGA) within 28 days before enrollment.",
+        "reasonFuzzy": "LVEF is not in the allowed typed kinds."
+      },
+      {
+        "id": "NCT05785741-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Is willing to provide archived tumor tissue or undergo fresh tumor biopsy for the retrospective measurement of human epidermal growth factor receptor 3 (HER3) level and other biomarkers if no contraindication. For HER2 IHC 0 breast cancer subjects, it is highly recommended to collect additional tumor sample (Refer to Lab Manual).",
+        "reasonFuzzy": "Willingness to undergo biopsy or procedure is a subjective criterion, not a typed check."
+      },
+      {
+        "id": "NCT05785741-prior-adc",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with antibody drug conjugate with topoisomerase I inhibitor (except topoisomerase I inhibitor HER2 ADC for backfilled subjects in Combo A of Phase 1 and subjects in Cohort 2e of Phase 2a, and not applicable for subjects enrolled for DLT observation in Phase 1).",
+        "reasonFuzzy": "Complex prior therapy exclusion with multiple study-part exceptions."
+      },
+      {
+        "id": "NCT05785741-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Has a medical history of symptomatic congestive heart failure (CHF) (New York Heart Association \\[NYHA\\] classes II-IV) or serious cardiac arrhythmia requiring treatment.",
+        "reasonFuzzy": "Cardiac history and NYHA class criteria are not typed checks."
+      },
+      {
+        "id": "NCT05785741-cvd",
+        "polarity": "exclusion",
+        "sourceText": "Has a medical history of myocardial infarction or unstable angina or cerebrovascular accident including transient ischemic attack (TIA) within 6 months before first dose. Or has uncontrolled hypertension (defined as systolic blood pressure > 160 mmHg or diastolic blood pressure > 100 mmHg).",
+        "reasonFuzzy": "Cardiovascular history and blood pressure cutoffs are not part of the allowed typed checks."
+      },
+      {
+        "id": "NCT05785741-ecg",
+        "polarity": "exclusion",
+        "sourceText": "Has any clinically important abnormalities in rhythm, conduction or morphology of resting electrocardiogram (ECG), e.g., complete left bundle branch block, third-degree heart block, second-degree heart block, or PR interval > 250 milliseconds (ms).",
+        "reasonFuzzy": "ECG findings and intervals are not typed checks."
+      },
+      {
+        "id": "NCT05785741-qt",
+        "polarity": "exclusion",
+        "sourceText": "Has an average of Fredericia's formula-QT corrected interval (QTcF) prolongation to > 470 millisecond (ms) based on a 12-lead electrocardiogram (ECG) in triplicate.",
+        "reasonFuzzy": "QT interval prolongation is not an allowed typed check."
+      },
+      {
+        "id": "NCT05785741-ild",
+        "polarity": "exclusion",
+        "sourceText": "Has a history of (non-infectious) ILD/pneumonitis and/or radiation pneumonitis that required glucocorticoids, or has current ILD/pneumonitis and/or radiation pneumonitis, or where suspected ILD/pneumonitis and/or radiation pneumonitis cannot be ruled out by imaging at screening.",
+        "reasonFuzzy": "Interstitial lung disease history is not a typed check."
+      },
+      {
+        "id": "NCT05785741-pulmonary",
+        "polarity": "exclusion",
+        "sourceText": "Have a lung-specific intercurrent clinically significant illness including, but not limited to, any underlying pulmonary disorder (e.g., pulmonary emboli within 3 months prior to Cycle 1 Day 1, severe asthma, severe chronic obstructive pulmonary disorder, restrictive lung disease, significant pleural effusion etc.), and any autoimmune, connective tissue or inflammatory disorder with pulmonary involvement (e.g., rheumatoid arthritis, Sjogren's syndrome, sarcoidosis etc.), and/or prior pneumonectomy (complete).",
+        "reasonFuzzy": "Pulmonary illnesses and conditions are not typed checks."
+      }
+    ]
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05537922",
+  "briefTitle": "I3LUNG: Integrative Science, Intelligent Data Platform for Individualized LUNG Cancer Care With Immunotherapy",
+  "parsedAt": "2026-11-12T06:14:02.489Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05537922-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age >/= 18 years.",
+      "numberValue": 18,
+      "evidence_quote": "Age >/= 18 years.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05537922-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed diagnosis of stage IIIB/C-IV Non-Small-Cell Lung Cancer",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Histologically confirmed diagnosis of stage IIIB/C-IV Non-Small-Cell Lung Cancer",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05537922-immunotherapy",
+      "polarity": "inclusion",
+      "sourceText": "Received any line immunotherapy (maintenance therapy with Durvalumab is allowed) for retrospective cohort; clinical indication for frontline treatment with immunotherapy as first line treatment for prospective cohort.",
+      "reasonFuzzy": "Immunotherapy requirements differ between retrospective and prospective cohorts."
+    },
+    {
+      "id": "NCT05537922-brain",
+      "polarity": "inclusion",
+      "sourceText": "Patients with CNS metastasis are allowed",
+      "reasonFuzzy": "Allows CNS metastases generally without a clear status restriction of treated_stable or untreated."
+    },
+    {
+      "id": "NCT05537922-alterations",
+      "polarity": "inclusion",
+      "sourceText": "Patients with driver genomic alterations are allowed (only for retrospective cohort)",
+      "reasonFuzzy": "Cohort-specific driver alteration allowance is not a simple binary gene status rule."
+    },
+    {
+      "id": "NCT05537922-icf",
+      "polarity": "inclusion",
+      "sourceText": "Evidence of a personally signed and dated ICF indicating that the patient has been informed of and understands all pertinent aspects of the study before enrolment (only for prospective cohort)",
+      "reasonFuzzy": "Informed consent documentation is a standard administrative requirement, not a typed biomarker or clinical criterion."
+    },
+    {
+      "id": "NCT05537922-ffpe",
+      "polarity": "inclusion",
+      "sourceText": "Availability of at least one FFPE block for -omics data generation (only for prospective cohort)",
+      "reasonFuzzy": "Tissue sample availability is an administrative and procedural requirement, not a typed clinical criterion."
+    },
+    {
+      "id": "NCT05537922-mininfo",
+      "polarity": "exclusion",
+      "sourceText": "Patients without minimal treatment information data to be included in the retrospective cohort",
+      "reasonFuzzy": "Data availability is an administrative condition rather than a standard patient-level clinical exclusion."
+    },
+    {
+      "id": "NCT05537922-priortherapy",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment for advanced disease (only for prospective cohort)",
+      "reasonFuzzy": "Prior therapy exclusion applies conditionally to a specific study cohort."
+    },
+    {
+      "id": "NCT05537922-compliance",
+      "polarity": "exclusion",
+      "sourceText": "Unavailability or inability to comply with the requested study procedures, including compilation of QoL questionnaires",
+      "reasonFuzzy": "Compliance and questionnaire completion are subjective clinical judgment criteria."
+    },
+    {
+      "id": "NCT05537922-immunotherapy",
+      "polarity": "inclusion",
+      "sourceText": "Received any line immunotherapy (maintenance therapy with Durvalumab is allowed) for retrospective cohort; clinical indication for frontline treatment with immunotherapy as first line treatment for prospective cohort.",
+      "reasonFuzzy": "Immunotherapy requirements and prior/frontline lines differ between retrospective and prospective cohorts and cannot be expressed as a single typed prior therapy check."
+    },
+    {
+      "id": "NCT05537922-cns",
+      "polarity": "inclusion",
+      "sourceText": "Patients with CNS metastasis are allowed",
+      "reasonFuzzy": "Allowing CNS metastases generally is not one of the standardized strict brain_mets allowed types (none or treated_stable vs untreated)."
+    },
+    {
+      "id": "NCT05537922-driver",
+      "polarity": "inclusion",
+      "sourceText": "Patients with driver genomic alterations are allowed (only for retrospective cohort)",
+      "reasonFuzzy": "Driver genomic alterations are broad and conditional on the retrospective cohort, not a specific single gene mutation status check."
+    },
+    {
+      "id": "NCT05537922-icf",
+      "polarity": "inclusion",
+      "sourceText": "Evidence of a personally signed and dated ICF indicating that the patient has been informed of and understands all pertinent aspects of the study before enrolment (only for prospective cohort)",
+      "reasonFuzzy": "Informed consent is a standard procedural administrative requirement, not a typed clinical check."
+    },
+    {
+      "id": "NCT05537922-ffpe",
+      "polarity": "inclusion",
+      "sourceText": "Availability of at least one FFPE block for -omics data generation (only for prospective cohort)",
+      "reasonFuzzy": "Sample availability for tissue collection is not a typed clinical or laboratory check."
+    },
+    {
+      "id": "NCT05537922-min-info",
+      "polarity": "exclusion",
+      "sourceText": "Patients without minimal treatment information data to be included in the retrospective cohort",
+      "reasonFuzzy": "Minimal treatment information data availability is an administrative study inclusion requirement."
+    },
+    {
+      "id": "NCT05537922-prior-adv",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment for advanced disease (only for prospective cohort)",
+      "reasonFuzzy": "Prior treatment rules differ across study cohorts and cannot be captured simply."
+    },
+    {
+      "id": "NCT05537922-compliance",
+      "polarity": "exclusion",
+      "sourceText": "Unavailability or inability to comply with the requested study procedures, including compilation of QoL questionnaires",
+      "reasonFuzzy": "Subjective compliance and questionnaire completion are not typed criteria."
+    },
+    {
+      "id": "NCT05537922-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status </= 2.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:2"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 3558
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 3083
+  },
+  "ms": 14595,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05537922",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05537922-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age >/= 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05537922-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status </= 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT05537922-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed diagnosis of stage IIIB/C-IV Non-Small-Cell Lung Cancer",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05537922-immunotherapy",
+        "polarity": "inclusion",
+        "sourceText": "Received any line immunotherapy (maintenance therapy with Durvalumab is allowed) for retrospective cohort; clinical indication for frontline treatment with immunotherapy as first line treatment for prospective cohort.",
+        "reasonFuzzy": "Immunotherapy requirements differ between retrospective and prospective cohorts."
+      },
+      {
+        "id": "NCT05537922-brain",
+        "polarity": "inclusion",
+        "sourceText": "Patients with CNS metastasis are allowed",
+        "reasonFuzzy": "Allows CNS metastases generally without a clear status restriction of treated_stable or untreated."
+      },
+      {
+        "id": "NCT05537922-alterations",
+        "polarity": "inclusion",
+        "sourceText": "Patients with driver genomic alterations are allowed (only for retrospective cohort)",
+        "reasonFuzzy": "Cohort-specific driver alteration allowance is not a simple binary gene status rule."
+      },
+      {
+        "id": "NCT05537922-icf",
+        "polarity": "inclusion",
+        "sourceText": "Evidence of a personally signed and dated ICF indicating that the patient has been informed of and understands all pertinent aspects of the study before enrolment (only for prospective cohort)",
+        "reasonFuzzy": "Informed consent documentation is a standard administrative requirement, not a typed biomarker or clinical criterion."
+      },
+      {
+        "id": "NCT05537922-ffpe",
+        "polarity": "inclusion",
+        "sourceText": "Availability of at least one FFPE block for -omics data generation (only for prospective cohort)",
+        "reasonFuzzy": "Tissue sample availability is an administrative and procedural requirement, not a typed clinical criterion."
+      },
+      {
+        "id": "NCT05537922-mininfo",
+        "polarity": "exclusion",
+        "sourceText": "Patients without minimal treatment information data to be included in the retrospective cohort",
+        "reasonFuzzy": "Data availability is an administrative condition rather than a standard patient-level clinical exclusion."
+      },
+      {
+        "id": "NCT05537922-priortherapy",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment for advanced disease (only for prospective cohort)",
+        "reasonFuzzy": "Prior therapy exclusion applies conditionally to a specific study cohort."
+      },
+      {
+        "id": "NCT05537922-compliance",
+        "polarity": "exclusion",
+        "sourceText": "Unavailability or inability to comply with the requested study procedures, including compilation of QoL questionnaires",
+        "reasonFuzzy": "Compliance and questionnaire completion are subjective clinical judgment criteria."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05537922",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05537922-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age >/= 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05537922-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status </= 2.",
+        "numberValue": 2
+      },
+      {
+        "id": "NCT05537922-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed diagnosis of stage IIIB/C-IV Non-Small-Cell Lung Cancer",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05537922-immunotherapy",
+        "polarity": "inclusion",
+        "sourceText": "Received any line immunotherapy (maintenance therapy with Durvalumab is allowed) for retrospective cohort; clinical indication for frontline treatment with immunotherapy as first line treatment for prospective cohort.",
+        "reasonFuzzy": "Immunotherapy requirements and prior/frontline lines differ between retrospective and prospective cohorts and cannot be expressed as a single typed prior therapy check."
+      },
+      {
+        "id": "NCT05537922-cns",
+        "polarity": "inclusion",
+        "sourceText": "Patients with CNS metastasis are allowed",
+        "reasonFuzzy": "Allowing CNS metastases generally is not one of the standardized strict brain_mets allowed types (none or treated_stable vs untreated)."
+      },
+      {
+        "id": "NCT05537922-driver",
+        "polarity": "inclusion",
+        "sourceText": "Patients with driver genomic alterations are allowed (only for retrospective cohort)",
+        "reasonFuzzy": "Driver genomic alterations are broad and conditional on the retrospective cohort, not a specific single gene mutation status check."
+      },
+      {
+        "id": "NCT05537922-icf",
+        "polarity": "inclusion",
+        "sourceText": "Evidence of a personally signed and dated ICF indicating that the patient has been informed of and understands all pertinent aspects of the study before enrolment (only for prospective cohort)",
+        "reasonFuzzy": "Informed consent is a standard procedural administrative requirement, not a typed clinical check."
+      },
+      {
+        "id": "NCT05537922-ffpe",
+        "polarity": "inclusion",
+        "sourceText": "Availability of at least one FFPE block for -omics data generation (only for prospective cohort)",
+        "reasonFuzzy": "Sample availability for tissue collection is not a typed clinical or laboratory check."
+      },
+      {
+        "id": "NCT05537922-min-info",
+        "polarity": "exclusion",
+        "sourceText": "Patients without minimal treatment information data to be included in the retrospective cohort",
+        "reasonFuzzy": "Minimal treatment information data availability is an administrative study inclusion requirement."
+      },
+      {
+        "id": "NCT05537922-prior-adv",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment for advanced disease (only for prospective cohort)",
+        "reasonFuzzy": "Prior treatment rules differ across study cohorts and cannot be captured simply."
+      },
+      {
+        "id": "NCT05537922-compliance",
+        "polarity": "exclusion",
+        "sourceText": "Unavailability or inability to comply with the requested study procedures, including compilation of QoL questionnaires",
+        "reasonFuzzy": "Subjective compliance and questionnaire completion are not typed criteria."
+      }
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "nctId": "NCT06561386",
+  "typedChecks": [
+    {
+      "category": "disease_stage",
+      "operator": "equals",
+      "value": "Stage IV or recurrent",
+      "sourceText": "Participants must have histologically confirmed Stage IV or recurrent Non-small Cell Lung Cancer (NSCLC)"
+    },
+    {
+      "category": "histology",
+      "operator": "equals",
+      "value": "non-squamous",
+      "sourceText": "Non-small Cell Lung Cancer (NSCLC) of non-squamous (NSQ) histology"
+    },
+    {
+      "category": "biomarker",
+      "operator": "greater_than_or_equal",
+      "biomarkerName": "PD-L1",
+      "thresholdNumber": 1.0,
+      "thresholdUnit": "percent",
+      "sourceText": "Participants must have measurable PD-L1 ≥ 1% Tumor Cell (TC) score"
+    },
+    {
+      "category": "age",
+      "operator": "greater_than_or_equal",
+      "value": 18,
+      "sourceText": "minimumAge: 18 Years"
+    },
+    {
+      "category": "performance_status",
+      "scale": "ECOG",
+      "operator": "less_than_or_equal",
+      "value": 1,
+      "sourceText": "Participants must have an Easter Cooperative Oncology Group (ECOG) performance status of ≤ 1 at screening."
+    },
+    {
+      "category": "prior_therapy_excluded",
+      "drugOrClass": "systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease",
+      "sourceText": "with no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease."
+    },
+    {
+      "category": "biomarker_mutation_excluded",
+      "biomarkerName": "EGFR, ALK, or ROS-1 mutations",
+      "sourceText": "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded."
+    },
+    {
+      "category": "biomarker_mutation_excluded",
+      "biomarkerName": "BRAFV600E mutations, activating RET mutations or NTRK fusion gene alterations",
+      "sourceText": "Participants with known BRAFV600E mutations, that are sensitive to available targeted inhibitor therapy; participants with known activating rearranged during transfection (RET) mutations or neurotrophic tyrosine receptor kinase (NTRK) fusion gene alterations are excluded."
+    },
+    {
+      "category": "brain_mets",
+      "operator": "allowed_if",
+      "status": "treated",
+      "sourceText": "Participants must not have untreated central nervous system (CNS) metastases."
+    },
+    {
+      "category": "prior_therapy_excluded",
+      "drugOrClass": "anti-PD-1, anti-PD-L1, anti-PD-L2, or anti-CTLA-4 antibody, or any other antibody or drug specifically targeting T-cell co-stimulation or checkpoint pathways",
+      "sourceText": "Prior treatment with an anti-PD-1, anti-PD-L1, anti-PD-L2, or anti-CTLA-4 antibody, or any other antibody or drug specifically targeting T-cell co-stimulation or checkpoint pathways."
+    }
+  ],
+  "fuzzyCriteria": []
+}

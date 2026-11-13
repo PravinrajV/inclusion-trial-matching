@@ -1,0 +1,551 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06312137",
+  "briefTitle": "A Study to Assess Efficacy and Safety of Pembrolizumab With or Without Sacituzumab Tirumotecan (MK- 2870) in Adult Participants With Resectable Non Small Cell Lung Cancer (NSCLC) Not Achieving Pathological Complete Response (pCR) (MK-2870-019)",
+  "parsedAt": "2026-11-12T06:33:11.379Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06312137-surgery",
+      "polarity": "inclusion",
+      "sourceText": "Is able to undergo surgery based on opinion of investigator after consultation with surgeon",
+      "reasonFuzzy": "Ability to undergo surgery is investigator-dependent judgment."
+    },
+    {
+      "id": "NCT06312137-pcr",
+      "polarity": "inclusion",
+      "sourceText": "Applies to screening for the adjuvant period only, before randomization: Has not achieved pathological complete response (pCR) at surgery by local review of pathology.",
+      "reasonFuzzy": "Pathological complete response evaluation is specific to the study timing and pathology review, not a standard baseline typed check."
+    },
+    {
+      "id": "NCT06312137-pdl1-trop2",
+      "polarity": "inclusion",
+      "sourceText": "Applies to screening for the adjuvant period only, before randomization: Tumor tissue sample from surgical resection has been provided for determination of programmed cell death ligand 1 (PD-L1) and trophoblast cell surface antigen 2 (TROP2) status by central vendor before randomization into the adjuvant period",
+      "reasonFuzzy": "Requires provision of tissue for status determination rather than a specific numeric PD-L1 cutoff."
+    },
+    {
+      "id": "NCT06312137-disease-free",
+      "polarity": "inclusion",
+      "sourceText": "Applies to screening for the adjuvant period only, before randomization: Confirmed to be disease-free based on re-baseline radiological assessment as documented by contrast enhanced chest/abdomen/pelvis computed tomography (CT) (or magnetic resonance imaging (MRI)) within 28 days before randomization",
+      "reasonFuzzy": "Radiological disease-free assessment is an imaging evaluation."
+    },
+    {
+      "id": "NCT06312137-hiv",
+      "polarity": "inclusion",
+      "sourceText": "Human immunodeficiency virus (HIV)-infected participants must have well controlled HIV on antiretroviral therapy (ART)",
+      "reasonFuzzy": "Well-controlled HIV is a clinical judgment."
+    },
+    {
+      "id": "NCT06312137-exclusions-tumor",
+      "polarity": "exclusion",
+      "sourceText": "Has one of the following tumor locations/types:\n* NSCLC involving the superior sulcus\n* Large cell neuro-endocrine cancer (LCNEC)\n* Sarcomatoid tumor\n* Diagnosis of SCLC or, for mixed tumors, presence of small cell elements",
+      "reasonFuzzy": "Specific anatomic location and histologic subtypes are not fully covered by the standard histology enum."
+    },
+    {
+      "id": "NCT06312137-neuropathy",
+      "polarity": "exclusion",
+      "sourceText": "Has Grade ≥2 peripheral neuropathy",
+      "reasonFuzzy": "Peripheral neuropathy grade is an adverse event assessment rather than a typed lab or condition check."
+    },
+    {
+      "id": "NCT06312137-eye",
+      "polarity": "exclusion",
+      "sourceText": "Has history of documented severe dry eye syndrome, severe Meibomian gland disease and/or blepharitis, or severe corneal disease that prevents/delays corneal healing",
+      "reasonFuzzy": "Specific ophthalmologic conditions are subjective and lack a dedicated typed check."
+    },
+    {
+      "id": "NCT06312137-ibd",
+      "polarity": "exclusion",
+      "sourceText": "Has active inflammatory bowel disease requiring immunosuppressive medication or previous history of inflammatory bowel disease",
+      "reasonFuzzy": "Inflammatory bowel disease criteria require clinical condition evaluation."
+    },
+    {
+      "id": "NCT06312137-cardiovascular",
+      "polarity": "exclusion",
+      "sourceText": "Has uncontrolled, significant cardiovascular disease or cerebrovascular disease, including New York Heart Association Class III or IV congestive heart failure, unstable angina, myocardial infarction, uncontrolled symptomatic arrhythmia, prolongation of QT corrected for heart rate by Fridericia's cube root formula (QTcF) interval to >480 ms, and/or other serious cardiovascular and cerebrovascular diseases within the 6 months preceding study intervention",
+      "reasonFuzzy": "Comprehensive cardiovascular history and NYHA class limits involve clinical judgment."
+    },
+    {
+      "id": "NCT06312137-prior-neoadjuvant",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior neoadjuvant therapy for their current NSCLC diagnosis",
+      "reasonFuzzy": "Complex prior therapy specification not matching a standard prior_therapy_excluded rule."
+    },
+    {
+      "id": "NCT06312137-prior-systemic",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior systemic anticancer therapy including investigational agents within 4 weeks before the first dose of study intervention",
+      "reasonFuzzy": "General systemic anticancer therapy washout window with multiple conditions."
+    },
+    {
+      "id": "NCT06312137-prior-rad",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior radiotherapy within 2 weeks of start of study intervention, or radiation-related toxicities, requiring corticosteroids",
+      "reasonFuzzy": "Radiotherapy washout and corticosteroid requirement are complex."
+    },
+    {
+      "id": "NCT06312137-vaccine",
+      "polarity": "exclusion",
+      "sourceText": "Has received a live or live-attenuated vaccine within 30 days before the first dose of study intervention. Administration of killed vaccines is allowed",
+      "reasonFuzzy": "Vaccine history washout is not a typed check."
+    },
+    {
+      "id": "NCT06312137-steroid",
+      "polarity": "exclusion",
+      "sourceText": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy (in dosing exceeding 10 mg daily of prednisone equivalent) or any other form of immunosuppressive therapy within 7 days prior the first dose of study medication",
+      "reasonFuzzy": "Chronic systemic steroid dosing condition is not a typed check."
+    },
+    {
+      "id": "NCT06312137-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Has a known additional malignancy that is progressing or has required active treatment within the past 5 years",
+      "reasonFuzzy": "Additional malignancy history is not a typed check."
+    },
+    {
+      "id": "NCT06312137-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "Has an active autoimmune disease that has required systemic treatment in the past 2 years",
+      "reasonFuzzy": "Active autoimmune disease status is a clinical judgment."
+    },
+    {
+      "id": "NCT06312137-ild",
+      "polarity": "exclusion",
+      "sourceText": "Has a history of (noninfectious) interstitial lung disease (ILD)/pneumonitis, has current ILD/pneumonitis, or has suspected ILD or pneumonitis that cannot be ruled out by standard diagnostic assessments at screening",
+      "reasonFuzzy": "ILD/pneumonitis history and suspicion are clinical assessments."
+    },
+    {
+      "id": "NCT06312137-infection",
+      "polarity": "exclusion",
+      "sourceText": "Has an active infection requiring systemic therapy",
+      "reasonFuzzy": "Active infection requiring systemic therapy is a general clinical judgment."
+    },
+    {
+      "id": "NCT06312137-transplant",
+      "polarity": "exclusion",
+      "sourceText": "Has a history of allogeneic tissue/solid organ transplant",
+      "reasonFuzzy": "Solid organ transplant history is not a typed check."
+    },
+    {
+      "id": "NCT06312137-surgery-recovery",
+      "polarity": "exclusion",
+      "sourceText": "Has not adequately recovered from major surgery or have ongoing surgical complications",
+      "reasonFuzzy": "Recovery from major surgery is a clinical judgment."
+    },
+    {
+      "id": "NCT06312137-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Severe hypersensitivity (≥Grade 3) to study intervention, any of its excipients, and/or to another biologic therapy",
+      "reasonFuzzy": "Hypersensitivity is an adverse reaction history, not a typed check."
+    },
+    {
+      "id": "NCT06312137-stage",
+      "polarity": "inclusion",
+      "sourceText": "Has histological or cytological confirmation of squamous or nonsquamous non-small cell lung cancer (NSCLC), resectable clinical Stage II, IIIA or IIIB (with nodal involvement [N2]) per AJCC eighth edition guidelines",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06312137-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06312137-egfr-alk",
+      "polarity": "inclusion",
+      "sourceText": "Has confirmation that either epidermal growth factor receptor (EGFR)-directed or anaplastic lymphoma kinase (ALK)-directed therapy is not indicated as primary therapy",
+      "reasonFuzzy": "This rule specifies that targeted therapy is not indicated, which is different from a simple genomic status check."
+    },
+    {
+      "id": "NCT06312137-surgery",
+      "polarity": "inclusion",
+      "sourceText": "Is able to undergo surgery based on opinion of investigator after consultation with surgeon",
+      "reasonFuzzy": "Surgery capability is based on investigator and surgeon opinion, which is a subjective judgment."
+    },
+    {
+      "id": "NCT06312137-pcr",
+      "polarity": "inclusion",
+      "sourceText": "Applies to screening for the adjuvant period only, before randomization: Has not achieved pathological complete response (pCR) at surgery by local review of pathology.",
+      "reasonFuzzy": "Pathological complete response evaluation is a specialized pathology assessment."
+    },
+    {
+      "id": "NCT06312137-pdl1-trop2",
+      "polarity": "inclusion",
+      "sourceText": "Applies to screening for the adjuvant period only, before randomization: Tumor tissue sample from surgical resection has been provided for determination of programmed cell death ligand 1 (PD-L1) and trophoblast cell surface antigen 2 (TROP2) status by central vendor before randomization into the adjuvant period",
+      "reasonFuzzy": "This rule requires tissue provision for biomarker determination rather than setting a specific quantitative PD-L1 cutoff."
+    },
+    {
+      "id": "NCT06312137-disease-free",
+      "polarity": "inclusion",
+      "sourceText": "Applies to screening for the adjuvant period only, before randomization: Confirmed to be disease-free based on re-baseline radiological assessment as documented by contrast enhanced chest/abdomen/pelvis computed tomography (CT) (or magnetic resonance imaging (MRI)) within 28 days before randomization",
+      "reasonFuzzy": "Disease-free status based on imaging assessment is a subjective radiologic judgment."
+    },
+    {
+      "id": "NCT06312137-prior-neoadjuvant",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior neoadjuvant therapy for their current NSCLC diagnosis",
+      "reasonFuzzy": "Prior neoadjuvant therapy exclusion is not a simple prior line or prior therapy class check."
+    },
+    {
+      "id": "NCT06312137-prior-systemic",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior systemic anticancer therapy including investigational agents within 4 weeks before the first dose of study intervention",
+      "reasonFuzzy": "General systemic and investigational therapy washout is not a simple named drug or class check."
+    },
+    {
+      "id": "NCT06312137-prior-radiotherapy",
+      "polarity": "exclusion",
+      "sourceText": "Has received prior radiotherapy within 2 weeks of start of study intervention, or radiation-related toxicities, requiring corticosteroids",
+      "reasonFuzzy": "Prior radiotherapy washout with corticosteroid requirement is complex."
+    },
+    {
+      "id": "NCT06312137-tumor-locations",
+      "polarity": "exclusion",
+      "sourceText": "Has one of the following tumor locations/types: NSCLC involving the superior sulcus, Large cell neuro-endocrine cancer (LCNEC), Sarcomatoid tumor, Diagnosis of SCLC or, for mixed tumors, presence of small cell elements",
+      "reasonFuzzy": "Exclusion involves specific rare histological subtypes and tumor locations that do not map to standard high-level histology categories."
+    },
+    {
+      "id": "NCT06312137-stage",
+      "polarity": "inclusion",
+      "sourceText": "Has histological or cytological confirmation of squamous or nonsquamous non-small cell lung cancer (NSCLC), resectable clinical Stage II, IIIA or IIIB (with nodal involvement [N2]) per AJCC eighth edition guidelines",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06312137-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06312137-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Is able to receive neoadjuvant pembrolizumab and platinum-based doublet chemotherapy",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Has histological or cytological confirmation of squamous or nonsquamous non-small cell lung cancer (NSCLC), resectable clinical Stage II, IIIA or IIIB (with nod"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 0,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Has histological or cytological confirmation of squamous or nonsquamous non-small cell lung cancer (NSCLC), resectable clinical Stage II, IIIA or IIIB (with nod"
+        },
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 0,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:platinum-based doublet chemotherapy"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 0
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 22,
+    "attempts": 1,
+    "ms": 5757
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 3640
+  },
+  "ms": 17386,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06312137",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06312137-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Has histological or cytological confirmation of squamous or nonsquamous non-small cell lung cancer (NSCLC), resectable clinical Stage II, IIIA or IIIB (with nodal involvement [N2]) per AJCC eighth edition guidelines",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT06312137-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06312137-prior-therapy",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Is able to receive neoadjuvant pembrolizumab and platinum-based doublet chemotherapy",
+        "stringValue": "platinum-based doublet chemotherapy"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06312137-surgery",
+        "polarity": "inclusion",
+        "sourceText": "Is able to undergo surgery based on opinion of investigator after consultation with surgeon",
+        "reasonFuzzy": "Ability to undergo surgery is investigator-dependent judgment."
+      },
+      {
+        "id": "NCT06312137-pcr",
+        "polarity": "inclusion",
+        "sourceText": "Applies to screening for the adjuvant period only, before randomization: Has not achieved pathological complete response (pCR) at surgery by local review of pathology.",
+        "reasonFuzzy": "Pathological complete response evaluation is specific to the study timing and pathology review, not a standard baseline typed check."
+      },
+      {
+        "id": "NCT06312137-pdl1-trop2",
+        "polarity": "inclusion",
+        "sourceText": "Applies to screening for the adjuvant period only, before randomization: Tumor tissue sample from surgical resection has been provided for determination of programmed cell death ligand 1 (PD-L1) and trophoblast cell surface antigen 2 (TROP2) status by central vendor before randomization into the adjuvant period",
+        "reasonFuzzy": "Requires provision of tissue for status determination rather than a specific numeric PD-L1 cutoff."
+      },
+      {
+        "id": "NCT06312137-disease-free",
+        "polarity": "inclusion",
+        "sourceText": "Applies to screening for the adjuvant period only, before randomization: Confirmed to be disease-free based on re-baseline radiological assessment as documented by contrast enhanced chest/abdomen/pelvis computed tomography (CT) (or magnetic resonance imaging (MRI)) within 28 days before randomization",
+        "reasonFuzzy": "Radiological disease-free assessment is an imaging evaluation."
+      },
+      {
+        "id": "NCT06312137-hiv",
+        "polarity": "inclusion",
+        "sourceText": "Human immunodeficiency virus (HIV)-infected participants must have well controlled HIV on antiretroviral therapy (ART)",
+        "reasonFuzzy": "Well-controlled HIV is a clinical judgment."
+      },
+      {
+        "id": "NCT06312137-exclusions-tumor",
+        "polarity": "exclusion",
+        "sourceText": "Has one of the following tumor locations/types:\n* NSCLC involving the superior sulcus\n* Large cell neuro-endocrine cancer (LCNEC)\n* Sarcomatoid tumor\n* Diagnosis of SCLC or, for mixed tumors, presence of small cell elements",
+        "reasonFuzzy": "Specific anatomic location and histologic subtypes are not fully covered by the standard histology enum."
+      },
+      {
+        "id": "NCT06312137-neuropathy",
+        "polarity": "exclusion",
+        "sourceText": "Has Grade ≥2 peripheral neuropathy",
+        "reasonFuzzy": "Peripheral neuropathy grade is an adverse event assessment rather than a typed lab or condition check."
+      },
+      {
+        "id": "NCT06312137-eye",
+        "polarity": "exclusion",
+        "sourceText": "Has history of documented severe dry eye syndrome, severe Meibomian gland disease and/or blepharitis, or severe corneal disease that prevents/delays corneal healing",
+        "reasonFuzzy": "Specific ophthalmologic conditions are subjective and lack a dedicated typed check."
+      },
+      {
+        "id": "NCT06312137-ibd",
+        "polarity": "exclusion",
+        "sourceText": "Has active inflammatory bowel disease requiring immunosuppressive medication or previous history of inflammatory bowel disease",
+        "reasonFuzzy": "Inflammatory bowel disease criteria require clinical condition evaluation."
+      },
+      {
+        "id": "NCT06312137-cardiovascular",
+        "polarity": "exclusion",
+        "sourceText": "Has uncontrolled, significant cardiovascular disease or cerebrovascular disease, including New York Heart Association Class III or IV congestive heart failure, unstable angina, myocardial infarction, uncontrolled symptomatic arrhythmia, prolongation of QT corrected for heart rate by Fridericia's cube root formula (QTcF) interval to >480 ms, and/or other serious cardiovascular and cerebrovascular diseases within the 6 months preceding study intervention",
+        "reasonFuzzy": "Comprehensive cardiovascular history and NYHA class limits involve clinical judgment."
+      },
+      {
+        "id": "NCT06312137-prior-neoadjuvant",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior neoadjuvant therapy for their current NSCLC diagnosis",
+        "reasonFuzzy": "Complex prior therapy specification not matching a standard prior_therapy_excluded rule."
+      },
+      {
+        "id": "NCT06312137-prior-systemic",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior systemic anticancer therapy including investigational agents within 4 weeks before the first dose of study intervention",
+        "reasonFuzzy": "General systemic anticancer therapy washout window with multiple conditions."
+      },
+      {
+        "id": "NCT06312137-prior-rad",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior radiotherapy within 2 weeks of start of study intervention, or radiation-related toxicities, requiring corticosteroids",
+        "reasonFuzzy": "Radiotherapy washout and corticosteroid requirement are complex."
+      },
+      {
+        "id": "NCT06312137-vaccine",
+        "polarity": "exclusion",
+        "sourceText": "Has received a live or live-attenuated vaccine within 30 days before the first dose of study intervention. Administration of killed vaccines is allowed",
+        "reasonFuzzy": "Vaccine history washout is not a typed check."
+      },
+      {
+        "id": "NCT06312137-steroid",
+        "polarity": "exclusion",
+        "sourceText": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy (in dosing exceeding 10 mg daily of prednisone equivalent) or any other form of immunosuppressive therapy within 7 days prior the first dose of study medication",
+        "reasonFuzzy": "Chronic systemic steroid dosing condition is not a typed check."
+      },
+      {
+        "id": "NCT06312137-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Has a known additional malignancy that is progressing or has required active treatment within the past 5 years",
+        "reasonFuzzy": "Additional malignancy history is not a typed check."
+      },
+      {
+        "id": "NCT06312137-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "Has an active autoimmune disease that has required systemic treatment in the past 2 years",
+        "reasonFuzzy": "Active autoimmune disease status is a clinical judgment."
+      },
+      {
+        "id": "NCT06312137-ild",
+        "polarity": "exclusion",
+        "sourceText": "Has a history of (noninfectious) interstitial lung disease (ILD)/pneumonitis, has current ILD/pneumonitis, or has suspected ILD or pneumonitis that cannot be ruled out by standard diagnostic assessments at screening",
+        "reasonFuzzy": "ILD/pneumonitis history and suspicion are clinical assessments."
+      },
+      {
+        "id": "NCT06312137-infection",
+        "polarity": "exclusion",
+        "sourceText": "Has an active infection requiring systemic therapy",
+        "reasonFuzzy": "Active infection requiring systemic therapy is a general clinical judgment."
+      },
+      {
+        "id": "NCT06312137-transplant",
+        "polarity": "exclusion",
+        "sourceText": "Has a history of allogeneic tissue/solid organ transplant",
+        "reasonFuzzy": "Solid organ transplant history is not a typed check."
+      },
+      {
+        "id": "NCT06312137-surgery-recovery",
+        "polarity": "exclusion",
+        "sourceText": "Has not adequately recovered from major surgery or have ongoing surgical complications",
+        "reasonFuzzy": "Recovery from major surgery is a clinical judgment."
+      },
+      {
+        "id": "NCT06312137-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Severe hypersensitivity (≥Grade 3) to study intervention, any of its excipients, and/or to another biologic therapy",
+        "reasonFuzzy": "Hypersensitivity is an adverse reaction history, not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06312137",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06312137-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Has histological or cytological confirmation of squamous or nonsquamous non-small cell lung cancer (NSCLC), resectable clinical Stage II, IIIA or IIIB (with nodal involvement [N2]) per AJCC eighth edition guidelines",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT06312137-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06312137-egfr-alk",
+        "polarity": "inclusion",
+        "sourceText": "Has confirmation that either epidermal growth factor receptor (EGFR)-directed or anaplastic lymphoma kinase (ALK)-directed therapy is not indicated as primary therapy",
+        "reasonFuzzy": "This rule specifies that targeted therapy is not indicated, which is different from a simple genomic status check."
+      },
+      {
+        "id": "NCT06312137-surgery",
+        "polarity": "inclusion",
+        "sourceText": "Is able to undergo surgery based on opinion of investigator after consultation with surgeon",
+        "reasonFuzzy": "Surgery capability is based on investigator and surgeon opinion, which is a subjective judgment."
+      },
+      {
+        "id": "NCT06312137-pcr",
+        "polarity": "inclusion",
+        "sourceText": "Applies to screening for the adjuvant period only, before randomization: Has not achieved pathological complete response (pCR) at surgery by local review of pathology.",
+        "reasonFuzzy": "Pathological complete response evaluation is a specialized pathology assessment."
+      },
+      {
+        "id": "NCT06312137-pdl1-trop2",
+        "polarity": "inclusion",
+        "sourceText": "Applies to screening for the adjuvant period only, before randomization: Tumor tissue sample from surgical resection has been provided for determination of programmed cell death ligand 1 (PD-L1) and trophoblast cell surface antigen 2 (TROP2) status by central vendor before randomization into the adjuvant period",
+        "reasonFuzzy": "This rule requires tissue provision for biomarker determination rather than setting a specific quantitative PD-L1 cutoff."
+      },
+      {
+        "id": "NCT06312137-disease-free",
+        "polarity": "inclusion",
+        "sourceText": "Applies to screening for the adjuvant period only, before randomization: Confirmed to be disease-free based on re-baseline radiological assessment as documented by contrast enhanced chest/abdomen/pelvis computed tomography (CT) (or magnetic resonance imaging (MRI)) within 28 days before randomization",
+        "reasonFuzzy": "Disease-free status based on imaging assessment is a subjective radiologic judgment."
+      },
+      {
+        "id": "NCT06312137-prior-neoadjuvant",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior neoadjuvant therapy for their current NSCLC diagnosis",
+        "reasonFuzzy": "Prior neoadjuvant therapy exclusion is not a simple prior line or prior therapy class check."
+      },
+      {
+        "id": "NCT06312137-prior-systemic",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior systemic anticancer therapy including investigational agents within 4 weeks before the first dose of study intervention",
+        "reasonFuzzy": "General systemic and investigational therapy washout is not a simple named drug or class check."
+      },
+      {
+        "id": "NCT06312137-prior-radiotherapy",
+        "polarity": "exclusion",
+        "sourceText": "Has received prior radiotherapy within 2 weeks of start of study intervention, or radiation-related toxicities, requiring corticosteroids",
+        "reasonFuzzy": "Prior radiotherapy washout with corticosteroid requirement is complex."
+      },
+      {
+        "id": "NCT06312137-tumor-locations",
+        "polarity": "exclusion",
+        "sourceText": "Has one of the following tumor locations/types: NSCLC involving the superior sulcus, Large cell neuro-endocrine cancer (LCNEC), Sarcomatoid tumor, Diagnosis of SCLC or, for mixed tumors, presence of small cell elements",
+        "reasonFuzzy": "Exclusion involves specific rare histological subtypes and tumor locations that do not map to standard high-level histology categories."
+      }
+    ]
+  }
+}

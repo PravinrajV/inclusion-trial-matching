@@ -1,0 +1,500 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06500481",
+  "briefTitle": "Testing Proton Craniospinal Radiation Therapy Versus the Usual Radiation Therapy for Leptomeningeal Metastasis, RADIATE-LM Trial",
+  "parsedAt": "2026-11-12T09:26:27.970Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06500481-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06500481-diagnosis",
+      "polarity": "inclusion",
+      "sourceText": "Patients with pathologically (histologically or cytologically) proven diagnosis of breast cancer or NSCLC",
+      "reasonFuzzy": "Enrollment includes both breast cancer and non-small cell lung cancer, which is multi-histology and not restricted to a single typed NSCLC histology category."
+    },
+    {
+      "id": "NCT06500481-leptomeningeal",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have newly diagnosed leptomeningeal metastasis established through at least one of the following...",
+      "reasonFuzzy": "Leptomeningeal metastasis diagnostic criteria involve complex clinical, CSF, and radiographic combinations."
+    },
+    {
+      "id": "NCT06500481-radiation-candidate",
+      "polarity": "inclusion",
+      "sourceText": "Patients must be candidates for radiation therapy for the treatment of leptomeningeal metastasis",
+      "reasonFuzzy": "Suitability for radiation therapy is an investigator judgment."
+    },
+    {
+      "id": "NCT06500481-karnofsky",
+      "polarity": "inclusion",
+      "sourceText": "Karnofsky performance status ≥ 60",
+      "reasonFuzzy": "Karnofsky performance status is not an ECOG performance status check."
+    },
+    {
+      "id": "NCT06500481-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Not pregnant and not nursing",
+      "reasonFuzzy": "Pregnancy and nursing status are standard clinical exclusions not mapped to typed checks."
+    },
+    {
+      "id": "NCT06500481-prior-radiation",
+      "polarity": "exclusion",
+      "sourceText": "No prior radiation therapy to the spinal cord with equivalent dose in 2 gray (Gy) fractions (EQD2) more than 40Gy or cauda equina with EQD2 more than 50Gy using alpha/beta ratio of 3",
+      "reasonFuzzy": "Prior radiation dose equivalence calculations are complex and cannot be represented by simple typed cutoffs."
+    },
+    {
+      "id": "NCT06500481-prior-lm-treatment",
+      "polarity": "exclusion",
+      "sourceText": "No prior treatment for leptomeningeal metastasis (note: prior CNS treatment for other non-leptomeningeal disease is allowed)",
+      "reasonFuzzy": "Prior treatment exclusions for leptomeningeal disease are specific and not a standard prior_therapy_excluded drug check."
+    },
+    {
+      "id": "NCT06500481-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "No history of unstable angina requiring hospitalization in the last 3 months",
+      "reasonFuzzy": "Cardiac history and NYHA functional class are clinical judgment criteria."
+    },
+    {
+      "id": "NCT06500481-infection",
+      "polarity": "exclusion",
+      "sourceText": "No active infection currently requiring intravenous (IV) antibiotic management",
+      "reasonFuzzy": "Active infection requiring IV antibiotics is a clinical status exclusion."
+    },
+    {
+      "id": "NCT06500481-pulmonary",
+      "polarity": "exclusion",
+      "sourceText": "No active chronic obstructive pulmonary disease exacerbation or other acute respiratory illness precluding study therapy",
+      "reasonFuzzy": "Pulmonary exacerbation status is a clinical judgment."
+    },
+    {
+      "id": "NCT06500481-encephalopathy",
+      "polarity": "exclusion",
+      "sourceText": "No CTCAE v5.0 ≥ grade 2 encephalopathy",
+      "reasonFuzzy": "Encephalopathy grading is a clinical assessment."
+    },
+    {
+      "id": "NCT06500481-hemoglobin",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin ≥ 8.0 g/dl (Note: The use of transfusion or other intervention to achieve hemoglobin [Hgb] ≥ 8.0 g/dl is acceptable)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06500481-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥ 1,000/mm^3 (Note: the use of granulocyte-colony stimulating factor or other intervention to achieve ANC ≥ 1,000/mm^3 is acceptable)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06500481-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelets ≥ 100,000/mm^3 (Note: the use of transfusion or other intervention to achieve platelets ≥ 100,000/mm^3 is acceptable)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06500481-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) and alanine transaminase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 3 × ULN",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06500481-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) and alanine transaminase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 3 × ULN",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06500481-dx",
+      "polarity": "inclusion",
+      "sourceText": "Patients with pathologically (histologically or cytologically) proven diagnosis of breast cancer or NSCLC",
+      "reasonFuzzy": "Includes both breast cancer and NSCLC, but stage_in or histology_in is insufficient to capture the combined diagnosis context cleanly."
+    },
+    {
+      "id": "NCT06500481-leptomeningeal",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have newly diagnosed leptomeningeal metastasis established through at least one of the following...",
+      "reasonFuzzy": "Complex multimodality diagnostic criteria including CSF cytology and EANO-ESMO criteria."
+    },
+    {
+      "id": "NCT06500481-karnofsky",
+      "polarity": "inclusion",
+      "sourceText": "Karnofsky performance status ≥ 60",
+      "reasonFuzzy": "Karnofsky performance status is not ECOG, so it cannot be mapped to ecog_max."
+    },
+    {
+      "id": "NCT06500481-radiation",
+      "polarity": "exclusion",
+      "sourceText": "No prior radiation therapy to the spinal cord with equivalent dose in 2 gray (Gy) fractions (EQD2) more than 40Gy or cauda equina with EQD2 more than 50Gy using alpha/beta ratio of 3",
+      "reasonFuzzy": "Complex EQD2 radiation dose calculation history restriction."
+    },
+    {
+      "id": "NCT06500481-hemoglobin",
+      "polarity": "inclusion",
+      "sourceText": "Hemoglobin ≥ 8.0 g/dl (Note: The use of transfusion or other intervention to achieve hemoglobin [Hgb] ≥ 8.0 g/dl is acceptable)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06500481-anc",
+      "polarity": "inclusion",
+      "sourceText": "Absolute neutrophil count (ANC) ≥ 1,000/mm^3 (Note: the use of granulocyte-colony stimulating factor or other intervention to achieve ANC ≥ 1,000/mm^3 is acceptable)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06500481-platelets",
+      "polarity": "inclusion",
+      "sourceText": "Platelets ≥ 100,000/mm^3 (Note: the use of transfusion or other intervention to achieve platelets ≥ 100,000/mm^3 is acceptable)",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06500481-ast",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) and alanine transaminase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 3 × ULN",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06500481-alt",
+      "polarity": "inclusion",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) and alanine transaminase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 3 × ULN",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06500481-bilirubin",
+      "polarity": "inclusion",
+      "sourceText": "Total bilirubin ≤ 1.5 × institutional upper limit of normal (ULN) (patients with known Gilbert disease without other clinically significant liver abnormalities are not excluded)",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 5,
+      "unquotedItems": [
+        {
+          "kind": "hemoglobin_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Hemoglobin ≥ 8.0 g/dl (Note: The use of transfusion or other intervention to achieve hemoglobin [Hgb] ≥ 8.0 g/dl is acceptable)"
+        },
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) ≥ 1,000/mm^3 (Note: the use of granulocyte-colony stimulating factor or other intervention to achieve ANC ≥ 1,000/mm^3 is accept"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelets ≥ 100,000/mm^3 (Note: the use of transfusion or other intervention to achieve platelets ≥ 100,000/mm^3 is acceptable)"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) and alanine transaminase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ "
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) and alanine transaminase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ "
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 5,
+      "unquotedItems": [
+        {
+          "kind": "hemoglobin_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Hemoglobin ≥ 8.0 g/dl (Note: The use of transfusion or other intervention to achieve hemoglobin [Hgb] ≥ 8.0 g/dl is acceptable)"
+        },
+        {
+          "kind": "anc_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Absolute neutrophil count (ANC) ≥ 1,000/mm^3 (Note: the use of granulocyte-colony stimulating factor or other intervention to achieve ANC ≥ 1,000/mm^3 is accept"
+        },
+        {
+          "kind": "platelets_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Platelets ≥ 100,000/mm^3 (Note: the use of transfusion or other intervention to achieve platelets ≥ 100,000/mm^3 is acceptable)"
+        },
+        {
+          "kind": "ast_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) and alanine transaminase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ "
+        },
+        {
+          "kind": "alt_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) and alanine transaminase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ "
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "bilirubin_max",
+          "polarity": "inclusion",
+          "value": "n:1.5"
+        }
+      ],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 11,
+    "attempts": 1,
+    "ms": 10501
+  },
+  "runB": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 16417
+  },
+  "ms": 40761,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06500481",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06500481-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06500481-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 8.0 g/dl (Note: The use of transfusion or other intervention to achieve hemoglobin [Hgb] ≥ 8.0 g/dl is acceptable)",
+        "numberValue": 8,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT06500481-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥ 1,000/mm^3 (Note: the use of granulocyte-colony stimulating factor or other intervention to achieve ANC ≥ 1,000/mm^3 is acceptable)",
+        "numberValue": 1000
+      },
+      {
+        "id": "NCT06500481-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 100,000/mm^3 (Note: the use of transfusion or other intervention to achieve platelets ≥ 100,000/mm^3 is acceptable)",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT06500481-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 × institutional upper limit of normal (ULN) (patients with known Gilbert disease without other clinically significant liver abnormalities are not excluded)",
+        "numberValue": 1.5,
+        "stringValue": "1.5 × ULN"
+      },
+      {
+        "id": "NCT06500481-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) and alanine transaminase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 3 × ULN",
+        "numberValue": 3,
+        "stringValue": "3 × ULN"
+      },
+      {
+        "id": "NCT06500481-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) and alanine transaminase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 3 × ULN",
+        "numberValue": 3,
+        "stringValue": "3 × ULN"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06500481-diagnosis",
+        "polarity": "inclusion",
+        "sourceText": "Patients with pathologically (histologically or cytologically) proven diagnosis of breast cancer or NSCLC",
+        "reasonFuzzy": "Enrollment includes both breast cancer and non-small cell lung cancer, which is multi-histology and not restricted to a single typed NSCLC histology category."
+      },
+      {
+        "id": "NCT06500481-leptomeningeal",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have newly diagnosed leptomeningeal metastasis established through at least one of the following...",
+        "reasonFuzzy": "Leptomeningeal metastasis diagnostic criteria involve complex clinical, CSF, and radiographic combinations."
+      },
+      {
+        "id": "NCT06500481-radiation-candidate",
+        "polarity": "inclusion",
+        "sourceText": "Patients must be candidates for radiation therapy for the treatment of leptomeningeal metastasis",
+        "reasonFuzzy": "Suitability for radiation therapy is an investigator judgment."
+      },
+      {
+        "id": "NCT06500481-karnofsky",
+        "polarity": "inclusion",
+        "sourceText": "Karnofsky performance status ≥ 60",
+        "reasonFuzzy": "Karnofsky performance status is not an ECOG performance status check."
+      },
+      {
+        "id": "NCT06500481-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Not pregnant and not nursing",
+        "reasonFuzzy": "Pregnancy and nursing status are standard clinical exclusions not mapped to typed checks."
+      },
+      {
+        "id": "NCT06500481-prior-radiation",
+        "polarity": "exclusion",
+        "sourceText": "No prior radiation therapy to the spinal cord with equivalent dose in 2 gray (Gy) fractions (EQD2) more than 40Gy or cauda equina with EQD2 more than 50Gy using alpha/beta ratio of 3",
+        "reasonFuzzy": "Prior radiation dose equivalence calculations are complex and cannot be represented by simple typed cutoffs."
+      },
+      {
+        "id": "NCT06500481-prior-lm-treatment",
+        "polarity": "exclusion",
+        "sourceText": "No prior treatment for leptomeningeal metastasis (note: prior CNS treatment for other non-leptomeningeal disease is allowed)",
+        "reasonFuzzy": "Prior treatment exclusions for leptomeningeal disease are specific and not a standard prior_therapy_excluded drug check."
+      },
+      {
+        "id": "NCT06500481-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "No history of unstable angina requiring hospitalization in the last 3 months",
+        "reasonFuzzy": "Cardiac history and NYHA functional class are clinical judgment criteria."
+      },
+      {
+        "id": "NCT06500481-infection",
+        "polarity": "exclusion",
+        "sourceText": "No active infection currently requiring intravenous (IV) antibiotic management",
+        "reasonFuzzy": "Active infection requiring IV antibiotics is a clinical status exclusion."
+      },
+      {
+        "id": "NCT06500481-pulmonary",
+        "polarity": "exclusion",
+        "sourceText": "No active chronic obstructive pulmonary disease exacerbation or other acute respiratory illness precluding study therapy",
+        "reasonFuzzy": "Pulmonary exacerbation status is a clinical judgment."
+      },
+      {
+        "id": "NCT06500481-encephalopathy",
+        "polarity": "exclusion",
+        "sourceText": "No CTCAE v5.0 ≥ grade 2 encephalopathy",
+        "reasonFuzzy": "Encephalopathy grading is a clinical assessment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06500481",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06500481-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06500481-hemoglobin",
+        "kind": "hemoglobin_min",
+        "polarity": "inclusion",
+        "sourceText": "Hemoglobin ≥ 8.0 g/dl (Note: The use of transfusion or other intervention to achieve hemoglobin [Hgb] ≥ 8.0 g/dl is acceptable)",
+        "numberValue": 8,
+        "stages": [],
+        "stringValue": ""
+      },
+      {
+        "id": "NCT06500481-anc",
+        "kind": "anc_min",
+        "polarity": "inclusion",
+        "sourceText": "Absolute neutrophil count (ANC) ≥ 1,000/mm^3 (Note: the use of granulocyte-colony stimulating factor or other intervention to achieve ANC ≥ 1,000/mm^3 is acceptable)",
+        "numberValue": 1000
+      },
+      {
+        "id": "NCT06500481-platelets",
+        "kind": "platelets_min",
+        "polarity": "inclusion",
+        "sourceText": "Platelets ≥ 100,000/mm^3 (Note: the use of transfusion or other intervention to achieve platelets ≥ 100,000/mm^3 is acceptable)",
+        "numberValue": 100000
+      },
+      {
+        "id": "NCT06500481-bilirubin",
+        "kind": "bilirubin_max",
+        "polarity": "inclusion",
+        "sourceText": "Total bilirubin ≤ 1.5 × institutional upper limit of normal (ULN) (patients with known Gilbert disease without other clinically significant liver abnormalities are not excluded)",
+        "numberValue": 1.5
+      },
+      {
+        "id": "NCT06500481-ast",
+        "kind": "ast_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) and alanine transaminase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 3 × ULN",
+        "numberValue": 3
+      },
+      {
+        "id": "NCT06500481-alt",
+        "kind": "alt_max",
+        "polarity": "inclusion",
+        "sourceText": "Aspartate aminotransferase (AST) (serum glutamic oxaloacetic transaminase [SGOT]) and alanine transaminase (ALT) (serum glutamic pyruvic transaminase [SGPT]) ≤ 3 × ULN",
+        "numberValue": 3
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06500481-dx",
+        "polarity": "inclusion",
+        "sourceText": "Patients with pathologically (histologically or cytologically) proven diagnosis of breast cancer or NSCLC",
+        "reasonFuzzy": "Includes both breast cancer and NSCLC, but stage_in or histology_in is insufficient to capture the combined diagnosis context cleanly."
+      },
+      {
+        "id": "NCT06500481-leptomeningeal",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have newly diagnosed leptomeningeal metastasis established through at least one of the following...",
+        "reasonFuzzy": "Complex multimodality diagnostic criteria including CSF cytology and EANO-ESMO criteria."
+      },
+      {
+        "id": "NCT06500481-karnofsky",
+        "polarity": "inclusion",
+        "sourceText": "Karnofsky performance status ≥ 60",
+        "reasonFuzzy": "Karnofsky performance status is not ECOG, so it cannot be mapped to ecog_max."
+      },
+      {
+        "id": "NCT06500481-radiation",
+        "polarity": "exclusion",
+        "sourceText": "No prior radiation therapy to the spinal cord with equivalent dose in 2 gray (Gy) fractions (EQD2) more than 40Gy or cauda equina with EQD2 more than 50Gy using alpha/beta ratio of 3",
+        "reasonFuzzy": "Complex EQD2 radiation dose calculation history restriction."
+      }
+    ]
+  }
+}

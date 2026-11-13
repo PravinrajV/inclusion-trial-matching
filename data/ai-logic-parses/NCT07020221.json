@@ -1,0 +1,367 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07020221",
+  "briefTitle": "A Phase 1/2 Study of VS-7375 in Patients With KRAS G12D-Mutated Solid Tumors",
+  "parsedAt": "2026-11-12T10:43:02.293Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07020221-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Individuals ≥18 years of age.",
+      "numberValue": 18,
+      "evidence_quote": "Individuals ≥18 years of age.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07020221-kras",
+      "kind": "kras_status",
+      "polarity": "inclusion",
+      "sourceText": "Histologic or cytologic evidence of locally advanced unresectable or metastatic solid tumor harboring a KRAS G12D mutation.",
+      "presence": "present",
+      "evidence_quote": "Histologic or cytologic evidence of locally advanced unresectable or metastatic solid tumor harboring a KRAS G12D mutation.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07020221-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07020221-stage",
+      "polarity": "inclusion",
+      "sourceText": "locally advanced unresectable or metastatic solid tumor",
+      "reasonFuzzy": "The trial enrolls multiple solid tumor types (including NSCLC) with advanced disease, but stage_in requires a numbered stage list."
+    },
+    {
+      "id": "NCT07020221-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease according to Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07020221-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function",
+      "reasonFuzzy": "General organ function without specific lab cutoffs is subjective."
+    },
+    {
+      "id": "NCT07020221-cardiac",
+      "polarity": "inclusion",
+      "sourceText": "Adequate cardiac function",
+      "reasonFuzzy": "Cardiac function evaluation is subjective and not a typed lab check."
+    },
+    {
+      "id": "NCT07020221-washout",
+      "polarity": "exclusion",
+      "sourceText": "Receipt of chemotherapy, targeted therapy, or radiotherapy (excluding palliative radiation) within 4 weeks or 5 half-lives, whichever is shorter, or immunotherapy within 4 weeks prior to Cycle 1 Day 1.",
+      "reasonFuzzy": "Washout windows with complex half-life conditions cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT07020221-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease according to Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07020221-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function",
+      "reasonFuzzy": "Adequate organ function is a general category without specific numerical lab cutoffs."
+    },
+    {
+      "id": "NCT07020221-cardiac",
+      "polarity": "inclusion",
+      "sourceText": "Adequate cardiac function",
+      "reasonFuzzy": "Adequate cardiac function is not a typed lab or cardiac metric."
+    },
+    {
+      "id": "NCT07020221-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Underwent major surgical procedure as defined by the Investigator, other than for diagnosis, within 4 weeks prior to Cycle 1 Day 1",
+      "reasonFuzzy": "Relies on investigator definition for major surgical procedure."
+    },
+    {
+      "id": "NCT07020221-washout",
+      "polarity": "exclusion",
+      "sourceText": "Receipt of chemotherapy, targeted therapy, or radiotherapy (excluding palliative radiation) within 4 weeks or 5 half-lives, whichever is shorter, or immunotherapy within 4 weeks prior to Cycle 1 Day 1.",
+      "reasonFuzzy": "Complex washout window rule involving multiple treatment classes and varying half-lives."
+    },
+    {
+      "id": "NCT07020221-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with any investigational drug at least 4 weeks or 5 half-lives, whichever is shorter, prior to Cycle 1 Day 1.",
+      "reasonFuzzy": "Complex washout window rule involving half-lives."
+    },
+    {
+      "id": "NCT07020221-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic, untreated, or actively progressing known central nervous system (CNS) metastases.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07020221-brain",
+      "polarity": "exclusion",
+      "sourceText": "Symptomatic, untreated, or actively progressing known central nervous system (CNS) metastases.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07020221-kras-variant",
+      "polarity": "inclusion",
+      "sourceText": "Histologic or cytologic evidence of locally advanced unresectable or metastatic solid tumor harboring a KRAS G12D mutation.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07020221-prior-therapy-excl",
+      "polarity": "exclusion",
+      "sourceText": "History of treatment with direct RAS inhibitors.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:untreated"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 3,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12d"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:direct ras inhibitors"
+        }
+      ],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 2872
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2994
+  },
+  "ms": 13840,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07020221",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07020221-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Individuals ≥18 years of age.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07020221-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologic or cytologic evidence of locally advanced unresectable or metastatic solid tumor harboring a KRAS G12D mutation.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07020221-kras-variant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologic or cytologic evidence of locally advanced unresectable or metastatic solid tumor harboring a KRAS G12D mutation.",
+        "stringValue": "G12D"
+      },
+      {
+        "id": "NCT07020221-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07020221-prior-therapy-excl",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "History of treatment with direct RAS inhibitors.",
+        "stringValue": "direct RAS inhibitors"
+      },
+      {
+        "id": "NCT07020221-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic, untreated, or actively progressing known central nervous system (CNS) metastases.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07020221-stage",
+        "polarity": "inclusion",
+        "sourceText": "locally advanced unresectable or metastatic solid tumor",
+        "reasonFuzzy": "The trial enrolls multiple solid tumor types (including NSCLC) with advanced disease, but stage_in requires a numbered stage list."
+      },
+      {
+        "id": "NCT07020221-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease according to Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07020221-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function",
+        "reasonFuzzy": "General organ function without specific lab cutoffs is subjective."
+      },
+      {
+        "id": "NCT07020221-cardiac",
+        "polarity": "inclusion",
+        "sourceText": "Adequate cardiac function",
+        "reasonFuzzy": "Cardiac function evaluation is subjective and not a typed lab check."
+      },
+      {
+        "id": "NCT07020221-washout",
+        "polarity": "exclusion",
+        "sourceText": "Receipt of chemotherapy, targeted therapy, or radiotherapy (excluding palliative radiation) within 4 weeks or 5 half-lives, whichever is shorter, or immunotherapy within 4 weeks prior to Cycle 1 Day 1.",
+        "reasonFuzzy": "Washout windows with complex half-life conditions cannot be expressed as a single typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07020221",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07020221-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Individuals ≥18 years of age.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07020221-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologic or cytologic evidence of locally advanced unresectable or metastatic solid tumor harboring a KRAS G12D mutation.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07020221-kras-variant",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologic or cytologic evidence of locally advanced unresectable or metastatic solid tumor harboring a KRAS G12D mutation.",
+        "stringValue": "G12D"
+      },
+      {
+        "id": "NCT07020221-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07020221-prior-therapy",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "History of treatment with direct RAS inhibitors.",
+        "stringValue": "direct RAS inhibitors"
+      },
+      {
+        "id": "NCT07020221-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Symptomatic, untreated, or actively progressing known central nervous system (CNS) metastases.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07020221-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease according to Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07020221-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function",
+        "reasonFuzzy": "Adequate organ function is a general category without specific numerical lab cutoffs."
+      },
+      {
+        "id": "NCT07020221-cardiac",
+        "polarity": "inclusion",
+        "sourceText": "Adequate cardiac function",
+        "reasonFuzzy": "Adequate cardiac function is not a typed lab or cardiac metric."
+      },
+      {
+        "id": "NCT07020221-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Underwent major surgical procedure as defined by the Investigator, other than for diagnosis, within 4 weeks prior to Cycle 1 Day 1",
+        "reasonFuzzy": "Relies on investigator definition for major surgical procedure."
+      },
+      {
+        "id": "NCT07020221-washout",
+        "polarity": "exclusion",
+        "sourceText": "Receipt of chemotherapy, targeted therapy, or radiotherapy (excluding palliative radiation) within 4 weeks or 5 half-lives, whichever is shorter, or immunotherapy within 4 weeks prior to Cycle 1 Day 1.",
+        "reasonFuzzy": "Complex washout window rule involving multiple treatment classes and varying half-lives."
+      },
+      {
+        "id": "NCT07020221-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with any investigational drug at least 4 weeks or 5 half-lives, whichever is shorter, prior to Cycle 1 Day 1.",
+        "reasonFuzzy": "Complex washout window rule involving half-lives."
+      }
+    ]
+  }
+}

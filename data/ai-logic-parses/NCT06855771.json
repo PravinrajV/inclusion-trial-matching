@@ -1,0 +1,332 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06855771",
+  "briefTitle": "A Study of Navlimetostat (BMS-986504) Alone or in Combination With Izalontamab Brengitecan in Participants With Pre-treated Advanced or Metastatic Non-small Cell Lung Cancer (NSCLC) With Homozygous MTAP Deletion or MTAP Loss (MountainTAP-9)",
+  "parsedAt": "2026-11-12T05:55:08.598Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06855771-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06855771-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Participant must be ≥ 18 years of age (or the legal age of consent in the jurisdiction in which the study is taking place) at the time of signing the ICF.",
+      "numberValue": 18,
+      "evidence_quote": "Participant must be ≥ 18 years of age (or the legal age of consent in the jurisdiction in which the study is taking place) at the time of signing the ICF.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06855771-mtap",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed diagnosis of NSCLC and homozygous MTAP deletion detected in tumor tissue and willingness to provide archival/fresh samples at screening for central MTAP status confirmation.",
+      "reasonFuzzy": "Homozygous MTAP deletion is not among the allowed biomarker kinds (egfr, alk, kras, ros1, braf, pdl1)."
+    },
+    {
+      "id": "NCT06855771-stage",
+      "polarity": "inclusion",
+      "sourceText": "Advanced or metastatic NSCLC not amenable to curative therapies after progression on prior therapies at the time of enrollment (based on the American Joint Committee on Cancer, Ninth Edition).",
+      "reasonFuzzy": "The record references advanced or metastatic disease and AJCC ninth edition, but does not list specific stage labels for stage_in."
+    },
+    {
+      "id": "NCT06855771-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least 1 measurable lesion as per RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06855771-swallow",
+      "polarity": "inclusion",
+      "sourceText": "Capability to swallow tablets intact (without chewing or crushing).",
+      "reasonFuzzy": "Willingness or capability to swallow tablets is a subjective or operational criterion."
+    },
+    {
+      "id": "NCT06855771-egfr-combo",
+      "polarity": "inclusion",
+      "sourceText": "1. Participants must have documented evidence of EGFR status. 2. Participants with EGFR mutant or wild type NSCLC are allowed.",
+      "reasonFuzzy": "EGFR status requirement applies specifically to combination arms and allows both mutant and wild type."
+    },
+    {
+      "id": "NCT06855771-gi",
+      "polarity": "exclusion",
+      "sourceText": "History of gastrointestinal disease or other gastrointestinal conditions (eg, uncontrolled nausea, vomiting, malabsorption syndrome) likely to alter absorption of study treatment or result in inability to swallow oral medications.",
+      "reasonFuzzy": "Gastrointestinal conditions and absorption issues are investigator judgment-based exclusions."
+    },
+    {
+      "id": "NCT06855771-hypersensitivity",
+      "polarity": "exclusion",
+      "sourceText": "Known severe hypersensitivity to study treatment and/or any of its excipients.",
+      "reasonFuzzy": "Hypersensitivity is a standard safety exclusion, not a typed lab or biomarker check."
+    },
+    {
+      "id": "NCT06855771-combo-exclusion",
+      "polarity": "exclusion",
+      "sourceText": "Prior therapy with iza-bren or any other antibody and/or ADC targeting EGFR and/or HER3 or containing a topoisomerase 1 inhibitor payload, except amivantamab.",
+      "reasonFuzzy": "Complex prior therapy exclusion with exceptions applying only to combination arms."
+    },
+    {
+      "id": "NCT06855771-mtap",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed diagnosis of NSCLC and homozygous MTAP deletion detected in tumor tissue and willingness to provide archival/fresh samples at screening for central MTAP status confirmation.",
+      "reasonFuzzy": "Homozygous MTAP deletion is not a typed biomarker kind in the allowed list."
+    },
+    {
+      "id": "NCT06855771-stage",
+      "polarity": "inclusion",
+      "sourceText": "Advanced or metastatic NSCLC not amenable to curative therapies after progression on prior therapies at the time of enrollment (based on the American Joint Committee on Cancer, Ninth Edition).",
+      "reasonFuzzy": "Advanced or metastatic disease is described without a numbered stage list."
+    },
+    {
+      "id": "NCT06855771-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least 1 measurable lesion as per RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06855771-combo-prior",
+      "polarity": "exclusion",
+      "sourceText": "Prior therapy with iza-bren or any other antibody and/or ADC targeting EGFR and/or HER3 or containing a topoisomerase 1 inhibitor payload, except amivantamab.",
+      "reasonFuzzy": "Complex exclusion rule involving multiple drug classes and exceptions."
+    },
+    {
+      "id": "NCT06855771-brain",
+      "polarity": "exclusion",
+      "sourceText": "Active brain metastases or carcinomatous meningitis.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06855771-brain",
+      "polarity": "exclusion",
+      "sourceText": "Active brain metastases or carcinomatous meningitis.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06855771-prior-prmt5-mat2a",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with a PRMT5 or MAT2A inhibitor.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:untreated"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:prmt5 or mat2a inhibitor"
+        }
+      ],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 3313
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 2286
+  },
+  "ms": 13603,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06855771",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06855771-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06855771-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant must be ≥ 18 years of age (or the legal age of consent in the jurisdiction in which the study is taking place) at the time of signing the ICF.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06855771-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active brain metastases or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      },
+      {
+        "id": "NCT06855771-prior-prmt5-mat2a",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a PRMT5 or MAT2A inhibitor.",
+        "stringValue": "PRMT5 or MAT2A inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06855771-mtap",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed diagnosis of NSCLC and homozygous MTAP deletion detected in tumor tissue and willingness to provide archival/fresh samples at screening for central MTAP status confirmation.",
+        "reasonFuzzy": "Homozygous MTAP deletion is not among the allowed biomarker kinds (egfr, alk, kras, ros1, braf, pdl1)."
+      },
+      {
+        "id": "NCT06855771-stage",
+        "polarity": "inclusion",
+        "sourceText": "Advanced or metastatic NSCLC not amenable to curative therapies after progression on prior therapies at the time of enrollment (based on the American Joint Committee on Cancer, Ninth Edition).",
+        "reasonFuzzy": "The record references advanced or metastatic disease and AJCC ninth edition, but does not list specific stage labels for stage_in."
+      },
+      {
+        "id": "NCT06855771-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least 1 measurable lesion as per RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06855771-swallow",
+        "polarity": "inclusion",
+        "sourceText": "Capability to swallow tablets intact (without chewing or crushing).",
+        "reasonFuzzy": "Willingness or capability to swallow tablets is a subjective or operational criterion."
+      },
+      {
+        "id": "NCT06855771-egfr-combo",
+        "polarity": "inclusion",
+        "sourceText": "1. Participants must have documented evidence of EGFR status. 2. Participants with EGFR mutant or wild type NSCLC are allowed.",
+        "reasonFuzzy": "EGFR status requirement applies specifically to combination arms and allows both mutant and wild type."
+      },
+      {
+        "id": "NCT06855771-gi",
+        "polarity": "exclusion",
+        "sourceText": "History of gastrointestinal disease or other gastrointestinal conditions (eg, uncontrolled nausea, vomiting, malabsorption syndrome) likely to alter absorption of study treatment or result in inability to swallow oral medications.",
+        "reasonFuzzy": "Gastrointestinal conditions and absorption issues are investigator judgment-based exclusions."
+      },
+      {
+        "id": "NCT06855771-hypersensitivity",
+        "polarity": "exclusion",
+        "sourceText": "Known severe hypersensitivity to study treatment and/or any of its excipients.",
+        "reasonFuzzy": "Hypersensitivity is a standard safety exclusion, not a typed lab or biomarker check."
+      },
+      {
+        "id": "NCT06855771-combo-exclusion",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy with iza-bren or any other antibody and/or ADC targeting EGFR and/or HER3 or containing a topoisomerase 1 inhibitor payload, except amivantamab.",
+        "reasonFuzzy": "Complex prior therapy exclusion with exceptions applying only to combination arms."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06855771",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06855771-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06855771-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participant must be ≥ 18 years of age (or the legal age of consent in the jurisdiction in which the study is taking place) at the time of signing the ICF.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06855771-prior-prg",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a PRMT5 or MAT2A inhibitor.",
+        "stringValue": "PRMT5 or MAT2A inhibitor"
+      },
+      {
+        "id": "NCT06855771-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active brain metastases or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "untreated"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06855771-mtap",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed diagnosis of NSCLC and homozygous MTAP deletion detected in tumor tissue and willingness to provide archival/fresh samples at screening for central MTAP status confirmation.",
+        "reasonFuzzy": "Homozygous MTAP deletion is not a typed biomarker kind in the allowed list."
+      },
+      {
+        "id": "NCT06855771-stage",
+        "polarity": "inclusion",
+        "sourceText": "Advanced or metastatic NSCLC not amenable to curative therapies after progression on prior therapies at the time of enrollment (based on the American Joint Committee on Cancer, Ninth Edition).",
+        "reasonFuzzy": "Advanced or metastatic disease is described without a numbered stage list."
+      },
+      {
+        "id": "NCT06855771-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least 1 measurable lesion as per RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06855771-combo-prior",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy with iza-bren or any other antibody and/or ADC targeting EGFR and/or HER3 or containing a topoisomerase 1 inhibitor payload, except amivantamab.",
+        "reasonFuzzy": "Complex exclusion rule involving multiple drug classes and exceptions."
+      }
+    ]
+  }
+}

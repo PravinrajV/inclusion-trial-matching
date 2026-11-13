@@ -1,0 +1,346 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07195695",
+  "briefTitle": "Beamion LUNG-3: Adjuvant Zongertinib vs Standard Treatment in People With Completely Resected Stage II-IIIB NSCLC Harboring Activating HER2 TKD Mutations",
+  "parsedAt": "2026-11-12T11:04:01.487Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07195695-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Patients must be ≥18 years old or over the legal age of consent in their country",
+      "numberValue": 18,
+      "evidence_quote": "Patients must be ≥18 years old or over the legal age of consent in their country",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07195695-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) score of 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) score of 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07195695-her2",
+      "polarity": "inclusion",
+      "sourceText": "Documented Tyrosine kinase domain (TKD) activating Human epidermal growth factor receptor 2 (HER2) mutations",
+      "reasonFuzzy": "There is no typed kind for HER2 variants."
+    },
+    {
+      "id": "NCT07195695-histology",
+      "polarity": "exclusion",
+      "sourceText": "Diagnosis of NSCLC with mixed histology/positive neuroendocrine markers (synaptophysin/CD56)",
+      "reasonFuzzy": "Mixed histology and neuroendocrine markers are not standard single histology inclusion/exclusion codes."
+    },
+    {
+      "id": "NCT07195695-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery (major according to the investigator's assessment) performed within 4 weeks prior to randomization",
+      "reasonFuzzy": "Investigator assessment makes this judgment-based."
+    },
+    {
+      "id": "NCT07195695-actionable",
+      "polarity": "exclusion",
+      "sourceText": "Co-occurring actionable mutation with approved targeted therapy (e.g. Epidermal growth factor receptor (EGFR) or Anaplastic lymphoma kinase (ALK))",
+      "reasonFuzzy": "General co-occurring actionable mutation exclusion is not a single typed gene status check."
+    },
+    {
+      "id": "NCT07195695-consent",
+      "polarity": "inclusion",
+      "sourceText": "Signed and dated written informed consent in accordance with ICH-GCP and local legislation prior to admission to the trial",
+      "reasonFuzzy": "Informed consent is a standard administrative requirement rather than a clinical eligibility check."
+    },
+    {
+      "id": "NCT07195695-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Women of childbearing potential (WOCBP) must be ready and able to use dual highly effective methods of birth control",
+      "reasonFuzzy": "Contraception compliance is a behavioral requirement, not a typed clinical status."
+    },
+    {
+      "id": "NCT07195695-her2",
+      "polarity": "inclusion",
+      "sourceText": "HER2 mutation: Documented Tyrosine kinase domain (TKD) activating Human epidermal growth factor receptor 2 (HER2) mutations",
+      "reasonFuzzy": "There is no typed kind for HER2 variants."
+    },
+    {
+      "id": "NCT07195695-histology",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed diagnosis of primary NSCLC",
+      "reasonFuzzy": "General NSCLC histology confirmation without specific subtype list is not a typed histology check."
+    },
+    {
+      "id": "NCT07195695-tissue",
+      "polarity": "inclusion",
+      "sourceText": "An archival tumor tissue sample must be submitted to the central laboratory after inclusion of the patient to retrospectively confirm the HER2 status",
+      "reasonFuzzy": "Tissue submission requirement is a procedural rule."
+    },
+    {
+      "id": "NCT07195695-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function based on laboratory values Further inclusion criteria apply.",
+      "reasonFuzzy": "General organ function without specific lab cutoffs is subjective or incomplete."
+    },
+    {
+      "id": "NCT07195695-mixed-histology",
+      "polarity": "exclusion",
+      "sourceText": "Diagnosis of NSCLC with mixed histology/positive neuroendocrine markers (synaptophysin/CD56)",
+      "reasonFuzzy": "Exclusion for mixed histology or neuroendocrine markers does not map to standard typed exclusions."
+    },
+    {
+      "id": "NCT07195695-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery (major according to the investigator's assessment) performed within 4 weeks prior to randomization",
+      "reasonFuzzy": "Requires investigator assessment of major surgery and a complex washout window."
+    },
+    {
+      "id": "NCT07195695-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Treatment with radiation therapy for primary NSCLC",
+      "reasonFuzzy": "Prior radiation treatment exclusion does not fit a standard typed prior therapy exclusion."
+    },
+    {
+      "id": "NCT07195695-co-mutation",
+      "polarity": "exclusion",
+      "sourceText": "Co-occurring actionable mutation with approved targeted therapy (e.g. Epidermal growth factor receptor (EGFR) or Anaplastic lymphoma kinase (ALK))",
+      "reasonFuzzy": "Co-occurring actionable mutation exclusion involves multiple possible genes and is not a single simple typed mutation exclusion."
+    },
+    {
+      "id": "NCT07195695-investigational",
+      "polarity": "exclusion",
+      "sourceText": "Any investigational drug within 5 half-lives of the compound or any of its related material, if known",
+      "reasonFuzzy": "Washout window based on half-lives is not a fixed date or simple lab cutoff."
+    },
+    {
+      "id": "NCT07195695-other-exclusions",
+      "polarity": "exclusion",
+      "sourceText": "Active or known pre-existing or history of non-infectious interstitial lung disease/pneumonitis Active infectious disease requiring systemic therapy Uncontrolled gastrointestinal disorders affecting drug intake/absorption Previous or concomitant malignancies within the last 3 years, except certain effectively treated cancers Significant and/or uncontrolled cardiovascular abnormalities, QT interval corrected for heart rate by Fridericia formula (QTcF) >470 msec, or ejection fraction <50%",
+      "reasonFuzzy": "Complex multi-system medical history and specialized cardiac parameter exclusions (QTcF, ejection fraction) do not have matching typed kinds."
+    },
+    {
+      "id": "NCT07195695-stage",
+      "polarity": "inclusion",
+      "sourceText": "Staging: Pretherapeutic classification not exceeding Stage IIIB",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIA,IIB,IIIA,IIIB"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 3011
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 12,
+    "attempts": 1,
+    "ms": 4278
+  },
+  "ms": 15275,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07195695",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07195695-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients must be ≥18 years old or over the legal age of consent in their country",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07195695-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Pretherapeutic classification not exceeding Stage IIIB",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT07195695-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) score of 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07195695-her2",
+        "polarity": "inclusion",
+        "sourceText": "Documented Tyrosine kinase domain (TKD) activating Human epidermal growth factor receptor 2 (HER2) mutations",
+        "reasonFuzzy": "There is no typed kind for HER2 variants."
+      },
+      {
+        "id": "NCT07195695-histology",
+        "polarity": "exclusion",
+        "sourceText": "Diagnosis of NSCLC with mixed histology/positive neuroendocrine markers (synaptophysin/CD56)",
+        "reasonFuzzy": "Mixed histology and neuroendocrine markers are not standard single histology inclusion/exclusion codes."
+      },
+      {
+        "id": "NCT07195695-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery (major according to the investigator's assessment) performed within 4 weeks prior to randomization",
+        "reasonFuzzy": "Investigator assessment makes this judgment-based."
+      },
+      {
+        "id": "NCT07195695-actionable",
+        "polarity": "exclusion",
+        "sourceText": "Co-occurring actionable mutation with approved targeted therapy (e.g. Epidermal growth factor receptor (EGFR) or Anaplastic lymphoma kinase (ALK))",
+        "reasonFuzzy": "General co-occurring actionable mutation exclusion is not a single typed gene status check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07195695",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07195695-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients must be ≥18 years old or over the legal age of consent in their country",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07195695-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Staging: Pretherapeutic classification not exceeding Stage IIIB",
+        "stages": [
+          "IIA",
+          "IIB",
+          "IIIA",
+          "IIIB"
+        ]
+      },
+      {
+        "id": "NCT07195695-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) score of 0 or 1",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07195695-consent",
+        "polarity": "inclusion",
+        "sourceText": "Signed and dated written informed consent in accordance with ICH-GCP and local legislation prior to admission to the trial",
+        "reasonFuzzy": "Informed consent is a standard administrative requirement rather than a clinical eligibility check."
+      },
+      {
+        "id": "NCT07195695-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Women of childbearing potential (WOCBP) must be ready and able to use dual highly effective methods of birth control",
+        "reasonFuzzy": "Contraception compliance is a behavioral requirement, not a typed clinical status."
+      },
+      {
+        "id": "NCT07195695-her2",
+        "polarity": "inclusion",
+        "sourceText": "HER2 mutation: Documented Tyrosine kinase domain (TKD) activating Human epidermal growth factor receptor 2 (HER2) mutations",
+        "reasonFuzzy": "There is no typed kind for HER2 variants."
+      },
+      {
+        "id": "NCT07195695-histology",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed diagnosis of primary NSCLC",
+        "reasonFuzzy": "General NSCLC histology confirmation without specific subtype list is not a typed histology check."
+      },
+      {
+        "id": "NCT07195695-tissue",
+        "polarity": "inclusion",
+        "sourceText": "An archival tumor tissue sample must be submitted to the central laboratory after inclusion of the patient to retrospectively confirm the HER2 status",
+        "reasonFuzzy": "Tissue submission requirement is a procedural rule."
+      },
+      {
+        "id": "NCT07195695-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function based on laboratory values Further inclusion criteria apply.",
+        "reasonFuzzy": "General organ function without specific lab cutoffs is subjective or incomplete."
+      },
+      {
+        "id": "NCT07195695-mixed-histology",
+        "polarity": "exclusion",
+        "sourceText": "Diagnosis of NSCLC with mixed histology/positive neuroendocrine markers (synaptophysin/CD56)",
+        "reasonFuzzy": "Exclusion for mixed histology or neuroendocrine markers does not map to standard typed exclusions."
+      },
+      {
+        "id": "NCT07195695-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery (major according to the investigator's assessment) performed within 4 weeks prior to randomization",
+        "reasonFuzzy": "Requires investigator assessment of major surgery and a complex washout window."
+      },
+      {
+        "id": "NCT07195695-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Treatment with radiation therapy for primary NSCLC",
+        "reasonFuzzy": "Prior radiation treatment exclusion does not fit a standard typed prior therapy exclusion."
+      },
+      {
+        "id": "NCT07195695-co-mutation",
+        "polarity": "exclusion",
+        "sourceText": "Co-occurring actionable mutation with approved targeted therapy (e.g. Epidermal growth factor receptor (EGFR) or Anaplastic lymphoma kinase (ALK))",
+        "reasonFuzzy": "Co-occurring actionable mutation exclusion involves multiple possible genes and is not a single simple typed mutation exclusion."
+      },
+      {
+        "id": "NCT07195695-investigational",
+        "polarity": "exclusion",
+        "sourceText": "Any investigational drug within 5 half-lives of the compound or any of its related material, if known",
+        "reasonFuzzy": "Washout window based on half-lives is not a fixed date or simple lab cutoff."
+      },
+      {
+        "id": "NCT07195695-other-exclusions",
+        "polarity": "exclusion",
+        "sourceText": "Active or known pre-existing or history of non-infectious interstitial lung disease/pneumonitis Active infectious disease requiring systemic therapy Uncontrolled gastrointestinal disorders affecting drug intake/absorption Previous or concomitant malignancies within the last 3 years, except certain effectively treated cancers Significant and/or uncontrolled cardiovascular abnormalities, QT interval corrected for heart rate by Fridericia formula (QTcF) >470 msec, or ejection fraction <50%",
+        "reasonFuzzy": "Complex multi-system medical history and specialized cardiac parameter exclusions (QTcF, ejection fraction) do not have matching typed kinds."
+      }
+    ]
+  }
+}

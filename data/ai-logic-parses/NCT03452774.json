@@ -1,0 +1,205 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT03452774",
+  "briefTitle": "SYNERGY-AI: Artificial Intelligence Based Precision Oncology Clinical Trial Matching and Registry",
+  "parsedAt": "2026-11-12T06:01:53.530Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT03452774-biomarkers",
+      "polarity": "inclusion",
+      "sourceText": "Pts cancer-related biomarkers, gene variants, fusion and rearrangements (by immunohistochemistry, PCR, FISH or NGS): PD-L1, MSI (MMR), Claudin18.2, HER2/Neu, Tumor mutational burden/load (TMB), ABL1, ACVR1B, AKT1, AKT2, AKT3, ALK, APC, AR, ATM, ATRX, AURKA, AURKB, BAP1, BCL2, BCL6, BRAF, BRCA1, BRCA2, BTK, CCND1, CCND2, CCND3, CDK4, CDK6, CDKN1A/B, CEBPA, CHEK1, CHEK2, CSF1R, CTNNB1, DAXX, DDR1/2, DNMT3A, EGFR, ERBB2, ERBB3, ERBB4, ERCC4, ER, ESR1, FANCA, FAS, FBXW7, FGFR1, FGFR2, FGFR3, FGFR4, FLT3, GATA3, GATA6, GNAS, HDAC1, HGF, HRAS, IDH1, IDH2, IGF1R, JAK1, JAK2, JAK3, KDR (VEGFR2), KIT, KRAS, MAP2K2 (MEK2), MAP3K1, MCL1, MDM2, MDM4, MEN1, MET, MSH2, MSH3, MSH6, MTOR, MUTYH, MYC, MYCL (MYCL1), NF1, NF2, NOTCH1, NPM1, NRAS, NTRK1, NTRK2, NTRK3, PALB2, PARP1, PARP2, PARP3, PBRM1, PDCD1 (PD1), PDCD1LG2 (PD-L2), PDGFRA, PDGFRB, PIK3C, PMS2, POLD1, POLE, PRDM1, PTCH1, PTEN, RAF1, RB1, RET, RICTOR, ROS1, RPTOR, SDHA/B/C, SMAD, SMARC, SMO, STK11, TGFBR2, TP53, TSC1, TSC2, VEGFA, VHL, WT1, ZNF217, ZNF703, CEACAM, NRG1, among others.",
+      "reasonFuzzy": "This lists a broad array of potential biomarkers for screening matching without specifying a strict presence or numerical cutoff for a single typed check."
+    },
+    {
+      "id": "NCT03452774-decision",
+      "polarity": "inclusion",
+      "sourceText": "Decision to consider clinical trial pre-screening enrollment (CTE) by primary provider and/or patient",
+      "reasonFuzzy": "Provider and patient discretion is subjective."
+    },
+    {
+      "id": "NCT03452774-organ",
+      "polarity": "exclusion",
+      "sourceText": "Abnormal organ function;",
+      "reasonFuzzy": "Organ function without specific laboratory cutoffs is not a typed check."
+    },
+    {
+      "id": "NCT03452774-hospice",
+      "polarity": "exclusion",
+      "sourceText": "Hospice enrollment",
+      "reasonFuzzy": "Hospice enrollment is a clinical status, not a typed lab or condition check."
+    },
+    {
+      "id": "NCT03452774-malignancies",
+      "polarity": "inclusion",
+      "sourceText": "Pts with solid and hematological malignancies;",
+      "reasonFuzzy": "Broad match for various cancers without specifying a structured histology list."
+    },
+    {
+      "id": "NCT03452774-biomarkers",
+      "polarity": "inclusion",
+      "sourceText": "Pts cancer-related biomarkers, gene variants, fusion and rearrangements (by immunohistochemistry, PCR, FISH or NGS): PD-L1, MSI (MMR), Claudin18.2, HER2/Neu, Tumor mutational burden/load (TMB), ABL1, ACVR1B, AKT1, AKT2, AKT3, ALK, APC, AR, ATM, ATRX, AURKA, AURKB, BAP1, BCL2, BCL6, BRAF, BRCA1, BRCA2, BTK, CCND1, CCND2, CCND3, CDK4, CDK6, CDKN1A/B, CEBPA, CHEK1, CHEK2, CSF1R, CTNNB1, DAXX, DDR1/2, DNMT3A, EGFR, ERBB2, ERBB3, ERBB4, ERCC4, ER, ESR1, FANCA, FAS, FBXW7, FGFR1, FGFR2, FGFR3, FGFR4, FLT3, GATA3, GATA6, GNAS, HDAC1, HGF, HRAS, IDH1, IDH2, IGF1R, JAK1, JAK2, JAK3, KDR (VEGFR2), KIT, KRAS, MAP2K2 (MEK2), MAP3K1, MCL1, MDM2, MDM4, MEN1, MET, MSH2, MSH3, MSH6, MTOR, MUTYH, MYC, MYCL (MYCL1), NF1, NF2, NOTCH1, NPM1, NRAS, NTRK1, NTRK2, NTRK3, PALB2, PARP1, PARP2, PARP3, PBRM1, PDCD1 (PD1), PDCD1LG2 (PD-L2), PDGFRA, PDGFRB, PIK3C, PMS2, POLD1, POLE, PRDM1, PTCH1, PTEN, RAF1, RB1, RET, RICTOR, ROS1, RPTOR, SDHA/B/C, SMAD, SMARC, SMO, STK11, TGFBR2, TP53, TSC1, TSC2, VEGFA, VHL, WT1, ZNF217, ZNF703, CEACAM, NRG1, among others.",
+      "reasonFuzzy": "Lists a broad panel of biomarkers to be determined, but does not enforce a specific present/absent status or cutoff."
+    },
+    {
+      "id": "NCT03452774-decision",
+      "polarity": "inclusion",
+      "sourceText": "Decision to consider clinical trial pre-screening enrollment (CTE) by primary provider and/or patient",
+      "reasonFuzzy": "Subjective decision-making criterion by provider or patient."
+    },
+    {
+      "id": "NCT03452774-organ",
+      "polarity": "exclusion",
+      "sourceText": "Abnormal organ function;",
+      "reasonFuzzy": "General statement about organ function without specific numeric cutoffs."
+    },
+    {
+      "id": "NCT03452774-hospice",
+      "polarity": "exclusion",
+      "sourceText": "Hospice enrollment",
+      "reasonFuzzy": "Subjective clinical status check not fitting a typed lab, stage, or condition kind."
+    },
+    {
+      "id": "NCT03452774-ecog",
+      "polarity": "exclusion",
+      "sourceText": "ECOG PS > 2;",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "exclusion",
+          "value": "n:2"
+        }
+      ],
+      "normalizerTypedCount": 0
+    }
+  },
+  "runA": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 2958
+  },
+  "runB": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 3072
+  },
+  "ms": 14023,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT03452774",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT03452774-ecog",
+        "kind": "ecog_max",
+        "polarity": "exclusion",
+        "sourceText": "ECOG PS > 2;",
+        "numberValue": 2
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT03452774-biomarkers",
+        "polarity": "inclusion",
+        "sourceText": "Pts cancer-related biomarkers, gene variants, fusion and rearrangements (by immunohistochemistry, PCR, FISH or NGS): PD-L1, MSI (MMR), Claudin18.2, HER2/Neu, Tumor mutational burden/load (TMB), ABL1, ACVR1B, AKT1, AKT2, AKT3, ALK, APC, AR, ATM, ATRX, AURKA, AURKB, BAP1, BCL2, BCL6, BRAF, BRCA1, BRCA2, BTK, CCND1, CCND2, CCND3, CDK4, CDK6, CDKN1A/B, CEBPA, CHEK1, CHEK2, CSF1R, CTNNB1, DAXX, DDR1/2, DNMT3A, EGFR, ERBB2, ERBB3, ERBB4, ERCC4, ER, ESR1, FANCA, FAS, FBXW7, FGFR1, FGFR2, FGFR3, FGFR4, FLT3, GATA3, GATA6, GNAS, HDAC1, HGF, HRAS, IDH1, IDH2, IGF1R, JAK1, JAK2, JAK3, KDR (VEGFR2), KIT, KRAS, MAP2K2 (MEK2), MAP3K1, MCL1, MDM2, MDM4, MEN1, MET, MSH2, MSH3, MSH6, MTOR, MUTYH, MYC, MYCL (MYCL1), NF1, NF2, NOTCH1, NPM1, NRAS, NTRK1, NTRK2, NTRK3, PALB2, PARP1, PARP2, PARP3, PBRM1, PDCD1 (PD1), PDCD1LG2 (PD-L2), PDGFRA, PDGFRB, PIK3C, PMS2, POLD1, POLE, PRDM1, PTCH1, PTEN, RAF1, RB1, RET, RICTOR, ROS1, RPTOR, SDHA/B/C, SMAD, SMARC, SMO, STK11, TGFBR2, TP53, TSC1, TSC2, VEGFA, VHL, WT1, ZNF217, ZNF703, CEACAM, NRG1, among others.",
+        "reasonFuzzy": "This lists a broad array of potential biomarkers for screening matching without specifying a strict presence or numerical cutoff for a single typed check."
+      },
+      {
+        "id": "NCT03452774-decision",
+        "polarity": "inclusion",
+        "sourceText": "Decision to consider clinical trial pre-screening enrollment (CTE) by primary provider and/or patient",
+        "reasonFuzzy": "Provider and patient discretion is subjective."
+      },
+      {
+        "id": "NCT03452774-organ",
+        "polarity": "exclusion",
+        "sourceText": "Abnormal organ function;",
+        "reasonFuzzy": "Organ function without specific laboratory cutoffs is not a typed check."
+      },
+      {
+        "id": "NCT03452774-hospice",
+        "polarity": "exclusion",
+        "sourceText": "Hospice enrollment",
+        "reasonFuzzy": "Hospice enrollment is a clinical status, not a typed lab or condition check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT03452774",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT03452774-ecog",
+        "kind": "ecog_max",
+        "polarity": "exclusion",
+        "sourceText": "ECOG PS > 2;",
+        "numberValue": 2
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT03452774-malignancies",
+        "polarity": "inclusion",
+        "sourceText": "Pts with solid and hematological malignancies;",
+        "reasonFuzzy": "Broad match for various cancers without specifying a structured histology list."
+      },
+      {
+        "id": "NCT03452774-biomarkers",
+        "polarity": "inclusion",
+        "sourceText": "Pts cancer-related biomarkers, gene variants, fusion and rearrangements (by immunohistochemistry, PCR, FISH or NGS): PD-L1, MSI (MMR), Claudin18.2, HER2/Neu, Tumor mutational burden/load (TMB), ABL1, ACVR1B, AKT1, AKT2, AKT3, ALK, APC, AR, ATM, ATRX, AURKA, AURKB, BAP1, BCL2, BCL6, BRAF, BRCA1, BRCA2, BTK, CCND1, CCND2, CCND3, CDK4, CDK6, CDKN1A/B, CEBPA, CHEK1, CHEK2, CSF1R, CTNNB1, DAXX, DDR1/2, DNMT3A, EGFR, ERBB2, ERBB3, ERBB4, ERCC4, ER, ESR1, FANCA, FAS, FBXW7, FGFR1, FGFR2, FGFR3, FGFR4, FLT3, GATA3, GATA6, GNAS, HDAC1, HGF, HRAS, IDH1, IDH2, IGF1R, JAK1, JAK2, JAK3, KDR (VEGFR2), KIT, KRAS, MAP2K2 (MEK2), MAP3K1, MCL1, MDM2, MDM4, MEN1, MET, MSH2, MSH3, MSH6, MTOR, MUTYH, MYC, MYCL (MYCL1), NF1, NF2, NOTCH1, NPM1, NRAS, NTRK1, NTRK2, NTRK3, PALB2, PARP1, PARP2, PARP3, PBRM1, PDCD1 (PD1), PDCD1LG2 (PD-L2), PDGFRA, PDGFRB, PIK3C, PMS2, POLD1, POLE, PRDM1, PTCH1, PTEN, RAF1, RB1, RET, RICTOR, ROS1, RPTOR, SDHA/B/C, SMAD, SMARC, SMO, STK11, TGFBR2, TP53, TSC1, TSC2, VEGFA, VHL, WT1, ZNF217, ZNF703, CEACAM, NRG1, among others.",
+        "reasonFuzzy": "Lists a broad panel of biomarkers to be determined, but does not enforce a specific present/absent status or cutoff."
+      },
+      {
+        "id": "NCT03452774-decision",
+        "polarity": "inclusion",
+        "sourceText": "Decision to consider clinical trial pre-screening enrollment (CTE) by primary provider and/or patient",
+        "reasonFuzzy": "Subjective decision-making criterion by provider or patient."
+      },
+      {
+        "id": "NCT03452774-organ",
+        "polarity": "exclusion",
+        "sourceText": "Abnormal organ function;",
+        "reasonFuzzy": "General statement about organ function without specific numeric cutoffs."
+      },
+      {
+        "id": "NCT03452774-hospice",
+        "polarity": "exclusion",
+        "sourceText": "Hospice enrollment",
+        "reasonFuzzy": "Subjective clinical status check not fitting a typed lab, stage, or condition kind."
+      }
+    ]
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05914116",
+  "briefTitle": "A Phase 1/2a Study of DB-1311/BNT324 in Advanced/Metastatic Solid Tumors",
+  "parsedAt": "2026-11-12T06:20:19.555Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05914116-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Male or female adults (defined as ≥ 18 years of age or acceptable age according to local regulations at the time of voluntarily signing of informed consent).",
+      "numberValue": 18,
+      "evidence_quote": "Male or female adults (defined as ≥ 18 years of age or acceptable age according to local regulations at the time of voluntarily signing of informed consent).",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05914116-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "Has an Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0-1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05914116-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one measurable lesion as assessed by the investigator according to response evaluation criteria in solid tumors (RECIST) version 1.1 criteria",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05914116-life",
+      "polarity": "inclusion",
+      "sourceText": "Has a life expectancy of ≥ 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05914116-sclc",
+      "polarity": "inclusion",
+      "sourceText": "SCLC subjects (Phase 2a Cohort 1 ONLY): Prior therapy with at least one platinum-based line as systemic therapy for extensive stage disease with at least two cycles of therapy (except in the case of early objective PD). Prior treatment regimens with irinotecan, topotecan or any other TOP I inhibitor including investigational TOP I inhibitors are not allowed.",
+      "reasonFuzzy": "Cohort-specific criteria vary widely across multiple tumor types and cannot be represented as a single global eligibility rule."
+    },
+    {
+      "id": "NCT05914116-nsclc",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC subjects (Phase 2a Cohort 2 ONLY): Pathologically documented locally advanced, or metastatic NSCLC and is not amenable to curative surgery or radiation. Has received prior treatment with platinum-based chemotherapy regimen and/or anti-PD-1/PD-L1 antibody-based regimen in the advanced/unresectable, or metastatic setting unless unable or unwilling. Subjects with NSCLC known to harbor a genomic alteration(s) other than EGFR mutation(s) (e.g., ALK rearrangement, ROS1 rearrangement, KRAS G12C mutation, BRAF V600E mutation, NTRK1/2/3 Gene fusion, MET Exon 14 skipping, RET rearrangement etc.) for which treatment is available must have also received prior treatment with at least 1 genotype-directed therapy.",
+      "reasonFuzzy": "Cohort-specific criteria vary by disease subtype and cannot be modeled as a single global typed check."
+    },
+    {
+      "id": "NCT05914116-measurable",
+      "polarity": "inclusion",
+      "sourceText": "At least one measurable lesion as assessed by the investigator according to response evaluation criteria in solid tumors (RECIST) version 1.1 criteria (measurable disease as defined by RANO 2.0 criteria for GBM subjects). Castrate-resistant prostate cancer (CRPC) subjects with bone only disease may be eligible on a case-by- case basis after discussion with the Medical Monitor.",
+      "reasonFuzzy": "Measurable disease assessment is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT05914116-life",
+      "polarity": "inclusion",
+      "sourceText": "Has a life expectancy of ≥ 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT05914116-lvef",
+      "polarity": "inclusion",
+      "sourceText": "Has LVEF ≥ 50% by either echocardiography (ECHO) or multiple-gated acquisition (MUGA) within 28 days before enrollment.",
+      "reasonFuzzy": "LVEF is a cardiac function test, not an allowed typed lab or biomarker kind."
+    },
+    {
+      "id": "NCT05914116-organ",
+      "polarity": "inclusion",
+      "sourceText": "Has adequate organ function within 7 days prior to Day 1 of Cycle 1",
+      "reasonFuzzy": "General organ function is vague without specific lab cutoffs in this text fragment."
+    },
+    {
+      "id": "NCT05914116-washout",
+      "polarity": "inclusion",
+      "sourceText": "Has adequate treatment washout period prior to Day 1 of Cycle 1",
+      "reasonFuzzy": "Treatment washout is a non-specific protocol requirement."
+    },
+    {
+      "id": "NCT05914116-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Is willing to provide pre-existing resected tumor samples or undergo fresh tumor biopsy for the measurement of B7-H3 level and other biomarkers if no contraindication.",
+      "reasonFuzzy": "Willingness to undergo a biopsy is a procedural compliance item."
+    },
+    {
+      "id": "NCT05914116-brain",
+      "polarity": "exclusion",
+      "sourceText": "Has spinal cord compression or clinically active central nervous system metastases, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05914116-brain",
+      "polarity": "exclusion",
+      "sourceText": "Has spinal cord compression or clinically active central nervous system metastases, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT05914116-b7h3",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with B7-H3 targeted therapy.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05914116-adc",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with antibody drug conjugate with topoisomerase inhibitor (e.g., trastuzumab deruxtecan).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:b7-h3 targeted therapy"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:antibody drug conjugate with topoisomerase inhibitor"
+        }
+      ],
+      "normalizerTypedCount": 6
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 5942
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 6,
+    "attempts": 2,
+    "ms": 15674
+  },
+  "ms": 29694,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05914116",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05914116-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female adults (defined as ≥ 18 years of age or acceptable age according to local regulations at the time of voluntarily signing of informed consent).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05914116-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05914116-b7h3",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with B7-H3 targeted therapy.",
+        "stringValue": "B7-H3 targeted therapy"
+      },
+      {
+        "id": "NCT05914116-adc",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with antibody drug conjugate with topoisomerase inhibitor (e.g., trastuzumab deruxtecan).",
+        "stringValue": "antibody drug conjugate with topoisomerase inhibitor"
+      },
+      {
+        "id": "NCT05914116-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has spinal cord compression or clinically active central nervous system metastases, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05914116-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one measurable lesion as assessed by the investigator according to response evaluation criteria in solid tumors (RECIST) version 1.1 criteria",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05914116-life",
+        "polarity": "inclusion",
+        "sourceText": "Has a life expectancy of ≥ 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05914116-sclc",
+        "polarity": "inclusion",
+        "sourceText": "SCLC subjects (Phase 2a Cohort 1 ONLY): Prior therapy with at least one platinum-based line as systemic therapy for extensive stage disease with at least two cycles of therapy (except in the case of early objective PD). Prior treatment regimens with irinotecan, topotecan or any other TOP I inhibitor including investigational TOP I inhibitors are not allowed.",
+        "reasonFuzzy": "Cohort-specific criteria vary widely across multiple tumor types and cannot be represented as a single global eligibility rule."
+      },
+      {
+        "id": "NCT05914116-nsclc",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC subjects (Phase 2a Cohort 2 ONLY): Pathologically documented locally advanced, or metastatic NSCLC and is not amenable to curative surgery or radiation. Has received prior treatment with platinum-based chemotherapy regimen and/or anti-PD-1/PD-L1 antibody-based regimen in the advanced/unresectable, or metastatic setting unless unable or unwilling. Subjects with NSCLC known to harbor a genomic alteration(s) other than EGFR mutation(s) (e.g., ALK rearrangement, ROS1 rearrangement, KRAS G12C mutation, BRAF V600E mutation, NTRK1/2/3 Gene fusion, MET Exon 14 skipping, RET rearrangement etc.) for which treatment is available must have also received prior treatment with at least 1 genotype-directed therapy.",
+        "reasonFuzzy": "Cohort-specific criteria vary by disease subtype and cannot be modeled as a single global typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05914116",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05914116-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Male or female adults (defined as ≥ 18 years of age or acceptable age according to local regulations at the time of voluntarily signing of informed consent).",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05914116-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Has an Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05914116-b7h3",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with B7-H3 targeted therapy.",
+        "stringValue": "B7-H3 targeted therapy"
+      },
+      {
+        "id": "NCT05914116-adc",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with antibody drug conjugate with topoisomerase inhibitor (e.g., trastuzumab deruxtecan).",
+        "stringValue": "antibody drug conjugate with topoisomerase inhibitor"
+      },
+      {
+        "id": "NCT05914116-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Has spinal cord compression or clinically active central nervous system metastases, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05914116-measurable",
+        "polarity": "inclusion",
+        "sourceText": "At least one measurable lesion as assessed by the investigator according to response evaluation criteria in solid tumors (RECIST) version 1.1 criteria (measurable disease as defined by RANO 2.0 criteria for GBM subjects). Castrate-resistant prostate cancer (CRPC) subjects with bone only disease may be eligible on a case-by- case basis after discussion with the Medical Monitor.",
+        "reasonFuzzy": "Measurable disease assessment is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT05914116-life",
+        "polarity": "inclusion",
+        "sourceText": "Has a life expectancy of ≥ 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT05914116-lvef",
+        "polarity": "inclusion",
+        "sourceText": "Has LVEF ≥ 50% by either echocardiography (ECHO) or multiple-gated acquisition (MUGA) within 28 days before enrollment.",
+        "reasonFuzzy": "LVEF is a cardiac function test, not an allowed typed lab or biomarker kind."
+      },
+      {
+        "id": "NCT05914116-organ",
+        "polarity": "inclusion",
+        "sourceText": "Has adequate organ function within 7 days prior to Day 1 of Cycle 1",
+        "reasonFuzzy": "General organ function is vague without specific lab cutoffs in this text fragment."
+      },
+      {
+        "id": "NCT05914116-washout",
+        "polarity": "inclusion",
+        "sourceText": "Has adequate treatment washout period prior to Day 1 of Cycle 1",
+        "reasonFuzzy": "Treatment washout is a non-specific protocol requirement."
+      },
+      {
+        "id": "NCT05914116-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Is willing to provide pre-existing resected tumor samples or undergo fresh tumor biopsy for the measurement of B7-H3 level and other biomarkers if no contraindication.",
+        "reasonFuzzy": "Willingness to undergo a biopsy is a procedural compliance item."
+      }
+    ]
+  }
+}

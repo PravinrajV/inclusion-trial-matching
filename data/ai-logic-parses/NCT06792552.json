@@ -1,0 +1,220 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06792552",
+  "briefTitle": "A Phase I Study of SIM0505 in Participants With Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T10:35:56.156Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06792552-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "≥18 years of age.",
+      "numberValue": 18,
+      "evidence_quote": "≥18 years of age.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06792552-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status score of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status score of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06792552-cohorts",
+      "polarity": "inclusion",
+      "sourceText": "In the backfill period, eligible tumor types are limited to high-grade serous ovarian cancer, high-grade endometrioid ovarian cancer, USC, clear cell RCC, papillary RCC and adenocarcinoma of NSCLC without actionable mutation of epidermal growth factor receptor (EGFR).",
+      "reasonFuzzy": "Study has multiple cohorts with complex, distinct histology and biomarker requirements that cannot be captured in a single typed histology_in check."
+    },
+    {
+      "id": "NCT06792552-measurable",
+      "polarity": "inclusion",
+      "sourceText": "presence of at least one evaluable lesion according to RECIST Version 1.1. Measurable lesions are required in the backfill period.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06792552-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of ≥12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06792552-solid",
+      "polarity": "inclusion",
+      "sourceText": "Participants with histologically or cytologically confirmed advanced solid tumors, who have failed or are ineligible for standard of care therapies.",
+      "reasonFuzzy": "Broad solid tumor trial with multiple specific cohorts; trial-level rules and cohort-specific requirements cannot be represented by a single typed stage check."
+    },
+    {
+      "id": "NCT06792552-measurable",
+      "polarity": "inclusion",
+      "sourceText": "presence of at least one evaluable lesion according to RECIST Version 1.1. Measurable lesions are required in the backfill period.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06792552-life",
+      "polarity": "inclusion",
+      "sourceText": "Life expectancy of ≥12 weeks.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06792552-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known untreated CNS metastases and/or leptomeningeal metastases. Participants are eligible if CNS metastases have been treated and participants have neurologically returned to baseline",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 9052
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 7037
+  },
+  "ms": 24112,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06792552",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06792552-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "≥18 years of age.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06792552-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status score of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06792552-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known untreated CNS metastases and/or leptomeningeal metastases. Participants are eligible if CNS metastases have been treated and participants have neurologically returned to baseline",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06792552-cohorts",
+        "polarity": "inclusion",
+        "sourceText": "In the backfill period, eligible tumor types are limited to high-grade serous ovarian cancer, high-grade endometrioid ovarian cancer, USC, clear cell RCC, papillary RCC and adenocarcinoma of NSCLC without actionable mutation of epidermal growth factor receptor (EGFR).",
+        "reasonFuzzy": "Study has multiple cohorts with complex, distinct histology and biomarker requirements that cannot be captured in a single typed histology_in check."
+      },
+      {
+        "id": "NCT06792552-measurable",
+        "polarity": "inclusion",
+        "sourceText": "presence of at least one evaluable lesion according to RECIST Version 1.1. Measurable lesions are required in the backfill period.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06792552-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of ≥12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06792552",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06792552-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "≥18 years of age.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06792552-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status score of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06792552-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Known untreated CNS metastases and/or leptomeningeal metastases. Participants are eligible if CNS metastases have been treated and participants have neurologically returned to baseline",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06792552-solid",
+        "polarity": "inclusion",
+        "sourceText": "Participants with histologically or cytologically confirmed advanced solid tumors, who have failed or are ineligible for standard of care therapies.",
+        "reasonFuzzy": "Broad solid tumor trial with multiple specific cohorts; trial-level rules and cohort-specific requirements cannot be represented by a single typed stage check."
+      },
+      {
+        "id": "NCT06792552-measurable",
+        "polarity": "inclusion",
+        "sourceText": "presence of at least one evaluable lesion according to RECIST Version 1.1. Measurable lesions are required in the backfill period.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06792552-life",
+        "polarity": "inclusion",
+        "sourceText": "Life expectancy of ≥12 weeks.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      }
+    ]
+  }
+}

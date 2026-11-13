@@ -1,0 +1,366 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06720987",
+  "briefTitle": "A Study to Investigate the Safety and Efficacy of KQB365 as Monotherapy and in Combination in Participants With Advanced Solid Malignancies",
+  "parsedAt": "2026-11-12T10:32:51.764Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06720987-cohorts",
+      "polarity": "inclusion",
+      "sourceText": "PART 1 (monotherapy and combo therapy with KQB198): Histologically confirmed diagnosis of a solid tumor malignancy with either a KRAS G12C or KRAS G12S mutation.",
+      "reasonFuzzy": "Criteria vary by study part and include multiple tumor types beyond NSCLC."
+    },
+    {
+      "id": "NCT06720987-disease",
+      "polarity": "inclusion",
+      "sourceText": "Unresectable or metastatic disease",
+      "reasonFuzzy": "Expressed descriptively rather than a numbered stage list."
+    },
+    {
+      "id": "NCT06720987-curative",
+      "polarity": "inclusion",
+      "sourceText": "No available treatment with curative intent",
+      "reasonFuzzy": "Subjective treatment availability judgment."
+    },
+    {
+      "id": "NCT06720987-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function",
+      "reasonFuzzy": "General statement without specific lab cutoffs."
+    },
+    {
+      "id": "NCT06720987-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06720987-cns",
+      "polarity": "exclusion",
+      "sourceText": "Active primary central nervous system tumors",
+      "reasonFuzzy": "Descriptive exclusion for CNS tumors that does not fit standard brain_mets categories."
+    },
+    {
+      "id": "NCT06720987-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Cardiac abnormalities",
+      "reasonFuzzy": "Subjective exclusion without specified parameters."
+    },
+    {
+      "id": "NCT06720987-ild",
+      "polarity": "exclusion",
+      "sourceText": "Active interstitial lung disease",
+      "reasonFuzzy": "Subjective clinical diagnosis."
+    },
+    {
+      "id": "NCT06720987-gi",
+      "polarity": "exclusion",
+      "sourceText": "Unable to swallow or GI condition that prevents absorption for patients in KQB198 combination cohorts",
+      "reasonFuzzy": "Subjective clinical evaluation of absorption capacity."
+    },
+    {
+      "id": "NCT06720987-age",
+      "polarity": "inclusion",
+      "sourceText": "Minimum Age: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06720987-unresectable",
+      "polarity": "inclusion",
+      "sourceText": "Unresectable or metastatic disease",
+      "reasonFuzzy": "Disease state description without a specific numbered stage list."
+    },
+    {
+      "id": "NCT06720987-curative",
+      "polarity": "inclusion",
+      "sourceText": "No available treatment with curative intent",
+      "reasonFuzzy": "Treatment history or clinical judgment requirement."
+    },
+    {
+      "id": "NCT06720987-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function",
+      "reasonFuzzy": "Broad organ function statement without specific cutoffs."
+    },
+    {
+      "id": "NCT06720987-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT06720987-cns",
+      "polarity": "exclusion",
+      "sourceText": "Active primary central nervous system tumors",
+      "reasonFuzzy": "Active CNS tumor is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT06720987-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Cardiac abnormalities",
+      "reasonFuzzy": "General exclusion for cardiac abnormalities."
+    },
+    {
+      "id": "NCT06720987-ild",
+      "polarity": "exclusion",
+      "sourceText": "Active interstitial lung disease",
+      "reasonFuzzy": "Specific condition exclusion without a typed kind."
+    },
+    {
+      "id": "NCT06720987-gi",
+      "polarity": "exclusion",
+      "sourceText": "Unable to swallow or GI condition that prevents absorption for patients in KQB198 combination cohorts",
+      "reasonFuzzy": "Cohort-specific administration and absorption restriction."
+    },
+    {
+      "id": "NCT06720987-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06720987-kras",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed diagnosis of Non-Small Cell Lung Cancer with either a KRAS G12C or KRAS G12S mutation.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06720987-krasvar",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed diagnosis of Non-Small Cell Lung Cancer with either a KRAS G12C or KRAS G12S mutation.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Minimum Age: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "kras_variant_in",
+          "polarity": "inclusion",
+          "value": "s:g12c, g12s"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 4761
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 4609
+  },
+  "ms": 17354,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06720987",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06720987-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed diagnosis of Non-Small Cell Lung Cancer with either a KRAS G12C or KRAS G12S mutation.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06720987-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed diagnosis of Non-Small Cell Lung Cancer with either a KRAS G12C or KRAS G12S mutation.",
+        "stringValue": "G12C, G12S"
+      },
+      {
+        "id": "NCT06720987-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Minimum Age: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06720987-cohorts",
+        "polarity": "inclusion",
+        "sourceText": "PART 1 (monotherapy and combo therapy with KQB198): Histologically confirmed diagnosis of a solid tumor malignancy with either a KRAS G12C or KRAS G12S mutation.",
+        "reasonFuzzy": "Criteria vary by study part and include multiple tumor types beyond NSCLC."
+      },
+      {
+        "id": "NCT06720987-disease",
+        "polarity": "inclusion",
+        "sourceText": "Unresectable or metastatic disease",
+        "reasonFuzzy": "Expressed descriptively rather than a numbered stage list."
+      },
+      {
+        "id": "NCT06720987-curative",
+        "polarity": "inclusion",
+        "sourceText": "No available treatment with curative intent",
+        "reasonFuzzy": "Subjective treatment availability judgment."
+      },
+      {
+        "id": "NCT06720987-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function",
+        "reasonFuzzy": "General statement without specific lab cutoffs."
+      },
+      {
+        "id": "NCT06720987-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06720987-cns",
+        "polarity": "exclusion",
+        "sourceText": "Active primary central nervous system tumors",
+        "reasonFuzzy": "Descriptive exclusion for CNS tumors that does not fit standard brain_mets categories."
+      },
+      {
+        "id": "NCT06720987-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Cardiac abnormalities",
+        "reasonFuzzy": "Subjective exclusion without specified parameters."
+      },
+      {
+        "id": "NCT06720987-ild",
+        "polarity": "exclusion",
+        "sourceText": "Active interstitial lung disease",
+        "reasonFuzzy": "Subjective clinical diagnosis."
+      },
+      {
+        "id": "NCT06720987-gi",
+        "polarity": "exclusion",
+        "sourceText": "Unable to swallow or GI condition that prevents absorption for patients in KQB198 combination cohorts",
+        "reasonFuzzy": "Subjective clinical evaluation of absorption capacity."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06720987",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06720987-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed diagnosis of Non-Small Cell Lung Cancer with either a KRAS G12C or KRAS G12S mutation.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06720987-krasvar",
+        "kind": "kras_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed diagnosis of Non-Small Cell Lung Cancer with either a KRAS G12C or KRAS G12S mutation.",
+        "stringValue": "G12C, G12S"
+      },
+      {
+        "id": "NCT06720987-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06720987-unresectable",
+        "polarity": "inclusion",
+        "sourceText": "Unresectable or metastatic disease",
+        "reasonFuzzy": "Disease state description without a specific numbered stage list."
+      },
+      {
+        "id": "NCT06720987-curative",
+        "polarity": "inclusion",
+        "sourceText": "No available treatment with curative intent",
+        "reasonFuzzy": "Treatment history or clinical judgment requirement."
+      },
+      {
+        "id": "NCT06720987-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function",
+        "reasonFuzzy": "Broad organ function statement without specific cutoffs."
+      },
+      {
+        "id": "NCT06720987-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT06720987-cns",
+        "polarity": "exclusion",
+        "sourceText": "Active primary central nervous system tumors",
+        "reasonFuzzy": "Active CNS tumor is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      },
+      {
+        "id": "NCT06720987-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Cardiac abnormalities",
+        "reasonFuzzy": "General exclusion for cardiac abnormalities."
+      },
+      {
+        "id": "NCT06720987-ild",
+        "polarity": "exclusion",
+        "sourceText": "Active interstitial lung disease",
+        "reasonFuzzy": "Specific condition exclusion without a typed kind."
+      },
+      {
+        "id": "NCT06720987-gi",
+        "polarity": "exclusion",
+        "sourceText": "Unable to swallow or GI condition that prevents absorption for patients in KQB198 combination cohorts",
+        "reasonFuzzy": "Cohort-specific administration and absorption restriction."
+      }
+    ]
+  }
+}

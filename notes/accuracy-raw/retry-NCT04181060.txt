@@ -1,0 +1,122 @@
+{
+  "nctId": "NCT04181060",
+  "typedChecks": [
+    {
+      "checkType": "age",
+      "operator": ">=",
+      "value": 18,
+      "unit": "years",
+      "sourceText": "Patient must be ≥ 18 years of age"
+    },
+    {
+      "checkType": "ecog",
+      "operator": "between_inclusive",
+      "minValue": 0,
+      "maxValue": 2,
+      "sourceText": "Patient must have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2"
+    },
+    {
+      "checkType": "prior_therapy_excluded",
+      "category": "drug",
+      "name": "anti-VEGF agent",
+      "sourceText": "Patient must not have received any prior treatment with an anti-VEGF agent"
+    },
+    {
+      "checkType": "prior_therapy_excluded",
+      "category": "drug_class",
+      "name": "investigational drug",
+      "sourceText": "Patient must not have had treatment with any investigational drug within five half-lives or 3 months (whichever is greater), prior to study initiation"
+    },
+    {
+      "checkType": "prior_therapy_excluded",
+      "category": "drug",
+      "name": "EGFR TKI",
+      "sourceText": "Prior treatment with an EGFR TKI is not allowed, however if a candidate for this study has already started osimertinib within 21 days prior to randomization... the patient will be eligible"
+    },
+    {
+      "checkType": "prior_therapy_excluded",
+      "category": "systemic",
+      "name": "prior systemic treatment for metastatic disease",
+      "sourceText": "Patient must not have had any prior systemic treatment for metastatic disease"
+    },
+    {
+      "checkType": "brain_mets",
+      "status": "allowed",
+      "qualifier": "treated or untreated stable without steroids",
+      "sourceText": "Patients with treated brain metastases are eligible if neurologically stable without glucocorticoid therapy after the stated washout period from radiation therapy (RT) or surgery provided the metastatic lesions are non-hemorrhagic / Patients with untreated brain metastases or leptomeningeal disease are eligible if the treating physician determines that immediate CNS specific treatment is not required provided the metastatic lesions are non-hemorrhagic and are neurologically stable without glucocorticoid therapy"
+    },
+    {
+      "checkType": "lab_value",
+      "labName": "Leukocytes",
+      "operator": ">=",
+      "value": 3000,
+      "unit": "mcL",
+      "sourceText": "Leukocytes >= 3,000/mcL (obtained =< 14 days prior to randomization)"
+    },
+    {
+      "checkType": "lab_value",
+      "labName": "Absolute neutrophil count",
+      "operator": ">=",
+      "value": 1500,
+      "unit": "mcL",
+      "sourceText": "Absolute neutrophil count >= 1,500/mcL (obtained =< 14 days prior to randomization)"
+    },
+    {
+      "checkType": "lab_value",
+      "labName": "Platelets",
+      "operator": ">=",
+      "value": 100000,
+      "unit": "mcL",
+      "sourceText": "Platelets >= 100,000/mcL (obtained =< 14 days prior to randomization)"
+    },
+    {
+      "checkType": "lab_value",
+      "labName": "Hemoglobin",
+      "operator": ">=",
+      "value": 9,
+      "unit": "g/dL",
+      "sourceText": "Hemoglobin >= 9 g/dL (obtained =< 14 days prior to randomization)"
+    },
+    {
+      "checkType": "lab_value",
+      "labName": "Total bilirubin",
+      "operator": "<=",
+      "multiplier": 1.5,
+      "referenceLimit": "ULN",
+      "sourceText": "Total bilirubin and creatinine =< 1.5 x institutional upper limit of normal (ULN) (obtained =< 14 days prior to randomization)"
+    },
+    {
+      "checkType": "lab_value",
+      "labName": "Creatinine",
+      "operator": "<=",
+      "multiplier": 1.5,
+      "referenceLimit": "ULN",
+      "sourceText": "Total bilirubin and creatinine =< 1.5 x institutional upper limit of normal (ULN) (obtained =< 14 days prior to randomization)"
+    },
+    {
+      "checkType": "lab_value",
+      "labName": "AST",
+      "operator": "<=",
+      "multiplier": 2.5,
+      "referenceLimit": "ULN",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN (obtained =< 14 days prior to randomization)"
+    },
+    {
+      "checkType": "lab_value",
+      "labName": "ALT",
+      "operator": "<=",
+      "multiplier": 2.5,
+      "referenceLimit": "ULN",
+      "sourceText": "Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase [SGOT])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase [SGPT]) =< 2.5 x institutional ULN (obtained =< 14 days prior to randomization)"
+    },
+    {
+      "checkType": "lab_value",
+      "labName": "QTc",
+      "operator": "<=",
+      "value": 470,
+      "unit": "msec",
+      "sourceText": "Patient must not have mean resting corrected QT interval (QTc) > 470 msec obtained from 3 electrocardiograms (ECGs)"
+    }
+  ],
+  "fuzzyCriteria": []
+}

@@ -1,0 +1,356 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05361174",
+  "briefTitle": "A Study to Investigate the Efficacy and Safety of an Infusion of IOV-4001 in Adult Participants With Unresectable or Metastatic Melanoma or Stage III or IV Non-small-cell Lung Cancer",
+  "parsedAt": "2026-11-12T05:46:17.748Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05361174-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participants who have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Participants who have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05361174-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Cohort 2 (NSCLC): Participants who should have received no more than 3 prior lines of therapy and: those without oncogene-driven tumors: Have progressed within 12 weeks after last dose of anti-PD-1/PD-L1 blocking antibody those with oncogene-driven tumors: Have progressed during/after >=1 targeted therapy AND either: platinum doublet chemotherapy Or within 12 weeks after last dose of anti-PD-1/PD-L1 blocking antibody",
+      "reasonFuzzy": "Prior therapy requirements depend on cohort type and molecular profile with multiple alternative branches, which cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT05361174-resectable",
+      "polarity": "inclusion",
+      "sourceText": "Participants who is assessed as having at least one resectable lesion.",
+      "reasonFuzzy": "Assessment of resectable lesions involves investigator judgment and procedures, not a typed clinical trial check."
+    },
+    {
+      "id": "NCT05361174-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants who have at least one measurable lesion, following resection of the lesion for IOV-4001 generation.",
+      "reasonFuzzy": "Measurable disease is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT05361174-organ",
+      "polarity": "inclusion",
+      "sourceText": "Participants who have adequate organ function.",
+      "reasonFuzzy": "Adequate organ function without specific numeric cutoffs is a clinical judgment."
+    },
+    {
+      "id": "NCT05361174-cardiac-pulmonary",
+      "polarity": "inclusion",
+      "sourceText": "Cardiac function test required. Pulmonary function test may be required.",
+      "reasonFuzzy": "Test requirements are procedural rather than clear typed numerical cutoffs."
+    },
+    {
+      "id": "NCT05361174-steroid",
+      "polarity": "exclusion",
+      "sourceText": "Participants who require systemic steroid therapy 10 mg/day prednisone or another steroid equivalent dose.",
+      "reasonFuzzy": "Steroid equivalence dosing is complex and best captured as a fuzzy criterion."
+    },
+    {
+      "id": "NCT05361174-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Participants who have received the following previous therapy: ... Cohort 2 (NSCLC): Participants who should have received no more than 3 prior lines of therapy and: ...",
+      "reasonFuzzy": "Prior therapy and lines of therapy requirements are specific to cohorts (melanoma vs NSCLC and oncogene-driven status) and cannot be expressed as a single simple prior lines or therapy check."
+    },
+    {
+      "id": "NCT05361174-resectable",
+      "polarity": "inclusion",
+      "sourceText": "Participants who is assessed as having at least one resectable lesion.",
+      "reasonFuzzy": "Assessments of resectable lesions are subjective clinical judgments."
+    },
+    {
+      "id": "NCT05361174-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants who have at least one measurable lesion, following resection of the lesion for IOV-4001 generation.",
+      "reasonFuzzy": "Measurable disease is a subjective imaging judgment."
+    },
+    {
+      "id": "NCT05361174-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants who have symptomatic untreated brain metastases.",
+      "reasonFuzzy": "Symptomatic untreated brain metastases combine multiple dimensions and do not fit a standard clear typed brain_mets category."
+    },
+    {
+      "id": "NCT05361174-age-min",
+      "polarity": "inclusion",
+      "sourceText": "Adult Participants With Unresectable or Metastatic Melanoma or Stage III or IV Non-small-cell Lung Cancer",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05361174-age-max",
+      "polarity": "inclusion",
+      "sourceText": "maximumAge: 70 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT05361174-age-min",
+      "polarity": "inclusion",
+      "sourceText": "Participants who is assessed as having at least one resectable lesion.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05361174-age-max",
+      "polarity": "inclusion",
+      "sourceText": "Participants who are >70 years of age may be allowed to enroll after the investigator discusses with the medical monitor.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05361174-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants who have symptomatic untreated brain metastases.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT05361174-stage",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a confirmed diagnosis of Stage IIIC, IIID, or IV unresectable or metastatic melanoma or Stage III or IV NSCLC.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 2,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Adult Participants With Unresectable or Metastatic Melanoma or Stage III or IV Non-small-cell Lung Cancer"
+        },
+        {
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "maximumAge: 70 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 3,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "value": "n:18"
+        },
+        {
+          "side": "a-only",
+          "kind": "age_max",
+          "polarity": "inclusion",
+          "value": "n:70"
+        },
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "stage_in",
+          "polarity": "inclusion",
+          "value": "st:IIIB,IIIC,IV,IVA,IVB"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 3211
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 2562
+  },
+  "ms": 13761,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05361174",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05361174-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a confirmed diagnosis of Stage IIIC, IIID, or IV unresectable or metastatic melanoma or Stage III or IV NSCLC.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05361174-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants who is assessed as having at least one resectable lesion.",
+        "numberValue": 18,
+        "stringValue": "18 Years"
+      },
+      {
+        "id": "NCT05361174-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants who are >70 years of age may be allowed to enroll after the investigator discusses with the medical monitor.",
+        "numberValue": 70,
+        "stringValue": "70 Years"
+      },
+      {
+        "id": "NCT05361174-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants who have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05361174-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Participants who have symptomatic untreated brain metastases.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05361174-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Cohort 2 (NSCLC): Participants who should have received no more than 3 prior lines of therapy and: those without oncogene-driven tumors: Have progressed within 12 weeks after last dose of anti-PD-1/PD-L1 blocking antibody those with oncogene-driven tumors: Have progressed during/after >=1 targeted therapy AND either: platinum doublet chemotherapy Or within 12 weeks after last dose of anti-PD-1/PD-L1 blocking antibody",
+        "reasonFuzzy": "Prior therapy requirements depend on cohort type and molecular profile with multiple alternative branches, which cannot be expressed as a single typed check."
+      },
+      {
+        "id": "NCT05361174-resectable",
+        "polarity": "inclusion",
+        "sourceText": "Participants who is assessed as having at least one resectable lesion.",
+        "reasonFuzzy": "Assessment of resectable lesions involves investigator judgment and procedures, not a typed clinical trial check."
+      },
+      {
+        "id": "NCT05361174-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants who have at least one measurable lesion, following resection of the lesion for IOV-4001 generation.",
+        "reasonFuzzy": "Measurable disease is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT05361174-organ",
+        "polarity": "inclusion",
+        "sourceText": "Participants who have adequate organ function.",
+        "reasonFuzzy": "Adequate organ function without specific numeric cutoffs is a clinical judgment."
+      },
+      {
+        "id": "NCT05361174-cardiac-pulmonary",
+        "polarity": "inclusion",
+        "sourceText": "Cardiac function test required. Pulmonary function test may be required.",
+        "reasonFuzzy": "Test requirements are procedural rather than clear typed numerical cutoffs."
+      },
+      {
+        "id": "NCT05361174-steroid",
+        "polarity": "exclusion",
+        "sourceText": "Participants who require systemic steroid therapy 10 mg/day prednisone or another steroid equivalent dose.",
+        "reasonFuzzy": "Steroid equivalence dosing is complex and best captured as a fuzzy criterion."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05361174",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05361174-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a confirmed diagnosis of Stage IIIC, IIID, or IV unresectable or metastatic melanoma or Stage III or IV NSCLC.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT05361174-age-min",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adult Participants With Unresectable or Metastatic Melanoma or Stage III or IV Non-small-cell Lung Cancer",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05361174-age-max",
+        "kind": "age_max",
+        "polarity": "inclusion",
+        "sourceText": "maximumAge: 70 Years",
+        "numberValue": 70,
+        "stages": [],
+        "stringValue": "Participants who is >70 years of age may be allowed to enroll after the investigator discusses with the medical monitor."
+      },
+      {
+        "id": "NCT05361174-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants who have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05361174-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Participants who have received the following previous therapy: ... Cohort 2 (NSCLC): Participants who should have received no more than 3 prior lines of therapy and: ...",
+        "reasonFuzzy": "Prior therapy and lines of therapy requirements are specific to cohorts (melanoma vs NSCLC and oncogene-driven status) and cannot be expressed as a single simple prior lines or therapy check."
+      },
+      {
+        "id": "NCT05361174-resectable",
+        "polarity": "inclusion",
+        "sourceText": "Participants who is assessed as having at least one resectable lesion.",
+        "reasonFuzzy": "Assessments of resectable lesions are subjective clinical judgments."
+      },
+      {
+        "id": "NCT05361174-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants who have at least one measurable lesion, following resection of the lesion for IOV-4001 generation.",
+        "reasonFuzzy": "Measurable disease is a subjective imaging judgment."
+      },
+      {
+        "id": "NCT05361174-brain",
+        "polarity": "exclusion",
+        "sourceText": "Participants who have symptomatic untreated brain metastases.",
+        "reasonFuzzy": "Symptomatic untreated brain metastases combine multiple dimensions and do not fit a standard clear typed brain_mets category."
+      }
+    ]
+  }
+}

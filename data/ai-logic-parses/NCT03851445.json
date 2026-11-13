@@ -1,0 +1,252 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT03851445",
+  "briefTitle": "Lung-MAP: A Master Screening Protocol for Previously-Treated Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T06:02:22.643Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT03851445-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Disease must be Stage IV as defined in Section 4.0, or recurrent.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Disease must be Stage IV as defined in Section 4.0, or recurrent.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT03851445-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Patients must be ≥ 18 years of age.",
+      "numberValue": 18,
+      "evidence_quote": "Patients must be ≥ 18 years of age.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT03851445-histology",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have pathologically proven non-small cell lung cancer (all histologic types) confirmed by tumor biopsy and/or fine-needle aspiration. Disease must be Stage IV as defined in Section 4.0, or recurrent. The primary diagnosis of non-small cell lung cancer should be established using the current WHO/IASLC-classification of Thoracic Malignancies. All histologies, including mixed, are allowed.",
+      "reasonFuzzy": "All histologies are allowed, so a specific histology_in check is not needed."
+    },
+    {
+      "id": "NCT03851445-prior-therapy-lines",
+      "polarity": "inclusion",
+      "sourceText": "To be eligible for screening at progression, patients must have received at least one line of systemic therapy for any stage of disease (Stages I-IV) and must have progressed during or following their most recent line of therapy.",
+      "reasonFuzzy": "The prior-therapy rules depend on screening at progression versus pre-screening and stage of prior treatment, making it too complex for a single typed check."
+    },
+    {
+      "id": "NCT03851445-biopsy-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have adequate tumor tissue available, defined as ≥ 20% tumor cells and ≥ 0.2 mm3 tumor volume.",
+      "reasonFuzzy": "Tissue sample adequacy and biopsy requirements are procedural, not standard clinical eligibility lab or biomarker checks."
+    },
+    {
+      "id": "NCT03851445-biomarkers-excl",
+      "polarity": "exclusion",
+      "sourceText": "Patients with known EGFR sensitizing mutations, EGFR T790M mutation, ALK gene fusion, ROS 1 gene rearrangement, or BRAF V600E mutation are not eligible unless they have progressed following all standard of care targeted therapy.",
+      "reasonFuzzy": "Exclusion depends on prior progression status on targeted therapy, which qualifies the biomarker exclusion condition."
+    },
+    {
+      "id": "NCT03851445-histology",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have pathologically proven non-small cell lung cancer (all histologic types) confirmed by tumor biopsy and/or fine-needle aspiration. All histologies, including mixed, are allowed.",
+      "reasonFuzzy": "All histologies are allowed without restriction to specific categories in the histology list."
+    },
+    {
+      "id": "NCT03851445-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "To be eligible for screening at progression, patients must have received at least one line of systemic therapy for any stage of disease (Stages I-IV) and must have progressed during or following their most recent line of therapy...",
+      "reasonFuzzy": "Prior therapy rules are complex with conditional requirements based on stage and progression timing, preventing a single typed check."
+    },
+    {
+      "id": "NCT03851445-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have adequate tumor tissue available, defined as ≥ 20% tumor cells and ≥ 0.2 mm3 tumor volume.",
+      "reasonFuzzy": "Tissue adequacy and handling requirements are specific specimen quality checks rather than standard patient lab criteria."
+    },
+    {
+      "id": "NCT03851445-mutations",
+      "polarity": "exclusion",
+      "sourceText": "Patients with known EGFR sensitizing mutations, EGFR T790M mutation, ALK gene fusion, ROS 1 gene rearrangement, or BRAF V600E mutation are not eligible unless they have progressed following all standard of care targeted therapy.",
+      "reasonFuzzy": "Multiple mutation exclusions with complex exceptions for prior progression do not fit a simple typed gene status check."
+    },
+    {
+      "id": "NCT03851445-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have Zubrod performance status 0-1 (see Section 10.2) documented within 28 days prior to Step 1 registration.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 2831
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 7358
+  },
+  "ms": 18204,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT03851445",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT03851445-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Disease must be Stage IV as defined in Section 4.0, or recurrent.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT03851445-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have Zubrod performance status 0-1 (see Section 10.2) documented within 28 days prior to Step 1 registration.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT03851445-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients must be ≥ 18 years of age.",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT03851445-histology",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have pathologically proven non-small cell lung cancer (all histologic types) confirmed by tumor biopsy and/or fine-needle aspiration. Disease must be Stage IV as defined in Section 4.0, or recurrent. The primary diagnosis of non-small cell lung cancer should be established using the current WHO/IASLC-classification of Thoracic Malignancies. All histologies, including mixed, are allowed.",
+        "reasonFuzzy": "All histologies are allowed, so a specific histology_in check is not needed."
+      },
+      {
+        "id": "NCT03851445-prior-therapy-lines",
+        "polarity": "inclusion",
+        "sourceText": "To be eligible for screening at progression, patients must have received at least one line of systemic therapy for any stage of disease (Stages I-IV) and must have progressed during or following their most recent line of therapy.",
+        "reasonFuzzy": "The prior-therapy rules depend on screening at progression versus pre-screening and stage of prior treatment, making it too complex for a single typed check."
+      },
+      {
+        "id": "NCT03851445-biopsy-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have adequate tumor tissue available, defined as ≥ 20% tumor cells and ≥ 0.2 mm3 tumor volume.",
+        "reasonFuzzy": "Tissue sample adequacy and biopsy requirements are procedural, not standard clinical eligibility lab or biomarker checks."
+      },
+      {
+        "id": "NCT03851445-biomarkers-excl",
+        "polarity": "exclusion",
+        "sourceText": "Patients with known EGFR sensitizing mutations, EGFR T790M mutation, ALK gene fusion, ROS 1 gene rearrangement, or BRAF V600E mutation are not eligible unless they have progressed following all standard of care targeted therapy.",
+        "reasonFuzzy": "Exclusion depends on prior progression status on targeted therapy, which qualifies the biomarker exclusion condition."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT03851445",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT03851445-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Disease must be Stage IV as defined in Section 4.0, or recurrent.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT03851445-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have Zubrod performance status 0-1 (see Section 10.2) documented within 28 days prior to Step 1 registration.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT03851445-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Patients must be ≥ 18 years of age.",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT03851445-histology",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have pathologically proven non-small cell lung cancer (all histologic types) confirmed by tumor biopsy and/or fine-needle aspiration. All histologies, including mixed, are allowed.",
+        "reasonFuzzy": "All histologies are allowed without restriction to specific categories in the histology list."
+      },
+      {
+        "id": "NCT03851445-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "To be eligible for screening at progression, patients must have received at least one line of systemic therapy for any stage of disease (Stages I-IV) and must have progressed during or following their most recent line of therapy...",
+        "reasonFuzzy": "Prior therapy rules are complex with conditional requirements based on stage and progression timing, preventing a single typed check."
+      },
+      {
+        "id": "NCT03851445-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have adequate tumor tissue available, defined as ≥ 20% tumor cells and ≥ 0.2 mm3 tumor volume.",
+        "reasonFuzzy": "Tissue adequacy and handling requirements are specific specimen quality checks rather than standard patient lab criteria."
+      },
+      {
+        "id": "NCT03851445-mutations",
+        "polarity": "exclusion",
+        "sourceText": "Patients with known EGFR sensitizing mutations, EGFR T790M mutation, ALK gene fusion, ROS 1 gene rearrangement, or BRAF V600E mutation are not eligible unless they have progressed following all standard of care targeted therapy.",
+        "reasonFuzzy": "Multiple mutation exclusions with complex exceptions for prior progression do not fit a simple typed gene status check."
+      }
+    ]
+  }
+}

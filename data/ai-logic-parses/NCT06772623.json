@@ -1,0 +1,269 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06772623",
+  "briefTitle": "Study to Evaluate Adverse Events and Efficacy of Intravenous (IV) Telisotuzumab Adizutecan in Combination With a PD-1 Immune Checkpoint Inhibitor in Adult Participants With Advanced or Metastatic Non-Squamous NSCLC With No Prior Treatment for Advanced Disease, and No Actionable Genomic Alterations",
+  "parsedAt": "2026-11-12T05:54:54.990Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06772623-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Must have measurable disease per response evaluation criteria in solid tumors (RECIST) v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06772623-lines",
+      "polarity": "inclusion",
+      "sourceText": "For Part 1, participants must have had no more than 1 systemic therapy for advanced disease including platinum-based chemotherapy or an immune checkpoint inhibitor (as monotherapy or in combination with chemotherapy), or appropriate targeted therapy for an actionable gene alteration, if applicable, for epidermal growth factor receptor (EGFR) wild-type (WT) NSq NSCLC. For Part 2, participants must have no prior systemic therapy for advanced disease, no known actionable genomic alteration.",
+      "reasonFuzzy": "Prior-line limits and requirements differ by study part and include complex genomic wild-type conditions, so they cannot be expressed as a simple typed prior_lines check."
+    },
+    {
+      "id": "NCT06772623-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Must have documented programmed death ligand 1 (PD-L1) status.",
+      "reasonFuzzy": "The requirement is for documented status rather than a specific numeric PD-L1 cutoff."
+    },
+    {
+      "id": "NCT06772623-cmet",
+      "polarity": "inclusion",
+      "sourceText": "For Part 2, participant must have evaluable c-Met immunohistochemistry (IHC) result per central testing prior to randomization.",
+      "reasonFuzzy": "There is no typed kind for c-Met IHC status."
+    },
+    {
+      "id": "NCT06772623-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known uncontrolled metastases to the central nervous system.",
+      "reasonFuzzy": "Uncontrolled CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT06772623-ild",
+      "polarity": "exclusion",
+      "sourceText": "History of interstitial lung disease (ILD) or pneumonitis that required treatment with systemic steroids, or any evidence of active ILD or pneumonitis on screening chest computed tomography (CT) scan.",
+      "reasonFuzzy": "ILD history with steroid requirements or CT findings is a complex clinical evaluation rather than a typed lab or stage check."
+    },
+    {
+      "id": "NCT06772623-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Must have measurable disease per response evaluation criteria in solid tumors (RECIST) v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06772623-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "For Part 1, participants must have had no more than 1 systemic therapy for advanced disease including platinum-based chemotherapy or an immune checkpoint inhibitor (as monotherapy or in combination with chemotherapy), or appropriate targeted therapy for an actionable gene alteration, if applicable, for epidermal growth factor receptor (EGFR) wild-type (WT) NSq NSCLC. For Part 2, participants must have no prior systemic therapy for advanced disease, no known actionable genomic alteration.",
+      "reasonFuzzy": "Prior-line and treatment requirements vary by study part and include complex conditional clauses, so they cannot be expressed as a single typed check."
+    },
+    {
+      "id": "NCT06772623-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Must have documented programmed death ligand 1 (PD-L1) status.",
+      "reasonFuzzy": "Documentation of status does not specify a quantitative minimum or maximum PD-L1 cutoff value."
+    },
+    {
+      "id": "NCT06772623-cmet",
+      "polarity": "inclusion",
+      "sourceText": "For Part 2, participant must have evaluable c-Met immunohistochemistry (IHC) result per central testing prior to randomization.",
+      "reasonFuzzy": "c-Met IHC result requirement is not a typed biomarker check supported by the allowed kinds."
+    },
+    {
+      "id": "NCT06772623-brain",
+      "polarity": "exclusion",
+      "sourceText": "Known uncontrolled metastases to the central nervous system.",
+      "reasonFuzzy": "Uncontrolled CNS metastases is a subjective term and does not map to a clean typed brain_mets status."
+    },
+    {
+      "id": "NCT06772623-ild",
+      "polarity": "exclusion",
+      "sourceText": "History of interstitial lung disease (ILD) or pneumonitis that required treatment with systemic steroids, or any evidence of active ILD or pneumonitis on screening chest computed tomography (CT) scan.",
+      "reasonFuzzy": "History of ILD/pneumonitis and CT scan evaluation are not typed exclusion kinds."
+    },
+    {
+      "id": "NCT06772623-age",
+      "polarity": "inclusion",
+      "sourceText": "Adult Participants",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06772623-histology",
+      "polarity": "inclusion",
+      "sourceText": "Must have histologically documented non-squamous (NSq) non small cell lung carcinoma (NSCLC) that is locally advanced or metastatic will be enrolled into the study.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 1,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 1,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "Adult Participants"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 1,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2718
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 2828
+  },
+  "ms": 13532,
+  "isGold": true,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06772623",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06772623-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Must have histologically documented non-squamous (NSq) non small cell lung carcinoma (NSCLC) that is locally advanced or metastatic will be enrolled into the study.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06772623-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Must have measurable disease per response evaluation criteria in solid tumors (RECIST) v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06772623-lines",
+        "polarity": "inclusion",
+        "sourceText": "For Part 1, participants must have had no more than 1 systemic therapy for advanced disease including platinum-based chemotherapy or an immune checkpoint inhibitor (as monotherapy or in combination with chemotherapy), or appropriate targeted therapy for an actionable gene alteration, if applicable, for epidermal growth factor receptor (EGFR) wild-type (WT) NSq NSCLC. For Part 2, participants must have no prior systemic therapy for advanced disease, no known actionable genomic alteration.",
+        "reasonFuzzy": "Prior-line limits and requirements differ by study part and include complex genomic wild-type conditions, so they cannot be expressed as a simple typed prior_lines check."
+      },
+      {
+        "id": "NCT06772623-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "Must have documented programmed death ligand 1 (PD-L1) status.",
+        "reasonFuzzy": "The requirement is for documented status rather than a specific numeric PD-L1 cutoff."
+      },
+      {
+        "id": "NCT06772623-cmet",
+        "polarity": "inclusion",
+        "sourceText": "For Part 2, participant must have evaluable c-Met immunohistochemistry (IHC) result per central testing prior to randomization.",
+        "reasonFuzzy": "There is no typed kind for c-Met IHC status."
+      },
+      {
+        "id": "NCT06772623-brain",
+        "polarity": "exclusion",
+        "sourceText": "Known uncontrolled metastases to the central nervous system.",
+        "reasonFuzzy": "Uncontrolled CNS disease is not a clean typed brain_mets status of none, treated_stable, or untreated."
+      },
+      {
+        "id": "NCT06772623-ild",
+        "polarity": "exclusion",
+        "sourceText": "History of interstitial lung disease (ILD) or pneumonitis that required treatment with systemic steroids, or any evidence of active ILD or pneumonitis on screening chest computed tomography (CT) scan.",
+        "reasonFuzzy": "ILD history with steroid requirements or CT findings is a complex clinical evaluation rather than a typed lab or stage check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06772623",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06772623-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Must have histologically documented non-squamous (NSq) non small cell lung carcinoma (NSCLC) that is locally advanced or metastatic will be enrolled into the study.",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06772623-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Adult Participants",
+        "numberValue": 18
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06772623-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Must have measurable disease per response evaluation criteria in solid tumors (RECIST) v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06772623-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "For Part 1, participants must have had no more than 1 systemic therapy for advanced disease including platinum-based chemotherapy or an immune checkpoint inhibitor (as monotherapy or in combination with chemotherapy), or appropriate targeted therapy for an actionable gene alteration, if applicable, for epidermal growth factor receptor (EGFR) wild-type (WT) NSq NSCLC. For Part 2, participants must have no prior systemic therapy for advanced disease, no known actionable genomic alteration.",
+        "reasonFuzzy": "Prior-line and treatment requirements vary by study part and include complex conditional clauses, so they cannot be expressed as a single typed check."
+      },
+      {
+        "id": "NCT06772623-pdl1",
+        "polarity": "inclusion",
+        "sourceText": "Must have documented programmed death ligand 1 (PD-L1) status.",
+        "reasonFuzzy": "Documentation of status does not specify a quantitative minimum or maximum PD-L1 cutoff value."
+      },
+      {
+        "id": "NCT06772623-cmet",
+        "polarity": "inclusion",
+        "sourceText": "For Part 2, participant must have evaluable c-Met immunohistochemistry (IHC) result per central testing prior to randomization.",
+        "reasonFuzzy": "c-Met IHC result requirement is not a typed biomarker check supported by the allowed kinds."
+      },
+      {
+        "id": "NCT06772623-brain",
+        "polarity": "exclusion",
+        "sourceText": "Known uncontrolled metastases to the central nervous system.",
+        "reasonFuzzy": "Uncontrolled CNS metastases is a subjective term and does not map to a clean typed brain_mets status."
+      },
+      {
+        "id": "NCT06772623-ild",
+        "polarity": "exclusion",
+        "sourceText": "History of interstitial lung disease (ILD) or pneumonitis that required treatment with systemic steroids, or any evidence of active ILD or pneumonitis on screening chest computed tomography (CT) scan.",
+        "reasonFuzzy": "History of ILD/pneumonitis and CT scan evaluation are not typed exclusion kinds."
+      }
+    ]
+  }
+}

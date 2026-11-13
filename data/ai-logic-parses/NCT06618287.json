@@ -1,0 +1,254 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06618287",
+  "briefTitle": "A Study to Evaluate the Safety, Tolerability, Drug Levels, and Preliminary Efficacy of BMS-986507 Combinations in Adult Participants With Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T10:09:02.188Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06618287-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Participants must have an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06618287-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have at least one measurable lesion per response evaluation criteria in solid tumors.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06618287-life",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a life expectancy of at least 3 months at the time of the first dose.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06618287-nsclc-stage",
+      "polarity": "inclusion",
+      "sourceText": "Group A: Participants must have pathologically confirmed locally advanced or metastatic NSCLC with an EGFR exon 19 deletion or L858R mutation in exon 21...",
+      "reasonFuzzy": "The trial enrolls locally advanced or metastatic disease without a numbered stage list, remaining in scope as advanced NSCLC."
+    },
+    {
+      "id": "NCT06618287-histology",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have any mixed Small Cell Lung Cancer (SCLC) and Non-Small Cell Lung Cancer (NSCLC) histology.",
+      "reasonFuzzy": "Mixed SCLC and NSCLC histology exclusion is not a standard single-histology inclusion check."
+    },
+    {
+      "id": "NCT06618287-egfr-excl",
+      "polarity": "exclusion",
+      "sourceText": "Participants with known mutations in EGFR will be excluded (Group A,B and E).",
+      "reasonFuzzy": "Exclusion of known EGFR mutations applies selectively to specific study groups and conflicts with inclusion requirements for other groups."
+    },
+    {
+      "id": "NCT06618287-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have at least one measurable lesion per response evaluation criteria in solid tumors.",
+      "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06618287-life",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a life expectancy of at least 3 months at the time of the first dose.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT06618287-groups",
+      "polarity": "inclusion",
+      "sourceText": "Group A: Participants must have pathologically confirmed locally advanced or metastatic NSCLC... Group B: Participants must have pathologically confirmed locally advanced or metastatic NSCLC... Group C... Group D... Group E...",
+      "reasonFuzzy": "Multiple disease groups with distinct conditions and cohorts cannot be expressed as a single straightforward typed rule."
+    },
+    {
+      "id": "NCT06618287-histology",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have any mixed Small Cell Lung Cancer (SCLC) and Non-Small Cell Lung Cancer (NSCLC) histology.",
+      "reasonFuzzy": "Mixed histology exclusion is not a standard typed histology rule."
+    },
+    {
+      "id": "NCT06618287-egfr-excl",
+      "polarity": "exclusion",
+      "sourceText": "Participants with known mutations in EGFR will be excluded (Group A,B and E).",
+      "reasonFuzzy": "Exclusion of known EGFR mutations applies selectively to specific groups and conflicts conditionally with inclusion criteria."
+    },
+    {
+      "id": "NCT06618287-egfr-variant",
+      "polarity": "inclusion",
+      "sourceText": "Group A: Participants must have pathologically confirmed locally advanced or metastatic NSCLC with an EGFR exon 19 deletion or L858R mutation in exon 21, either alone or in combination with other EGFR mutations, which may include T790M in exon 20. Participants with other EGFR mutations (including but not limited to, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations, etc.) will also be allowed",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06618287-egfr-var",
+      "polarity": "inclusion",
+      "sourceText": "Group A: Participants must have pathologically confirmed locally advanced or metastatic NSCLC with an EGFR exon 19 deletion or L858R mutation in exon 21, either alone or in combination with other EGFR mutations, which may include T790M in exon 20. Participants with other EGFR mutations (including but not limited to, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations, etc.) will also be allowed",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:exon 19 deletion, l858r mutation, exon 21 l861q, exon 18 g719x, exon 20 s768i"
+        },
+        {
+          "side": "b-only",
+          "kind": "egfr_variant_in",
+          "polarity": "inclusion",
+          "value": "s:exon 19 deletion or l858r"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 4163
+  },
+  "runB": {
+    "typedEmitted": 2,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 12394
+  },
+  "ms": 24545,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06618287",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06618287-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06618287-egfr-variant",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Group A: Participants must have pathologically confirmed locally advanced or metastatic NSCLC with an EGFR exon 19 deletion or L858R mutation in exon 21, either alone or in combination with other EGFR mutations, which may include T790M in exon 20. Participants with other EGFR mutations (including but not limited to, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations, etc.) will also be allowed",
+        "stringValue": "exon 19 deletion, L858R mutation, exon 21 L861Q, exon 18 G719X, exon 20 S768I"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06618287-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have at least one measurable lesion per response evaluation criteria in solid tumors.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06618287-life",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a life expectancy of at least 3 months at the time of the first dose.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06618287-nsclc-stage",
+        "polarity": "inclusion",
+        "sourceText": "Group A: Participants must have pathologically confirmed locally advanced or metastatic NSCLC with an EGFR exon 19 deletion or L858R mutation in exon 21...",
+        "reasonFuzzy": "The trial enrolls locally advanced or metastatic disease without a numbered stage list, remaining in scope as advanced NSCLC."
+      },
+      {
+        "id": "NCT06618287-histology",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have any mixed Small Cell Lung Cancer (SCLC) and Non-Small Cell Lung Cancer (NSCLC) histology.",
+        "reasonFuzzy": "Mixed SCLC and NSCLC histology exclusion is not a standard single-histology inclusion check."
+      },
+      {
+        "id": "NCT06618287-egfr-excl",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known mutations in EGFR will be excluded (Group A,B and E).",
+        "reasonFuzzy": "Exclusion of known EGFR mutations applies selectively to specific study groups and conflicts with inclusion requirements for other groups."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06618287",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06618287-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06618287-egfr-var",
+        "kind": "egfr_variant_in",
+        "polarity": "inclusion",
+        "sourceText": "Group A: Participants must have pathologically confirmed locally advanced or metastatic NSCLC with an EGFR exon 19 deletion or L858R mutation in exon 21, either alone or in combination with other EGFR mutations, which may include T790M in exon 20. Participants with other EGFR mutations (including but not limited to, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations, etc.) will also be allowed",
+        "stringValue": "exon 19 deletion or L858R"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06618287-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have at least one measurable lesion per response evaluation criteria in solid tumors.",
+        "reasonFuzzy": "Measurable disease per RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06618287-life",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a life expectancy of at least 3 months at the time of the first dose.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT06618287-groups",
+        "polarity": "inclusion",
+        "sourceText": "Group A: Participants must have pathologically confirmed locally advanced or metastatic NSCLC... Group B: Participants must have pathologically confirmed locally advanced or metastatic NSCLC... Group C... Group D... Group E...",
+        "reasonFuzzy": "Multiple disease groups with distinct conditions and cohorts cannot be expressed as a single straightforward typed rule."
+      },
+      {
+        "id": "NCT06618287-histology",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have any mixed Small Cell Lung Cancer (SCLC) and Non-Small Cell Lung Cancer (NSCLC) histology.",
+        "reasonFuzzy": "Mixed histology exclusion is not a standard typed histology rule."
+      },
+      {
+        "id": "NCT06618287-egfr-excl",
+        "polarity": "exclusion",
+        "sourceText": "Participants with known mutations in EGFR will be excluded (Group A,B and E).",
+        "reasonFuzzy": "Exclusion of known EGFR mutations applies selectively to specific groups and conflicts conditionally with inclusion criteria."
+      }
+    ]
+  }
+}

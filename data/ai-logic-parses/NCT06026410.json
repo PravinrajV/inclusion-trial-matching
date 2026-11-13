@@ -1,0 +1,242 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06026410",
+  "briefTitle": "KO-2806 Monotherapy and Combination Therapies in Advanced Solid Tumors",
+  "parsedAt": "2026-11-12T06:21:54.264Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06026410-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "At least 18 years of age.",
+      "numberValue": 18,
+      "evidence_quote": "At least 18 years of age.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06026410-arms",
+      "polarity": "inclusion",
+      "sourceText": "Arm #1 (KO-2806 monotherapy): Patients who have progressed on, or are refractory to, standard of care (SOC) treatments with advanced solid tumors, specifically: HRAS-mutant and/or amplified tumors (any solid tumor type); HRAS overexpression (only for HNSCC tumors); KRAS and/or NRAS, and/or HRAS-mutant and/or amplified NSCLC or CRC; KRAS-mutant and/or amplified PDAC...",
+      "reasonFuzzy": "Eligibility rules are split across multiple different study arms with distinct mutation, prior line, and combination requirements that cannot be captured in a single typed check."
+    },
+    {
+      "id": "NCT06026410-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06026410-karnofsky",
+      "polarity": "inclusion",
+      "sourceText": "Karnofsky Performance Status of 70 or higher with no clinically significant deterioration over the previous 2 weeks.",
+      "reasonFuzzy": "Karnofsky Performance Status is not an allowed typed check (only ECOG is allowed)."
+    },
+    {
+      "id": "NCT06026410-brain",
+      "polarity": "exclusion",
+      "sourceText": "Spinal cord compression, leptomeningeal disease, or clinically active CNS metastases.",
+      "reasonFuzzy": "Clinically active CNS metastases is a subjective or undefined condition rather than a clean typed brain_mets rule."
+    },
+    {
+      "id": "NCT06026410-arms",
+      "polarity": "inclusion",
+      "sourceText": "Arm #1 (KO-2806 monotherapy): Patients who have progressed on, or are refractory to, standard of care (SOC) treatments with advanced solid tumors, specifically: HRAS-mutant and/or amplified tumors (any solid tumor type); HRAS overexpression (only for HNSCC tumors); KRAS and/or NRAS, and/or HRAS-mutant and/or amplified NSCLC or CRC; KRAS-mutant and/or amplified PDAC...",
+      "reasonFuzzy": "Eligibility criteria depend on multiple study arms with complex and distinct molecular and prior treatment requirements that cannot be captured in a single typed check."
+    },
+    {
+      "id": "NCT06026410-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06026410-karnofsky",
+      "polarity": "inclusion",
+      "sourceText": "Karnofsky Performance Status of 70 or higher with no clinically significant deterioration over the previous 2 weeks.",
+      "reasonFuzzy": "Karnofsky performance status is not among the allowed typed performance status kinds (only ecog_max is allowed)."
+    },
+    {
+      "id": "NCT06026410-brain",
+      "polarity": "exclusion",
+      "sourceText": "Spinal cord compression, leptomeningeal disease, or clinically active CNS metastases.",
+      "reasonFuzzy": "Clinically active CNS metastases is a subjective or multi-part exclusion that is not a clean typed brain_mets status."
+    },
+    {
+      "id": "NCT06026410-fti",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with an FTI or HRAS inhibitor.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06026410-hras",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with an FTI or HRAS inhibitor.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:fti"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:hras inhibitor"
+        }
+      ],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 3625
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 2778
+  },
+  "ms": 14400,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06026410",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06026410-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "At least 18 years of age.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06026410-fti",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with an FTI or HRAS inhibitor.",
+        "stringValue": "FTI"
+      },
+      {
+        "id": "NCT06026410-hras",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with an FTI or HRAS inhibitor.",
+        "stringValue": "HRAS inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06026410-arms",
+        "polarity": "inclusion",
+        "sourceText": "Arm #1 (KO-2806 monotherapy): Patients who have progressed on, or are refractory to, standard of care (SOC) treatments with advanced solid tumors, specifically: HRAS-mutant and/or amplified tumors (any solid tumor type); HRAS overexpression (only for HNSCC tumors); KRAS and/or NRAS, and/or HRAS-mutant and/or amplified NSCLC or CRC; KRAS-mutant and/or amplified PDAC...",
+        "reasonFuzzy": "Eligibility rules are split across multiple different study arms with distinct mutation, prior line, and combination requirements that cannot be captured in a single typed check."
+      },
+      {
+        "id": "NCT06026410-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06026410-karnofsky",
+        "polarity": "inclusion",
+        "sourceText": "Karnofsky Performance Status of 70 or higher with no clinically significant deterioration over the previous 2 weeks.",
+        "reasonFuzzy": "Karnofsky Performance Status is not an allowed typed check (only ECOG is allowed)."
+      },
+      {
+        "id": "NCT06026410-brain",
+        "polarity": "exclusion",
+        "sourceText": "Spinal cord compression, leptomeningeal disease, or clinically active CNS metastases.",
+        "reasonFuzzy": "Clinically active CNS metastases is a subjective or undefined condition rather than a clean typed brain_mets rule."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06026410",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06026410-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "At least 18 years of age.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06026410-fti",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with an FTI or HRAS inhibitor.",
+        "stringValue": "FTI"
+      },
+      {
+        "id": "NCT06026410-hras",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with an FTI or HRAS inhibitor.",
+        "stringValue": "HRAS inhibitor"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06026410-arms",
+        "polarity": "inclusion",
+        "sourceText": "Arm #1 (KO-2806 monotherapy): Patients who have progressed on, or are refractory to, standard of care (SOC) treatments with advanced solid tumors, specifically: HRAS-mutant and/or amplified tumors (any solid tumor type); HRAS overexpression (only for HNSCC tumors); KRAS and/or NRAS, and/or HRAS-mutant and/or amplified NSCLC or CRC; KRAS-mutant and/or amplified PDAC...",
+        "reasonFuzzy": "Eligibility criteria depend on multiple study arms with complex and distinct molecular and prior treatment requirements that cannot be captured in a single typed check."
+      },
+      {
+        "id": "NCT06026410-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06026410-karnofsky",
+        "polarity": "inclusion",
+        "sourceText": "Karnofsky Performance Status of 70 or higher with no clinically significant deterioration over the previous 2 weeks.",
+        "reasonFuzzy": "Karnofsky performance status is not among the allowed typed performance status kinds (only ecog_max is allowed)."
+      },
+      {
+        "id": "NCT06026410-brain",
+        "polarity": "exclusion",
+        "sourceText": "Spinal cord compression, leptomeningeal disease, or clinically active CNS metastases.",
+        "reasonFuzzy": "Clinically active CNS metastases is a subjective or multi-part exclusion that is not a clean typed brain_mets status."
+      }
+    ]
+  }
+}

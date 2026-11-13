@@ -1,0 +1,404 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06996782",
+  "briefTitle": "A Platform Study in Non-Small Cell Lung Cancer (NSCLC)",
+  "parsedAt": "2026-11-12T10:41:50.840Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06996782-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Participants with confirmed squamous or non-squamous NSCLC with a current Stage IV mNSCLC.",
+      "stages": [
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Participants with confirmed squamous or non-squamous NSCLC with a current Stage IV mNSCLC.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06996782-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Provision of acceptable archival tumour tissue (or fresh tumour tissue biopsy if archival tumour tissue is not available and if clinically feasible) is mandatory at screening.",
+      "reasonFuzzy": "Mandatory tissue biopsy is a procedural and judgment-based requirement."
+    },
+    {
+      "id": "NCT06996782-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease as defined by at least one lesion that can be accurately measured at baseline as ≥ 10 mm at the longest diameter.",
+      "reasonFuzzy": "Measurable disease assessment is an imaging and judgment-based requirement."
+    },
+    {
+      "id": "NCT06996782-life",
+      "polarity": "inclusion",
+      "sourceText": "Minimum life expectancy of 12 weeks in the opinion of the investigator.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06996782-egfr-excl",
+      "polarity": "exclusion",
+      "sourceText": "Participants with epidermal growth factor receptor mutations, anaplastic lymphoma receptor fusions or any other known genomic alteration for which targeted therapy is approved in the first line per local standard of care.",
+      "reasonFuzzy": "Excludes multiple specific or unspecified genomic alterations requiring targeted therapy, which cannot be modeled as a single typed status check."
+    },
+    {
+      "id": "NCT06996782-histology-excl",
+      "polarity": "exclusion",
+      "sourceText": "Presence of small cell and neuroendocrine histology components.",
+      "reasonFuzzy": "Exclusion of small cell and neuroendocrine components is not a simple typed histology inclusion/exclusion list."
+    },
+    {
+      "id": "NCT06996782-brain-excl",
+      "polarity": "exclusion",
+      "sourceText": "Spinal cord compression or symptomatic brain metastases.",
+      "reasonFuzzy": "Symptomatic brain metastases do not fit standard typed allowed brain metastases categories."
+    },
+    {
+      "id": "NCT06996782-tissue",
+      "polarity": "inclusion",
+      "sourceText": "Provision of acceptable archival tumour tissue (or fresh tumour tissue biopsy if archival tumour tissue is not available and if clinically feasible) is mandatory at screening.",
+      "reasonFuzzy": "Tissue provision and biopsy feasibility are procedural and subjective requirements."
+    },
+    {
+      "id": "NCT06996782-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease as defined by at least one lesion that can be accurately measured at baseline as ≥ 10 mm at the longest diameter.",
+      "reasonFuzzy": "Measurable disease assessment is a clinical imaging judgment."
+    },
+    {
+      "id": "NCT06996782-life",
+      "polarity": "inclusion",
+      "sourceText": "Minimum life expectancy of 12 weeks in the opinion of the investigator.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06996782-histology-excl",
+      "polarity": "exclusion",
+      "sourceText": "Presence of small cell and neuroendocrine histology components.",
+      "reasonFuzzy": "Exclusion of small cell and neuroendocrine components is not covered by a typed histology check."
+    },
+    {
+      "id": "NCT06996782-brain",
+      "polarity": "exclusion",
+      "sourceText": "Spinal cord compression or symptomatic brain metastases.",
+      "reasonFuzzy": "Symptomatic brain metastases is not a clean typed brain_mets status."
+    },
+    {
+      "id": "NCT06996782-histology",
+      "polarity": "inclusion",
+      "sourceText": "Participants with confirmed squamous or non-squamous NSCLC with a current Stage IV mNSCLC.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06996782-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Prior systemic therapy received for advanced or mNSCLC.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06996782-egfr",
+      "polarity": "exclusion",
+      "sourceText": "Participants with epidermal growth factor receptor mutations, anaplastic lymphoma receptor fusions or any other known genomic alteration for which targeted therapy is approved in the first line per local standard of care.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06996782-alk",
+      "polarity": "exclusion",
+      "sourceText": "Participants with epidermal growth factor receptor mutations, anaplastic lymphoma receptor fusions or any other known genomic alteration for which targeted therapy is approved in the first line per local standard of care.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06996782-prior-lines",
+      "polarity": "exclusion",
+      "sourceText": "Prior systemic therapy received for advanced or mNSCLC.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06996782-prior-therapy-1",
+      "polarity": "exclusion",
+      "sourceText": "Prior exposure to an anti-T-cell immunoreceptor with Ig and Immunoreceptor Tyrosine-based Inhibition Motif domains (TIGIT) therapy or immune-oncology agent such as anti-programmed cell death protein 1 (PD-1), anti-PD-L1, or anti-cytotoxic T-lymphocyte associated antigen 4 (CTLA-4), or any other anti-cancer therapy targeting immune-regulatory receptors or mechanisms.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06996782-prior-therapy-2",
+      "polarity": "exclusion",
+      "sourceText": "Prior exposure to anti-vascular endothelial growth factor (VEGF) therapy.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06996782-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Programmed death-ligand 1 (PD-L1) tumour proportion score (TPS) ≥ 1% (per local report).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 7,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 2,
+      "disagreements": 7,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos,squamous"
+        },
+        {
+          "side": "a-only",
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "value": "n:0"
+        },
+        {
+          "side": "b-only",
+          "kind": "egfr_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "b-only",
+          "kind": "alk_status",
+          "polarity": "exclusion",
+          "value": "p:present"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_lines_max",
+          "polarity": "exclusion",
+          "value": "n:0"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-programmed cell death protein 1 (pd-1)"
+        },
+        {
+          "side": "b-only",
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-vascular endothelial growth factor (vegf)"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:1"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 6,
+    "attempts": 2,
+    "ms": 17117
+  },
+  "runB": {
+    "typedEmitted": 7,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 4703
+  },
+  "ms": 29803,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06996782",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06996782-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants with confirmed squamous or non-squamous NSCLC with a current Stage IV mNSCLC.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06996782-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants with confirmed squamous or non-squamous NSCLC with a current Stage IV mNSCLC.",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      },
+      {
+        "id": "NCT06996782-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Programmed death-ligand 1 (PD-L1) tumour proportion score (TPS) ≥ 1% (per local report).",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06996782-prior-lines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Prior systemic therapy received for advanced or mNSCLC.",
+        "numberValue": 0
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06996782-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Provision of acceptable archival tumour tissue (or fresh tumour tissue biopsy if archival tumour tissue is not available and if clinically feasible) is mandatory at screening.",
+        "reasonFuzzy": "Mandatory tissue biopsy is a procedural and judgment-based requirement."
+      },
+      {
+        "id": "NCT06996782-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease as defined by at least one lesion that can be accurately measured at baseline as ≥ 10 mm at the longest diameter.",
+        "reasonFuzzy": "Measurable disease assessment is an imaging and judgment-based requirement."
+      },
+      {
+        "id": "NCT06996782-life",
+        "polarity": "inclusion",
+        "sourceText": "Minimum life expectancy of 12 weeks in the opinion of the investigator.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06996782-egfr-excl",
+        "polarity": "exclusion",
+        "sourceText": "Participants with epidermal growth factor receptor mutations, anaplastic lymphoma receptor fusions or any other known genomic alteration for which targeted therapy is approved in the first line per local standard of care.",
+        "reasonFuzzy": "Excludes multiple specific or unspecified genomic alterations requiring targeted therapy, which cannot be modeled as a single typed status check."
+      },
+      {
+        "id": "NCT06996782-histology-excl",
+        "polarity": "exclusion",
+        "sourceText": "Presence of small cell and neuroendocrine histology components.",
+        "reasonFuzzy": "Exclusion of small cell and neuroendocrine components is not a simple typed histology inclusion/exclusion list."
+      },
+      {
+        "id": "NCT06996782-brain-excl",
+        "polarity": "exclusion",
+        "sourceText": "Spinal cord compression or symptomatic brain metastases.",
+        "reasonFuzzy": "Symptomatic brain metastases do not fit standard typed allowed brain metastases categories."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06996782",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06996782-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants with confirmed squamous or non-squamous NSCLC with a current Stage IV mNSCLC.",
+        "stages": [
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06996782-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Programmed death-ligand 1 (PD-L1) tumour proportion score (TPS) ≥ 1% (per local report).",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06996782-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with epidermal growth factor receptor mutations, anaplastic lymphoma receptor fusions or any other known genomic alteration for which targeted therapy is approved in the first line per local standard of care.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06996782-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Participants with epidermal growth factor receptor mutations, anaplastic lymphoma receptor fusions or any other known genomic alteration for which targeted therapy is approved in the first line per local standard of care.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06996782-prior-lines",
+        "kind": "prior_lines_max",
+        "polarity": "exclusion",
+        "sourceText": "Prior systemic therapy received for advanced or mNSCLC.",
+        "numberValue": 0
+      },
+      {
+        "id": "NCT06996782-prior-therapy-1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior exposure to an anti-T-cell immunoreceptor with Ig and Immunoreceptor Tyrosine-based Inhibition Motif domains (TIGIT) therapy or immune-oncology agent such as anti-programmed cell death protein 1 (PD-1), anti-PD-L1, or anti-cytotoxic T-lymphocyte associated antigen 4 (CTLA-4), or any other anti-cancer therapy targeting immune-regulatory receptors or mechanisms.",
+        "stringValue": "anti-programmed cell death protein 1 (PD-1)"
+      },
+      {
+        "id": "NCT06996782-prior-therapy-2",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior exposure to anti-vascular endothelial growth factor (VEGF) therapy.",
+        "stringValue": "anti-vascular endothelial growth factor (VEGF)"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06996782-tissue",
+        "polarity": "inclusion",
+        "sourceText": "Provision of acceptable archival tumour tissue (or fresh tumour tissue biopsy if archival tumour tissue is not available and if clinically feasible) is mandatory at screening.",
+        "reasonFuzzy": "Tissue provision and biopsy feasibility are procedural and subjective requirements."
+      },
+      {
+        "id": "NCT06996782-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease as defined by at least one lesion that can be accurately measured at baseline as ≥ 10 mm at the longest diameter.",
+        "reasonFuzzy": "Measurable disease assessment is a clinical imaging judgment."
+      },
+      {
+        "id": "NCT06996782-life",
+        "polarity": "inclusion",
+        "sourceText": "Minimum life expectancy of 12 weeks in the opinion of the investigator.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06996782-histology-excl",
+        "polarity": "exclusion",
+        "sourceText": "Presence of small cell and neuroendocrine histology components.",
+        "reasonFuzzy": "Exclusion of small cell and neuroendocrine components is not covered by a typed histology check."
+      },
+      {
+        "id": "NCT06996782-brain",
+        "polarity": "exclusion",
+        "sourceText": "Spinal cord compression or symptomatic brain metastases.",
+        "reasonFuzzy": "Symptomatic brain metastases is not a clean typed brain_mets status."
+      }
+    ]
+  }
+}

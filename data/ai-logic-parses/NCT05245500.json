@@ -1,0 +1,307 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05245500",
+  "briefTitle": "Phase 1 Study of MRTX1719 in Solid Tumors With MTAP Deletion",
+  "parsedAt": "2026-11-12T06:11:42.778Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT05245500-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥ 18 years.",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥ 18 years.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT05245500-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05245500-mtap",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed diagnosis of a solid tumor malignancy with homozygous deletion of the MTAP gene detected in tumor tissue.",
+      "reasonFuzzy": "There is no typed biomarker kind for MTAP deletion."
+    },
+    {
+      "id": "NCT05245500-stage",
+      "polarity": "inclusion",
+      "sourceText": "Unresectable or metastatic disease.",
+      "reasonFuzzy": "Unresectable or metastatic disease is described generally without an explicit numbered stage list."
+    },
+    {
+      "id": "NCT05245500-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Presence of a tumor lesion amenable to mandatory biopsy for pharmacodynamic evaluation at baseline and on-study unless Sponsor-confirmed as medically unsafe or infeasible.",
+      "reasonFuzzy": "Mandatory biopsy and willingness or anatomical amenability to undergo a procedure are subjective judgment criteria."
+    },
+    {
+      "id": "NCT05245500-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function.",
+      "reasonFuzzy": "Adequate organ function without explicit lab value cutoffs is subjective."
+    },
+    {
+      "id": "NCT05245500-hemorrhage",
+      "polarity": "exclusion",
+      "sourceText": "History of significant hemoptysis or hemorrhage within 4 weeks of the first dose of study treatment.",
+      "reasonFuzzy": "A washout window for hemorrhage is not a simple typed lab cutoff."
+    },
+    {
+      "id": "NCT05245500-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery within 4 weeks of first dose of study treatment.",
+      "reasonFuzzy": "A washout window for major surgery is not a simple typed lab cutoff."
+    },
+    {
+      "id": "NCT05245500-gi",
+      "polarity": "exclusion",
+      "sourceText": "History of intestinal disease, inflammatory bowel disease, major gastric surgery, or other gastrointestinal conditions (eg, uncontrolled nausea, vomiting, malabsorption syndrome) likely to alter absorption of study treatment or result in inability to swallow oral medications.",
+      "reasonFuzzy": "Gastrointestinal conditions and absorption impairment are clinical medical histories."
+    },
+    {
+      "id": "NCT05245500-cardiac",
+      "polarity": "exclusion",
+      "sourceText": "Cardiac abnormalities.",
+      "reasonFuzzy": "Cardiac abnormalities without explicit criteria are subjective medical histories."
+    },
+    {
+      "id": "NCT05245500-mtap",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed diagnosis of a solid tumor malignancy with homozygous deletion of the MTAP gene detected in tumor tissue.",
+      "reasonFuzzy": "MTAP gene deletion is not a standard typed biomarker kind."
+    },
+    {
+      "id": "NCT05245500-stage",
+      "polarity": "inclusion",
+      "sourceText": "Unresectable or metastatic disease.",
+      "reasonFuzzy": "Unresectable or metastatic disease is described without a numbered stage list."
+    },
+    {
+      "id": "NCT05245500-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Presence of a tumor lesion amenable to mandatory biopsy for pharmacodynamic evaluation at baseline and on-study unless Sponsor-confirmed as medically unsafe or infeasible.",
+      "reasonFuzzy": "Willingness to undergo a mandatory biopsy or procedure is subjective and judgment-based."
+    },
+    {
+      "id": "NCT05245500-prior-prmt5-mat2a",
+      "polarity": "exclusion",
+      "sourceText": "Prior treatment with a PRMT5 or MAT2A inhibitor therapy.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05245500-brain",
+      "polarity": "exclusion",
+      "sourceText": "Active brain metastases or carcinomatous meningitis.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:prmt5 or mat2a inhibitor"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 3981
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 2451
+  },
+  "ms": 14424,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05245500",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05245500-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05245500-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05245500-prior-prmt5-mat2a",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a PRMT5 or MAT2A inhibitor therapy.",
+        "stringValue": "PRMT5 or MAT2A inhibitor"
+      },
+      {
+        "id": "NCT05245500-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active brain metastases or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05245500-mtap",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed diagnosis of a solid tumor malignancy with homozygous deletion of the MTAP gene detected in tumor tissue.",
+        "reasonFuzzy": "There is no typed biomarker kind for MTAP deletion."
+      },
+      {
+        "id": "NCT05245500-stage",
+        "polarity": "inclusion",
+        "sourceText": "Unresectable or metastatic disease.",
+        "reasonFuzzy": "Unresectable or metastatic disease is described generally without an explicit numbered stage list."
+      },
+      {
+        "id": "NCT05245500-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Presence of a tumor lesion amenable to mandatory biopsy for pharmacodynamic evaluation at baseline and on-study unless Sponsor-confirmed as medically unsafe or infeasible.",
+        "reasonFuzzy": "Mandatory biopsy and willingness or anatomical amenability to undergo a procedure are subjective judgment criteria."
+      },
+      {
+        "id": "NCT05245500-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function.",
+        "reasonFuzzy": "Adequate organ function without explicit lab value cutoffs is subjective."
+      },
+      {
+        "id": "NCT05245500-hemorrhage",
+        "polarity": "exclusion",
+        "sourceText": "History of significant hemoptysis or hemorrhage within 4 weeks of the first dose of study treatment.",
+        "reasonFuzzy": "A washout window for hemorrhage is not a simple typed lab cutoff."
+      },
+      {
+        "id": "NCT05245500-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery within 4 weeks of first dose of study treatment.",
+        "reasonFuzzy": "A washout window for major surgery is not a simple typed lab cutoff."
+      },
+      {
+        "id": "NCT05245500-gi",
+        "polarity": "exclusion",
+        "sourceText": "History of intestinal disease, inflammatory bowel disease, major gastric surgery, or other gastrointestinal conditions (eg, uncontrolled nausea, vomiting, malabsorption syndrome) likely to alter absorption of study treatment or result in inability to swallow oral medications.",
+        "reasonFuzzy": "Gastrointestinal conditions and absorption impairment are clinical medical histories."
+      },
+      {
+        "id": "NCT05245500-cardiac",
+        "polarity": "exclusion",
+        "sourceText": "Cardiac abnormalities.",
+        "reasonFuzzy": "Cardiac abnormalities without explicit criteria are subjective medical histories."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05245500",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05245500-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥ 18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT05245500-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05245500-prior-prmt5-mat2a",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior treatment with a PRMT5 or MAT2A inhibitor therapy.",
+        "stringValue": "PRMT5 or MAT2A inhibitor"
+      },
+      {
+        "id": "NCT05245500-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Active brain metastases or carcinomatous meningitis.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05245500-mtap",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed diagnosis of a solid tumor malignancy with homozygous deletion of the MTAP gene detected in tumor tissue.",
+        "reasonFuzzy": "MTAP gene deletion is not a standard typed biomarker kind."
+      },
+      {
+        "id": "NCT05245500-stage",
+        "polarity": "inclusion",
+        "sourceText": "Unresectable or metastatic disease.",
+        "reasonFuzzy": "Unresectable or metastatic disease is described without a numbered stage list."
+      },
+      {
+        "id": "NCT05245500-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Presence of a tumor lesion amenable to mandatory biopsy for pharmacodynamic evaluation at baseline and on-study unless Sponsor-confirmed as medically unsafe or infeasible.",
+        "reasonFuzzy": "Willingness to undergo a mandatory biopsy or procedure is subjective and judgment-based."
+      }
+    ]
+  }
+}

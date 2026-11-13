@@ -1,0 +1,300 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07397338",
+  "briefTitle": "Study of RAS(ON) Inhibitors in Combination With Ivonescimab in Patients With Solid Tumors",
+  "parsedAt": "2026-11-12T11:53:33.690Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07397338-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "At least 18 years old and has provided informed consent.",
+      "numberValue": 18,
+      "evidence_quote": "At least 18 years old and has provided informed consent.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07397338-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07397338-mutation-scope",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed, locally advanced or metastatic solid tumor malignancy with documented RAS mutation in KRAS, HRAS, or NRAS.",
+      "reasonFuzzy": "Includes mutations in HRAS and NRAS which do not have typed checks, and applies broadly to solid tumors."
+    },
+    {
+      "id": "NCT07397338-prior-lines",
+      "polarity": "inclusion",
+      "sourceText": "Solid tumor or CRC previously treated with no more than 2 prior lines of therapy for advanced disease and progressed or been intolerant to prior standard therapies (Arm C for Part 2 Dose Expansion).",
+      "reasonFuzzy": "Prior-line limits and requirements vary by specific trial arm/part."
+    },
+    {
+      "id": "NCT07397338-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07397338-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function (bone marrow, liver, kidney, coagulation, endocrine).",
+      "reasonFuzzy": "No explicit numeric lab cutoffs are stated in the source text."
+    },
+    {
+      "id": "NCT07397338-compliance",
+      "polarity": "exclusion",
+      "sourceText": "Patient is unable or unwilling to comply with protocol-required study visits or procedures.",
+      "reasonFuzzy": "Willingness and compliance are subjective judgment-based criteria."
+    },
+    {
+      "id": "NCT07397338-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery within 4 weeks prior to receiving study drug(s).",
+      "reasonFuzzy": "Washout windows for surgery are not a simple lab cutoff kind."
+    },
+    {
+      "id": "NCT07397338-ras",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed, locally advanced or metastatic solid tumor malignancy with documented RAS mutation in KRAS, HRAS, or NRAS.",
+      "reasonFuzzy": "The trial includes HRAS and NRAS mutations in addition to KRAS, but there are no specific typed kinds for HRAS or NRAS status."
+    },
+    {
+      "id": "NCT07397338-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Received and progressed or been intolerant to prior standard therapy (Part 1 Dose Exploration). / Non-squamous NSCLC without a treatable driver mutation in other oncogenes that has not received prior systemic treatment (Arms A & B for Part 2 Dose Expansion). / Solid tumor or CRC previously treated with no more than 2 prior lines of therapy for advanced disease and progressed or been intolerant to prior standard therapies (Arm C for Part 2 Dose Expansion).",
+      "reasonFuzzy": "Prior treatment and line limits vary substantially by study part and arm, so they cannot be reduced to a single typed prior lines or prior therapy check."
+    },
+    {
+      "id": "NCT07397338-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07397338-surgery",
+      "polarity": "exclusion",
+      "sourceText": "Major surgery within 4 weeks prior to receiving study drug(s).",
+      "reasonFuzzy": "Washout windows for major surgery are not a typed lab cutoff."
+    },
+    {
+      "id": "NCT07397338-compliance",
+      "polarity": "exclusion",
+      "sourceText": "Patient is unable or unwilling to comply with protocol-required study visits or procedures.",
+      "reasonFuzzy": "Willingness to undergo procedures and comply with visits is a subjective judgment."
+    },
+    {
+      "id": "NCT07397338-histology",
+      "polarity": "inclusion",
+      "sourceText": "Non-squamous NSCLC without a treatable driver mutation in other oncogenes that has not received prior systemic treatment (Arms A \\& B for Part 2 Dose Expansion).",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT07397338-kras",
+      "polarity": "inclusion",
+      "sourceText": "Histologically confirmed, locally advanced or metastatic solid tumor malignancy with documented RAS mutation in KRAS, HRAS, or NRAS.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "histology_in",
+          "polarity": "inclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 6,
+    "attempts": 1,
+    "ms": 10510
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 19183
+  },
+  "ms": 37660,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07397338",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07397338-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "At least 18 years old and has provided informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07397338-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07397338-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed, locally advanced or metastatic solid tumor malignancy with documented RAS mutation in KRAS, HRAS, or NRAS.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07397338-histology",
+        "kind": "histology_in",
+        "polarity": "inclusion",
+        "sourceText": "Non-squamous NSCLC without a treatable driver mutation in other oncogenes that has not received prior systemic treatment (Arms A \\& B for Part 2 Dose Expansion).",
+        "histologies": [
+          "adenocarcinoma",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07397338-mutation-scope",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed, locally advanced or metastatic solid tumor malignancy with documented RAS mutation in KRAS, HRAS, or NRAS.",
+        "reasonFuzzy": "Includes mutations in HRAS and NRAS which do not have typed checks, and applies broadly to solid tumors."
+      },
+      {
+        "id": "NCT07397338-prior-lines",
+        "polarity": "inclusion",
+        "sourceText": "Solid tumor or CRC previously treated with no more than 2 prior lines of therapy for advanced disease and progressed or been intolerant to prior standard therapies (Arm C for Part 2 Dose Expansion).",
+        "reasonFuzzy": "Prior-line limits and requirements vary by specific trial arm/part."
+      },
+      {
+        "id": "NCT07397338-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07397338-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function (bone marrow, liver, kidney, coagulation, endocrine).",
+        "reasonFuzzy": "No explicit numeric lab cutoffs are stated in the source text."
+      },
+      {
+        "id": "NCT07397338-compliance",
+        "polarity": "exclusion",
+        "sourceText": "Patient is unable or unwilling to comply with protocol-required study visits or procedures.",
+        "reasonFuzzy": "Willingness and compliance are subjective judgment-based criteria."
+      },
+      {
+        "id": "NCT07397338-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery within 4 weeks prior to receiving study drug(s).",
+        "reasonFuzzy": "Washout windows for surgery are not a simple lab cutoff kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07397338",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07397338-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "At least 18 years old and has provided informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07397338-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07397338-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed, locally advanced or metastatic solid tumor malignancy with documented RAS mutation in KRAS, HRAS, or NRAS.",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07397338-ras",
+        "polarity": "inclusion",
+        "sourceText": "Histologically confirmed, locally advanced or metastatic solid tumor malignancy with documented RAS mutation in KRAS, HRAS, or NRAS.",
+        "reasonFuzzy": "The trial includes HRAS and NRAS mutations in addition to KRAS, but there are no specific typed kinds for HRAS or NRAS status."
+      },
+      {
+        "id": "NCT07397338-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Received and progressed or been intolerant to prior standard therapy (Part 1 Dose Exploration). / Non-squamous NSCLC without a treatable driver mutation in other oncogenes that has not received prior systemic treatment (Arms A & B for Part 2 Dose Expansion). / Solid tumor or CRC previously treated with no more than 2 prior lines of therapy for advanced disease and progressed or been intolerant to prior standard therapies (Arm C for Part 2 Dose Expansion).",
+        "reasonFuzzy": "Prior treatment and line limits vary substantially by study part and arm, so they cannot be reduced to a single typed prior lines or prior therapy check."
+      },
+      {
+        "id": "NCT07397338-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07397338-surgery",
+        "polarity": "exclusion",
+        "sourceText": "Major surgery within 4 weeks prior to receiving study drug(s).",
+        "reasonFuzzy": "Washout windows for major surgery are not a typed lab cutoff."
+      },
+      {
+        "id": "NCT07397338-compliance",
+        "polarity": "exclusion",
+        "sourceText": "Patient is unable or unwilling to comply with protocol-required study visits or procedures.",
+        "reasonFuzzy": "Willingness to undergo procedures and comply with visits is a subjective judgment."
+      }
+    ]
+  }
+}

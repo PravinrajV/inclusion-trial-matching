@@ -1,0 +1,371 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06444815",
+  "briefTitle": "A Study of VET3-TGI in Patients With Solid Tumors",
+  "parsedAt": "2026-11-12T09:22:38.396Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06444815-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status 0 or 1",
+      "numberValue": 1,
+      "evidence_quote": "ECOG performance status 0 or 1",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06444815-solidtumor",
+      "polarity": "inclusion",
+      "sourceText": "Have pathologically confirmed, advanced, unresectable, or metastatic solid tumors.",
+      "reasonFuzzy": "Broad solid tumor inclusion mentioning NSCLC as part of a basket trial without a specific stage list or NSCLC-only restriction."
+    },
+    {
+      "id": "NCT06444815-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Failed, intolerant to, or refused potentially curative treatment options, including but not limited to, standard of care molecularly targeted agents, immunotherapy (e.g., anti -pembrolizumab/PDL1 antibodies), and chemotherapy",
+      "reasonFuzzy": "Prior therapy requirement is framed as having failed or refused standard options rather than a specific prior line count or typed prior therapy list."
+    },
+    {
+      "id": "NCT06444815-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease as per RECIST 1.1 criteria",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06444815-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "At least one tumor amenable to safe ITu injections and/or biopsies",
+      "reasonFuzzy": "Procedural feasibility for injections and biopsies is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT06444815-organ",
+      "polarity": "inclusion",
+      "sourceText": "Demonstrate adequate organ function",
+      "reasonFuzzy": "General adequate organ function without specific numeric cutoffs provided in the text."
+    },
+    {
+      "id": "NCT06444815-compliance",
+      "polarity": "inclusion",
+      "sourceText": "Must be willing to comply with all protocol procedures and adhere to post-treatment care instructions",
+      "reasonFuzzy": "Willingness to comply is a subjective behavioral assessment."
+    },
+    {
+      "id": "NCT06444815-washout",
+      "polarity": "exclusion",
+      "sourceText": "Prior systemic therapy washout (dependent upon the therapy)",
+      "reasonFuzzy": "Washout window is variable and dependent upon the therapy, not a fixed simple cutoff."
+    },
+    {
+      "id": "NCT06444815-anticoag",
+      "polarity": "exclusion",
+      "sourceText": "Requires use of anti-platelet or anti-coagulant therapy that cannot be safely suspended for per protocol biopsies or intra-tumoral injections.",
+      "reasonFuzzy": "Safety assessment regarding suspension of anti-coagulant therapy is a clinical judgment."
+    },
+    {
+      "id": "NCT06444815-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06444815-solid-tumor",
+      "polarity": "inclusion",
+      "sourceText": "Have pathologically confirmed, advanced, unresectable, or metastatic solid tumors. Preferred indications include, but are not limited to, breast carcinoma, bladder carcinoma, cervical squamous carcinoma, colorectal carcinoma, esophageal carcinoma, head and neck squamous carcinoma, renal cell carcinoma, ovarian carcinoma, sarcoma, thymoma, and uterine carcinoma.",
+      "reasonFuzzy": "Broad solid tumor basket trial that includes non-small cell lung cancer without explicit staging restrictions."
+    },
+    {
+      "id": "NCT06444815-prior-therapy",
+      "polarity": "inclusion",
+      "sourceText": "Failed, intolerant to, or refused potentially curative treatment options, including but not limited to, standard of care molecularly targeted agents, immunotherapy (e.g., anti -pembrolizumab/PDL1 antibodies), and chemotherapy",
+      "reasonFuzzy": "General prior therapy requirement involving failure, intolerance, or refusal of standard care options rather than a specific prior line or named drug count."
+    },
+    {
+      "id": "NCT06444815-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease as per RECIST 1.1 criteria",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06444815-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "At least one tumor amenable to safe ITu injections and/or biopsies",
+      "reasonFuzzy": "Procedural and anatomical accessibility is a subjective judgment."
+    },
+    {
+      "id": "NCT06444815-compliance",
+      "polarity": "inclusion",
+      "sourceText": "Must be willing to comply with all protocol procedures and adhere to post-treatment care instructions",
+      "reasonFuzzy": "Willingness to comply is a subjective judgment."
+    },
+    {
+      "id": "NCT06444815-washout",
+      "polarity": "exclusion",
+      "sourceText": "Prior systemic therapy washout (dependent upon the therapy)",
+      "reasonFuzzy": "Washout window is dependent upon therapy and not a simple static lab cutoff."
+    },
+    {
+      "id": "NCT06444815-anticoag",
+      "polarity": "exclusion",
+      "sourceText": "Requires use of anti-platelet or anti-coagulant therapy that cannot be safely suspended for per protocol biopsies or intra-tumoral injections.",
+      "reasonFuzzy": "Suspension feasibility is a clinical judgment."
+    },
+    {
+      "id": "NCT06444815-organ-function",
+      "polarity": "inclusion",
+      "sourceText": "Demonstrate adequate organ function",
+      "reasonFuzzy": "General organ function requirement without specific lab thresholds in the text."
+    },
+    {
+      "id": "NCT06444815-age",
+      "polarity": "inclusion",
+      "sourceText": "minimumAge: 18 Years",
+      "reasonFuzzy": "evidence quote was not a verbatim substring of the trial text"
+    },
+    {
+      "id": "NCT06444815-brain",
+      "polarity": "exclusion",
+      "sourceText": "CNS metastases and/or carcinomatous meningitis that have not been completely resected or completely irradiated.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06444815-brain",
+      "polarity": "exclusion",
+      "sourceText": "CNS metastases and/or carcinomatous meningitis that have not been completely resected or completely irradiated.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "quoteB": {
+      "kept": 2,
+      "unquoted": 1,
+      "unquotedItems": [
+        {
+          "kind": "age_min",
+          "polarity": "inclusion",
+          "reason": "evidence quote was not a verbatim substring of the trial text",
+          "quote": "minimumAge: 18 Years"
+        }
+      ]
+    },
+    "consistency": {
+      "agreed": 1,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        },
+        {
+          "side": "b-only",
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:treated_stable"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 2
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 3341
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 8,
+    "attempts": 1,
+    "ms": 3108
+  },
+  "ms": 14445,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06444815",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06444815-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06444815-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06444815-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "CNS metastases and/or carcinomatous meningitis that have not been completely resected or completely irradiated.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06444815-solidtumor",
+        "polarity": "inclusion",
+        "sourceText": "Have pathologically confirmed, advanced, unresectable, or metastatic solid tumors.",
+        "reasonFuzzy": "Broad solid tumor inclusion mentioning NSCLC as part of a basket trial without a specific stage list or NSCLC-only restriction."
+      },
+      {
+        "id": "NCT06444815-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Failed, intolerant to, or refused potentially curative treatment options, including but not limited to, standard of care molecularly targeted agents, immunotherapy (e.g., anti -pembrolizumab/PDL1 antibodies), and chemotherapy",
+        "reasonFuzzy": "Prior therapy requirement is framed as having failed or refused standard options rather than a specific prior line count or typed prior therapy list."
+      },
+      {
+        "id": "NCT06444815-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease as per RECIST 1.1 criteria",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06444815-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "At least one tumor amenable to safe ITu injections and/or biopsies",
+        "reasonFuzzy": "Procedural feasibility for injections and biopsies is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT06444815-organ",
+        "polarity": "inclusion",
+        "sourceText": "Demonstrate adequate organ function",
+        "reasonFuzzy": "General adequate organ function without specific numeric cutoffs provided in the text."
+      },
+      {
+        "id": "NCT06444815-compliance",
+        "polarity": "inclusion",
+        "sourceText": "Must be willing to comply with all protocol procedures and adhere to post-treatment care instructions",
+        "reasonFuzzy": "Willingness to comply is a subjective behavioral assessment."
+      },
+      {
+        "id": "NCT06444815-washout",
+        "polarity": "exclusion",
+        "sourceText": "Prior systemic therapy washout (dependent upon the therapy)",
+        "reasonFuzzy": "Washout window is variable and dependent upon the therapy, not a fixed simple cutoff."
+      },
+      {
+        "id": "NCT06444815-anticoag",
+        "polarity": "exclusion",
+        "sourceText": "Requires use of anti-platelet or anti-coagulant therapy that cannot be safely suspended for per protocol biopsies or intra-tumoral injections.",
+        "reasonFuzzy": "Safety assessment regarding suspension of anti-coagulant therapy is a clinical judgment."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06444815",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06444815-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "minimumAge: 18 Years",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06444815-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status 0 or 1",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06444815-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "CNS metastases and/or carcinomatous meningitis that have not been completely resected or completely irradiated.",
+        "allowedBrainMets": [
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06444815-solid-tumor",
+        "polarity": "inclusion",
+        "sourceText": "Have pathologically confirmed, advanced, unresectable, or metastatic solid tumors. Preferred indications include, but are not limited to, breast carcinoma, bladder carcinoma, cervical squamous carcinoma, colorectal carcinoma, esophageal carcinoma, head and neck squamous carcinoma, renal cell carcinoma, ovarian carcinoma, sarcoma, thymoma, and uterine carcinoma.",
+        "reasonFuzzy": "Broad solid tumor basket trial that includes non-small cell lung cancer without explicit staging restrictions."
+      },
+      {
+        "id": "NCT06444815-prior-therapy",
+        "polarity": "inclusion",
+        "sourceText": "Failed, intolerant to, or refused potentially curative treatment options, including but not limited to, standard of care molecularly targeted agents, immunotherapy (e.g., anti -pembrolizumab/PDL1 antibodies), and chemotherapy",
+        "reasonFuzzy": "General prior therapy requirement involving failure, intolerance, or refusal of standard care options rather than a specific prior line or named drug count."
+      },
+      {
+        "id": "NCT06444815-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease as per RECIST 1.1 criteria",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06444815-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "At least one tumor amenable to safe ITu injections and/or biopsies",
+        "reasonFuzzy": "Procedural and anatomical accessibility is a subjective judgment."
+      },
+      {
+        "id": "NCT06444815-compliance",
+        "polarity": "inclusion",
+        "sourceText": "Must be willing to comply with all protocol procedures and adhere to post-treatment care instructions",
+        "reasonFuzzy": "Willingness to comply is a subjective judgment."
+      },
+      {
+        "id": "NCT06444815-washout",
+        "polarity": "exclusion",
+        "sourceText": "Prior systemic therapy washout (dependent upon the therapy)",
+        "reasonFuzzy": "Washout window is dependent upon therapy and not a simple static lab cutoff."
+      },
+      {
+        "id": "NCT06444815-anticoag",
+        "polarity": "exclusion",
+        "sourceText": "Requires use of anti-platelet or anti-coagulant therapy that cannot be safely suspended for per protocol biopsies or intra-tumoral injections.",
+        "reasonFuzzy": "Suspension feasibility is a clinical judgment."
+      },
+      {
+        "id": "NCT06444815-organ-function",
+        "polarity": "inclusion",
+        "sourceText": "Demonstrate adequate organ function",
+        "reasonFuzzy": "General organ function requirement without specific lab thresholds in the text."
+      }
+    ]
+  }
+}

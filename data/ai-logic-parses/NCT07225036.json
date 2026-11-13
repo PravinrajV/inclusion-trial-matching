@@ -1,0 +1,456 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07225036",
+  "briefTitle": "Promoting Immunotherapy Efficacy With Low-Dose Liver RT",
+  "parsedAt": "2026-11-12T11:05:33.138Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07225036-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "Age ≥18 years.",
+      "numberValue": 18,
+      "evidence_quote": "Age ≥18 years.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07225036-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "ECOG performance status ≤2 (or Karnofsky ≥60%, see Appendix A).",
+      "numberValue": 2,
+      "presence": "present",
+      "stringValue": "Karnofsky ≥60%",
+      "evidence_quote": "ECOG performance status ≤2 (or Karnofsky ≥60%, see Appendix A).",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07225036-egfr",
+      "kind": "egfr_status",
+      "polarity": "exclusion",
+      "sourceText": "Patients with NSCLC are ineligible for enrollment in cohort 1 if the presence of the following driver mutations are noted: EGFR, ALK, ROS1, RET.",
+      "presence": "present",
+      "evidence_quote": "Patients with NSCLC are ineligible for enrollment in cohort 1 if the presence of the following driver mutations are noted: EGFR, ALK, ROS1, RET.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07225036-alk",
+      "kind": "alk_status",
+      "polarity": "exclusion",
+      "sourceText": "Patients with NSCLC are ineligible for enrollment in cohort 1 if the presence of the following driver mutations are noted: EGFR, ALK, ROS1, RET.",
+      "presence": "present",
+      "evidence_quote": "Patients with NSCLC are ineligible for enrollment in cohort 1 if the presence of the following driver mutations are noted: EGFR, ALK, ROS1, RET.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07225036-ros1",
+      "kind": "ros1_status",
+      "polarity": "exclusion",
+      "sourceText": "Patients with NSCLC are ineligible for enrollment in cohort 1 if the presence of the following driver mutations are noted: EGFR, ALK, ROS1, RET.",
+      "presence": "present",
+      "evidence_quote": "Patients with NSCLC are ineligible for enrollment in cohort 1 if the presence of the following driver mutations are noted: EGFR, ALK, ROS1, RET.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07225036-organ",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have adequate organ and marrow function to receive standard of care immunotherapy and/or chemoimmunotherapy as per the treating medical oncologist.",
+      "reasonFuzzy": "Organ and marrow function is deferred to treating medical oncologist discretion without specific numeric lab cutoffs."
+    },
+    {
+      "id": "NCT07225036-immunotherapy",
+      "polarity": "inclusion",
+      "sourceText": "Must be planning to, and able to, undergo active treatment with PD-L1 or PD-1 checkpoint immunotherapy given per standard care throughout the duration of the RT intervention per their treating physician.",
+      "reasonFuzzy": "Treatment planning and treating physician determination are subjective clinical criteria."
+    },
+    {
+      "id": "NCT07225036-histology",
+      "polarity": "inclusion",
+      "sourceText": "Biopsy proven Non-Small Cell Lung Cancer (NSCLC) or Melanoma.",
+      "reasonFuzzy": "Includes alternative diagnosis of Melanoma alongside NSCLC, and biopsy confirmation is a procedural requirement."
+    },
+    {
+      "id": "NCT07225036-liver",
+      "polarity": "inclusion",
+      "sourceText": "Radiographic evidence of liver metastases.",
+      "reasonFuzzy": "Radiographic evidence of metastases requires imaging interpretation and is not a typed biomarker or stage list."
+    },
+    {
+      "id": "NCT07225036-contraception",
+      "polarity": "inclusion",
+      "sourceText": "Women of child-bearing potential and men must agree to use adequate contraception (e.g., hormonal or barrier method of birth control; abstinence) prior to study entry and for the duration of study participation.",
+      "reasonFuzzy": "Contraception compliance and child-bearing potential are protocol behavioral requirements."
+    },
+    {
+      "id": "NCT07225036-consent",
+      "polarity": "inclusion",
+      "sourceText": "Ability to understand and the willingness to sign a written informed consent document. Legally authorized representatives may sign and give informed consent on behalf of study participants.",
+      "reasonFuzzy": "Willingness to sign informed consent is a subjective study participation rule."
+    },
+    {
+      "id": "NCT07225036-insurance",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have insurance authorization to proceed with radiotherapy prior to initiation of radiation treatment on study",
+      "reasonFuzzy": "Insurance authorization is an administrative requirement, not a medical eligibility check."
+    },
+    {
+      "id": "NCT07225036-adjuvant",
+      "polarity": "exclusion",
+      "sourceText": "Patients with prior immunotherapy use in the adjuvant setting for NSCLC or Melanoma are eligible unless the adjuvant immunotherapy was delivered within 6 months of enrollment.",
+      "reasonFuzzy": "Exclusion rule is conditional on prior adjuvant immunotherapy timing relative to enrollment."
+    },
+    {
+      "id": "NCT07225036-ret",
+      "polarity": "exclusion",
+      "sourceText": "Patients with NSCLC are ineligible for enrollment in cohort 1 if the presence of the following driver mutations are noted: EGFR, ALK, ROS1, RET.",
+      "reasonFuzzy": "RET mutation exclusion is present in the text, but there is no typed ret_status kind allowed."
+    },
+    {
+      "id": "NCT07225036-illness",
+      "polarity": "exclusion",
+      "sourceText": "Patients with uncontrolled intercurrent illness or any other significant condition(s) that would make participation in this protocol unreasonably hazardous, in the opinion of the Investigator.",
+      "reasonFuzzy": "Investigator opinion-based exclusion for intercurrent illness."
+    },
+    {
+      "id": "NCT07225036-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Patients with a prior or concurrent malignancy whose natural history or treatment has the potential to interfere with the safety or efficacy assessment of the investigational regimen in the opinion of the Investigator.",
+      "reasonFuzzy": "Investigator opinion-based exclusion for prior or concurrent malignancies."
+    },
+    {
+      "id": "NCT07225036-pregnant",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant women are excluded from this study considering the use of ionizing radiation.",
+      "reasonFuzzy": "Pregnancy status exclusion is a standard clinical status rule without a specific typed kind."
+    },
+    {
+      "id": "NCT07225036-organ",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have adequate organ and marrow function to receive standard of care immunotherapy and/or chemoimmunotherapy as per the treating medical oncologist.",
+      "reasonFuzzy": "Organ function criteria are deferred to treating medical oncologist discretion without explicit lab cutoffs."
+    },
+    {
+      "id": "NCT07225036-immunotherapy",
+      "polarity": "inclusion",
+      "sourceText": "Must be planning to, and able to, undergo active treatment with PD-L1 or PD-1 checkpoint immunotherapy given per standard care throughout the duration of the RT intervention per their treating physician.",
+      "reasonFuzzy": "Requires planned concurrent therapy and investigator discretion."
+    },
+    {
+      "id": "NCT07225036-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Biopsy proven Non-Small Cell Lung Cancer (NSCLC) or Melanoma.",
+      "reasonFuzzy": "Enrolls multiple distinct tumor types (NSCLC or melanoma)."
+    },
+    {
+      "id": "NCT07225036-liver",
+      "polarity": "inclusion",
+      "sourceText": "Radiographic evidence of liver metastases.",
+      "reasonFuzzy": "Radiographic evidence of metastases is an imaging judgment."
+    },
+    {
+      "id": "NCT07225036-consent",
+      "polarity": "inclusion",
+      "sourceText": "Ability to understand and the willingness to sign a written informed consent document. Legally authorized representatives may sign and give informed consent on behalf of study participants.",
+      "reasonFuzzy": "Willingness to sign informed consent is a subjective judgment."
+    },
+    {
+      "id": "NCT07225036-insurance",
+      "polarity": "inclusion",
+      "sourceText": "Patients must have insurance authorization to proceed with radiotherapy prior to initiation of radiation treatment on study",
+      "reasonFuzzy": "Administrative insurance authorization is not a clinical typed criterion."
+    },
+    {
+      "id": "NCT07225036-adjuvant",
+      "polarity": "inclusion",
+      "sourceText": "Patients with prior immunotherapy use in the adjuvant setting for NSCLC or Melanoma are eligible unless the adjuvant immunotherapy was delivered within 6 months of enrollment.",
+      "reasonFuzzy": "Complex washout window relative to adjuvant immunotherapy timing."
+    },
+    {
+      "id": "NCT07225036-uncontrolled",
+      "polarity": "exclusion",
+      "sourceText": "Patients with uncontrolled intercurrent illness or any other significant condition(s) that would make participation in this protocol unreasonably hazardous, in the opinion of the Investigator.",
+      "reasonFuzzy": "Investigator opinion-based exclusion for intercurrent illness."
+    },
+    {
+      "id": "NCT07225036-malignancy",
+      "polarity": "exclusion",
+      "sourceText": "Patients with a prior or concurrent malignancy whose natural history or treatment has the potential to interfere with the safety or efficacy assessment of the investigational regimen in the opinion of the Investigator.",
+      "reasonFuzzy": "Investigator opinion-based exclusion for prior or concurrent malignancies."
+    },
+    {
+      "id": "NCT07225036-pregnant",
+      "polarity": "exclusion",
+      "sourceText": "Pregnant women are excluded from this study considering the use of ionizing radiation.",
+      "reasonFuzzy": "Pregnancy exclusion is standard and not a typed laboratory or biomarker check."
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 5,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 5,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 5,
+      "rejected": 0,
+      "rejectedItems": [],
+      "normalizerTypedCount": 5
+    }
+  },
+  "runA": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 12,
+    "attempts": 2,
+    "ms": 15282
+  },
+  "runB": {
+    "typedEmitted": 5,
+    "fuzzyEmitted": 10,
+    "attempts": 1,
+    "ms": 5187
+  },
+  "ms": 28447,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07225036",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07225036-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07225036-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status ≤2 (or Karnofsky ≥60%, see Appendix A).",
+        "numberValue": 2,
+        "presence": "present",
+        "stringValue": "Karnofsky ≥60%"
+      },
+      {
+        "id": "NCT07225036-egfr",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with NSCLC are ineligible for enrollment in cohort 1 if the presence of the following driver mutations are noted: EGFR, ALK, ROS1, RET.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07225036-alk",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with NSCLC are ineligible for enrollment in cohort 1 if the presence of the following driver mutations are noted: EGFR, ALK, ROS1, RET.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07225036-ros1",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with NSCLC are ineligible for enrollment in cohort 1 if the presence of the following driver mutations are noted: EGFR, ALK, ROS1, RET.",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07225036-organ",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have adequate organ and marrow function to receive standard of care immunotherapy and/or chemoimmunotherapy as per the treating medical oncologist.",
+        "reasonFuzzy": "Organ and marrow function is deferred to treating medical oncologist discretion without specific numeric lab cutoffs."
+      },
+      {
+        "id": "NCT07225036-immunotherapy",
+        "polarity": "inclusion",
+        "sourceText": "Must be planning to, and able to, undergo active treatment with PD-L1 or PD-1 checkpoint immunotherapy given per standard care throughout the duration of the RT intervention per their treating physician.",
+        "reasonFuzzy": "Treatment planning and treating physician determination are subjective clinical criteria."
+      },
+      {
+        "id": "NCT07225036-histology",
+        "polarity": "inclusion",
+        "sourceText": "Biopsy proven Non-Small Cell Lung Cancer (NSCLC) or Melanoma.",
+        "reasonFuzzy": "Includes alternative diagnosis of Melanoma alongside NSCLC, and biopsy confirmation is a procedural requirement."
+      },
+      {
+        "id": "NCT07225036-liver",
+        "polarity": "inclusion",
+        "sourceText": "Radiographic evidence of liver metastases.",
+        "reasonFuzzy": "Radiographic evidence of metastases requires imaging interpretation and is not a typed biomarker or stage list."
+      },
+      {
+        "id": "NCT07225036-contraception",
+        "polarity": "inclusion",
+        "sourceText": "Women of child-bearing potential and men must agree to use adequate contraception (e.g., hormonal or barrier method of birth control; abstinence) prior to study entry and for the duration of study participation.",
+        "reasonFuzzy": "Contraception compliance and child-bearing potential are protocol behavioral requirements."
+      },
+      {
+        "id": "NCT07225036-consent",
+        "polarity": "inclusion",
+        "sourceText": "Ability to understand and the willingness to sign a written informed consent document. Legally authorized representatives may sign and give informed consent on behalf of study participants.",
+        "reasonFuzzy": "Willingness to sign informed consent is a subjective study participation rule."
+      },
+      {
+        "id": "NCT07225036-insurance",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have insurance authorization to proceed with radiotherapy prior to initiation of radiation treatment on study",
+        "reasonFuzzy": "Insurance authorization is an administrative requirement, not a medical eligibility check."
+      },
+      {
+        "id": "NCT07225036-adjuvant",
+        "polarity": "exclusion",
+        "sourceText": "Patients with prior immunotherapy use in the adjuvant setting for NSCLC or Melanoma are eligible unless the adjuvant immunotherapy was delivered within 6 months of enrollment.",
+        "reasonFuzzy": "Exclusion rule is conditional on prior adjuvant immunotherapy timing relative to enrollment."
+      },
+      {
+        "id": "NCT07225036-ret",
+        "polarity": "exclusion",
+        "sourceText": "Patients with NSCLC are ineligible for enrollment in cohort 1 if the presence of the following driver mutations are noted: EGFR, ALK, ROS1, RET.",
+        "reasonFuzzy": "RET mutation exclusion is present in the text, but there is no typed ret_status kind allowed."
+      },
+      {
+        "id": "NCT07225036-illness",
+        "polarity": "exclusion",
+        "sourceText": "Patients with uncontrolled intercurrent illness or any other significant condition(s) that would make participation in this protocol unreasonably hazardous, in the opinion of the Investigator.",
+        "reasonFuzzy": "Investigator opinion-based exclusion for intercurrent illness."
+      },
+      {
+        "id": "NCT07225036-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Patients with a prior or concurrent malignancy whose natural history or treatment has the potential to interfere with the safety or efficacy assessment of the investigational regimen in the opinion of the Investigator.",
+        "reasonFuzzy": "Investigator opinion-based exclusion for prior or concurrent malignancies."
+      },
+      {
+        "id": "NCT07225036-pregnant",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant women are excluded from this study considering the use of ionizing radiation.",
+        "reasonFuzzy": "Pregnancy status exclusion is a standard clinical status rule without a specific typed kind."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07225036",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07225036-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "Age ≥18 years.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07225036-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "ECOG performance status ≤2 (or Karnofsky ≥60%, see Appendix A).",
+        "numberValue": 2,
+        "presence": "unknown"
+      },
+      {
+        "id": "NCT07225036-egfr-excl",
+        "kind": "egfr_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with NSCLC are ineligible for enrollment in cohort 1 if the presence of the following driver mutations are noted: EGFR, ALK, ROS1, RET.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07225036-alk-excl",
+        "kind": "alk_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with NSCLC are ineligible for enrollment in cohort 1 if the presence of the following driver mutations are noted: EGFR, ALK, ROS1, RET.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07225036-ros1-excl",
+        "kind": "ros1_status",
+        "polarity": "exclusion",
+        "sourceText": "Patients with NSCLC are ineligible for enrollment in cohort 1 if the presence of the following driver mutations are noted: EGFR, ALK, ROS1, RET.",
+        "presence": "present"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07225036-organ",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have adequate organ and marrow function to receive standard of care immunotherapy and/or chemoimmunotherapy as per the treating medical oncologist.",
+        "reasonFuzzy": "Organ function criteria are deferred to treating medical oncologist discretion without explicit lab cutoffs."
+      },
+      {
+        "id": "NCT07225036-immunotherapy",
+        "polarity": "inclusion",
+        "sourceText": "Must be planning to, and able to, undergo active treatment with PD-L1 or PD-1 checkpoint immunotherapy given per standard care throughout the duration of the RT intervention per their treating physician.",
+        "reasonFuzzy": "Requires planned concurrent therapy and investigator discretion."
+      },
+      {
+        "id": "NCT07225036-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Biopsy proven Non-Small Cell Lung Cancer (NSCLC) or Melanoma.",
+        "reasonFuzzy": "Enrolls multiple distinct tumor types (NSCLC or melanoma)."
+      },
+      {
+        "id": "NCT07225036-liver",
+        "polarity": "inclusion",
+        "sourceText": "Radiographic evidence of liver metastases.",
+        "reasonFuzzy": "Radiographic evidence of metastases is an imaging judgment."
+      },
+      {
+        "id": "NCT07225036-consent",
+        "polarity": "inclusion",
+        "sourceText": "Ability to understand and the willingness to sign a written informed consent document. Legally authorized representatives may sign and give informed consent on behalf of study participants.",
+        "reasonFuzzy": "Willingness to sign informed consent is a subjective judgment."
+      },
+      {
+        "id": "NCT07225036-insurance",
+        "polarity": "inclusion",
+        "sourceText": "Patients must have insurance authorization to proceed with radiotherapy prior to initiation of radiation treatment on study",
+        "reasonFuzzy": "Administrative insurance authorization is not a clinical typed criterion."
+      },
+      {
+        "id": "NCT07225036-adjuvant",
+        "polarity": "inclusion",
+        "sourceText": "Patients with prior immunotherapy use in the adjuvant setting for NSCLC or Melanoma are eligible unless the adjuvant immunotherapy was delivered within 6 months of enrollment.",
+        "reasonFuzzy": "Complex washout window relative to adjuvant immunotherapy timing."
+      },
+      {
+        "id": "NCT07225036-uncontrolled",
+        "polarity": "exclusion",
+        "sourceText": "Patients with uncontrolled intercurrent illness or any other significant condition(s) that would make participation in this protocol unreasonably hazardous, in the opinion of the Investigator.",
+        "reasonFuzzy": "Investigator opinion-based exclusion for intercurrent illness."
+      },
+      {
+        "id": "NCT07225036-malignancy",
+        "polarity": "exclusion",
+        "sourceText": "Patients with a prior or concurrent malignancy whose natural history or treatment has the potential to interfere with the safety or efficacy assessment of the investigational regimen in the opinion of the Investigator.",
+        "reasonFuzzy": "Investigator opinion-based exclusion for prior or concurrent malignancies."
+      },
+      {
+        "id": "NCT07225036-pregnant",
+        "polarity": "exclusion",
+        "sourceText": "Pregnant women are excluded from this study considering the use of ionizing radiation.",
+        "reasonFuzzy": "Pregnancy exclusion is standard and not a typed laboratory or biomarker check."
+      }
+    ]
+  }
+}

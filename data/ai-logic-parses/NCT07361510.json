@@ -1,0 +1,266 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07361510",
+  "briefTitle": "A Study to Evaluate the Efficacy of Pumitamig Versus Pembrolizumab in Participants With Previously Untreated Advanced Non-Small Cell Lung Cancer and PD-L1 ≥ 50%. (ROSETTA Lung-202)",
+  "parsedAt": "2026-11-12T11:50:46.760Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07361510-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a histologically or cytologically confirmed diagnosis of Non-Small Cell Lung Cancer (NSCLC) (squamous and nonsquamous) with Stage IIIB/IIIC or Stage IV disease.",
+      "stages": [
+        "IIIB",
+        "IIIC",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "Participants must have a histologically or cytologically confirmed diagnosis of Non-Small Cell Lung Cancer (NSCLC) (squamous and nonsquamous) with Stage IIIB/IIIC or Stage IV disease.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07361510-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have an Eastern Cooperative Oncology Group (ECOG) Performance Status 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "Participants must have an Eastern Cooperative Oncology Group (ECOG) Performance Status 0-1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07361510-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have measurable disease as defined by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07361510-prior",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have no prior systemic anti-tumor therapy for locally advanced or metastatic NSCLC.",
+      "reasonFuzzy": "No prior systemic therapy is a treatment history rule that cannot be expressed as a standard prior_therapy check."
+    },
+    {
+      "id": "NCT07361510-aga",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have any documented actionable genomic alteration (AGA) for which first-line (1L) approved therapies are indicated.",
+      "reasonFuzzy": "Actionable genomic alterations for which 1L therapies are indicated is a broad category, not a specific typed gene or variant."
+    },
+    {
+      "id": "NCT07361510-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have any symptomatic untreated central nervous system (CNS) metastases, leptomeningeal metastases (carcinomatous meningitis) or spinal cord compression.",
+      "reasonFuzzy": "Symptomatic untreated CNS metastases combined with leptomeningeal disease is not a clean typed brain_mets status check."
+    },
+    {
+      "id": "NCT07361510-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have measurable disease as defined by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT07361510-aga",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have any documented actionable genomic alteration (AGA) for which first-line (1L) approved therapies are indicated.",
+      "reasonFuzzy": "Actionable genomic alterations for 1L therapies encompass multiple possible genes and variants, not a single standard biomarker status."
+    },
+    {
+      "id": "NCT07361510-brain",
+      "polarity": "exclusion",
+      "sourceText": "Participants must not have any symptomatic untreated central nervous system (CNS) metastases, leptomeningeal metastases (carcinomatous meningitis) or spinal cord compression.",
+      "reasonFuzzy": "Symptomatic untreated CNS metastases is not a clean typed brain_mets rule of none, treated_stable, or untreated."
+    },
+    {
+      "id": "NCT07361510-lines",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have no prior systemic anti-tumor therapy for locally advanced or metastatic NSCLC.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT07361510-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "Participants must have a programmed death ligand-1 (PD-L1) expression ≥ 50%.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 1,
+      "disagreementItems": [
+        {
+          "side": "b-only",
+          "kind": "prior_lines_max",
+          "polarity": "inclusion",
+          "value": "n:0"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 1,
+      "rejectedItems": [
+        {
+          "kind": "pdl1_min",
+          "polarity": "inclusion",
+          "value": "n:50"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 7851
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 3,
+    "attempts": 1,
+    "ms": 13443
+  },
+  "ms": 25304,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07361510",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07361510-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a histologically or cytologically confirmed diagnosis of Non-Small Cell Lung Cancer (NSCLC) (squamous and nonsquamous) with Stage IIIB/IIIC or Stage IV disease.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07361510-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a programmed death ligand-1 (PD-L1) expression ≥ 50%.",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT07361510-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group (ECOG) Performance Status 0-1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07361510-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have measurable disease as defined by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07361510-prior",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have no prior systemic anti-tumor therapy for locally advanced or metastatic NSCLC.",
+        "reasonFuzzy": "No prior systemic therapy is a treatment history rule that cannot be expressed as a standard prior_therapy check."
+      },
+      {
+        "id": "NCT07361510-aga",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have any documented actionable genomic alteration (AGA) for which first-line (1L) approved therapies are indicated.",
+        "reasonFuzzy": "Actionable genomic alterations for which 1L therapies are indicated is a broad category, not a specific typed gene or variant."
+      },
+      {
+        "id": "NCT07361510-brain",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have any symptomatic untreated central nervous system (CNS) metastases, leptomeningeal metastases (carcinomatous meningitis) or spinal cord compression.",
+        "reasonFuzzy": "Symptomatic untreated CNS metastases combined with leptomeningeal disease is not a clean typed brain_mets status check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07361510",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07361510-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a histologically or cytologically confirmed diagnosis of Non-Small Cell Lung Cancer (NSCLC) (squamous and nonsquamous) with Stage IIIB/IIIC or Stage IV disease.",
+        "stages": [
+          "IIIB",
+          "IIIC",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT07361510-pdl1",
+        "kind": "pdl1_min",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have a programmed death ligand-1 (PD-L1) expression ≥ 50%.",
+        "numberValue": 50
+      },
+      {
+        "id": "NCT07361510-lines",
+        "kind": "prior_lines_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have no prior systemic anti-tumor therapy for locally advanced or metastatic NSCLC.",
+        "numberValue": 0
+      },
+      {
+        "id": "NCT07361510-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have an Eastern Cooperative Oncology Group (ECOG) Performance Status 0-1.",
+        "numberValue": 1
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07361510-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Participants must have measurable disease as defined by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT07361510-aga",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have any documented actionable genomic alteration (AGA) for which first-line (1L) approved therapies are indicated.",
+        "reasonFuzzy": "Actionable genomic alterations for 1L therapies encompass multiple possible genes and variants, not a single standard biomarker status."
+      },
+      {
+        "id": "NCT07361510-brain",
+        "polarity": "exclusion",
+        "sourceText": "Participants must not have any symptomatic untreated central nervous system (CNS) metastases, leptomeningeal metastases (carcinomatous meningitis) or spinal cord compression.",
+        "reasonFuzzy": "Symptomatic untreated CNS metastases is not a clean typed brain_mets rule of none, treated_stable, or untreated."
+      }
+    ]
+  }
+}

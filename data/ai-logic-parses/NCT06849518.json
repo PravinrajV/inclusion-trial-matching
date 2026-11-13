@@ -1,0 +1,255 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06849518",
+  "briefTitle": "Study of Longitudinal Plasma PD-L1 Testing With Immunotherapy in Lung Cancer",
+  "parsedAt": "2026-11-12T10:38:18.759Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06849518-stage",
+      "kind": "stage_in",
+      "polarity": "inclusion",
+      "sourceText": "All patients with a diagnosis of stage IV or inoperable stage IIIB NSCLC without planned primary radiation therapy undergoing anti-PD-1/L1 based ICI treatment.",
+      "stages": [
+        "IIIB",
+        "IV",
+        "IVA",
+        "IVB"
+      ],
+      "evidence_quote": "All patients with a diagnosis of stage IV or inoperable stage IIIB NSCLC without planned primary radiation therapy undergoing anti-PD-1/L1 based ICI treatment.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06849518-consent",
+      "polarity": "inclusion",
+      "sourceText": "A documented informed consent will be obtained prior to inclusion in the study. All discussions with patients will be held in strictest confidence and out of earshot of the general public. Patients will be fully informed that their participation in the study is voluntary. Patients may decline to be part of the study. Their decision to participate in the study will not affect the care they receive.",
+      "reasonFuzzy": "Informed consent process and voluntary participation are administrative requirements, not typed clinical criteria."
+    },
+    {
+      "id": "NCT06849518-radiation",
+      "polarity": "exclusion",
+      "sourceText": "Planned primary radiation therapy.",
+      "reasonFuzzy": "Planned primary radiation therapy is a treatment intent exclusion rather than a standard prior therapy field."
+    },
+    {
+      "id": "NCT06849518-consent",
+      "polarity": "inclusion",
+      "sourceText": "A documented informed consent will be obtained prior to inclusion in the study.",
+      "reasonFuzzy": "Informed consent is a standard administrative requirement, not a typed clinical eligibility check."
+    },
+    {
+      "id": "NCT06849518-radexcl",
+      "polarity": "exclusion",
+      "sourceText": "Planned primary radiation therapy.",
+      "reasonFuzzy": "Planned primary radiation therapy is a treatment plan exclusion, not a standard prior therapy or typed lab check."
+    },
+    {
+      "id": "NCT06849518-histology-sclc",
+      "polarity": "exclusion",
+      "sourceText": "Small-cell lung cancer histology.",
+      "reasonFuzzy": "two-run consistency: only in run A"
+    },
+    {
+      "id": "NCT06849518-sclc",
+      "polarity": "exclusion",
+      "sourceText": "Small-cell lung cancer histology.",
+      "reasonFuzzy": "two-run consistency: only in run B"
+    },
+    {
+      "id": "NCT06849518-prior-pdl1",
+      "polarity": "inclusion",
+      "sourceText": "All patients with a diagnosis of stage IV or inoperable stage IIIB NSCLC without planned primary radiation therapy undergoing anti-PD-1/L1 based ICI treatment.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06849518-excl-pdl1",
+      "polarity": "exclusion",
+      "sourceText": "No anti-PD-1/L1 monoclonal antibody treatment.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 2,
+      "disagreementItems": [
+        {
+          "side": "a-only",
+          "kind": "histology_in",
+          "polarity": "exclusion",
+          "value": "h:adenocarcinoma,large_cell,nsclc_nos,squamous"
+        },
+        {
+          "side": "b-only",
+          "kind": "histology_in",
+          "polarity": "exclusion",
+          "value": "h:large_cell"
+        }
+      ]
+    },
+    "verifier": {
+      "verified": 1,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:anti-pd-1/l1"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:anti-pd-1/l1"
+        }
+      ],
+      "normalizerTypedCount": 1
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 2,
+    "attempts": 2,
+    "ms": 12513
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 2,
+    "attempts": 1,
+    "ms": 6791
+  },
+  "ms": 27280,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06849518",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06849518-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "All patients with a diagnosis of stage IV or inoperable stage IIIB NSCLC without planned primary radiation therapy undergoing anti-PD-1/L1 based ICI treatment.",
+        "stages": [
+          "IIIB",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06849518-prior-pdl1",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "All patients with a diagnosis of stage IV or inoperable stage IIIB NSCLC without planned primary radiation therapy undergoing anti-PD-1/L1 based ICI treatment.",
+        "stringValue": "anti-PD-1/L1"
+      },
+      {
+        "id": "NCT06849518-excl-pdl1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "No anti-PD-1/L1 monoclonal antibody treatment.",
+        "stringValue": "anti-PD-1/L1"
+      },
+      {
+        "id": "NCT06849518-histology-sclc",
+        "kind": "histology_in",
+        "polarity": "exclusion",
+        "sourceText": "Small-cell lung cancer histology.",
+        "histologies": [
+          "adenocarcinoma",
+          "squamous",
+          "large_cell",
+          "nsclc_nos"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06849518-consent",
+        "polarity": "inclusion",
+        "sourceText": "A documented informed consent will be obtained prior to inclusion in the study. All discussions with patients will be held in strictest confidence and out of earshot of the general public. Patients will be fully informed that their participation in the study is voluntary. Patients may decline to be part of the study. Their decision to participate in the study will not affect the care they receive.",
+        "reasonFuzzy": "Informed consent process and voluntary participation are administrative requirements, not typed clinical criteria."
+      },
+      {
+        "id": "NCT06849518-radiation",
+        "polarity": "exclusion",
+        "sourceText": "Planned primary radiation therapy.",
+        "reasonFuzzy": "Planned primary radiation therapy is a treatment intent exclusion rather than a standard prior therapy field."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06849518",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06849518-stage",
+        "kind": "stage_in",
+        "polarity": "inclusion",
+        "sourceText": "All patients with a diagnosis of stage IV or inoperable stage IIIB NSCLC without planned primary radiation therapy undergoing anti-PD-1/L1 based ICI treatment.",
+        "stages": [
+          "IIIB",
+          "IV",
+          "IVA",
+          "IVB"
+        ]
+      },
+      {
+        "id": "NCT06849518-pdl1req",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "undergoing anti-PD-1/L1 based ICI treatment.",
+        "stringValue": "anti-PD-1/L1"
+      },
+      {
+        "id": "NCT06849518-pdl1excl",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "No anti-PD-1/L1 monoclonal antibody treatment.",
+        "stringValue": "anti-PD-1/L1"
+      },
+      {
+        "id": "NCT06849518-sclc",
+        "kind": "histology_in",
+        "polarity": "exclusion",
+        "sourceText": "Small-cell lung cancer histology.",
+        "histologies": [
+          "large_cell"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06849518-consent",
+        "polarity": "inclusion",
+        "sourceText": "A documented informed consent will be obtained prior to inclusion in the study.",
+        "reasonFuzzy": "Informed consent is a standard administrative requirement, not a typed clinical eligibility check."
+      },
+      {
+        "id": "NCT06849518-radexcl",
+        "polarity": "exclusion",
+        "sourceText": "Planned primary radiation therapy.",
+        "reasonFuzzy": "Planned primary radiation therapy is a treatment plan exclusion, not a standard prior therapy or typed lab check."
+      }
+    ]
+  }
+}

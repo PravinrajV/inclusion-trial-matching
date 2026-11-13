@@ -1,0 +1,277 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT07315113",
+  "briefTitle": "Study of NXP900 With Osimertinib in Subjects With Advanced, EGFR-Mutated Non-Small Cell Lung Cancer",
+  "parsedAt": "2026-11-12T11:08:28.392Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT07315113-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "18 years old or older.",
+      "numberValue": 18,
+      "evidence_quote": "18 years old or older.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT07315113-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT07315113-driver",
+      "polarity": "exclusion",
+      "sourceText": "Subject's cancer has a known oncogenic driver alteration other than EGFR.",
+      "reasonFuzzy": "Other oncogenic driver alterations is a broad category, not a specific typed check."
+    },
+    {
+      "id": "NCT07315113-osimertinib-resistance",
+      "polarity": "exclusion",
+      "sourceText": "Known EGFR mutations that cause resistance to osimertinib",
+      "reasonFuzzy": "Resistance mutations encompass multiple specific variants, not a single typed variant check."
+    },
+    {
+      "id": "NCT07315113-her2",
+      "polarity": "exclusion",
+      "sourceText": "Known human epidermal growth factor receptor 2 (HER2) overexpression",
+      "reasonFuzzy": "There is no typed kind for HER2 overexpression."
+    },
+    {
+      "id": "NCT07315113-contraindications",
+      "polarity": "exclusion",
+      "sourceText": "Any contraindications to treatment with osimertinib",
+      "reasonFuzzy": "Investigator-dependent contraindications are subjective clinical judgments."
+    },
+    {
+      "id": "NCT07315113-stage",
+      "polarity": "inclusion",
+      "sourceText": "Unresectable, metastatic or locally advanced EGFR-mutated NSCLC.",
+      "reasonFuzzy": "Locally advanced or metastatic disease terms are used without specific numerical stages, keeping it in scope as fuzzy."
+    },
+    {
+      "id": "NCT07315113-driver",
+      "polarity": "exclusion",
+      "sourceText": "Subject's cancer has a known oncogenic driver alteration other than EGFR.",
+      "reasonFuzzy": "Exclusion of other unspecified oncogenic driver alterations cannot be represented as a single typed biomarker check."
+    },
+    {
+      "id": "NCT07315113-resistance",
+      "polarity": "exclusion",
+      "sourceText": "Known EGFR mutations that cause resistance to osimertinib",
+      "reasonFuzzy": "General osimertinib resistance mutations are not listed as a single named specific variant check."
+    },
+    {
+      "id": "NCT07315113-her2",
+      "polarity": "exclusion",
+      "sourceText": "Known human epidermal growth factor receptor 2 (HER2) overexpression",
+      "reasonFuzzy": "There is no typed kind for HER2 overexpression."
+    },
+    {
+      "id": "NCT07315113-contraindications",
+      "polarity": "exclusion",
+      "sourceText": "Any contraindications to treatment with osimertinib",
+      "reasonFuzzy": "Contraindications are clinician-dependent judgments and not a typed lab or stage check."
+    },
+    {
+      "id": "NCT07315113-egfr",
+      "polarity": "inclusion",
+      "sourceText": "Unresectable, metastatic or locally advanced EGFR-mutated NSCLC.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT07315113-osimertinib",
+      "polarity": "inclusion",
+      "sourceText": "Prior treatment with osimertinib as first or second line, as single agent or in combination with chemotherapy, in the metastatic or locally advanced setting.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 4,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 4,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 2,
+      "rejectedItems": [
+        {
+          "kind": "egfr_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:osimertinib"
+        }
+      ],
+      "normalizerTypedCount": 3
+    }
+  },
+  "runA": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 4,
+    "attempts": 2,
+    "ms": 13702
+  },
+  "runB": {
+    "typedEmitted": 4,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 5074
+  },
+  "ms": 26747,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT07315113",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07315113-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 years old or older.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07315113-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07315113-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Unresectable, metastatic or locally advanced EGFR-mutated NSCLC.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07315113-osimertinib",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Prior treatment with osimertinib as first or second line, as single agent or in combination with chemotherapy, in the metastatic or locally advanced setting.",
+        "stringValue": "osimertinib"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07315113-driver",
+        "polarity": "exclusion",
+        "sourceText": "Subject's cancer has a known oncogenic driver alteration other than EGFR.",
+        "reasonFuzzy": "Other oncogenic driver alterations is a broad category, not a specific typed check."
+      },
+      {
+        "id": "NCT07315113-osimertinib-resistance",
+        "polarity": "exclusion",
+        "sourceText": "Known EGFR mutations that cause resistance to osimertinib",
+        "reasonFuzzy": "Resistance mutations encompass multiple specific variants, not a single typed variant check."
+      },
+      {
+        "id": "NCT07315113-her2",
+        "polarity": "exclusion",
+        "sourceText": "Known human epidermal growth factor receptor 2 (HER2) overexpression",
+        "reasonFuzzy": "There is no typed kind for HER2 overexpression."
+      },
+      {
+        "id": "NCT07315113-contraindications",
+        "polarity": "exclusion",
+        "sourceText": "Any contraindications to treatment with osimertinib",
+        "reasonFuzzy": "Investigator-dependent contraindications are subjective clinical judgments."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT07315113",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT07315113-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "18 years old or older.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT07315113-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT07315113-egfr",
+        "kind": "egfr_status",
+        "polarity": "inclusion",
+        "sourceText": "Unresectable, metastatic or locally advanced EGFR-mutated NSCLC.",
+        "presence": "present"
+      },
+      {
+        "id": "NCT07315113-osimertinib",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "Prior treatment with osimertinib as first or second line, as single agent or in combination with chemotherapy, in the metastatic or locally advanced setting.",
+        "stringValue": "osimertinib"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT07315113-stage",
+        "polarity": "inclusion",
+        "sourceText": "Unresectable, metastatic or locally advanced EGFR-mutated NSCLC.",
+        "reasonFuzzy": "Locally advanced or metastatic disease terms are used without specific numerical stages, keeping it in scope as fuzzy."
+      },
+      {
+        "id": "NCT07315113-driver",
+        "polarity": "exclusion",
+        "sourceText": "Subject's cancer has a known oncogenic driver alteration other than EGFR.",
+        "reasonFuzzy": "Exclusion of other unspecified oncogenic driver alterations cannot be represented as a single typed biomarker check."
+      },
+      {
+        "id": "NCT07315113-resistance",
+        "polarity": "exclusion",
+        "sourceText": "Known EGFR mutations that cause resistance to osimertinib",
+        "reasonFuzzy": "General osimertinib resistance mutations are not listed as a single named specific variant check."
+      },
+      {
+        "id": "NCT07315113-her2",
+        "polarity": "exclusion",
+        "sourceText": "Known human epidermal growth factor receptor 2 (HER2) overexpression",
+        "reasonFuzzy": "There is no typed kind for HER2 overexpression."
+      },
+      {
+        "id": "NCT07315113-contraindications",
+        "polarity": "exclusion",
+        "sourceText": "Any contraindications to treatment with osimertinib",
+        "reasonFuzzy": "Contraindications are clinician-dependent judgments and not a typed lab or stage check."
+      }
+    ]
+  }
+}

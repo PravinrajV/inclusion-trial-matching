@@ -1,0 +1,21 @@
+Trial eligibility is written for researchers, not for the visit you are about to walk into. Inclusion keeps your chart on this computer and turns nearby public trial language into a short briefing for you and your oncologist.
+
+On a computer that can run Chrome's on-device model, you can paste a synthetic clinic note and read it here.
+
+This is Alex Rivera, a synthetic demo patient, not a real person. Gemini Nano reads the note on this device. The fact chips fill in, and an On this device badge stays on the fact sheet. The status line says nothing is sent to a cloud model.
+
+The Proof pill counted 0 chart bytes. Public trial lookups do leave this computer, and they are kept separate from the chart.
+
+Matching runs on this computer, against a cache of 277 nearby trials. For Alex, this build finds nine strong matches, ranked by strength of evidence. Strong means there is quoted evidence to take to clinic, not a decision that Alex belongs on the study.
+
+The first card is NCT04486833, an EGFR-mutant study for patients who progressed on osimertinib, with a site in Canton, Ohio, 103 miles from Columbus. The briefing quotes the trial's own words, and it names what the chart shows, including EGFR exon 19 deletion. These are the trial's sentences, not a verdict from the app.
+
+Public trial text is parsed in the cloud, twice, through Firebase AI Logic, then checked.
+
+It also leaves an honest open question. Brain metastases are not checked automatically, and that still needs a conversation. That is the point of the briefing: what to ask, not what to conclude.
+
+Print the sheet and take it to the oncologist. It lists quoted findings and questions, plus the source, ClinicalTrials.gov. The conversation still belongs in the clinic.
+
+For Sam, this build finds four strong matches. His top card meets four of six key criteria, including the ALK driver.
+
+Try the hosted demo. Synthetic patients only. Clinic-note reading needs Chrome's on-device model. The rest works on any Chrome.

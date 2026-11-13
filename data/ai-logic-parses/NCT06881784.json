@@ -1,0 +1,333 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT06881784",
+  "briefTitle": "Study of Daraxonrasib (RMC-6236) in Patients With RAS Mutated NSCLC (RASolve 301)",
+  "parsedAt": "2026-11-12T10:39:10.393Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [
+    {
+      "id": "NCT06881784-age",
+      "kind": "age_min",
+      "polarity": "inclusion",
+      "sourceText": "At least 18 years old and has provided informed consent.",
+      "numberValue": 18,
+      "evidence_quote": "At least 18 years old and has provided informed consent.",
+      "verifier": "deterministic-normalizer"
+    },
+    {
+      "id": "NCT06881784-ecog",
+      "kind": "ecog_max",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "numberValue": 1,
+      "evidence_quote": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "verifier": "deterministic-normalizer"
+    }
+  ],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT06881784-stage",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically confirmed NSCLC, either locally advanced or metastatic, not amenable to curative surgery or radiotherapy.",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope but does not provide a numbered stage list for stage_in."
+    },
+    {
+      "id": "NCT06881784-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06881784-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function (bone marrow, liver, kidney, coagulation).",
+      "reasonFuzzy": "General organ function without specific numeric cutoffs cannot be represented as a typed lab check."
+    },
+    {
+      "id": "NCT06881784-lines",
+      "polarity": "inclusion",
+      "sourceText": "One to two prior lines of therapy including an anti-PD-1/anti-PD(L)-1 agent and platinum-based chemotherapy.",
+      "reasonFuzzy": "Requires multiple specific prior therapies combined with a line count range, which cannot be expressed as a single typed prior_lines or prior_therapy rule."
+    },
+    {
+      "id": "NCT06881784-comorbidities",
+      "polarity": "exclusion",
+      "sourceText": "Medically significant comorbidities (significant cardiovascular disease, lung disease, or impaired GI function).",
+      "reasonFuzzy": "Medically significant comorbidities require clinical judgment and are not a typed check."
+    },
+    {
+      "id": "NCT06881784-stage",
+      "polarity": "inclusion",
+      "sourceText": "Pathologically confirmed NSCLC, either locally advanced or metastatic, not amenable to curative surgery or radiotherapy.",
+      "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope but does not provide an explicit stage list."
+    },
+    {
+      "id": "NCT06881784-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per RECIST v1.1.",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT06881784-organ",
+      "polarity": "inclusion",
+      "sourceText": "Adequate organ function (bone marrow, liver, kidney, coagulation).",
+      "reasonFuzzy": "Adequate organ function without specific lab cutoffs cannot be represented as a typed lab check."
+    },
+    {
+      "id": "NCT06881784-lines",
+      "polarity": "inclusion",
+      "sourceText": "One to two prior lines of therapy including an anti-PD-1/anti-PD(L)-1 agent and platinum-based chemotherapy.",
+      "reasonFuzzy": "Combining a prior line count with specific required agents exceeds a single prior_lines or prior_therapy typed check."
+    },
+    {
+      "id": "NCT06881784-kras",
+      "polarity": "inclusion",
+      "sourceText": "Documented RAS mutation status, defined as Nonsynonymous mutations in KRAS, NRAS, or HRAS at codons 12, 13, or 61 (G12, G13, or Q61).",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06881784-prior-therapy-excl1",
+      "polarity": "exclusion",
+      "sourceText": "Prior therapy with direct RAS-targeted therapy or docetaxel.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06881784-prior-therapy-excl2",
+      "polarity": "exclusion",
+      "sourceText": "Prior therapy with direct RAS-targeted therapy or docetaxel.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT06881784-brain",
+      "polarity": "exclusion",
+      "sourceText": "Untreated central nervous system (CNS) metastases.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 6,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 6,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 2,
+      "rejected": 4,
+      "rejectedItems": [
+        {
+          "kind": "kras_status",
+          "polarity": "inclusion",
+          "value": "p:present"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:direct ras-targeted therapy"
+        },
+        {
+          "kind": "prior_therapy_excluded",
+          "polarity": "exclusion",
+          "value": "s:docetaxel"
+        },
+        {
+          "kind": "brain_mets",
+          "polarity": "exclusion",
+          "value": "b:none,treated_stable"
+        }
+      ],
+      "normalizerTypedCount": 4
+    }
+  },
+  "runA": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 5,
+    "attempts": 1,
+    "ms": 2975
+  },
+  "runB": {
+    "typedEmitted": 6,
+    "fuzzyEmitted": 4,
+    "attempts": 1,
+    "ms": 4093
+  },
+  "ms": 15038,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT06881784",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06881784-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "At least 18 years old and has provided informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06881784-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06881784-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Documented RAS mutation status, defined as Nonsynonymous mutations in KRAS, NRAS, or HRAS at codons 12, 13, or 61 (G12, G13, or Q61).",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06881784-prior-therapy-excl1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy with direct RAS-targeted therapy or docetaxel.",
+        "stringValue": "direct RAS-targeted therapy"
+      },
+      {
+        "id": "NCT06881784-prior-therapy-excl2",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy with direct RAS-targeted therapy or docetaxel.",
+        "stringValue": "docetaxel"
+      },
+      {
+        "id": "NCT06881784-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Untreated central nervous system (CNS) metastases.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06881784-stage",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed NSCLC, either locally advanced or metastatic, not amenable to curative surgery or radiotherapy.",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope but does not provide a numbered stage list for stage_in."
+      },
+      {
+        "id": "NCT06881784-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06881784-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function (bone marrow, liver, kidney, coagulation).",
+        "reasonFuzzy": "General organ function without specific numeric cutoffs cannot be represented as a typed lab check."
+      },
+      {
+        "id": "NCT06881784-lines",
+        "polarity": "inclusion",
+        "sourceText": "One to two prior lines of therapy including an anti-PD-1/anti-PD(L)-1 agent and platinum-based chemotherapy.",
+        "reasonFuzzy": "Requires multiple specific prior therapies combined with a line count range, which cannot be expressed as a single typed prior_lines or prior_therapy rule."
+      },
+      {
+        "id": "NCT06881784-comorbidities",
+        "polarity": "exclusion",
+        "sourceText": "Medically significant comorbidities (significant cardiovascular disease, lung disease, or impaired GI function).",
+        "reasonFuzzy": "Medically significant comorbidities require clinical judgment and are not a typed check."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT06881784",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT06881784-age",
+        "kind": "age_min",
+        "polarity": "inclusion",
+        "sourceText": "At least 18 years old and has provided informed consent.",
+        "numberValue": 18
+      },
+      {
+        "id": "NCT06881784-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT06881784-kras",
+        "kind": "kras_status",
+        "polarity": "inclusion",
+        "sourceText": "Documented RAS mutation status, defined as Nonsynonymous mutations in KRAS, NRAS, or HRAS at codons 12, 13, or 61 (G12, G13, or Q61).",
+        "presence": "present"
+      },
+      {
+        "id": "NCT06881784-prior-therapy-1",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy with direct RAS-targeted therapy or docetaxel.",
+        "stringValue": "direct RAS-targeted therapy"
+      },
+      {
+        "id": "NCT06881784-prior-therapy-2",
+        "kind": "prior_therapy_excluded",
+        "polarity": "exclusion",
+        "sourceText": "Prior therapy with direct RAS-targeted therapy or docetaxel.",
+        "stringValue": "docetaxel"
+      },
+      {
+        "id": "NCT06881784-brain",
+        "kind": "brain_mets",
+        "polarity": "exclusion",
+        "sourceText": "Untreated central nervous system (CNS) metastases.",
+        "allowedBrainMets": [
+          "none",
+          "treated_stable"
+        ]
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT06881784-stage",
+        "polarity": "inclusion",
+        "sourceText": "Pathologically confirmed NSCLC, either locally advanced or metastatic, not amenable to curative surgery or radiotherapy.",
+        "reasonFuzzy": "Locally advanced or metastatic NSCLC is in scope but does not provide an explicit stage list."
+      },
+      {
+        "id": "NCT06881784-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per RECIST v1.1.",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT06881784-organ",
+        "polarity": "inclusion",
+        "sourceText": "Adequate organ function (bone marrow, liver, kidney, coagulation).",
+        "reasonFuzzy": "Adequate organ function without specific lab cutoffs cannot be represented as a typed lab check."
+      },
+      {
+        "id": "NCT06881784-lines",
+        "polarity": "inclusion",
+        "sourceText": "One to two prior lines of therapy including an anti-PD-1/anti-PD(L)-1 agent and platinum-based chemotherapy.",
+        "reasonFuzzy": "Combining a prior line count with specific required agents exceeds a single prior_lines or prior_therapy typed check."
+      }
+    ]
+  }
+}

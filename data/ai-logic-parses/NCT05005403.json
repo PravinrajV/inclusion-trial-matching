@@ -1,0 +1,399 @@
+{
+  "ok": true,
+  "schemaVersion": "1",
+  "nctId": "NCT05005403",
+  "briefTitle": "Study to Assess Adverse Events and Pharmacokinetics in Adult Participants With Non-Small Cell Lung Cancer, Head and Neck Squamous Cell Carcinoma and Other Solid Tumors, Receiving Intravenous Infusion of Azirkitug Alone or in Combination(s) With Budigalimab, Bevacizumab, or Telisotuzumab Adizutecan",
+  "parsedAt": "2026-11-12T06:08:49.850Z",
+  "parserModel": "gemini-3.5-flash-lite",
+  "promptVersion": "3",
+  "pipeline": "ai-logic-v3-quote-two-run-verifier",
+  "dataTimestamp": "2026-11-10T10:00:05",
+  "typedChecks": [],
+  "fuzzyCriteria": [
+    {
+      "id": "NCT05005403-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Pre Treatment biopsy or archive tissue within 6 months without intervening treatment",
+      "reasonFuzzy": "Willingness or requirement to undergo a biopsy or provide tissue is a procedural criterion."
+    },
+    {
+      "id": "NCT05005403-life",
+      "polarity": "inclusion",
+      "sourceText": "life expectancy of \\>= 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05005403-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05005403-labs",
+      "polarity": "inclusion",
+      "sourceText": "Laboratory values meeting criteria outlined in the protocol",
+      "reasonFuzzy": "General reference to protocol-defined laboratory values without explicit cutoffs listed in the text."
+    },
+    {
+      "id": "NCT05005403-surgery",
+      "polarity": "exclusion",
+      "sourceText": "No major surgery within 28 days prior to dosing",
+      "reasonFuzzy": "Washout windows for major surgery are not among the allowed typed kinds."
+    },
+    {
+      "id": "NCT05005403-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "No active autoimmune/immunodeficiency disease with limited exceptions",
+      "reasonFuzzy": "Autoimmune or immunodeficiency disease status is a medical history judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05005403-combo-tox",
+      "polarity": "exclusion",
+      "sourceText": "Combination treatment excludes participants treated with anti-programmed cell death protein 1(PD-1)/Programmed cell death ligand 1 (PD-L1) who had immune mediated toxicity G3 or greater, interstitial lung disease, or hypersensitivity Combination treatment may also require no significant cardiac deficiencies and/or events",
+      "reasonFuzzy": "Complex prior toxicity and combination-specific exclusion rules cannot be represented as simple typed checks."
+    },
+    {
+      "id": "NCT05005403-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Pregnancy",
+      "reasonFuzzy": "Pregnancy status is not a typed check."
+    },
+    {
+      "id": "NCT05005403-meds",
+      "polarity": "exclusion",
+      "sourceText": "Excluded medications include anticancer therapy within 5 half-live or 28 days (whichever is shorter), agent targeting Chemokine Receptor (CCR)8, live vaccines, immunosuppressive medication with limited exceptions",
+      "reasonFuzzy": "Complex medication washouts and multiple exclusion classes are not captured by single typed checks."
+    },
+    {
+      "id": "NCT05005403-biopsy",
+      "polarity": "inclusion",
+      "sourceText": "Pre Treatment biopsy or archive tissue within 6 months without intervening treatment",
+      "reasonFuzzy": "Willingness or availability of biopsy or archival tissue is not a typed check."
+    },
+    {
+      "id": "NCT05005403-life",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of <= 0 or 1 and a life expectancy of >= 3 months.",
+      "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+    },
+    {
+      "id": "NCT05005403-measurable",
+      "polarity": "inclusion",
+      "sourceText": "Measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST)",
+      "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+    },
+    {
+      "id": "NCT05005403-labs",
+      "polarity": "inclusion",
+      "sourceText": "Laboratory values meeting criteria outlined in the protocol",
+      "reasonFuzzy": "General laboratory values meeting protocol criteria without specific cutoffs listed cannot be emitted as typed lab checks."
+    },
+    {
+      "id": "NCT05005403-nsclc-details",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC - Advanced or metastatic progressed on standard of care (SOC) including chemotherapy and prior anti-PD-(L)1 antibody (separately or in combination). Actionable gene alterations are eligible if failed targeted therapeutic options.",
+      "reasonFuzzy": "Advanced or metastatic disease without specific stage numbering does not map directly to a stage_in list, and actionable gene alterations eligibility has complex conditional options."
+    },
+    {
+      "id": "NCT05005403-other-cancers",
+      "polarity": "inclusion",
+      "sourceText": "HSNCC - Advanced/metastatic progressed on platinum and PD-1/PD-LI in recurrent or metastatic setting. Micro Satellite Stable Colorectal Cancer (MSS-CRC) - Progressed on Oxaliplatin, Irinotecan, a fluoropyrimidine, anti-EGFR, VEGF or VEGFR therapies, BRAFV600E or HER2, other targetable mutations targeted with locally approved therapy, TAS-102, Regorafenib and not MSI-h or MMR-deficient Gastric and Gastroesophageal Junction adenocarcinoma (GEA) - Advanced/metastatic progressed on at least 1 prior cytotoxic chemotherapeutic regimen and if applicable immune checkpoint inhibitor and/or HER2 therapy High-Grade Serous Ovarian Cancer (HGSOC) - Progressed serous epithelial ovarian, fallopian tube or primary peritoneal cancer post SOC and not eligible for surgical resection. Platinum resistant cannot have >5 lines of prior therapy. Pancreatic Adenocarcinoma (PDAC) - Advanced/metastatic progressed after SOC. Includes adenosquamous carcinoma and post-Whipple. Triple Negative Breast Cancer (TNBC) - Progressed after 1 or 2 systemic therapy that must have included taxane and treatment naïve to immunotherapy targeting T-cell co-stimulation",
+      "reasonFuzzy": "These criteria pertain to non-NSCLC cohorts included in the multi-tumor basket study."
+    },
+    {
+      "id": "NCT05005403-excl-pdac",
+      "polarity": "exclusion",
+      "sourceText": "Pancreatic Ductal Adenocarcinoma (PDAC) - Excludes neuroendocrine or acinar pancreatic carcinoma and participants with coagulopathy or at risk of or history of Deep vein thrombosis (DVT)/PE",
+      "reasonFuzzy": "Cohort-specific exclusion for pancreatic cancer."
+    },
+    {
+      "id": "NCT05005403-surgery",
+      "polarity": "exclusion",
+      "sourceText": "No major surgery within 28 days prior to dosing",
+      "reasonFuzzy": "Washout windows for surgery are not a simple lab cutoff and remain fuzzy."
+    },
+    {
+      "id": "NCT05005403-autoimmune",
+      "polarity": "exclusion",
+      "sourceText": "No active autoimmune/immunodeficiency disease with limited exceptions",
+      "reasonFuzzy": "Active autoimmune or immunodeficiency disease exclusion with exceptions is a subjective clinical judgment."
+    },
+    {
+      "id": "NCT05005403-comb-tox",
+      "polarity": "exclusion",
+      "sourceText": "Combination treatment excludes participants treated with anti-programmed cell death protein 1(PD-1)/Programmed cell death ligand 1 (PD-L1) who had immune mediated toxicity G3 or greater, interstitial lung disease, or hypersensitivity Combination treatment may also require no significant cardiac deficiencies and/or events",
+      "reasonFuzzy": "Complex combination treatment exclusions involving prior immune-mediated toxicities, interstitial lung disease, or cardiac deficiencies."
+    },
+    {
+      "id": "NCT05005403-pregnancy",
+      "polarity": "exclusion",
+      "sourceText": "Pregnancy",
+      "reasonFuzzy": "Pregnancy is not a standard typed check kind."
+    },
+    {
+      "id": "NCT05005403-medications",
+      "polarity": "exclusion",
+      "sourceText": "Excluded medications include anticancer therapy within 5 half-live or 28 days (whichever is shorter), agent targeting Chemokine Receptor (CCR)8, live vaccines, immunosuppressive medication with limited exceptions",
+      "reasonFuzzy": "Washout windows for prior therapies and specific excluded medication classes are complex rules."
+    },
+    {
+      "id": "NCT05005403-ecog",
+      "polarity": "inclusion",
+      "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of \\<= 0 or 1 and a life expectancy of \\>= 3 months.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05005403-prior-therapy-nsclc-chemo",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC - Advanced or metastatic progressed on standard of care (SOC) including chemotherapy and prior anti-PD-(L)1 antibody (separately or in combination). Actionable gene alterations are eligible if failed targeted therapeutic options.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    },
+    {
+      "id": "NCT05005403-prior-therapy-nsclc-pd1",
+      "polarity": "inclusion",
+      "sourceText": "NSCLC - Advanced or metastatic progressed on standard of care (SOC) including chemotherapy and prior anti-PD-(L)1 antibody (separately or in combination). Actionable gene alterations are eligible if failed targeted therapeutic options.",
+      "reasonFuzzy": "deterministic normalizer did not verify this model check"
+    }
+  ],
+  "gates": {
+    "quoteA": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "quoteB": {
+      "kept": 3,
+      "unquoted": 0,
+      "unquotedItems": []
+    },
+    "consistency": {
+      "agreed": 3,
+      "disagreements": 0,
+      "disagreementItems": []
+    },
+    "verifier": {
+      "verified": 0,
+      "rejected": 3,
+      "rejectedItems": [
+        {
+          "kind": "ecog_max",
+          "polarity": "inclusion",
+          "value": "n:1"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:chemotherapy"
+        },
+        {
+          "kind": "prior_therapy_required",
+          "polarity": "inclusion",
+          "value": "s:anti-pd-(l)1 antibody"
+        }
+      ],
+      "normalizerTypedCount": 0
+    }
+  },
+  "runA": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 9,
+    "attempts": 1,
+    "ms": 4480
+  },
+  "runB": {
+    "typedEmitted": 3,
+    "fuzzyEmitted": 12,
+    "attempts": 1,
+    "ms": 7713
+  },
+  "ms": 20192,
+  "isGold": false,
+  "rawA": {
+    "schemaVersion": "1",
+    "nctId": "NCT05005403",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05005403-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of \\<= 0 or 1 and a life expectancy of \\>= 3 months.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05005403-prior-therapy-nsclc-chemo",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC - Advanced or metastatic progressed on standard of care (SOC) including chemotherapy and prior anti-PD-(L)1 antibody (separately or in combination). Actionable gene alterations are eligible if failed targeted therapeutic options.",
+        "stringValue": "chemotherapy"
+      },
+      {
+        "id": "NCT05005403-prior-therapy-nsclc-pd1",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC - Advanced or metastatic progressed on standard of care (SOC) including chemotherapy and prior anti-PD-(L)1 antibody (separately or in combination). Actionable gene alterations are eligible if failed targeted therapeutic options.",
+        "stringValue": "anti-PD-(L)1 antibody"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05005403-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Pre Treatment biopsy or archive tissue within 6 months without intervening treatment",
+        "reasonFuzzy": "Willingness or requirement to undergo a biopsy or provide tissue is a procedural criterion."
+      },
+      {
+        "id": "NCT05005403-life",
+        "polarity": "inclusion",
+        "sourceText": "life expectancy of \\>= 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05005403-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05005403-labs",
+        "polarity": "inclusion",
+        "sourceText": "Laboratory values meeting criteria outlined in the protocol",
+        "reasonFuzzy": "General reference to protocol-defined laboratory values without explicit cutoffs listed in the text."
+      },
+      {
+        "id": "NCT05005403-surgery",
+        "polarity": "exclusion",
+        "sourceText": "No major surgery within 28 days prior to dosing",
+        "reasonFuzzy": "Washout windows for major surgery are not among the allowed typed kinds."
+      },
+      {
+        "id": "NCT05005403-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "No active autoimmune/immunodeficiency disease with limited exceptions",
+        "reasonFuzzy": "Autoimmune or immunodeficiency disease status is a medical history judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05005403-combo-tox",
+        "polarity": "exclusion",
+        "sourceText": "Combination treatment excludes participants treated with anti-programmed cell death protein 1(PD-1)/Programmed cell death ligand 1 (PD-L1) who had immune mediated toxicity G3 or greater, interstitial lung disease, or hypersensitivity Combination treatment may also require no significant cardiac deficiencies and/or events",
+        "reasonFuzzy": "Complex prior toxicity and combination-specific exclusion rules cannot be represented as simple typed checks."
+      },
+      {
+        "id": "NCT05005403-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Pregnancy",
+        "reasonFuzzy": "Pregnancy status is not a typed check."
+      },
+      {
+        "id": "NCT05005403-meds",
+        "polarity": "exclusion",
+        "sourceText": "Excluded medications include anticancer therapy within 5 half-live or 28 days (whichever is shorter), agent targeting Chemokine Receptor (CCR)8, live vaccines, immunosuppressive medication with limited exceptions",
+        "reasonFuzzy": "Complex medication washouts and multiple exclusion classes are not captured by single typed checks."
+      }
+    ]
+  },
+  "rawB": {
+    "schemaVersion": "1",
+    "nctId": "NCT05005403",
+    "parserModel": "gemini-3.5-flash-lite",
+    "promptVersion": "3",
+    "typedChecks": [
+      {
+        "id": "NCT05005403-ecog",
+        "kind": "ecog_max",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of <= 0 or 1 and a life expectancy of >= 3 months.",
+        "numberValue": 1
+      },
+      {
+        "id": "NCT05005403-prior-therapy-1",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC - Advanced or metastatic progressed on standard of care (SOC) including chemotherapy and prior anti-PD-(L)1 antibody (separately or in combination).",
+        "stringValue": "chemotherapy"
+      },
+      {
+        "id": "NCT05005403-prior-therapy-2",
+        "kind": "prior_therapy_required",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC - Advanced or metastatic progressed on standard of care (SOC) including chemotherapy and prior anti-PD-(L)1 antibody (separately or in combination).",
+        "stringValue": "anti-PD-(L)1 antibody"
+      }
+    ],
+    "fuzzyCriteria": [
+      {
+        "id": "NCT05005403-biopsy",
+        "polarity": "inclusion",
+        "sourceText": "Pre Treatment biopsy or archive tissue within 6 months without intervening treatment",
+        "reasonFuzzy": "Willingness or availability of biopsy or archival tissue is not a typed check."
+      },
+      {
+        "id": "NCT05005403-life",
+        "polarity": "inclusion",
+        "sourceText": "Eastern Cooperative Oncology Group (ECOG) performance status of <= 0 or 1 and a life expectancy of >= 3 months.",
+        "reasonFuzzy": "Life expectancy is a subjective clinical judgment, not a typed lab or stage check."
+      },
+      {
+        "id": "NCT05005403-measurable",
+        "polarity": "inclusion",
+        "sourceText": "Measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST)",
+        "reasonFuzzy": "Measurable disease by RECIST is a subjective imaging judgment, not a typed kind."
+      },
+      {
+        "id": "NCT05005403-labs",
+        "polarity": "inclusion",
+        "sourceText": "Laboratory values meeting criteria outlined in the protocol",
+        "reasonFuzzy": "General laboratory values meeting protocol criteria without specific cutoffs listed cannot be emitted as typed lab checks."
+      },
+      {
+        "id": "NCT05005403-nsclc-details",
+        "polarity": "inclusion",
+        "sourceText": "NSCLC - Advanced or metastatic progressed on standard of care (SOC) including chemotherapy and prior anti-PD-(L)1 antibody (separately or in combination). Actionable gene alterations are eligible if failed targeted therapeutic options.",
+        "reasonFuzzy": "Advanced or metastatic disease without specific stage numbering does not map directly to a stage_in list, and actionable gene alterations eligibility has complex conditional options."
+      },
+      {
+        "id": "NCT05005403-other-cancers",
+        "polarity": "inclusion",
+        "sourceText": "HSNCC - Advanced/metastatic progressed on platinum and PD-1/PD-LI in recurrent or metastatic setting. Micro Satellite Stable Colorectal Cancer (MSS-CRC) - Progressed on Oxaliplatin, Irinotecan, a fluoropyrimidine, anti-EGFR, VEGF or VEGFR therapies, BRAFV600E or HER2, other targetable mutations targeted with locally approved therapy, TAS-102, Regorafenib and not MSI-h or MMR-deficient Gastric and Gastroesophageal Junction adenocarcinoma (GEA) - Advanced/metastatic progressed on at least 1 prior cytotoxic chemotherapeutic regimen and if applicable immune checkpoint inhibitor and/or HER2 therapy High-Grade Serous Ovarian Cancer (HGSOC) - Progressed serous epithelial ovarian, fallopian tube or primary peritoneal cancer post SOC and not eligible for surgical resection. Platinum resistant cannot have >5 lines of prior therapy. Pancreatic Adenocarcinoma (PDAC) - Advanced/metastatic progressed after SOC. Includes adenosquamous carcinoma and post-Whipple. Triple Negative Breast Cancer (TNBC) - Progressed after 1 or 2 systemic therapy that must have included taxane and treatment naïve to immunotherapy targeting T-cell co-stimulation",
+        "reasonFuzzy": "These criteria pertain to non-NSCLC cohorts included in the multi-tumor basket study."
+      },
+      {
+        "id": "NCT05005403-excl-pdac",
+        "polarity": "exclusion",
+        "sourceText": "Pancreatic Ductal Adenocarcinoma (PDAC) - Excludes neuroendocrine or acinar pancreatic carcinoma and participants with coagulopathy or at risk of or history of Deep vein thrombosis (DVT)/PE",
+        "reasonFuzzy": "Cohort-specific exclusion for pancreatic cancer."
+      },
+      {
+        "id": "NCT05005403-surgery",
+        "polarity": "exclusion",
+        "sourceText": "No major surgery within 28 days prior to dosing",
+        "reasonFuzzy": "Washout windows for surgery are not a simple lab cutoff and remain fuzzy."
+      },
+      {
+        "id": "NCT05005403-autoimmune",
+        "polarity": "exclusion",
+        "sourceText": "No active autoimmune/immunodeficiency disease with limited exceptions",
+        "reasonFuzzy": "Active autoimmune or immunodeficiency disease exclusion with exceptions is a subjective clinical judgment."
+      },
+      {
+        "id": "NCT05005403-comb-tox",
+        "polarity": "exclusion",
+        "sourceText": "Combination treatment excludes participants treated with anti-programmed cell death protein 1(PD-1)/Programmed cell death ligand 1 (PD-L1) who had immune mediated toxicity G3 or greater, interstitial lung disease, or hypersensitivity Combination treatment may also require no significant cardiac deficiencies and/or events",
+        "reasonFuzzy": "Complex combination treatment exclusions involving prior immune-mediated toxicities, interstitial lung disease, or cardiac deficiencies."
+      },
+      {
+        "id": "NCT05005403-pregnancy",
+        "polarity": "exclusion",
+        "sourceText": "Pregnancy",
+        "reasonFuzzy": "Pregnancy is not a standard typed check kind."
+      },
+      {
+        "id": "NCT05005403-medications",
+        "polarity": "exclusion",
+        "sourceText": "Excluded medications include anticancer therapy within 5 half-live or 28 days (whichever is shorter), agent targeting Chemokine Receptor (CCR)8, live vaccines, immunosuppressive medication with limited exceptions",
+        "reasonFuzzy": "Washout windows for prior therapies and specific excluded medication classes are complex rules."
+      }
+    ]
+  }
+}
